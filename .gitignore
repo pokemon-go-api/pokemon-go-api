@@ -1,0 +1,14 @@
+data/*
+!data/.gitkeep
+
+!data/cache
+data/cache/*
+!data/cache/.gitkeep
+
+!data/tmp
+data/tmp/*
+!data/tmp/.gitkeep
+
+public/api
+composer.lock
+vendor

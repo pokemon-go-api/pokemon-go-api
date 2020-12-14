@@ -1,0 +1,390 @@
+openapi: 3.0.0
+info:
+  title: Pokedex
+  version: '1.0'
+  description: Pokedex for Pokemon GO
+servers:
+  - url: 'https://pokemon-go-lingen.github.io/pokemon-go-api/'
+tags:
+  - name: Pokemon
+paths:
+  /api/pokedex.json:
+    get:
+      description: TODO
+      summary: A full list of all Pokemon available in Pokemon GO
+      tags: [Pokemon]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pokemon'
+      operationId: get-api-pokedex.json
+
+  /api/pokedex/mega.json:
+    get:
+      description: TODO
+      summary: List of all available Mega Pokemon
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pokemon'
+      operationId: get-api-pokedex-mega.json
+
+  '/api/pokedex/generation/{generationNumber}.json':
+    get:
+      description: TODO
+      summary: List all Pokemon in the given generation number
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pokemon'
+      operationId: get-api-pokedex-generation-id.json
+    parameters:
+      - schema:
+          type: number
+        name: generationNumber
+        in: path
+        required: true
+
+  '/api/pokedex/id/{id}.json':
+    get:
+      description: TODO
+      summary: Receive a single Pokemon by the Pokedex number
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pokemon'
+      operationId: get-api-pokedex-id-id.json
+    parameters:
+      - schema:
+          type: number
+        name: id
+        in: path
+        required: true
+
+  '/api/pokedex/region/{name}.json':
+    get:
+      description: TODO
+      summary: Receive all available Pokemon in the given region
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pokemon'
+      operationId: get-api-pokedex-region-name.json
+    parameters:
+      - schema:
+          type: string
+          enum:
+            - alola
+            - galarian
+        name: name
+        in: path
+        required: true
+
+  '/api/pokedex/name/{name}.json':
+    get:
+      description: TODO
+      summary: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pokemon'
+      operationId: get-api-pokedex-name-name.json
+    parameters:
+      - schema:
+          type: string
+        name: name
+        in: path
+        required: true
+
+components:
+  schemas:
+    Pokemon:
+      description: ''
+      type: object
+      properties:
+        id:
+          type: string
+          minLength: 1
+        formId:
+          type: string
+          minLength: 1
+        dexNr:
+          type: number
+        generation:
+          type: number
+        names:
+          $ref: '#/components/schemas/Names'
+        stats:
+          $ref: '#/components/schemas/PokemonStats'
+        primaryType:
+          $ref: '#/components/schemas/Type'
+        secondaryType:
+          oneOf:
+            - $ref: '#/components/schemas/Type'
+          nullable: true
+        quickMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        cinematicMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        eliteQuickMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        eliteCinematicMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        assets:
+          $ref: '#/components/schemas/Assets'
+        forms:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonForm'
+        regionForms:
+          type: array
+          items:
+            $ref: '#/components/schemas/RegionPokemon'
+        hasMegaEvolution:
+          type: boolean
+        megaEvolutions:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/MegaEvolution'
+      required:
+        - id
+        - formId
+        - dexNr
+        - generation
+        - names
+        - stats
+        - primaryType
+        - secondaryType
+        - cinematicMoves
+        - eliteQuickMoves
+        - eliteCinematicMoves
+        - assets
+        - forms
+        - regionForms
+        - hasMegaEvolution
+        - megaEvolutions
+
+    PokemonForm:
+      description: ''
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          $ref: '#/components/schemas/Names'
+        assets:
+          $ref: '#/components/schemas/Assets'
+
+    RegionPokemon:
+      description: ''
+      type: object
+      properties:
+        id:
+          type: string
+        formId:
+          type: string
+          minLength: 1
+        dexNr:
+          type: number
+        generation:
+          type: number
+        names:
+          $ref: '#/components/schemas/Names'
+        stats:
+          $ref: '#/components/schemas/PokemonStats'
+        primaryType:
+          $ref: '#/components/schemas/Type'
+        secondaryType:
+          oneOf:
+            - $ref: '#/components/schemas/Type'
+          nullable: true
+        quickMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        cinematicMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        eliteQuickMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        eliteCinematicMoves:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/PokemonMove'
+        assets:
+          $ref: '#/components/schemas/Assets'
+        forms:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                $ref: '#/components/schemas/Names'
+              assets:
+                $ref: '#/components/schemas/Assets'
+        required:
+          - id
+          - formId
+          - dexNr
+          - generation
+          - names
+          - stats
+          - primaryType
+          - secondaryType
+          - cinematicMoves
+          - eliteQuickMoves
+          - eliteCinematicMoves
+          - assets
+          - forms
+
+    Names:
+      description: ''
+      type: object
+      properties:
+        English:
+          type: string
+          minLength: 1
+        German:
+          type: string
+          minLength: 1
+      required:
+        - English
+        - German
+    Type:
+      description: ''
+      type: object
+      required:
+        - type
+        - names
+      properties:
+        type:
+          type: string
+          minLength: 1
+        names:
+          $ref: '#/components/schemas/Names'
+    PokemonStats:
+      description: ''
+      type: object
+      properties:
+        stamina:
+          type: number
+        attack:
+          type: number
+        defense:
+          type: number
+      required:
+        - stamina
+        - attack
+        - defense
+    PokemonMove:
+      description: ''
+      type: object
+      properties:
+        id:
+          type: string
+          minLength: 1
+        power:
+          type: number
+        energy:
+          type: number
+        durationMs:
+          type: number
+        type:
+          $ref: '#/components/schemas/Type'
+        names:
+          $ref: '#/components/schemas/Names'
+        combat:
+          type: object
+          nullable: true
+          required:
+            - energy
+            - power
+          properties:
+            energy:
+              type: number
+            power:
+              type: number
+      required:
+        - id
+        - power
+        - energy
+        - durationMs
+        - type
+        - names
+        - combat
+    Assets:
+      title: Assets
+      type: object
+      properties:
+        image:
+          type: string
+    MegaEvolution:
+      title: MegaEvolution
+      type: object
+      required:
+        - id
+        - names
+        - stats
+        - primaryType
+        - secondaryType
+        - assets
+      properties:
+        id:
+          type: string
+          minLength: 1
+        names:
+          $ref: '#/components/schemas/Names'
+        stats:
+          $ref: '#/components/schemas/PokemonStats'
+        primaryType:
+          $ref: '#/components/schemas/Type'
+        secondaryType:
+          oneOf:
+            - $ref: '#/components/schemas/Type'
+          nullable: true
+        assets:
+          $ref: '#/components/schemas/Assets'

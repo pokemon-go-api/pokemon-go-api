@@ -1,0 +1,12 @@
+includes:
+  - vendor/phpstan/phpstan-phpunit/extension.neon
+  - vendor/phpstan/phpstan-phpunit/rules.neon
+
+parameters:
+  level: max
+  paths:
+    - bin
+    - src
+    - tests
+  tipsOfTheDay: false
+  tmpDir: data
