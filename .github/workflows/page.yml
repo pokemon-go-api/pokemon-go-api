@@ -1,7 +1,9 @@
 name: page
-
-on: push
-
+on:
+  push:
+  schedule:
+    # At minute 25 past every 6th hour.
+    - cron:  '25 */6 * * *'
 jobs:
   publish:
     runs-on: ubuntu-latest
