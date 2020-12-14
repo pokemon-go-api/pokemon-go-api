@@ -9,3 +9,5 @@ Any resources linked from the API are linked directly to the assets repository f
 
 ## How to use
 The latest resources are available on the Github page as an JSON API with an OpenAPI Documentation.
+
+Visit https://pokemon-go-lingen.github.io/pokemon-go-api/ for the public available API hostet as Github Page
