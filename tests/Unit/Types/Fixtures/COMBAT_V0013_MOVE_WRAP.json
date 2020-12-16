@@ -1,0 +1,13 @@
+{
+  "templateId": "COMBAT_V0013_MOVE_WRAP",
+  "data": {
+    "templateId": "COMBAT_V0013_MOVE_WRAP",
+    "combatMove": {
+      "uniqueId": "WRAP",
+      "type": "POKEMON_TYPE_NORMAL",
+      "power": 60.0,
+      "vfxName": "wrap",
+      "energyDelta": -45
+    }
+  }
+}

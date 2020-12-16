@@ -18,6 +18,7 @@ final class Pokemon
     private PokemonType $typePrimary;
     private ?PokemonType $typeSecondary;
     private ?PokemonStats $stats = null;
+    private int $assetsBundleId = 0;
     /** @var TemporaryEvolution[] */
     private array $temporaryEvolutions = [];
     /** @var string[] */
@@ -28,8 +29,6 @@ final class Pokemon
     private array $eliteQuickMoveNames = [];
     /** @var string[] */
     private array $eliteCinematicMoveNames = [];
-    /** @var PokemonForm[] */
-    private array $pokemonForms = [];
     /** @var Pokemon[] */
     private array $pokemonRegionForms = [];
 
@@ -50,7 +49,10 @@ final class Pokemon
     public static function createFromGameMaster(stdClass $pokemonData): self
     {
         $pokemonParts = [];
-        preg_match('~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i', $pokemonData->templateId, $pokemonParts);
+        $pregMatchResult = preg_match('~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i', $pokemonData->templateId ?? '', $pokemonParts);
+        if ($pregMatchResult < 1) {
+            throw new \Exception('Invalid input data provided', 1608127311711);
+        }
         $pokemonSettings = $pokemonData->pokemonSettings;
 
         $secondaryType = null;
@@ -155,17 +157,6 @@ final class Pokemon
         return count($this->temporaryEvolutions) > 0;
     }
 
-    public function addPokemonForm(PokemonForm $pokemonForm): void
-    {
-        $this->pokemonForms[] = $pokemonForm;
-    }
-
-    /** @return PokemonForm[] */
-    public function getPokemonForms(): array
-    {
-        return $this->pokemonForms;
-    }
-
     public function addPokemonRegionForm(Pokemon $pokemonRegionForm): void
     {
         $this->pokemonRegionForms[] = $pokemonRegionForm;
@@ -175,5 +166,15 @@ final class Pokemon
     public function getPokemonRegionForms(): array
     {
         return $this->pokemonRegionForms;
+    }
+
+    public function getAssetsBundleId(): int
+    {
+        return $this->assetsBundleId;
+    }
+
+    public function setAssetsBundleId(int $assetBundleId): void
+    {
+        $this->assetsBundleId = $assetBundleId;
     }
 }

@@ -23,6 +23,7 @@ final class PokemonRenderer
 {
     //phpcs:ignore
     private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d.png';
+    private const ASSETS_BASE_SHINY_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d_shiny.png';
 
     /** @var TranslationCollection[] */
     private array $translations;
@@ -42,15 +43,9 @@ final class PokemonRenderer
     ): array {
         $names = [];
         foreach ($this->translations as $translationCollection) {
-            $names[$translationCollection->getLanguageName()] = $translationCollection->getPokemonNames(
+            $names[$translationCollection->getLanguageName()] = $translationCollection->getPokemonName(
                 $pokemon->getDexNr()
-            )[0];
-        }
-
-        $assetsBundleId = 0;
-        $forms          = $pokemon->getPokemonForms();
-        if (count($forms) > 0) {
-            $assetsBundleId = $forms[0]->getAssetBundleValue();
+            );
         }
 
         $struct = [
@@ -83,9 +78,9 @@ final class PokemonRenderer
                 $this->translations
             ),
             'assets'              => [
-                'image' => sprintf(self::ASSETS_BASE_URL, $pokemon->getDexNr(), $assetsBundleId),
+                'image' => sprintf(self::ASSETS_BASE_URL, $pokemon->getDexNr(), $pokemon->getAssetsBundleId()),
+                'shiny_image' => sprintf(self::ASSETS_BASE_SHINY_URL, $pokemon->getDexNr(), $pokemon->getAssetsBundleId()),
             ],
-            'forms'               => $this->renderForms($pokemon, $forms, $this->translations),
             'regionForms'         => array_map(
                 fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection),
                 $pokemon->getPokemonRegionForms()
@@ -106,10 +101,7 @@ final class PokemonRenderer
     {
         $extraNames = [];
         foreach ($translations as $translationCollection) {
-            $extraNames[$translationCollection->getLanguageName()] = array_slice(
-                $translationCollection->getPokemonNames($pokemon->getDexNr()),
-                1
-            );
+            $extraNames[$translationCollection->getLanguageName()] = $translationCollection->getPokemonMegaNames($pokemon->getDexNr());
         }
 
         $output = [];

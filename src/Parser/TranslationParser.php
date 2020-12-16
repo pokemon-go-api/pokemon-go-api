@@ -43,23 +43,32 @@ class TranslationParser
         ];
 
         foreach ($files as $fileName) {
+            if (!file_exists($fileName)) {
+                continue;
+            }
             $file = fopen($fileName, 'r+');
             if ($file === false) {
                 continue;
             }
 
             do {
-                $currentLine = fgets($file) ?: '';
+                $currentLine = trim(fgets($file) ?: '');
 
-                if (empty(trim($currentLine))) {
+                if (empty($currentLine)) {
                     continue;
                 }
 
-                $nextLine = fgets($file) ?: '';
+                $nextLine = trim(fgets($file) ?: '');
                 if ($this->lineStartsWith($currentLine, 'RESOURCE ID: pokemon_name_')) {
                     $dexId       = (int) substr($currentLine, 26, 4);
+                    $megaEvolution = substr($currentLine, 30) ?: '';
+
                     $translation = $this->readTranslation($nextLine);
-                    $collection->addPokemonName($dexId, $translation);
+                    if (empty($megaEvolution)) {
+                        $collection->addPokemonName($dexId, $translation);
+                    } else {
+                        $collection->addPokemonMegaName($dexId, $translation);
+                    }
                 }
 
                 if ($this->lineStartsWith($currentLine, 'RESOURCE ID: form_')) {
@@ -78,9 +87,9 @@ class TranslationParser
                     continue;
                 }
 
-                $type        = trim(substr($currentLine, 23));
+                $moveId        = (int) trim(substr($currentLine, 23));
                 $translation = $this->readTranslation($nextLine);
-                $collection->addMoveName($type, $translation);
+                $collection->addMoveName($moveId, $translation);
             } while (! feof($file));
 
             fclose($file);

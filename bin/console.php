@@ -97,3 +97,14 @@ foreach ($files as $file => $data) {
 
     file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT));
 }
+
+$date = new \DateTimeImmutable('now', new \DateTimeZone('UTC'));
+$format = $date->format('Y-m-d H:i');
+file_put_contents(
+    __DIR__ . '/../public/version.css',
+    <<<CSS
+    #last-generated-display::before {
+        content: "$format (UTC)";
+    }
+    CSS
+);
