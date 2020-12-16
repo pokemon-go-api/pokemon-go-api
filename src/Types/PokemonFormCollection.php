@@ -1,0 +1,52 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PokemonGoLingen\PogoAPI\Types;
+
+final class PokemonFormCollection
+{
+    /** @var PokemonForm[] */
+    private array $pokemonForms;
+    private string $pokemonId;
+
+    public function __construct(string $pokemonId, PokemonForm ...$pokemonForms)
+    {
+        $this->pokemonForms = $pokemonForms;
+        $this->pokemonId    = $pokemonId;
+    }
+
+    public static function createFromGameMaster(\stdClass $gameMasterData): self
+    {
+        $templateIdParts = [];
+        $pregMatchResult = preg_match('~^FORMS_V(?<id>\d{4})_POKEMON_(?<name>.*)$~i', $gameMasterData->templateId ?? '', $templateIdParts);
+        if ($pregMatchResult < 1) {
+            throw new \Exception('Invalid input data provided', 1608128086204);
+        }
+
+        $forms = [];
+        foreach ($gameMasterData->formSettings->forms ?? [] as $formData) {
+            assert($formData instanceof \stdClass);
+            if (!isset($formData->assetBundleValue)) {
+                continue;
+            }
+            $forms[] = new PokemonForm($formData->form, $formData->assetBundleValue);
+        }
+
+        return new self(
+            $gameMasterData->formSettings->pokemon,
+            ...$forms
+        );
+    }
+
+    /** @return PokemonForm */
+    public function getPokemonForms(): array
+    {
+        return $this->pokemonForms;
+    }
+
+    public function getPokemonId(): string
+    {
+        return $this->pokemonId;
+    }
+}

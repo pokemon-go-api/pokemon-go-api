@@ -1,0 +1,22 @@
+{
+  "templateId": "V0021_MOVE_FLAME_WHEEL",
+  "data": {
+    "templateId": "V0021_MOVE_FLAME_WHEEL",
+    "moveSettings": {
+      "movementId": "FLAME_WHEEL",
+      "animationId": 5,
+      "pokemonType": "POKEMON_TYPE_FIRE",
+      "power": 60.0,
+      "accuracyChance": 1.0,
+      "criticalChance": 0.05,
+      "staminaLossScalar": 0.06,
+      "trainerLevelMin": 1,
+      "trainerLevelMax": 100,
+      "vfxName": "flame_wheel",
+      "durationMs": 2700,
+      "damageWindowStartMs": 2100,
+      "damageWindowEndMs": 2400,
+      "energyDelta": -50
+    }
+  }
+}

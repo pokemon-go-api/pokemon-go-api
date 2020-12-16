@@ -10,8 +10,10 @@ use function sprintf;
 final class TranslationCollection
 {
     private string $languageName;
-    /** @var array<string, array<int, string>> */
+    /** @var array<string, string> */
     private array $pokemonNames = [];
+    /** @var array<string, array<int, string>> */
+    private array $pokemonMegaNames = [];
     /** @var array<string, string> */
     private array $typeNames = [];
     /** @var array<string, string> */
@@ -32,31 +34,36 @@ final class TranslationCollection
     public function addPokemonName(int $dexNr, string $translation): void
     {
         $dexNrKey = sprintf('%04d', $dexNr);
-        if (! array_key_exists($dexNrKey, $this->pokemonNames)) {
-            $this->pokemonNames[$dexNrKey] = [];
-        }
+        $this->pokemonNames[$dexNrKey] = $translation;
+    }
 
-        $this->pokemonNames[$dexNrKey][] = $translation;
+    public function addPokemonMegaName(int $dexNr, string $translation): void
+    {
+        $dexNrKey = sprintf('%04d', $dexNr);
+        if (! array_key_exists($dexNrKey, $this->pokemonMegaNames)) {
+            $this->pokemonMegaNames[$dexNrKey] = [];
+        }
+        $this->pokemonMegaNames[$dexNrKey][] = $translation;
     }
 
     public function addPokemonFormName(string $formName, string $translation): void
     {
-        $this->pokemonFormNames[$formName] = $translation;
+        $this->pokemonFormNames[mb_strtoupper($formName)] = $translation;
     }
 
     public function addTypeName(string $type, string $translation): void
     {
-        $this->typeNames[$type] = $translation;
+        $this->typeNames[mb_strtoupper($type)] = $translation;
     }
 
-    public function addMoveName(string $move, string $translation): void
+    public function addMoveName(int $moveId, string $translation): void
     {
-        $this->moveNames[$move] = $translation;
+        $this->moveNames[sprintf('%04d', $moveId)] = $translation;
     }
 
     public function getTypeName(string $typeName): ?string
     {
-        return $this->typeNames[$typeName] ?? null;
+        return $this->typeNames[mb_strtoupper($typeName)] ?? null;
     }
 
     public function getMoveName(int $moveId): ?string
@@ -64,18 +71,25 @@ final class TranslationCollection
         return $this->moveNames[sprintf('%04d', $moveId)] ?? null;
     }
 
-    /**
-     * @return string[]
-     */
-    public function getPokemonNames(int $dexNr): array
+    public function getPokemonName(int $dexNr): ?string
     {
         $dexNrKey = sprintf('%04d', $dexNr);
 
-        return $this->pokemonNames[$dexNrKey] ?? [];
+        return $this->pokemonNames[$dexNrKey] ?? null;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getPokemonMegaNames(int $dexNr): array
+    {
+        $dexNrKey = sprintf('%04d', $dexNr);
+
+        return $this->pokemonMegaNames[$dexNrKey] ?? [];
     }
 
     public function getPokemonFormName(string $formName, string $fallbackName): ?string
     {
-        return $this->pokemonFormNames[$formName] ?? $this->pokemonFormNames[$fallbackName] ?? null;
+        return $this->pokemonFormNames[mb_strtoupper($formName)] ?? $this->pokemonFormNames[mb_strtoupper($fallbackName)] ?? null;
     }
 }

@@ -171,10 +171,6 @@ components:
             $ref: '#/components/schemas/PokemonMove'
         assets:
           $ref: '#/components/schemas/Assets'
-        forms:
-          type: array
-          items:
-            $ref: '#/components/schemas/PokemonForm'
         regionForms:
           type: array
           items:
@@ -202,17 +198,6 @@ components:
         - regionForms
         - hasMegaEvolution
         - megaEvolutions
-
-    PokemonForm:
-      description: ''
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          $ref: '#/components/schemas/Names'
-        assets:
-          $ref: '#/components/schemas/Assets'
 
     RegionPokemon:
       description: ''
@@ -369,6 +354,8 @@ components:
       type: object
       properties:
         image:
+          type: string
+        shiny_image:
           type: string
     MegaEvolution:
       title: MegaEvolution

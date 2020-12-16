@@ -9,6 +9,11 @@
             "PokemonGoLingen\\PogoAPI\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Unit\\PokemonGoLingen\\PogoAPI\\": "tests/Unit"
+        }
+    },
     "require-dev": {
         "doctrine/coding-standard": "^8.1",
         "phpstan/phpstan": "^0.12.51",

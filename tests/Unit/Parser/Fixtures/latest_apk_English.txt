@@ -1,0 +1,24 @@
+RESOURCE ID: pokemon_name_0006
+TEXT: Charizard
+
+RESOURCE ID: pokemon_name_0006_0002
+TEXT: Mega Charizard X
+
+RESOURCE ID: pokemon_name_0006_0003
+TEXT: Mega Charizard Y
+
+RESOURCE ID: form_defense
+TEXT: Defense
+
+RESOURCE ID: form_deoxys_normal
+TEXT: Normal
+
+
+RESOURCE ID: pokemon_type_bug
+TEXT: Bug
+
+RESOURCE ID: move_name_0335
+TEXT: Aeroblast
+
+RESOURCE ID: move_name_0341
+TEXT: Fly
