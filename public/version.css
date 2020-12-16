@@ -1,0 +1,3 @@
+#last-generated-display::before {
+    content: "<version> (UTC)";
+}
