@@ -10,7 +10,7 @@ tags:
 paths:
   /api/pokedex.json:
     get:
-      description: TODO
+      description: A full list of all Pokemon available in Pokemon GO
       summary: A full list of all Pokemon available in Pokemon GO
       tags: [Pokemon]
       responses:
@@ -26,7 +26,7 @@ paths:
 
   /api/pokedex/mega.json:
     get:
-      description: TODO
+      description: List of all available Mega Pokemon
       summary: List of all available Mega Pokemon
       tags: []
       responses:
@@ -42,7 +42,7 @@ paths:
 
   '/api/pokedex/generation/{generationNumber}.json':
     get:
-      description: TODO
+      description: List all Pokemon in the given generation number
       summary: List all Pokemon in the given generation number
       tags: []
       responses:
@@ -64,7 +64,7 @@ paths:
 
   '/api/pokedex/id/{id}.json':
     get:
-      description: TODO
+      description: Receive a single Pokemon by the Pokedex number
       summary: Receive a single Pokemon by the Pokedex number
       tags: []
       responses:
@@ -84,7 +84,7 @@ paths:
 
   '/api/pokedex/region/{name}.json':
     get:
-      description: TODO
+      description: Receive all available Pokemon in the given region
       summary: Receive all available Pokemon in the given region
       tags: []
       responses:
@@ -109,7 +109,7 @@ paths:
 
   '/api/pokedex/name/{name}.json':
     get:
-      description: TODO
+      description: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
       summary: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
       tags: []
       responses:
@@ -287,10 +287,18 @@ components:
       properties:
         English:
           type: string
-          minLength: 1
         German:
           type: string
-          minLength: 1
+        French:
+          type: string
+        Italian:
+          type: string
+        Japanese:
+          type: string
+        Korean:
+          type: string
+        Spanish:
+          type: string
       required:
         - English
         - German
