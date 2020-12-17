@@ -198,36 +198,4 @@ final class PokemonRenderer
 
         return $out;
     }
-
-    /**
-     * @param array<PokemonForm>           $forms
-     * @param array<TranslationCollection> $translations
-     *
-     * @return array<int, mixed[]>
-     */
-    private function renderForms(Pokemon $pokemon, array $forms, array $translations): array
-    {
-        $out = [];
-        foreach ($forms as $form) {
-            $formTypeOnly = substr($form->getId(), strlen($pokemon->getId()) + 1);
-            $names        = [];
-            foreach ($translations as $translationCollection) {
-                $names[$translationCollection->getLanguageName()] = $translationCollection->getPokemonFormName(
-                    $formTypeOnly,
-                    $form->getId()
-                );
-            }
-
-            // @TODO check missing forms
-            $out[] = [
-                'id'     => $form->getId(),
-                'names'  => $names,
-                'assets' => [
-                    'image' => sprintf(self::ASSETS_BASE_URL, $pokemon->getDexNr(), $form->getAssetBundleValue()),
-                ],
-            ];
-        }
-
-        return $out;
-    }
 }

@@ -199,6 +199,10 @@ class MasterDataParser
             $pokemonFormCollection = PokemonFormCollection::createFromGameMaster($item->data);
 
             foreach ($pokemonFormCollection->getPokemonForms() as $pokemonForm) {
+                if ($pokemonForm->getId() === $pokemon->getId().'_NORMAL') {
+                    $pokemon->setAssetsBundleId($pokemonForm->getAssetBundleValue());
+                    continue;
+                }
                 foreach ($pokemon->getPokemonRegionForms() as $pokemonRegionForm) {
                     if ($pokemonRegionForm->getFormId() === $pokemonForm->getId()) {
                         $pokemonRegionForm->setAssetsBundleId($pokemonForm->getAssetBundleValue());
