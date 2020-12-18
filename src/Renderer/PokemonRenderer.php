@@ -123,6 +123,11 @@ final class PokemonRenderer
                         $pokemon->getDexNr(),
                         $temporaryEvolution->getAssetsBundleId()
                     ),
+                    'shiny_image' => sprintf(
+                        self::ASSETS_BASE_SHINY_URL,
+                        $pokemon->getDexNr(),
+                        $temporaryEvolution->getAssetsBundleId()
+                    ),
                 ],
             ];
         }
