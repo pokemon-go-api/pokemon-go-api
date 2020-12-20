@@ -2,7 +2,8 @@
     "name": "pokemongo-lingen/pogo-api",
     "require": {
       "php": "^7.4.0 || ~8.0.0",
-      "ext-json": "*"
+      "ext-json": "*",
+      "ext-dom": "*"
     },
     "autoload": {
         "psr-4": {
@@ -14,21 +15,26 @@
             "Tests\\Unit\\PokemonGoLingen\\PogoAPI\\": "tests/Unit"
         }
     },
+    "require": {
+        "guzzlehttp/guzzle": "7.2.0"
+    },
     "require-dev": {
-        "doctrine/coding-standard": "^8.1",
-        "phpstan/phpstan": "^0.12.51",
-        "phpstan/phpstan-phpunit": "^0.12.16",
-        "phpunit/phpunit": "^9.4",
+        "doctrine/coding-standard": "^8.2",
+        "phpstan/phpstan": "^0.12.63",
+        "phpstan/phpstan-phpunit": "^0.12.17",
+        "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-master"
     },
     "scripts": {
         "ci": [
             "@cs-check",
-            "@phpstan"
+            "@phpstan",
+            "@phpunit"
         ],
-        "cs-check": "phpcs",
+        "cs-check": "phpcs -s",
         "cs-fix": "phpcbf",
-        "phpstan": "phpstan analyse"
+        "phpstan": "phpstan analyse",
+        "phpunit": "phpunit"
     },
     "config": {
         "sort-packages": true

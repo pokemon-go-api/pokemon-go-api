@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoLingen\PogoAPI\CacheLoader;
+use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
@@ -10,47 +11,21 @@ use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-function writeLine(string $input): void {
-    printf('[%s] %s'. PHP_EOL, date('H:i:s'), $input);
-}
+$cacheLoader = new CacheLoader(__DIR__ . '/../data/tmp/');
 
-$remoteFileLoader = new RemoteFileLoader();
-
-writeLine(sprintf('Downloading file %s', 'GAME_MASTER_LATEST'));
-$remoteFileLoader->load('https://raw.githubusercontent.com/PokeMiners/game_masters/master/latest/latest.json')
-    ->saveTo(__DIR__ . '/../data/tmp/GAME_MASTER_LATEST.json');
-
-
-foreach (TranslationParser::LANGUAGES as $language) {
-    writeLine(sprintf('Downloading file %s', $language));
-    $remoteFileLoader->load(sprintf(
-        'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Texts/Latest%%20APK/%s.txt',
-        $language
-    ))->saveTo(sprintf(
-        '%s/../data/tmp/latest_apk_%s.txt',
-        __DIR__,
-        $language
-    ));
-
-    $remoteFileLoader->load(sprintf(
-        'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Texts/Latest%%20Remote/%s.txt',
-        $language
-    ))->saveTo(sprintf(
-        '%s/../data/tmp/latest_remote_%s.txt',
-        __DIR__,
-        $language
-    ));
-}
-
-writeLine(sprintf('Parse Files'));
-
+printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Parse Files');
 $masterData = new MasterDataParser();
-$masterData->parseFile(__DIR__ . '/../data/tmp/GAME_MASTER_LATEST.json');
+$masterData->parseFile($cacheLoader->fetchGameMasterFile());
 
-$translationLoader = new TranslationParser(__DIR__ . '/../data/tmp/');
+$languageFiles     = $cacheLoader->fetchLanguageFiles();
+$translationLoader = new TranslationParser();
 $translations      = [];
 foreach (TranslationParser::LANGUAGES as $languageName) {
-    $translations[] = $translationLoader->loadLanguage($languageName);
+    $translations[] = $translationLoader->loadLanguage(
+        $languageName,
+        $languageFiles['apk'][$languageName],
+        $languageFiles['remote'][$languageName]
+    );
 }
 
 $renderer = new PokemonRenderer($translations);
@@ -79,15 +54,13 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
             continue;
         }
 
-        $files['pokedex/name/' . $regionForm->getFormId()][] = $renderedPokemon;
-        $files['pokedex/region/' . $regionName][]            = $renderedPokemon;
+        $files['pokedex/region/' . $regionName][] = $renderedPokemon;
     }
 }
 
 $apidir = __DIR__ . '/../public/api/';
 
-
-writeLine(sprintf('Generate API'));
+printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Generate API');
 
 foreach ($files as $file => $data) {
     @mkdir($apidir . dirname($file), 0777, true);
@@ -95,10 +68,23 @@ foreach ($files as $file => $data) {
         $data = reset($data);
     }
 
-    file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT));
+    file_put_contents($apidir . $file . '.json', json_encode($data));
 }
 
-$date = new \DateTimeImmutable('now', new \DateTimeZone('UTC'));
+$raidBossList   = $cacheLoader->fetchRaidBosses();
+$leekduckParser = new LeekduckParser();
+$raidBosses     = $leekduckParser->parseRaidBosses($raidBossList);
+$raidBossHash   = hash('sha512', json_encode($raidBosses) ?: '');
+
+if (! $cacheLoader->hasRaidBossCacheEntry($raidBossHash) || ! is_file($apidir . 'raidboss.json')) {
+    $cacheLoader->persistRaidBossCacheEntry($raidBossHash);
+    file_put_contents($apidir . 'raidboss.json', json_encode([
+        'currentList'   => $raidBosses,
+        'lastGenerated' => (new DateTimeImmutable('now', new DateTimeZone('UTC')))->format(DATE_RFC3339_EXTENDED),
+    ]));
+}
+
+$date   = new DateTimeImmutable('now', new DateTimeZone('UTC'));
 $format = $date->format('Y-m-d H:i');
 file_put_contents(
     __DIR__ . '/../public/version.css',

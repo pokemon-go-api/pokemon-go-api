@@ -9,7 +9,6 @@ use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
 use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
 use PokemonGoLingen\PogoAPI\Types\PokemonCombatMove;
-use PokemonGoLingen\PogoAPI\Types\PokemonForm;
 use PokemonGoLingen\PogoAPI\Types\PokemonFormCollection;
 use PokemonGoLingen\PogoAPI\Types\PokemonMove;
 use stdClass;
@@ -69,8 +68,8 @@ class MasterDataParser
         foreach ($list as $item) {
             $matches = [];
             if (
-                !preg_match('~^v(?<DexNr>[0-9]{4})_POKEMON_.*~i', $item->templateId, $matches)
-                || !isset($item->data->pokemonSettings)
+                ! preg_match('~^v(?<DexNr>[0-9]{4})_POKEMON_.*~i', $item->templateId, $matches)
+                || ! isset($item->data->pokemonSettings)
             ) {
                 continue;
             }
@@ -83,7 +82,8 @@ class MasterDataParser
                 strpos($pokemon->getFormId(), '_PURIFIED') !== false ||
                 strpos($pokemon->getFormId(), '_SHADOW') !== false ||
                 strpos($pokemon->getFormId(), '_NORMAL') !== false ||
-                strpos($pokemon->getFormId(), '_COPY') !== false
+                strpos($pokemon->getFormId(), '_COPY') !== false ||
+                preg_match('~_\d{4}$~', $pokemon->getFormId())
             ) {
                 continue;
             }
@@ -108,7 +108,7 @@ class MasterDataParser
         $attacksCollection = new AttacksCollection();
         foreach ($list as $item) {
             $matches = [];
-            if (!preg_match('~^v(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $item->templateId, $matches)) {
+            if (! preg_match('~^v(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $item->templateId, $matches)) {
                 continue;
             }
 
@@ -127,13 +127,13 @@ class MasterDataParser
     {
         foreach ($list as $item) {
             $matches = [];
-            if (!preg_match('~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $item->templateId, $matches)) {
+            if (! preg_match('~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $item->templateId, $matches)) {
                 continue;
             }
 
-            $moveId = (int)$matches['MoveId'];
+            $moveId = (int) $matches['MoveId'];
             $move   = $attacksCollection->getById($moveId);
-            if ($move === null || !isset($item->data->combatMove->power)) {
+            if ($move === null || ! isset($item->data->combatMove->power)) {
                 continue;
             }
 
@@ -151,16 +151,16 @@ class MasterDataParser
         foreach ($list as $item) {
             $matches = [];
             if (
-            !preg_match(
-                '~^TEMPORARY_EVOLUTION_V(?<DexNr>[0-9]{4})_POKEMON_(.*)$~i',
-                $item->templateId,
-                $matches
-            )
+                ! preg_match(
+                    '~^TEMPORARY_EVOLUTION_V(?<DexNr>[0-9]{4})_POKEMON_(.*)$~i',
+                    $item->templateId,
+                    $matches
+                )
             ) {
                 continue;
             }
 
-            $dexNr   = (int)$matches['DexNr'];
+            $dexNr   = (int) $matches['DexNr'];
             $pokemon = $pokemonCollection->getByDexId($dexNr);
             if ($pokemon === null) {
                 continue;
@@ -186,11 +186,11 @@ class MasterDataParser
     {
         foreach ($list as $item) {
             $matches = [];
-            if (!preg_match('~^FORMS_V(?<DexNr>\d{4})_POKEMON_(?<name>.*)$~i', $item->templateId, $matches)) {
+            if (! preg_match('~^FORMS_V(?<DexNr>\d{4})_POKEMON_(?<name>.*)$~i', $item->templateId, $matches)) {
                 continue;
             }
 
-            $dexNr   = (int)$matches['DexNr'];
+            $dexNr   = (int) $matches['DexNr'];
             $pokemon = $pokemonCollection->getByDexId($dexNr);
             if ($pokemon === null) {
                 continue;
@@ -199,14 +199,17 @@ class MasterDataParser
             $pokemonFormCollection = PokemonFormCollection::createFromGameMaster($item->data);
 
             foreach ($pokemonFormCollection->getPokemonForms() as $pokemonForm) {
-                if ($pokemonForm->getId() === $pokemon->getId().'_NORMAL') {
+                if ($pokemonForm->getId() === $pokemon->getId() . '_NORMAL') {
                     $pokemon->setAssetsBundleId($pokemonForm->getAssetBundleValue());
                     continue;
                 }
+
                 foreach ($pokemon->getPokemonRegionForms() as $pokemonRegionForm) {
-                    if ($pokemonRegionForm->getFormId() === $pokemonForm->getId()) {
-                        $pokemonRegionForm->setAssetsBundleId($pokemonForm->getAssetBundleValue());
+                    if ($pokemonRegionForm->getFormId() !== $pokemonForm->getId()) {
+                        continue;
                     }
+
+                    $pokemonRegionForm->setAssetsBundleId($pokemonForm->getAssetBundleValue());
                 }
             }
         }

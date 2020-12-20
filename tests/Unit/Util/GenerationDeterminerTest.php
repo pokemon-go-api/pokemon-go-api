@@ -1,10 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
 
 use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
+/**
+ * @covers \PokemonGoLingen\PogoAPI\Util\GenerationDeterminer
+ */
 class GenerationDeterminerTest extends TestCase
 {
     /**
@@ -15,7 +20,8 @@ class GenerationDeterminerTest extends TestCase
         self::assertSame($expected, GenerationDeterminer::fromDexNr($input));
     }
 
-    public function dexNrDataProvider()
+    /** @return array<int, array<int, int>> */
+    public function dexNrDataProvider(): array
     {
         return [
             [0, 1],

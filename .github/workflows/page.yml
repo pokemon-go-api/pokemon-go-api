@@ -1,6 +1,8 @@
 name: page
 on:
   push:
+    branches:
+      - main
   schedule:
     # At minute 25 past every 6th hour.
     - cron:  '25 */6 * * *'
@@ -18,6 +20,18 @@ jobs:
           php-version: "7.4"
           ini-values: zend.assertions=1
           tools: composer:v2
+
+      - uses: actions/cache@v2
+        with:
+          path: data/tmp
+          key: download-tmp-${{ hashFiles('data/tmp/hashes.json') }}
+
+      - uses: actions/cache@v2
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            composer-
 
       - name: "Install dependencies"
         run: composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs

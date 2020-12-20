@@ -1,9 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Types;
 
-use PokemonGoLingen\PogoAPI\Types\PokemonFormCollection;
 use PHPUnit\Framework\TestCase;
+use PokemonGoLingen\PogoAPI\Types\PokemonFormCollection;
+
+use function file_get_contents;
+use function json_decode;
+
+use const JSON_THROW_ON_ERROR;
 
 /**
  * @covers \PokemonGoLingen\PogoAPI\Types\PokemonFormCollection
@@ -11,10 +18,9 @@ use PHPUnit\Framework\TestCase;
  */
 class PokemonFormCollectionTest extends TestCase
 {
-
     public function testCreateFromGameMaster(): void
     {
-        $gameMaster     = file_get_contents(__DIR__ . '/Fixtures/FORMS_V0019_POKEMON_RATTATA.json');
+        $gameMaster     = file_get_contents(__DIR__ . '/Fixtures/FORMS_V0019_POKEMON_RATTATA.json') ?: '{}';
         $data           = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
         $formCollection = PokemonFormCollection::createFromGameMaster($data->data);
 

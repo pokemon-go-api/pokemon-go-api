@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
 use PHPUnit\Framework\TestCase;
+use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
 
 /**
  * @covers \PokemonGoLingen\PogoAPI\Collections\TranslationCollection

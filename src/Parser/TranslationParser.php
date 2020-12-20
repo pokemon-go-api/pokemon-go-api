@@ -9,6 +9,7 @@ use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
 use function fclose;
 use function feof;
 use function fgets;
+use function file_exists;
 use function fopen;
 use function strpos;
 use function strtoupper;
@@ -27,25 +28,16 @@ class TranslationParser
         'Spanish',
     ];
 
-    private string $basedir;
-
-    public function __construct(string $basedir)
-    {
-        $this->basedir = $basedir;
-    }
-
-    public function loadLanguage(string $language): TranslationCollection
+    public function loadLanguage(string $language, string $apkFile, string $remoteFile): TranslationCollection
     {
         $collection = new TranslationCollection($language);
-        $files      = [
-            $this->basedir . '/latest_apk_' . $language . '.txt',
-            $this->basedir . '/latest_remote_' . $language . '.txt',
-        ];
+        $files      = [$apkFile, $remoteFile];
 
         foreach ($files as $fileName) {
-            if (!file_exists($fileName)) {
+            if (! file_exists($fileName)) {
                 continue;
             }
+
             $file = fopen($fileName, 'r+');
             if ($file === false) {
                 continue;
@@ -60,7 +52,7 @@ class TranslationParser
 
                 $nextLine = trim(fgets($file) ?: '');
                 if ($this->lineStartsWith($currentLine, 'RESOURCE ID: pokemon_name_')) {
-                    $dexId       = (int) substr($currentLine, 26, 4);
+                    $dexId         = (int) substr($currentLine, 26, 4);
                     $megaEvolution = substr($currentLine, 30) ?: '';
 
                     $translation = $this->readTranslation($nextLine);
@@ -87,7 +79,7 @@ class TranslationParser
                     continue;
                 }
 
-                $moveId        = (int) trim(substr($currentLine, 23));
+                $moveId      = (int) trim(substr($currentLine, 23));
                 $translation = $this->readTranslation($nextLine);
                 $collection->addMoveName($moveId, $translation);
             } while (! feof($file));
