@@ -41,10 +41,10 @@ class LeekduckParserTest extends TestCase
                 ['name' => 'Kyurem', 'dexNr' => 646, 'level' => '5', 'shiny' => false, 'form' => null],
             ],
             'Mega' => [
-                ['name' => 'Mega Charizard X', 'dexNr' => 6, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
+                ['name' => 'Mega Charizard X', 'dexNr' => 6, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega X'],
                 ['name' => 'Mega Gengar', 'dexNr' => 94, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
                 ['name' => 'Mega Abomasnow', 'dexNr' => 460, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
-                ['name' => 'Mega Charizard Y', 'dexNr' => 6, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
+                ['name' => 'Mega Charizard Y', 'dexNr' => 6, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega Y'],
                 ['name' => 'Mega Blastoise', 'dexNr' => 9, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
                 ['name' => 'Mega Pidgeot', 'dexNr' => 18, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
                 ['name' => 'Mega Houndoom', 'dexNr' => 229, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],

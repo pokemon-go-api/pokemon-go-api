@@ -94,6 +94,14 @@ class LeekduckParser
     private function extractFormBossName(string $bossName): array
     {
         if (stripos($bossName, 'Mega') !== false) {
+            if (stripos($bossName, ' X') !== false) {
+                return [$bossName, 'Mega X'];
+            }
+
+            if (stripos($bossName, ' Y') !== false) {
+                return [$bossName, 'Mega Y'];
+            }
+
             return [$bossName, 'Mega'];
         }
 
