@@ -4,15 +4,17 @@ info:
   version: '1.0'
   description: Pokedex for Pokemon GO
 servers:
-  - url: 'https://pokemon-go-lingen.github.io/pokemon-go-api/'
+  - url: 'https://pokemon-go-lingen.github.io/pokemon-go-api'
 tags:
   - name: Pokemon
+  - name: Raid
 paths:
   /api/pokedex.json:
     get:
       description: A full list of all Pokemon available in Pokemon GO
       summary: A full list of all Pokemon available in Pokemon GO
-      tags: [Pokemon]
+      tags:
+        - Pokemon
       responses:
         '200':
           description: OK
@@ -23,12 +25,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Pokemon'
       operationId: get-api-pokedex.json
-
   /api/pokedex/mega.json:
     get:
       description: List of all available Mega Pokemon
       summary: List of all available Mega Pokemon
-      tags: []
+      tags:
+        - Pokemon
       responses:
         '200':
           description: OK
@@ -39,12 +41,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Pokemon'
       operationId: get-api-pokedex-mega.json
-
   '/api/pokedex/generation/{generationNumber}.json':
     get:
       description: List all Pokemon in the given generation number
       summary: List all Pokemon in the given generation number
-      tags: []
+      tags:
+        - Pokemon
       responses:
         '200':
           description: OK
@@ -61,12 +63,12 @@ paths:
         name: generationNumber
         in: path
         required: true
-
   '/api/pokedex/id/{id}.json':
     get:
       description: Receive a single Pokemon by the Pokedex number
       summary: Receive a single Pokemon by the Pokedex number
-      tags: []
+      tags:
+        - Pokemon
       responses:
         '200':
           description: OK
@@ -81,12 +83,12 @@ paths:
         name: id
         in: path
         required: true
-
   '/api/pokedex/region/{name}.json':
     get:
       description: Receive all available Pokemon in the given region
       summary: Receive all available Pokemon in the given region
-      tags: []
+      tags:
+        - Pokemon
       responses:
         '200':
           description: OK
@@ -106,12 +108,12 @@ paths:
         name: name
         in: path
         required: true
-
   '/api/pokedex/name/{name}.json':
     get:
       description: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
       summary: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
-      tags: []
+      tags:
+        - Pokemon
       responses:
         '200':
           description: OK
@@ -126,7 +128,64 @@ paths:
         name: name
         in: path
         required: true
-
+  /api/raidboss.json:
+    get:
+      summary: Receive the current raid Bosses
+      tags:
+        - Raid
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  currentList:
+                    type: object
+                    required:
+                      - '1'
+                      - '3'
+                      - '5'
+                      - Mega
+                    properties:
+                      '1':
+                        type: array
+                        uniqueItems: true
+                        minItems: 1
+                        items:
+                          $ref: '#/components/schemas/RaidBoss'
+                      '3':
+                        type: array
+                        uniqueItems: true
+                        minItems: 1
+                        items:
+                          $ref: '#/components/schemas/RaidBoss'
+                      '5':
+                        type: array
+                        uniqueItems: true
+                        minItems: 1
+                        items:
+                          $ref: '#/components/schemas/RaidBoss'
+                      Mega:
+                        type: array
+                        uniqueItems: true
+                        minItems: 1
+                        items:
+                          $ref: '#/components/schemas/RaidBoss'
+                      EX:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/RaidBoss'
+                  lastGenerated:
+                    type: string
+                    format: date-time
+                required:
+                  - currentList
+                  - lastGenerated
+      operationId: get-api-raidboss.json
+      description: Return the current raid bosses fetched from https://leekduck.com/boss/
 components:
   schemas:
     Pokemon:
@@ -194,11 +253,8 @@ components:
         - eliteQuickMoves
         - eliteCinematicMoves
         - assets
-        - forms
-        - regionForms
         - hasMegaEvolution
         - megaEvolutions
-
     RegionPokemon:
       description: ''
       type: object
@@ -265,7 +321,6 @@ components:
           - eliteCinematicMoves
           - assets
           - forms
-
     Names:
       description: ''
       type: object
@@ -355,7 +410,7 @@ components:
       properties:
         image:
           type: string
-        shiny_image:
+        shinyImage:
           type: string
     MegaEvolution:
       title: MegaEvolution
@@ -383,3 +438,30 @@ components:
           nullable: true
         assets:
           $ref: '#/components/schemas/Assets'
+    RaidBoss:
+      description: ''
+      type: object
+      properties:
+        name:
+          type: string
+        dexNr:
+          type: number
+        level:
+          type: string
+          enum:
+            - '1'
+            - '3'
+            - '5'
+            - Mega
+            - EX
+        shiny:
+          type: boolean
+        form:
+          type: string
+          nullable: true
+      required:
+        - name
+        - dexNr
+        - level
+        - shiny
+        - form

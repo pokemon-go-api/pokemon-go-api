@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PHPUnit\Framework\TestCase;
+use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
 
@@ -12,9 +14,9 @@ use PokemonGoLingen\PogoAPI\Types\PokemonType;
  */
 class PokemonCollectionTest extends TestCase
 {
-    public function testCollection() : void
+    public function testCollection(): void
     {
-        $pokemon = new Pokemon(
+        $pokemon    = new Pokemon(
             100,
             'TESTPOKEMON',
             'TESTPOKEMON_FORM',

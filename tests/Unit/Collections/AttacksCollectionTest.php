@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
-use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
 use PHPUnit\Framework\TestCase;
+use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
 use PokemonGoLingen\PogoAPI\Types\PokemonMove;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
 
@@ -12,7 +14,7 @@ use PokemonGoLingen\PogoAPI\Types\PokemonType;
  */
 class AttacksCollectionTest extends TestCase
 {
-    public function testCollection() : void
+    public function testCollection(): void
     {
         $pokemonMove = new PokemonMove(
             100,
@@ -23,7 +25,7 @@ class AttacksCollectionTest extends TestCase
             100.0,
             true
         );
-        $sut = new AttacksCollection();
+        $sut         = new AttacksCollection();
         $sut->add($pokemonMove);
 
         self::assertCount(1, $sut->toArray());

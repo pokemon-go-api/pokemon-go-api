@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
-use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PHPUnit\Framework\TestCase;
+use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 
 /**
  * @covers \PokemonGoLingen\PogoAPI\Parser\TranslationParser
@@ -12,8 +14,12 @@ class TranslationParserTest extends TestCase
 {
     public function testParseFile(): void
     {
-        $sut = new TranslationParser(__DIR__.'/Fixtures');
-        $collection = $sut->loadLanguage('English');
+        $sut        = new TranslationParser();
+        $collection = $sut->loadLanguage(
+            'English',
+            __DIR__ . '/Fixtures/latest_apk_English.txt',
+            ''
+        );
 
         self::assertSame('Charizard', $collection->getPokemonName(6));
         self::assertSame(['Mega Charizard X', 'Mega Charizard Y'], $collection->getPokemonMegaNames(6));

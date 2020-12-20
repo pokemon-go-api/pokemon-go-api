@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoLingen\PogoAPI\Types;
 
+use Exception;
 use stdClass;
 
 use function assert;
@@ -18,7 +19,7 @@ final class Pokemon
     private PokemonType $typePrimary;
     private ?PokemonType $typeSecondary;
     private ?PokemonStats $stats = null;
-    private int $assetsBundleId = 0;
+    private int $assetsBundleId  = 0;
     /** @var TemporaryEvolution[] */
     private array $temporaryEvolutions = [];
     /** @var string[] */
@@ -48,11 +49,16 @@ final class Pokemon
 
     public static function createFromGameMaster(stdClass $pokemonData): self
     {
-        $pokemonParts = [];
-        $pregMatchResult = preg_match('~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i', $pokemonData->templateId ?? '', $pokemonParts);
+        $pokemonParts    = [];
+        $pregMatchResult = preg_match(
+            '~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i',
+            $pokemonData->templateId ?? '',
+            $pokemonParts
+        );
         if ($pregMatchResult < 1) {
-            throw new \Exception('Invalid input data provided', 1608127311711);
+            throw new Exception('Invalid input data provided', 1608127311711);
         }
+
         $pokemonSettings = $pokemonData->pokemonSettings;
 
         $secondaryType = null;

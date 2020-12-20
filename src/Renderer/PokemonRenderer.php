@@ -7,22 +7,18 @@ namespace PokemonGoLingen\PogoAPI\Renderer;
 use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonForm;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 use function array_map;
 use function array_shift;
-use function array_slice;
-use function count;
 use function sprintf;
-use function strlen;
-use function substr;
 
 final class PokemonRenderer
 {
-    //phpcs:ignore
+    //phpcs:ignore Generic.Files.LineLength.TooLong
     private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d.png';
+    //phpcs:ignore Generic.Files.LineLength.TooLong
     private const ASSETS_BASE_SHINY_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d_shiny.png';
 
     /** @var TranslationCollection[] */
@@ -77,9 +73,13 @@ final class PokemonRenderer
                 $attacksCollection,
                 $this->translations
             ),
-            'assets'              => [
-                'image' => sprintf(self::ASSETS_BASE_URL, $pokemon->getDexNr(), $pokemon->getAssetsBundleId()),
-                'shiny_image' => sprintf(self::ASSETS_BASE_SHINY_URL, $pokemon->getDexNr(), $pokemon->getAssetsBundleId()),
+            'assets' => [
+                'image'      => sprintf(self::ASSETS_BASE_URL, $pokemon->getDexNr(), $pokemon->getAssetsBundleId()),
+                'shinyImage' => sprintf(
+                    self::ASSETS_BASE_SHINY_URL,
+                    $pokemon->getDexNr(),
+                    $pokemon->getAssetsBundleId()
+                ),
             ],
             'regionForms'         => array_map(
                 fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection),
@@ -101,7 +101,9 @@ final class PokemonRenderer
     {
         $extraNames = [];
         foreach ($translations as $translationCollection) {
-            $extraNames[$translationCollection->getLanguageName()] = $translationCollection->getPokemonMegaNames($pokemon->getDexNr());
+            $extraNames[$translationCollection->getLanguageName()] = $translationCollection->getPokemonMegaNames(
+                $pokemon->getDexNr()
+            );
         }
 
         $output = [];
@@ -123,7 +125,7 @@ final class PokemonRenderer
                         $pokemon->getDexNr(),
                         $temporaryEvolution->getAssetsBundleId()
                     ),
-                    'shiny_image' => sprintf(
+                    'shinyImage' => sprintf(
                         self::ASSETS_BASE_SHINY_URL,
                         $pokemon->getDexNr(),
                         $temporaryEvolution->getAssetsBundleId()

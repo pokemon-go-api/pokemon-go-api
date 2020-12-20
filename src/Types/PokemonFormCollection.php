@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace PokemonGoLingen\PogoAPI\Types;
 
+use Exception;
+use stdClass;
+
+use function assert;
+use function preg_match;
+
 final class PokemonFormCollection
 {
     /** @var PokemonForm[] */
@@ -16,20 +22,25 @@ final class PokemonFormCollection
         $this->pokemonId    = $pokemonId;
     }
 
-    public static function createFromGameMaster(\stdClass $gameMasterData): self
+    public static function createFromGameMaster(stdClass $gameMasterData): self
     {
         $templateIdParts = [];
-        $pregMatchResult = preg_match('~^FORMS_V(?<id>\d{4})_POKEMON_(?<name>.*)$~i', $gameMasterData->templateId ?? '', $templateIdParts);
+        $pregMatchResult = preg_match(
+            '~^FORMS_V(?<id>\d{4})_POKEMON_(?<name>.*)$~i',
+            $gameMasterData->templateId ?? '',
+            $templateIdParts
+        );
         if ($pregMatchResult < 1) {
-            throw new \Exception('Invalid input data provided', 1608128086204);
+            throw new Exception('Invalid input data provided', 1608128086204);
         }
 
         $forms = [];
         foreach ($gameMasterData->formSettings->forms ?? [] as $formData) {
-            assert($formData instanceof \stdClass);
-            if (!isset($formData->assetBundleValue)) {
+            assert($formData instanceof stdClass);
+            if (! isset($formData->assetBundleValue)) {
                 continue;
             }
+
             $forms[] = new PokemonForm($formData->form, $formData->assetBundleValue);
         }
 
@@ -39,7 +50,7 @@ final class PokemonFormCollection
         );
     }
 
-    /** @return PokemonForm */
+    /** @return PokemonForm[] */
     public function getPokemonForms(): array
     {
         return $this->pokemonForms;

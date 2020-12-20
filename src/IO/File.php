@@ -19,4 +19,9 @@ final class File
     {
         file_put_contents($fileName, $this->content);
     }
+
+    public function getContent(): string
+    {
+        return $this->content;
+    }
 }
