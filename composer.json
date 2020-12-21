@@ -31,6 +31,11 @@
             "@phpstan",
             "@phpunit"
         ],
+        "build-api": [
+            "php bin/console.php",
+            "rm -rf public/api",
+            "cp -r data/tmp/api public/"
+        ],
         "cs-check": "phpcs -s",
         "cs-fix": "phpcbf",
         "phpstan": "phpstan analyse",
