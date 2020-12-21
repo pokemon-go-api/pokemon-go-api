@@ -11,7 +11,8 @@ use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$cacheLoader = new CacheLoader(__DIR__ . '/../data/tmp/');
+$tmpDir      = __DIR__ . '/../data/tmp/';
+$cacheLoader = new CacheLoader($tmpDir);
 
 printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Parse Files');
 $masterData = new MasterDataParser();
@@ -58,7 +59,7 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
     }
 }
 
-$apidir = __DIR__ . '/../public/api/';
+$apidir = $tmpDir . 'api/';
 
 printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Generate API');
 
@@ -83,6 +84,17 @@ if (! $cacheLoader->hasRaidBossCacheEntry($raidBossHash) || ! is_file($apidir . 
         'lastGenerated' => (new DateTimeImmutable('now', new DateTimeZone('UTC')))->format(DATE_RFC3339_EXTENDED),
     ]));
 }
+
+file_put_contents($apidir . 'hashes.json', json_encode(
+    [
+        'sha512' => [
+            'raidboss.json' => $raidBossHash,
+            'pokedex.json'  => hash_file('sha512', $apidir . '/pokedex.json'),
+        ],
+    ],
+    JSON_PRETTY_PRINT
+));
+
 
 $date   = new DateTimeImmutable('now', new DateTimeZone('UTC'));
 $format = $date->format('Y-m-d H:i');
