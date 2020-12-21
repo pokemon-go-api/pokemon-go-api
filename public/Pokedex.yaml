@@ -8,6 +8,7 @@ servers:
 tags:
   - name: Pokemon
   - name: Raid
+  - name: Utils
 paths:
   /api/pokedex.json:
     get:
@@ -185,7 +186,40 @@ paths:
                   - currentList
                   - lastGenerated
       operationId: get-api-raidboss.json
-      description: Return the current raid bosses fetched from https://leekduck.com/boss/
+      description: Return the current raid bosses
+  /api/hashes.json:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - Utils
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  sha512:
+                    type: object
+                    required:
+                      - raidboss.json
+                      - pokedex.json
+                    properties:
+                      raidboss.json:
+                        type: string
+                        minLength: 128
+                        maxLength: 128
+                      pokedex.json:
+                        type: string
+                        minLength: 128
+                        maxLength: 128
+                required:
+                  - sha512
+              examples: {}
+      operationId: get-api-hashes.json
+      description: Receive the latest hashes of the endpoints to prevent unnessecary calls to larger API Endpoints
 components:
   schemas:
     Pokemon:
@@ -410,7 +444,7 @@ components:
       properties:
         image:
           type: string
-        shinyImage:
+        shiny_image:
           type: string
     MegaEvolution:
       title: MegaEvolution
@@ -457,8 +491,9 @@ components:
         shiny:
           type: boolean
         form:
-          type: string
-          nullable: true
+          type:
+            - 'null'
+            - string
       required:
         - name
         - dexNr
