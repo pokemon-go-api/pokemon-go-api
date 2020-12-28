@@ -18,18 +18,33 @@ use function trim;
 
 class TranslationParser
 {
+    public const ENGLISH  = 'English';
+    public const GERMAN   = 'German';
+    public const FRENCH   = 'French';
+    public const ITALIAN  = 'Italian';
+    public const JAPANESE = 'Japanese';
+    public const KOREAN   = 'Korean';
+    public const SPANISH  = 'Spanish';
+
     public const LANGUAGES = [
-        'English',
-        'German',
-        'French',
-        'Italian',
-        'Japanese',
-        'Korean',
-        'Spanish',
+        self::ENGLISH,
+        self::GERMAN,
+        self::FRENCH,
+        self::ITALIAN,
+        self::JAPANESE,
+        self::KOREAN,
+        self::SPANISH,
     ];
 
-    public function loadLanguage(string $language, string $apkFile, string $remoteFile): TranslationCollection
-    {
+    /**
+     * @param array<string, string> $customTranslations
+     */
+    public function loadLanguage(
+        string $language,
+        string $apkFile,
+        string $remoteFile,
+        array $customTranslations
+    ): TranslationCollection {
         $collection = new TranslationCollection($language);
         $files      = [$apkFile, $remoteFile];
 
@@ -85,6 +100,15 @@ class TranslationParser
             } while (! feof($file));
 
             fclose($file);
+        }
+
+        foreach ($customTranslations as $customTranslation => $translation) {
+            if (strpos($customTranslation, CustomTranslations::REGIONAL_PREFIX) === false) {
+                continue;
+            }
+
+            $regionalForm = substr($customTranslation, 14);
+            $collection->addRegionalForm($regionalForm, $translation);
         }
 
         return $collection;

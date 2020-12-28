@@ -7,8 +7,6 @@ servers:
   - url: 'https://pokemon-go-lingen.github.io/pokemon-go-api'
 tags:
   - name: Pokemon
-  - name: Raid
-  - name: Utils
 paths:
   /api/pokedex.json:
     get:
@@ -30,8 +28,7 @@ paths:
     get:
       description: List of all available Mega Pokemon
       summary: List of all available Mega Pokemon
-      tags:
-        - Pokemon
+      tags: []
       responses:
         '200':
           description: OK
@@ -46,8 +43,7 @@ paths:
     get:
       description: List all Pokemon in the given generation number
       summary: List all Pokemon in the given generation number
-      tags:
-        - Pokemon
+      tags: []
       responses:
         '200':
           description: OK
@@ -68,8 +64,7 @@ paths:
     get:
       description: Receive a single Pokemon by the Pokedex number
       summary: Receive a single Pokemon by the Pokedex number
-      tags:
-        - Pokemon
+      tags: []
       responses:
         '200':
           description: OK
@@ -88,8 +83,7 @@ paths:
     get:
       description: Receive all available Pokemon in the given region
       summary: Receive all available Pokemon in the given region
-      tags:
-        - Pokemon
+      tags: []
       responses:
         '200':
           description: OK
@@ -113,8 +107,7 @@ paths:
     get:
       description: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
       summary: Receive a single Pokemon by the PokemonGo internal name in UPPERCASE
-      tags:
-        - Pokemon
+      tags: []
       responses:
         '200':
           description: OK
@@ -131,9 +124,8 @@ paths:
         required: true
   /api/raidboss.json:
     get:
-      summary: Receive the current raid Bosses
-      tags:
-        - Raid
+      summary: Your GET endpoint
+      tags: []
       responses:
         '200':
           description: OK
@@ -146,52 +138,80 @@ paths:
                   currentList:
                     type: object
                     required:
-                      - '1'
-                      - '3'
-                      - '5'
-                      - Mega
+                      - lvl1
+                      - lvl3
+                      - lvl5
+                      - mega
                     properties:
-                      '1':
+                      lvl1:
                         type: array
                         uniqueItems: true
                         minItems: 1
                         items:
                           $ref: '#/components/schemas/RaidBoss'
-                      '3':
+                      lvl3:
                         type: array
                         uniqueItems: true
                         minItems: 1
                         items:
                           $ref: '#/components/schemas/RaidBoss'
-                      '5':
+                      lvl5:
                         type: array
                         uniqueItems: true
                         minItems: 1
                         items:
                           $ref: '#/components/schemas/RaidBoss'
-                      Mega:
+                      mega:
                         type: array
                         uniqueItems: true
                         minItems: 1
                         items:
                           $ref: '#/components/schemas/RaidBoss'
-                      EX:
+                      ex:
                         type: array
                         items:
                           $ref: '#/components/schemas/RaidBoss'
-                  lastGenerated:
-                    type: string
-                    format: date-time
+                  graphics:
+                    type: object
+                    required:
+                      - German
+                      - English
+                    properties:
+                      German:
+                        type: object
+                        required:
+                          - svg
+                          - png
+                          - sha512
+                        properties:
+                          svg:
+                            type: string
+                          png:
+                            type: string
+                          sha512:
+                            type: string
+                      English:
+                        type: object
+                        required:
+                          - svg
+                          - png
+                          - sha512
+                        properties:
+                          svg:
+                            type: string
+                          png:
+                            type: string
+                          sha512:
+                            type: string
                 required:
                   - currentList
-                  - lastGenerated
+                  - graphics
       operationId: get-api-raidboss.json
       description: Return the current raid bosses
   /api/hashes.json:
     get:
       summary: Your GET endpoint
-      tags:
-        - Utils
+      tags: []
       responses:
         '200':
           description: OK
@@ -476,27 +496,88 @@ components:
       description: ''
       type: object
       properties:
-        name:
+        id:
           type: string
-        dexNr:
-          type: number
+        form:
+          type: string
         level:
           type: string
           enum:
-            - '1'
-            - '3'
-            - '5'
-            - Mega
-            - EX
+            - ex
+            - mega
+            - lvl5
+            - lvl3
+            - lvl1
+        names:
+          type: object
+          required:
+            - English
+            - German
+            - French
+            - Italian
+            - Japanese
+            - Korean
+            - Spanish
+          properties:
+            English:
+              type: string
+              minLength: 1
+            German:
+              type: string
+              minLength: 1
+            French:
+              type: string
+              minLength: 1
+            Italian:
+              type: string
+              minLength: 1
+            Japanese:
+              type: string
+              minLength: 1
+            Korean:
+              type: string
+              minLength: 1
+            Spanish:
+              type: string
+              minLength: 1
         shiny:
           type: boolean
-        form:
-          type:
-            - 'null'
-            - string
+        types:
+          type: array
+          uniqueItems: true
+          minItems: 1
+          maxItems: 2
+          items:
+            type: string
+        counter:
+          type: object
+          additionalProperties:
+            type: string
+        weather:
+          type: array
+          minItems: 1
+          maxItems: 2
+          items:
+            type: string
+        cpRange:
+          type: array
+          minItems: 2
+          maxItems: 2
+          items:
+            type: integer
+        cpRangeBoost:
+          type: array
+          minItems: 2
+          maxItems: 2
+          items:
+            type: integer
       required:
-        - name
-        - dexNr
-        - level
-        - shiny
+        - id
         - form
+        - level
+        - names
+        - shiny
+        - types
+        - weather
+        - cpRange
+        - cpRangeBoost

@@ -1,0 +1,229 @@
+<?php
+
+use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+if (!isset($bosses)) {
+    $bosses = [];
+}
+$maxCounterInRow     = 7;
+$lineHeight          = 50;
+$graphicHeaderHeight = 30;
+
+echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
+?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 650 <?=($lineHeight * count($bosses)) + 10 + $graphicHeaderHeight?>" width="975"
+     preserveAspectRatio="none" version="1.1">
+    <style>
+        .boss-types rect,
+        .boss-level rect,
+        .boss-cp-spectrum rect {
+            opacity: 0.4;
+            fill: #ccc;
+        }
+
+        .boss-image rect,
+        .boss-name rect,
+        .boss-weather rect,
+        .boss-counter rect {
+            opacity: 0;
+            fill: #f00;
+        }
+
+        .pokemon-type-icon {
+            filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.7));
+        }
+
+
+        .boss-level {
+            fill: #ddd;
+            font-size: 18px;
+            dominant-baseline: middle;
+            text-anchor: middle;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .boss-name text {
+            font-size: 30px;
+            line-height: 1.25;
+            font-family: sans-serif;
+            direction: rtl;
+            fill: #ffffff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+            text-transform: uppercase;
+        }
+
+        .boss-cp-spectrum text {
+            font-size: 10px;
+            font-family: sans-serif;
+            fill: #ffffff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .boss-counter text {
+            font-size: 10px;
+            font-family: sans-serif;
+            fill: #ffffff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .boss-counter .image-counter-256 {
+            filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.6));
+        }
+
+        .boss-cp-spectrum .boost {
+            fill: #ccc;
+        }
+
+        .graphic-header text {
+            font-size: 10px;
+            font-family: sans-serif;
+            fill: #ffffff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+            text-transform: uppercase;
+        }
+
+        .graphic-header line {
+            stroke: #ffffff;
+            stroke-width: 1;
+        }
+    </style>
+    <defs>
+        <linearGradient id="header" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#000"/>
+            <stop offset="100%" stop-color="#333"/>
+        </linearGradient>
+        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_EX ?>" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#000"/>
+            <stop offset="100%" stop-color="#333"/> <!-- lighten 20% -->
+        </linearGradient>
+        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_MEGA ?>" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#8e3628"/>
+            <stop offset="100%" stop-color="#c14936"/> <!-- lighten 20% -->
+        </linearGradient>
+        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_5 ?>" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#3f577c"/>
+            <stop offset="100%" stop-color="#6c89b4"/> <!-- lighten 40% -->
+        </linearGradient>
+        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_3 ?>" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#806b2e"/>
+            <stop offset="100%" stop-color="#b1943f"/> <!-- lighten 20% -->
+        </linearGradient>
+        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_1 ?>" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#870f52"/>
+            <stop offset="100%" stop-color="#e93c9d"/> <!-- lighten 40% -->
+        </linearGradient>
+    </defs>
+
+    <g class="graphic-header">
+        <rect fill="url('#header')" width="650" height="<?= $graphicHeaderHeight ?>" x="0" y="0"/>
+        <line x1="0" x2="650" y1="<?= $graphicHeaderHeight ?>" y2="<?= $graphicHeaderHeight ?>"/>
+        <text x="3" y="20">Level</text>
+        <text x="170" y="20">Raidboss</text>
+        <text x="315" y="20">Typen</text>
+        <text x="375" y="20">Wetter</text>
+        <text x="425" y="20">WP-Spektrum</text>
+        <text x="525" y="20">Konter Typen</text>
+    </g>
+
+    <?php foreach ($bosses as $index => $boss) : ?>
+        <svg id="raidbosswrapper-<?= $boss->id ?>" x="0" y="<?= $index * $lineHeight + $graphicHeaderHeight ?>" width="100%" height="<?= $lineHeight + 10 ?>">
+            <rect fill="url('#raidBossGradient_<?= $boss->level ?>')" width="100%" height="<?= $lineHeight ?>" x="0" y="0"/>
+
+            <g class="boss-level">
+                <rect width="35" height="<?= $lineHeight ?>" x="0" y="0"/>
+                <text x="15" y="25"><?= $boss->levelIcon ?></text>
+            </g>
+
+            <g class="boss-name">
+                <rect width="215" height="<?= $lineHeight ?>" x="85" y="0"/>
+                <text x="295" y="35"><?= $boss->name ?></text>
+            </g>
+
+            <g class="boss-image">
+                <rect width="50" height="<?= $lineHeight ?>" x="35" y="0"/>
+
+                <image width="55" height="55" x="25" y="0"
+                       href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/<?= $boss->image . ($boss->shiny ? '_shiny' : '') ?>.png"/>
+                <?php if ($boss->shiny) : ?>
+                    <image class="boss-shiny-image" width="15" height="15" x="22" y="0"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
+                <?php endif; ?>
+            </g>
+
+            <g class="boss-types">
+                <rect width="70" height="<?= $lineHeight ?>" x="300" y="0"/>
+                <svg width="70" height="<?= $lineHeight?>" x="300" y="0">
+                <?php if (count($boss->types) === 1) : ?>
+                    <image x="22" y="12" width="26" height="26" class="pokemon-type-icon"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Types/POKEMON_TYPE_<?= strtoupper($boss->types[0]) ?>.png">
+                        <title><?=$boss->types[0]?></title>
+                    </image>
+                <?php else : ?>
+                    <image x="7" y="12" width="26" height="26" class="pokemon-type-icon"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Types/POKEMON_TYPE_<?= strtoupper($boss->types[0]) ?>.png">
+                        <title><?=$boss->types[0]?></title>
+                    </image>
+                    <image x="38" y="12" width="26" height="26" class="pokemon-type-icon"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Types/POKEMON_TYPE_<?= strtoupper($boss->types[1]) ?>.png">
+                        <title><?=$boss->types[0]?></title>
+                    </image>
+                <?php endif; ?>
+                </svg>
+            </g>
+
+            <g class="boss-weather">
+                <rect width="60" height="<?= $lineHeight ?>" x="370" y="0"/>
+                <svg width="60" height="<?= $lineHeight?>" x="370" y="0">
+                <?php if (count($boss->weather) === 1) : ?>
+                    <image x="15" y="12" width="25" height="25" class="pokemon-type-icon"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Weather/weatherIcon_small_<?= $boss->weather[0] ?>.png">
+                        <title><?= $boss->weather[0] ?></title>
+                    </image>
+                <?php else : ?>
+                    <image x="5" y="12" width="25" height="25" class="pokemon-type-icon"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Weather/weatherIcon_small_<?= $boss->weather[0] ?>.png">
+                        <title><?= $boss->weather[0] ?></title>
+                    </image>
+                    <image x="30" y="12" width="25" height="25" class="pokemon-type-icon"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Weather/weatherIcon_small_<?= $boss->weather[1] ?>.png">
+                        <title><?= $boss->weather[1] ?></title>
+                    </image>
+                <?php endif; ?>
+                </svg>
+            </g>
+
+            <g class="boss-cp-spectrum">
+                <rect width="60" height="<?= $lineHeight ?>" x="430" y="0"/>
+                <svg width="60" height="<?= $lineHeight?>" x="430" y="0">
+                    <text class="normal" x="50%" y="20" dominant-baseline="middle" text-anchor="middle"><?= $boss->cpRange ?></text>
+                    <text class="boost"  x="50%" y="35" dominant-baseline="middle" text-anchor="middle"><?= $boss->cpRangeBoost ?></text>
+                </svg>
+            </g>
+
+            <g class="boss-counter">
+                <rect width="160" height="<?= $lineHeight ?>" x="490" y="0"/>
+                <?php
+                $counterTypeIndex = count($boss->counter) - 1;
+                foreach ($boss->counter as $type => $multiplier) :
+                    $x              = 500 + ($counterTypeIndex * 20) + (($maxCounterInRow - count($boss->counter)) * 10);
+                    $multiplierText = str_replace('.', '', $multiplier);
+                    ?>
+                    <image class="image-counter-<?=$multiplierText?>" x="<?= $x ?>" y="12" width="24" height="24"
+                           href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Types/POKEMON_TYPE_<?= strtoupper($type) ?>.png">
+                        <title><?=$type . ' ' . $multiplier?></title>
+                    </image>
+                    <?php
+                    if ($multiplier > 2) : ?>
+                        <text x="<?= $x + 5 ?>" y="40">2x</text>
+                    <?php
+                    endif;
+                    $counterTypeIndex--;
+                endforeach;
+
+                ?>
+            </g>
+
+        </svg>
+    <?php endforeach;
+    ?>
+</svg>

@@ -10,6 +10,9 @@ use PokemonGoLingen\PogoAPI\Types\Pokemon;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
 
 /**
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
+ *
  * @covers \PokemonGoLingen\PogoAPI\Collections\PokemonCollection
  */
 class PokemonCollectionTest extends TestCase
@@ -20,10 +23,13 @@ class PokemonCollectionTest extends TestCase
             100,
             'TESTPOKEMON',
             'TESTPOKEMON_FORM',
-            new PokemonType('WATER'),
-            new PokemonType('FIRE')
+            PokemonType::water(),
+            PokemonType::fire()
         );
         $collection = new PokemonCollection();
+        $collection->add($pokemon);
+        self::assertCount(1, $collection->toArray());
+        // assert the same pokemon can't be added twice
         $collection->add($pokemon);
         self::assertCount(1, $collection->toArray());
 

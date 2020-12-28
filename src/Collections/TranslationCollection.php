@@ -21,6 +21,8 @@ final class TranslationCollection
     private array $moveNames = [];
     /** @var array<string, string> */
     private array $pokemonFormNames = [];
+    /** @var array<string, string> */
+    private array $regionalForms = [];
 
     public function __construct(string $languageName)
     {
@@ -90,10 +92,18 @@ final class TranslationCollection
         return $this->pokemonMegaNames[$dexNrKey] ?? [];
     }
 
-    public function getPokemonFormName(string $formName, string $fallbackName): ?string
+    public function getPokemonFormName(string $formName): ?string
     {
-        return $this->pokemonFormNames[mb_strtoupper($formName)]
-            ?? $this->pokemonFormNames[mb_strtoupper($fallbackName)]
-            ?? null;
+        return $this->pokemonFormNames[mb_strtoupper($formName)] ?? null;
+    }
+
+    public function addRegionalForm(string $regionalForm, string $translation): void
+    {
+        $this->regionalForms[$regionalForm] = $translation;
+    }
+
+    public function getRegionalForm(string $regionalForm): ?string
+    {
+        return $this->regionalForms[$regionalForm];
     }
 }

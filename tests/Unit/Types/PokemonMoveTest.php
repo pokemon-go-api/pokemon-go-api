@@ -13,6 +13,8 @@ use function json_decode;
 use const JSON_THROW_ON_ERROR;
 
 /**
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ *
  * @covers \PokemonGoLingen\PogoAPI\Types\PokemonMove
  */
 class PokemonMoveTest extends TestCase
@@ -24,7 +26,7 @@ class PokemonMoveTest extends TestCase
         $move       = PokemonMove::createFromGameMaster($data->data);
         self::assertSame(21, $move->getId());
         self::assertSame('FLAME_WHEEL', $move->getName());
-        self::assertSame('POKEMON_TYPE_FIRE', $move->getPokemonType()->getTypeName());
+        self::assertSame('POKEMON_TYPE_FIRE', $move->getPokemonType()->getGameMasterTypeName());
         self::assertSame(2700.0, $move->getDurationMs());
         self::assertFalse($move->isFastMove());
         self::assertSame(-50.0, $move->getEnergy());
@@ -38,7 +40,7 @@ class PokemonMoveTest extends TestCase
         $move       = PokemonMove::createFromGameMaster($data->data);
         self::assertSame(253, $move->getId());
         self::assertSame('DRAGON_TAIL_FAST', $move->getName());
-        self::assertSame('POKEMON_TYPE_DRAGON', $move->getPokemonType()->getTypeName());
+        self::assertSame('POKEMON_TYPE_DRAGON', $move->getPokemonType()->getGameMasterTypeName());
         self::assertSame(1100.0, $move->getDurationMs());
         self::assertTrue($move->isFastMove());
         self::assertSame(9.0, $move->getEnergy());

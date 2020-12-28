@@ -6,7 +6,7 @@ namespace PokemonGoLingen\PogoAPI\IO;
 
 use GuzzleHttp\Client;
 
-final class RemoteFileLoader
+class RemoteFileLoader
 {
     private Client $client;
 

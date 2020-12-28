@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root" type="rootType"/>
+    <xs:complexType name="startDateType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="date"/>
+            <xs:element type="xs:string" minOccurs="0" name="timezone"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="endDateType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="date"/>
+            <xs:element type="xs:string" minOccurs="0" name="timezone"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="raidbossType">
+        <xs:sequence>
+            <xs:element type="startDateType" name="startDate"/>
+            <xs:element type="endDateType" name="endDate"/>
+            <xs:element type="xs:string" name="pokemon"/>
+            <xs:element type="xs:string" minOccurs="0" name="form"/>
+            <xs:element type="xs:string" name="level"/>
+            <xs:element type="xs:boolean" name="shiny"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="rootType">
+        <xs:sequence>
+            <xs:element type="raidbossType" name="raidboss" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+

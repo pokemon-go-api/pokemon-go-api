@@ -9,6 +9,7 @@ use stdClass;
 
 use function assert;
 use function preg_match;
+use function str_replace;
 
 final class PokemonFormCollection
 {
@@ -41,7 +42,13 @@ final class PokemonFormCollection
                 continue;
             }
 
-            $forms[] = new PokemonForm($formData->form, $formData->assetBundleValue);
+            $formOnlyId = str_replace($templateIdParts['name'] . '_', '', $formData->form);
+
+            $forms[] = new PokemonForm(
+                $formData->form,
+                $formOnlyId,
+                $formData->assetBundleValue
+            );
         }
 
         return new self(

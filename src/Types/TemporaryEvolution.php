@@ -14,26 +14,26 @@ final class TemporaryEvolution
     private string $id;
     private ?int $assetsBundleId = null;
     private PokemonType $typePrimary;
-    private ?PokemonType $typeSecondary;
+    private PokemonType $typeSecondary;
     private ?PokemonStats $stats = null;
 
     public function __construct(string $id, PokemonType $typePrimary, ?PokemonType $typeSecondary)
     {
         $this->id            = $id;
         $this->typePrimary   = $typePrimary;
-        $this->typeSecondary = $typeSecondary;
+        $this->typeSecondary = $typeSecondary ?? PokemonType::none();
     }
 
     public static function createFromGameMaster(stdClass $tempEvoOverride, string $basePokemonId): self
     {
         $secondaryType = null;
         if (isset($tempEvoOverride->typeOverride2)) {
-            $secondaryType = PokemonType::create($tempEvoOverride->typeOverride2);
+            $secondaryType = PokemonType::createFromPokemonType($tempEvoOverride->typeOverride2);
         }
 
         $temporaryEvolution = new self(
             $basePokemonId . substr($tempEvoOverride->tempEvoId, 14), // trim TEMP_EVOLUTION
-            PokemonType::create($tempEvoOverride->typeOverride1),
+            PokemonType::createFromPokemonType($tempEvoOverride->typeOverride1),
             $secondaryType
         );
         if (isset($tempEvoOverride->stats->baseStamina)) {
@@ -53,7 +53,7 @@ final class TemporaryEvolution
         return $this->stats;
     }
 
-    public function getTypeSecondary(): ?PokemonType
+    public function getTypeSecondary(): PokemonType
     {
         return $this->typeSecondary;
     }

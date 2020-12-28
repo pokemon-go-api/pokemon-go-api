@@ -3,29 +3,43 @@
 declare(strict_types=1);
 
 use PokemonGoLingen\PogoAPI\CacheLoader;
+use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
+use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
+use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
+use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $tmpDir      = __DIR__ . '/../data/tmp/';
-$cacheLoader = new CacheLoader($tmpDir);
+$cacheLoader = new CacheLoader(new RemoteFileLoader(), new DateTimeImmutable(), $tmpDir);
 
 printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Parse Files');
 $masterData = new MasterDataParser();
 $masterData->parseFile($cacheLoader->fetchGameMasterFile());
 
-$languageFiles     = $cacheLoader->fetchLanguageFiles();
-$translationLoader = new TranslationParser();
-$translations      = [];
+$languageFiles      = $cacheLoader->fetchLanguageFiles();
+$translationLoader  = new TranslationParser();
+$translations       = new TranslationCollectionCollection();
+$customTranslations = CustomTranslations::load();
 foreach (TranslationParser::LANGUAGES as $languageName) {
-    $translations[] = $translationLoader->loadLanguage(
-        $languageName,
-        $languageFiles['apk'][$languageName],
-        $languageFiles['remote'][$languageName]
+    if (! isset($languageFiles['apk'][$languageName])) {
+        continue;
+    }
+
+    $translations->addTranslationCollection(
+        $translationLoader->loadLanguage(
+            $languageName,
+            $languageFiles['apk'][$languageName],
+            $languageFiles['remote'][$languageName],
+            $customTranslations[$languageName]
+        )
     );
 }
 
@@ -72,18 +86,75 @@ foreach ($files as $file => $data) {
     file_put_contents($apidir . $file . '.json', json_encode($data));
 }
 
-$raidBossList   = $cacheLoader->fetchRaidBosses();
-$leekduckParser = new LeekduckParser();
-$raidBosses     = $leekduckParser->parseRaidBosses($raidBossList);
-$raidBossHash   = hash('sha512', json_encode($raidBosses) ?: '');
+$raidBossHtmlList = $cacheLoader->fetchRaidBosses();
+$leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
+$raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
 
-if (! $cacheLoader->hasRaidBossCacheEntry($raidBossHash) || ! is_file($apidir . 'raidboss.json')) {
-    $cacheLoader->persistRaidBossCacheEntry($raidBossHash);
-    file_put_contents($apidir . 'raidboss.json', json_encode([
-        'currentList'   => $raidBosses,
-        'lastGenerated' => (new DateTimeImmutable('now', new DateTimeZone('UTC')))->format(DATE_RFC3339_EXTENDED),
-    ]));
+$raidOverwrites = json_decode(json_encode(
+    (array) (simplexml_load_string(file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: '') ?: [])
+) ?: '[]');
+foreach ($raidOverwrites->raidboss as $raidOverwrite) {
+    $start = new DateTimeImmutable(
+        $raidOverwrite->startDate->date,
+        isset($raidOverwrite->startDate->timezone) ? new DateTimeZone($raidOverwrite->startDate->timezone) : null
+    );
+    $end   = new DateTimeImmutable(
+        $raidOverwrite->endDate->date,
+        isset($raidOverwrite->endDate->timezone) ? new DateTimeZone($raidOverwrite->endDate->timezone) : null
+    );
+    $now   = new DateTimeImmutable();
+    if ($now < $start || $now > $end) {
+        continue;
+    }
+
+    $pokemon = $masterData->getPokemonCollection()->get($raidOverwrite->pokemon);
+    if ($pokemon === null) {
+        continue;
+    }
+
+    $raidBosses->add(
+        new RaidBoss(
+            $raidOverwrite->form ?? $raidOverwrite->pokemon,
+            $raidOverwrite->shiny === 'true',
+            $raidOverwrite->level,
+            $pokemon,
+            null
+        )
+    );
 }
+
+$raidBossImageRenderer = new RaidBossGraphicRenderer();
+foreach ($translations->getCollections() as $translationName => $translationCollection) {
+    $raidListDir = sprintf('%s/graphics/%s', $apidir, $translationName);
+    if (! is_readable($raidListDir)) {
+        @mkdir($raidListDir, 0777, true);
+    }
+
+    file_put_contents(
+        sprintf('%s/raidlist.svg', $raidListDir),
+        $raidBossImageRenderer->buildGraphic($raidBosses, $translationCollection)
+    );
+}
+
+$raidListRenderer = new RaidBossListRenderer();
+$raidBossesList   = $raidListRenderer->buildList($raidBosses, $translations);
+$raidBossHash     = hash('sha512', json_encode($raidBossesList) ?: '');
+
+file_put_contents($apidir . 'raidboss.json', json_encode([
+    'currentList' => $raidBossesList,
+    'graphics' => [
+        'German' => [
+            'svg' => '/api/graphics/German/raidlist.svg',
+            'png' => '/api/graphics/German/raidlist.png',
+            'sha512' => hash_file('sha512', $apidir . '/graphics/German/raidlist.svg'),
+        ],
+        'English' => [
+            'svg' => '/api/graphics/English/raidlist.svg',
+            'png' => '/api/graphics/English/raidlist.png',
+            'sha512' => hash_file('sha512', $apidir . '/graphics/English/raidlist.svg'),
+        ],
+    ],
+]));
 
 file_put_contents($apidir . 'hashes.json', json_encode(
     [

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="raidOverwrites.xsd">
+    <raidboss>
+        <startDate>
+            <date>2021-01-01 21:00:00</date>
+            <timezone>UTC</timezone>
+        </startDate>
+        <endDate>
+            <date>2021-01-05 10:00:00</date>
+        </endDate>
+        <pokemon>HO_OH</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-01-05 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-01-12 10:00:00</date>
+        </endDate>
+        <pokemon>GENESECT</pokemon>
+        <form>GENESECT_BURN</form>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-01-12 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-01-19 10:00:00</date>
+        </endDate>
+        <pokemon>HEATRAN</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-01-19 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-01-26 10:00:00</date>
+        </endDate>
+        <pokemon>KYOGRE</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-01-19 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-01-26 10:00:00</date>
+        </endDate>
+        <pokemon>GROUDON</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+</root>

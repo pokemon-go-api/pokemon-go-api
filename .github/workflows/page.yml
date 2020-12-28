@@ -39,6 +39,16 @@ jobs:
       - name: Generate Data
         run: composer run-script build-api
 
+      - name: Convert SVG to PNG
+        uses: swinton/screenshot-website@v1.x
+        with:
+          source: public/api/graphics/German/raidlist.svg
+          destination: public/api/graphics/German/raidlist.png
+          width: 975
+          height: 1260
+          defaultBackground: false
+          timeout: 30
+
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2

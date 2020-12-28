@@ -36,7 +36,7 @@ class TranslationCollectionTest extends TestCase
             ],
             $collection->getPokemonMegaNames(5)
         );
-        self::assertSame('Pokemon Form in testlanguage', $collection->getPokemonFormName('POKEMON_FORM', 'FALLBACK'));
-        self::assertSame('Pokemon Form in testlanguage', $collection->getPokemonFormName('FALLBACK', 'POKEMON_FORM'));
+        self::assertSame('Pokemon Form in testlanguage', $collection->getPokemonFormName('POKEMON_FORM'));
+        self::assertNull($collection->getPokemonFormName('FALLBACK'));
     }
 }

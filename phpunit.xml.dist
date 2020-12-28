@@ -18,6 +18,10 @@
         </testsuite>
     </testsuites>
 
+    <logging>
+        <junit outputFile="data/cache/junit-report.xml"/>
+    </logging>
+
     <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">src</directory>
