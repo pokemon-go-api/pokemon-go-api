@@ -10,6 +10,9 @@ use PokemonGoLingen\PogoAPI\Types\PokemonMove;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
 
 /**
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonMove
+ *
  * @covers \PokemonGoLingen\PogoAPI\Collections\AttacksCollection
  */
 class AttacksCollectionTest extends TestCase
@@ -19,7 +22,7 @@ class AttacksCollectionTest extends TestCase
         $pokemonMove = new PokemonMove(
             100,
             'TESTMOVE',
-            new PokemonType('FIRE'),
+            PokemonType::fire(),
             10.0,
             15.0,
             100.0,

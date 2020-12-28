@@ -1,0 +1,16 @@
+{
+    "minMsi": 75,
+    "timeout": 1,
+    "source": {
+        "directories": [
+            "src"
+        ]
+    },
+    "logs": {
+        "text": "data/cache/infection.log"
+    },
+    "tmpDir": "data/cache",
+    "mutators": {
+        "@default": true
+    }
+}

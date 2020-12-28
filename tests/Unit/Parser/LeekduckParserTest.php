@@ -5,55 +5,76 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
+use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
+use PokemonGoLingen\PogoAPI\Types\Pokemon;
+use PokemonGoLingen\PogoAPI\Types\PokemonType;
+use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+
+use function array_map;
 
 /**
+ * @uses \PokemonGoLingen\PogoAPI\Collections\RaidBossCollection
+ * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
+ *
  * @covers \PokemonGoLingen\PogoAPI\Parser\LeekduckParser
  */
 class LeekduckParserTest extends TestCase
 {
     public function testParse(): void
     {
-        $sut      = new LeekduckParser();
+        $collection = $this->createMock(PokemonCollection::class);
+        $collection->method('getByDexId')->willReturnCallback(static function (int $dexNr) {
+            return new Pokemon($dexNr, 'id_' . $dexNr, 'id_' . $dexNr, PokemonType::none(), PokemonType::none());
+        });
+
+        $sut          = new LeekduckParser($collection);
+        $parsedBosses = $sut->parseRaidBosses(__DIR__ . '/Fixtures/leekduck_raids.html')->toArray();
+        $simpleResult = array_map(
+            static function (RaidBoss $raidBoss): array {
+                return [
+                    'dexNr' => $raidBoss->getPokemon()->getDexNr(),
+                    'level' => $raidBoss->getRaidLevel(),
+                    'shiny' => $raidBoss->isShinyAvailable(),
+                ];
+            },
+            $parsedBosses
+        );
+
         $expected = [
-            1 => [
-                ['name' => 'Pikachu', 'dexNr' => 25, 'level' => '1', 'shiny' => true, 'form' => null],
-                ['name' => 'Swinub', 'dexNr' => 220, 'level' => '1', 'shiny' => true, 'form' => null],
-                ['name' => 'Snorunt', 'dexNr' => 361, 'level' => '1', 'shiny' => true, 'form' => null],
-                ['name' => 'Timburr', 'dexNr' => 532, 'level' => '1', 'shiny' => true, 'form' => null],
-                ['name' => 'Klink', 'dexNr' => 599, 'level' => '1', 'shiny' => true, 'form' => null],
-                ['name' => 'Cubchoo', 'dexNr' => 613, 'level' => '1', 'shiny' => true, 'form' => null],
-                ['name' => 'Espurr', 'dexNr' => 677, 'level' => '1', 'shiny' => false, 'form' => null],
-            ],
-            3 => [
-                ['name' => 'Alolan Exeggutor', 'dexNr' => 103, 'level' => '3', 'shiny' => true, 'form' => 'Alola'],
-                ['name' => 'Alolan Raichu', 'dexNr' => 26, 'level' => '3', 'shiny' => true, 'form' => 'Alola'],
-                ['name' => 'Machamp', 'dexNr' => 68, 'level' => '3', 'shiny' => false, 'form' => null],
-                ['name' => 'Alolan Marowak', 'dexNr' => 105, 'level' => '3', 'shiny' => true, 'form' => 'Alola'],
-                ['name' => 'Hariyama', 'dexNr' => 297, 'level' => '3', 'shiny' => false, 'form' => null],
-                ['name' => 'Mawile', 'dexNr' => 303, 'level' => '3', 'shiny' => true, 'form' => null],
-                ['name' => 'Aggron', 'dexNr' => 306, 'level' => '3', 'shiny' => false, 'form' => null],
-                ['name' => 'Excadrill', 'dexNr' => 530, 'level' => '3', 'shiny' => false, 'form' => null],
-                ['name' => 'Galarian Weezing', 'dexNr' => 110, 'level' => '3', 'shiny' => false, 'form' => 'Galar'],
-            ],
-            5 => [
-                ['name' => 'Registeel', 'dexNr' => 379, 'level' => '5', 'shiny' => true, 'form' => null],
-                ['name' => 'Kyurem', 'dexNr' => 646, 'level' => '5', 'shiny' => false, 'form' => null],
-            ],
-            'Mega' => [
-                ['name' => 'Mega Charizard X', 'dexNr' => 6, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega X'],
-                ['name' => 'Mega Gengar', 'dexNr' => 94, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
-                ['name' => 'Mega Abomasnow', 'dexNr' => 460, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
-                ['name' => 'Mega Charizard Y', 'dexNr' => 6, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega Y'],
-                ['name' => 'Mega Blastoise', 'dexNr' => 9, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
-                ['name' => 'Mega Pidgeot', 'dexNr' => 18, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
-                ['name' => 'Mega Houndoom', 'dexNr' => 229, 'level' => 'Mega', 'shiny' => true, 'form' => 'Mega'],
-            ],
-            'EX' => [
-                ['name' => 'Deoxys', 'dexNr' => 386, 'level' => 'EX', 'shiny' => false, 'form' => 'Speed'],
-            ],
+            ['dexNr' => 386, 'level' => RaidBoss::RAID_LEVEL_EX, 'shiny' => false],
+
+            ['dexNr' => 229, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
+            ['dexNr' => 18, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
+            ['dexNr' => 9, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
+            ['dexNr' => 460, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
+            ['dexNr' => 94, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
+            ['dexNr' => 6, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
+
+            ['dexNr' => 646, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => false],
+            ['dexNr' => 379, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => true],
+
+            ['dexNr' => 306, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
+            ['dexNr' => 110, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
+            ['dexNr' => 530, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
+            ['dexNr' => 303, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
+            ['dexNr' => 297, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
+            ['dexNr' => 105, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
+            ['dexNr' => 68, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
+            ['dexNr' => 26, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
+            ['dexNr' => 103, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
+
+            ['dexNr' => 220, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
+            ['dexNr' => 677, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => false],
+            ['dexNr' => 613, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
+            ['dexNr' => 599, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
+            ['dexNr' => 532, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
+            ['dexNr' => 361, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
+            ['dexNr' => 25, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
         ];
 
-        self::assertSame($expected, $sut->parseRaidBosses(__DIR__ . '/Fixtures/leekduck_raids.html'));
+        self::assertSame($expected, $simpleResult);
     }
 }

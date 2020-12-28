@@ -1,5 +1,7 @@
 data/*
 !data/.gitkeep
+!data/raidOverwrites.xml
+!data/raidOverwrites.xsd
 
 !data/cache
 data/cache/*

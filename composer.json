@@ -1,9 +1,13 @@
 {
     "name": "pokemongo-lingen/pogo-api",
+    "description": "Pokemon GO Pokedex and Raid API",
+    "license": "proprietary",
     "require": {
       "php": "^7.4.0 || ~8.0.0",
       "ext-json": "*",
-      "ext-dom": "*"
+      "ext-dom": "*",
+      "ext-simplexml": "*",
+        "guzzlehttp/guzzle": "^7.2.0"
     },
     "autoload": {
         "psr-4": {
@@ -15,31 +19,38 @@
             "Tests\\Unit\\PokemonGoLingen\\PogoAPI\\": "tests/Unit"
         }
     },
-    "require": {
-        "guzzlehttp/guzzle": "7.2.0"
-    },
     "require-dev": {
         "doctrine/coding-standard": "^8.2",
         "phpstan/phpstan": "^0.12.63",
         "phpstan/phpstan-phpunit": "^0.12.17",
         "phpunit/phpunit": "^9.5",
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "infection/infection": "^0.20.0"
     },
     "scripts": {
         "ci": [
             "@cs-check",
             "@phpstan",
-            "@phpunit"
+            "@phpunit",
+            "@infection"
         ],
         "build-api": [
             "php bin/console.php",
             "rm -rf public/api",
             "cp -r data/tmp/api public/"
         ],
+        "convert-svg": [
+            "chromium --headless --disable-gpu --hide-scrollbars --window-size=975,1260 --screenshot=public/api/graphics/German/raidlist.png data/tmp/api/graphics/German/raidlist.svg",
+            "chromium --headless --disable-gpu --hide-scrollbars --window-size=975,1260 --screenshot=public/api/graphics/English/raidlist.png data/tmp/api/graphics/English/raidlist.svg"
+        ],
         "cs-check": "phpcs -s",
         "cs-fix": "phpcbf",
         "phpstan": "phpstan analyse",
-        "phpunit": "phpunit"
+        "phpunit": "phpunit",
+        "infection": [
+            "@putenv XDEBUG_MODE=coverage",
+            "infection --only-covered"
+        ]
     },
     "config": {
         "sort-packages": true

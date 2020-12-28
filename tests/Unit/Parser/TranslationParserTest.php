@@ -8,6 +8,8 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 
 /**
+ * @uses \PokemonGoLingen\PogoAPI\Collections\TranslationCollection
+ *
  * @covers \PokemonGoLingen\PogoAPI\Parser\TranslationParser
  */
 class TranslationParserTest extends TestCase
@@ -18,13 +20,16 @@ class TranslationParserTest extends TestCase
         $collection = $sut->loadLanguage(
             'English',
             __DIR__ . '/Fixtures/latest_apk_English.txt',
-            ''
+            '',
+            []
         );
 
         self::assertSame('Charizard', $collection->getPokemonName(6));
         self::assertSame(['Mega Charizard X', 'Mega Charizard Y'], $collection->getPokemonMegaNames(6));
-        self::assertSame('Defense', $collection->getPokemonFormName('defense', 'deoxys_defense'));
-        self::assertSame('Normal', $collection->getPokemonFormName('normal', 'deoxys_normal'));
+        self::assertSame('Defense', $collection->getPokemonFormName('defense'));
+        self::assertNull($collection->getPokemonFormName('deoxys_defense'));
+        self::assertNull($collection->getPokemonFormName('normal'));
+        self::assertSame('Normal', $collection->getPokemonFormName('deoxys_normal'));
         self::assertSame('Bug', $collection->getTypeName('pokemon_type_bug'));
         self::assertSame('Aeroblast', $collection->getMoveName(335));
         self::assertSame('Fly', $collection->getMoveName(341));

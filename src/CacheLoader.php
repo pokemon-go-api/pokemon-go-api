@@ -4,18 +4,24 @@ declare(strict_types=1);
 
 namespace PokemonGoLingen\PogoAPI;
 
+use DateTimeImmutable;
 use JsonException;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use RuntimeException;
 use stdClass;
 
 use function array_filter;
 use function file_get_contents;
 use function file_put_contents;
+use function floor;
+use function is_dir;
 use function is_file;
 use function json_decode;
 use function json_encode;
+use function mkdir;
 use function pathinfo;
 use function printf;
+use function sprintf;
 
 use const JSON_THROW_ON_ERROR;
 use const PATHINFO_FILENAME;
@@ -33,12 +39,20 @@ class CacheLoader
     /** @var array<string, string> */
     private array $cachedData = [];
     private RemoteFileLoader $remoteFileLoader;
+    private DateTimeImmutable $clock;
 
-    public function __construct(string $cacheDir)
-    {
-        $this->cacheDir = $cacheDir;
+    public function __construct(
+        RemoteFileLoader $remoteFileLoader,
+        DateTimeImmutable $clock,
+        string $cacheDir
+    ) {
+        $this->remoteFileLoader = $remoteFileLoader;
+        $this->clock            = $clock;
+        $this->cacheDir         = $cacheDir;
 
-        $this->remoteFileLoader = new RemoteFileLoader();
+        if (! is_dir($this->cacheDir) && ! mkdir($this->cacheDir, 0777, true)) {
+            throw new RuntimeException(sprintf('Directory "%s" was not created', $this->cacheDir));
+        }
 
         if (! is_file($this->cacheDir . self::CACHE_FILE)) {
             return;
@@ -62,6 +76,8 @@ class CacheLoader
 
     public function fetchGameMasterFile(): string
     {
+        $cacheFile = $this->cacheDir . 'GAME_MASTER_LATEST.json';
+
         $gameMasterLatestResponse = $this->remoteFileLoader->load(self::GAME_MASTER_LATEST_FILE)->getContent() ?: '[]';
 
         $gameMasterLatest = json_decode($gameMasterLatestResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
@@ -69,8 +85,6 @@ class CacheLoader
             $gameMasterLatest,
             static fn (stdClass $fileMeta): bool => $fileMeta->name === 'latest.json'
         )[0] ?? [];
-
-        $cacheFile = $this->cacheDir . 'GAME_MASTER_LATEST.json';
 
         if (
             ! isset($this->cachedData[$latestJsonFile->path])
@@ -102,13 +116,13 @@ class CacheLoader
         ];
 
         $output = [];
-        foreach ($allTexts as $id => $files) {
+        foreach ($allTexts as $textType => $files) {
             foreach ($files as $file) {
                 if ($file->type !== 'file') {
                     continue;
                 }
 
-                $cacheFile = $this->cacheDir . 'latest_' . $id . '_' . $file->name;
+                $cacheFile = $this->cacheDir . 'latest_' . $textType . '_' . $file->name;
                 if (! isset($this->cachedData[$file->path]) || $file->sha !== $this->cachedData[$file->path]) {
                     printf("put %s in cache\n", $file->path);
                     $this->cachedData[$file->path] = $file->sha;
@@ -116,7 +130,7 @@ class CacheLoader
                     $this->remoteFileLoader->load($file->download_url)->saveTo($cacheFile);
                 }
 
-                $output[$id][pathinfo($file->name, PATHINFO_FILENAME)] = $cacheFile;
+                $output[$textType][pathinfo($file->name, PATHINFO_FILENAME)] = $cacheFile;
             }
         }
 
@@ -126,18 +140,14 @@ class CacheLoader
     public function fetchRaidBosses(): string
     {
         $cacheFile = $this->cacheDir . 'raidlist.html';
-        $this->remoteFileLoader->load('https://leekduck.com/boss/')->saveTo($cacheFile);
+        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
+
+        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
+        if ($cacheEntry !== $cacheKey) {
+            $this->remoteFileLoader->load('https://leekduck.com/boss/')->saveTo($cacheFile);
+            $this->cachedData[$cacheFile] = $cacheKey;
+        }
 
         return $cacheFile;
-    }
-
-    public function hasRaidBossCacheEntry(string $raidBossHash): bool
-    {
-        return ($this->cachedData['raidbosses.json'] ?? null) === $raidBossHash;
-    }
-
-    public function persistRaidBossCacheEntry(string $raidBossHash): void
-    {
-        $this->cachedData['raidbosses.json'] = $raidBossHash;
     }
 }

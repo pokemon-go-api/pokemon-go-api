@@ -8,7 +8,7 @@ use PokemonGoLingen\PogoAPI\Types\Pokemon;
 
 use function array_key_exists;
 
-final class PokemonCollection
+class PokemonCollection
 {
     /** @var array<string, Pokemon> */
     private array $storage = [];

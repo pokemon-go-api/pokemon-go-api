@@ -200,7 +200,7 @@ class MasterDataParser
 
             foreach ($pokemonFormCollection->getPokemonForms() as $pokemonForm) {
                 if ($pokemonForm->getId() === $pokemon->getId() . '_NORMAL') {
-                    $pokemon->setAssetsBundleId($pokemonForm->getAssetBundleValue());
+                    $pokemon->setPokemonForm($pokemonForm);
                     continue;
                 }
 
@@ -209,7 +209,7 @@ class MasterDataParser
                         continue;
                     }
 
-                    $pokemonRegionForm->setAssetsBundleId($pokemonForm->getAssetBundleValue());
+                    $pokemonRegionForm->setPokemonForm($pokemonForm);
                 }
             }
         }

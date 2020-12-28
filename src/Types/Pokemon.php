@@ -17,9 +17,9 @@ final class Pokemon
     private string $id;
     private string $formId;
     private PokemonType $typePrimary;
-    private ?PokemonType $typeSecondary;
-    private ?PokemonStats $stats = null;
-    private int $assetsBundleId  = 0;
+    private PokemonType $typeSecondary;
+    private ?PokemonStats $stats      = null;
+    private ?PokemonForm $pokemonForm = null;
     /** @var TemporaryEvolution[] */
     private array $temporaryEvolutions = [];
     /** @var string[] */
@@ -44,7 +44,7 @@ final class Pokemon
         $this->id            = $id;
         $this->formId        = $formId;
         $this->typePrimary   = $typePrimary;
-        $this->typeSecondary = $typeSecondary;
+        $this->typeSecondary = $typeSecondary ?? PokemonType::none();
     }
 
     public static function createFromGameMaster(stdClass $pokemonData): self
@@ -63,14 +63,14 @@ final class Pokemon
 
         $secondaryType = null;
         if (isset($pokemonSettings->type2)) {
-            $secondaryType = PokemonType::create($pokemonSettings->type2);
+            $secondaryType = PokemonType::createFromPokemonType($pokemonSettings->type2);
         }
 
         $pokemon = new self(
             (int) $pokemonParts['id'],
             $pokemonSettings->pokemonId,
             $pokemonParts['name'],
-            PokemonType::create($pokemonSettings->type),
+            PokemonType::createFromPokemonType($pokemonSettings->type),
             $secondaryType
         );
 
@@ -89,10 +89,10 @@ final class Pokemon
         $pokemon->eliteCinematicMoveNames = $pokemonSettings->eliteCinematicMove ?? [];
 
         foreach ($pokemonSettings->tempEvoOverrides ?? [] as $evolutionBranch) {
-            $pokemon->temporaryEvolutions[] = TemporaryEvolution::createFromGameMaster(
+            $pokemon->addTemporaryEvolutions(TemporaryEvolution::createFromGameMaster(
                 $evolutionBranch,
                 $pokemonSettings->pokemonId
-            );
+            ));
         }
 
         return $pokemon;
@@ -118,7 +118,7 @@ final class Pokemon
         return $this->typePrimary;
     }
 
-    public function getTypeSecondary(): ?PokemonType
+    public function getTypeSecondary(): PokemonType
     {
         return $this->typeSecondary;
     }
@@ -163,6 +163,11 @@ final class Pokemon
         return count($this->temporaryEvolutions) > 0;
     }
 
+    public function addTemporaryEvolutions(TemporaryEvolution $temporaryEvolution): void
+    {
+        $this->temporaryEvolutions[] = $temporaryEvolution;
+    }
+
     public function addPokemonRegionForm(Pokemon $pokemonRegionForm): void
     {
         $this->pokemonRegionForms[] = $pokemonRegionForm;
@@ -174,13 +179,22 @@ final class Pokemon
         return $this->pokemonRegionForms;
     }
 
-    public function getAssetsBundleId(): int
+    public function setPokemonForm(PokemonForm $pokemonForm): void
     {
-        return $this->assetsBundleId;
+        $this->pokemonForm = $pokemonForm;
     }
 
-    public function setAssetsBundleId(int $assetBundleId): void
+    public function getPokemonForm(): ?PokemonForm
     {
-        $this->assetsBundleId = $assetBundleId;
+        return $this->pokemonForm;
+    }
+
+    public function getAssetsBundleId(): int
+    {
+        if ($this->pokemonForm === null) {
+            return 0;
+        }
+
+         return $this->pokemonForm->getAssetBundleValue();
     }
 }

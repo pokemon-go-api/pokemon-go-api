@@ -46,7 +46,7 @@ final class PokemonMove
         return new self(
             (int) $moveParts['id'],
             $moveData->moveSettings->movementId,
-            PokemonType::create($moveData->moveSettings->pokemonType),
+            PokemonType::createFromPokemonType($moveData->moveSettings->pokemonType),
             $moveData->moveSettings->power ?? 0.0,
             $moveData->moveSettings->energyDelta ?? 0.0,
             $moveData->moveSettings->durationMs,
