@@ -38,22 +38,10 @@ jobs:
 
       - name: Generate Data
         run: composer run-script build-api
-        
-      - name: "Test"
-        continue-on-error: true
-        run: |
-          ls public/api/graphics/German/
 
       - name: Convert SVG to PNG
-        uses: swinton/screenshot-website@v1.x
         continue-on-error: true
-        with:
-          source: public/api/graphics/German/raidlist.svg
-          destination: public/api/graphics/German/raidlist.png
-          width: 975
-          height: 1260
-          defaultBackground: false
-          timeout: 30
+        run: composer run-script convert-svg
 
       - name: Deploy to GitHub Pages
         if: success()
