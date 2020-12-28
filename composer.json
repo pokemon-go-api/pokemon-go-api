@@ -38,7 +38,7 @@
             "php bin/console.php",
             "rm -rf public/api",
             "cp -r data/tmp/api public/",
-            "mkdir -r public/api/graphics/German/"
+            "mkdir -p public/api/graphics/German/"
         ],
         "convert-svg": [
             "chromium --headless --disable-gpu --hide-scrollbars --window-size=975,1260 --screenshot=public/api/graphics/German/raidlist.png data/tmp/api/graphics/German/raidlist.svg",
