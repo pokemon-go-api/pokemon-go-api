@@ -16,9 +16,15 @@ use PokemonGoLingen\PogoAPI\Util\TypeWeatherCalculator;
 
 use function array_filter;
 use function array_map;
+use function sprintf;
 
 final class RaidBossListRenderer
 {
+    //phpcs:ignore Generic.Files.LineLength.TooLong
+    private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d.png';
+    //phpcs:ignore Generic.Files.LineLength.TooLong
+    private const ASSETS_BASE_SHINY_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d_shiny.png';
+
     /**
      * @return array<string, array<int, mixed[]>>
      */
@@ -57,6 +63,22 @@ final class RaidBossListRenderer
             $bosses[$raidBoss->getRaidLevel()][] = [
                 'id'           => $raidBoss->getPokemon()->getId(),
                 'form'         => $temporaryEvolution ? $temporaryEvolution->getId() : $raidBoss->getPokemonId(),
+                'assets'        => [
+                    'image' => sprintf(
+                        self::ASSETS_BASE_URL,
+                        $raidBossPokemon->getDexNr(),
+                        $temporaryEvolution
+                            ? $temporaryEvolution->getAssetsBundleId()
+                            : $raidBossPokemon->getAssetsBundleId()
+                    ),
+                    'shinyImage' => sprintf(
+                        self::ASSETS_BASE_SHINY_URL,
+                        $raidBossPokemon->getDexNr(),
+                        $temporaryEvolution
+                            ? $temporaryEvolution->getAssetsBundleId()
+                            : $raidBossPokemon->getAssetsBundleId()
+                    ),
+                ],
                 'level'        => $raidBoss->getRaidLevel(),
                 'names'        => $this->getName($raidBoss, $translationCollection),
                 'shiny'        => $raidBoss->isShinyAvailable(),
