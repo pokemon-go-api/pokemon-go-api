@@ -54,7 +54,7 @@ final class WeatherBoost
     public function getAssetsName(): string
     {
         if ($this->weather === self::PARTLY_CLOUDY) {
-            return 'partly_cloudy_day';
+            return 'partlycloudy_day';
         }
 
         return $this->weather;

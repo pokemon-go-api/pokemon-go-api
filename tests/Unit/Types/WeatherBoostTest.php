@@ -30,7 +30,7 @@ class WeatherBoostTest extends TestCase
     {
         $sut = WeatherBoost::partlyCloudy();
         self::assertSame('partlyCloudy', $sut->getWeather());
-        self::assertSame('partly_cloudy_day', $sut->getAssetsName());
+        self::assertSame('partlycloudy_day', $sut->getAssetsName());
         self::assertCount(2, $sut->getBoostedTypes());
     }
 
