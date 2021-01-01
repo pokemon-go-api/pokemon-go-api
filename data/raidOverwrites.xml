@@ -3,6 +3,19 @@
       xsi:noNamespaceSchemaLocation="raidOverwrites.xsd">
     <raidboss>
         <startDate>
+            <date>2021-01-01 09:00:00</date>
+            <timezone>UTC</timezone>
+        </startDate>
+        <endDate>
+            <date>2021-01-05 10:00:00</date>
+            <timezone>UTC</timezone>
+        </endDate>
+        <pokemon>KYUREM</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
             <date>2021-01-01 21:00:00</date>
             <timezone>UTC</timezone>
         </startDate>
