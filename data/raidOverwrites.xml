@@ -12,7 +12,7 @@
         </endDate>
         <pokemon>KYUREM</pokemon>
         <level>lvl5</level>
-        <shiny>true</shiny>
+        <shiny>false</shiny>
     </raidboss>
     <raidboss>
         <startDate>
