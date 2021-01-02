@@ -60,10 +60,13 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
         }
 
         .boss-counter text {
-            font-size: 10px;
+            font-size: 9px;
             font-family: sans-serif;
             fill: #ffffff;
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+        }
+        .boss-counter .double-damage {
+            fill: #fc684e;
         }
 
         .boss-counter .image-counter-256 {
@@ -214,7 +217,8 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
                     </image>
                     <?php
                     if ($multiplier > 2) : ?>
-                        <text x="<?= $x + 5 ?>" y="40">2x</text>
+                        <circle class="double-damage" r="8" cx="<?=$x + 2?>" cy="36" />
+                        <text x="<?= $x - 4 ?>" y="39">2x</text>
                     <?php
                     endif;
                     $counterTypeIndex--;
