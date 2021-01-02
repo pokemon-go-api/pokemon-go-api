@@ -45,6 +45,7 @@ jobs:
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
+        if: ${{ github.event_name == 'pull_request'}}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
