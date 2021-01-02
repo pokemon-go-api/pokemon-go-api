@@ -1,5 +1,6 @@
 name: page
 on:
+  pull_request:
   push:
     branches:
       - main
@@ -43,10 +44,18 @@ jobs:
         continue-on-error: true
         run: composer run-script convert-svg
 
+      - name: Post current raid grahpic
+        uses: edunad/actions-image@v1.0.1
+        with:
+          path: './public/api/graphics/German/*.png'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          title: 'This would be the new Raid Image'
+
       - name: Deploy to GitHub Pages
-        if: success()
+        if: ${{ success() && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
+          keep_history: true
           target_branch: gh-pages
           build_dir: public
         env:
