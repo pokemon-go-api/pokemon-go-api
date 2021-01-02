@@ -1,5 +1,17 @@
 # Pokemon GO Pokedex API
 
+## Examples
+
+### Current Raidlist
+
+**German version**
+
+![Current Raidlist - German](https://pokemon-go-lingen.github.io/pokemon-go-api/api/graphics/German/raidlist.png)
+
+**English version**
+
+![Current Raidlist - German](https://pokemon-go-lingen.github.io/pokemon-go-api/api/graphics/English/raidlist.png)
+
 ## Disclaimer
 This repo is for educational use only. All available information found within this repo is the property of The Pokemon Company and Niantic. All copyright belongs to the respective companies. Please respect the original source material.
 
