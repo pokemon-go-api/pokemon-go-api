@@ -25,14 +25,18 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: data/tmp
-          key: download-tmp-${{ hashFiles('data/tmp/hashes.json') }}
+          path: |
+            data/tmp
+            **/hashes.json
+          key: download-tmp-${{ hashFiles('**/hashes.json') }}
           restore-keys: |
             download-tmp-
 
       - uses: actions/cache@v2
         with:
-          path: vendor
+          path: |
+            vendor/
+            **/composer.lock
           key: composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             composer-
