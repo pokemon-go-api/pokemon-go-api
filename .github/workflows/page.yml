@@ -27,6 +27,8 @@ jobs:
         with:
           path: data/tmp
           key: download-tmp-${{ hashFiles('data/tmp/hashes.json') }}
+          restore-keys: |
+            download-tmp-
 
       - uses: actions/cache@v2
         with:
