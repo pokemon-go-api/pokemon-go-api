@@ -28,7 +28,7 @@ jobs:
           path: |
             data/tmp
             **/hashes.json
-          key: download-tmp-${{ hashFiles('**/hashes.json') }}
+          key: download-data-tmp-${{ hashFiles('**/hashes.json') }}
 
       - uses: actions/cache@v2
         with:
@@ -46,7 +46,6 @@ jobs:
 
       - name: Check Cache
         run: |
-          echo "has changes: ${{ steps.generated-data.outputs.HAS_CHANGES }}"
           echo "Cache Key1: ${{ hashFiles('**/hashes.json') }}"
           echo "Cache Key2: ${{ hashFiles('**/composer.lock') }}"
           echo "Steps generated data: ${{ steps.generated-data.outputs.HAS_CHANGES == true }}"
