@@ -29,8 +29,6 @@ jobs:
             data/tmp
             **/hashes.json
           key: download-tmp-${{ hashFiles('**/hashes.json') }}
-          restore-keys: |
-            download-tmp-
 
       - uses: actions/cache@v2
         with:
@@ -38,8 +36,6 @@ jobs:
             vendor/
             **/composer.lock
           key: composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            composer-
 
       - name: "Install dependencies"
         run: composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs
@@ -47,6 +43,9 @@ jobs:
       - name: Generate Data
         id: generated-data
         run: composer run-script api-build
+
+      - name: Check Cache
+        run: echo "has changes ${{ steps.generated-data.outputs.HAS_CHANGES }}; hashes ${{ hashFiles('**/hashes.json') }}"
 
       - name: Convert SVG to PNG
         if: ${{ steps.generated-data.outputs.HAS_CHANGES }}
