@@ -64,7 +64,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ github.event_name != 'pull_request'}}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES == true && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
