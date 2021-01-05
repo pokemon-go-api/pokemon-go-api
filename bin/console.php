@@ -178,4 +178,4 @@ file_put_contents(
     CSS
 );
 
-echo sprintf('::set-output name=HAS_CHANGES::%d', $hasChanges);
+echo sprintf('::set-output name=HAS_CHANGES::%s', $hasChanges ? 'true' : 'false');

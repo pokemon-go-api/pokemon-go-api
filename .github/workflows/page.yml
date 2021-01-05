@@ -45,15 +45,19 @@ jobs:
         run: composer run-script api-build
 
       - name: Check Cache
-        run: echo "has changes ${{ steps.generated-data.outputs.HAS_CHANGES }}; hashes ${{ hashFiles('**/hashes.json') }}"
+        run: |
+          echo "has changes: ${{ steps.generated-data.outputs.HAS_CHANGES }}"
+          echo "Cache Key1: ${{ hashFiles('**/hashes.json') }}"
+          echo "Cache Key2: ${{ hashFiles('**/composer.lock') }}"
+          echo "Steps generated data: ${{ toJSON( steps.generated-data ) }}"
 
       - name: Convert SVG to PNG
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES == "1" }}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES }}
         continue-on-error: true
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES == "1" && github.event_name == 'pull_request' }}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES && github.event_name == 'pull_request' }}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
@@ -61,7 +65,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES == "1" && github.event_name != 'pull_request'}}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
