@@ -48,12 +48,12 @@ jobs:
         run: echo "has changes ${{ steps.generated-data.outputs.HAS_CHANGES }}; hashes ${{ hashFiles('**/hashes.json') }}"
 
       - name: Convert SVG to PNG
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES }}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES == "1" }}
         continue-on-error: true
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES && github.event_name == 'pull_request' }}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES == "1" && github.event_name == 'pull_request' }}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
@@ -61,7 +61,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES && github.event_name != 'pull_request'}}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES == "1" && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
