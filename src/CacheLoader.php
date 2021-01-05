@@ -11,9 +11,11 @@ use RuntimeException;
 use stdClass;
 
 use function array_filter;
+use function basename;
 use function file_get_contents;
 use function file_put_contents;
 use function floor;
+use function hash_file;
 use function is_dir;
 use function is_file;
 use function json_decode;
@@ -149,5 +151,35 @@ class CacheLoader
         }
 
         return $cacheFile;
+    }
+
+    /**
+     * @param array<int, string> $files
+     *
+     * @return array<string, array<string,string>>
+     */
+    public function updateCaches(array $files): array
+    {
+        $hashes = [];
+        foreach ($files as $file) {
+            $hashes[basename($file)] = hash_file('sha512', $file) ?: '';
+        }
+
+        $this->cachedData['hashes.json'] = json_encode($hashes) ?: '';
+
+        return ['sha512' => $hashes];
+    }
+
+    /**
+     * @param array<int, string> $files
+     */
+    public function hasChanges(array $files): bool
+    {
+        $hashes = [];
+        foreach ($files as $file) {
+            $hashes[basename($file)] = hash_file('sha512', $file);
+        }
+
+        return ($this->cachedData['hashes.json'] ?? null) !== json_encode($hashes);
     }
 }

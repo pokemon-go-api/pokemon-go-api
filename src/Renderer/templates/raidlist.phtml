@@ -7,11 +7,13 @@ if (!isset($bosses)) {
 $maxCounterInRow     = 7;
 $lineHeight          = 50;
 $graphicHeaderHeight = 30;
+$graphicFooterHeight = 5;
+$totalHeight = ($lineHeight * count($bosses)) + $graphicHeaderHeight + $graphicFooterHeight;
 
 echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 650 <?=($lineHeight * count($bosses)) + 10 + $graphicHeaderHeight?>" width="975"
+     viewBox="0 0 650 <?=$totalHeight?>" width="975"
      preserveAspectRatio="none" version="1.1">
     <style>
         .boss-types rect,
@@ -32,7 +34,6 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
         .pokemon-type-icon {
             filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.7));
         }
-
 
         .boss-level {
             fill: #ddd;
@@ -126,6 +127,10 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
         <text x="375" y="20">Wetter</text>
         <text x="425" y="20">WP-Spektrum</text>
         <text x="525" y="20">Konter Typen</text>
+    </g>
+
+    <g class="graphic-footer">
+        <rect fill="#000" width="650" height="<?= $graphicFooterHeight ?>" x="0" y="<?=$totalHeight-$graphicFooterHeight?>"/>
     </g>
 
     <?php foreach ($bosses as $index => $boss) : ?>

@@ -138,7 +138,6 @@ foreach ($translations->getCollections() as $translationName => $translationColl
 
 $raidListRenderer = new RaidBossListRenderer();
 $raidBossesList   = $raidListRenderer->buildList($raidBosses, $translations);
-$raidBossHash     = hash('sha512', json_encode($raidBossesList) ?: '');
 
 file_put_contents($apidir . 'raidboss.json', json_encode([
     'currentList' => $raidBossesList,
@@ -156,16 +155,17 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
     ],
 ]));
 
+$hashFiles = [
+    $apidir . 'raidboss.json',
+    $apidir . 'pokedex.json',
+];
+
+$hasChanges = $cacheLoader->hasChanges($hashFiles);
+
 file_put_contents($apidir . 'hashes.json', json_encode(
-    [
-        'sha512' => [
-            'raidboss.json' => $raidBossHash,
-            'pokedex.json'  => hash_file('sha512', $apidir . '/pokedex.json'),
-        ],
-    ],
+    $cacheLoader->updateCaches($hashFiles),
     JSON_PRETTY_PRINT
 ));
-
 
 $date   = new DateTimeImmutable('now', new DateTimeZone('UTC'));
 $format = $date->format('Y-m-d H:i');
@@ -177,3 +177,5 @@ file_put_contents(
     }
     CSS
 );
+
+echo sprintf('::set-output name=HAS_CHANGES::%d', $hasChanges);

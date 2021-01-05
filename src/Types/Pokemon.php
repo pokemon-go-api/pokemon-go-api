@@ -152,6 +152,26 @@ final class Pokemon
         return $this->quickMoveNames;
     }
 
+    public function setQuickMoveNames(string ...$quickMoveNames): void
+    {
+        $this->quickMoveNames = $quickMoveNames;
+    }
+
+    public function setCinematicMoveNames(string ...$cinematicMoveNames): void
+    {
+        $this->cinematicMoveNames = $cinematicMoveNames;
+    }
+
+    public function setEliteCinematicMoveNames(string ...$eliteCinematicMoveNames): void
+    {
+        $this->eliteCinematicMoveNames = $eliteCinematicMoveNames;
+    }
+
+    public function setEliteQuickMoveNames(string ...$eliteQuickMoveNames): void
+    {
+        $this->eliteQuickMoveNames = $eliteQuickMoveNames;
+    }
+
     /** @return TemporaryEvolution[] */
     public function getTemporaryEvolutions(): array
     {
@@ -161,6 +181,11 @@ final class Pokemon
     public function hasTemporaryEvolutions(): bool
     {
         return count($this->temporaryEvolutions) > 0;
+    }
+
+    public function setStats(PokemonStats $stats): void
+    {
+        $this->stats = $stats;
     }
 
     public function addTemporaryEvolutions(TemporaryEvolution $temporaryEvolution): void

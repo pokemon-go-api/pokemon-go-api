@@ -370,20 +370,20 @@ components:
                 $ref: '#/components/schemas/Names'
               assets:
                 $ref: '#/components/schemas/Assets'
-        required:
-          - id
-          - formId
-          - dexNr
-          - generation
-          - names
-          - stats
-          - primaryType
-          - secondaryType
-          - cinematicMoves
-          - eliteQuickMoves
-          - eliteCinematicMoves
-          - assets
-          - forms
+      required:
+        - id
+        - formId
+        - dexNr
+        - generation
+        - names
+        - stats
+        - primaryType
+        - secondaryType
+        - cinematicMoves
+        - eliteQuickMoves
+        - eliteCinematicMoves
+        - assets
+        - forms
     Names:
       description: ''
       type: object
