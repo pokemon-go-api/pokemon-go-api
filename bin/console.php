@@ -177,5 +177,5 @@ file_put_contents(
     }
     CSS
 );
-
+printf('[%s] set-output name=HAS_CHANGES::%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'true' : 'false');
 echo sprintf('::set-output name=HAS_CHANGES::%s', $hasChanges ? 'true' : 'false');
