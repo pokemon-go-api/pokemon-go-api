@@ -34,7 +34,7 @@
             "@phpunit",
             "@infection"
         ],
-        "build-api": [
+        "api-build": [
             "php bin/console.php",
             "rm -rf public/api",
             "cp -r data/tmp/api public/"

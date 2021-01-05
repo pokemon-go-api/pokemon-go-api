@@ -104,6 +104,6 @@ final class TranslationCollection
 
     public function getRegionalForm(string $regionalForm): ?string
     {
-        return $this->regionalForms[$regionalForm];
+        return $this->regionalForms[$regionalForm] ?? null;
     }
 }

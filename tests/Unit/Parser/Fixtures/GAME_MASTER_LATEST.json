@@ -1,0 +1,710 @@
+[
+  {
+    "templateId": "COMBAT_V0049_MOVE_BUG_BUZZ",
+    "data": {
+      "templateId": "COMBAT_V0049_MOVE_BUG_BUZZ",
+      "combatMove": {
+        "uniqueId": "BUG_BUZZ",
+        "type": "POKEMON_TYPE_BUG",
+        "power": 90.0,
+        "vfxName": "bug_buzz",
+        "energyDelta": -60,
+        "buffs": {
+          "targetDefenseStatStageChange": -1,
+          "buffActivationChance": 0.3
+        }
+      }
+    }
+  },
+  {
+    "templateId": "V0049_MOVE_BUG_BUZZ",
+    "data": {
+      "templateId": "V0049_MOVE_BUG_BUZZ",
+      "moveSettings": {
+        "movementId": "BUG_BUZZ",
+        "animationId": 5,
+        "pokemonType": "POKEMON_TYPE_BUG",
+        "power": 90.0,
+        "accuracyChance": 1.0,
+        "criticalChance": 0.05,
+        "staminaLossScalar": 0.09,
+        "trainerLevelMin": 1,
+        "trainerLevelMax": 100,
+        "vfxName": "bug_buzz",
+        "durationMs": 3700,
+        "damageWindowStartMs": 2000,
+        "damageWindowEndMs": 3100,
+        "energyDelta": -50
+      }
+    }
+  },
+  {
+    "templateId": "V0202_MOVE_BITE_FAST",
+    "data": {
+      "templateId": "V0202_MOVE_BITE_FAST",
+      "moveSettings": {
+        "movementId": "BITE_FAST",
+        "animationId": 4,
+        "pokemonType": "POKEMON_TYPE_DARK",
+        "power": 6.0,
+        "accuracyChance": 1.0,
+        "staminaLossScalar": 0.01,
+        "trainerLevelMin": 1,
+        "trainerLevelMax": 100,
+        "vfxName": "bite_fast",
+        "durationMs": 500,
+        "damageWindowStartMs": 300,
+        "damageWindowEndMs": 500,
+        "energyDelta": 4
+      }
+    }
+  },
+  {
+    "templateId": "COMBAT_V0202_MOVE_BITE_FAST",
+    "data": {
+      "templateId": "COMBAT_V0202_MOVE_BITE_FAST",
+      "combatMove": {
+        "uniqueId": "BITE_FAST",
+        "type": "POKEMON_TYPE_DARK",
+        "power": 4.0,
+        "vfxName": "bite_fast",
+        "energyDelta": 2
+      }
+    }
+  },
+  {
+    "templateId": "V0052_POKEMON_MEOWTH",
+    "data": {
+      "templateId": "V0052_POKEMON_MEOWTH",
+      "pokemonSettings": {
+        "pokemonId": "MEOWTH",
+        "modelScale": 1.6,
+        "type": "POKEMON_TYPE_NORMAL",
+        "camera": {
+          "diskRadiusM": 0.6,
+          "cylinderRadiusM": 0.2,
+          "cylinderHeightM": 0.45,
+          "shoulderModeScale": 0.5
+        },
+        "encounter": {
+          "baseCaptureRate": 0.5,
+          "baseFleeRate": 0.15,
+          "collisionRadiusM": 0.128,
+          "collisionHeightM": 0.4,
+          "collisionHeadRadiusM": 0.2,
+          "movementType": "MOVEMENT_JUMP",
+          "movementTimerS": 29.0,
+          "jumpTimeS": 1.0,
+          "attackTimerS": 10.0,
+          "bonusStardustCaptureReward": 400,
+          "attackProbability": 0.1,
+          "dodgeProbability": 0.15,
+          "dodgeDurationS": 1.0,
+          "dodgeDistance": 1.0,
+          "cameraDistance": 3.0,
+          "minPokemonActionFrequencyS": 0.2,
+          "maxPokemonActionFrequencyS": 1.6
+        },
+        "stats": {
+          "baseStamina": 120,
+          "baseAttack": 92,
+          "baseDefense": 78
+        },
+        "quickMoves": [
+          "SCRATCH_FAST",
+          "BITE_FAST"
+        ],
+        "cinematicMoves": [
+          "NIGHT_SLASH",
+          "DARK_PULSE",
+          "FOUL_PLAY"
+        ],
+        "animationTime": [
+          2.0,
+          0.6667,
+          1.7333,
+          1.5,
+          0.0,
+          2.0,
+          1.4,
+          2.0
+        ],
+        "evolutionIds": [
+          "PERSIAN"
+        ],
+        "evolutionPips": 1,
+        "pokedexHeightM": 0.4,
+        "pokedexWeightKg": 4.2,
+        "heightStdDev": 0.05,
+        "weightStdDev": 0.525,
+        "familyId": "FAMILY_MEOWTH",
+        "candyToEvolve": 50,
+        "kmBuddyDistance": 3.0,
+        "modelHeight": 0.4,
+        "evolutionBranch": [
+          {
+            "evolution": "PERSIAN",
+            "candyCost": 50,
+            "form": "PERSIAN_NORMAL"
+          }
+        ],
+        "modelScaleV2": 1.2,
+        "buddyOffsetMale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyOffsetFemale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyScale": 19.0,
+        "buddyPortraitOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thirdMove": {
+          "stardustToUnlock": 50000,
+          "candyToUnlock": 50
+        },
+        "isTransferable": true,
+        "isDeployable": true,
+        "buddyGroupNumber": 2,
+        "eliteCinematicMove": [
+          "BODY_SLAM"
+        ]
+      }
+    }
+  },
+  {
+    "templateId": "V0052_POKEMON_MEOWTH_ALOLA",
+    "data": {
+      "templateId": "V0052_POKEMON_MEOWTH_ALOLA",
+      "pokemonSettings": {
+        "pokemonId": "MEOWTH",
+        "modelScale": 1.6,
+        "type": "POKEMON_TYPE_DARK",
+        "camera": {
+          "diskRadiusM": 0.6,
+          "cylinderRadiusM": 0.2,
+          "cylinderHeightM": 0.45,
+          "shoulderModeScale": 0.5
+        },
+        "encounter": {
+          "baseCaptureRate": 0.5,
+          "baseFleeRate": 0.15,
+          "collisionRadiusM": 0.128,
+          "collisionHeightM": 0.4,
+          "collisionHeadRadiusM": 0.2,
+          "movementType": "MOVEMENT_JUMP",
+          "movementTimerS": 29.0,
+          "jumpTimeS": 1.0,
+          "attackTimerS": 10.0,
+          "bonusStardustCaptureReward": 650,
+          "attackProbability": 0.1,
+          "dodgeProbability": 0.15,
+          "dodgeDurationS": 1.0,
+          "dodgeDistance": 1.0,
+          "cameraDistance": 3.0,
+          "minPokemonActionFrequencyS": 0.2,
+          "maxPokemonActionFrequencyS": 1.6
+        },
+        "stats": {
+          "baseStamina": 120,
+          "baseAttack": 99,
+          "baseDefense": 78
+        },
+        "quickMoves": [
+          "SCRATCH_FAST",
+          "BITE_FAST"
+        ],
+        "cinematicMoves": [
+          "NIGHT_SLASH",
+          "DARK_PULSE",
+          "FOUL_PLAY"
+        ],
+        "animationTime": [
+          2.0,
+          0.6667,
+          1.7333,
+          1.5,
+          0.0,
+          2.0,
+          1.4,
+          2.0
+        ],
+        "evolutionIds": [
+          "PERSIAN"
+        ],
+        "evolutionPips": 1,
+        "pokedexHeightM": 0.4,
+        "pokedexWeightKg": 4.2,
+        "heightStdDev": 0.05,
+        "weightStdDev": 0.525,
+        "familyId": "FAMILY_MEOWTH",
+        "candyToEvolve": 50,
+        "kmBuddyDistance": 3.0,
+        "modelHeight": 0.4,
+        "evolutionBranch": [
+          {
+            "evolution": "PERSIAN",
+            "candyCost": 50,
+            "form": "PERSIAN_ALOLA"
+          }
+        ],
+        "modelScaleV2": 1.2,
+        "form": "MEOWTH_ALOLA",
+        "buddyOffsetMale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyOffsetFemale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyScale": 19.0,
+        "buddyPortraitOffset": [
+          0.0,
+          -0.07,
+          0.0
+        ],
+        "thirdMove": {
+          "stardustToUnlock": 50000,
+          "candyToUnlock": 50
+        },
+        "isTransferable": true,
+        "isDeployable": true,
+        "buddyGroupNumber": 2
+      }
+    }
+  },
+  {
+    "templateId": "V0052_POKEMON_MEOWTH_GALARIAN",
+    "data": {
+      "templateId": "V0052_POKEMON_MEOWTH_GALARIAN",
+      "pokemonSettings": {
+        "pokemonId": "MEOWTH",
+        "modelScale": 1.6,
+        "type": "POKEMON_TYPE_STEEL",
+        "camera": {
+          "diskRadiusM": 0.6,
+          "cylinderRadiusM": 0.25,
+          "cylinderHeightM": 0.45,
+          "shoulderModeScale": 0.5
+        },
+        "encounter": {
+          "baseCaptureRate": 0.45,
+          "baseFleeRate": 0.1,
+          "collisionRadiusM": 0.128,
+          "collisionHeightM": 0.4,
+          "collisionHeadRadiusM": 0.2,
+          "movementType": "MOVEMENT_JUMP",
+          "movementTimerS": 29.0,
+          "jumpTimeS": 1.0,
+          "attackTimerS": 10.0,
+          "attackProbability": 0.15,
+          "dodgeProbability": 0.2,
+          "dodgeDurationS": 1.0,
+          "dodgeDistance": 1.0,
+          "cameraDistance": 3.0,
+          "minPokemonActionFrequencyS": 0.2,
+          "maxPokemonActionFrequencyS": 1.6
+        },
+        "stats": {
+          "baseStamina": 137,
+          "baseAttack": 115,
+          "baseDefense": 92
+        },
+        "quickMoves": [
+          "SCRATCH_FAST",
+          "METAL_CLAW_FAST"
+        ],
+        "cinematicMoves": [
+          "NIGHT_SLASH",
+          "GYRO_BALL",
+          "DIG"
+        ],
+        "animationTime": [
+          2.0,
+          0.6667,
+          1.7333,
+          1.5,
+          0.0,
+          2.0,
+          1.4,
+          2.0
+        ],
+        "evolutionPips": 1,
+        "pokedexHeightM": 0.4,
+        "pokedexWeightKg": 7.5,
+        "heightStdDev": 0.05,
+        "weightStdDev": 0.9375,
+        "familyId": "FAMILY_MEOWTH",
+        "candyToEvolve": 50,
+        "kmBuddyDistance": 3.0,
+        "modelHeight": 0.39,
+        "evolutionBranch": [
+          {
+            "evolution": "PERRSERKER",
+            "candyCost": 50,
+            "form": "PERRSERKER_NORMAL"
+          }
+        ],
+        "modelScaleV2": 1.2,
+        "form": "MEOWTH_GALARIAN",
+        "buddyOffsetMale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyOffsetFemale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyScale": 19.0,
+        "buddyPortraitOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thirdMove": {
+          "stardustToUnlock": 50000,
+          "candyToUnlock": 50
+        },
+        "isTransferable": true,
+        "isDeployable": true,
+        "buddyGroupNumber": 2
+      }
+    }
+  },
+  {
+    "templateId": "V0052_POKEMON_MEOWTH_NORMAL",
+    "data": {
+      "templateId": "V0052_POKEMON_MEOWTH_NORMAL",
+      "pokemonSettings": {
+        "pokemonId": "MEOWTH",
+        "modelScale": 1.6,
+        "type": "POKEMON_TYPE_NORMAL",
+        "camera": {
+          "diskRadiusM": 0.6,
+          "cylinderRadiusM": 0.2,
+          "cylinderHeightM": 0.45,
+          "shoulderModeScale": 0.5
+        },
+        "encounter": {
+          "baseCaptureRate": 0.5,
+          "baseFleeRate": 0.15,
+          "collisionRadiusM": 0.128,
+          "collisionHeightM": 0.4,
+          "collisionHeadRadiusM": 0.2,
+          "movementType": "MOVEMENT_JUMP",
+          "movementTimerS": 29.0,
+          "jumpTimeS": 1.0,
+          "attackTimerS": 10.0,
+          "bonusStardustCaptureReward": 400,
+          "attackProbability": 0.1,
+          "dodgeProbability": 0.15,
+          "dodgeDurationS": 1.0,
+          "dodgeDistance": 1.0,
+          "cameraDistance": 3.0,
+          "minPokemonActionFrequencyS": 0.2,
+          "maxPokemonActionFrequencyS": 1.6
+        },
+        "stats": {
+          "baseStamina": 120,
+          "baseAttack": 92,
+          "baseDefense": 78
+        },
+        "quickMoves": [
+          "SCRATCH_FAST",
+          "BITE_FAST"
+        ],
+        "cinematicMoves": [
+          "NIGHT_SLASH",
+          "DARK_PULSE",
+          "FOUL_PLAY"
+        ],
+        "animationTime": [
+          2.0,
+          0.6667,
+          1.7333,
+          1.5,
+          0.0,
+          2.0,
+          1.4,
+          2.0
+        ],
+        "evolutionIds": [
+          "PERSIAN"
+        ],
+        "evolutionPips": 1,
+        "pokedexHeightM": 0.4,
+        "pokedexWeightKg": 4.2,
+        "heightStdDev": 0.05,
+        "weightStdDev": 0.525,
+        "familyId": "FAMILY_MEOWTH",
+        "candyToEvolve": 50,
+        "kmBuddyDistance": 3.0,
+        "modelHeight": 0.4,
+        "evolutionBranch": [
+          {
+            "evolution": "PERSIAN",
+            "candyCost": 50,
+            "form": "PERSIAN_NORMAL"
+          }
+        ],
+        "modelScaleV2": 1.2,
+        "form": "MEOWTH_NORMAL",
+        "buddyOffsetMale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyOffsetFemale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyScale": 19.0,
+        "buddyPortraitOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thirdMove": {
+          "stardustToUnlock": 50000,
+          "candyToUnlock": 50
+        },
+        "isTransferable": true,
+        "isDeployable": true,
+        "buddyGroupNumber": 2,
+        "eliteCinematicMove": [
+          "BODY_SLAM"
+        ]
+      }
+    }
+  },
+  {
+    "templateId": "V0052_POKEMON_MEOWTH_PURIFIED",
+    "data": {
+      "templateId": "V0052_POKEMON_MEOWTH_PURIFIED",
+      "pokemonSettings": {
+        "pokemonId": "MEOWTH",
+        "modelScale": 1.6,
+        "type": "POKEMON_TYPE_NORMAL",
+        "camera": {
+          "diskRadiusM": 0.6,
+          "cylinderRadiusM": 0.2,
+          "cylinderHeightM": 0.45,
+          "shoulderModeScale": 0.5
+        },
+        "encounter": {
+          "baseCaptureRate": 0.5,
+          "baseFleeRate": 0.15,
+          "collisionRadiusM": 0.128,
+          "collisionHeightM": 0.4,
+          "collisionHeadRadiusM": 0.2,
+          "movementType": "MOVEMENT_JUMP",
+          "movementTimerS": 29.0,
+          "jumpTimeS": 1.0,
+          "attackTimerS": 10.0,
+          "attackProbability": 0.1,
+          "dodgeProbability": 0.15,
+          "dodgeDurationS": 1.0,
+          "dodgeDistance": 1.0,
+          "cameraDistance": 3.0,
+          "minPokemonActionFrequencyS": 0.2,
+          "maxPokemonActionFrequencyS": 1.6
+        },
+        "stats": {
+          "baseStamina": 120,
+          "baseAttack": 92,
+          "baseDefense": 78
+        },
+        "quickMoves": [
+          "SCRATCH_FAST",
+          "BITE_FAST"
+        ],
+        "cinematicMoves": [
+          "NIGHT_SLASH",
+          "DARK_PULSE",
+          "FOUL_PLAY"
+        ],
+        "animationTime": [
+          2.0,
+          0.6667,
+          1.7333,
+          1.5,
+          0.0,
+          2.0,
+          1.4,
+          2.0
+        ],
+        "evolutionIds": [
+          "PERSIAN"
+        ],
+        "evolutionPips": 1,
+        "pokedexHeightM": 0.4,
+        "pokedexWeightKg": 4.2,
+        "heightStdDev": 0.05,
+        "weightStdDev": 0.525,
+        "familyId": "FAMILY_MEOWTH",
+        "candyToEvolve": 50,
+        "kmBuddyDistance": 3.0,
+        "modelHeight": 0.4,
+        "evolutionBranch": [
+          {
+            "evolution": "PERSIAN",
+            "candyCost": 45,
+            "form": "PERSIAN_PURIFIED"
+          }
+        ],
+        "modelScaleV2": 1.2,
+        "form": "MEOWTH_PURIFIED",
+        "buddyOffsetMale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyOffsetFemale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyScale": 19.0,
+        "buddyPortraitOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thirdMove": {
+          "stardustToUnlock": 40000,
+          "candyToUnlock": 40
+        },
+        "isTransferable": true,
+        "isDeployable": true,
+        "buddyGroupNumber": 2,
+        "eliteCinematicMove": [
+          "BODY_SLAM"
+        ]
+      }
+    }
+  },
+  {
+    "templateId": "V0052_POKEMON_MEOWTH_SHADOW",
+    "data": {
+      "templateId": "V0052_POKEMON_MEOWTH_SHADOW",
+      "pokemonSettings": {
+        "pokemonId": "MEOWTH",
+        "modelScale": 1.6,
+        "type": "POKEMON_TYPE_NORMAL",
+        "camera": {
+          "diskRadiusM": 0.6,
+          "cylinderRadiusM": 0.2,
+          "cylinderHeightM": 0.45,
+          "shoulderModeScale": 0.5
+        },
+        "encounter": {
+          "baseCaptureRate": 0.05,
+          "baseFleeRate": 0.15,
+          "collisionRadiusM": 0.128,
+          "collisionHeightM": 0.4,
+          "collisionHeadRadiusM": 0.2,
+          "movementType": "MOVEMENT_JUMP",
+          "movementTimerS": 29.0,
+          "jumpTimeS": 1.0,
+          "attackTimerS": 10.0,
+          "attackProbability": 0.7,
+          "dodgeProbability": 0.2,
+          "dodgeDurationS": 1.0,
+          "dodgeDistance": 1.0,
+          "cameraDistance": 3.0,
+          "minPokemonActionFrequencyS": 0.2,
+          "maxPokemonActionFrequencyS": 1.6
+        },
+        "stats": {
+          "baseStamina": 120,
+          "baseAttack": 92,
+          "baseDefense": 78
+        },
+        "quickMoves": [
+          "SCRATCH_FAST",
+          "BITE_FAST"
+        ],
+        "cinematicMoves": [
+          "NIGHT_SLASH",
+          "DARK_PULSE",
+          "FOUL_PLAY"
+        ],
+        "animationTime": [
+          2.0,
+          0.6667,
+          1.7333,
+          1.5,
+          0.0,
+          2.0,
+          1.4,
+          2.0
+        ],
+        "evolutionIds": [
+          "PERSIAN"
+        ],
+        "evolutionPips": 1,
+        "pokedexHeightM": 0.4,
+        "pokedexWeightKg": 4.2,
+        "heightStdDev": 0.05,
+        "weightStdDev": 0.525,
+        "familyId": "FAMILY_MEOWTH",
+        "candyToEvolve": 50,
+        "kmBuddyDistance": 3.0,
+        "modelHeight": 0.4,
+        "evolutionBranch": [
+          {
+            "evolution": "PERSIAN",
+            "candyCost": 50,
+            "form": "PERSIAN_SHADOW"
+          }
+        ],
+        "modelScaleV2": 1.2,
+        "form": "MEOWTH_SHADOW",
+        "buddyOffsetMale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyOffsetFemale": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "buddyScale": 19.0,
+        "buddyPortraitOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thirdMove": {
+          "stardustToUnlock": 60000,
+          "candyToUnlock": 60
+        },
+        "isTransferable": true,
+        "isDeployable": true,
+        "shadow": {
+          "purificationStardustNeeded": 3000,
+          "purificationCandyNeeded": 3,
+          "purifiedChargeMove": "RETURN",
+          "shadowChargeMove": "FRUSTRATION"
+        },
+        "buddyGroupNumber": 2,
+        "eliteCinematicMove": [
+          "BODY_SLAM"
+        ]
+      }
+    }
+  }
+]

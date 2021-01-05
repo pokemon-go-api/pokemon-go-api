@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace PokemonGoLingen\PogoAPI\IO;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 
 class RemoteFileLoader
 {
-    private Client $client;
+    private ClientInterface $client;
 
-    public function __construct()
+    public function __construct(?ClientInterface $client = null)
     {
-        $this->client = new Client();
+        $this->client = $client ?? new Client();
     }
 
     public function load(string $url): File

@@ -1,12 +1,13 @@
 name: page
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
       - main
   schedule:
-    # At minute 25 past every 6th hour.
-    - cron:  '25 */6 * * *'
+    # At minute 25 past every 2 hours.
+    - cron:  '25 */2 * * *'
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -38,14 +39,16 @@ jobs:
         run: composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs
 
       - name: Generate Data
-        run: composer run-script build-api
+        id: generated-data
+        run: composer run-script api-build
 
       - name: Convert SVG to PNG
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES }}
         continue-on-error: true
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
-        if: ${{ github.event_name == 'pull_request'}}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES && github.event_name == 'pull_request' }}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
@@ -53,7 +56,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ success() && github.event_name != 'pull_request'}}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
