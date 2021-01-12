@@ -54,14 +54,15 @@ jobs:
         run: |
           echo "Cache Key hashes: ${{ hashFiles('**/hashes.json') }}"
           echo "Steps generated data: ${{ toJson(steps.generated-data.outputs) }}"
+          echo "${{ steps.generated-data.outputs.HAS_CHANGES == true }} | ${{ steps.generated-data.outputs.HAS_CHANGES }}"
 
       - name: Convert SVG to PNG
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES == true || github.event.inputs.forceCacheUpdate }}
+        if: ${{ steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate }}
         continue-on-error: true
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
-        if: ${{ (steps.generated-data.outputs.HAS_CHANGES == true || github.event.inputs.forceCacheUpdate) && github.event_name == 'pull_request' }}
+        if: ${{ (steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate) && github.event_name == 'pull_request' }}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
@@ -69,7 +70,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ (steps.generated-data.outputs.HAS_CHANGES == true || github.event.inputs.forceCacheUpdate) && github.event_name != 'pull_request'}}
+        if: ${{ (steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate) && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
