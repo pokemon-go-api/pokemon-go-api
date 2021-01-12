@@ -34,6 +34,8 @@ jobs:
         with:
           path: data/tmp
           key: download-data-tmp-${{ github.run_id }}
+          restore-keys: |
+            download-data-tmp-
 
       - uses: actions/cache@v2
         with:
