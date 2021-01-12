@@ -178,6 +178,5 @@ file_put_contents(
     CSS
 );
 $hasChanges = $cacheLoader->hasChanges();
-
-printf('[%s] HAS_CHANGES=%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'true' : 'false');
-echo sprintf('::set-output name=HAS_CHANGES::%s', $hasChanges ? 'true' : 'false');
+printf('[%s] CACHE_STATUS=%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
+echo sprintf('::set-output name=CACHE_STATUS::%s', $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');

@@ -44,21 +44,29 @@ jobs:
           restore-keys: |
             composer-
 
-
       - name: "Install dependencies"
         run: composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs
 
       - name: Generate Data
         id: generated-data
-        run: composer run-script api-build
+        run: |
+          composer run-script api-build
+
+      - name: Debug HAS-CHANGES
+        if: ${{ steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' }}
+        run: echo "${{ toJson(steps.generated-data.outputs) }}"
+
+      - name: Debug HAS NO CHANGES
+        if: ${{ steps.generated-data.outputs.CACHE_STATUS != 'HAS_CHANGES' }}
+        run: echo "${{ toJson(steps.generated-data.outputs) }}"
 
       - name: Convert SVG to PNG
-        if: ${{ steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate }}
+        if: ${{ steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate }}
         continue-on-error: true
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
-        if: ${{ (steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate) && github.event_name == 'pull_request' }}
+        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate) && github.event_name == 'pull_request' }}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
@@ -66,7 +74,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ (steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate) && github.event_name != 'pull_request'}}
+        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate) && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
