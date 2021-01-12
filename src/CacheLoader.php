@@ -10,6 +10,7 @@ use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
 use RuntimeException;
 use stdClass;
 
+use function array_diff;
 use function array_filter;
 use function basename;
 use function file_get_contents;
@@ -27,6 +28,7 @@ use function sprintf;
 
 use const JSON_THROW_ON_ERROR;
 use const PATHINFO_FILENAME;
+use const PHP_EOL;
 
 class CacheLoader
 {

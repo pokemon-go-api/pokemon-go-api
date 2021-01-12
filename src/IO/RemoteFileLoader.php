@@ -8,6 +8,8 @@ use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ConnectException;
 
+use function sleep;
+
 class RemoteFileLoader
 {
     private ClientInterface $client;
