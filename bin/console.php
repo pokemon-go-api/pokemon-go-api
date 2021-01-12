@@ -162,8 +162,6 @@ $hashFiles = [
     $apidir . 'pokedex.json',
 ];
 
-$hasChanges = $cacheLoader->hasChanges($hashFiles);
-
 file_put_contents($apidir . 'hashes.json', json_encode(
     $cacheLoader->updateCaches($hashFiles),
     JSON_PRETTY_PRINT
@@ -179,5 +177,11 @@ file_put_contents(
     }
     CSS
 );
+$hasChanges = $cacheLoader->hasChanges();
+
+echo '##[group]Debug Cache content';
+$cacheLoader->dumpCache();
+echo '##[endgroup]';
+
 printf('[%s] set-output name=HAS_CHANGES::%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'true' : 'false');
 echo sprintf('::set-output name=HAS_CHANGES::%s', $hasChanges ? 'true' : 'false');

@@ -172,16 +172,26 @@ class CacheLoader
         return ['sha512' => $hashes];
     }
 
-    /**
-     * @param array<int, string> $files
-     */
-    public function hasChanges(array $files): bool
+    public function hasChanges(): bool
     {
-        $hashes = [];
-        foreach ($files as $file) {
-            $hashes[basename($file)] = hash_file('sha512', $file);
+        return $this->originalCachedData !== $this->cachedData;
+    }
+
+    public function dumpCache(): void
+    {
+        echo 'Cached Data' . PHP_EOL;
+        foreach ($this->cachedData as $key => $value) {
+            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
         }
 
-        return ($this->originalCachedData['hashes.json'] ?? null) !== json_encode($hashes);
+        echo 'Original Cached Data' . PHP_EOL;
+        foreach ($this->originalCachedData as $key => $value) {
+            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
+        }
+
+        echo 'Diff Cached Data' . PHP_EOL;
+        foreach (array_diff($this->originalCachedData, $this->cachedData) as $key => $value) {
+            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
+        }
     }
 }
