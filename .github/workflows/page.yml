@@ -52,9 +52,8 @@ jobs:
 
       - name: Check Cache
         run: |
-          echo "Cache Key1: ${{ hashFiles('**/hashes.json') }}"
-          echo "Cache Key2: ${{ hashFiles('**/composer.lock') }}"
-          echo "Steps generated data: ${{ steps.generated-data.outputs.HAS_CHANGES == true }}"
+          echo "Cache Key hashes: ${{ hashFiles('**/hashes.json') }}"
+          echo "Steps generated data: ${{ toJson(steps.generated-data.outputs) }}"
 
       - name: Convert SVG to PNG
         if: ${{ steps.generated-data.outputs.HAS_CHANGES == true || github.event.inputs.forceCacheUpdate }}
