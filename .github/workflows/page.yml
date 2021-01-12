@@ -4,7 +4,7 @@ on:
     inputs:
       forceCacheUpdate:
         description: 'Force cache update?'
-        required: true
+        required: false
         default: 'true or false'
 
   pull_request:
@@ -30,7 +30,6 @@ jobs:
           tools: composer:v2
 
       - uses: actions/cache@v2
-        if: ${{ ! github.event.inputs.forceCacheUpdate }}
         with:
           path: data/tmp
           key: download-data-tmp-${{ github.run_id }}
