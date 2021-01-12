@@ -10,7 +10,6 @@ use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
 use RuntimeException;
 use stdClass;
 
-use function array_diff;
 use function array_filter;
 use function basename;
 use function file_get_contents;
@@ -28,7 +27,6 @@ use function sprintf;
 
 use const JSON_THROW_ON_ERROR;
 use const PATHINFO_FILENAME;
-use const PHP_EOL;
 
 class CacheLoader
 {
@@ -176,24 +174,6 @@ class CacheLoader
 
     public function hasChanges(): bool
     {
-        return $this->originalCachedData !== $this->cachedData;
-    }
-
-    public function dumpCache(): void
-    {
-        echo 'Cached Data' . PHP_EOL;
-        foreach ($this->cachedData as $key => $value) {
-            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
-        }
-
-        echo 'Original Cached Data' . PHP_EOL;
-        foreach ($this->originalCachedData as $key => $value) {
-            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
-        }
-
-        echo 'Diff Cached Data' . PHP_EOL;
-        foreach (array_diff($this->originalCachedData, $this->cachedData) as $key => $value) {
-            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
-        }
+        return ($this->originalCachedData['hashes.json'] ?? null) !== ($this->cachedData['hashes.json'] ?? null);
     }
 }

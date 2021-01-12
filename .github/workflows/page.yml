@@ -30,18 +30,21 @@ jobs:
           tools: composer:v2
 
       - uses: actions/cache@v2
+        if: ${{ ! github.event.inputs.forceCacheUpdate }}
         with:
-          path: |
-            data/tmp
-            **/hashes.json
-          key: download-data-tmp-${{ hashFiles('**/hashes.json') }}
+          path: data/tmp
+          key: download-data-tmp-${{ github.run_id }}
+          restore-keys: |
+            download-data-tmp-
 
       - uses: actions/cache@v2
         with:
           path: |
             vendor/
-            **/composer.lock
           key: composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            composer-
+
 
       - name: "Install dependencies"
         run: composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs
@@ -49,12 +52,6 @@ jobs:
       - name: Generate Data
         id: generated-data
         run: composer run-script api-build
-
-      - name: Check Cache
-        run: |
-          echo "Cache Key hashes: ${{ hashFiles('**/hashes.json') }}"
-          echo "Steps generated data: ${{ toJson(steps.generated-data.outputs) }}"
-          echo "${{ steps.generated-data.outputs.HAS_CHANGES == true }} | ${{ steps.generated-data.outputs.HAS_CHANGES }}"
 
       - name: Convert SVG to PNG
         if: ${{ steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate }}
