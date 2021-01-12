@@ -30,14 +30,10 @@ jobs:
           tools: composer:v2
 
       - uses: actions/cache@v2
+        if: ${{ ! github.event.inputs.forceCacheUpdate }}
         with:
-          path: |
-            data/tmp
-            **/hashes.json
-          key: download-data-tmp-${{ hashFiles('**/hashes.json') }}-${{ github.run_id }}
-          restore-keys: |
-            download-data-tmp-${{ hashFiles('**/hashes.json') }}
-            download-data-tmp
+          path: data/tmp
+          key: download-data-tmp-${{ github.run_id }}
 
       - uses: actions/cache@v2
         with:
@@ -53,12 +49,6 @@ jobs:
       - name: Generate Data
         id: generated-data
         run: composer run-script api-build
-
-      - name: Check Cache
-        run: |
-          echo "Cache Key hashes: ${{ hashFiles('**/hashes.json') }}"
-          echo "Steps generated data: ${{ toJson(steps.generated-data.outputs) }}"
-          echo "${{ steps.generated-data.outputs.HAS_CHANGES == true }} | ${{ steps.generated-data.outputs.HAS_CHANGES }}"
 
       - name: Convert SVG to PNG
         if: ${{ steps.generated-data.outputs.HAS_CHANGES || github.event.inputs.forceCacheUpdate }}

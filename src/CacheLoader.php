@@ -176,24 +176,6 @@ class CacheLoader
 
     public function hasChanges(): bool
     {
-        return $this->originalCachedData !== $this->cachedData;
-    }
-
-    public function dumpCache(): void
-    {
-        echo 'Cached Data' . PHP_EOL;
-        foreach ($this->cachedData as $key => $value) {
-            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
-        }
-
-        echo 'Original Cached Data' . PHP_EOL;
-        foreach ($this->originalCachedData as $key => $value) {
-            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
-        }
-
-        echo 'Diff Cached Data' . PHP_EOL;
-        foreach (array_diff($this->originalCachedData, $this->cachedData) as $key => $value) {
-            echo sprintf(" %s = %s\n", $key, json_encode($value) ?: '-error-');
-        }
+        return ($this->originalCachedData['hashes.json'] ?? null) !== ($this->cachedData['hashes.json'] ?? null);
     }
 }
