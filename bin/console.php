@@ -179,9 +179,9 @@ file_put_contents(
 );
 $hasChanges = $cacheLoader->hasChanges();
 
-echo '##[group]Debug Cache content';
+echo '##[group]Debug Cache content' . PHP_EOL;
 printf('[%s] set-output name=HAS_CHANGES::%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'true' : 'false');
 $cacheLoader->dumpCache();
-echo '##[endgroup]';
+echo '##[endgroup]' . PHP_EOL;
 
 echo sprintf('::set-output name=HAS_CHANGES::%s', $hasChanges ? 'true' : 'false');
