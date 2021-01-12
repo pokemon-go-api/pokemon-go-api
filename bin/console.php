@@ -83,7 +83,7 @@ foreach ($files as $file => $data) {
         $data = reset($data);
     }
 
-    file_put_contents($apidir . $file . '.json', json_encode($data));
+    file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT));
 }
 
 $raidBossHtmlList = $cacheLoader->fetchRaidBosses();
@@ -155,7 +155,7 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
             'sha512' => hash_file('sha512', $apidir . '/graphics/English/raidlist.svg'),
         ],
     ],
-]));
+], JSON_PRETTY_PRINT));
 
 $hashFiles = [
     $apidir . 'raidboss.json',
