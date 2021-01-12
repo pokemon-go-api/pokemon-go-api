@@ -40,6 +40,8 @@ class CacheLoader
     private string $cacheDir;
     /** @var array<string, string> */
     private array $cachedData = [];
+    /** @var array<string, string> */
+    private array $originalCachedData = [];
     private RemoteFileLoader $remoteFileLoader;
     private DateTimeImmutable $clock;
 
@@ -61,7 +63,7 @@ class CacheLoader
         }
 
         try {
-            $this->cachedData = json_decode(
+            $this->originalCachedData = $this->cachedData = json_decode(
                 file_get_contents($this->cacheDir . self::CACHE_FILE) ?: '[]',
                 true,
                 512,
@@ -180,6 +182,6 @@ class CacheLoader
             $hashes[basename($file)] = hash_file('sha512', $file);
         }
 
-        return ($this->cachedData['hashes.json'] ?? null) !== json_encode($hashes);
+        return ($this->originalCachedData['hashes.json'] ?? null) !== json_encode($hashes);
     }
 }

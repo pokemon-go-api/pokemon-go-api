@@ -123,6 +123,8 @@ foreach ($raidOverwrites->raidboss as $raidOverwrite) {
     );
 }
 
+printf('[%s] Got %d raid bosses to render' . PHP_EOL, date('H:i:s'), count($raidBosses->toArray()));
+
 $raidBossImageRenderer = new RaidBossGraphicRenderer();
 foreach ($translations->getCollections() as $translationName => $translationCollection) {
     $raidListDir = sprintf('%s/graphics/%s', $apidir, $translationName);
