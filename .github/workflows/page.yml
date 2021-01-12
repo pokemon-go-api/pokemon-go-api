@@ -41,8 +41,9 @@ jobs:
         with:
           path: |
             vendor/
-            **/composer.lock
           key: composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            composer-
 
 
       - name: "Install dependencies"
