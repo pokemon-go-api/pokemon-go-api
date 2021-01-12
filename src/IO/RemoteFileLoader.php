@@ -6,6 +6,7 @@ namespace PokemonGoLingen\PogoAPI\IO;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\ConnectException;
 
 class RemoteFileLoader
 {
@@ -18,7 +19,12 @@ class RemoteFileLoader
 
     public function load(string $url): File
     {
-        $content = $this->client->request('GET', $url)->getBody()->getContents();
+        try {
+            $content = $this->client->request('GET', $url)->getBody()->getContents();
+        } catch (ConnectException $connectException) {
+            sleep(5);
+            $content = $this->client->request('GET', $url)->getBody()->getContents();
+        }
 
         return new File($content);
     }
