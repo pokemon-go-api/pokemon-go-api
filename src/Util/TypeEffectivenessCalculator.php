@@ -26,7 +26,7 @@ final class TypeEffectivenessCalculator
         $halfEffective   = [...$primaryType->getHalfDamageFrom(), ...$secondaryType->getHalfDamageFrom()];
         $noEffective     = [...$primaryType->getNoDamageFrom(), ...$secondaryType->getNoDamageFrom()];
 
-        $allTypes = array_combine(PokemonType::ALL_TYPES, array_fill(0, count(PokemonType::ALL_TYPES), 1)) ?: [];
+        $allTypes = array_combine(PokemonType::ALL_TYPES, array_fill(0, count(PokemonType::ALL_TYPES), 1));
         foreach ($doubleEffective as $type) {
             $allTypes[$type] *= 1.6;
         }

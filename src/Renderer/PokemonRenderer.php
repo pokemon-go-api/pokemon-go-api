@@ -182,7 +182,18 @@ final class PokemonRenderer
                 $combat = [
                     'energy' => $combatMove->getEnergy(),
                     'power'  => $combatMove->getPower(),
+                    'buffs' => null,
                 ];
+                $buffs  = $combatMove->getBuffs();
+                if ($buffs !== null) {
+                    $combat['buffs'] = [
+                        'activationChance' => $buffs->getActivationChance(),
+                        'attackerAttackStatsChange' => $buffs->getAttackerAttackStatStageChange(),
+                        'attackerDefenseStatsChange' => $buffs->getAttackerDefenseStatStageChange(),
+                        'targetAttackStatsChange' => $buffs->getTargetAttackStatStageChange(),
+                        'targetDefenseStatsChange' => $buffs->getTargetDefenseStatStageChange(),
+                    ];
+                }
             }
 
             $out[$moveName] = [

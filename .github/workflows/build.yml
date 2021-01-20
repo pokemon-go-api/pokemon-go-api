@@ -1,0 +1,47 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  tests:
+    name: "PHP Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v2"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          coverage: "xdebug"
+          php-version: "7.4"
+          ini-values: zend.assertions=1
+          tools: composer:v2
+
+      - name: Setup problem matchers for PHP
+        run: echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+
+      - name: Setup problem matchers for PHPUnit
+        run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+
+      - name: "Cache dependencies"
+        uses: "actions/cache@v2"
+        with:
+          path: "~/.composer/cache"
+          key: "php-composer-${{ hashFiles('**/composer.json') }}"
+          restore-keys: "php-composer-"
+
+      - name: "Install dependencies"
+        run: "composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs"
+
+      - name: "Run CI"
+        run: "composer run-script ci"
+
+#      - name: Run Infection for added files
+#        run: |
+#          git fetch --depth=1 origin $GITHUB_BASE_REF
+#          composer run-script infection -- --git-diff-filter=AM --git-diff-base=origin/$GITHUB_BASE_REF --logger-github --ignore-msi-with-no-mutations --only-covered
