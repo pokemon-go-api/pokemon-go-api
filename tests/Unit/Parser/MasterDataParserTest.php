@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
 use PokemonGoLingen\PogoAPI\Types\PokemonCombatMove;
+use PokemonGoLingen\PogoAPI\Types\PokemonCombatMoveBuffs;
 use PokemonGoLingen\PogoAPI\Types\PokemonMove;
 use PokemonGoLingen\PogoAPI\Types\PokemonStats;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
@@ -22,6 +23,7 @@ use function array_map;
  * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonType
  * @uses   \PokemonGoLingen\PogoAPI\Types\Pokemon
  * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonStats
+ * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonCombatMoveBuffs
  *
  * @covers \PokemonGoLingen\PogoAPI\Parser\MasterDataParser
  */
@@ -84,7 +86,17 @@ class MasterDataParserTest extends TestCase
             3700.0,
             false
         );
-        $move49->setCombatMove(new PokemonCombatMove(90.0, -60.0));
+        $move49->setCombatMove(new PokemonCombatMove(
+            90.0,
+            -60.0,
+            new PokemonCombatMoveBuffs(
+                30,
+                null,
+                null,
+                null,
+                -1
+            )
+        ));
         self::assertEquals($move49, $moves['m49']);
 
         $move202 = new PokemonMove(
@@ -96,7 +108,7 @@ class MasterDataParserTest extends TestCase
             500.0,
             true
         );
-        $move202->setCombatMove(new PokemonCombatMove(4.0, 2.0));
+        $move202->setCombatMove(new PokemonCombatMove(4.0, 2.0, null));
         self::assertEquals($move202, $moves['m202']);
     }
 }

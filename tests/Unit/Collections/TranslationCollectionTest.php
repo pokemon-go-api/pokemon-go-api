@@ -21,8 +21,10 @@ class TranslationCollectionTest extends TestCase
         $collection->addPokemonMegaName(5, 'Mega 1');
         $collection->addPokemonMegaName(5, 'Mega 2');
         $collection->addPokemonFormName('POKEMON_FORM', 'Pokemon Form in testlanguage');
+        $collection->addRegionalForm('regional_form_alola', 'alola');
 
         self::assertSame('Testlanguage', $collection->getLanguageName());
+        self::assertSame('alola', $collection->getRegionalForm('regional_form_alola'));
 
         self::assertSame('Movename in testlanguage', $collection->getMoveName(123));
         self::assertNull($collection->getMoveName(1230));
