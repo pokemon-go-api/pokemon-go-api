@@ -41,7 +41,7 @@ jobs:
       - name: "Run CI"
         run: "composer run-script ci"
 
-      - name: Run Infection for added files
-        run: |
-          git fetch --depth=1 origin $GITHUB_BASE_REF
-          composer run-script infection -- --git-diff-filter=AM --git-diff-base=origin/$GITHUB_BASE_REF --logger-github --ignore-msi-with-no-mutations --only-covered
+#      - name: Run Infection for added files
+#        run: |
+#          git fetch --depth=1 origin $GITHUB_BASE_REF
+#          composer run-script infection -- --git-diff-filter=AM --git-diff-base=origin/$GITHUB_BASE_REF --logger-github --ignore-msi-with-no-mutations --only-covered

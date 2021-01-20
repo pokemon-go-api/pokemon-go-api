@@ -31,8 +31,7 @@
         "ci": [
             "@cs-check",
             "@phpstan",
-            "@phpunit",
-            "@infection"
+            "@phpunit"
         ],
         "api-build": [
             "php bin/console.php",
