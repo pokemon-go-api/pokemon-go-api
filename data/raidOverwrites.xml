@@ -71,4 +71,37 @@
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-01-26 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-01-31 10:00:00</date>
+        </endDate>
+        <pokemon>ENTEI</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-01-31 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-02-04 10:00:00</date>
+        </endDate>
+        <pokemon>RAIKOU</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-02-04 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-02-09 10:00:00</date>
+        </endDate>
+        <pokemon>SUICUNE</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
 </root>
