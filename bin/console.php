@@ -9,10 +9,10 @@ use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
+use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -90,43 +90,14 @@ $raidBossHtmlList = $cacheLoader->fetchRaidBosses();
 $leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
 $raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
 
-$raidOverwrites = json_decode(json_encode(
-    (array) (simplexml_load_string(file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: '') ?: [])
-) ?: '[]');
-foreach ($raidOverwrites->raidboss as $raidOverwrite) {
-    $start = new DateTimeImmutable(
-        $raidOverwrite->startDate->date,
-        isset($raidOverwrite->startDate->timezone)
-            ? new DateTimeZone($raidOverwrite->startDate->timezone)
-            : new DateTimeZone('Europe/Berlin')
-    );
-    $end   = new DateTimeImmutable(
-        $raidOverwrite->endDate->date,
-        isset($raidOverwrite->endDate->timezone)
-            ? new DateTimeZone($raidOverwrite->startDate->timezone)
-            : new DateTimeZone('Europe/Berlin')
-    );
-
-    $now = new DateTimeImmutable();
-    if ($now < $start || $now > $end) {
-        continue;
-    }
-
-    $pokemon = $masterData->getPokemonCollection()->get($raidOverwrite->pokemon);
-    if ($pokemon === null) {
-        continue;
-    }
-
-    $raidBosses->add(
-        new RaidBoss(
-            $raidOverwrite->form ?? $raidOverwrite->pokemon,
-            $raidOverwrite->shiny === 'true',
-            $raidOverwrite->level,
-            $pokemon,
-            null
-        )
-    );
-}
+$xmlData           = (array) (simplexml_load_string(
+    file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: ''
+) ?: []);
+$raidBossOverwrite = new RaidBossOverwrite(
+    json_decode(json_encode($xmlData['raidboss'] ?? []) ?: '[]'),
+    $masterData->getPokemonCollection()
+);
+$raidBossOverwrite->overwrite($raidBosses);
 
 printf('[%s] Got %d raid bosses to render' . PHP_EOL, date('H:i:s'), count($raidBosses->toArray()));
 

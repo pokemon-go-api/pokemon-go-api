@@ -33,6 +33,15 @@ final class RaidBossCollection
         return $this->storage[$id];
     }
 
+    public function remove(string $pokemonId): void
+    {
+        if (! array_key_exists($pokemonId, $this->storage)) {
+            return;
+        }
+
+        unset($this->storage[$pokemonId]);
+    }
+
     public function has(RaidBoss $raidBoss): bool
     {
         return array_key_exists($raidBoss->getPokemonId(), $this->storage);
@@ -51,7 +60,12 @@ final class RaidBossCollection
         uasort(
             $this->storage,
             static function (RaidBoss $a, RaidBoss $b) use ($raidBossLevelMapping): int {
-                return $raidBossLevelMapping[$b->getRaidLevel()] <=> $raidBossLevelMapping[$a->getRaidLevel()];
+                $lvlSort = $raidBossLevelMapping[$b->getRaidLevel()] <=> $raidBossLevelMapping[$a->getRaidLevel()];
+                if ($lvlSort !== 0) {
+                    return $lvlSort;
+                }
+
+                return $a->getPokemon()->getDexNr() <=> $b->getPokemon()->getDexNr();
             }
         );
 
