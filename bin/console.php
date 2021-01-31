@@ -96,13 +96,18 @@ $raidOverwrites = json_decode(json_encode(
 foreach ($raidOverwrites->raidboss as $raidOverwrite) {
     $start = new DateTimeImmutable(
         $raidOverwrite->startDate->date,
-        isset($raidOverwrite->startDate->timezone) ? new DateTimeZone($raidOverwrite->startDate->timezone) : null
+        isset($raidOverwrite->startDate->timezone)
+            ? new DateTimeZone($raidOverwrite->startDate->timezone)
+            : new DateTimeZone('Europe/Berlin')
     );
     $end   = new DateTimeImmutable(
         $raidOverwrite->endDate->date,
-        isset($raidOverwrite->endDate->timezone) ? new DateTimeZone($raidOverwrite->endDate->timezone) : null
+        isset($raidOverwrite->endDate->timezone)
+            ? new DateTimeZone($raidOverwrite->startDate->timezone)
+            : new DateTimeZone('Europe/Berlin')
     );
-    $now   = new DateTimeImmutable();
+
+    $now = new DateTimeImmutable();
     if ($now < $start || $now > $end) {
         continue;
     }
