@@ -11,9 +11,10 @@ use function array_fill;
 use function array_filter;
 use function array_keys;
 use function array_map;
+use function array_multisort;
 use function count;
 use function round;
-use function uasort;
+use function sprintf;
 
 final class TypeEffectivenessCalculator
 {
@@ -36,10 +37,18 @@ final class TypeEffectivenessCalculator
         }
 
         foreach ($noEffective as $type) {
-            $allTypes[$type] *= .3905;
+            $allTypes[$type] *= .390625;
         }
 
-        uasort($allTypes, static fn (float $a, float $b) => $b <=> $a);
+        $allTypeSortKeys = [];
+        foreach ($allTypes as $key => $value) {
+            $allTypeSortKeys[] = sprintf('%04f-%s', 100 - $value, $key);
+        }
+
+        array_multisort(
+            $allTypeSortKeys,
+            $allTypes
+        );
 
         return array_map(
             static fn (float $input): float => round($input, 3),
