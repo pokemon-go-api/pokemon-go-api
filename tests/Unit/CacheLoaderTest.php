@@ -73,9 +73,9 @@ class CacheLoaderTest extends TestCase
             $this->cacheDir
         );
         // assert that three calls only load once
-        $sut->fetchRaidBosses();
-        $sut->fetchRaidBosses();
-        $sut->fetchRaidBosses();
+        $sut->fetchRaidBossesFromLeekduck();
+        $sut->fetchRaidBossesFromLeekduck();
+        $sut->fetchRaidBossesFromLeekduck();
         unset($sut);
 
         $clock = new DateTimeImmutable('2020-06-01 12:30:00');
@@ -85,7 +85,7 @@ class CacheLoaderTest extends TestCase
             $this->cacheDir
         );
         // Clock changed, but not enough. So no new Request should be made
-        $sut->fetchRaidBosses();
+        $sut->fetchRaidBossesFromLeekduck();
         unset($sut);
 
         $clock = new DateTimeImmutable('2020-06-01 18:00:00');
@@ -95,6 +95,6 @@ class CacheLoaderTest extends TestCase
             $this->cacheDir
         );
         // Clock changed enough. A new Request should be made
-        $sut->fetchRaidBosses();
+        $sut->fetchRaidBossesFromLeekduck();
     }
 }

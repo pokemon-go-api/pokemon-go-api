@@ -34,6 +34,10 @@ final class RaidBoss
 
     public function getPokemonId(): string
     {
+        if ($this->temporaryEvolution !== null) {
+            return $this->temporaryEvolution->getId();
+        }
+
         return $this->pokemonId;
     }
 

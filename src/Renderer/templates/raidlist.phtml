@@ -8,7 +8,7 @@ $width               = 670;
 $maxCounterInRow     = 7;
 $lineHeight          = 50;
 $graphicHeaderHeight = 30;
-$graphicFooterHeight = 5;
+$graphicFooterHeight = 10;
 $totalHeight = ($lineHeight * count($bosses)) + $graphicHeaderHeight + $graphicFooterHeight;
 
 
@@ -114,6 +114,12 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             stroke: #ffffff;
             stroke-width: 1;
         }
+
+        .source-url {
+            fill: #fff;
+            font-size: 8px;
+            font-family: sans-serif;
+        }
     </style>
     <defs>
         <linearGradient id="header" gradientTransform="rotate(90)">
@@ -155,6 +161,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 
     <g class="graphic-footer">
         <rect fill="#000" width="<?=$width?>" height="<?= $graphicFooterHeight ?>" x="0" y="<?=$totalHeight-$graphicFooterHeight?>"/>
+        <text class="source-url" x="2" y="<?=$totalHeight-2?>">Raidboss source from serebii.net | generated for pokemon-go-lingen.github.io/pokemon-go-api/ | Image Source by The Pokemon Company and Niantic</text>
     </g>
 
     <?php foreach ($bosses as $index => $boss) : ?>

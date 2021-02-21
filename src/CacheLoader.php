@@ -141,14 +141,28 @@ class CacheLoader
         return $output;
     }
 
-    public function fetchRaidBosses(): string
+    public function fetchRaidBossesFromLeekduck(): string
     {
-        $cacheFile = $this->cacheDir . 'raidlist.html';
+        $cacheFile = $this->cacheDir . 'raidlist_leekduck.html';
         $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
 
         $cacheEntry = $this->cachedData[$cacheFile] ?? null;
         if ($cacheEntry !== $cacheKey) {
             $this->remoteFileLoader->load('https://leekduck.com/boss/')->saveTo($cacheFile);
+            $this->cachedData[$cacheFile] = $cacheKey;
+        }
+
+        return $cacheFile;
+    }
+
+    public function fetchRaidBossesFromSerebii(): string
+    {
+        $cacheFile = $this->cacheDir . 'raidlist_serebii.html';
+        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
+
+        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
+        if ($cacheEntry !== $cacheKey) {
+            $this->remoteFileLoader->load('https://www.serebii.net/pokemongo/raidbattles.shtml')->saveTo($cacheFile);
             $this->cachedData[$cacheFile] = $cacheKey;
         }
 
