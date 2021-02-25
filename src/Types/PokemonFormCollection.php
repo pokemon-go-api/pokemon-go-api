@@ -38,7 +38,7 @@ final class PokemonFormCollection
         $forms = [];
         foreach ($gameMasterData->formSettings->forms ?? [] as $formData) {
             assert($formData instanceof stdClass);
-            if (! isset($formData->assetBundleValue)) {
+            if (! isset($formData->assetBundleValue) && ! isset($formData->assetBundleSuffix)) {
                 continue;
             }
 
@@ -47,7 +47,8 @@ final class PokemonFormCollection
             $forms[] = new PokemonForm(
                 $formData->form,
                 $formOnlyId,
-                $formData->assetBundleValue
+                $formData->assetBundleValue ?? null,
+                $formData->assetBundleSuffix ?? null
             );
         }
 
