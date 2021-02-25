@@ -7,14 +7,16 @@ namespace PokemonGoLingen\PogoAPI\Types;
 final class PokemonForm
 {
     private string $id;
-    private int $assetBundleValue;
+    private ?int $assetBundleValue;
+    private ?string $assetBundleSuffix;
     private string $formOnlyId;
 
-    public function __construct(string $id, string $formOnlyId, int $assetBundleValue)
+    public function __construct(string $id, string $formOnlyId, ?int $assetBundleValue, ?string $assetBundleSuffix)
     {
-        $this->id               = $id;
-        $this->assetBundleValue = $assetBundleValue;
-        $this->formOnlyId       = $formOnlyId;
+        $this->id                = $id;
+        $this->assetBundleValue  = $assetBundleValue;
+        $this->assetBundleSuffix = $assetBundleSuffix;
+        $this->formOnlyId        = $formOnlyId;
     }
 
     public function getId(): string
@@ -29,7 +31,12 @@ final class PokemonForm
 
     public function getAssetBundleValue(): int
     {
-        return $this->assetBundleValue;
+        return $this->assetBundleValue ?? 0;
+    }
+
+    public function getAssetBundleSuffix(): ?string
+    {
+        return $this->assetBundleSuffix;
     }
 
     public function isAlola(): bool

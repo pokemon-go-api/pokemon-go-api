@@ -36,7 +36,7 @@ class PokemonNameRendererTest extends TestCase
         self::assertSame('Testpokemon', PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection));
 
         $pokemon->setPokemonForm(
-            new PokemonForm('dummy', 'ALOLA', 1)
+            new PokemonForm('dummy', 'ALOLA', 1, null)
         );
         self::assertSame(
             '(ALOLA)-Testpokemon',
@@ -44,7 +44,7 @@ class PokemonNameRendererTest extends TestCase
         );
 
         $pokemon->setPokemonForm(
-            new PokemonForm('dummy', 'GALARIAN', 1)
+            new PokemonForm('dummy', 'GALARIAN', 1, null)
         );
         self::assertSame(
             'Testpokemon-(GALAR)',

@@ -16,9 +16,9 @@ use function sprintf;
 final class PokemonRenderer
 {
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d.png';
+    private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s.png';
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_BASE_SHINY_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%03d_%02d_shiny.png';
+    private const ASSETS_BASE_SHINY_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
 
     private TranslationCollectionCollection $translations;
 
@@ -72,12 +72,8 @@ final class PokemonRenderer
                 $this->translations
             ),
             'assets' => [
-                'image'      => sprintf(self::ASSETS_BASE_URL, $pokemon->getDexNr(), $pokemon->getAssetsBundleId()),
-                'shinyImage' => sprintf(
-                    self::ASSETS_BASE_SHINY_URL,
-                    $pokemon->getDexNr(),
-                    $pokemon->getAssetsBundleId()
-                ),
+                'image'      => $this->buildPokemonImageUrl($pokemon, $pokemon->getAssetsBundleId(), false),
+                'shinyImage' => $this->buildPokemonImageUrl($pokemon, $pokemon->getAssetsBundleId(), true),
             ],
             'regionForms'         => array_map(
                 fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection),
@@ -113,15 +109,15 @@ final class PokemonRenderer
                 'primaryType'   => $this->renderType($temporaryEvolution->getTypePrimary(), $translations),
                 'secondaryType' => $this->renderType($temporaryEvolution->getTypeSecondary(), $translations),
                 'assets'        => [
-                    'image' => sprintf(
-                        self::ASSETS_BASE_URL,
-                        $pokemon->getDexNr(),
-                        $temporaryEvolution->getAssetsBundleId()
+                    'image' => $this->buildPokemonImageUrl(
+                        $pokemon,
+                        $temporaryEvolution->getAssetsBundleId(),
+                        false
                     ),
-                    'shinyImage' => sprintf(
-                        self::ASSETS_BASE_SHINY_URL,
-                        $pokemon->getDexNr(),
-                        $temporaryEvolution->getAssetsBundleId()
+                    'shinyImage' => $this->buildPokemonImageUrl(
+                        $pokemon,
+                        $temporaryEvolution->getAssetsBundleId(),
+                        true
                     ),
                 ],
             ];
@@ -209,5 +205,21 @@ final class PokemonRenderer
         }
 
         return $out;
+    }
+
+    private function buildPokemonImageUrl(Pokemon $pokemon, ?int $assetBundleId, bool $shiny): string
+    {
+        $bundleSuffix                 = sprintf('%03d_%02d', $pokemon->getDexNr(), $assetBundleId ?? 0);
+        $pokemonForm                  = $pokemon->getPokemonForm();
+        $pokemonFormAssetBundleSuffix = $pokemonForm !== null ? $pokemonForm->getAssetBundleSuffix() : null;
+        if ($pokemonFormAssetBundleSuffix !== null) {
+            $bundleSuffix = $pokemonFormAssetBundleSuffix;
+        }
+
+        if ($shiny) {
+            return sprintf(self::ASSETS_BASE_SHINY_URL, $bundleSuffix);
+        }
+
+        return sprintf(self::ASSETS_BASE_URL, $bundleSuffix);
     }
 }
