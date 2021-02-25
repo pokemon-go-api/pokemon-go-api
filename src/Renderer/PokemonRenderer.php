@@ -182,6 +182,7 @@ final class PokemonRenderer
                 $combat = [
                     'energy' => $combatMove->getEnergy(),
                     'power'  => $combatMove->getPower(),
+                    'turns' => 1 + $combatMove->getDurationTurns(),
                     'buffs' => null,
                 ];
                 $buffs  = $combatMove->getBuffs();

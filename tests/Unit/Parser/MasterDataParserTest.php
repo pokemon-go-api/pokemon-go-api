@@ -89,6 +89,7 @@ class MasterDataParserTest extends TestCase
         $move49->setCombatMove(new PokemonCombatMove(
             90.0,
             -60.0,
+            0,
             new PokemonCombatMoveBuffs(
                 30,
                 null,
@@ -99,16 +100,16 @@ class MasterDataParserTest extends TestCase
         ));
         self::assertEquals($move49, $moves['m49']);
 
-        $move202 = new PokemonMove(
-            202,
-            'BITE_FAST',
+        $move203 = new PokemonMove(
+            203,
+            'SUCKER_PUNCH_FAST',
             PokemonType::dark(),
-            6.0,
-            4.0,
-            500.0,
+            7.0,
+            8.0,
+            700.0,
             true
         );
-        $move202->setCombatMove(new PokemonCombatMove(4.0, 2.0, null));
-        self::assertEquals($move202, $moves['m202']);
+        $move203->setCombatMove(new PokemonCombatMove(5.0, 7.0, 1, null));
+        self::assertEquals($move203, $moves['m203']);
     }
 }
