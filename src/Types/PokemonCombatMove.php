@@ -10,13 +10,15 @@ final class PokemonCombatMove
 {
     private float $power;
     private float $energy;
+    private int $durationTurns;
     private ?PokemonCombatMoveBuffs $buffs;
 
-    public function __construct(float $power, float $energy, ?PokemonCombatMoveBuffs $buffs)
+    public function __construct(float $power, float $energy, int $durationTurns, ?PokemonCombatMoveBuffs $buffs)
     {
-        $this->power  = $power;
-        $this->energy = $energy;
-        $this->buffs  = $buffs;
+        $this->power         = $power;
+        $this->energy        = $energy;
+        $this->durationTurns = $durationTurns;
+        $this->buffs         = $buffs;
     }
 
     public static function createFromGameMaster(stdClass $combatMoveData): self
@@ -35,6 +37,7 @@ final class PokemonCombatMove
         return new self(
             $combatMoveData->combatMove->power,
             $combatMoveData->combatMove->energyDelta,
+            $combatMoveData->combatMove->durationTurns ?? 0,
             $moveBuffs
         );
     }
@@ -47,6 +50,11 @@ final class PokemonCombatMove
     public function getEnergy(): float
     {
         return $this->energy;
+    }
+
+    public function getDurationTurns(): int
+    {
+        return $this->durationTurns;
     }
 
     public function getBuffs(): ?PokemonCombatMoveBuffs

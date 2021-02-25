@@ -39,36 +39,37 @@
     }
   },
   {
-    "templateId": "V0202_MOVE_BITE_FAST",
+    "templateId": "V0203_MOVE_SUCKER_PUNCH_FAST",
     "data": {
-      "templateId": "V0202_MOVE_BITE_FAST",
+      "templateId": "V0203_MOVE_SUCKER_PUNCH_FAST",
       "moveSettings": {
-        "movementId": "BITE_FAST",
+        "movementId": "SUCKER_PUNCH_FAST",
         "animationId": 4,
         "pokemonType": "POKEMON_TYPE_DARK",
-        "power": 6.0,
+        "power": 7.0,
         "accuracyChance": 1.0,
         "staminaLossScalar": 0.01,
         "trainerLevelMin": 1,
         "trainerLevelMax": 100,
-        "vfxName": "bite_fast",
-        "durationMs": 500,
+        "vfxName": "sucker_punch_fast",
+        "durationMs": 700,
         "damageWindowStartMs": 300,
-        "damageWindowEndMs": 500,
-        "energyDelta": 4
+        "damageWindowEndMs": 700,
+        "energyDelta": 8
       }
     }
   },
   {
-    "templateId": "COMBAT_V0202_MOVE_BITE_FAST",
+    "templateId": "COMBAT_V0203_MOVE_SUCKER_PUNCH_FAST",
     "data": {
-      "templateId": "COMBAT_V0202_MOVE_BITE_FAST",
+      "templateId": "COMBAT_V0203_MOVE_SUCKER_PUNCH_FAST",
       "combatMove": {
-        "uniqueId": "BITE_FAST",
+        "uniqueId": "SUCKER_PUNCH_FAST",
         "type": "POKEMON_TYPE_DARK",
-        "power": 4.0,
-        "vfxName": "bite_fast",
-        "energyDelta": 2
+        "power": 5.0,
+        "vfxName": "sucker_punch_fast",
+        "durationTurns": 1,
+        "energyDelta": 7
       }
     }
   },
