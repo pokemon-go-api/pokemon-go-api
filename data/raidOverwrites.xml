@@ -170,4 +170,59 @@
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-03-01 08:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-03-06 08:00:00</date>
+        </endDate>
+        <pokemon>LANDORUS_INCARNATE</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-03-06 08:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-03-11 08:00:00</date>
+        </endDate>
+        <pokemon>TORNADUS_INCARNATE</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-03-11 08:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-03-16 10:00:00</date>
+        </endDate>
+        <pokemon>THUNDURUS_INCARNATE</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-03-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-03-30 10:00:00</date>
+        </endDate>
+        <pokemon>THUNDURUS_THERIAN</pokemon>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-03-30 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-04-02 08:00:00</date>
+        </endDate>
+        <pokemon>TORNADUS_THERIAN</pokemon>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
 </root>
