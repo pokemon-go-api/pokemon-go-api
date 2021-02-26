@@ -35,8 +35,8 @@ final class PokemonCombatMove
         }
 
         return new self(
-            $combatMoveData->combatMove->power,
-            $combatMoveData->combatMove->energyDelta,
+            $combatMoveData->combatMove->power ?? 0,
+            $combatMoveData->combatMove->energyDelta ?? 0,
             $combatMoveData->combatMove->durationTurns ?? 0,
             $moveBuffs
         );

@@ -133,7 +133,7 @@ class MasterDataParser
 
             $moveId = (int) $matches['MoveId'];
             $move   = $attacksCollection->getById($moveId);
-            if ($move === null || ! isset($item->data->combatMove->power)) {
+            if ($move === null) {
                 continue;
             }
 
