@@ -41,8 +41,8 @@
         "convert-svg": [
             "mkdir -p public/api/graphics/German/",
             "mkdir -p public/api/graphics/English/",
-            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size=975,1260' '--screenshot=/app/public/api/graphics/German/raidlist.png' '/app/data/tmp/api/graphics/German/raidlist.svg'",
-            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size=975,1260' '--screenshot=/app/public/api/graphics/English/raidlist.png' '/app/data/tmp/api/graphics/English/raidlist.svg'"
+            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size='$WINDOW_SIZE '--screenshot=/app/public/api/graphics/German/raidlist.png' '/app/data/tmp/api/graphics/German/raidlist.svg'",
+            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size='$WINDOW_SIZE '--screenshot=/app/public/api/graphics/English/raidlist.png' '/app/data/tmp/api/graphics/English/raidlist.svg'"
         ],
         "cs-check": "phpcs -s",
         "cs-fix": "phpcbf",

@@ -63,6 +63,8 @@ jobs:
       - name: Convert SVG to PNG
         if: ${{ steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate }}
         continue-on-error: true
+        env:
+          WINDOW_SIZE: ${{ steps.generated-data.outputs.WINDOW_SIZE }}
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
