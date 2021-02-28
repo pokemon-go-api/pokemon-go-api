@@ -222,4 +222,28 @@ final class Pokemon
 
          return $this->pokemonForm->getAssetBundleValue();
     }
+
+    public function getAssetBundleSuffix(): ?string
+    {
+        if ($this->pokemonForm === null) {
+            return null;
+        }
+
+         return $this->pokemonForm->getAssetBundleSuffix();
+    }
+
+    public function isSameFormAsBasePokemon(Pokemon $pokemon): bool
+    {
+        $pokemonStats = $pokemon->getStats();
+        $formStats    = $this->getStats();
+
+        return $this->getTypePrimary()->getType() === $pokemon->getTypePrimary()->getType()
+            && $this->getTypeSecondary()->getType() === $pokemon->getTypeSecondary()->getType()
+            && (
+                $pokemonStats !== null && $formStats !== null
+                && $formStats->getAttack() === $pokemonStats->getAttack()
+                && $formStats->getDefense() === $pokemonStats->getDefense()
+                && $formStats->getStamina() === $pokemonStats->getStamina()
+            );
+    }
 }
