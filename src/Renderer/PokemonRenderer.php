@@ -210,8 +210,7 @@ final class PokemonRenderer
     private function buildPokemonImageUrl(Pokemon $pokemon, ?int $assetBundleId, bool $shiny): string
     {
         $bundleSuffix                 = sprintf('%03d_%02d', $pokemon->getDexNr(), $assetBundleId ?? 0);
-        $pokemonForm                  = $pokemon->getPokemonForm();
-        $pokemonFormAssetBundleSuffix = $pokemonForm !== null ? $pokemonForm->getAssetBundleSuffix() : null;
+        $pokemonFormAssetBundleSuffix = $pokemon->getAssetBundleSuffix();
         if ($pokemonFormAssetBundleSuffix !== null) {
             $bundleSuffix = $pokemonFormAssetBundleSuffix;
         }
