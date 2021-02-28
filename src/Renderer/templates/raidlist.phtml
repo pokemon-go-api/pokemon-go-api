@@ -4,13 +4,15 @@ use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 if (!isset($bosses)) {
     $bosses = [];
 }
-$width               = 670;
+
+$svgWidth = 985;
+$width               = 685;
 $maxCounterInRow     = 7;
 $lineHeight          = 50;
 $graphicHeaderHeight = 30;
 $graphicFooterHeight = 10;
 $totalHeight = ($lineHeight * count($bosses)) + $graphicHeaderHeight + $graphicFooterHeight;
-
+$svgHeight = intval($totalHeight * ($svgWidth / $width));
 
 $renderWeatherIcon = function(string $weatherIcon, int $x): string {
     $y = 12;
@@ -36,7 +38,7 @@ $renderWeatherIcon = function(string $weatherIcon, int $x): string {
 echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 <?=$width?> <?=$totalHeight?>" width="985"
+     viewBox="0 0 <?=$width?> <?=$totalHeight?>" width="<?=$svgWidth?>"
      preserveAspectRatio="none" version="1.1">
     <style>
         .boss-types rect,

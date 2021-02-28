@@ -105,6 +105,7 @@ $raidBossOverwrite->overwrite($raidBosses);
 
 printf('[%s] Got %d raid bosses to render' . PHP_EOL, date('H:i:s'), count($raidBosses->toArray()));
 
+$windowSize            = '0,0';
 $raidBossImageRenderer = new RaidBossGraphicRenderer();
 foreach ($translations->getCollections() as $translationName => $translationCollection) {
     $raidListDir = sprintf('%s/graphics/%s', $apidir, $translationName);
@@ -112,10 +113,13 @@ foreach ($translations->getCollections() as $translationName => $translationColl
         @mkdir($raidListDir, 0777, true);
     }
 
+    $raidGraphic = $raidBossImageRenderer->buildGraphic($raidBosses, $translationCollection);
+
     file_put_contents(
         sprintf('%s/raidlist.svg', $raidListDir),
-        $raidBossImageRenderer->buildGraphic($raidBosses, $translationCollection)
+        $raidGraphic->getImageContent()
     );
+    $windowSize = $raidGraphic->getWindowSize();
 }
 
 $raidListRenderer = new RaidBossListRenderer();
@@ -159,4 +163,5 @@ file_put_contents(
 );
 $hasChanges = $cacheLoader->hasChanges();
 printf('[%s] CACHE_STATUS=%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
-echo sprintf('::set-output name=CACHE_STATUS::%s', $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
+echo sprintf('::set-output name=CACHE_STATUS::%s' . PHP_EOL, $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
+echo sprintf('::set-output name=WINDOW_SIZE::%s' . PHP_EOL, $windowSize);

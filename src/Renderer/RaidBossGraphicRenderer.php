@@ -29,7 +29,7 @@ final class RaidBossGraphicRenderer
     public function buildGraphic(
         RaidBossCollection $raidBossCollection,
         TranslationCollection $translationCollection
-    ): string {
+    ): RaidBossGraphic {
         $weatherCalculator = new TypeWeatherCalculator();
         $typeCalculator    = new TypeEffectivenessCalculator();
         $bosses            = [];
@@ -112,12 +112,17 @@ final class RaidBossGraphicRenderer
             $bosses[$key]->counter = array_reverse($boss->counter, true);
         }
 
+        $svgWidth = $svgHeight = 0;
         ob_start();
         include __DIR__ . '/templates/raidlist.phtml';
         $content = ob_get_contents();
         ob_end_clean();
 
-        return trim($content ?: '');
+        return new RaidBossGraphic(
+            trim($content ?: ''),
+            $svgWidth,
+            $svgHeight
+        );
     }
 
     private function getName(RaidBoss $raidBoss, TranslationCollection $translationCollection): string
