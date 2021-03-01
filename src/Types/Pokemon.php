@@ -10,6 +10,7 @@ use stdClass;
 use function assert;
 use function count;
 use function preg_match;
+use function strpos;
 
 final class Pokemon
 {
@@ -30,7 +31,7 @@ final class Pokemon
     private array $eliteQuickMoveNames = [];
     /** @var string[] */
     private array $eliteCinematicMoveNames = [];
-    /** @var Pokemon[] */
+    /** @var array<string, Pokemon> */
     private array $pokemonRegionForms = [];
 
     public function __construct(
@@ -195,10 +196,10 @@ final class Pokemon
 
     public function addPokemonRegionForm(Pokemon $pokemonRegionForm): void
     {
-        $this->pokemonRegionForms[] = $pokemonRegionForm;
+        $this->pokemonRegionForms[$pokemonRegionForm->getFormId()] = $pokemonRegionForm;
     }
 
-    /** @return Pokemon[] */
+    /** @return array<string, Pokemon> */
     public function getPokemonRegionForms(): array
     {
         return $this->pokemonRegionForms;
@@ -207,6 +208,13 @@ final class Pokemon
     public function setPokemonForm(PokemonForm $pokemonForm): void
     {
         $this->pokemonForm = $pokemonForm;
+    }
+
+    public function overwriteDefaultPokemonForm(PokemonForm $pokemonForm): void
+    {
+        $this->formId      = $pokemonForm->getId();
+        $this->pokemonForm = $pokemonForm;
+        unset($this->pokemonRegionForms[$pokemonForm->getId()]);
     }
 
     public function getPokemonForm(): ?PokemonForm
@@ -244,6 +252,6 @@ final class Pokemon
                 && $formStats->getAttack() === $pokemonStats->getAttack()
                 && $formStats->getDefense() === $pokemonStats->getDefense()
                 && $formStats->getStamina() === $pokemonStats->getStamina()
-            );
+            ) && strpos($this->getFormId(), '_FEMALE') === false;
     }
 }

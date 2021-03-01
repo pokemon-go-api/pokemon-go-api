@@ -66,7 +66,10 @@ class MasterDataParserTest extends TestCase
             $meowth->getPokemonRegionForms()
         );
 
-        self::assertEquals(['MEOWTH_ALOLA', 'MEOWTH_GALARIAN'], $forms);
+        self::assertEquals([
+            'MEOWTH_ALOLA' => 'MEOWTH_ALOLA',
+            'MEOWTH_GALARIAN' => 'MEOWTH_GALARIAN',
+        ], $forms);
         self::assertEquals($pokemonMeowth, $meowth);
     }
 

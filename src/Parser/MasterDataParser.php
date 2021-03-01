@@ -209,14 +209,16 @@ class MasterDataParser
                         continue;
                     }
 
+                    $pokemonRegionForm->setPokemonForm($pokemonForm);
+
                     if (
-                        $pokemon->getPokemonForm() === null
-                        && $pokemonRegionForm->isSameFormAsBasePokemon($pokemon)
+                        $pokemon->getPokemonForm() !== null
+                        || ! $pokemonRegionForm->isSameFormAsBasePokemon($pokemon)
                     ) {
-                        $pokemon->setPokemonForm($pokemonForm);
+                        continue;
                     }
 
-                    $pokemonRegionForm->setPokemonForm($pokemonForm);
+                    $pokemon->overwriteDefaultPokemonForm($pokemonForm);
                 }
             }
         }
