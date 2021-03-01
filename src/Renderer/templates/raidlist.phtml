@@ -35,6 +35,22 @@ $renderWeatherIcon = function(string $weatherIcon, int $x): string {
     SVG;
 };
 
+$renderBossName = function(string $bossName): string {
+    $explodedName = explode(' ', $bossName, 2);
+    if (mb_strlen($bossName) > 10 && count($explodedName) === 2) {
+        return <<<SVG
+        <text x="295" y="35" class="double-line">
+            <tspan x="295" y="22">{$explodedName[0]}</tspan>
+            <tspan x="295" y="42">{$explodedName[1]}</tspan>
+        </text>
+        SVG;
+    }
+
+    return <<<SVG
+    <text x="295" y="35">{$bossName}</text>
+    SVG;
+};
+
 echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -77,6 +93,9 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             fill: #ffffff;
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
             text-transform: uppercase;
+        }
+        .boss-name text.double-line {
+            font-size: 20px;
         }
 
         .boss-cp-spectrum text {
@@ -177,7 +196,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 
             <g class="boss-name">
                 <rect width="215" height="<?= $lineHeight ?>" x="85" y="0"/>
-                <text x="295" y="35"><?= $boss->name ?></text>
+                <?= $renderBossName($boss->name) ?>
             </g>
 
             <g class="boss-image">
