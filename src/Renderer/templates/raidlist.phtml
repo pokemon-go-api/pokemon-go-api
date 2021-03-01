@@ -39,15 +39,14 @@ $renderBossName = function(string $bossName): string {
     $explodedName = explode(' ', $bossName, 2);
     if (mb_strlen($bossName) > 10 && count($explodedName) === 2) {
         return <<<SVG
-        <text x="295" y="35" class="double-line">
-            <tspan x="295" y="22">{$explodedName[0]}</tspan>
-            <tspan x="295" y="42">{$explodedName[1]}</tspan>
+        <text text-anchor="end" x="295" y="35" class="double-line">
+            <tspan x="295" y="22">{$explodedName[0]}</tspan><tspan x="295" y="42">{$explodedName[1]}</tspan>
         </text>
         SVG;
     }
 
     return <<<SVG
-    <text x="295" y="35">{$bossName}</text>
+    <text text-anchor="end" x="295" y="35">{$bossName}</text>
     SVG;
 };
 
@@ -89,7 +88,6 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             font-size: 30px;
             line-height: 1.25;
             font-family: sans-serif;
-            direction: rtl;
             fill: #ffffff;
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
             text-transform: uppercase;
