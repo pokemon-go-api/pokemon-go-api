@@ -169,6 +169,20 @@ class CacheLoader
         return $cacheFile;
     }
 
+    public function fetchRaidBossesFromPokefansNet(): string
+    {
+        $cacheFile = $this->cacheDir . 'raidlist_pokefansNet.html';
+        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
+
+        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
+        if ($cacheEntry !== $cacheKey) {
+            $this->remoteFileLoader->load('https://pokefans.net/spiele/pokemon-go/raid-bosse')->saveTo($cacheFile);
+            $this->cachedData[$cacheFile] = $cacheKey;
+        }
+
+        return $cacheFile;
+    }
+
     /**
      * @param array<int, string> $files
      *
