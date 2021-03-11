@@ -7,7 +7,7 @@ use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
-use PokemonGoLingen\PogoAPI\Parser\SerebiiParser;
+use PokemonGoLingen\PogoAPI\Parser\PokefansNetParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
@@ -16,6 +16,8 @@ use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
+
+date_default_timezone_set('UTC');
 
 $tmpDir      = __DIR__ . '/../data/tmp/';
 $cacheLoader = new CacheLoader(new RemoteFileLoader(), new DateTimeImmutable(), $tmpDir);
@@ -90,9 +92,13 @@ foreach ($files as $file => $data) {
 //$leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
 //$raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
 
-$raidBossHtmlList = $cacheLoader->fetchRaidBossesFromSerebii();
-$serebiiParser    = new SerebiiParser($masterData->getPokemonCollection());
-$raidBosses       = $serebiiParser->parseRaidBosses($raidBossHtmlList);
+//$raidBossHtmlList = $cacheLoader->fetchRaidBossesFromSerebii();
+//$serebiiParser    = new SerebiiParser($masterData->getPokemonCollection());
+//$raidBosses       = $serebiiParser->parseRaidBosses($raidBossHtmlList);
+
+$raidBossHtmlList  = $cacheLoader->fetchRaidBossesFromPokefansNet();
+$pokefansNetParser = new PokefansNetParser($masterData->getPokemonCollection());
+$raidBosses        = $pokefansNetParser->parseRaidBosses($raidBossHtmlList);
 
 $xmlData           = (array) (simplexml_load_string(
     file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: ''

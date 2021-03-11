@@ -19,7 +19,7 @@ use function array_map;
  * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
  * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
  *
- * @covers \PokemonGoLingen\PogoAPI\Parser\LeekduckParser
+ * @covers \PokemonGoLingen\PogoAPI\Parser\SerebiiParser
  */
 class SerebiiParserTest extends TestCase
 {
