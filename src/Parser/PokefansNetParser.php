@@ -75,7 +75,7 @@ class PokefansNetParser
 
             $pokemonTemporaryEvolution = null;
             foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
-                if ($temporaryEvolution->getAssetsBundleId() !== $assetBundleId) {
+                if ($temporaryEvolution->getAssetsBundleId() !== (int) $assetBundleId) {
                     continue;
                 }
 
@@ -83,7 +83,7 @@ class PokefansNetParser
             }
 
             foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
-                if ($regionForm->getAssetsBundleId() === $assetBundleId) {
+                if ($regionForm->getAssetsBundleId() === (int) $assetBundleId) {
                     $pokemon = $regionForm;
                 }
 
