@@ -40,7 +40,12 @@ class RaidBossOverwrite
                 $raidOverwrite->getEndDate() > new DateTimeImmutable('today -3 Days') &&
                 $now > $endWithTolerance
             ) {
-                $raidBossCollection->remove($raidOverwrite->getPokemon());
+                if ($raidOverwrite->getForm() !== null) {
+                    $raidBossCollection->remove($raidOverwrite->getForm());
+                } else {
+                    $raidBossCollection->remove($raidOverwrite->getPokemon());
+                }
+
                 continue;
             }
 
