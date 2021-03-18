@@ -21,7 +21,6 @@ use function ob_end_clean;
 use function ob_get_contents;
 use function ob_start;
 use function sprintf;
-use function str_replace;
 use function trim;
 
 final class RaidBossGraphicRenderer
@@ -137,10 +136,6 @@ final class RaidBossGraphicRenderer
             );
         }
 
-        return str_replace(
-            ['Mega-', 'Alola-', 'Galar-', 'Mega ', 'Alolan ', 'Galarian '],
-            ['M-', 'A-', 'G-', 'M ', 'A ', 'G '],
-            $pokemonName ?? ''
-        );
+        return $pokemonName ?? '';
     }
 }

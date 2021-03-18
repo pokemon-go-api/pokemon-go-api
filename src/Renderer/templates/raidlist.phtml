@@ -36,8 +36,15 @@ $renderWeatherIcon = function(string $weatherIcon, int $x): string {
 };
 
 $renderBossName = function(string $bossName): string {
-    $explodedName = explode(' ', $bossName, 2);
-    if (mb_strlen($bossName) > 10 && count($explodedName) === 2) {
+    $explodedName = [];
+    if (mb_strlen($bossName) > 13) {
+        if (strpos($bossName, ' ') !== false) {
+            $explodedName = explode(' ', $bossName, 2);
+        } else if (strpos($bossName, '-') !== false) {
+            $explodedName = explode('-', $bossName, 2);
+        }
+    }
+    if (count($explodedName) === 2) {
         return <<<SVG
         <text text-anchor="end" x="295" y="35" class="double-line">
             <tspan x="295" y="22">{$explodedName[0]}</tspan><tspan x="295" y="42">{$explodedName[1]}</tspan>
@@ -85,7 +92,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
         }
 
         .boss-name text {
-            font-size: 30px;
+            font-size: 24px;
             line-height: 1.25;
             font-family: sans-serif;
             fill: #ffffff;

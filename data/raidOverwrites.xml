@@ -177,7 +177,8 @@
         <endDate>
             <date>2021-03-06 08:00:00</date>
         </endDate>
-        <pokemon>LANDORUS_INCARNATE</pokemon>
+        <pokemon>LANDORUS</pokemon>
+        <form>LANDORUS_INCARNATE</form>
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
@@ -188,7 +189,8 @@
         <endDate>
             <date>2021-03-11 08:00:00</date>
         </endDate>
-        <pokemon>TORNADUS_INCARNATE</pokemon>
+        <pokemon>TORNADUS</pokemon>
+        <form>TORNADUS_INCARNATE</form>
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
@@ -199,7 +201,8 @@
         <endDate>
             <date>2021-03-16 10:00:00</date>
         </endDate>
-        <pokemon>THUNDURUS_INCARNATE</pokemon>
+        <pokemon>THUNDURUS</pokemon>
+        <form>THUNDURUS_INCARNATE</form>
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
@@ -210,7 +213,8 @@
         <endDate>
             <date>2021-03-30 10:00:00</date>
         </endDate>
-        <pokemon>THUNDURUS_THERIAN</pokemon>
+        <pokemon>THUNDURUS</pokemon>
+        <form>THUNDURUS_THERIAN</form>
         <level>lvl5</level>
         <shiny>false</shiny>
     </raidboss>
@@ -221,7 +225,8 @@
         <endDate>
             <date>2021-04-02 08:00:00</date>
         </endDate>
-        <pokemon>TORNADUS_THERIAN</pokemon>
+        <pokemon>TORNADUS</pokemon>
+        <form>TORNADUS_THERIAN</form>
         <level>lvl5</level>
         <shiny>false</shiny>
     </raidboss>
