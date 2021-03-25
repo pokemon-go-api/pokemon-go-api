@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="raidOverwrites.xsd">
+  xsi:noNamespaceSchemaLocation="raidOverwrites.xsd">
     <raidboss>
         <startDate>
             <date>2021-01-01 09:00:00</date>
@@ -159,7 +159,7 @@
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
-	<raidboss>
+    <raidboss>
         <startDate>
             <date>2021-02-20 09:00:00</date>
         </startDate>
@@ -220,14 +220,73 @@
     </raidboss>
     <raidboss>
         <startDate>
+            <date>2021-03-27 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-03-28 20:00:00</date>
+        </endDate>
+        <pokemon>RAYQUAZA</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
             <date>2021-03-30 10:00:00</date>
         </startDate>
         <endDate>
-            <date>2021-04-02 08:00:00</date>
+            <date>2021-04-13 10:00:00</date>
         </endDate>
         <pokemon>TORNADUS</pokemon>
         <form>TORNADUS_THERIAN</form>
         <level>lvl5</level>
         <shiny>false</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-04-13 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-04-27 10:00:00</date>
+        </endDate>
+        <pokemon>LANDORUS</pokemon>
+        <form>LANDORUS_THERIAN</form>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-04-27 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-05-04 10:00:00</date>
+        </endDate>
+        <pokemon>LANDORUS</pokemon>
+        <form>LANDORUS_INCARNATE</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-04-27 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-05-04 10:00:00</date>
+        </endDate>
+        <pokemon>TORNADUS</pokemon>
+        <form>TORNADUS_INCARNATE</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-04-27 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-05-04 10:00:00</date>
+        </endDate>
+        <pokemon>THUNDURUS</pokemon>
+        <form>THUNDURUS_INCARNATE</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
     </raidboss>
 </root>
