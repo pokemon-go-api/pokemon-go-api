@@ -58,6 +58,14 @@ class RaidBossOverwrite
                 continue;
             }
 
+            foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
+                if ($regionForm->getFormId() !== $raidOverwrite->getForm()) {
+                    continue;
+                }
+
+                $pokemon = $regionForm;
+            }
+
             $raidBossCollection->add(
                 new RaidBoss(
                     $raidOverwrite->getForm() ?? $raidOverwrite->getPokemon(),
