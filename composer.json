@@ -7,7 +7,7 @@
       "ext-json": "*",
       "ext-dom": "*",
       "ext-simplexml": "*",
-        "guzzlehttp/guzzle": "^7.2.0"
+      "guzzlehttp/guzzle": "^7.2.0"
     },
     "autoload": {
         "psr-4": {

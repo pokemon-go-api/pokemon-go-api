@@ -103,12 +103,13 @@ class TranslationParser
         }
 
         foreach ($customTranslations as $customTranslation => $translation) {
-            if (strpos($customTranslation, CustomTranslations::REGIONAL_PREFIX) === false) {
+            if (strpos($customTranslation, CustomTranslations::REGIONAL_PREFIX) !== false) {
+                $regionalForm = substr($customTranslation, 14);
+                $collection->addRegionalForm($regionalForm, $translation);
                 continue;
             }
 
-            $regionalForm = substr($customTranslation, 14);
-            $collection->addRegionalForm($regionalForm, $translation);
+            $collection->addCustomTranslation($customTranslation, $translation);
         }
 
         return $collection;

@@ -1,8 +1,12 @@
 <?php
 
+use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 if (!isset($bosses)) {
     $bosses = [];
+}
+if (!isset($translationCollection)) {
+    $translationCollection = new TranslationCollection('');
 }
 
 $svgWidth = 985;
@@ -177,12 +181,12 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
     <g class="graphic-header">
         <rect fill="url('#header')" width="<?=$width?>" height="<?= $graphicHeaderHeight ?>" x="0" y="0"/>
         <line x1="0" x2="<?=$width?>" y1="<?= $graphicHeaderHeight ?>" y2="<?= $graphicHeaderHeight ?>"/>
-        <text x="3" y="20">Level</text>
-        <text x="170" y="20">Raidboss</text>
-        <text x="315" y="20">Typen</text>
-        <text x="375" y="20">Wetter</text>
-        <text x="435" y="20">WP-Spektrum</text>
-        <text x="545" y="20">Konter Typen</text>
+        <text x="3" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_level')?></text>
+        <text x="170" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_boss')?></text>
+        <text x="315" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_type')?></text>
+        <text x="375" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_weather')?></text>
+        <text x="435" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_cprange')?></text>
+        <text x="545" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_counter')?></text>
     </g>
 
     <g class="graphic-footer">
