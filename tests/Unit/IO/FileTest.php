@@ -21,9 +21,9 @@ class FileTest extends TestCase
         $data = random_bytes(32);
         $sut  = new File($data);
         self::assertSame($data, $sut->getContent());
+        $tmpFile = sys_get_temp_dir() . '/testfile.dat';
 
         try {
-            $tmpFile = sys_get_temp_dir() . '/testfile.dat';
             $sut->saveTo($tmpFile);
             self::assertStringEqualsFile($tmpFile, $data);
         } finally {
