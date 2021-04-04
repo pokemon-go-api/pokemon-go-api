@@ -7,7 +7,7 @@ use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
-use PokemonGoLingen\PogoAPI\Parser\PokefansNetParser;
+use PokemonGoLingen\PogoAPI\Parser\SerebiiParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
