@@ -92,13 +92,13 @@ foreach ($files as $file => $data) {
 //$leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
 //$raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
 
-//$raidBossHtmlList = $cacheLoader->fetchRaidBossesFromSerebii();
-//$serebiiParser    = new SerebiiParser($masterData->getPokemonCollection());
-//$raidBosses       = $serebiiParser->parseRaidBosses($raidBossHtmlList);
+$raidBossHtmlList = $cacheLoader->fetchRaidBossesFromSerebii();
+$serebiiParser    = new SerebiiParser($masterData->getPokemonCollection());
+$raidBosses       = $serebiiParser->parseRaidBosses($raidBossHtmlList);
 
-$raidBossHtmlList  = $cacheLoader->fetchRaidBossesFromPokefansNet();
-$pokefansNetParser = new PokefansNetParser($masterData->getPokemonCollection());
-$raidBosses        = $pokefansNetParser->parseRaidBosses($raidBossHtmlList);
+//$raidBossHtmlList  = $cacheLoader->fetchRaidBossesFromPokefansNet();
+//$pokefansNetParser = new PokefansNetParser($masterData->getPokemonCollection());
+//$raidBosses        = $pokefansNetParser->parseRaidBosses($raidBossHtmlList);
 
 $xmlData           = (array) (simplexml_load_string(
     file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: ''
