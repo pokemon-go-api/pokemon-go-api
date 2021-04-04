@@ -52,6 +52,7 @@ class SerebiiParserTest extends TestCase
             ['dexNr' => 145, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => true],
             ['dexNr' => 146, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => true],
             ['dexNr' => 150, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => true],
+            ['dexNr' => 641, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => false],
 
             ['dexNr' => 64, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
             ['dexNr' => 67, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
