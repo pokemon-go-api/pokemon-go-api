@@ -17,6 +17,8 @@ The current Source can be found in the bottom of the Raid Info Graphics.
 **English version**
 
 ![Current Raidlist - German](https://pokemon-go-lingen.github.io/pokemon-go-api/api/graphics/English/raidlist.png)
+*Alternative Version*  
+![Current Raidlist - German](https://pokemon-go-lingen.github.io/pokemon-go-api/api/graphics/English/raidlist_b.png)
 
 ## How to use
 The latest resources are available on the Github page as an JSON API with an OpenAPI Documentation.
