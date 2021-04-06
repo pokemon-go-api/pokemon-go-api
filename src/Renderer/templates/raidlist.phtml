@@ -1,12 +1,17 @@
 <?php
 
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
+use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicConfig;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 if (!isset($bosses)) {
     $bosses = [];
 }
 if (!isset($translationCollection)) {
     $translationCollection = new TranslationCollection('');
+}
+
+if (!isset($raidBossGraphicConfig)) {
+    $raidBossGraphicConfig = new RaidBossGraphicConfig();
 }
 
 $svgWidth = 985;
@@ -39,19 +44,28 @@ $renderWeatherIcon = function(string $weatherIcon, int $x): string {
     SVG;
 };
 
-$renderBossName = function(string $bossName): string {
+$renderBossName = function(object $boss): string {
+    $bossName = $boss->name;
     $explodedName = [];
-    if (mb_strlen($bossName) > 13) {
-        if (strpos($bossName, ' ') !== false) {
-            $explodedName = explode(' ', $bossName, 2);
-        } else if (strpos($bossName, '-') !== false) {
-            $explodedName = explode('-', $bossName, 2);
-        }
+
+    if (strpos($bossName, ' ') !== false) {
+        $explodedName = explode(' ', $bossName, 2);
+    } else if (strpos($bossName, '-') !== false) {
+        $explodedName = explode('-', $bossName, 2);
     }
+
+    $firstLineSmall = true;
+    if (count($explodedName) === 2 && strpos($explodedName[1], '(') === 0) {
+        $firstLineSmall = false;
+    }
+
     if (count($explodedName) === 2) {
+        $tspan1Class = $firstLineSmall ? 'small' : '';
+        $tspan2Class = $firstLineSmall ? '' : 'small';
+
         return <<<SVG
         <text text-anchor="end" x="295" y="35" class="double-line">
-            <tspan x="295" y="22">{$explodedName[0]}</tspan><tspan x="295" y="42">{$explodedName[1]}</tspan>
+            <tspan class="{$tspan1Class}" x="295" y="22">{$explodedName[0]}</tspan><tspan class="{$tspan2Class}" x="295" y="44">{$explodedName[1]}</tspan>
         </text>
         SVG;
     }
@@ -103,8 +117,9 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
             text-transform: uppercase;
         }
-        .boss-name text.double-line {
-            font-size: 20px;
+
+        .boss-name text tspan.small {
+            font-size: 14px;
         }
 
         .boss-cp-spectrum text {
@@ -138,6 +153,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             fill: #ffffff;
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
             text-transform: uppercase;
+            text-anchor: middle;
         }
 
         .graphic-header line {
@@ -149,6 +165,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             fill: #fff;
             font-size: 8px;
             font-family: sans-serif;
+            text-anchor: middle;
         }
     </style>
     <defs>
@@ -181,17 +198,17 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
     <g class="graphic-header">
         <rect fill="url('#header')" width="<?=$width?>" height="<?= $graphicHeaderHeight ?>" x="0" y="0"/>
         <line x1="0" x2="<?=$width?>" y1="<?= $graphicHeaderHeight ?>" y2="<?= $graphicHeaderHeight ?>"/>
-        <text x="3" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_level')?></text>
-        <text x="170" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_boss')?></text>
-        <text x="315" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_type')?></text>
-        <text x="375" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_weather')?></text>
-        <text x="435" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_cprange')?></text>
-        <text x="545" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_counter')?></text>
+        <text x="18" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_level')?></text>
+        <text x="185" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_boss')?></text>
+        <text x="335" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_type')?></text>
+        <text x="400" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_weather')?></text>
+        <text x="470" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_cprange')?></text>
+        <text x="590" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_counter')?></text>
     </g>
 
     <g class="graphic-footer">
         <rect fill="#000" width="<?=$width?>" height="<?= $graphicFooterHeight ?>" x="0" y="<?=$totalHeight-$graphicFooterHeight?>"/>
-        <text class="source-url" x="2" y="<?=$totalHeight-2?>">Raidboss source from leekduck.com | generated for pokemon-go-lingen.github.io/pokemon-go-api/ | Image Source by The Pokemon Company and Niantic</text>
+        <text class="source-url" x="<?=round($width/2)?>" y="<?=$totalHeight-2?>">Raidboss source from leekduck.com | generated for pokemon-go-lingen.github.io/pokemon-go-api/ | Image Source by The Pokemon Company and Niantic</text>
     </g>
 
     <?php foreach ($bosses as $index => $boss) : ?>
@@ -200,19 +217,19 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 
             <g class="boss-level">
                 <rect width="35" height="<?= $lineHeight ?>" x="0" y="0"/>
-                <text x="15" y="25"><?= $boss->levelIcon ?></text>
+                <image height="36" width="36" x="0" y="12" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Raids/raid_egg_<?=$boss->levelIcon?>_icon_notification.png" />
             </g>
 
             <g class="boss-name">
                 <rect width="215" height="<?= $lineHeight ?>" x="85" y="0"/>
-                <?= $renderBossName($boss->name) ?>
+                <?= $renderBossName($boss) ?>
             </g>
 
             <g class="boss-image">
                 <rect width="50" height="<?= $lineHeight ?>" x="35" y="0"/>
 
                 <image width="55" height="55" x="25" y="0"
-                       href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/<?= $boss->image . ($boss->shiny ? '_shiny' : '') ?>.png"/>
+                       href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/<?= $boss->image . ($boss->shiny && $raidBossGraphicConfig->useShinyImages() ? '_shiny' : '') ?>.png"/>
                 <?php if ($boss->shiny) : ?>
                     <image class="boss-shiny-image" width="15" height="15" x="22" y="0"
                            href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
@@ -244,7 +261,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
                 <rect width="60" height="<?= $lineHeight ?>" x="370" y="0"/>
                 <svg width="60" height="<?= $lineHeight?>" x="370" y="0">
                 <?php if (count($boss->weather) === 1) {
-                    echo $renderWeatherIcon($boss->weather[0], 15);
+                    echo $renderWeatherIcon($boss->weather[0], 17);
                 } else {
                     echo $renderWeatherIcon($boss->weather[0], 5);
                     echo $renderWeatherIcon($boss->weather[1], 30);

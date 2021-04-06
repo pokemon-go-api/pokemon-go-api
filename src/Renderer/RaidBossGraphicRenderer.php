@@ -27,29 +27,36 @@ final class RaidBossGraphicRenderer
 {
     public function buildGraphic(
         RaidBossCollection $raidBossCollection,
-        TranslationCollection $translationCollection
+        TranslationCollection $translationCollection,
+        RaidBossGraphicConfig $raidBossGraphicConfig
     ): RaidBossGraphic {
         $weatherCalculator = new TypeWeatherCalculator();
         $typeCalculator    = new TypeEffectivenessCalculator();
         $bosses            = [];
-        foreach ($raidBossCollection->toArray() as $raidBoss) {
+
+        $raidBossList = $raidBossCollection->toArray();
+        if ($raidBossGraphicConfig->getOrder() === RaidBossGraphicConfig::ORDER_LOW_TO_HIGH) {
+            $raidBossList = array_reverse($raidBossList);
+        }
+
+        foreach ($raidBossList as $raidBoss) {
             $raidBossPokemon = $raidBoss->getPokemon();
 
             switch ($raidBoss->getRaidLevel()) {
                 case RaidBoss::RAID_LEVEL_EX:
-                    $levelIcon = 'EX';
+                    $levelIcon = '2';
                     break;
                 case RaidBoss::RAID_LEVEL_MEGA:
-                    $levelIcon = 'M';
+                    $levelIcon = '3';
                     break;
                 case RaidBoss::RAID_LEVEL_5:
-                    $levelIcon = 'V';
+                    $levelIcon = '2';
                     break;
                 case RaidBoss::RAID_LEVEL_3:
-                    $levelIcon = 'III';
+                    $levelIcon = '1';
                     break;
                 case RaidBoss::RAID_LEVEL_1:
-                    $levelIcon = 'I';
+                    $levelIcon = '0';
                     break;
                 default:
                     $levelIcon = '';

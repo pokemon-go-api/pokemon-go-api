@@ -11,6 +11,7 @@ use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
+use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicConfig;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
@@ -119,12 +120,29 @@ foreach ($translations->getCollections() as $translationName => $translationColl
         @mkdir($raidListDir, 0777, true);
     }
 
-    $raidGraphic = $raidBossImageRenderer->buildGraphic($raidBosses, $translationCollection);
+    $raidGraphic = $raidBossImageRenderer->buildGraphic(
+        $raidBosses,
+        $translationCollection,
+        new RaidBossGraphicConfig()
+    );
 
     file_put_contents(
         sprintf('%s/raidlist.svg', $raidListDir),
         $raidGraphic->getImageContent()
     );
+
+    $raidGraphicB = $raidBossImageRenderer->buildGraphic(
+        $raidBosses,
+        $translationCollection,
+        new RaidBossGraphicConfig(RaidBossGraphicConfig::ORDER_LOW_TO_HIGH, false)
+    );
+
+    file_put_contents(
+        sprintf('%s/raidlist_b.svg', $raidListDir),
+        $raidGraphicB->getImageContent()
+    );
+
+
     $windowSize = $raidGraphic->getWindowSize();
 }
 
