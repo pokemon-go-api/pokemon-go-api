@@ -68,10 +68,10 @@ class RaidBossOverwrite
 
             $raidBossCollection->add(
                 new RaidBoss(
-                    $raidOverwrite->getForm() ?? $raidOverwrite->getPokemon(),
+                    $pokemon,
                     $raidOverwrite->isShiny(),
                     $raidOverwrite->getLevel(),
-                    $pokemon,
+                    null,
                     null
                 )
             );

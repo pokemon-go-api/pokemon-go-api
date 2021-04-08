@@ -37,12 +37,12 @@ final class PokemonImage
         $this->costume           = $costume;
     }
 
-    public static function createFromFile(string $path): self
+    public static function createFromFilePath(string $path): self
     {
         $matches = [];
         $result  = preg_match(
             <<<'REGEX'
-            ~^pokemon_icon_(
+            ~pokemon_icon_(
                 (?<dexNr>\d{3})_(?<assetBundleValue>\d{2})(_(?<costume>\d{2}))?
                 |
                 (?<assetBundleSuffix>pm(?<dexNr2>\d{4})_(?<assetBundleValue2>\d{2})\w+?)

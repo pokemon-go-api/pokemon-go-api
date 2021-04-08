@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI;
+namespace Tests\Integration\PokemonGoLingen\PogoAPI;
 
 use GuzzleHttp\Psr7\Response;
 use League\OpenAPIValidation\PSR7\Exception\ValidationFailed;

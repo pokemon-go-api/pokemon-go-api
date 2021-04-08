@@ -1,7 +1,7 @@
 <?php
 
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
-use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicConfig;
+use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 if (!isset($bosses)) {
     $bosses = [];
@@ -212,7 +212,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
     </g>
 
     <?php foreach ($bosses as $index => $boss) : ?>
-        <svg id="raidbosswrapper-<?= $boss->id ?>" x="0" y="<?= $index * $lineHeight + $graphicHeaderHeight ?>" width="100%" height="<?= $lineHeight + 10 ?>">
+        <svg id="raidbosswrapper-<?= $boss->form ?>" x="0" y="<?= $index * $lineHeight + $graphicHeaderHeight ?>" width="100%" height="<?= $lineHeight + 10 ?>">
             <rect fill="url('#raidBossGradient_<?= $boss->level ?>')" width="100%" height="<?= $lineHeight ?>" x="0" y="0"/>
 
             <g class="boss-level">
@@ -229,7 +229,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
                 <rect width="50" height="<?= $lineHeight ?>" x="35" y="0"/>
 
                 <image width="55" height="55" x="25" y="0"
-                       href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/<?= $boss->image . ($boss->shiny && $raidBossGraphicConfig->useShinyImages() ? '_shiny' : '') ?>.png"/>
+                       href="<?=$boss->image?>"/>
                 <?php if ($boss->shiny) : ?>
                     <image class="boss-shiny-image" width="15" height="15" x="22" y="0"
                            href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
