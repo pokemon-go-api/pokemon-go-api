@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use PokemonGoLingen\PogoAPI\CacheLoader;
+use PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
@@ -27,6 +28,8 @@ printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Parse Files');
 $masterData = new MasterDataParser();
 $masterData->parseFile($cacheLoader->fetchGameMasterFile());
 
+$pokemonAssetsCollection = new PokemonAssetsCollection($cacheLoader->fetchPokemonImages());
+
 $languageFiles      = $cacheLoader->fetchLanguageFiles();
 $translationLoader  = new TranslationParser();
 $translations       = new TranslationCollectionCollection();
@@ -46,7 +49,7 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
     );
 }
 
-$renderer = new PokemonRenderer($translations);
+$renderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
 $files    = [];
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
     $renderedPokemon = $renderer->render($pokemon, $masterData->getAttacksCollection());

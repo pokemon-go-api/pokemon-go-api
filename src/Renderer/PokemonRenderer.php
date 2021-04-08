@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PokemonGoLingen\PogoAPI\Renderer;
 
 use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
+use PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
@@ -22,9 +23,14 @@ final class PokemonRenderer
 
     private TranslationCollectionCollection $translations;
 
-    public function __construct(TranslationCollectionCollection $translations)
-    {
-        $this->translations = $translations;
+    private PokemonAssetsCollection $assetsCollection;
+
+    public function __construct(
+        TranslationCollectionCollection $translations,
+        PokemonAssetsCollection $assetsCollection
+    ) {
+        $this->translations     = $translations;
+        $this->assetsCollection = $assetsCollection;
     }
 
     /**
@@ -32,7 +38,8 @@ final class PokemonRenderer
      */
     public function render(
         Pokemon $pokemon,
-        AttacksCollection $attacksCollection
+        AttacksCollection $attacksCollection,
+        bool $basePokemon = true
     ): array {
         $names = [];
         foreach ($this->translations->getCollections() as $translationCollection) {
@@ -72,16 +79,30 @@ final class PokemonRenderer
                 $this->translations
             ),
             'assets' => [
-                'image'      => $this->buildPokemonImageUrl($pokemon, $pokemon->getAssetsBundleId(), false),
-                'shinyImage' => $this->buildPokemonImageUrl($pokemon, $pokemon->getAssetsBundleId(), true),
+                'image'      => $this->buildPokemonImageUrl(
+                    $pokemon->getDexNr(),
+                    $pokemon->getAssetBundleSuffix(),
+                    $pokemon->getAssetsBundleId(),
+                    false
+                ),
+                'shinyImage' => $this->buildPokemonImageUrl(
+                    $pokemon->getDexNr(),
+                    $pokemon->getAssetBundleSuffix(),
+                    $pokemon->getAssetsBundleId(),
+                    true
+                ),
             ],
             'regionForms'         => array_map(
-                fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection),
+                fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection, false),
                 $pokemon->getPokemonRegionForms()
             ),
             'hasMegaEvolution'    => $pokemon->hasTemporaryEvolutions(),
             'megaEvolutions'      => $this->renderMegaEvolutions($pokemon, $this->translations),
         ];
+
+        if ($basePokemon) {
+            $struct['assetForms'] = $this->renderAssetsForms($pokemon);
+        }
 
         return $struct;
     }
@@ -110,12 +131,14 @@ final class PokemonRenderer
                 'secondaryType' => $this->renderType($temporaryEvolution->getTypeSecondary(), $translations),
                 'assets'        => [
                     'image' => $this->buildPokemonImageUrl(
-                        $pokemon,
+                        $pokemon->getDexNr(),
+                        $pokemon->getAssetBundleSuffix(),
                         $temporaryEvolution->getAssetsBundleId(),
                         false
                     ),
                     'shinyImage' => $this->buildPokemonImageUrl(
-                        $pokemon,
+                        $pokemon->getDexNr(),
+                        $pokemon->getAssetBundleSuffix(),
                         $temporaryEvolution->getAssetsBundleId(),
                         true
                     ),
@@ -207,12 +230,15 @@ final class PokemonRenderer
         return $out;
     }
 
-    private function buildPokemonImageUrl(Pokemon $pokemon, ?int $assetBundleId, bool $shiny): string
-    {
-        $bundleSuffix                 = sprintf('%03d_%02d', $pokemon->getDexNr(), $assetBundleId ?? 0);
-        $pokemonFormAssetBundleSuffix = $pokemon->getAssetBundleSuffix();
-        if ($pokemonFormAssetBundleSuffix !== null) {
-            $bundleSuffix = $pokemonFormAssetBundleSuffix;
+    private function buildPokemonImageUrl(
+        int $pokemonDexNr,
+        ?string $assetBundleSuffix,
+        ?int $assetBundleId,
+        bool $shiny
+    ): string {
+        $bundleSuffix = sprintf('%03d_%02d', $pokemonDexNr, $assetBundleId ?? 0);
+        if ($assetBundleSuffix !== null) {
+            $bundleSuffix = $assetBundleSuffix;
         }
 
         if ($shiny) {
@@ -220,5 +246,36 @@ final class PokemonRenderer
         }
 
         return sprintf(self::ASSETS_BASE_URL, $bundleSuffix);
+    }
+
+    /**
+     * @return array<int, array<string, string>>
+     */
+    private function renderAssetsForms(Pokemon $pokemon): array
+    {
+        $out = [];
+        foreach ($this->assetsCollection->getImages($pokemon->getDexNr()) as $assetForm) {
+            foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
+                if (
+                    $regionForm->getAssetBundleSuffix() === $assetForm->getAssetBundleSuffix()
+                    && $regionForm->getAssetsBundleId() === $assetForm->getAssetBundleValue()
+                ) {
+                    continue 2;
+                }
+            }
+
+            foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
+                if ($temporaryEvolution->getAssetsBundleId() === $assetForm->getAssetBundleValue()) {
+                    continue 2;
+                }
+            }
+
+            $out[] = [
+                'image' => $assetForm->buildUrl(false),
+                'shinyImage' => $assetForm->buildUrl(true),
+            ];
+        }
+
+        return $out;
     }
 }
