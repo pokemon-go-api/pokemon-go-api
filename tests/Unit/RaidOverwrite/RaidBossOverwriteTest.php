@@ -28,18 +28,35 @@ class RaidBossOverwriteTest extends TestCase
 {
     public function testOverwrite(): void
     {
-        $existingPokemonCollection = new PokemonCollection();
-        $existingPokemonCollection->add(
-            new Pokemon(1, 'Test3', '', PokemonType::normal(), PokemonType::none())
+        $basePokemon = new Pokemon(1, 'Test', '', PokemonType::normal(), PokemonType::none());
+        $basePokemon->addPokemonRegionForm(
+            new Pokemon(1, 'Test', 'Test_Form1', PokemonType::normal(), PokemonType::none())
         );
+        $basePokemon->addPokemonRegionForm(
+            new Pokemon(1, 'Test', 'Test_Form2', PokemonType::normal(), PokemonType::none())
+        );
+        $basePokemon->addPokemonRegionForm(
+            new Pokemon(1, 'Test', 'Test_Form3', PokemonType::normal(), PokemonType::none())
+        );
+        $existingPokemonCollection = new PokemonCollection();
+        $existingPokemonCollection->add($basePokemon);
 
-        $pokemonStub                = new Pokemon(1, 'Test0', '', PokemonType::none(), PokemonType::none());
         $existingRaidBossCollection = new RaidBossCollection();
         $existingRaidBossCollection->add(
-            new RaidBoss('Test1', true, RaidBoss::RAID_LEVEL_1, $pokemonStub, null)
+            new RaidBoss(
+                new Pokemon(1, 'Test', 'Test_Form1', PokemonType::none(), PokemonType::none()),
+                true,
+                RaidBoss::RAID_LEVEL_1,
+                null
+            )
         );
         $existingRaidBossCollection->add(
-            new RaidBoss('Test2', true, RaidBoss::RAID_LEVEL_1, $pokemonStub, null)
+            new RaidBoss(
+                new Pokemon(1, 'Test', 'Test_Form2', PokemonType::none(), PokemonType::none()),
+                true,
+                RaidBoss::RAID_LEVEL_1,
+                null
+            )
         );
 
         $now = new DateTimeImmutable('now', new DateTimeZone('Europe/Berlin'));
@@ -49,21 +66,23 @@ class RaidBossOverwriteTest extends TestCase
                 (object) [
                     'startDate' => (object) ['date' => $now->modify('-1 Week')->format('Y-m-d H:i')],
                     'endDate' => (object) ['date' => $now->modify('-2 Hours 59 Minutes')->format('Y-m-d H:i')],
-                    'pokemon' => 'Test1',
+                    'pokemon' => 'Test',
                     'level' => RaidBoss::RAID_LEVEL_1,
                     'shiny' => 'false',
                 ],
                 (object) [
                     'startDate' => (object) ['date' => $now->modify('-1 Week')->format('Y-m-d H:i')],
                     'endDate' => (object) ['date' => $now->modify('-3 Hours 1 Minute')->format('Y-m-d H:i')],
-                    'pokemon' => 'Test2',
+                    'pokemon' => 'Test',
+                    'form' => 'Test_Form2',
                     'level' => RaidBoss::RAID_LEVEL_1,
                     'shiny' => 'false',
                 ],
                 (object) [
                     'startDate' => (object) ['date' => $now->modify('-1 Minute')->format('Y-m-d H:i')],
                     'endDate' => (object) ['date' => $now->modify('+3 Hours')->format('Y-m-d H:i')],
-                    'pokemon' => 'Test3',
+                    'pokemon' => 'Test',
+                    'form' => 'Test_Form3',
                     'level' => RaidBoss::RAID_LEVEL_1,
                     'shiny' => 'false',
                 ],
@@ -71,14 +90,14 @@ class RaidBossOverwriteTest extends TestCase
             $existingPokemonCollection
         );
 
-        self::assertNotNull($existingRaidBossCollection->get('Test1'));
-        self::assertNotNull($existingRaidBossCollection->get('Test2'));
-        self::assertNull($existingRaidBossCollection->get('Test3'));
+        self::assertNotNull($existingRaidBossCollection->get('Test_Form1'));
+        self::assertNotNull($existingRaidBossCollection->get('Test_Form2'));
+        self::assertNull($existingRaidBossCollection->get('Test_Form3'));
 
         $sut->overwrite($existingRaidBossCollection);
 
-        self::assertNotNull($existingRaidBossCollection->get('Test1'));
-        self::assertNull($existingRaidBossCollection->get('Test2'));
-        self::assertNotNull($existingRaidBossCollection->get('Test3'));
+        self::assertNotNull($existingRaidBossCollection->get('Test_Form1'));
+        self::assertNull($existingRaidBossCollection->get('Test_Form2'));
+        self::assertNotNull($existingRaidBossCollection->get('Test_Form3'));
     }
 }

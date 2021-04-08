@@ -18,6 +18,7 @@ use function array_map;
  * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
  * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
  * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonImage
  *
  * @covers \PokemonGoLingen\PogoAPI\Parser\LeekduckParser
  */

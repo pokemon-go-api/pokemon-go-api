@@ -1,0 +1,71 @@
+{
+  "sha": "ee4619f14f77a1c790122cad89b1b385f6755938",
+  "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/trees/ee4619f14f77a1c790122cad89b1b385f6755938",
+  "tree": [
+    {
+      "path": "pokemon_icon_003_00.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e661d3a91d452690755353c9a2ba3a7e89e6b72",
+      "size": 37238,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/0e661d3a91d452690755353c9a2ba3a7e89e6b72"
+    },
+    {
+      "path": "pokemon_icon_003_00_shiny.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "011359accd14e58352e944ad23bbc21b3bfd2d57",
+      "size": 36958,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/011359accd14e58352e944ad23bbc21b3bfd2d57"
+    },
+    {
+      "path": "pokemon_icon_003_01.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7039171e69008443db410bd18bd25195eff45ed",
+      "size": 37735,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/a7039171e69008443db410bd18bd25195eff45ed"
+    },
+    {
+      "path": "pokemon_icon_003_01_shiny.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9181b1a090096c82b2d6f210942dd9da22f6a20",
+      "size": 37362,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/a9181b1a090096c82b2d6f210942dd9da22f6a20"
+    },
+    {
+      "path": "pokemon_icon_003_51.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc51309e6669c6d0cb3da2789013537f3a2aa34b",
+      "size": 45464,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/fc51309e6669c6d0cb3da2789013537f3a2aa34b"
+    },
+    {
+      "path": "pokemon_icon_003_51_shiny.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc1c57667df3b7731966ce146fde11c41985363e",
+      "size": 45473,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/dc1c57667df3b7731966ce146fde11c41985363e"
+    },
+    {
+      "path": "pokemon_icon_pm0003_00_pgo_copy2019.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ac977b86824458b13b09a1128d7314d0b313ec5",
+      "size": 39665,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/8ac977b86824458b13b09a1128d7314d0b313ec5"
+    },
+    {
+      "path": "pokemon_icon_pm0003_01_pgo_copy2019.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "841636aa78ee66602f343fee51811eea13754bd7",
+      "size": 40067,
+      "url": "https://api.github.com/repos/PokeMiners/pogo_assets/git/blobs/841636aa78ee66602f343fee51811eea13754bd7"
+    }
+  ],
+  "truncated": false
+}

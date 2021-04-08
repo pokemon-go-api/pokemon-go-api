@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Renderer;
+namespace PokemonGoLingen\PogoAPI\Renderer\Types;
 
 final class RaidBossGraphicConfig
 {

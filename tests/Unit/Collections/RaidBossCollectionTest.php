@@ -22,16 +22,15 @@ class RaidBossCollectionTest extends TestCase
     public function testCollection(): void
     {
         $raidBoss   = new RaidBoss(
-            'TESTPOKEMON_MEGA',
-            false,
-            RaidBoss::RAID_LEVEL_EX,
             new Pokemon(
                 100,
                 'TESTPOKEMON',
-                'TESTPOKEMON_FORM',
+                'TESTPOKEMON_MEGA',
                 PokemonType::water(),
                 PokemonType::fire()
             ),
+            false,
+            RaidBoss::RAID_LEVEL_EX,
             null
         );
         $collection = new RaidBossCollection();
@@ -45,22 +44,23 @@ class RaidBossCollectionTest extends TestCase
         self::assertTrue($collection->has($raidBoss));
 
         self::assertNull($collection->get('NOT_EXISTINGS'));
+
+        $collection->remove($raidBoss->getPokemonId());
+        self::assertFalse($collection->has($raidBoss));
     }
 
     public function testOrderOfCollection(): void
     {
         $raidBoss1  = new RaidBoss(
-            'TESTPOKEMON_EX',
+            new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_EX', PokemonType::water(), PokemonType::fire()),
             false,
             RaidBoss::RAID_LEVEL_EX,
-            new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_FORM', PokemonType::water(), PokemonType::fire()),
             null
         );
         $raidBoss2  = new RaidBoss(
-            'TESTPOKEMON_MEGA',
+            new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_MEGA', PokemonType::water(), PokemonType::fire()),
             false,
             RaidBoss::RAID_LEVEL_MEGA,
-            new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_FORM', PokemonType::water(), PokemonType::fire()),
             null
         );
         $collection = new RaidBossCollection();

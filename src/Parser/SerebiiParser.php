@@ -148,10 +148,9 @@ class SerebiiParser
                 }
 
                 $raidboss = new RaidBoss(
-                    $pokemon->getFormId(),
+                    $pokemon,
                     stripos($tableHtml, '/icons/shiny.png') !== false,
                     $currentTierLevel,
-                    $pokemon,
                     $pokemonTemporaryEvolution
                 );
                 $raids->add($raidboss);

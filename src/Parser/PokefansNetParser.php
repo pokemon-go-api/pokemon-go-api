@@ -95,10 +95,9 @@ class PokefansNetParser
             }
 
             $raidboss = new RaidBoss(
-                $pokemon->getFormId(),
+                $pokemon,
                 stripos($raidBossHtml, 'ic_shiny.png') !== false,
                 $currentTierLevel,
-                $pokemon,
                 $pokemonTemporaryEvolution
             );
             $raids->add($raidboss);

@@ -6,6 +6,8 @@ namespace PokemonGoLingen\PogoAPI\Renderer;
 
 use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
+use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphic;
+use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoLingen\PogoAPI\Types\PokemonStats;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
@@ -88,12 +90,15 @@ final class RaidBossGraphicRenderer
             $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
 
             $bosses[] = (object) [
-                'id'           => $raidBoss->getPokemonId(),
+                'id'           => $raidBoss->getPokemon()->getId(),
+                'form'         => $raidBoss->getPokemonId(),
                 'level'        => $raidBoss->getRaidLevel(),
                 'levelIcon'    => $levelIcon,
                 'name'         => $this->getName($raidBoss, $translationCollection),
                 'shiny'        => $raidBoss->isShinyAvailable(),
-                'image'        => sprintf('pokemon_icon_%03d_%02d', $raidBossPokemon->getDexNr(), $assetsBundleId),
+                'image'        => $raidBoss->getPokemonImage()->buildUrl(
+                    $raidBoss->isShinyAvailable() && $raidBossGraphicConfig->useShinyImages()
+                ),
                 'types'        => $raidBossTypeNames,
                 'counter'      => $typeCalculator->getAllEffectiveTypes(...$raidBossTypes),
                 'weather'      => array_map(

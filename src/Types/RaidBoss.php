@@ -12,24 +12,24 @@ final class RaidBoss
     public const RAID_LEVEL_EX   = 'ex';
     public const RAID_LEVEL_MEGA = 'mega';
 
-    private string $pokemonId;
     private bool $shinyAvailable;
     private string $raidLevel;
     private Pokemon $pokemon;
     private ?TemporaryEvolution $temporaryEvolution;
+    private ?int $costumeId;
 
     public function __construct(
-        string $pokemonId,
+        Pokemon $pokemon,
         bool $shinyAvailable,
         string $raidLevel,
-        Pokemon $pokemon,
-        ?TemporaryEvolution $temporaryEvolution
+        ?TemporaryEvolution $temporaryEvolution,
+        ?int $costumeId = null
     ) {
-        $this->pokemonId          = $pokemonId;
         $this->shinyAvailable     = $shinyAvailable;
         $this->raidLevel          = $raidLevel;
         $this->pokemon            = $pokemon;
         $this->temporaryEvolution = $temporaryEvolution;
+        $this->costumeId          = $costumeId;
     }
 
     public function getPokemonId(): string
@@ -38,7 +38,7 @@ final class RaidBoss
             return $this->temporaryEvolution->getId();
         }
 
-        return $this->pokemonId;
+        return $this->getPokemon()->getFormId();
     }
 
     public function getPokemon(): Pokemon
@@ -59,5 +59,28 @@ final class RaidBoss
     public function getTemporaryEvolution(): ?TemporaryEvolution
     {
         return $this->temporaryEvolution;
+    }
+
+    public function getPokemonImage(): PokemonImage
+    {
+        $pokemonForm   = $this->getPokemon()->getPokemonForm();
+        $assetBundleId = 0;
+        if ($this->temporaryEvolution !== null) {
+            $assetBundleId = $this->temporaryEvolution->getAssetsBundleId();
+        } elseif ($pokemonForm !== null) {
+            $assetBundleId = $pokemonForm->getAssetBundleValue();
+        }
+
+        if ($assetBundleId === null) {
+            $assetBundleId = 0;
+        }
+
+        return new PokemonImage(
+            $this->getPokemon()->getDexNr(),
+            $assetBundleId,
+            $this->isShinyAvailable(),
+            $pokemonForm ? $pokemonForm->getAssetBundleSuffix() : null,
+            $this->costumeId
+        );
     }
 }

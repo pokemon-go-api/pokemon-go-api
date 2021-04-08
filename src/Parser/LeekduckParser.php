@@ -8,6 +8,7 @@ use DOMDocument;
 use DOMElement;
 use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoLingen\PogoAPI\Types\PokemonImage;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 
 use function assert;
@@ -69,21 +70,20 @@ class LeekduckParser
                 [, $formName]  = $this->extractFormBossName($bossNameValue);
 
                 $bossImageContainer = $this->getElementsByClass($liItem, 'boss-img')[0] ?? null;
-                $matches            = [];
+                $pokemonImage       = null;
                 if ($bossImageContainer !== null) {
                     $bossImage = $bossImageContainer->getElementsByTagName('img')[0];
                     if ($bossImage !== null) {
-                        $imgSrc = $bossImage->getAttribute('src');
-                        preg_match('~pokemon_icon_(pm)?(?<dexNr>\d+)_~', $imgSrc, $matches);
+                        $imgSrc       = $bossImage->getAttribute('src');
+                        $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
                     }
                 }
 
-                $dexNr = isset($matches['dexNr']) ? (int) $matches['dexNr'] : null;
-                if ($dexNr === null) {
+                if ($pokemonImage === null) {
                     continue;
                 }
 
-                $pokemon = $basePokemon = $this->pokemonCollection->getByDexId($dexNr);
+                $pokemon = $basePokemon = $this->pokemonCollection->getByDexId($pokemonImage->getDexNr());
                 if ($basePokemon === null || $pokemon === null) {
                     continue;
                 }
@@ -113,11 +113,11 @@ class LeekduckParser
                 }
 
                 $raidboss = new RaidBoss(
-                    $pokemon->getFormId(),
+                    $pokemon,
                     count($this->getElementsByClass($liItem, 'shiny-icon')) === 1,
                     $currentTierLevel,
-                    $pokemon,
-                    $pokemonTemporaryEvolution
+                    $pokemonTemporaryEvolution,
+                    $pokemonImage->getCostume()
                 );
                 $raids->add($raidboss);
             }
