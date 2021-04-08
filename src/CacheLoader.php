@@ -11,6 +11,7 @@ use RuntimeException;
 use stdClass;
 
 use function array_filter;
+use function array_values;
 use function basename;
 use function file_get_contents;
 use function file_put_contents;
@@ -36,6 +37,8 @@ class CacheLoader
     private const LATEST_REMOTE_LANGUAGE_FILE = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Texts/Latest%20Remote';
     //phpcs:ignore Generic.Files.LineLength.TooLong
     private const LATEST_APK_LANGUAGE_FILE = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Texts/Latest%20APK';
+    //phpcs:ignore Generic.Files.LineLength.TooLong
+    private const IMAGES_CONTENT = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Images';
 
     private string $cacheDir;
     /** @var array<string, string> */
@@ -85,10 +88,10 @@ class CacheLoader
         $gameMasterLatestResponse = $this->remoteFileLoader->load(self::GAME_MASTER_LATEST_FILE)->getContent() ?: '[]';
 
         $gameMasterLatest = json_decode($gameMasterLatestResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
-        $latestJsonFile   = array_filter(
+        $latestJsonFile   = array_values(array_filter(
             $gameMasterLatest,
             static fn (stdClass $fileMeta): bool => $fileMeta->name === 'latest.json'
-        )[0] ?? [];
+        ))[0] ?? [];
 
         if (
             ! isset($this->cachedData[$latestJsonFile->path])
@@ -98,6 +101,35 @@ class CacheLoader
             //phpcs:ignore Squiz.NamingConventions.ValidVariableName.NotCamelCaps
             $this->remoteFileLoader->load($latestJsonFile->download_url)->saveTo($cacheFile);
             printf("put %s in cache\n", $latestJsonFile->path);
+        }
+
+        return $cacheFile;
+    }
+
+    public function fetchPokemonImages(): string
+    {
+        $cacheFile = $this->cacheDir . 'pokemon_images.json';
+
+        $imagesFolderResponse = $this->remoteFileLoader->load(self::IMAGES_CONTENT)->getContent() ?: '[]';
+
+        $imagesFolderResult  = json_decode($imagesFolderResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
+        $pokemonImagesFolder = array_values(array_filter(
+            $imagesFolderResult,
+            static fn (stdClass $meta): bool => $meta->name === 'Pokemon'
+        ))[0] ?? null;
+
+        if ($pokemonImagesFolder === null) {
+            return $cacheFile;
+        }
+
+        if (
+            ! isset($this->cachedData[$pokemonImagesFolder->path])
+            || $pokemonImagesFolder->sha !== $this->cachedData[$pokemonImagesFolder->path]
+        ) {
+            $this->cachedData[$pokemonImagesFolder->path] = $pokemonImagesFolder->sha;
+            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.NotCamelCaps
+            $this->remoteFileLoader->load($pokemonImagesFolder->git_url)->saveTo($cacheFile);
+            printf("put %s in cache\n", $pokemonImagesFolder->path);
         }
 
         return $cacheFile;
