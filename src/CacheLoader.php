@@ -98,7 +98,7 @@ class CacheLoader
             || $latestJsonFile->sha !== $this->cachedData[$latestJsonFile->path]
         ) {
             $this->cachedData[$latestJsonFile->path] = $latestJsonFile->sha;
-            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.NotCamelCaps
+            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
             $this->remoteFileLoader->load($latestJsonFile->download_url)->saveTo($cacheFile);
             printf("put %s in cache\n", $latestJsonFile->path);
         }
@@ -127,7 +127,7 @@ class CacheLoader
             || $pokemonImagesFolder->sha !== $this->cachedData[$pokemonImagesFolder->path]
         ) {
             $this->cachedData[$pokemonImagesFolder->path] = $pokemonImagesFolder->sha;
-            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.NotCamelCaps
+            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
             $this->remoteFileLoader->load($pokemonImagesFolder->git_url)->saveTo($cacheFile);
             printf("put %s in cache\n", $pokemonImagesFolder->path);
         }
@@ -162,7 +162,7 @@ class CacheLoader
                 if (! isset($this->cachedData[$file->path]) || $file->sha !== $this->cachedData[$file->path]) {
                     printf("put %s in cache\n", $file->path);
                     $this->cachedData[$file->path] = $file->sha;
-                    //phpcs:ignore Squiz.NamingConventions.ValidVariableName.NotCamelCaps
+                    //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
                     $this->remoteFileLoader->load($file->download_url)->saveTo($cacheFile);
                 }
 
