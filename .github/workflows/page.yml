@@ -44,6 +44,10 @@ jobs:
           restore-keys: |
             composer-
 
+      - name: "Force cache update"
+        if: ${{ github.event.inputs.forceCacheUpdate }}
+        run: rm -rf data/tmp/*
+
       - name: "Install dependencies"
         run: composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs
 
@@ -61,14 +65,14 @@ jobs:
         run: echo "${{ toJson(steps.generated-data.outputs) }}"
 
       - name: Convert SVG to PNG
-        if: ${{ steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate }}
+        if: ${{ steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' }}
         continue-on-error: true
         env:
           WINDOW_SIZE: ${{ steps.generated-data.outputs.WINDOW_SIZE }}
         run: composer run-script convert-svg
 
       - name: Post current raid grahpic
-        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate) && github.event_name == 'pull_request' }}
+        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES') && github.event_name == 'pull_request' }}
         uses: edunad/actions-image@v1.0.1
         with:
           path: './public/api/graphics/German/*.png'
@@ -76,7 +80,7 @@ jobs:
           title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
-        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' || github.event.inputs.forceCacheUpdate) && github.event_name != 'pull_request'}}
+        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES') && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
           keep_history: true
