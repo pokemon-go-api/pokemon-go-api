@@ -7,12 +7,15 @@ namespace PokemonGoLingen\PogoAPI;
 use DateTimeImmutable;
 use JsonException;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use Psr\Log\LoggerInterface;
 use RuntimeException;
 use stdClass;
 
 use function array_filter;
+use function array_keys;
 use function array_values;
 use function basename;
+use function date;
 use function file_get_contents;
 use function file_put_contents;
 use function floor;
@@ -23,9 +26,9 @@ use function json_decode;
 use function json_encode;
 use function mkdir;
 use function pathinfo;
-use function printf;
 use function sprintf;
 
+use const DATE_ATOM;
 use const JSON_THROW_ON_ERROR;
 use const PATHINFO_FILENAME;
 
@@ -47,15 +50,18 @@ class CacheLoader
     private array $originalCachedData = [];
     private RemoteFileLoader $remoteFileLoader;
     private DateTimeImmutable $clock;
+    private LoggerInterface $logger;
 
     public function __construct(
         RemoteFileLoader $remoteFileLoader,
         DateTimeImmutable $clock,
-        string $cacheDir
+        string $cacheDir,
+        LoggerInterface $logger
     ) {
         $this->remoteFileLoader = $remoteFileLoader;
         $this->clock            = $clock;
         $this->cacheDir         = $cacheDir;
+        $this->logger           = $logger;
 
         if (! is_dir($this->cacheDir) && ! mkdir($this->cacheDir, 0777, true)) {
             throw new RuntimeException(sprintf('Directory "%s" was not created', $this->cacheDir));
@@ -84,6 +90,7 @@ class CacheLoader
     public function fetchGameMasterFile(): string
     {
         $cacheFile = $this->cacheDir . 'GAME_MASTER_LATEST.json';
+        $cacheKey  = 'github/game_master';
 
         $gameMasterLatestResponse = $this->remoteFileLoader->load(self::GAME_MASTER_LATEST_FILE)->getContent() ?: '[]';
 
@@ -93,15 +100,20 @@ class CacheLoader
             static fn (stdClass $fileMeta): bool => $fileMeta->name === 'latest.json'
         ))[0] ?? [];
 
-        if (
-            ! isset($this->cachedData[$latestJsonFile->path])
-            || $latestJsonFile->sha !== $this->cachedData[$latestJsonFile->path]
-        ) {
-            $this->cachedData[$latestJsonFile->path] = $latestJsonFile->sha;
-            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-            $this->remoteFileLoader->load($latestJsonFile->download_url)->saveTo($cacheFile);
-            printf("put %s in cache\n", $latestJsonFile->path);
+        if ($latestJsonFile->sha === ($this->cachedData[$cacheKey] ?? null)) {
+            return $cacheFile;
         }
+
+        $this->cachedData[$cacheKey] = $latestJsonFile->sha;
+        //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
+        $this->remoteFileLoader->load($latestJsonFile->download_url)->saveTo($cacheFile);
+        $this->logger->debug(
+            sprintf(
+                '[CacheLoader] Missing cache entry for %s',
+                $latestJsonFile->path
+            ),
+            ['newHash' => $latestJsonFile->sha]
+        );
 
         return $cacheFile;
     }
@@ -109,6 +121,7 @@ class CacheLoader
     public function fetchPokemonImages(): string
     {
         $cacheFile = $this->cacheDir . 'pokemon_images.json';
+        $cacheKey  = 'github/pokemon_images';
 
         $imagesFolderResponse = $this->remoteFileLoader->load(self::IMAGES_CONTENT)->getContent() ?: '[]';
 
@@ -122,15 +135,20 @@ class CacheLoader
             return $cacheFile;
         }
 
-        if (
-            ! isset($this->cachedData[$pokemonImagesFolder->path])
-            || $pokemonImagesFolder->sha !== $this->cachedData[$pokemonImagesFolder->path]
-        ) {
-            $this->cachedData[$pokemonImagesFolder->path] = $pokemonImagesFolder->sha;
-            //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-            $this->remoteFileLoader->load($pokemonImagesFolder->git_url)->saveTo($cacheFile);
-            printf("put %s in cache\n", $pokemonImagesFolder->path);
+        if ($pokemonImagesFolder->sha === ($this->cachedData[$cacheKey] ?? null)) {
+            return $cacheFile;
         }
+
+        $this->cachedData[$cacheKey] = $pokemonImagesFolder->sha;
+        //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
+        $this->remoteFileLoader->load($pokemonImagesFolder->git_url)->saveTo($cacheFile);
+        $this->logger->debug(
+            sprintf(
+                '[CacheLoader] Missing cache entry for %s',
+                $cacheKey
+            ),
+            ['newHash' => $pokemonImagesFolder->sha]
+        );
 
         return $cacheFile;
     }
@@ -158,10 +176,17 @@ class CacheLoader
                     continue;
                 }
 
+                $cacheKey  = 'github/text_latest_' . $textType . '_' . $file->name;
                 $cacheFile = $this->cacheDir . 'latest_' . $textType . '_' . $file->name;
-                if (! isset($this->cachedData[$file->path]) || $file->sha !== $this->cachedData[$file->path]) {
-                    printf("put %s in cache\n", $file->path);
-                    $this->cachedData[$file->path] = $file->sha;
+                if ($file->sha !== ($this->cachedData[$cacheKey] ?? null)) {
+                    $this->logger->debug(
+                        sprintf(
+                            '[CacheLoader] Missing cache entry for %s',
+                            $cacheKey
+                        ),
+                        ['newHash' => $file->sha]
+                    );
+                    $this->cachedData[$cacheKey] = $file->sha;
                     //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
                     $this->remoteFileLoader->load($file->download_url)->saveTo($cacheFile);
                 }
@@ -175,14 +200,28 @@ class CacheLoader
 
     public function fetchRaidBossesFromLeekduck(): string
     {
-        $cacheFile = $this->cacheDir . 'raidlist_leekduck.html';
-        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
+        $raidBossUrl  = 'https://leekduck.com/boss/';
+        $cacheFile    = $this->cacheDir . 'raidlist_leekduck.html';
+        $cacheKey     = 'leekduck_LastFetched';
+        $cacheEntry   = $this->cachedData[$cacheKey] ?? null;
+        $lastModified = $this->remoteFileLoader->receiveResponseHeader(
+            $raidBossUrl,
+            'last-modified'
+        ) ?: date(DATE_ATOM);
 
-        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
-        if ($cacheEntry !== $cacheKey) {
-            $this->remoteFileLoader->load('https://leekduck.com/boss/')->saveTo($cacheFile);
-            $this->cachedData[$cacheFile] = $cacheKey;
+        if ($cacheEntry === $lastModified) {
+            return $cacheFile;
         }
+
+        $this->cachedData[$cacheKey] = $lastModified;
+        $this->remoteFileLoader->load('https://leekduck.com/boss/')->saveTo($cacheFile);
+        $this->logger->debug(
+            sprintf(
+                '[CacheLoader] Missing cache entry for %s',
+                $cacheKey
+            ),
+            ['lastModified' => $lastModified]
+        );
 
         return $cacheFile;
     }
@@ -226,6 +265,8 @@ class CacheLoader
         foreach ($files as $file) {
             $hashes[basename($file)] = hash_file('sha512', $file) ?: '';
         }
+
+        $this->logger->debug('[CacheLoader] Update hashes.json', array_keys($hashes));
 
         $this->cachedData['hashes.json'] = json_encode($hashes) ?: '';
 

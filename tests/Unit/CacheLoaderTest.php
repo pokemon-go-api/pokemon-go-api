@@ -9,6 +9,7 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\CacheLoader;
 use PokemonGoLingen\PogoAPI\IO\File;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
 
 use function array_filter;
 use function array_map;
@@ -17,6 +18,8 @@ use function scandir;
 use function sprintf;
 use function sys_get_temp_dir;
 use function unlink;
+
+use const DATE_ATOM;
 
 /**
  * @uses \PokemonGoLingen\PogoAPI\IO\File
@@ -52,7 +55,8 @@ class CacheLoaderTest extends TestCase
         $sut = new CacheLoader(
             $this->createStub(RemoteFileLoader::class),
             new DateTimeImmutable(),
-            $this->cacheDir
+            $this->cacheDir,
+            new NoopLogger()
         );
         self::assertFileDoesNotExist($cacheFile);
         unset($sut);
@@ -61,40 +65,39 @@ class CacheLoaderTest extends TestCase
 
     public function testFetchRaidBosses(): void
     {
+        $clock = new DateTimeImmutable('2020-06-01 12:00:00');
+
         $remoteFileLoaderMock = $this->createMock(RemoteFileLoader::class);
-        $remoteFileLoaderMock->expects(self::exactly(2))->method('load')->willReturn(
+        $remoteFileLoaderMock->expects(self::once())->method('load')->willReturn(
             new File('testcontent')
         );
+        $remoteFileLoaderMock->method('receiveResponseHeader')->willReturn($clock->format(DATE_ATOM));
 
-        $clock = new DateTimeImmutable('2020-06-01 12:00:00');
-        $sut   = new CacheLoader(
+        $sut = new CacheLoader(
             $remoteFileLoaderMock,
             $clock,
-            $this->cacheDir
+            $this->cacheDir,
+            new NoopLogger()
         );
         // assert that three calls only load once
         $sut->fetchRaidBossesFromLeekduck();
         $sut->fetchRaidBossesFromLeekduck();
         $sut->fetchRaidBossesFromLeekduck();
-        unset($sut);
 
-        $clock = new DateTimeImmutable('2020-06-01 12:30:00');
-        $sut   = new CacheLoader(
+        // Response Header changed date
+        $remoteFileLoaderMock = $this->createMock(RemoteFileLoader::class);
+        $remoteFileLoaderMock->expects(self::once())->method('load')->willReturn(
+            new File('testcontent')
+        );
+        $remoteFileLoaderMock->method('receiveResponseHeader')->willReturn(
+            (new DateTimeImmutable())->format(DATE_ATOM)
+        );
+        $sut = new CacheLoader(
             $remoteFileLoaderMock,
             $clock,
-            $this->cacheDir
+            $this->cacheDir,
+            new NoopLogger()
         );
-        // Clock changed, but not enough. So no new Request should be made
-        $sut->fetchRaidBossesFromLeekduck();
-        unset($sut);
-
-        $clock = new DateTimeImmutable('2020-06-01 18:00:00');
-        $sut   = new CacheLoader(
-            $remoteFileLoaderMock,
-            $clock,
-            $this->cacheDir
-        );
-        // Clock changed enough. A new Request should be made
         $sut->fetchRaidBossesFromLeekduck();
     }
 }

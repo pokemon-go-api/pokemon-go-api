@@ -5,6 +5,7 @@ declare(strict_types=1);
 use PokemonGoLingen\PogoAPI\CacheLoader;
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoLingen\PogoAPI\Logger\PrintLogger;
 use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
@@ -15,16 +16,24 @@ use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
+use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 date_default_timezone_set('UTC');
 
-$tmpDir      = __DIR__ . '/../data/tmp/';
-$cacheLoader = new CacheLoader(new RemoteFileLoader(), new DateTimeImmutable(), $tmpDir);
+$logger = new PrintLogger();
 
-printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Parse Files');
+$tmpDir      = __DIR__ . '/../data/tmp/';
+$cacheLoader = new CacheLoader(
+    new RemoteFileLoader($logger),
+    new DateTimeImmutable(),
+    $tmpDir,
+    $logger
+);
+
+$logger->debug('Parse Files');
 $masterData = new MasterDataParser();
 $masterData->parseFile($cacheLoader->fetchGameMasterFile());
 
@@ -52,6 +61,8 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
 
 $renderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
 $files    = [];
+
+$logger->debug('Generate Pokemon');
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
     $renderedPokemon = $renderer->render($pokemon, $masterData->getAttacksCollection());
 
@@ -81,9 +92,6 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
 }
 
 $apidir = $tmpDir . 'api/';
-
-printf('[%s] %s' . PHP_EOL, date('H:i:s'), 'Generate API');
-
 foreach ($files as $file => $data) {
     @mkdir($apidir . dirname($file), 0777, true);
     if (count($data) === 1) {
@@ -93,21 +101,37 @@ foreach ($files as $file => $data) {
     file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT));
 }
 
+$logger->debug('Generate Raidbosses');
 $raidBossHtmlList = $cacheLoader->fetchRaidBossesFromLeekduck();
 $leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
 $raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
 
+$logger->debug(
+    sprintf('Got %d remote raid bosses', count($raidBosses->toArray())),
+    array_map(
+        static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonId(),
+        $raidBosses->toArray()
+    )
+);
 $xmlData           = (array) (simplexml_load_string(
     file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: ''
 ) ?: []);
 $raidBossOverwrite = new RaidBossOverwrite(
     json_decode(json_encode($xmlData['raidboss'] ?? []) ?: '[]'),
-    $masterData->getPokemonCollection()
+    $masterData->getPokemonCollection(),
+    $logger
 );
 $raidBossOverwrite->overwrite($raidBosses);
 
-printf('[%s] Got %d raid bosses to render' . PHP_EOL, date('H:i:s'), count($raidBosses->toArray()));
+$logger->debug(
+    sprintf('Got %d raid bosses to render', count($raidBosses->toArray())),
+    array_map(
+        static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonId(),
+        $raidBosses->toArray()
+    )
+);
 
+$logger->debug('Generate Images');
 $windowSize            = '0,0';
 $raidBossImageRenderer = new RaidBossGraphicRenderer();
 foreach ($translations->getCollections() as $translationName => $translationCollection) {
@@ -142,6 +166,7 @@ foreach ($translations->getCollections() as $translationName => $translationColl
     $windowSize = $raidGraphic->getWindowSize();
 }
 
+$logger->debug('Generate Raidboss.json');
 $raidListRenderer = new RaidBossListRenderer();
 $raidBossesList   = $raidListRenderer->buildList($raidBosses, $translations);
 
@@ -182,6 +207,6 @@ file_put_contents(
     CSS
 );
 $hasChanges = $cacheLoader->hasChanges();
-printf('[%s] CACHE_STATUS=%s' . PHP_EOL, date('H:i:s'), $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
+$logger->debug(sprintf('CACHE_STATUS=%s', $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES'));
 echo sprintf('::set-output name=CACHE_STATUS::%s' . PHP_EOL, $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
 echo sprintf('::set-output name=WINDOW_SIZE::%s' . PHP_EOL, $windowSize);

@@ -24,16 +24,14 @@ $totalHeight = ($lineHeight * count($bosses)) + $graphicHeaderHeight + $graphicF
 $svgHeight = intval($totalHeight * ($svgWidth / $width));
 
 $renderWeatherIcon = function(string $weatherIcon, int $x): string {
-    $y = 12;
-    $width = $height = 25;
+    $y = 14;
+    $width = $height = 22;
 
     switch ($weatherIcon) {
         case 'rain':
-        case 'cloudy':
-        case 'partlycloudy_day':
             $x -= 5;
             $y -= 5;
-            $width = $height += 10;
+            $width = $height += 12;
             break;
     }
 
@@ -261,10 +259,10 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
                 <rect width="60" height="<?= $lineHeight ?>" x="370" y="0"/>
                 <svg width="60" height="<?= $lineHeight?>" x="370" y="0">
                 <?php if (count($boss->weather) === 1) {
-                    echo $renderWeatherIcon($boss->weather[0], 17);
+                    echo $renderWeatherIcon($boss->weather[0], 19);
                 } else {
                     echo $renderWeatherIcon($boss->weather[0], 5);
-                    echo $renderWeatherIcon($boss->weather[1], 30);
+                    echo $renderWeatherIcon($boss->weather[1], 32);
                 }
                 ?>
                 </svg>
