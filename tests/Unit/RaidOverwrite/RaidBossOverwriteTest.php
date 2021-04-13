@@ -9,6 +9,7 @@ use DateTimeZone;
 use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
 use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
 use PokemonGoLingen\PogoAPI\Types\PokemonType;
@@ -87,7 +88,8 @@ class RaidBossOverwriteTest extends TestCase
                     'shiny' => 'false',
                 ],
             ],
-            $existingPokemonCollection
+            $existingPokemonCollection,
+            new NoopLogger()
         );
 
         self::assertNotNull($existingRaidBossCollection->get('Test_Form1'));

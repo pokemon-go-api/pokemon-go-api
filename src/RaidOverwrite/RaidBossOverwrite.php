@@ -8,25 +8,30 @@ use DateTimeImmutable;
 use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use Psr\Log\LoggerInterface;
 use stdClass;
 
 use function array_map;
+use function sprintf;
 
 class RaidBossOverwrite
 {
     /** @var array<int, stdClass> $raidBossOverwrites */
     private array $raidBossOverwrites;
     private PokemonCollection $pokemonCollection;
+    private LoggerInterface $logger;
 
     /**
      * @param array<int, stdClass> $raidBossOverwrites
      */
     public function __construct(
         array $raidBossOverwrites,
-        PokemonCollection $pokemonCollection
+        PokemonCollection $pokemonCollection,
+        LoggerInterface $logger
     ) {
         $this->raidBossOverwrites = $raidBossOverwrites;
         $this->pokemonCollection  = $pokemonCollection;
+        $this->logger             = $logger;
     }
 
     public function overwrite(RaidBossCollection $raidBossCollection): void
@@ -40,11 +45,13 @@ class RaidBossOverwrite
                 $raidOverwrite->getEndDate() > new DateTimeImmutable('today -3 Days') &&
                 $now > $endWithTolerance
             ) {
+                $pokemonId = $raidOverwrite->getPokemon();
                 if ($raidOverwrite->getForm() !== null) {
-                    $raidBossCollection->remove($raidOverwrite->getForm());
-                } else {
-                    $raidBossCollection->remove($raidOverwrite->getPokemon());
+                    $pokemonId = $raidOverwrite->getForm();
                 }
+
+                $this->logger->debug(sprintf('[RaidBossOverwrite] Remove existing Raidboss %s', $pokemonId));
+                $raidBossCollection->remove($pokemonId);
 
                 continue;
             }
@@ -55,6 +62,10 @@ class RaidBossOverwrite
 
             $pokemon = $this->pokemonCollection->get($raidOverwrite->getPokemon());
             if ($pokemon === null) {
+                $this->logger->error(sprintf(
+                    '[RaidBossOverwrite] Invalid Pokemon ID. Not Found in Collection %s',
+                    $raidOverwrite->getPokemon()
+                ));
                 continue;
             }
 
@@ -65,6 +76,11 @@ class RaidBossOverwrite
 
                 $pokemon = $regionForm;
             }
+
+            $this->logger->debug(sprintf(
+                '[RaidBossOverwrite] Add RaidBoss %s',
+                $pokemon->getFormId()
+            ));
 
             $raidBossCollection->add(
                 new RaidBoss(

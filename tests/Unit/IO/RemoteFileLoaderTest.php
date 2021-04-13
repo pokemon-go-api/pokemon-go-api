@@ -9,6 +9,7 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
 
 /**
  * @uses \PokemonGoLingen\PogoAPI\IO\File
@@ -20,6 +21,7 @@ class RemoteFileLoaderTest extends TestCase
     public function testLoad(): void
     {
         $sut = new RemoteFileLoader(
+            new NoopLogger(),
             new Client([
                 'handler' => new MockHandler([new Response(200, [], 'Dummy')]),
             ])
