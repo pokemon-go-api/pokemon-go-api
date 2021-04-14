@@ -31,8 +31,11 @@ If you want to host the API by your own you can download this Project and run th
 composer install
 composer run-script api-build
 # create a PNG file from the SVG Image
-# set the window size for the chromium instance
+# set the window size from the previous command for the chromium instance
 WINDOW_SIZE=985,992 composer run-script convert-svg
+
+# alternative if you want a all in one command
+env $(composer run-script api-build | sed -n "s/^::set-output name=\([A-Z_]*\)::/\1=/p" | xargs) composer run-script convert-svg
 ```
 
 ## Disclaimer
