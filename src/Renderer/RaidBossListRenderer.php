@@ -16,6 +16,7 @@ use PokemonGoLingen\PogoAPI\Util\TypeWeatherCalculator;
 
 use function array_filter;
 use function array_map;
+use function count;
 
 final class RaidBossListRenderer
 {
@@ -52,8 +53,8 @@ final class RaidBossListRenderer
                 )
             );
 
-            $raidBossStats                       = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
-            $bosses[$raidBoss->getRaidLevel()][] = [
+            $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
+            $raidData      = [
                 'id'           => $raidBoss->getPokemon()->getId(),
                 'form'         => $raidBoss->getPokemonId(),
                 'assets'        => [
@@ -77,7 +78,23 @@ final class RaidBossListRenderer
                     CpCalculator::calculateRaidWeatherBoostMinCp($raidBossStats),
                     CpCalculator::calculateRaidWeatherBoostMaxCp($raidBossStats),
                 ],
+                'battleResult' => null,
             ];
+
+            $battleResults = $raidBoss->getBattleResults();
+            if (count($battleResults) > 0) {
+                foreach ($battleResults as $battleResult) {
+                    $config                                       = $battleResult->getBattleConfiguration();
+                    $raidData['battleResult'][$config->getName()] = [
+                        'name'            => $config->getName(),
+                        'friendshipLevel' => $config->getFriendShipLevel(),
+                        'pokemonLevel'    => $config->getPokemonLevel(),
+                        'totalEstimator'  => $battleResult->getTotalEstimator(),
+                    ];
+                }
+            }
+
+            $bosses[$raidBoss->getRaidLevel()][] = $raidData;
         }
 
         return $bosses;

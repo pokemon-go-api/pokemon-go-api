@@ -19,6 +19,9 @@ use PokemonGoLingen\PogoAPI\Util\TypeWeatherCalculator;
 use function array_filter;
 use function array_map;
 use function array_reverse;
+use function count;
+use function max;
+use function number_format;
 use function ob_end_clean;
 use function ob_get_contents;
 use function ob_start;
@@ -89,7 +92,7 @@ final class RaidBossGraphicRenderer
 
             $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
 
-            $bosses[] = (object) [
+            $raidData = [
                 'id'           => $raidBoss->getPokemon()->getId(),
                 'form'         => $raidBoss->getPokemonId(),
                 'level'        => $raidBoss->getRaidLevel(),
@@ -116,6 +119,20 @@ final class RaidBossGraphicRenderer
                     CpCalculator::calculateRaidWeatherBoostMaxCp($raidBossStats)
                 ),
             ];
+
+            $battleResults = $raidBoss->getBattleResults();
+            if (count($battleResults) > 0) {
+                foreach ($battleResults as $battleResult) {
+                    $raidData['battleResult'][$battleResult->getBattleConfiguration()->getName()] = number_format(
+                        max($battleResult->getTotalEstimator(), 0.1),
+                        1
+                    );
+                }
+
+                $raidData['battleResult'] = (object) $raidData['battleResult'];
+            }
+
+            $bosses[] = (object) $raidData;
         }
 
         $bosses = array_reverse($bosses, true);

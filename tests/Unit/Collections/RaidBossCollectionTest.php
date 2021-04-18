@@ -40,10 +40,10 @@ class RaidBossCollectionTest extends TestCase
         $collection->add($raidBoss);
         self::assertCount(1, $collection->toArray());
 
-        self::assertSame($raidBoss, $collection->get('TESTPOKEMON_MEGA'));
+        self::assertSame($raidBoss, $collection->getById('TESTPOKEMON_MEGA'));
         self::assertTrue($collection->has($raidBoss));
 
-        self::assertNull($collection->get('NOT_EXISTINGS'));
+        self::assertNull($collection->getById('NOT_EXISTINGS'));
 
         $collection->remove($raidBoss->getPokemonId());
         self::assertFalse($collection->has($raidBoss));

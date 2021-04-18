@@ -17,6 +17,8 @@ final class RaidBoss
     private Pokemon $pokemon;
     private ?TemporaryEvolution $temporaryEvolution;
     private ?int $costumeId;
+    /** @var array<int, BattleResult> */
+    private array $battleResults = [];
 
     public function __construct(
         Pokemon $pokemon,
@@ -61,6 +63,12 @@ final class RaidBoss
         return $this->temporaryEvolution;
     }
 
+    /** @return array<int, BattleResult> */
+    public function getBattleResults(): array
+    {
+        return $this->battleResults;
+    }
+
     public function getPokemonImage(): PokemonImage
     {
         $pokemonForm   = $this->getPokemon()->getPokemonForm();
@@ -82,5 +90,10 @@ final class RaidBoss
             $pokemonForm ? $pokemonForm->getAssetBundleSuffix() : null,
             $this->costumeId
         );
+    }
+
+    public function setBattleResults(BattleResult ...$battleResults): void
+    {
+        $this->battleResults = $battleResults;
     }
 }

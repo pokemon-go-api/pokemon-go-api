@@ -24,13 +24,22 @@ final class RaidBossCollection
         $this->storage[$raidBoss->getPokemonId()] = $raidBoss;
     }
 
-    public function get(string $id): ?RaidBoss
+    public function getById(string $id): ?RaidBoss
     {
         if (! array_key_exists($id, $this->storage)) {
             return null;
         }
 
         return $this->storage[$id];
+    }
+
+    public function get(RaidBoss $raidBoss): ?RaidBoss
+    {
+        if (! $this->has($raidBoss)) {
+            return null;
+        }
+
+        return $this->storage[$raidBoss->getPokemonId()];
     }
 
     public function remove(string $pokemonId): void
