@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PokemonGoLingen\PogoAPI\Collections;
 
 use function array_key_exists;
+use function array_values;
 use function mb_strtoupper;
 use function sprintf;
 
@@ -42,14 +43,14 @@ final class TranslationCollection
         $this->pokemonNames[$dexNrKey] = $translation;
     }
 
-    public function addPokemonMegaName(int $dexNr, string $translation): void
+    public function addPokemonMegaName(int $dexNr, string $megaEvolutionIndex, string $translation): void
     {
         $dexNrKey = sprintf('%04d', $dexNr);
         if (! array_key_exists($dexNrKey, $this->pokemonMegaNames)) {
             $this->pokemonMegaNames[$dexNrKey] = [];
         }
 
-        $this->pokemonMegaNames[$dexNrKey][] = $translation;
+        $this->pokemonMegaNames[$dexNrKey][$megaEvolutionIndex] = $translation;
     }
 
     public function addPokemonFormName(string $formName, string $translation): void
@@ -91,7 +92,7 @@ final class TranslationCollection
     {
         $dexNrKey = sprintf('%04d', $dexNr);
 
-        return $this->pokemonMegaNames[$dexNrKey] ?? [];
+        return array_values($this->pokemonMegaNames[$dexNrKey] ?? []);
     }
 
     public function getPokemonFormName(string $formName): ?string

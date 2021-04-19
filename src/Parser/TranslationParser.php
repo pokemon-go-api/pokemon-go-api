@@ -67,14 +67,14 @@ class TranslationParser
 
                 $nextLine = trim(fgets($file) ?: '');
                 if ($this->lineStartsWith($currentLine, 'RESOURCE ID: pokemon_name_')) {
-                    $dexId         = (int) substr($currentLine, 26, 4);
-                    $megaEvolution = substr($currentLine, 30) ?: '';
+                    $dexId              = (int) substr($currentLine, 26, 4);
+                    $megaEvolutionIndex = substr($currentLine, 30) ?: '';
 
                     $translation = $this->readTranslation($nextLine);
-                    if (empty($megaEvolution)) {
+                    if (empty($megaEvolutionIndex)) {
                         $collection->addPokemonName($dexId, $translation);
                     } else {
-                        $collection->addPokemonMegaName($dexId, $translation);
+                        $collection->addPokemonMegaName($dexId, $megaEvolutionIndex, $translation);
                     }
                 }
 
