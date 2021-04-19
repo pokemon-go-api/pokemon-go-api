@@ -18,8 +18,8 @@ class TranslationCollectionTest extends TestCase
         $collection->addMoveName(123, 'Movename in testlanguage');
         $collection->addTypeName('TYPENAME', 'Typename in testlanguage');
         $collection->addPokemonName(5, 'Pokemon 5 in testlanguage');
-        $collection->addPokemonMegaName(5, 'Mega 1');
-        $collection->addPokemonMegaName(5, 'Mega 2');
+        $collection->addPokemonMegaName(5, '001', 'Mega 1');
+        $collection->addPokemonMegaName(5, '002', 'Mega 2');
         $collection->addPokemonFormName('POKEMON_FORM', 'Pokemon Form in testlanguage');
         $collection->addRegionalForm('regional_form_alola', 'alola');
         $collection->addCustomTranslation('customKey', 'Custom Translation');

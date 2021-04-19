@@ -9,6 +9,7 @@ use PokemonGoLingen\PogoAPI\Logger\PrintLogger;
 use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
+use PokemonGoLingen\PogoAPI\Parser\PokebattlerParser;
 use PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
@@ -16,6 +17,7 @@ use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
+use PokemonGoLingen\PogoAPI\Types\BattleConfiguration;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
@@ -131,7 +133,16 @@ $logger->debug(
     )
 );
 
+$pokebattlerParser        = new PokebattlerParser(
+    $cacheLoader,
+    BattleConfiguration::easy(),
+    BattleConfiguration::normal(),
+    BattleConfiguration::hard()
+);
+$raidBossesWithDifficulty = $pokebattlerParser->appendResults($raidBosses);
+
 $logger->debug('Generate Images');
+
 $windowSize            = '0,0';
 $raidBossImageRenderer = new RaidBossGraphicRenderer();
 foreach ($translations->getCollections() as $translationName => $translationCollection) {
@@ -141,7 +152,7 @@ foreach ($translations->getCollections() as $translationName => $translationColl
     }
 
     $raidGraphic = $raidBossImageRenderer->buildGraphic(
-        $raidBosses,
+        $raidBossesWithDifficulty,
         $translationCollection,
         new RaidBossGraphicConfig()
     );
@@ -152,7 +163,7 @@ foreach ($translations->getCollections() as $translationName => $translationColl
     );
 
     $raidGraphicB = $raidBossImageRenderer->buildGraphic(
-        $raidBosses,
+        $raidBossesWithDifficulty,
         $translationCollection,
         new RaidBossGraphicConfig(RaidBossGraphicConfig::ORDER_LOW_TO_HIGH, false)
     );
@@ -168,7 +179,7 @@ foreach ($translations->getCollections() as $translationName => $translationColl
 
 $logger->debug('Generate Raidboss.json');
 $raidListRenderer = new RaidBossListRenderer();
-$raidBossesList   = $raidListRenderer->buildList($raidBosses, $translations);
+$raidBossesList   = $raidListRenderer->buildList($raidBossesWithDifficulty, $translations);
 
 file_put_contents($apidir . 'raidboss.json', json_encode([
     'currentList' => $raidBossesList,

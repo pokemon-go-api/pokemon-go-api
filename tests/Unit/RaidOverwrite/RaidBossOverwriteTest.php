@@ -92,14 +92,14 @@ class RaidBossOverwriteTest extends TestCase
             new NoopLogger()
         );
 
-        self::assertNotNull($existingRaidBossCollection->get('Test_Form1'));
-        self::assertNotNull($existingRaidBossCollection->get('Test_Form2'));
-        self::assertNull($existingRaidBossCollection->get('Test_Form3'));
+        self::assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
+        self::assertNotNull($existingRaidBossCollection->getById('Test_Form2'));
+        self::assertNull($existingRaidBossCollection->getById('Test_Form3'));
 
         $sut->overwrite($existingRaidBossCollection);
 
-        self::assertNotNull($existingRaidBossCollection->get('Test_Form1'));
-        self::assertNull($existingRaidBossCollection->get('Test_Form2'));
-        self::assertNotNull($existingRaidBossCollection->get('Test_Form3'));
+        self::assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
+        self::assertNull($existingRaidBossCollection->getById('Test_Form2'));
+        self::assertNotNull($existingRaidBossCollection->getById('Test_Form3'));
     }
 }

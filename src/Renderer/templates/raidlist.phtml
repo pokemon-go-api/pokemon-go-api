@@ -14,11 +14,11 @@ if (!isset($raidBossGraphicConfig)) {
     $raidBossGraphicConfig = new RaidBossGraphicConfig();
 }
 
-$svgWidth = 985;
-$width               = 685;
+$svgWidth            = 1080;
+$width               = 780;
 $maxCounterInRow     = 7;
 $lineHeight          = 50;
-$graphicHeaderHeight = 30;
+$graphicHeaderHeight = 80;
 $graphicFooterHeight = 10;
 $totalHeight = ($lineHeight * count($bosses)) + $graphicHeaderHeight + $graphicFooterHeight;
 $svgHeight = intval($totalHeight * ($svgWidth / $width));
@@ -81,6 +81,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
     <style>
         .boss-types rect,
         .boss-level rect,
+        .boss-difficulty > rect,
         .boss-cp-spectrum rect {
             opacity: 0.4;
             fill: #ccc;
@@ -125,6 +126,8 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             font-family: sans-serif;
             fill: #ffffff;
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+            text-anchor: middle;
+            dominant-baseline: middle;
         }
 
         .boss-counter text {
@@ -145,7 +148,57 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             fill: #ccc;
         }
 
-        .graphic-header text {
+        .boss-difficulty text {
+            font-size: 16px;
+            font-family: sans-serif;
+            fill: #ffffff;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+
+        .boss-difficulty .mode-easy rect {
+            fill: #393;
+        }
+        .boss-difficulty .mode-normal rect {
+            fill: #fc0;
+        }
+        .boss-difficulty .mode-hard rect {
+            fill: #a00;
+        }
+
+        .graphic-header div {
+            font-size: 10px;
+            font-family: sans-serif;
+            color: #ffffff;
+            margin: 0;
+            text-align: right;
+            font-size: 9px;
+        }
+
+        .graphic-header div > p {
+            margin: 3px 0 0 0;
+            font-style: italic;
+        }
+
+        .graphic-header div .circle {
+            display: inline-block;
+            border-radius: 4px;
+            padding: 0 2px;
+            font-size: 10px;
+        }
+
+        .graphic-header div .circle.mode-easy {
+            background-color: #393;
+        }
+        .graphic-header div .circle.mode-normal {
+            background-color: #fc0;
+        }
+        .graphic-header div .circle.mode-hard {
+            background-color: #a00;
+        }
+
+        .graphic-header .title-header text {
             font-size: 10px;
             font-family: sans-serif;
             fill: #ffffff;
@@ -171,23 +224,23 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             <stop offset="0%" stop-color="#000"/>
             <stop offset="100%" stop-color="#333"/>
         </linearGradient>
-        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_EX ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_EX ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#000"/>
             <stop offset="100%" stop-color="#333"/> <!-- lighten 20% -->
         </linearGradient>
-        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_MEGA ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_MEGA ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#8e3628"/>
             <stop offset="100%" stop-color="#c14936"/> <!-- lighten 20% -->
         </linearGradient>
-        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_5 ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_5 ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#3f577c"/>
             <stop offset="100%" stop-color="#6c89b4"/> <!-- lighten 40% -->
         </linearGradient>
-        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_3 ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_3 ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#806b2e"/>
             <stop offset="100%" stop-color="#b1943f"/> <!-- lighten 20% -->
         </linearGradient>
-        <linearGradient id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_1 ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_1 ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#870f52"/>
             <stop offset="100%" stop-color="#b7146f"/> <!-- lighten 15% -->
         </linearGradient>
@@ -196,17 +249,27 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
     <g class="graphic-header">
         <rect fill="url('#header')" width="<?=$width?>" height="<?= $graphicHeaderHeight ?>" x="0" y="0"/>
         <line x1="0" x2="<?=$width?>" y1="<?= $graphicHeaderHeight ?>" y2="<?= $graphicHeaderHeight ?>"/>
-        <text x="18" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_level')?></text>
-        <text x="185" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_boss')?></text>
-        <text x="335" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_type')?></text>
-        <text x="400" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_weather')?></text>
-        <text x="470" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_cprange')?></text>
-        <text x="590" y="20"><?=$translationCollection->getCustomTranslation('raidgraphic_header_counter')?></text>
+
+        <foreignObject xmlns="http://www.w3.org/2000/svg" x="10" y="5" width="<?=$width-20?>" height="<?=$graphicHeaderHeight-25?>">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                <?=$translationCollection->getCustomTranslation('raidgraphic_header_description')?>
+            </div>
+        </foreignObject>
+
+        <g class="title-header">
+            <text x="18"  y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_level')?></text>
+            <text x="185" y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_boss')?></text>
+            <text x="335" y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_type')?></text>
+            <text x="400" y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_weather')?></text>
+            <text x="470" y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_cprange')?></text>
+            <text x="590" y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_counter')?></text>
+            <text x="725" y="<?=$graphicHeaderHeight - 10?>"><?=$translationCollection->getCustomTranslation('raidgraphic_header_difficulty')?></text>
+        </g>
     </g>
 
     <g class="graphic-footer">
         <rect fill="#000" width="<?=$width?>" height="<?= $graphicFooterHeight ?>" x="0" y="<?=$totalHeight-$graphicFooterHeight?>"/>
-        <text class="source-url" x="<?=round($width/2)?>" y="<?=$totalHeight-2?>">Raidboss source from leekduck.com | generated for pokemon-go-lingen.github.io/pokemon-go-api/ | Image Source by The Pokemon Company and Niantic</text>
+        <text class="source-url" x="<?=round($width/2)?>" y="<?=$totalHeight-2?>"><?=$translationCollection->getCustomTranslation('raidgraphic_footer_line')?></text>
     </g>
 
     <?php foreach ($bosses as $index => $boss) : ?>
@@ -271,8 +334,8 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             <g class="boss-cp-spectrum">
                 <rect width="80" height="<?= $lineHeight ?>" x="430" y="0"/>
                 <svg width="80" height="<?= $lineHeight?>" x="430" y="0">
-                    <text class="normal" x="50%" y="18" dominant-baseline="middle" text-anchor="middle"><?= $boss->cpRange ?></text>
-                    <text class="boost"  x="50%" y="35" dominant-baseline="middle" text-anchor="middle"><?= $boss->cpRangeBoost ?></text>
+                    <text class="normal" x="50%" y="18"><?= $boss->cpRange ?></text>
+                    <text class="boost"  x="50%" y="35"><?= $boss->cpRangeBoost ?></text>
                 </svg>
             </g>
 
@@ -299,6 +362,24 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
                     endforeach;
 
                     ?>
+                </svg>
+            </g>
+
+            <g class="boss-difficulty">
+                <rect width="110" height="<?= $lineHeight ?>" x="670" y="0"/>
+                <svg width="110" height="<?= $lineHeight?>" x="670" y="0">
+                    <g class="mode-hard">
+                        <rect rx="5" ry="5" width="30" height="30" x="5" y="10" />
+                        <text x="20" y="<?= $lineHeight / 2 ?>"><?php echo $boss->battleResult->hard ?></text>
+                    </g>
+                    <g class="mode-normal">
+                        <rect rx="5" ry="5" width="30" height="30" x="40" y="10" />
+                        <text x="55" y="<?= $lineHeight / 2 ?>"><?php echo $boss->battleResult->normal ?></text>
+                    </g>
+                    <g class="mode-easy">
+                        <rect rx="5" ry="5" width="30" height="30" x="75" y="10" />
+                        <text x="90" y="<?= $lineHeight / 2 ?>"><?php echo $boss->battleResult->easy ?></text>
+                    </g>
                 </svg>
             </g>
 

@@ -97,8 +97,8 @@ class PokemonNameRendererTest extends TestCase
 
         $translationCollection = new TranslationCollection('dummylanguage');
         $translationCollection->addPokemonName(1, 'Testpokemon');
-        $translationCollection->addPokemonMegaName(1, 'Mega CHARIZARD X');
-        $translationCollection->addPokemonMegaName(1, 'Mega CHARIZARD Y');
+        $translationCollection->addPokemonMegaName(1, '001', 'Mega CHARIZARD X');
+        $translationCollection->addPokemonMegaName(1, '002', 'Mega CHARIZARD Y');
 
         self::assertSame(
             'Mega CHARIZARD X',

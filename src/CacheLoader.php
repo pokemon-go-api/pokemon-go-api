@@ -12,6 +12,7 @@ use RuntimeException;
 use stdClass;
 
 use function array_filter;
+use function array_key_exists;
 use function array_keys;
 use function array_values;
 use function basename;
@@ -222,6 +223,24 @@ class CacheLoader
             ),
             ['lastModified' => $lastModified]
         );
+
+        return $cacheFile;
+    }
+
+    public function fetchPokebattlerUrl(string $pokebattlerApiUrl, string $cacheKey): string
+    {
+        $cacheFile = $this->cacheDir . 'pokebattler_' . $cacheKey . '.json';
+        $cacheKey  = 'pokebattler/' . $cacheKey;
+        if (array_key_exists($cacheKey, $this->cachedData)) {
+            return $cacheFile;
+        }
+
+        $this->logger->debug(sprintf(
+            '[CacheLoader] Missing cache entry for %s',
+            $cacheKey
+        ));
+        $this->remoteFileLoader->load($pokebattlerApiUrl)->saveTo($cacheFile);
+        $this->cachedData[$cacheKey] = date(DATE_ATOM);
 
         return $cacheFile;
     }
