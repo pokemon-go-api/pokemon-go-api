@@ -54,8 +54,8 @@ final class PokemonImage
             $matches
         );
 
-        if ($result === false) {
-            throw new Exception('Path does not match Regex', 1617886414508);
+        if ($result === false || (! isset($matches['dexNr']) && ! isset($matches['dexNr2']))) {
+            throw new Exception('Path "' . $path . '" does not match Regex', 1617886414508);
         }
 
         return new self(
@@ -79,7 +79,7 @@ final class PokemonImage
         if ($this->assetBundleSuffix !== null) {
             return sprintf(
                 $assetUrl,
-                $this->assetBundleSuffix . ($shiny ? '_shiny' : '')
+                $this->assetBundleSuffix
             );
         }
 
