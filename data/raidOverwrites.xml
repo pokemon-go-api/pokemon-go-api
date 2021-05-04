@@ -289,4 +289,28 @@
         <level>lvl5</level>
         <shiny>true</shiny>
     </raidboss>
+    <!-- may-2021-events -->
+    <raidboss>
+        <startDate>
+            <date>2021-05-04 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-05-18 10:00:00</date>
+        </endDate>
+        <pokemon>XERNEAS</pokemon>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-05-18 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-06-01 10:00:00</date>
+        </endDate>
+        <pokemon>YVELTAL</pokemon>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
+
 </root>
