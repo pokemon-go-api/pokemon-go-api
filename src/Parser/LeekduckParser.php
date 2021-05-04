@@ -172,7 +172,7 @@ class LeekduckParser
         }
 
         if (stripos($bossName, 'Galarian') !== false) {
-            return [$bossName, 'Galar'];
+            return [$bossName, 'Galarian'];
         }
 
         $matches = [];
