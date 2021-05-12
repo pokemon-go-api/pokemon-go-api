@@ -11,11 +11,13 @@ use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
 use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
 use PokemonGoLingen\PogoAPI\Parser\PokebattlerParser;
 use PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser;
+use PokemonGoLingen\PogoAPI\Parser\SilphRoadResearchTaskParser;
 use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
 use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
+use PokemonGoLingen\PogoAPI\Renderer\ResearchTasksRenderer;
 use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoLingen\PogoAPI\Types\BattleConfiguration;
 use PokemonGoLingen\PogoAPI\Types\RaidBoss;
@@ -61,12 +63,12 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
     );
 }
 
-$renderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
-$files    = [];
+$pokemonRenderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
+$files           = [];
 
 $logger->debug('Generate Pokemon');
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
-    $renderedPokemon = $renderer->render($pokemon, $masterData->getAttacksCollection());
+    $renderedPokemon = $pokemonRenderer->render($pokemon, $masterData->getAttacksCollection());
 
     $generation = GenerationDeterminer::fromDexNr($pokemon->getDexNr());
 
@@ -92,6 +94,18 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
         $files['pokedex/region/' . $regionName][] = $renderedPokemon;
     }
 }
+
+$logger->debug('Generate Tasks');
+$taskParser    = new SilphRoadResearchTaskParser(
+    $masterData->getPokemonCollection(),
+    $translations->getCollection('English')
+);
+$tasks         = $taskParser->parseTasks(
+    $cacheLoader->fetchTasksFromSilphroad()
+);
+$tasksRenderer = new ResearchTasksRenderer($translations, $masterData->getPokemonCollection());
+
+$files['quests'] = $tasksRenderer->render(...$tasks);
 
 $apidir = $tmpDir . 'api/';
 foreach ($files as $file => $data) {
@@ -200,6 +214,7 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
 $hashFiles = [
     $apidir . 'raidboss.json',
     $apidir . 'pokedex.json',
+    $apidir . 'quests.json',
 ];
 
 file_put_contents($apidir . 'hashes.json', json_encode(

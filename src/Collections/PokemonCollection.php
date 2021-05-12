@@ -14,15 +14,16 @@ class PokemonCollection
     private array $storage = [];
     /** @var array<int, Pokemon> */
     private array $indexedByDexId = [];
+    /** @var array<int, Pokemon> */
+    private array $indexedByForm = [];
 
     public function add(Pokemon $pokemon): void
     {
-        if ($this->has($pokemon)) {
-            return;
-        }
-
         $this->storage[$pokemon->getId()]           = $pokemon;
         $this->indexedByDexId[$pokemon->getDexNr()] = &$this->storage[$pokemon->getId()];
+        foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
+            $this->indexedByForm[$regionForm->getFormId()] = &$this->storage[$pokemon->getId()];
+        }
     }
 
     public function get(string $id): ?Pokemon
@@ -41,6 +42,20 @@ class PokemonCollection
         }
 
         return $this->indexedByDexId[$dexEntry];
+    }
+
+    public function getByFormId(string $formId): ?Pokemon
+    {
+        if (! array_key_exists($formId, $this->indexedByForm)) {
+            return $this->get($formId);
+        }
+
+        $pokemon = $this->indexedByForm[$formId];
+        if ($pokemon === null) {
+            return null;
+        }
+
+        return $pokemon->getPokemonRegionForms()[$formId] ?? null;
     }
 
     public function has(Pokemon $pokemon): bool

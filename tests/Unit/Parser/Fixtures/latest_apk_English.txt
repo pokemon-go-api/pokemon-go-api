@@ -22,3 +22,9 @@ TEXT: Aeroblast
 
 RESOURCE ID: move_name_0341
 TEXT: Fly
+
+RESOURCE ID: quest_power_up_plural
+TEXT: Power up Pokémon {0} times
+
+RESOURCE ID: challenge_buddy_affection_single
+TEXT: Earn a heart with your buddy

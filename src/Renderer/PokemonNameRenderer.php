@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PokemonGoLingen\PogoAPI\Renderer;
 
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
+use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
 use PokemonGoLingen\PogoAPI\Types\Pokemon;
 
@@ -14,6 +15,24 @@ use function str_replace;
 
 class PokemonNameRenderer
 {
+    /**
+     * @return array<string, string>
+     */
+    public static function renderPokemonNames(
+        Pokemon $pokemon,
+        TranslationCollectionCollection $translationCollectionCollection
+    ): array {
+        $names = [];
+        foreach ($translationCollectionCollection->getCollections() as $translationCollection) {
+            $names[$translationCollection->getLanguageName()] = self::renderPokemonName(
+                $pokemon,
+                $translationCollection
+            );
+        }
+
+        return $names;
+    }
+
     public static function renderPokemonName(Pokemon $pokemon, TranslationCollection $translationCollection): ?string
     {
         $pokemonName = $translationCollection->getPokemonName($pokemon->getDexNr());

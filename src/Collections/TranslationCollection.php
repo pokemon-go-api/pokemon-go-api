@@ -26,6 +26,8 @@ final class TranslationCollection
     private array $regionalForms = [];
     /** @var array<string, string> */
     private array $customTranslations = [];
+    /** @var array<string, string> */
+    private array $quests = [];
 
     public function __construct(string $languageName)
     {
@@ -35,6 +37,11 @@ final class TranslationCollection
     public function getLanguageName(): string
     {
         return $this->languageName;
+    }
+
+    public function addQuest(string $key, string $translation): void
+    {
+        $this->quests[$key] = $translation;
     }
 
     public function addPokemonName(int $dexNr, string $translation): void
@@ -118,5 +125,18 @@ final class TranslationCollection
     public function getCustomTranslation(string $key): ?string
     {
         return $this->customTranslations[$key];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function getQuests(): array
+    {
+        return $this->quests;
+    }
+
+    public function getQuest(string $quest): ?string
+    {
+        return $this->quests[$quest];
     }
 }
