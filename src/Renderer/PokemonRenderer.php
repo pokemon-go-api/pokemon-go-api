@@ -12,15 +12,9 @@ use PokemonGoLingen\PogoAPI\Types\PokemonType;
 use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
 
 use function array_map;
-use function sprintf;
 
 final class PokemonRenderer
 {
-    //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s.png';
-    //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_BASE_SHINY_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
-
     private TranslationCollectionCollection $translations;
 
     private PokemonAssetsCollection $assetsCollection;
@@ -41,13 +35,10 @@ final class PokemonRenderer
         AttacksCollection $attacksCollection,
         bool $basePokemon = true
     ): array {
-        $names = [];
-        foreach ($this->translations->getCollections() as $translationCollection) {
-            $names[$translationCollection->getLanguageName()] = PokemonNameRenderer::renderPokemonName(
-                $pokemon,
-                $translationCollection
-            );
-        }
+        $names = PokemonNameRenderer::renderPokemonNames(
+            $pokemon,
+            $this->translations
+        );
 
         $struct = [
             'id'                  => $pokemon->getId(),
@@ -79,18 +70,8 @@ final class PokemonRenderer
                 $this->translations
             ),
             'assets' => [
-                'image'      => $this->buildPokemonImageUrl(
-                    $pokemon->getDexNr(),
-                    $pokemon->getAssetBundleSuffix(),
-                    $pokemon->getAssetsBundleId(),
-                    false
-                ),
-                'shinyImage' => $this->buildPokemonImageUrl(
-                    $pokemon->getDexNr(),
-                    $pokemon->getAssetBundleSuffix(),
-                    $pokemon->getAssetsBundleId(),
-                    true
-                ),
+                'image'      => $pokemon->getPokemonImage()->buildUrl(false),
+                'shinyImage' => $pokemon->getPokemonImage()->buildUrl(true),
             ],
             'regionForms'         => array_map(
                 fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection, false),
@@ -130,18 +111,8 @@ final class PokemonRenderer
                 'primaryType'   => $this->renderType($temporaryEvolution->getTypePrimary(), $translations),
                 'secondaryType' => $this->renderType($temporaryEvolution->getTypeSecondary(), $translations),
                 'assets'        => [
-                    'image' => $this->buildPokemonImageUrl(
-                        $pokemon->getDexNr(),
-                        $pokemon->getAssetBundleSuffix(),
-                        $temporaryEvolution->getAssetsBundleId(),
-                        false
-                    ),
-                    'shinyImage' => $this->buildPokemonImageUrl(
-                        $pokemon->getDexNr(),
-                        $pokemon->getAssetBundleSuffix(),
-                        $temporaryEvolution->getAssetsBundleId(),
-                        true
-                    ),
+                    'image'      => $pokemon->getPokemonImage($temporaryEvolution)->buildUrl(false),
+                    'shinyImage' => $pokemon->getPokemonImage($temporaryEvolution)->buildUrl(true),
                 ],
             ];
         }
@@ -228,24 +199,6 @@ final class PokemonRenderer
         }
 
         return $out;
-    }
-
-    private function buildPokemonImageUrl(
-        int $pokemonDexNr,
-        ?string $assetBundleSuffix,
-        ?int $assetBundleId,
-        bool $shiny
-    ): string {
-        $bundleSuffix = sprintf('%03d_%02d', $pokemonDexNr, $assetBundleId ?? 0);
-        if ($assetBundleSuffix !== null) {
-            $bundleSuffix = $assetBundleSuffix;
-        }
-
-        if ($shiny) {
-            return sprintf(self::ASSETS_BASE_SHINY_URL, $bundleSuffix);
-        }
-
-        return sprintf(self::ASSETS_BASE_URL, $bundleSuffix);
     }
 
     /**

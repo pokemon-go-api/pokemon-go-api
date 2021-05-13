@@ -46,10 +46,12 @@ $renderBossName = function(object $boss): string {
     $bossName = $boss->name;
     $explodedName = [];
 
-    if (strpos($bossName, '-') !== false) {
-        $explodedName = explode('-', $bossName, 2);
-    } else if (strpos($bossName, ' ') !== false) {
-        $explodedName = explode(' ', $bossName, 2);
+    if (strlen($bossName) >= 10) {
+        if (strpos($bossName, '-') !== false) {
+            $explodedName = explode('-', $bossName, 2);
+        } else if (strpos($bossName, ' ') !== false) {
+            $explodedName = explode(' ', $bossName, 2);
+        }
     }
 
     $firstLineSmall = true;

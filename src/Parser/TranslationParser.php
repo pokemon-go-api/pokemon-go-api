@@ -90,13 +90,25 @@ class TranslationParser
                     $collection->addTypeName($type, $translation);
                 }
 
-                if (! $this->lineStartsWith($currentLine, 'RESOURCE ID: move_name_')) {
+                if ($this->lineStartsWith($currentLine, 'RESOURCE ID: move_name_')) {
+                    $moveId      = (int) trim(substr($currentLine, 23));
+                    $translation = $this->readTranslation($nextLine);
+                    $collection->addMoveName($moveId, $translation);
+                }
+
+                if ($this->lineStartsWith($currentLine, 'RESOURCE ID: quest_')) {
+                    $questKey    = trim(substr($currentLine, 19));
+                    $translation = $this->readTranslation($nextLine);
+                    $collection->addQuest($questKey, $translation);
+                }
+
+                if (! $this->lineStartsWith($currentLine, 'RESOURCE ID: challenge_')) {
                     continue;
                 }
 
-                $moveId      = (int) trim(substr($currentLine, 23));
+                $questKey    = trim(substr($currentLine, 23));
                 $translation = $this->readTranslation($nextLine);
-                $collection->addMoveName($moveId, $translation);
+                $collection->addQuest($questKey, $translation);
             } while (! feof($file));
 
             fclose($file);

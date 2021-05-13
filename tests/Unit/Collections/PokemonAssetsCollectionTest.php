@@ -8,7 +8,9 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection;
 
 /**
- * @covers PokemonAssetsCollection
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonImage
+ *
+ * @covers \PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection
  */
 class PokemonAssetsCollectionTest extends TestCase
 {
@@ -17,6 +19,7 @@ class PokemonAssetsCollectionTest extends TestCase
         $sut = new PokemonAssetsCollection(
             'pokemon_icon_pm0003_00_pgo_copy2019.png',
             'pokemon_icon_pm0003_01_pgo_copy2019.png',
+            'invalid_file.png',
             'pokemon_icon_003_00.png',
             'pokemon_icon_003_01.png',
             'pokemon_icon_003_51.png',

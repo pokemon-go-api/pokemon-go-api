@@ -254,4 +254,29 @@ final class Pokemon
                 && $formStats->getStamina() === $pokemonStats->getStamina()
             ) && strpos($this->getFormId(), '_FEMALE') === false;
     }
+
+    public function getPokemonImage(?TemporaryEvolution $temporaryEvolution = null): PokemonImage
+    {
+        $pokemonForm   = $this->getPokemonForm();
+        $assetBundleId = 0;
+        if ($pokemonForm !== null) {
+            $assetBundleId = $pokemonForm->getAssetBundleValue();
+        }
+
+        if ($temporaryEvolution !== null) {
+            $assetBundleId = $temporaryEvolution->getAssetsBundleId();
+        }
+
+        if ($assetBundleId === null) {
+            $assetBundleId = 0;
+        }
+
+        return new PokemonImage(
+            $this->getDexNr(),
+            $assetBundleId,
+            false,
+            $pokemonForm ? $pokemonForm->getAssetBundleSuffix() : null,
+            null
+        );
+    }
 }

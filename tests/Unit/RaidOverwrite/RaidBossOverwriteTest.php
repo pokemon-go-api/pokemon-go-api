@@ -22,6 +22,7 @@ use PokemonGoLingen\PogoAPI\Types\RaidBoss;
  * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
  * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
  * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoLingen\PogoAPI\Logger\NoopLogger
  *
  * @covers \PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite
  */

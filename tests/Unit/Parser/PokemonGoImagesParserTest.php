@@ -8,7 +8,10 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser;
 
 /**
- * @covers PokemonGoImagesParser
+ * @uses \PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection
+ * @uses \PokemonGoLingen\PogoAPI\Types\PokemonImage
+ *
+ * @covers \PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser
  */
 class PokemonGoImagesParserTest extends TestCase
 {

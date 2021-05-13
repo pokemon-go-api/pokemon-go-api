@@ -91,10 +91,9 @@ class MasterDataParser
             $basePokemon = $pokemonCollection->get($pokemon->getId());
             if ($basePokemon !== null) {
                 $basePokemon->addPokemonRegionForm($pokemon);
-                continue;
             }
 
-            $pokemonCollection->add($pokemon);
+            $pokemonCollection->add($basePokemon ?? $pokemon);
         }
 
         return $pokemonCollection;

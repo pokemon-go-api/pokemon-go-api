@@ -13,6 +13,7 @@ use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
 
 /**
  * @uses \PokemonGoLingen\PogoAPI\IO\File
+ * @uses \PokemonGoLingen\PogoAPI\Logger\NoopLogger
  *
  * @covers \PokemonGoLingen\PogoAPI\IO\RemoteFileLoader
  */
