@@ -14,7 +14,7 @@ class PokemonCollection
     private array $storage = [];
     /** @var array<int, Pokemon> */
     private array $indexedByDexId = [];
-    /** @var array<int, Pokemon> */
+    /** @var array<string, Pokemon> */
     private array $indexedByForm = [];
 
     public function add(Pokemon $pokemon): void
@@ -51,9 +51,6 @@ class PokemonCollection
         }
 
         $pokemon = $this->indexedByForm[$formId];
-        if ($pokemon === null) {
-            return null;
-        }
 
         return $pokemon->getPokemonRegionForms()[$formId] ?? null;
     }

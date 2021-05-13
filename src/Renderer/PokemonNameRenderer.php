@@ -16,7 +16,7 @@ use function str_replace;
 class PokemonNameRenderer
 {
     /**
-     * @return array<string, string>
+     * @return array<string, string|null>
      */
     public static function renderPokemonNames(
         Pokemon $pokemon,

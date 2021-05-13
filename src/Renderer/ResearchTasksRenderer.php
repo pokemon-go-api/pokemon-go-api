@@ -38,7 +38,7 @@ final class ResearchTasksRenderer
                 $questTranslations[$name] = str_replace(
                     '{0}',
                     (string) $researchTask->getResearchTaskQuest()->getReplaceArgument(),
-                    $translationCollection->getQuest($researchTask->getResearchTaskQuest()->getTranslationKey())
+                    $translationCollection->getQuest($researchTask->getResearchTaskQuest()->getTranslationKey()) ?? ''
                 );
             }
 

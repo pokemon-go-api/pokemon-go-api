@@ -6,6 +6,7 @@ namespace PokemonGoLingen\PogoAPI\Parser;
 
 use DOMDocument;
 use DOMElement;
+use DOMNodeList;
 use DOMXPath;
 use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
 use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
@@ -47,12 +48,15 @@ class SilphRoadResearchTaskParser
         $tasksItems = $xpath->query(
             '//*[@id="taskGroupWraps"]//*[contains(@class, "task")][contains(@class, "pkmn")]'
         );
+        assert($tasksItems instanceof DOMNodeList);
 
         $tasks = [];
 
         foreach ($tasksItems as $taskContainer) {
             assert($taskContainer instanceof DOMElement);
-            $taskMessage = $xpath->query('*[@class="taskText"]', $taskContainer)[0]->textContent;
+            $taskText = $xpath->query('*[@class="taskText"]', $taskContainer);
+            assert($taskText instanceof DOMNodeList);
+            $taskMessage = $taskText[0]->textContent;
 
             $quest = $this->findQuest($taskMessage);
             if ($quest === null) {
@@ -64,6 +68,7 @@ class SilphRoadResearchTaskParser
                 '*/*[contains(@class, "task-reward")][contains(@class, "pokemon")]',
                 $taskContainer
             );
+            assert($rewardsList instanceof DOMNodeList);
             foreach ($rewardsList as $rewardItem) {
                 assert($rewardItem instanceof DOMElement);
                 $shiny        = strpos($rewardItem->getAttribute('class'), 'shinyAvailable') !== false;

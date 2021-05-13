@@ -19,35 +19,28 @@ class PokemonCollectionTest extends TestCase
 {
     public function testCollection(): void
     {
-        $pokemon    = new Pokemon(
+        $pokemon           = new Pokemon(
             100,
             'TESTPOKEMON',
             'TESTPOKEMON_FORM',
             PokemonType::water(),
             PokemonType::fire()
         );
-        $collection = new PokemonCollection();
+        $pokemonRegionForm = new Pokemon(
+            100,
+            'TESTPOKEMON',
+            'TESTPOKEMON_FORM',
+            PokemonType::water(),
+            PokemonType::steel()
+        );
+        $collection        = new PokemonCollection();
         $collection->add($pokemon);
 
-        $pokemon->addPokemonRegionForm(
-            new Pokemon(
-                100,
-                'TESTPOKEMON',
-                'TESTPOKEMON_FORM',
-                PokemonType::water(),
-                PokemonType::fire()
-            )
-        );
+        $pokemon->addPokemonRegionForm($pokemonRegionForm);
         self::assertNull($collection->getByFormId('TESTPOKEMON_FORM'));
         $collection->add($pokemon);
-        self::assertSame(
-            $collection->getByDexId(100),
-            $collection->getByFormId('TESTPOKEMON_FORM')
-        );
-        self::assertSame(
-            $collection->getByFormId('TESTPOKEMON_FORM'),
-            $collection->getByFormId('TESTPOKEMON')
-        );
+        self::assertSame($pokemonRegionForm, $collection->getByFormId('TESTPOKEMON_FORM'));
+        self::assertSame($pokemon, $collection->getByFormId('TESTPOKEMON'));
 
         self::assertCount(1, $collection->toArray());
         // assert the same pokemon can't be added twice
