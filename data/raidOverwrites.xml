@@ -320,6 +320,7 @@
             <date>2021-06-01 10:00:00</date>
         </endDate>
         <pokemon>ALTARIA</pokemon>
+        <form>ALTARIA_MEGA</form>
         <level>mega</level>
         <shiny>false</shiny>
     </raidboss>
