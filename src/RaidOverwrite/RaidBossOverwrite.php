@@ -46,6 +46,7 @@ class RaidBossOverwrite
                 $now > $endWithTolerance
             ) {
                 $pokemonId = $raidOverwrite->getPokemon();
+
                 if ($raidOverwrite->getForm() !== null) {
                     $pokemonId = $raidOverwrite->getForm();
                 }
@@ -77,6 +78,15 @@ class RaidBossOverwrite
                 $pokemon = $regionForm;
             }
 
+            $temporaryEvolution = null;
+            foreach ($pokemon->getTemporaryEvolutions() as $megaEvolution) {
+                if ($megaEvolution->getId() !== $raidOverwrite->getForm()) {
+                    continue;
+                }
+
+                $temporaryEvolution = $megaEvolution;
+            }
+
             $this->logger->debug(sprintf(
                 '[RaidBossOverwrite] Add RaidBoss %s',
                 $pokemon->getFormId()
@@ -87,7 +97,7 @@ class RaidBossOverwrite
                     $pokemon,
                     $raidOverwrite->isShiny(),
                     $raidOverwrite->getLevel(),
-                    null,
+                    $temporaryEvolution,
                     null
                 )
             );
