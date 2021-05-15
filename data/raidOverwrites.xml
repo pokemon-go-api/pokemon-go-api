@@ -312,5 +312,16 @@
         <level>lvl5</level>
         <shiny>false</shiny>
     </raidboss>
+    <raidboss>
+        <startDate>
+            <date>2021-05-15 17:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-06-01 10:00:00</date>
+        </endDate>
+        <pokemon>ALTARIA</pokemon>
+        <level>mega</level>
+        <shiny>false</shiny>
+    </raidboss>
 
 </root>
