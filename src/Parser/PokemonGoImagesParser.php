@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Parser;
+namespace PokemonGoApi\PogoAPI\Parser;
 
-use PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection;
+use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use stdClass;
 
 use function array_map;

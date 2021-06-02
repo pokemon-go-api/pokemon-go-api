@@ -5,15 +5,15 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
-use PokemonGoLingen\PogoAPI\Types\PokemonMove;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonMove;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonMove
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonMove
  *
- * @covers \PokemonGoLingen\PogoAPI\Collections\AttacksCollection
+ * @covers \PokemonGoApi\PogoAPI\Collections\AttacksCollection
  */
 class AttacksCollectionTest extends TestCase
 {

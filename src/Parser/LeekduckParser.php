@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Parser;
+namespace PokemonGoApi\PogoAPI\Parser;
 
 use DOMDocument;
 use DOMElement;
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
-use PokemonGoLingen\PogoAPI\Types\PokemonImage;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonImage;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function assert;
 use function count;

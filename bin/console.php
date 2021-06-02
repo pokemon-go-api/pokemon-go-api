@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-use PokemonGoLingen\PogoAPI\CacheLoader;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
-use PokemonGoLingen\PogoAPI\Logger\PrintLogger;
-use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
-use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
-use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
-use PokemonGoLingen\PogoAPI\Parser\PokebattlerParser;
-use PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser;
-use PokemonGoLingen\PogoAPI\Parser\SilphRoadResearchTaskParser;
-use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
-use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
-use PokemonGoLingen\PogoAPI\Renderer\PokemonRenderer;
-use PokemonGoLingen\PogoAPI\Renderer\RaidBossGraphicRenderer;
-use PokemonGoLingen\PogoAPI\Renderer\RaidBossListRenderer;
-use PokemonGoLingen\PogoAPI\Renderer\ResearchTasksRenderer;
-use PokemonGoLingen\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
-use PokemonGoLingen\PogoAPI\Types\BattleConfiguration;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
-use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
+use PokemonGoApi\PogoAPI\CacheLoader;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoApi\PogoAPI\Logger\PrintLogger;
+use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
+use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
+use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
+use PokemonGoApi\PogoAPI\Parser\PokebattlerParser;
+use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
+use PokemonGoApi\PogoAPI\Parser\SilphRoadResearchTaskParser;
+use PokemonGoApi\PogoAPI\Parser\TranslationParser;
+use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
+use PokemonGoApi\PogoAPI\Renderer\PokemonRenderer;
+use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
+use PokemonGoApi\PogoAPI\Renderer\RaidBossListRenderer;
+use PokemonGoApi\PogoAPI\Renderer\ResearchTasksRenderer;
+use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
+use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
 require __DIR__ . '/../vendor/autoload.php';
 

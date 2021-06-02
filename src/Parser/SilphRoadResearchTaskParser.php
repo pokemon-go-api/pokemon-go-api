@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Parser;
+namespace PokemonGoApi\PogoAPI\Parser;
 
 use DOMDocument;
 use DOMElement;
 use DOMNodeList;
 use DOMXPath;
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchReward;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTask;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTaskQuest;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchReward;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTaskQuest;
 
 use function assert;
 use function count;

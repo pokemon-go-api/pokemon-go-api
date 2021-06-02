@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\WeatherBoost;
+use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
  *
- * @covers \PokemonGoLingen\PogoAPI\Types\WeatherBoost
+ * @covers \PokemonGoApi\PogoAPI\Types\WeatherBoost
  */
 class WeatherBoostTest extends TestCase
 {

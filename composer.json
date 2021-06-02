@@ -1,5 +1,5 @@
 {
-    "name": "pokemongo-lingen/pogo-api",
+    "name": "pokemongo-api/pogo-api",
     "description": "Pokemon GO Pokedex and Raid API",
     "license": "proprietary",
     "require": {
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "PokemonGoLingen\\PogoAPI\\": "src"
+            "PokemonGoApi\\PogoAPI\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Unit\\PokemonGoLingen\\PogoAPI\\": "tests/Unit",
-            "Tests\\Integration\\PokemonGoLingen\\PogoAPI\\": "tests/Integration"
+            "Tests\\Unit\\PokemonGoApi\\PogoAPI\\": "tests/Unit",
+            "Tests\\Integration\\PokemonGoApi\\PogoAPI\\": "tests/Integration"
         }
     },
     "require-dev": {

@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\PokemonStats;
-use PokemonGoLingen\PogoAPI\Util\CpCalculator;
+use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Util\CpCalculator;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonStats
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonStats
  *
- * @covers \PokemonGoLingen\PogoAPI\Util\CpCalculator
+ * @covers \PokemonGoApi\PogoAPI\Util\CpCalculator
  */
 class CpCalculatorTest extends TestCase
 {

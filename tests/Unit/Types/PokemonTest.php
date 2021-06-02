@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonStats;
 
 use function file_get_contents;
 use function json_decode;
@@ -14,11 +14,11 @@ use function json_decode;
 use const JSON_THROW_ON_ERROR;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonStats
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses \PokemonGoLingen\PogoAPI\Types\TemporaryEvolution
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonStats
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\TemporaryEvolution
  *
- * @covers \PokemonGoLingen\PogoAPI\Types\Pokemon
+ * @covers \PokemonGoApi\PogoAPI\Types\Pokemon
  */
 class PokemonTest extends TestCase
 {

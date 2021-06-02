@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Collections;
+namespace PokemonGoApi\PogoAPI\Collections;
 
 use Exception;
 

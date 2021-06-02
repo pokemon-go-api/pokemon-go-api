@@ -5,22 +5,22 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Parser\LeekduckParser;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function array_map;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Collections\RaidBossCollection
- * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonImage
+ * @uses \PokemonGoApi\PogoAPI\Collections\RaidBossCollection
+ * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\RaidBoss
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonImage
  *
- * @covers \PokemonGoLingen\PogoAPI\Parser\LeekduckParser
+ * @covers \PokemonGoApi\PogoAPI\Parser\LeekduckParser
  */
 class LeekduckParserTest extends TestCase
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Parser;
+namespace PokemonGoApi\PogoAPI\Parser;
 
 use Exception;
-use PokemonGoLingen\PogoAPI\CacheLoader;
-use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
-use PokemonGoLingen\PogoAPI\Types\BattleConfiguration;
-use PokemonGoLingen\PogoAPI\Types\BattleResult;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\CacheLoader;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
+use PokemonGoApi\PogoAPI\Types\BattleResult;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function file_get_contents;
 use function http_build_query;

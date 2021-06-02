@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\RaidOverwrite;
+namespace PokemonGoApi\PogoAPI\RaidOverwrite;
 
 use DateTimeImmutable;
 use DateTimeZone;

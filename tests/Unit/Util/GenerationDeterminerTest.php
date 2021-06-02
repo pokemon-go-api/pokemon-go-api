@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
+use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\Util\GenerationDeterminer
+ * @covers \PokemonGoApi\PogoAPI\Util\GenerationDeterminer
  */
 class GenerationDeterminerTest extends TestCase
 {

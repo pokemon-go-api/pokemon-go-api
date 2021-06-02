@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\Collections\TranslationCollection
+ * @covers \PokemonGoApi\PogoAPI\Collections\TranslationCollection
  */
 class TranslationCollectionTest extends TestCase
 {

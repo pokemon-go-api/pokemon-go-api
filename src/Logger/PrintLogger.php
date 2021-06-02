@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Logger;
+namespace PokemonGoApi\PogoAPI\Logger;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerTrait;

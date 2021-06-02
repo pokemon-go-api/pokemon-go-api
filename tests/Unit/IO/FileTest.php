@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\IO;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\IO\File;
+use PokemonGoApi\PogoAPI\IO\File;
 
 use function random_bytes;
 use function sys_get_temp_dir;
 use function unlink;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\IO\File
+ * @covers \PokemonGoApi\PogoAPI\IO\File
  */
 class FileTest extends TestCase
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @covers \PokemonGoApi\PogoAPI\Types\PokemonType
  */
 class PokemonTypeTest extends TestCase
 {

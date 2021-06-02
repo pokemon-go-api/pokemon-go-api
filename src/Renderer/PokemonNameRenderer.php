@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Renderer;
+namespace PokemonGoApi\PogoAPI\Renderer;
 
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
 
 use function array_shift;
 use function sprintf;

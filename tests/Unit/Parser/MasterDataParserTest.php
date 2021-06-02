@@ -5,27 +5,27 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Parser\MasterDataParser;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonCombatMove;
-use PokemonGoLingen\PogoAPI\Types\PokemonCombatMoveBuffs;
-use PokemonGoLingen\PogoAPI\Types\PokemonMove;
-use PokemonGoLingen\PogoAPI\Types\PokemonStats;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
+use PokemonGoApi\PogoAPI\Types\PokemonCombatMoveBuffs;
+use PokemonGoApi\PogoAPI\Types\PokemonMove;
+use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function array_map;
 
 /**
- * @uses   \PokemonGoLingen\PogoAPI\Collections\AttacksCollection
- * @uses   \PokemonGoLingen\PogoAPI\Collections\PokemonCollection
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonCombatMove
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonMove
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses   \PokemonGoLingen\PogoAPI\Types\Pokemon
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonStats
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonCombatMoveBuffs
+ * @uses   \PokemonGoApi\PogoAPI\Collections\AttacksCollection
+ * @uses   \PokemonGoApi\PogoAPI\Collections\PokemonCollection
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonCombatMove
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonMove
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses   \PokemonGoApi\PogoAPI\Types\Pokemon
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonStats
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonCombatMoveBuffs
  *
- * @covers \PokemonGoLingen\PogoAPI\Parser\MasterDataParser
+ * @covers \PokemonGoApi\PogoAPI\Parser\MasterDataParser
  */
 class MasterDataParserTest extends TestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Util;
+namespace PokemonGoApi\PogoAPI\Util;
 
 use Exception;
-use PokemonGoLingen\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Types\PokemonStats;
 
 use function floor;
 use function pow;

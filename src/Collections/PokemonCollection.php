@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Collections;
+namespace PokemonGoApi\PogoAPI\Collections;
 
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
 
 use function array_key_exists;
 

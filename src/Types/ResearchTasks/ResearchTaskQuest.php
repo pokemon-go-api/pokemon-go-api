@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Types\ResearchTasks;
+namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 
 final class ResearchTaskQuest
 {
