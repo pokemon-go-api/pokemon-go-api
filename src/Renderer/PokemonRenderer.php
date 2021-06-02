@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Renderer;
+namespace PokemonGoApi\PogoAPI\Renderer;
 
-use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
-use PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Util\GenerationDeterminer;
+use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
 use function array_map;
 

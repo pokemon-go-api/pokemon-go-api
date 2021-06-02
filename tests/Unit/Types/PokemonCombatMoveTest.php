@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\PokemonCombatMove;
+use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
 
 use function file_get_contents;
 use function json_decode;
@@ -13,7 +13,7 @@ use function json_decode;
 use const JSON_THROW_ON_ERROR;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\Types\PokemonCombatMove
+ * @covers \PokemonGoApi\PogoAPI\Types\PokemonCombatMove
  */
 class PokemonCombatMoveTest extends TestCase
 {

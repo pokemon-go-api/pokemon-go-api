@@ -6,10 +6,10 @@ namespace Tests\Unit\PokemonGoLingen\PogoAPI;
 
 use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\CacheLoader;
-use PokemonGoLingen\PogoAPI\IO\File;
-use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
-use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
+use PokemonGoApi\PogoAPI\CacheLoader;
+use PokemonGoApi\PogoAPI\IO\File;
+use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoApi\PogoAPI\Logger\NoopLogger;
 
 use function array_filter;
 use function array_map;
@@ -22,10 +22,10 @@ use function unlink;
 use const DATE_ATOM;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\IO\File
- * @uses \PokemonGoLingen\PogoAPI\Logger\NoopLogger
+ * @uses \PokemonGoApi\PogoAPI\IO\File
+ * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
  *
- * @covers \PokemonGoLingen\PogoAPI\CacheLoader
+ * @covers \PokemonGoApi\PogoAPI\CacheLoader
  */
 class CacheLoaderTest extends TestCase
 {

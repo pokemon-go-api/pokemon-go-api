@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Util;
+namespace PokemonGoApi\PogoAPI\Util;
 
 final class GenerationDeterminer
 {

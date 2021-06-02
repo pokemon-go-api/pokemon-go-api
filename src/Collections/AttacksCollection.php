@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Collections;
+namespace PokemonGoApi\PogoAPI\Collections;
 
-use PokemonGoLingen\PogoAPI\Types\PokemonMove;
+use PokemonGoApi\PogoAPI\Types\PokemonMove;
 
 final class AttacksCollection
 {

@@ -8,14 +8,14 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
-use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
+use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoApi\PogoAPI\Logger\NoopLogger;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\IO\File
- * @uses \PokemonGoLingen\PogoAPI\Logger\NoopLogger
+ * @uses \PokemonGoApi\PogoAPI\IO\File
+ * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
  *
- * @covers \PokemonGoLingen\PogoAPI\IO\RemoteFileLoader
+ * @covers \PokemonGoApi\PogoAPI\IO\RemoteFileLoader
  */
 class RemoteFileLoaderTest extends TestCase
 {

@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection;
+use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonImage
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonImage
  *
- * @covers \PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection
+ * @covers \PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection
  */
 class PokemonAssetsCollectionTest extends TestCase
 {

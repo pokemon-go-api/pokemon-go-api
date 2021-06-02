@@ -6,16 +6,16 @@ namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
 
 use Generator;
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Util\TypeWeatherCalculator;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
 use function count;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses \PokemonGoLingen\PogoAPI\Types\WeatherBoost
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\WeatherBoost
  *
- * @covers \PokemonGoLingen\PogoAPI\Util\TypeWeatherCalculator
+ * @covers \PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator
  */
 class TypeWeatherCalculatorTest extends TestCase
 {

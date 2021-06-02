@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Util;
+namespace PokemonGoApi\PogoAPI\Util;
 
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\WeatherBoost;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 
 use function array_values;
 use function in_array;

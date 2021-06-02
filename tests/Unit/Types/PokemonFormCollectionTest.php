@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\PokemonFormCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
 
 use function file_get_contents;
 use function json_decode;
@@ -13,8 +13,8 @@ use function json_decode;
 use const JSON_THROW_ON_ERROR;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\Types\PokemonFormCollection
- * @covers \PokemonGoLingen\PogoAPI\Types\PokemonForm
+ * @covers \PokemonGoApi\PogoAPI\Types\PokemonFormCollection
+ * @covers \PokemonGoApi\PogoAPI\Types\PokemonForm
  */
 class PokemonFormCollectionTest extends TestCase
 {

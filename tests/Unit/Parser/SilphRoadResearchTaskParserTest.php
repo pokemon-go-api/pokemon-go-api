@@ -5,25 +5,25 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
-use PokemonGoLingen\PogoAPI\Parser\SilphRoadResearchTaskParser;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchReward;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTask;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTaskQuest;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
+use PokemonGoApi\PogoAPI\Parser\SilphRoadResearchTaskParser;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchReward;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTaskQuest;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTask
- * @uses \PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTaskQuest
- * @uses \PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchReward
- * @uses \PokemonGoLingen\PogoAPI\Collections\TranslationCollection
- * @uses \PokemonGoLingen\PogoAPI\Collections\PokemonCollection
- * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask
+ * @uses \PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTaskQuest
+ * @uses \PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchReward
+ * @uses \PokemonGoApi\PogoAPI\Collections\TranslationCollection
+ * @uses \PokemonGoApi\PogoAPI\Collections\PokemonCollection
+ * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
  *
- * @covers \PokemonGoLingen\PogoAPI\Parser\SilphRoadResearchTaskParser
+ * @covers \PokemonGoApi\PogoAPI\Parser\SilphRoadResearchTaskParser
  */
 class SilphRoadResearchTaskParserTest extends TestCase
 {

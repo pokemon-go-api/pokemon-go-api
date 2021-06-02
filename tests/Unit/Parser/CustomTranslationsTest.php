@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
-use PokemonGoLingen\PogoAPI\Parser\TranslationParser;
+use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
+use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 
 use function count;
 
 /**
- * @covers \PokemonGoLingen\PogoAPI\Parser\CustomTranslations
+ * @covers \PokemonGoApi\PogoAPI\Parser\CustomTranslations
  */
 class CustomTranslationsTest extends TestCase
 {

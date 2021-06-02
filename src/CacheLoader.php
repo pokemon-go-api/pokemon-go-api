@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI;
+namespace PokemonGoApi\PogoAPI;
 
 use DateTimeImmutable;
 use JsonException;
-use PokemonGoLingen\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 use stdClass;

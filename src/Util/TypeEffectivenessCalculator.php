@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Util;
+namespace PokemonGoApi\PogoAPI\Util;
 
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function array_combine;
 use function array_fill;

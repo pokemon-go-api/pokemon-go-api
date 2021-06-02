@@ -5,17 +5,17 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
- * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
+ * @uses \PokemonGoApi\PogoAPI\Types\RaidBoss
  *
- * @covers \PokemonGoLingen\PogoAPI\Collections\RaidBossCollection
+ * @covers \PokemonGoApi\PogoAPI\Collections\RaidBossCollection
  */
 class RaidBossCollectionTest extends TestCase
 {

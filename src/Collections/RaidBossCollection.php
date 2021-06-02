@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Collections;
+namespace PokemonGoApi\PogoAPI\Collections;
 
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function array_key_exists;
 use function array_values;

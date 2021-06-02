@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Types;
+namespace PokemonGoApi\PogoAPI\Types;
 
 final class BattleConfiguration
 {

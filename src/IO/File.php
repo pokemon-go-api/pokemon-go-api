@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\IO;
+namespace PokemonGoApi\PogoAPI\IO;
 
 use function file_put_contents;
 

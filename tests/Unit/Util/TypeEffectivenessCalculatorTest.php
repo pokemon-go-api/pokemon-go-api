@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Util\TypeEffectivenessCalculator;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Util\TypeEffectivenessCalculator;
 
 use function array_filter;
 use function array_keys;
 
 /**
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonType
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonType
  *
- * @covers \PokemonGoLingen\PogoAPI\Util\TypeEffectivenessCalculator
+ * @covers \PokemonGoApi\PogoAPI\Util\TypeEffectivenessCalculator
  */
 class TypeEffectivenessCalculatorTest extends TestCase
 {

@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser;
+use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Collections\PokemonAssetsCollection
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonImage
+ * @uses \PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonImage
  *
- * @covers \PokemonGoLingen\PogoAPI\Parser\PokemonGoImagesParser
+ * @covers \PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser
  */
 class PokemonGoImagesParserTest extends TestCase
 {

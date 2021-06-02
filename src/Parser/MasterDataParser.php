@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Parser;
+namespace PokemonGoApi\PogoAPI\Parser;
 
 use Exception;
-use PokemonGoLingen\PogoAPI\Collections\AttacksCollection;
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonCombatMove;
-use PokemonGoLingen\PogoAPI\Types\PokemonFormCollection;
-use PokemonGoLingen\PogoAPI\Types\PokemonMove;
+use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
+use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonMove;
 use stdClass;
 
 use function assert;

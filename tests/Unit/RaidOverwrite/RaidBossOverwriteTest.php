@@ -7,24 +7,24 @@ namespace Tests\Unit\PokemonGoLingen\PogoAPI\RaidOverwrite;
 use DateTimeImmutable;
 use DateTimeZone;
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
-use PokemonGoLingen\PogoAPI\Logger\NoopLogger;
-use PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Logger\NoopLogger;
+use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 /**
- * @uses \PokemonGoLingen\PogoAPI\Collections\PokemonCollection
- * @uses \PokemonGoLingen\PogoAPI\Collections\RaidBossCollection
- * @uses \PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwriteStruct
- * @uses \PokemonGoLingen\PogoAPI\Types\Pokemon
- * @uses \PokemonGoLingen\PogoAPI\Types\RaidBoss
- * @uses \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses \PokemonGoLingen\PogoAPI\Logger\NoopLogger
+ * @uses \PokemonGoApi\PogoAPI\Collections\PokemonCollection
+ * @uses \PokemonGoApi\PogoAPI\Collections\RaidBossCollection
+ * @uses \PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwriteStruct
+ * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
+ * @uses \PokemonGoApi\PogoAPI\Types\RaidBoss
+ * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
  *
- * @covers \PokemonGoLingen\PogoAPI\RaidOverwrite\RaidBossOverwrite
+ * @covers \PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite
  */
 class RaidBossOverwriteTest extends TestCase
 {

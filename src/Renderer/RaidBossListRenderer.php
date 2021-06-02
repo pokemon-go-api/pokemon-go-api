@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Renderer;
+namespace PokemonGoApi\PogoAPI\Renderer;
 
-use PokemonGoLingen\PogoAPI\Collections\RaidBossCollection;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoLingen\PogoAPI\Types\PokemonStats;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\RaidBoss;
-use PokemonGoLingen\PogoAPI\Types\WeatherBoost;
-use PokemonGoLingen\PogoAPI\Util\CpCalculator;
-use PokemonGoLingen\PogoAPI\Util\TypeEffectivenessCalculator;
-use PokemonGoLingen\PogoAPI\Util\TypeWeatherCalculator;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\WeatherBoost;
+use PokemonGoApi\PogoAPI\Util\CpCalculator;
+use PokemonGoApi\PogoAPI\Util\TypeEffectivenessCalculator;
+use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
 use function array_filter;
 use function array_map;

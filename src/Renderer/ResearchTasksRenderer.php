@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoLingen\PogoAPI\Renderer;
+namespace PokemonGoApi\PogoAPI\Renderer;
 
-use PokemonGoLingen\PogoAPI\Collections\PokemonCollection;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoLingen\PogoAPI\Types\PokemonStats;
-use PokemonGoLingen\PogoAPI\Types\ResearchTasks\ResearchTask;
-use PokemonGoLingen\PogoAPI\Util\CpCalculator;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
+use PokemonGoApi\PogoAPI\Util\CpCalculator;
 
 use function str_replace;
 

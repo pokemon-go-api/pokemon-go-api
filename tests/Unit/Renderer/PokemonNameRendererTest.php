@@ -5,23 +5,23 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Renderer;
 
 use PHPUnit\Framework\TestCase;
-use PokemonGoLingen\PogoAPI\Collections\TranslationCollection;
-use PokemonGoLingen\PogoAPI\Parser\CustomTranslations;
-use PokemonGoLingen\PogoAPI\Renderer\PokemonNameRenderer;
-use PokemonGoLingen\PogoAPI\Types\Pokemon;
-use PokemonGoLingen\PogoAPI\Types\PokemonForm;
-use PokemonGoLingen\PogoAPI\Types\PokemonType;
-use PokemonGoLingen\PogoAPI\Types\TemporaryEvolution;
+use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
+use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
+use PokemonGoApi\PogoAPI\Renderer\PokemonNameRenderer;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonForm;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
 
 /**
- * @uses   \PokemonGoLingen\PogoAPI\Types\Pokemon
- * @uses   \PokemonGoLingen\PogoAPI\Collections\TranslationCollection
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonType
- * @uses   \PokemonGoLingen\PogoAPI\Types\TemporaryEvolution
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonForm
- * @uses   \PokemonGoLingen\PogoAPI\Parser\CustomTranslations
+ * @uses   \PokemonGoApi\PogoAPI\Types\Pokemon
+ * @uses   \PokemonGoApi\PogoAPI\Collections\TranslationCollection
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonType
+ * @uses   \PokemonGoApi\PogoAPI\Types\TemporaryEvolution
+ * @uses   \PokemonGoApi\PogoAPI\Types\PokemonForm
+ * @uses   \PokemonGoApi\PogoAPI\Parser\CustomTranslations
  *
- * @covers \PokemonGoLingen\PogoAPI\Renderer\PokemonNameRenderer
+ * @covers \PokemonGoApi\PogoAPI\Renderer\PokemonNameRenderer
  */
 class PokemonNameRendererTest extends TestCase
 {
