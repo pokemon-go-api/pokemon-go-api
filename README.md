@@ -1,7 +1,7 @@
 # Pokemon GO Pokedex API
 
 This project shows the latest Pokemon GO Pokemon Data as a JSON API.
-As source the GameMaster Files from PokeMasters are used.
+As source the GameMaster Files from PokeMiners are used.
 
 For the current Raidbosses multiple sources are available.
 The current Source can be found in the bottom of the Raid Info Graphics. 
