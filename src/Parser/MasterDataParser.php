@@ -7,6 +7,7 @@ namespace PokemonGoApi\PogoAPI\Parser;
 use Exception;
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
@@ -16,12 +17,9 @@ use stdClass;
 use function assert;
 use function count;
 use function file_get_contents;
-use function json_decode;
 use function preg_match;
 use function strpos;
 use function substr;
-
-use const JSON_THROW_ON_ERROR;
 
 class MasterDataParser
 {
@@ -41,7 +39,7 @@ class MasterDataParser
             throw new Exception('file does not exists');
         }
 
-        $list                    = json_decode($fileContent, false, 512, JSON_THROW_ON_ERROR);
+        $list                    = JsonParser::decodeToArray($fileContent);
         $this->attacksCollection = $this->parseMoves($list);
         $this->pokemonCollection = $this->parsePokemon($list);
 
