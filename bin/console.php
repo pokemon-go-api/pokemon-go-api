@@ -20,8 +20,11 @@ use PokemonGoApi\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoApi\PogoAPI\Renderer\ResearchTasksRenderer;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
+use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -65,6 +68,31 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
 
 $pokemonRenderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
 $files           = [];
+
+$logger->debug('Generate Types');
+
+$typeWeatherCalculator = new TypeWeatherCalculator();
+$outputTypes = [];
+foreach (PokemonType::ALL_TYPES as $typeName) {
+    $type = PokemonType::createFromPokemonType($typeName);
+    $weatherBoost = [];
+    foreach($typeWeatherCalculator->getWeatherBoost($type, PokemonType::none()) as $weatherBoost) {
+        $weatherBoost = [
+            'id' => $weatherBoost->getWeather(),
+            'name' => [], // read weather_snow
+            'assetName' => $weatherBoost->getAssetsName(),
+        ];
+    }
+    $outputTypes[] = [
+        'type' => $type->getType(),
+        'name' => [], // read pokemon_type_fighting
+        'doubleDamageFrom' => $type->getDoubleDamageFrom(),
+        'halfDamageFrom' => $type->getHalfDamageFrom(),
+        'noDamageFrom' => $type->getNoDamageFrom(),
+        'weatherBoost' =>$weatherBoost
+    ];
+}
+$files['types'] = $outputTypes;
 
 $logger->debug('Generate Pokemon');
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {

@@ -294,7 +294,9 @@ paths:
                       type: array
                       uniqueItems: true
                       items:
-                        $ref: '#/components/schemas/Encounter'
+                        oneOf:
+                          - $ref: '#/components/schemas/PokemonEncounter'
+                          - $ref: '#/components/schemas/MegaEnergyEncounter'
                     quest:
                       $ref: '#/components/schemas/Names'
                   required:
@@ -713,11 +715,35 @@ components:
       items:
         type: integer
         minimum: 0
-    Encounter:
+    MegaEnergyEncounter:
+      type: object
+      title: Mega Energy
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          enum:
+            - MEGA_ENERGY
+        id:
+          type: string
+        energy:
+          type: integer
+        name:
+          $ref: '#/components/schemas/Names'
+      required:
+        - type
+        - id
+        - energy
+        - name
+    PokemonEncounter:
       type: object
       title: Encounter
       additionalProperties: false
       properties:
+        type:
+          type: string
+          enum:
+            - POKEMON
         id:
           type: string
         shiny:
@@ -729,6 +755,7 @@ components:
         name:
           $ref: '#/components/schemas/Names'
       required:
+        - type
         - id
         - shiny
         - cpRange

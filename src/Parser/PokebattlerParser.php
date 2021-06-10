@@ -7,16 +7,14 @@ namespace PokemonGoApi\PogoAPI\Parser;
 use Exception;
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
 use PokemonGoApi\PogoAPI\Types\BattleResult;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function file_get_contents;
 use function http_build_query;
-use function json_decode;
 use function sprintf;
-
-use const JSON_THROW_ON_ERROR;
 
 class PokebattlerParser
 {
@@ -43,12 +41,7 @@ class PokebattlerParser
                     $this->buildCacheKey($raidBoss, $battleConfiguration)
                 );
 
-                $json = json_decode(
-                    file_get_contents($pokebattlerResultFile) ?: 'false',
-                    false,
-                    512,
-                    JSON_THROW_ON_ERROR
-                );
+                $json = JsonParser::decodeToObject(file_get_contents($pokebattlerResultFile) ?: '[]');
 
                 if (! isset($json->attackers)) {
                     continue;
