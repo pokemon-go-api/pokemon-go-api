@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Parser;
 
 use Exception;
+use GuzzleHttp\Exception\ClientException;
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
@@ -38,10 +39,17 @@ class PokebattlerParser
         foreach ($raidBossCollection->toArray() as $raidBoss) {
             $battleResults = [];
             foreach ($this->battleConfigurations as $battleConfiguration) {
-                $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
-                    $this->buildApiUrl($raidBoss, $battleConfiguration),
-                    $this->buildCacheKey($raidBoss, $battleConfiguration)
-                );
+                try {
+                    $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
+                        $this->buildApiUrl($raidBoss, $battleConfiguration),
+                        $this->buildCacheKey($raidBoss, $battleConfiguration)
+                    );
+                } catch (ClientException $clientException) {
+                    $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
+                        $this->buildApiUrl($raidBoss, $battleConfiguration, false),
+                        $this->buildCacheKey($raidBoss, $battleConfiguration)
+                    );
+                }
 
                 $json = json_decode(
                     file_get_contents($pokebattlerResultFile) ?: 'false',
@@ -71,12 +79,15 @@ class PokebattlerParser
         return $raidBossCollection;
     }
 
-    private function buildApiUrl(RaidBoss $raidBoss, BattleConfiguration $battleConfiguration): string
-    {
+    private function buildApiUrl(
+        RaidBoss $raidBoss,
+        BattleConfiguration $battleConfiguration,
+        bool $withForm = true
+    ): string {
         $url = sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong
             'https://fight.pokebattler.com/raids/defenders/%s/levels/RAID_LEVEL_%s/attackers/levels/%d/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?',
-            $this->raidBossName($raidBoss),
+            $this->raidBossName($raidBoss, $withForm),
             $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel()),
             $battleConfiguration->getPokemonLevel()
         );
@@ -119,13 +130,13 @@ class PokebattlerParser
         }
     }
 
-    private function raidBossName(RaidBoss $raidBoss): string
+    private function raidBossName(RaidBoss $raidBoss, bool $withForm): string
     {
-        if ($raidBoss->getPokemon()->getPokemonForm() !== null) {
+        if ($withForm && $raidBoss->getPokemon()->getPokemonForm() !== null) {
             return $raidBoss->getPokemonId() . '_FORM';
         }
 
-        return $raidBoss->getPokemonId();
+        return $raidBoss->getPokemon()->getId();
     }
 
     private function buildCacheKey(RaidBoss $raidBoss, BattleConfiguration $battleConfiguration): string
