@@ -8,6 +8,7 @@ use DOMDocument;
 use DOMElement;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
@@ -87,6 +88,16 @@ class LeekduckParser
                 if ($basePokemon === null || $pokemon === null) {
                     continue;
                 }
+
+                $pokemon->setPokemonForm(
+                    new PokemonForm(
+                        $pokemon->getId(),
+                        $pokemon->getFormId(),
+                        $pokemonImage->getAssetBundleValue(),
+                        $pokemonImage->getAssetBundleSuffix(),
+                        false
+                    )
+                );
 
                 $pokemonIdParts = [$basePokemon->getId()];
                 if ($formName !== null) {

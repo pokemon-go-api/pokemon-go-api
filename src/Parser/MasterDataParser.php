@@ -15,6 +15,7 @@ use PokemonGoApi\PogoAPI\Types\PokemonMove;
 use stdClass;
 
 use function assert;
+use function count;
 use function file_get_contents;
 use function preg_match;
 use function strpos;
@@ -195,6 +196,8 @@ class MasterDataParser
 
             $pokemonFormCollection = PokemonFormCollection::createFromGameMaster($item->data);
 
+            $overwriteDefaultForms = [];
+
             foreach ($pokemonFormCollection->getPokemonForms() as $pokemonForm) {
                 if ($pokemonForm->getId() === $pokemon->getId() . '_NORMAL') {
                     $pokemon->setPokemonForm($pokemonForm);
@@ -215,9 +218,15 @@ class MasterDataParser
                         continue;
                     }
 
-                    $pokemon->overwriteDefaultPokemonForm($pokemonForm);
+                    $overwriteDefaultForms[] = $pokemonForm;
                 }
             }
+
+            if (count($overwriteDefaultForms) !== 1) {
+                continue;
+            }
+
+            $pokemon->overwriteDefaultPokemonForm($overwriteDefaultForms[0]);
         }
     }
 }
