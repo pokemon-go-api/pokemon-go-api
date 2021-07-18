@@ -48,21 +48,21 @@ class LeekduckParser
             assert($liItem instanceof DOMElement);
             $attributeClass = $liItem->attributes !== null ? $liItem->attributes->getNamedItem('class') : null;
             if ($attributeClass !== null && $attributeClass->nodeValue === 'header-li') {
-                $currentTierLevelText = trim(str_replace('Tier', '', $liItem->textContent));
-                switch ($currentTierLevelText) {
-                    case 'EX':
+                $currentTierLevelText = trim($liItem->textContent);
+                switch (true) {
+                    case stripos($currentTierLevelText, 'EX') === 0:
                         $currentTierLevel = RaidBoss::RAID_LEVEL_EX;
                         break;
-                    case 'Mega':
+                    case stripos($currentTierLevelText, 'Mega') === 0:
                         $currentTierLevel = RaidBoss::RAID_LEVEL_MEGA;
                         break;
-                    case '5':
+                    case stripos($currentTierLevelText, 'Tier 5') === 0:
                         $currentTierLevel = RaidBoss::RAID_LEVEL_5;
                         break;
-                    case '3':
+                    case stripos($currentTierLevelText, 'Tier 3') === 0:
                         $currentTierLevel = RaidBoss::RAID_LEVEL_3;
                         break;
-                    case '1':
+                    case stripos($currentTierLevelText, 'Tier 1') === 0:
                         $currentTierLevel = RaidBoss::RAID_LEVEL_1;
                         break;
                 }
