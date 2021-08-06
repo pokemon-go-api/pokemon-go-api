@@ -25,6 +25,7 @@ use function hash_file;
 use function is_file;
 use function json_encode;
 use function pathinfo;
+use function sleep;
 use function sprintf;
 
 use const DATE_ATOM;
@@ -223,7 +224,7 @@ class CacheLoader
     {
         $cacheFile = $this->cacheDir . 'pokebattler_' . $cacheKey . '.json';
         $cacheKey  = 'pokebattler/' . $cacheKey;
-        if (array_key_exists($cacheKey, $this->cachedData)) {
+        if (array_key_exists($cacheKey, $this->cachedData) && is_file($cacheFile)) {
             return $cacheFile;
         }
 
@@ -233,6 +234,7 @@ class CacheLoader
         ));
         $this->remoteFileLoader->load($pokebattlerApiUrl)->saveTo($cacheFile);
         $this->cachedData[$cacheKey] = date(DATE_ATOM);
+        sleep(1);
 
         return $cacheFile;
     }

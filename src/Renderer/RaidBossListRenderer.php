@@ -56,7 +56,7 @@ final class RaidBossListRenderer
             $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
             $raidData      = [
                 'id'           => $raidBoss->getPokemon()->getId(),
-                'form'         => $raidBoss->getPokemonId(),
+                'form'         => $raidBoss->getPokemonWithMegaFormId(),
                 'assets'        => [
                     'image' => $raidBoss->getPokemonImage()->buildUrl(false),
                     'shinyImage' => $raidBoss->getPokemonImage()->buildUrl(true),

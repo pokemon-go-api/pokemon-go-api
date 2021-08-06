@@ -21,7 +21,7 @@ final class RaidBossCollection
             return;
         }
 
-        $this->storage[$raidBoss->getPokemonId()] = $raidBoss;
+        $this->storage[$raidBoss->getPokemonWithMegaFormId()] = $raidBoss;
     }
 
     public function getById(string $id): ?RaidBoss
@@ -39,7 +39,7 @@ final class RaidBossCollection
             return null;
         }
 
-        return $this->storage[$raidBoss->getPokemonId()];
+        return $this->storage[$raidBoss->getPokemonWithMegaFormId()];
     }
 
     public function remove(string $pokemonId): void
@@ -53,7 +53,7 @@ final class RaidBossCollection
 
     public function has(RaidBoss $raidBoss): bool
     {
-        return array_key_exists($raidBoss->getPokemonId(), $this->storage);
+        return array_key_exists($raidBoss->getPokemonWithMegaFormId(), $this->storage);
     }
 
     /** @return RaidBoss[] */

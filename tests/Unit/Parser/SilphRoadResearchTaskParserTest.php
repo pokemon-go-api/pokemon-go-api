@@ -57,7 +57,7 @@ class SilphRoadResearchTaskParserTest extends TestCase
 
         self::assertEquals([
             new ResearchTask(
-                new ResearchTaskQuest('dummy_evolve', null),
+                new ResearchTaskQuest('dummy_evolve', 1),
                 new ResearchRewardMegaEnergy('80', 20)
             ),
             new ResearchTask(

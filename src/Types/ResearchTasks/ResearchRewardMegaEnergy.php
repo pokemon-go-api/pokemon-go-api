@@ -14,7 +14,7 @@ final class ResearchRewardMegaEnergy implements ResearchReward
         int $megaEnergy
     ) {
         $this->pokemonFormId = $pokemonFormId;
-        $this->megaEnergy = $megaEnergy;
+        $this->megaEnergy    = $megaEnergy;
     }
 
     public function getPokemonFormId(): string

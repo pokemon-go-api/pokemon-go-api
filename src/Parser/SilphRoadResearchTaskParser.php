@@ -87,11 +87,10 @@ class SilphRoadResearchTaskParser
 
                 if (strpos($rewardItem->getAttribute('class'), 'tr_mega') !== false) {
                     $megaEnergy = (int) $rewardItem->textContent;
-                    $rewards[] = new ResearchRewardMegaEnergy($pokemonId, $megaEnergy);
+                    $rewards[]  = new ResearchRewardMegaEnergy($pokemonId, $megaEnergy);
                 } else {
                     $rewards[] = new ResearchRewardPokemon($pokemonId, $shiny);
                 }
-
             }
 
             if (count($rewards) === 0) {
@@ -137,7 +136,7 @@ class SilphRoadResearchTaskParser
                 return null;
             }
 
-            return $pokemonByDex->getFormId();
+            return $pokemonByDex->getId();
         }
 
         if (preg_match('~/96x96/(.*?).png$~', $imageSrc, $match)) {
@@ -147,7 +146,7 @@ class SilphRoadResearchTaskParser
                 return null;
             }
 
-            $pokemon = $pokemonByName->getFormId();
+            $pokemon = $pokemonByName->getId();
             foreach ($pokemonByName->getPokemonRegionForms() as $pokemonForm) {
                 if (stripos($pokemonForm->getFormId(), $imageName[1]) === false) {
                     continue;

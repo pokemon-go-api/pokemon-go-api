@@ -45,7 +45,7 @@ class RaidBossCollectionTest extends TestCase
 
         self::assertNull($collection->getById('NOT_EXISTINGS'));
 
-        $collection->remove($raidBoss->getPokemonId());
+        $collection->remove($raidBoss->getPokemonWithMegaFormId());
         self::assertFalse($collection->has($raidBoss));
     }
 
@@ -67,6 +67,6 @@ class RaidBossCollectionTest extends TestCase
         $collection->add($raidBoss2);
         $collection->add($raidBoss1);
 
-        self::assertSame('TESTPOKEMON_EX', $collection->toArray()[0]->getPokemonId());
+        self::assertSame('TESTPOKEMON_EX', $collection->toArray()[0]->getPokemonWithMegaFormId());
     }
 }

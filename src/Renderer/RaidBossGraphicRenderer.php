@@ -94,7 +94,7 @@ final class RaidBossGraphicRenderer
 
             $raidData = [
                 'id'           => $raidBoss->getPokemon()->getId(),
-                'form'         => $raidBoss->getPokemonId(),
+                'form'         => $raidBoss->getPokemonWithMegaFormId(),
                 'level'        => $raidBoss->getRaidLevel(),
                 'levelIcon'    => $levelIcon,
                 'name'         => $this->getName($raidBoss, $translationCollection),

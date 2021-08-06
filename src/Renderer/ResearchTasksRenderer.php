@@ -51,21 +51,23 @@ final class ResearchTasksRenderer
                     if ($pokemon === null) {
                         continue;
                     }
+
                     $rewards[] = [
                         'type'   => 'MEGA_ENERGY',
-                        'id'     => $pokemon->getFormId(),
+                        'id'     => $pokemon->getId(),
                         'name'   => PokemonNameRenderer::renderPokemonNames($pokemon, $this->translations),
                         'energy' => $reward->getMegaEnergy(),
                     ];
-                } else if ($reward instanceof ResearchRewardPokemon) {
+                } elseif ($reward instanceof ResearchRewardPokemon) {
                     $pokemon = $this->pokemonCollection->getByFormId($reward->getPokemonFormId());
                     if ($pokemon === null) {
                         continue;
                     }
+
                     $pokemonStats = $pokemon->getStats() ?? new PokemonStats(0, 0, 0);
                     $rewards[]    = [
                         'type'    => 'POKEMON',
-                        'id'      => $pokemon->getFormId(),
+                        'id'      => $pokemon->getId(),
                         'shiny'   => $reward->isShiny(),
                         'name'    => PokemonNameRenderer::renderPokemonNames($pokemon, $this->translations),
                         'cpRange' => [

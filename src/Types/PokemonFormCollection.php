@@ -48,8 +48,7 @@ final class PokemonFormCollection
                 $formData->form,
                 $formOnlyId,
                 $formData->assetBundleValue ?? null,
-                $formData->assetBundleSuffix ?? null,
-                $formData->isCostume ?? false,
+                $formData->assetBundleSuffix ?? null
             );
         }
 

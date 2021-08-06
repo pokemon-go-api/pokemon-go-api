@@ -22,7 +22,6 @@ use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
-use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
@@ -69,30 +68,32 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
 $pokemonRenderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
 $files           = [];
 
-$logger->debug('Generate Types');
-
-$typeWeatherCalculator = new TypeWeatherCalculator();
-$outputTypes = [];
-foreach (PokemonType::ALL_TYPES as $typeName) {
-    $type = PokemonType::createFromPokemonType($typeName);
-    $weatherBoost = [];
-    foreach($typeWeatherCalculator->getWeatherBoost($type, PokemonType::none()) as $weatherBoost) {
-        $weatherBoost = [
-            'id' => $weatherBoost->getWeather(),
-            'name' => [], // read weather_snow
-            'assetName' => $weatherBoost->getAssetsName(),
-        ];
-    }
-    $outputTypes[] = [
-        'type' => $type->getType(),
-        'name' => [], // read pokemon_type_fighting
-        'doubleDamageFrom' => $type->getDoubleDamageFrom(),
-        'halfDamageFrom' => $type->getHalfDamageFrom(),
-        'noDamageFrom' => $type->getNoDamageFrom(),
-        'weatherBoost' =>$weatherBoost
-    ];
-}
-$files['types'] = $outputTypes;
+//$logger->debug('Generate Types');
+//
+//$typeWeatherCalculator = new TypeWeatherCalculator();
+//$outputTypes           = [];
+//foreach (PokemonType::ALL_TYPES as $typeName) {
+//    $type         = PokemonType::createFromPokemonType($typeName);
+//    $weatherBoost = [];
+//    foreach ($typeWeatherCalculator->getWeatherBoost($type, PokemonType::none()) as $weatherBoost) {
+//        $weatherBoost = [
+//            'id' => $weatherBoost->getWeather(),
+//            'name' => [], // read weather_snow
+//            'assetName' => $weatherBoost->getAssetsName(),
+//        ];
+//    }
+//
+//    $outputTypes[] = [
+//        'type' => $type->getType(),
+//        'name' => [], // read pokemon_type_fighting
+//        'doubleDamageFrom' => $type->getDoubleDamageFrom(),
+//        'halfDamageFrom' => $type->getHalfDamageFrom(),
+//        'noDamageFrom' => $type->getNoDamageFrom(),
+//        'weatherBoost' => $weatherBoost,
+//    ];
+//}
+//
+//$files['types'] = $outputTypes;
 
 $logger->debug('Generate Pokemon');
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
@@ -153,7 +154,7 @@ $raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
 $logger->debug(
     sprintf('Got %d remote raid bosses', count($raidBosses->toArray())),
     array_map(
-        static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonId(),
+        static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonWithMegaFormId(),
         $raidBosses->toArray()
     )
 );
@@ -170,7 +171,7 @@ $raidBossOverwrite->overwrite($raidBosses);
 $logger->debug(
     sprintf('Got %d raid bosses to render', count($raidBosses->toArray())),
     array_map(
-        static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonId(),
+        static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonWithMegaFormId(),
         $raidBosses->toArray()
     )
 );
