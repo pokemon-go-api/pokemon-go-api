@@ -11,8 +11,12 @@ final class PokemonForm
     private ?string $assetBundleSuffix;
     private string $formOnlyId;
 
-    public function __construct(string $id, string $formOnlyId, ?int $assetBundleValue, ?string $assetBundleSuffix)
-    {
+    public function __construct(
+        string $id,
+        string $formOnlyId,
+        ?int $assetBundleValue,
+        ?string $assetBundleSuffix
+    ) {
         $this->id                = $id;
         $this->assetBundleValue  = $assetBundleValue;
         $this->assetBundleSuffix = $assetBundleSuffix;

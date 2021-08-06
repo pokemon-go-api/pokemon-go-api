@@ -14,6 +14,7 @@ use PokemonGoApi\PogoAPI\Types\PokemonStats;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function array_map;
+use function assert;
 
 /**
  * @uses   \PokemonGoApi\PogoAPI\Collections\AttacksCollection
@@ -24,6 +25,10 @@ use function array_map;
  * @uses   \PokemonGoApi\PogoAPI\Types\Pokemon
  * @uses   \PokemonGoApi\PogoAPI\Types\PokemonStats
  * @uses   \PokemonGoApi\PogoAPI\Types\PokemonCombatMoveBuffs
+ * @uses   \PokemonGoLingen\PogoAPI\IO\JsonParser
+ * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonForm
+ * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonFormCollection
+ * @uses   \PokemonGoLingen\PogoAPI\Types\TemporaryEvolution
  *
  * @covers \PokemonGoApi\PogoAPI\Parser\MasterDataParser
  */
@@ -66,8 +71,11 @@ class MasterDataParserTest extends TestCase
             $meowth->getPokemonRegionForms()
         );
 
+        self::assertSame(61, $meowth->getPokemonRegionForms()['MEOWTH_ALOLA']->getAssetsBundleId());
+        self::assertSame(31, $meowth->getPokemonRegionForms()['MEOWTH_GALARIAN']->getAssetsBundleId());
+
         self::assertEquals([
-            'MEOWTH_ALOLA' => 'MEOWTH_ALOLA',
+            'MEOWTH_ALOLA'    => 'MEOWTH_ALOLA',
             'MEOWTH_GALARIAN' => 'MEOWTH_GALARIAN',
         ], $forms);
         self::assertEquals($pokemonMeowth, $meowth);
@@ -114,5 +122,21 @@ class MasterDataParserTest extends TestCase
         );
         $move203->setCombatMove(new PokemonCombatMove(5.0, 7.0, 1, null));
         self::assertEquals($move203, $moves['m203']);
+    }
+
+    public function testParseFileWithTempoarayEvolutions(): void
+    {
+        $sut = new MasterDataParser();
+        $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
+
+        $collection = $sut->getPokemonCollection()->toArray();
+        self::assertArrayHasKey('CHARIZARD', $collection);
+        $charizard = $collection['CHARIZARD'];
+        assert($charizard instanceof Pokemon);
+        self::assertCount(2, $charizard->getTemporaryEvolutions());
+        self::assertSame('CHARIZARD_MEGA_X', $charizard->getTemporaryEvolutions()[0]->getId());
+        self::assertSame(51, $charizard->getTemporaryEvolutions()[0]->getAssetsBundleId());
+        self::assertSame('CHARIZARD_MEGA_Y', $charizard->getTemporaryEvolutions()[1]->getId());
+        self::assertSame(52, $charizard->getTemporaryEvolutions()[1]->getAssetsBundleId());
     }
 }

@@ -6,9 +6,10 @@ namespace PokemonGoApi\PogoAPI;
 
 use DateTimeImmutable;
 use JsonException;
+use PokemonGoApi\PogoAPI\IO\Directory;
+use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use Psr\Log\LoggerInterface;
-use RuntimeException;
 use stdClass;
 
 use function array_filter;
@@ -21,16 +22,13 @@ use function file_get_contents;
 use function file_put_contents;
 use function floor;
 use function hash_file;
-use function is_dir;
 use function is_file;
-use function json_decode;
 use function json_encode;
-use function mkdir;
 use function pathinfo;
+use function sleep;
 use function sprintf;
 
 use const DATE_ATOM;
-use const JSON_THROW_ON_ERROR;
 use const PATHINFO_FILENAME;
 
 class CacheLoader
@@ -64,21 +62,16 @@ class CacheLoader
         $this->cacheDir         = $cacheDir;
         $this->logger           = $logger;
 
-        if (! is_dir($this->cacheDir) && ! mkdir($this->cacheDir, 0777, true)) {
-            throw new RuntimeException(sprintf('Directory "%s" was not created', $this->cacheDir));
-        }
+        Directory::create($this->cacheDir);
 
         if (! is_file($this->cacheDir . self::CACHE_FILE)) {
             return;
         }
 
         try {
-            $this->originalCachedData = $this->cachedData = json_decode(
-                file_get_contents($this->cacheDir . self::CACHE_FILE) ?: '[]',
-                true,
-                512,
-                JSON_THROW_ON_ERROR
-            ) ?: [];
+            $this->originalCachedData = $this->cachedData = JsonParser::decodeToArray(
+                file_get_contents($this->cacheDir . self::CACHE_FILE) ?: '[]'
+            );
         } catch (JsonException $jsonException) {
         }
     }
@@ -95,7 +88,7 @@ class CacheLoader
 
         $gameMasterLatestResponse = $this->remoteFileLoader->load(self::GAME_MASTER_LATEST_FILE)->getContent() ?: '[]';
 
-        $gameMasterLatest = json_decode($gameMasterLatestResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
+        $gameMasterLatest = JsonParser::decodeToArray($gameMasterLatestResponse);
         $latestJsonFile   = array_values(array_filter(
             $gameMasterLatest,
             static fn (stdClass $fileMeta): bool => $fileMeta->name === 'latest.json'
@@ -126,7 +119,7 @@ class CacheLoader
 
         $imagesFolderResponse = $this->remoteFileLoader->load(self::IMAGES_CONTENT)->getContent() ?: '[]';
 
-        $imagesFolderResult  = json_decode($imagesFolderResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
+        $imagesFolderResult  = JsonParser::decodeToArray($imagesFolderResponse);
         $pokemonImagesFolder = array_values(array_filter(
             $imagesFolderResult,
             static fn (stdClass $meta): bool => $meta->name === 'Pokemon'
@@ -160,10 +153,10 @@ class CacheLoader
     public function fetchLanguageFiles(): array
     {
         $fileApiResponse = $this->remoteFileLoader->load(self::LATEST_REMOTE_LANGUAGE_FILE)->getContent() ?: '[]';
-        $latestTexts     = json_decode($fileApiResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
+        $latestTexts     = JsonParser::decodeToArray($fileApiResponse);
 
         $fileApiResponse = $this->remoteFileLoader->load(self::LATEST_APK_LANGUAGE_FILE)->getContent() ?: '[]';
-        $apkTexts        = json_decode($fileApiResponse, false, 512, JSON_THROW_ON_ERROR) ?: [];
+        $apkTexts        = JsonParser::decodeToArray($fileApiResponse);
 
         $allTexts = [
             'remote' => $latestTexts,
@@ -231,7 +224,7 @@ class CacheLoader
     {
         $cacheFile = $this->cacheDir . 'pokebattler_' . $cacheKey . '.json';
         $cacheKey  = 'pokebattler/' . $cacheKey;
-        if (array_key_exists($cacheKey, $this->cachedData)) {
+        if (array_key_exists($cacheKey, $this->cachedData) && is_file($cacheFile)) {
             return $cacheFile;
         }
 
@@ -241,6 +234,7 @@ class CacheLoader
         ));
         $this->remoteFileLoader->load($pokebattlerApiUrl)->saveTo($cacheFile);
         $this->cachedData[$cacheKey] = date(DATE_ATOM);
+        sleep(1);
 
         return $cacheFile;
     }

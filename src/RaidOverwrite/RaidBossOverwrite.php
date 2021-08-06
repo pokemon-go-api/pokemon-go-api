@@ -87,20 +87,20 @@ class RaidBossOverwrite
                 $temporaryEvolution = $megaEvolution;
             }
 
+            $raidBoss =                 new RaidBoss(
+                $pokemon,
+                $raidOverwrite->isShiny(),
+                $raidOverwrite->getLevel(),
+                $temporaryEvolution,
+                null
+            );
+
             $this->logger->debug(sprintf(
                 '[RaidBossOverwrite] Add RaidBoss %s',
-                $pokemon->getFormId()
+                $raidBoss->getPokemonWithMegaFormId()
             ));
 
-            $raidBossCollection->add(
-                new RaidBoss(
-                    $pokemon,
-                    $raidOverwrite->isShiny(),
-                    $raidOverwrite->getLevel(),
-                    $temporaryEvolution,
-                    null
-                )
-            );
+            $raidBossCollection->add($raidBoss);
         }
     }
 

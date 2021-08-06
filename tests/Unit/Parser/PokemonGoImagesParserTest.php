@@ -10,6 +10,7 @@ use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
 /**
  * @uses \PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection
  * @uses \PokemonGoApi\PogoAPI\Types\PokemonImage
+ * @uses \PokemonGoLingen\PogoAPI\IO\JsonParser
  *
  * @covers \PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser
  */

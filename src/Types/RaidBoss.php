@@ -34,7 +34,7 @@ final class RaidBoss
         $this->costumeId          = $costumeId;
     }
 
-    public function getPokemonId(): string
+    public function getPokemonWithMegaFormId(): string
     {
         if ($this->temporaryEvolution !== null) {
             return $this->temporaryEvolution->getId();

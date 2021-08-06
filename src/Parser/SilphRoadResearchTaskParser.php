@@ -10,7 +10,8 @@ use DOMNodeList;
 use DOMXPath;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
-use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchReward;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardMegaEnergy;
+use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardPokemon;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTaskQuest;
 
@@ -65,7 +66,7 @@ class SilphRoadResearchTaskParser
 
             $rewards     = [];
             $rewardsList = $xpath->query(
-                '*/*[contains(@class, "task-reward")][contains(@class, "pokemon")]',
+                '*/*[contains(@class, "task-reward")]',
                 $taskContainer
             );
             assert($rewardsList instanceof DOMNodeList);
@@ -84,7 +85,12 @@ class SilphRoadResearchTaskParser
                     continue;
                 }
 
-                $rewards[] = new ResearchReward($pokemonId, $shiny);
+                if (strpos($rewardItem->getAttribute('class'), 'tr_mega') !== false) {
+                    $megaEnergy = (int) $rewardItem->textContent;
+                    $rewards[]  = new ResearchRewardMegaEnergy($pokemonId, $megaEnergy);
+                } else {
+                    $rewards[] = new ResearchRewardPokemon($pokemonId, $shiny);
+                }
             }
 
             if (count($rewards) === 0) {
@@ -105,7 +111,7 @@ class SilphRoadResearchTaskParser
         $searchQuestName = trim($searchQuestName, '. ');
         $matches         = [];
         preg_match('~\s(?<count>\d+)\s~', $searchQuestName, $matches);
-        $searchQuestNameReplaced = preg_replace('~\s(?<count>\d+)\s~', ' {0} ', $searchQuestName);
+        $searchQuestNameReplaced = preg_replace('~\s(?<count>\d+|a)\s~i', ' {0} ', $searchQuestName);
 
         $quests = $this->englishTranslationCollection->getQuests();
         foreach ($quests as $questKey => $questName) {
@@ -114,7 +120,7 @@ class SilphRoadResearchTaskParser
             }
 
             if ($questName === $searchQuestNameReplaced) {
-                return new ResearchTaskQuest($questKey, (int) $matches['count']);
+                return new ResearchTaskQuest($questKey, (int) ($matches['count'] ?? 1));
             }
         }
 
@@ -130,7 +136,7 @@ class SilphRoadResearchTaskParser
                 return null;
             }
 
-            return $pokemonByDex->getFormId();
+            return $pokemonByDex->getId();
         }
 
         if (preg_match('~/96x96/(.*?).png$~', $imageSrc, $match)) {
@@ -140,7 +146,7 @@ class SilphRoadResearchTaskParser
                 return null;
             }
 
-            $pokemon = $pokemonByName->getFormId();
+            $pokemon = $pokemonByName->getId();
             foreach ($pokemonByName->getPokemonRegionForms() as $pokemonForm) {
                 if (stripos($pokemonForm->getFormId(), $imageName[1]) === false) {
                     continue;

@@ -37,28 +37,62 @@ class PokemonFormRenderingTest extends TestCase
     public function specialPokemonDataProvider(): iterable
     {
         yield 'pikachu' => [
-            'dexNr' => 25,
+            'dexNr'    => 25,
             'expected' => [
-                'id' => 'PIKACHU',
-                'formId' => 'PIKACHU',
+                'id'          => 'PIKACHU',
+                'formId'      => 'PIKACHU',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_025_00.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_025_00.png'],
                 'regionForms' => [
                     'PIKACHU_FLYING_5TH_ANNIV' => [],
-                    'PIKACHU_KARIYUSHI' => [],
-                    'PIKACHU_POP_STAR' => [],
-                    'PIKACHU_ROCK_STAR' => [],
+                    'PIKACHU_KARIYUSHI'        => [],
+                    'PIKACHU_POP_STAR'         => [],
+                    'PIKACHU_ROCK_STAR'        => [],
                 ],
             ],
         ];
 
+//        yield 'burmi' => [
+//            'dexNr'    => 412,
+//            'expected' => [
+//                'id'     => 'BURMY',
+//                'formId' => 'BURMY_PLANT',
+//                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_412_11.png'],
+//                'regionForms' => [
+//                    'BURMY_SANDY' => [],
+//                    'BURMY_TRASH' => [],
+//                ],
+//            ],
+//        ];
+//
+//        yield 'cherrim' => [
+//            'dexNr'    => 421,
+//            'expected' => [
+//                'id'     => 'CHERRIM',
+//                'formId' => 'CHERRIM_OVERCAST',
+//                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_421_11.png'],
+//                'regionForms' => [
+//                    'CHERRIM_SUNNY' => [],
+//                ],
+//            ],
+//        ];
+//
+//        yield 'keldeo' => [
+//            'dexNr'    => 647,
+//            'expected' => [
+//                'id'     => 'KELDEO',
+//                'formId' => 'KELDEO_ORDINARY',
+//                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_647_11.png'],
+//            ],
+//        ];
+
         yield 'kyurem' => [
-            'dexNr' => 646,
+            'dexNr'    => 646,
             'expected' => [
-                'id' => 'KYUREM',
-                'formId' => 'KYUREM',
+                'id'          => 'KYUREM',
+                'formId'      => 'KYUREM',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_646_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_646_11.png'],
                 'regionForms' => [
                     'KYUREM_BLACK' => [],
                     'KYUREM_WHITE' => [],
@@ -67,27 +101,27 @@ class PokemonFormRenderingTest extends TestCase
         ];
 
         yield 'deoxys' => [
-            'dexNr' => 386,
+            'dexNr'    => 386,
             'expected' => [
-                'id' => 'DEOXYS',
-                'formId' => 'DEOXYS',
+                'id'          => 'DEOXYS',
+                'formId'      => 'DEOXYS',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_386_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_386_11.png'],
                 'regionForms' => [
-                    'DEOXYS_ATTACK' => [],
+                    'DEOXYS_ATTACK'  => [],
                     'DEOXYS_DEFENSE' => [],
-                    'DEOXYS_SPEED' => [],
+                    'DEOXYS_SPEED'   => [],
                 ],
             ],
         ];
 
         yield 'thundurus' => [
-            'dexNr' => 642,
+            'dexNr'    => 642,
             'expected' => [
-                'id' => 'THUNDURUS',
-                'formId' => 'THUNDURUS_INCARNATE',
+                'id'          => 'THUNDURUS',
+                'formId'      => 'THUNDURUS_INCARNATE',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
                 'regionForms' => [
                     'THUNDURUS_THERIAN' => [],
                 ],
@@ -95,14 +129,14 @@ class PokemonFormRenderingTest extends TestCase
         ];
 
         yield 'genesect' => [
-            'dexNr' => 649,
+            'dexNr'    => 649,
             'expected' => [
-                'id' => 'GENESECT',
-                'formId' => 'GENESECT',
+                'id'          => 'GENESECT',
+                'formId'      => 'GENESECT',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_649_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_649_11.png'],
                 'regionForms' => [
-                    'GENESECT_BURN' => [],
+                    'GENESECT_BURN'  => [],
                     'GENESECT_CHILL' => [],
                     'GENESECT_DOUSE' => [],
                     'GENESECT_SHOCK' => [],
@@ -111,15 +145,15 @@ class PokemonFormRenderingTest extends TestCase
         ];
 
         yield 'meowth' => [
-            'dexNr' => 52,
+            'dexNr'    => 52,
             'expected' => [
-                'id' => 'MEOWTH',
-                'formId' => 'MEOWTH',
+                'id'            => 'MEOWTH',
+                'formId'        => 'MEOWTH',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_052_00.png'],
+                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_052_00.png'],
                 'secondaryType' => null,
-                'regionForms' => [
-                    'MEOWTH_ALOLA' => [],
+                'regionForms'   => [
+                    'MEOWTH_ALOLA'    => [],
                     'MEOWTH_GALARIAN' => [],
                 ],
             ],

@@ -24,6 +24,7 @@ use const DATE_ATOM;
 /**
  * @uses \PokemonGoApi\PogoAPI\IO\File
  * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
+ * @uses \PokemonGoLingen\PogoAPI\IO\Directory
  *
  * @covers \PokemonGoApi\PogoAPI\CacheLoader
  */
