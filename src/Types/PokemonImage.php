@@ -42,24 +42,30 @@ final class PokemonImage
         $matches = [];
         $result  = preg_match(
             <<<'REGEX'
-            ~pokemon_icon_(
+            ~(pokemon_icon_(
                 (?<dexNr>\d{3})_(?<assetBundleValue>\d{2})(_(?<costume>\d{2}))?
                 |
                 (?<assetBundleSuffix>pm(?<dexNr2>\d{4})_(?<assetBundleValue2>\d{2})\w+?)
              )
-             (?<isShiny>_shiny)?
+             (?<isShiny>_shiny)?)
+             |
+             (pokemon_icons/pm(?<dexNr3>\d{1,4})\.icon)
              \.png$~x
             REGEX,
             $path,
             $matches
         );
 
-        if ($result === false || (! isset($matches['dexNr']) && ! isset($matches['dexNr2']))) {
+        if ($result === false || (
+            ! isset($matches['dexNr']) &&
+            ! isset($matches['dexNr2']) &&
+            ! isset($matches['dexNr3'])
+        )) {
             throw new Exception('Path "' . $path . '" does not match Regex', 1617886414508);
         }
 
         return new self(
-            (int) ($matches['dexNr'] ?: $matches['dexNr2']),
+            (int) ($matches['dexNr'] ?: $matches['dexNr2'] ?: $matches['dexNr3']),
             (int) ($matches['assetBundleValue'] ?: $matches['assetBundleValue2']),
             array_key_exists('isShiny', $matches),
             isset($matches['assetBundleSuffix']) && $matches['assetBundleSuffix'] !== ''

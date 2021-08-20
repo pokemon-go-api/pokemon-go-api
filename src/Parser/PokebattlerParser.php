@@ -43,7 +43,7 @@ class PokebattlerParser
                         $this->buildApiUrl($raidBoss, $battleConfiguration),
                         $this->buildCacheKey($raidBoss, $battleConfiguration)
                     );
-                } catch (ClientException $clientException) {
+                } catch (\Exception $clientException) {
                     $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
                         $this->buildApiUrl($raidBoss, $battleConfiguration, true),
                         $this->buildCacheKey($raidBoss, $battleConfiguration)
@@ -130,6 +130,10 @@ class PokebattlerParser
     {
         if ($addForm && $raidBoss->getPokemon()->getPokemonForm() !== null) {
             return $raidBoss->getPokemonWithMegaFormId() . '_FORM';
+        }
+
+        if ($addForm) {
+            return $raidBoss->getPokemon()->getId();
         }
 
         return $raidBoss->getPokemonWithMegaFormId();

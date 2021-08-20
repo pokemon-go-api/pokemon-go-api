@@ -76,7 +76,11 @@ class LeekduckParser
                     $bossImage = $bossImageContainer->getElementsByTagName('img')[0];
                     if ($bossImage !== null) {
                         $imgSrc       = $bossImage->getAttribute('src');
-                        $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
+                        try {
+                            $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
+                        } catch (\Exception $e) {
+
+                        }
                     }
                 }
 

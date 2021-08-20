@@ -39,10 +39,10 @@ class RemoteFileLoader
     {
         try {
             $this->logger->debug(sprintf('[RemoteFileLoader] GET %s', $url));
-            $content = $this->client->request('GET', $url, ['timeout' => 2])->getBody()->getContents();
+            $content = $this->client->request('GET', $url, ['timeout' => 20])->getBody()->getContents();
         } catch (ConnectException $connectException) {
             sleep(5);
-            $content = $this->client->request('GET', $url, ['timeout' => 2])->getBody()->getContents();
+            $content = $this->client->request('GET', $url, ['timeout' => 5])->getBody()->getContents();
         }
 
         return new File($content);
