@@ -324,5 +324,18 @@
         <level>mega</level>
         <shiny>false</shiny>
     </raidboss>
+  
+    <raidboss>
+        <startDate>
+            <date>2021-08-26 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2021-09-01 10:00:00</date>
+        </endDate>
+        <pokemon>ZAMAZENTA</pokemon>
+        <form>ZAMAZENTA_HERO</form>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
 
 </root>
