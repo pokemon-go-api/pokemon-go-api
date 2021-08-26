@@ -40,6 +40,8 @@ final class PokemonRenderer
             $this->translations
         );
 
+        $pokemonImage = $pokemon->getPokemonImage();
+
         $struct = [
             'id'                  => $pokemon->getId(),
             'formId'              => $pokemon->getFormId(),
@@ -69,10 +71,10 @@ final class PokemonRenderer
                 $attacksCollection,
                 $this->translations
             ),
-            'assets' => [
-                'image'      => $pokemon->getPokemonImage()->buildUrl(false),
-                'shinyImage' => $pokemon->getPokemonImage()->buildUrl(true),
-            ],
+            'assets' => $pokemonImage ? [
+                'image'      => $pokemonImage->buildUrl(false),
+                'shinyImage' => $pokemonImage->buildUrl(true),
+            ] : null,
             'regionForms'         => array_map(
                 fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection, false),
                 $pokemon->getPokemonRegionForms()
@@ -104,16 +106,18 @@ final class PokemonRenderer
                 );
             }
 
+            $pokemonImage = $pokemon->getPokemonImage($temporaryEvolution);
+
             $output[$temporaryEvolution->getId()] = [
                 'id'            => $temporaryEvolution->getId(),
                 'names'         => $tmpNames,
                 'stats'         => $temporaryEvolution->getStats(),
                 'primaryType'   => $this->renderType($temporaryEvolution->getTypePrimary(), $translations),
                 'secondaryType' => $this->renderType($temporaryEvolution->getTypeSecondary(), $translations),
-                'assets'        => [
-                    'image'      => $pokemon->getPokemonImage($temporaryEvolution)->buildUrl(false),
-                    'shinyImage' => $pokemon->getPokemonImage($temporaryEvolution)->buildUrl(true),
-                ],
+                'assets'        => $pokemonImage ? [
+                    'image'      => $pokemonImage->buildUrl(false),
+                    'shinyImage' => $pokemonImage->buildUrl(true),
+                ] : null,
             ];
         }
 

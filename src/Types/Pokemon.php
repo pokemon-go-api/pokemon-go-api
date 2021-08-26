@@ -33,6 +33,8 @@ final class Pokemon
     private array $eliteCinematicMoveNames = [];
     /** @var array<string, Pokemon> */
     private array $pokemonRegionForms = [];
+    /** @var array<int, PokemonImage> */
+    private array $pokemonImages = [];
 
     public function __construct(
         int $dexNr,
@@ -89,14 +91,15 @@ final class Pokemon
         $pokemon->eliteQuickMoveNames     = $pokemonSettings->eliteQuickMove ?? [];
         $pokemon->eliteCinematicMoveNames = $pokemonSettings->eliteCinematicMove ?? [];
 
+        $tempEvos = [];
         foreach ($pokemonSettings->tempEvoOverrides ?? [] as $evolutionBranch) {
-            $pokemon->addTemporaryEvolutions(TemporaryEvolution::createFromGameMaster(
+            $tempEvos[] = TemporaryEvolution::createFromGameMaster(
                 $evolutionBranch,
                 $pokemonSettings->pokemonId
-            ));
+            );
         }
 
-        return $pokemon;
+        return $pokemon->withAddedTemporaryEvolutions(...$tempEvos);
     }
 
     public function getDexNr(): int
@@ -153,26 +156,6 @@ final class Pokemon
         return $this->quickMoveNames;
     }
 
-    public function setQuickMoveNames(string ...$quickMoveNames): void
-    {
-        $this->quickMoveNames = $quickMoveNames;
-    }
-
-    public function setCinematicMoveNames(string ...$cinematicMoveNames): void
-    {
-        $this->cinematicMoveNames = $cinematicMoveNames;
-    }
-
-    public function setEliteCinematicMoveNames(string ...$eliteCinematicMoveNames): void
-    {
-        $this->eliteCinematicMoveNames = $eliteCinematicMoveNames;
-    }
-
-    public function setEliteQuickMoveNames(string ...$eliteQuickMoveNames): void
-    {
-        $this->eliteQuickMoveNames = $eliteQuickMoveNames;
-    }
-
     /** @return TemporaryEvolution[] */
     public function getTemporaryEvolutions(): array
     {
@@ -184,19 +167,12 @@ final class Pokemon
         return count($this->temporaryEvolutions) > 0;
     }
 
-    public function setStats(PokemonStats $stats): void
+    public function withAddedPokemonRegionForm(Pokemon $pokemonRegionForm): self
     {
-        $this->stats = $stats;
-    }
+        $copy                                                      = clone $this;
+        $copy->pokemonRegionForms[$pokemonRegionForm->getFormId()] = $pokemonRegionForm;
 
-    public function addTemporaryEvolutions(TemporaryEvolution $temporaryEvolution): void
-    {
-        $this->temporaryEvolutions[] = $temporaryEvolution;
-    }
-
-    public function addPokemonRegionForm(Pokemon $pokemonRegionForm): void
-    {
-        $this->pokemonRegionForms[$pokemonRegionForm->getFormId()] = $pokemonRegionForm;
+        return $copy;
     }
 
     /** @return array<string, Pokemon> */
@@ -205,9 +181,12 @@ final class Pokemon
         return $this->pokemonRegionForms;
     }
 
-    public function setPokemonForm(PokemonForm $pokemonForm): void
+    public function withPokemonForm(PokemonForm $pokemonForm): self
     {
-        $this->pokemonForm = $pokemonForm;
+        $copy              = clone $this;
+        $copy->pokemonForm = $pokemonForm;
+
+        return $copy;
     }
 
     public function overwriteDefaultPokemonForm(PokemonForm $pokemonForm): void
@@ -255,28 +234,69 @@ final class Pokemon
             ) && strpos($this->getFormId(), '_FEMALE') === false;
     }
 
-    public function getPokemonImage(?TemporaryEvolution $temporaryEvolution = null): PokemonImage
-    {
-        $pokemonForm   = $this->getPokemonForm();
-        $assetBundleId = 0;
+    public function getPokemonImage(
+        ?TemporaryEvolution $temporaryEvolution = null,
+        ?string $costume = null
+    ): ?PokemonImage {
+        $pokemonForm       = $this->getPokemonForm();
+        $assetBundleId     = null;
+        $assetBundleSuffix = null;
         if ($pokemonForm !== null) {
-            $assetBundleId = $pokemonForm->getAssetBundleValue();
+            $assetBundleId     = $pokemonForm->getAssetBundleValue();
+            $assetBundleSuffix = $pokemonForm->getAssetBundleSuffix() ?? $pokemonForm->getFormOnlyId();
         }
 
         if ($temporaryEvolution !== null) {
             $assetBundleId = $temporaryEvolution->getAssetsBundleId();
         }
 
-        if ($assetBundleId === null) {
-            $assetBundleId = 0;
+        foreach ($this->pokemonImages as $pokemonImage) {
+            if (
+                $pokemonImage->getAssetBundleSuffix() === $assetBundleSuffix
+                && $pokemonImage->getCostume() === $costume
+            ) {
+                return $pokemonImage;
+            }
         }
 
-        return new PokemonImage(
-            $this->getDexNr(),
-            $assetBundleId,
-            false,
-            $pokemonForm ? $pokemonForm->getAssetBundleSuffix() : null,
-            null
-        );
+        foreach ($this->pokemonImages as $pokemonImage) {
+            if (
+                $pokemonImage->getAssetBundleValue() === $assetBundleId
+                && $pokemonImage->getAssetBundleSuffix() === null
+                && $pokemonImage->getCostume() === $costume
+            ) {
+                return $pokemonImage;
+            }
+
+            if (
+                $assetBundleId === 0
+                && $pokemonImage->getAssetBundleValue() === null
+                && $pokemonImage->getAssetBundleSuffix() === null
+                && $pokemonImage->getCostume() === $costume
+            ) {
+                return $pokemonImage;
+            }
+        }
+
+        return $this->pokemonImages[0] ?? null;
+    }
+
+    /**
+     * @param array<int, PokemonImage> $images
+     */
+    public function withAddedImages(array $images): self
+    {
+        $copy                = clone $this;
+        $copy->pokemonImages = $images;
+
+        return $copy;
+    }
+
+    public function withAddedTemporaryEvolutions(TemporaryEvolution ...$temporaryEvolutions): self
+    {
+        $copy                      = clone $this;
+        $copy->temporaryEvolutions = $temporaryEvolutions;
+
+        return $copy;
     }
 }

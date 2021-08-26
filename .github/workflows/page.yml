@@ -7,10 +7,10 @@ on:
         required: false
         default: 'true or false'
 
-  pull_request:
   push:
     branches:
       - main
+
   schedule:
     # At minute 25 past every 2 hours.
     - cron:  '25 */2 * * *'
@@ -70,14 +70,6 @@ jobs:
         env:
           WINDOW_SIZE: ${{ steps.generated-data.outputs.WINDOW_SIZE }}
         run: composer run-script convert-svg
-
-      - name: Post current raid grahpic
-        if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES') && github.event_name == 'pull_request' }}
-        uses: edunad/actions-image@v1.0.1
-        with:
-          path: './public/api/graphics/German/*.png'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          title: 'This would be the new Raid Image'
 
       - name: Deploy to GitHub Pages
         if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES') && github.event_name != 'pull_request'}}

@@ -11,16 +11,20 @@ use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use Throwable;
 
 use function assert;
 use function count;
 use function explode;
 use function implode;
 use function preg_match;
+use function preg_replace;
+use function similar_text;
 use function str_replace;
 use function stripos;
 use function strtoupper;
 use function trim;
+use function usort;
 
 class LeekduckParser
 {
@@ -48,7 +52,7 @@ class LeekduckParser
             assert($liItem instanceof DOMElement);
             $attributeClass = $liItem->attributes !== null ? $liItem->attributes->getNamedItem('class') : null;
             if ($attributeClass !== null && $attributeClass->nodeValue === 'header-li') {
-                $currentTierLevelText = trim($liItem->textContent);
+                $currentTierLevelText = trim(preg_replace('~\s+~', ' ', $liItem->textContent) ?? '');
                 switch (true) {
                     case stripos($currentTierLevelText, 'EX') === 0:
                         $currentTierLevel = RaidBoss::RAID_LEVEL_EX;
@@ -75,11 +79,10 @@ class LeekduckParser
                 if ($bossImageContainer !== null) {
                     $bossImage = $bossImageContainer->getElementsByTagName('img')[0];
                     if ($bossImage !== null) {
-                        $imgSrc       = $bossImage->getAttribute('src');
+                        $imgSrc = $bossImage->getAttribute('src');
                         try {
                             $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
-                        } catch (\Exception $e) {
-
+                        } catch (Throwable $e) {
                         }
                     }
                 }
@@ -93,7 +96,7 @@ class LeekduckParser
                     continue;
                 }
 
-                $pokemon->setPokemonForm(
+                $pokemon = $pokemon->withPokemonForm(
                     new PokemonForm(
                         $pokemon->getId(),
                         $pokemon->getFormId(),
@@ -118,12 +121,30 @@ class LeekduckParser
                     $pokemonTemporaryEvolution = $temporaryEvolution;
                 }
 
+                $bestMatchingRegionForms = [];
                 foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
                     if ($regionForm->getFormId() !== $pokemonFormId) {
+                        $scorePercent = null;
+                        similar_text($regionForm->getFormId(), $pokemonFormId, $scorePercent);
+                        $bestMatchingRegionForms[] = [
+                            'score' => $scorePercent,
+                            'form' => $regionForm,
+                        ];
                         continue;
                     }
 
                     $pokemon = $regionForm;
+                }
+
+                // handle not 100% correct form names like Shellos for "east" and "west"
+                // but with internal name "east_sea" and "west_sea"
+                if (
+                    $formName !== null
+                    && $pokemon->getId() === $pokemon->getFormId()
+                    && count($bestMatchingRegionForms) > 0
+                ) {
+                    usort($bestMatchingRegionForms, static fn (array $a, array $b): int => $b['score'] <=> $a['score']);
+                    $pokemon = $bestMatchingRegionForms[0]['form'];
                 }
 
                 $raidboss = new RaidBoss(

@@ -20,10 +20,8 @@ use PokemonGoApi\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoApi\PogoAPI\Renderer\ResearchTasksRenderer;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
-use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
-use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -40,11 +38,12 @@ $cacheLoader = new CacheLoader(
 );
 
 $logger->debug('Parse Files');
-$masterData = new MasterDataParser();
-$masterData->parseFile($cacheLoader->fetchGameMasterFile());
 
 $pokemonImagesParser     = new PokemonGoImagesParser();
 $pokemonAssetsCollection = $pokemonImagesParser->parseFile($cacheLoader->fetchPokemonImages());
+
+$masterData = new MasterDataParser($pokemonAssetsCollection);
+$masterData->parseFile($cacheLoader->fetchGameMasterFile());
 
 $languageFiles      = $cacheLoader->fetchLanguageFiles();
 $translationLoader  = new TranslationParser();

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Parser;
 
 use Exception;
-use GuzzleHttp\Exception\ClientException;
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
@@ -43,7 +42,7 @@ class PokebattlerParser
                         $this->buildApiUrl($raidBoss, $battleConfiguration),
                         $this->buildCacheKey($raidBoss, $battleConfiguration)
                     );
-                } catch (\Exception $clientException) {
+                } catch (Exception $clientException) {
                     $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
                         $this->buildApiUrl($raidBoss, $battleConfiguration, true),
                         $this->buildCacheKey($raidBoss, $battleConfiguration)

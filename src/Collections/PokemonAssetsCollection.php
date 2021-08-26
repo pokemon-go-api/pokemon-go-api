@@ -21,13 +21,7 @@ final class PokemonAssetsCollection
                 continue;
             }
 
-            if (
-                $image->isShiny() || (
-                    $image->getCostume() === null &&
-                    $image->getAssetBundleSuffix() === null &&
-                    $image->getAssetBundleValue() === 0
-                )
-            ) {
+            if ($image->isShiny()) {
                 continue;
             }
 

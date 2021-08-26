@@ -6,6 +6,7 @@ namespace PokemonGoApi\PogoAPI\Parser;
 
 use Exception;
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
@@ -25,11 +26,13 @@ class MasterDataParser
 {
     private PokemonCollection $pokemonCollection;
     private AttacksCollection $attacksCollection;
+    private PokemonAssetsCollection $pokemonAssetsCollection;
 
-    public function __construct()
+    public function __construct(PokemonAssetsCollection $pokemonAssetsCollection)
     {
-        $this->pokemonCollection = new PokemonCollection();
-        $this->attacksCollection = new AttacksCollection();
+        $this->pokemonCollection       = new PokemonCollection();
+        $this->attacksCollection       = new AttacksCollection();
+        $this->pokemonAssetsCollection = $pokemonAssetsCollection;
     }
 
     public function parseFile(string $gameMasterFile): void
@@ -76,6 +79,7 @@ class MasterDataParser
             assert($item->data instanceof stdClass);
 
             $pokemon = Pokemon::createFromGameMaster($item->data);
+            $pokemon = $pokemon->withAddedImages($this->pokemonAssetsCollection->getImages($pokemon->getDexNr()));
 
             if (
                 strpos($pokemon->getFormId(), '_PURIFIED') !== false ||
@@ -89,7 +93,7 @@ class MasterDataParser
 
             $basePokemon = $pokemonCollection->get($pokemon->getId());
             if ($basePokemon !== null) {
-                $basePokemon->addPokemonRegionForm($pokemon);
+                $basePokemon = $basePokemon->withAddedPokemonRegionForm($pokemon);
             }
 
             $pokemonCollection->add($basePokemon ?? $pokemon);
@@ -200,7 +204,8 @@ class MasterDataParser
 
             foreach ($pokemonFormCollection->getPokemonForms() as $pokemonForm) {
                 if ($pokemonForm->getId() === $pokemon->getId() . '_NORMAL') {
-                    $pokemon->setPokemonForm($pokemonForm);
+                    $pokemon = $pokemon->withPokemonForm($pokemonForm);
+                    $pokemonCollection->add($pokemon);
                     continue;
                 }
 
@@ -209,7 +214,9 @@ class MasterDataParser
                         continue;
                     }
 
-                    $pokemonRegionForm->setPokemonForm($pokemonForm);
+                    $pokemonRegionForm = $pokemonRegionForm->withPokemonForm($pokemonForm);
+                    $pokemon           = $pokemon->withAddedPokemonRegionForm($pokemonRegionForm);
+                    $pokemonCollection->add($pokemon);
 
                     if (
                         $pokemon->getPokemonForm() !== null

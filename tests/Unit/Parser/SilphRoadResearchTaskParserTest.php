@@ -43,10 +43,9 @@ class SilphRoadResearchTaskParserTest extends TestCase
         $pokemonCollection->add(new Pokemon(140, '140', '140', PokemonType::none(), null));
         $pokemonCollection->add(new Pokemon(80, '80', '80', PokemonType::none(), null));
         $ponyta = new Pokemon(77, 'PONYTA', 'PONYTA', PokemonType::none(), null);
-        $ponyta->addPokemonRegionForm(
+        $pokemonCollection->add($ponyta->withAddedPokemonRegionForm(
             new Pokemon(77, 'PONYTA', 'PONYTA_GALARIAN', PokemonType::none(), null)
-        );
-        $pokemonCollection->add($ponyta);
+        ));
 
         $sut = new SilphRoadResearchTaskParser(
             $pokemonCollection,
