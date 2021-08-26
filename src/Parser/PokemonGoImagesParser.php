@@ -6,9 +6,7 @@ namespace PokemonGoApi\PogoAPI\Parser;
 
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
-use stdClass;
 
-use function array_map;
 use function file_get_contents;
 use function is_file;
 
@@ -20,12 +18,8 @@ class PokemonGoImagesParser
             return new PokemonAssetsCollection();
         }
 
-        $fileContent = file_get_contents($gitSubtreeFilePath);
-        $content     = JsonParser::decodeToObject($fileContent ?: '{}');
-        $images      = array_map(
-            static fn (stdClass $meta): string => $meta->path,
-            $content->tree
-        );
+        $fileContent = file_get_contents($gitSubtreeFilePath) ?: '[]';
+        $images      = JsonParser::decodeToArray($fileContent);
 
         return new PokemonAssetsCollection(...$images);
     }

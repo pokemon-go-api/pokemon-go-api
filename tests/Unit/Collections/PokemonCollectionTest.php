@@ -36,8 +36,9 @@ class PokemonCollectionTest extends TestCase
         $collection        = new PokemonCollection();
         $collection->add($pokemon);
 
-        $pokemon->addPokemonRegionForm($pokemonRegionForm);
         self::assertNull($collection->getByFormId('TESTPOKEMON_FORM'));
+
+        $pokemon = $pokemon->withAddedPokemonRegionForm($pokemonRegionForm);
         $collection->add($pokemon);
         self::assertSame($pokemonRegionForm, $collection->getByFormId('TESTPOKEMON_FORM'));
         self::assertSame($pokemon, $collection->getByFormId('TESTPOKEMON'));

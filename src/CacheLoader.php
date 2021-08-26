@@ -12,14 +12,17 @@ use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use Psr\Log\LoggerInterface;
 use stdClass;
 
+use function abs;
 use function array_filter;
 use function array_key_exists;
 use function array_keys;
 use function array_values;
 use function basename;
 use function date;
+use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
+use function filemtime;
 use function floor;
 use function hash_file;
 use function is_file;
@@ -43,7 +46,7 @@ class CacheLoader
     private const IMAGES_CONTENT = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Images';
 
     private string $cacheDir;
-    /** @var array<string, string> */
+    /** @var array<string, mixed> */
     private array $cachedData = [];
     /** @var array<string, string> */
     private array $originalCachedData = [];
@@ -86,6 +89,10 @@ class CacheLoader
         $cacheFile = $this->cacheDir . 'GAME_MASTER_LATEST.json';
         $cacheKey  = 'github/game_master';
 
+        if ($this->wasRunningInThePastMinutes()) {
+            return $cacheFile;
+        }
+
         $gameMasterLatestResponse = $this->remoteFileLoader->load(self::GAME_MASTER_LATEST_FILE)->getContent() ?: '[]';
 
         $gameMasterLatest = JsonParser::decodeToArray($gameMasterLatestResponse);
@@ -117,6 +124,10 @@ class CacheLoader
         $cacheFile = $this->cacheDir . 'pokemon_images.json';
         $cacheKey  = 'github/pokemon_images';
 
+        if ($this->wasRunningInThePastMinutes()) {
+            return $cacheFile;
+        }
+
         $imagesFolderResponse = $this->remoteFileLoader->load(self::IMAGES_CONTENT)->getContent() ?: '[]';
 
         $imagesFolderResult  = JsonParser::decodeToArray($imagesFolderResponse);
@@ -135,7 +146,24 @@ class CacheLoader
 
         $this->cachedData[$cacheKey] = $pokemonImagesFolder->sha;
         //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-        $this->remoteFileLoader->load($pokemonImagesFolder->git_url)->saveTo($cacheFile);
+        $imagesFolderContent   = $this->remoteFileLoader->load($pokemonImagesFolder->git_url)->getContent() ?: '{}';
+        $imagesFolderStructure = JsonParser::decodeToObject($imagesFolderContent);
+
+        $cacheFileContent = [];
+        foreach ($imagesFolderStructure->tree as $treeItem) {
+            if ($treeItem->type === 'tree') {
+                $subFolderContent   = $this->remoteFileLoader->load($treeItem->url)->getContent() ?: '{}';
+                $subFolderStructure = JsonParser::decodeToObject($subFolderContent);
+                foreach ($subFolderStructure->tree as $subFolderTreeItem) {
+                    $cacheFileContent[] = $treeItem->path . '/' . $subFolderTreeItem->path;
+                }
+            } else {
+                $cacheFileContent[] = $treeItem->path;
+            }
+        }
+
+        file_put_contents($cacheFile, json_encode($cacheFileContent));
+
         $this->logger->debug(
             sprintf(
                 '[CacheLoader] Missing cache entry for %s',
@@ -152,6 +180,10 @@ class CacheLoader
      */
     public function fetchLanguageFiles(): array
     {
+        if ($this->wasRunningInThePastMinutes()) {
+            return JsonParser::decodeToArray(json_encode($this->cachedData['languageFiles']) ?: '[]');
+        }
+
         $fileApiResponse = $this->remoteFileLoader->load(self::LATEST_REMOTE_LANGUAGE_FILE)->getContent() ?: '[]';
         $latestTexts     = JsonParser::decodeToArray($fileApiResponse);
 
@@ -189,15 +221,22 @@ class CacheLoader
             }
         }
 
+        $this->cachedData['languageFiles'] = $output;
+
         return $output;
     }
 
     public function fetchRaidBossesFromLeekduck(): string
     {
-        $raidBossUrl  = 'https://leekduck.com/boss/';
-        $cacheFile    = $this->cacheDir . 'raidlist_leekduck.html';
-        $cacheKey     = 'leekduck_LastFetched';
-        $cacheEntry   = $this->cachedData[$cacheKey] ?? null;
+        $raidBossUrl = 'https://leekduck.com/boss/';
+        $cacheFile   = $this->cacheDir . 'raidlist_leekduck.html';
+        $cacheKey    = 'leekduck_LastFetched';
+        $cacheEntry  = $this->cachedData[$cacheKey] ?? null;
+
+        if ($this->wasRunningInThePastMinutes()) {
+            return $cacheFile;
+        }
+
         $lastModified = $this->remoteFileLoader->receiveResponseHeader(
             $raidBossUrl,
             'last-modified'
@@ -303,5 +342,14 @@ class CacheLoader
         }
 
         return $cacheFile;
+    }
+
+    private function wasRunningInThePastMinutes(): bool
+    {
+        if (! file_exists($this->cacheDir . self::CACHE_FILE)) {
+            return false;
+        }
+
+        return abs($this->clock->getTimestamp() - filemtime($this->cacheDir . self::CACHE_FILE)) < 300;
     }
 }

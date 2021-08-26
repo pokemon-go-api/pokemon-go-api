@@ -38,8 +38,23 @@ jobs:
       - name: "Install dependencies"
         run: "composer install --no-interaction --no-progress --no-suggest --ignore-platform-reqs"
 
-      - name: "Build API for testing"
-        run: "composer run-script api-build"
+      - name: Build API for testing
+        id: generated-data
+        run: |
+          composer run-script api-build
 
       - name: "Run CI"
         run: "composer run-script ci"
+
+      - name: Convert SVG to PNG
+        continue-on-error: true
+        env:
+          WINDOW_SIZE: ${{ steps.generated-data.outputs.WINDOW_SIZE }}
+        run: composer run-script convert-svg
+
+      - name: Post current raid grahpic
+        uses: edunad/actions-image@v1.0.1
+        with:
+          path: './public/api/graphics/English/*.png'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          title: 'This would be the new Raid Image'

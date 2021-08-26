@@ -92,6 +92,8 @@ final class RaidBossGraphicRenderer
 
             $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
 
+            $pokemonImage = $raidBoss->getPokemonImage();
+
             $raidData = [
                 'id'           => $raidBoss->getPokemon()->getId(),
                 'form'         => $raidBoss->getPokemonWithMegaFormId(),
@@ -99,9 +101,9 @@ final class RaidBossGraphicRenderer
                 'levelIcon'    => $levelIcon,
                 'name'         => $this->getName($raidBoss, $translationCollection),
                 'shiny'        => $raidBoss->isShinyAvailable(),
-                'image'        => $raidBoss->getPokemonImage()->buildUrl(
+                'image'        => $pokemonImage ? $pokemonImage->buildUrl(
                     $raidBoss->isShinyAvailable() && $raidBossGraphicConfig->useShinyImages()
-                ),
+                ) : null,
                 'types'        => $raidBossTypeNames,
                 'counter'      => $typeCalculator->getAllEffectiveTypes(...$raidBossTypes),
                 'weather'      => array_map(

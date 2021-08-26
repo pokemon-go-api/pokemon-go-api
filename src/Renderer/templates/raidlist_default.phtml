@@ -266,14 +266,18 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
                 <?php } ?>
             </g>
 
+            <?php
+            $pokemonImage = $boss->getRaidBoss()->getPokemonImage();
+            if ($pokemonImage !== null):
+            ?>
             <g class="boss-image">
                 <rect width="50" height="<?= $lineHeight ?>" x="35" y="0"/>
-
-                <image width="55" height="55" x="25" y="0" href="<?=$boss->getRaidBoss()->getPokemonImage()->buildUrl($raidBossGraphicConfig->useShinyImages())?>"/>
+                <image width="55" height="55" x="25" y="0" href="<?=$pokemonImage->buildUrl($raidBossGraphicConfig->useShinyImages())?>"/>
                 <?php if ($boss->getRaidBoss()->isShinyAvailable()) : ?>
                     <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
                 <?php endif; ?>
             </g>
+            <?php endif; ?>
 
             <g class="boss-types">
                 <rect width="70" height="<?= $lineHeight ?>" x="300" y="0"/>

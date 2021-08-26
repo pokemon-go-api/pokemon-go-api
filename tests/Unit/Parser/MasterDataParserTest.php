@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
 
 use PHPUnit\Framework\TestCase;
+use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
@@ -36,14 +37,14 @@ class MasterDataParserTest extends TestCase
 {
     public function testConstruct(): void
     {
-        $sut = new MasterDataParser();
+        $sut = new MasterDataParser(new PokemonAssetsCollection());
         self::assertEmpty($sut->getAttacksCollection()->toArray());
         self::assertEmpty($sut->getPokemonCollection()->toArray());
     }
 
     public function testParseFileWithPokemons(): void
     {
-        $sut = new MasterDataParser();
+        $sut = new MasterDataParser(new PokemonAssetsCollection());
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $pokemons = $sut->getPokemonCollection()->toArray();
@@ -56,14 +57,9 @@ class MasterDataParserTest extends TestCase
             PokemonType::normal(),
             PokemonType::none()
         );
-        $pokemonMeowth->setStats(
-            new PokemonStats(120, 92, 78)
-        );
-        $pokemonMeowth->setQuickMoveNames('SCRATCH_FAST', 'BITE_FAST');
-        $pokemonMeowth->setCinematicMoveNames('NIGHT_SLASH', 'DARK_PULSE', 'FOUL_PLAY');
-        $pokemonMeowth->setEliteCinematicMoveNames('BODY_SLAM');
+
         foreach ($meowth->getPokemonRegionForms() as $form) {
-            $pokemonMeowth->addPokemonRegionForm($form);
+            $pokemonMeowth = $pokemonMeowth->withAddedPokemonRegionForm($form);
         }
 
         $forms = array_map(
@@ -78,12 +74,15 @@ class MasterDataParserTest extends TestCase
             'MEOWTH_ALOLA'    => 'MEOWTH_ALOLA',
             'MEOWTH_GALARIAN' => 'MEOWTH_GALARIAN',
         ], $forms);
-        self::assertEquals($pokemonMeowth, $meowth);
+        self::assertEquals(new PokemonStats(120, 92, 78), $meowth->getStats());
+        self::assertEquals(['SCRATCH_FAST', 'BITE_FAST'], $meowth->getQuickMoveNames());
+        self::assertEquals(['NIGHT_SLASH', 'DARK_PULSE', 'FOUL_PLAY'], $meowth->getCinematicMoveNames());
+        self::assertEquals(['BODY_SLAM'], $meowth->getEliteCinematicMoveNames());
     }
 
     public function testParseFileWithPokemonMoves(): void
     {
-        $sut = new MasterDataParser();
+        $sut = new MasterDataParser(new PokemonAssetsCollection());
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $moves = $sut->getAttacksCollection()->toArray();
@@ -126,7 +125,7 @@ class MasterDataParserTest extends TestCase
 
     public function testParseFileWithTempoarayEvolutions(): void
     {
-        $sut = new MasterDataParser();
+        $sut = new MasterDataParser(new PokemonAssetsCollection());
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $collection = $sut->getPokemonCollection()->toArray();

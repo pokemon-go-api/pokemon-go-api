@@ -40,12 +40,12 @@ class PokemonNameRenderer
         $pokemonFormName = $translationCollection->getPokemonFormName($pokemon->getFormId());
         if ($pokemonFormName !== null) {
             $pokemonName = sprintf('%s (%s)', $pokemonName, $pokemonFormName);
-        }
-
-        $singleFormOnly  = str_replace($pokemon->getId() . '_', '', $pokemon->getFormId());
-        $pokemonFormName = $translationCollection->getPokemonFormName($singleFormOnly);
-        if ($pokemonFormName !== null) {
-            $pokemonName = sprintf('%s (%s)', $pokemonName, $pokemonFormName);
+        } else {
+            $singleFormOnly  = str_replace($pokemon->getId() . '_', '', $pokemon->getFormId());
+            $pokemonFormName = $translationCollection->getPokemonFormName($singleFormOnly);
+            if ($pokemonFormName !== null) {
+                $pokemonName = sprintf('%s (%s)', $pokemonName, $pokemonFormName);
+            }
         }
 
         $pokemonForm = $pokemon->getPokemonForm();

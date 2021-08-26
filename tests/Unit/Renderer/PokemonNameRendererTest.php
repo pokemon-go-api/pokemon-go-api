@@ -35,7 +35,7 @@ class PokemonNameRendererTest extends TestCase
 
         self::assertSame('Testpokemon', PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection));
 
-        $pokemon->setPokemonForm(
+        $pokemon = $pokemon->withPokemonForm(
             new PokemonForm('dummy', 'ALOLA', 1, null)
         );
         self::assertSame(
@@ -43,7 +43,7 @@ class PokemonNameRendererTest extends TestCase
             PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
         );
 
-        $pokemon->setPokemonForm(
+        $pokemon = $pokemon->withPokemonForm(
             new PokemonForm('dummy', 'GALARIAN', 1, null)
         );
         self::assertSame(
@@ -92,8 +92,10 @@ class PokemonNameRendererTest extends TestCase
     public function testRenderPokemonMegaName(): void
     {
         $pokemon = new Pokemon(1, 'CHARIZARD', 'CHARIZARD', PokemonType::none(), null);
-        $pokemon->addTemporaryEvolutions(new TemporaryEvolution('MEGA_X', PokemonType::none(), null));
-        $pokemon->addTemporaryEvolutions(new TemporaryEvolution('MEGA_Y', PokemonType::none(), null));
+        $pokemon = $pokemon->withAddedTemporaryEvolutions(
+            new TemporaryEvolution('MEGA_X', PokemonType::none(), null),
+            new TemporaryEvolution('MEGA_Y', PokemonType::none(), null)
+        );
 
         $translationCollection = new TranslationCollection('dummylanguage');
         $translationCollection->addPokemonName(1, 'Testpokemon');

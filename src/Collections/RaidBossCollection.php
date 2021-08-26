@@ -8,6 +8,7 @@ use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function array_key_exists;
 use function array_values;
+use function sha1;
 use function uasort;
 
 final class RaidBossCollection
@@ -21,7 +22,7 @@ final class RaidBossCollection
             return;
         }
 
-        $this->storage[$raidBoss->getPokemonWithMegaFormId()] = $raidBoss;
+        $this->storage[$this->createRaidBossKey($raidBoss)] = $raidBoss;
     }
 
     public function getById(string $id): ?RaidBoss
@@ -39,7 +40,7 @@ final class RaidBossCollection
             return null;
         }
 
-        return $this->storage[$raidBoss->getPokemonWithMegaFormId()];
+        return $this->storage[$this->createRaidBossKey($raidBoss)];
     }
 
     public function remove(string $pokemonId): void
@@ -53,7 +54,7 @@ final class RaidBossCollection
 
     public function has(RaidBoss $raidBoss): bool
     {
-        return array_key_exists($raidBoss->getPokemonWithMegaFormId(), $this->storage);
+        return array_key_exists($this->createRaidBossKey($raidBoss), $this->storage);
     }
 
     /** @return RaidBoss[] */
@@ -74,10 +75,31 @@ final class RaidBossCollection
                     return $lvlSort;
                 }
 
-                return $a->getPokemon()->getDexNr() <=> $b->getPokemon()->getDexNr();
+                $sortByDex = $a->getPokemon()->getDexNr() <=> $b->getPokemon()->getDexNr();
+                if ($sortByDex !== 0) {
+                    return $sortByDex;
+                }
+
+                $aPokemonImage = $a->getPokemonImage();
+                $bPokemonImage = $b->getPokemonImage();
+
+                $aImageUrl = $aPokemonImage ? $aPokemonImage->buildUrl(false) : '';
+                $bImageUrl = $bPokemonImage ? $bPokemonImage->buildUrl(false) : '';
+
+                return $aImageUrl <=> $bImageUrl;
             }
         );
 
         return array_values($this->storage);
+    }
+
+    private function createRaidBossKey(RaidBoss $raidBoss): string
+    {
+        $pokemonImage = $raidBoss->getPokemonImage();
+        if ($pokemonImage === null) {
+            return $raidBoss->getPokemonWithMegaFormId();
+        }
+
+        return sha1($pokemonImage->buildUrl(false));
     }
 }

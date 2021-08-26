@@ -351,7 +351,9 @@ components:
           additionalProperties:
             $ref: '#/components/schemas/PokemonMove'
         assets:
-          $ref: '#/components/schemas/Assets'
+          oneOf:
+            - $ref: '#/components/schemas/Assets'
+          nullable: true
         assetForms:
           type: array
           items:
@@ -427,7 +429,9 @@ components:
           additionalProperties:
             $ref: '#/components/schemas/PokemonMove'
         assets:
-          $ref: '#/components/schemas/Assets'
+          oneOf:
+            - $ref: '#/components/schemas/Assets'
+          nullable: true
         regionForms:
           type: object
           additionalProperties:

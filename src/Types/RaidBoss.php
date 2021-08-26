@@ -16,7 +16,7 @@ final class RaidBoss
     private string $raidLevel;
     private Pokemon $pokemon;
     private ?TemporaryEvolution $temporaryEvolution;
-    private ?int $costumeId;
+    private ?string $costumeId;
     /** @var array<int, BattleResult> */
     private array $battleResults = [];
 
@@ -25,7 +25,7 @@ final class RaidBoss
         bool $shinyAvailable,
         string $raidLevel,
         ?TemporaryEvolution $temporaryEvolution,
-        ?int $costumeId = null
+        ?string $costumeId = null
     ) {
         $this->shinyAvailable     = $shinyAvailable;
         $this->raidLevel          = $raidLevel;
@@ -41,6 +41,11 @@ final class RaidBoss
         }
 
         return $this->getPokemon()->getFormId();
+    }
+
+    public function getCostumeId(): ?string
+    {
+        return $this->costumeId;
     }
 
     public function getPokemon(): Pokemon
@@ -69,27 +74,9 @@ final class RaidBoss
         return $this->battleResults;
     }
 
-    public function getPokemonImage(): PokemonImage
+    public function getPokemonImage(): ?PokemonImage
     {
-        $pokemonForm   = $this->getPokemon()->getPokemonForm();
-        $assetBundleId = 0;
-        if ($this->temporaryEvolution !== null) {
-            $assetBundleId = $this->temporaryEvolution->getAssetsBundleId();
-        } elseif ($pokemonForm !== null) {
-            $assetBundleId = $pokemonForm->getAssetBundleValue();
-        }
-
-        if ($assetBundleId === null) {
-            $assetBundleId = 0;
-        }
-
-        return new PokemonImage(
-            $this->getPokemon()->getDexNr(),
-            $assetBundleId,
-            $this->isShinyAvailable(),
-            $pokemonForm ? $pokemonForm->getAssetBundleSuffix() : null,
-            $this->costumeId
-        );
+        return $this->getPokemon()->getPokemonImage($this->temporaryEvolution, $this->costumeId);
     }
 
     public function setBattleResults(BattleResult ...$battleResults): void

@@ -30,14 +30,14 @@ class RaidBossOverwriteTest extends TestCase
 {
     public function testOverwrite(): void
     {
-        $basePokemon = new Pokemon(1, 'Test', '', PokemonType::normal(), PokemonType::none());
-        $basePokemon->addPokemonRegionForm(
+        $basePokemon               = new Pokemon(1, 'Test', '', PokemonType::normal(), PokemonType::none());
+        $basePokemon               = $basePokemon->withAddedPokemonRegionForm(
             new Pokemon(1, 'Test', 'Test_Form1', PokemonType::normal(), PokemonType::none())
         );
-        $basePokemon->addPokemonRegionForm(
+        $basePokemon               = $basePokemon->withAddedPokemonRegionForm(
             new Pokemon(1, 'Test', 'Test_Form2', PokemonType::normal(), PokemonType::none())
         );
-        $basePokemon->addPokemonRegionForm(
+        $basePokemon               = $basePokemon->withAddedPokemonRegionForm(
             new Pokemon(1, 'Test', 'Test_Form3', PokemonType::normal(), PokemonType::none())
         );
         $existingPokemonCollection = new PokemonCollection();

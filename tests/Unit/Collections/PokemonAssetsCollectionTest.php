@@ -31,8 +31,9 @@ class PokemonAssetsCollectionTest extends TestCase
         // allowed:
         // - pokemon_icon_pm0003_00_pgo_copy2019
         // - pokemon_icon_pm0003_01_pgo_copy2019
+        // - pokemon_icon_003_00
         // - pokemon_icon_003_01
         // - pokemon_icon_003_51
-        self::assertCount(4, $sut->getImages(3));
+        self::assertCount(5, $sut->getImages(3));
     }
 }

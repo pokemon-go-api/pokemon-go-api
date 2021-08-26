@@ -42,7 +42,7 @@ class PokemonFormRenderingTest extends TestCase
                 'id'          => 'PIKACHU',
                 'formId'      => 'PIKACHU',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_025_00.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm25.icon.png'],
                 'regionForms' => [
                     'PIKACHU_FLYING_5TH_ANNIV' => [],
                     'PIKACHU_KARIYUSHI'        => [],
@@ -123,7 +123,9 @@ class PokemonFormRenderingTest extends TestCase
                 //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
                 'regionForms' => [
-                    'THUNDURUS_THERIAN' => [],
+                    'THUNDURUS_THERIAN' => [
+                        'names' => ['English' => 'Thundurus (Therian Forme)'],
+                    ],
                 ],
             ],
         ];
@@ -150,12 +152,21 @@ class PokemonFormRenderingTest extends TestCase
                 'id'            => 'MEOWTH',
                 'formId'        => 'MEOWTH',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_052_00.png'],
+                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm52.icon.png'],
                 'secondaryType' => null,
                 'regionForms'   => [
                     'MEOWTH_ALOLA'    => [],
                     'MEOWTH_GALARIAN' => [],
                 ],
+            ],
+        ];
+
+        yield 'vivillon' => [
+            'dexNr'    => 666,
+            'expected' => [
+                'id'            => 'VIVILLON',
+                'formId'        => 'VIVILLON',
+                'assets'        => null,
             ],
         ];
     }
@@ -171,8 +182,7 @@ class PokemonFormRenderingTest extends TestCase
             $currentKeyChain = [...$keyChain, $key];
             if (is_array($expectedValue)) {
                 $this->validateSubset($expectedValue, $current[$key], $currentKeyChain);
-
-                return;
+                continue;
             }
 
             self::assertSame($expectedValue, $current[$key], 'Expected field: ' . implode('.', $currentKeyChain));

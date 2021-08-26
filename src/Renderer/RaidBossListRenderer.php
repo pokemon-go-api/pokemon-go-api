@@ -54,13 +54,14 @@ final class RaidBossListRenderer
             );
 
             $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
+            $pokemonImage  = $raidBoss->getPokemonImage();
             $raidData      = [
                 'id'           => $raidBoss->getPokemon()->getId(),
                 'form'         => $raidBoss->getPokemonWithMegaFormId(),
-                'assets'        => [
-                    'image' => $raidBoss->getPokemonImage()->buildUrl(false),
-                    'shinyImage' => $raidBoss->getPokemonImage()->buildUrl(true),
-                ],
+                'assets'        => $pokemonImage ? [
+                    'image' => $pokemonImage->buildUrl(false),
+                    'shinyImage' => $pokemonImage->buildUrl(true),
+                ] : null,
                 'level'        => $raidBoss->getRaidLevel(),
                 'names'        => $this->getNames($raidBoss, $translationCollection),
                 'shiny'        => $raidBoss->isShinyAvailable(),

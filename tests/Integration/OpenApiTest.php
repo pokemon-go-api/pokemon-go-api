@@ -57,7 +57,7 @@ class OpenApiTest extends TestCase
                 $failMessage = $previous->getMessage();
 
                 if ($previous->dataBreadCrumb() !== null) {
-                    $failMessage .= '[' . implode('.', $previous->dataBreadCrumb()->buildChain()) . ']';
+                    $failMessage .= ' -> [' . implode('.', $previous->dataBreadCrumb()->buildChain()) . ']';
                 }
 
                 self::fail($failMessage);

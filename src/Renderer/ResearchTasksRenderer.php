@@ -65,6 +65,8 @@ final class ResearchTasksRenderer
                     }
 
                     $pokemonStats = $pokemon->getStats() ?? new PokemonStats(0, 0, 0);
+
+                    $pokemonImage = $pokemon->getPokemonImage();
                     $rewards[]    = [
                         'type'    => 'POKEMON',
                         'id'      => $pokemon->getId(),
@@ -74,10 +76,10 @@ final class ResearchTasksRenderer
                             CpCalculator::calculateQuestMinCp($pokemonStats),
                             CpCalculator::calculateQuestMaxCp($pokemonStats),
                         ],
-                        'assets'  => [
-                            'image'      => $pokemon->getPokemonImage()->buildUrl(false),
-                            'shinyImage' => $pokemon->getPokemonImage()->buildUrl(true),
-                        ],
+                        'assets'  => $pokemonImage ? [
+                            'image'      => $pokemonImage->buildUrl(false),
+                            'shinyImage' => $pokemonImage->buildUrl(true),
+                        ] : null,
                     ];
                 }
             }
