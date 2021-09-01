@@ -37,17 +37,26 @@ class PokebattlerParser
         foreach ($raidBossCollection->toArray() as $raidBoss) {
             $battleResults = [];
             foreach ($this->battleConfigurations as $battleConfiguration) {
+                $pokebattlerResultFile = null;
                 try {
                     $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
                         $this->buildApiUrl($raidBoss, $battleConfiguration),
                         $this->buildCacheKey($raidBoss, $battleConfiguration)
                     );
-                } catch (Exception $clientException) {
-                    $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
-                        $this->buildApiUrl($raidBoss, $battleConfiguration, true),
-                        $this->buildCacheKey($raidBoss, $battleConfiguration)
-                    );
                 } catch (Throwable $throwable) {
+
+                }
+                if ($pokebattlerResultFile === null) {
+                    try {
+                        $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
+                            $this->buildApiUrl($raidBoss, $battleConfiguration, true),
+                            $this->buildCacheKey($raidBoss, $battleConfiguration)
+                        );
+                    } catch (Throwable $throwable) {
+                    }
+                }
+
+                if ($pokebattlerResultFile === null) {
                     continue;
                 }
 
