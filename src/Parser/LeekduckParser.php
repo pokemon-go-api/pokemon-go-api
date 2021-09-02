@@ -139,7 +139,8 @@ class LeekduckParser
                 // handle not 100% correct form names like Shellos for "east" and "west"
                 // but with internal name "east_sea" and "west_sea"
                 if (
-                    $formName !== null
+                    $pokemonTemporaryEvolution === null
+                    && $formName !== null
                     && $pokemon->getId() === $pokemon->getFormId()
                     && count($bestMatchingRegionForms) > 0
                 ) {
