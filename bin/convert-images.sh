@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 CONTENT_ROOT=$(dirname $(dirname $(realpath $0)))
 LANGUAGES=("German" "English")
 USER_ID=$(id -u)
