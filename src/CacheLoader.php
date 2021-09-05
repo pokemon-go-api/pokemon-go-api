@@ -181,7 +181,7 @@ class CacheLoader
     public function fetchLanguageFiles(): array
     {
         if ($this->wasRunningInThePastMinutes()) {
-            return JsonParser::decodeToArray(json_encode($this->cachedData['languageFiles']) ?: '[]');
+            return JsonParser::decodeToFullArray(json_encode($this->cachedData['languageFiles']) ?: '[]');
         }
 
         $fileApiResponse = $this->remoteFileLoader->load(self::LATEST_REMOTE_LANGUAGE_FILE)->getContent() ?: '[]';
@@ -333,7 +333,11 @@ class CacheLoader
     public function fetchTasksFromSilphroad(): string
     {
         $cacheFile = $this->cacheDir . 'tasks_silphroad.html';
-        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
+        if ($this->wasRunningInThePastMinutes()) {
+            return $cacheFile;
+        }
+
+        $cacheKey = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
 
         $cacheEntry = $this->cachedData[$cacheFile] ?? null;
         if ($cacheEntry !== $cacheKey) {

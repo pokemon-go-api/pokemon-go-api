@@ -8,13 +8,16 @@ final class ResearchTaskQuest
 {
     private string $translationKey;
     private ?int $replaceArgument;
+    private bool $isEventTask;
 
     public function __construct(
         string $translationKey,
-        ?int $replaceArgument
+        ?int $replaceArgument,
+        bool $isEventTask
     ) {
         $this->translationKey  = $translationKey;
         $this->replaceArgument = $replaceArgument;
+        $this->isEventTask     = $isEventTask;
     }
 
     public function getReplaceArgument(): ?int
@@ -25,5 +28,10 @@ final class ResearchTaskQuest
     public function getTranslationKey(): string
     {
         return $this->translationKey;
+    }
+
+    public function isEventTask(): bool
+    {
+        return $this->isEventTask;
     }
 }

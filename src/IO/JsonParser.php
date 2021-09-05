@@ -20,6 +20,14 @@ final class JsonParser
         return (array) (json_decode($data, false, 512, JSON_THROW_ON_ERROR) ?: []);
     }
 
+    /**
+     * @return array<mixed, mixed>
+     */
+    public static function decodeToFullArray(string $data): array
+    {
+        return (array) (json_decode($data, true, 512, JSON_THROW_ON_ERROR) ?: []);
+    }
+
     public static function decodeToObject(string $data): stdClass
     {
         return (object) self::decodeToArray($data);

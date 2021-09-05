@@ -304,6 +304,24 @@ paths:
                     - quest
       operationId: get-quests.json
     parameters: []
+  /api/types.json:
+    get:
+      summary: Receive all pokemon types
+      tags:
+        - Types
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: ''
+                minItems: 1
+                uniqueItems: true
+                items:
+                  $ref: '#/components/schemas/PokemonFullType'
+      operationId: get-api-types.json
 components:
   schemas:
     Pokemon:
@@ -765,3 +783,45 @@ components:
         - cpRange
         - assets
         - name
+    PokemonFullType:
+      type: object
+      properties:
+        type:
+          type: string
+          minLength: 1
+        names:
+          $ref: '#/components/schemas/Names'
+        doubleDamageFrom:
+          type: array
+          items:
+            type: string
+        halfDamageFrom:
+          type: array
+          items:
+            type: string
+        noDamageFrom:
+          type: array
+          items:
+            type: string
+        weatherBoost:
+          type: object
+          required:
+            - id
+            - names
+            - assetName
+          properties:
+            id:
+              type: string
+              minLength: 1
+            names:
+              $ref: '#/components/schemas/Names'
+            assetName:
+              type: string
+              minLength: 1
+      required:
+        - type
+        - names
+        - doubleDamageFrom
+        - halfDamageFrom
+        - noDamageFrom
+        - weatherBoost

@@ -1,5 +1,8 @@
 name: Tests
 
+env:
+  APP_CONFIG: default
+
 on:
   pull_request:
   push:
@@ -46,15 +49,11 @@ jobs:
       - name: "Run CI"
         run: "composer run-script ci"
 
-      - name: Convert SVG to PNG
-        continue-on-error: true
-        env:
-          WINDOW_SIZE: ${{ steps.generated-data.outputs.WINDOW_SIZE }}
-        run: composer run-script convert-svg
-
-      - name: Post current raid grahpic
-        uses: edunad/actions-image@v1.0.1
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
         with:
-          path: './public/api/graphics/English/*.png'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          title: 'This would be the new Raid Image'
+          name: Raid Images
+          retention-days: 1
+          path: |
+            ./public/api/graphics/English/default.svg
+            ./data/tmp/raidBossListTest.svg

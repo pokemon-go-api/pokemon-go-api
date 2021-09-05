@@ -1,4 +1,8 @@
 name: page
+
+env:
+  APP_CONFIG: default
+
 on:
   workflow_dispatch:
     inputs:
@@ -12,8 +16,9 @@ on:
       - main
 
   schedule:
-    # At minute 25 past every 2 hours.
-    - cron:  '25 */2 * * *'
+    # At minute 7 past hour 8, 10, 11, 20, 22, and 23.
+    - cron:  '7 8,10,11,20,22,23 * * *'
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -67,8 +72,6 @@ jobs:
       - name: Convert SVG to PNG
         if: ${{ steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES' }}
         continue-on-error: true
-        env:
-          WINDOW_SIZE: ${{ steps.generated-data.outputs.WINDOW_SIZE }}
         run: composer run-script convert-svg
 
       - name: Deploy to GitHub Pages

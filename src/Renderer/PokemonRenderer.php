@@ -136,7 +136,7 @@ final class PokemonRenderer
         $names = [];
         foreach ($translations->getCollections() as $translationCollection) {
             $names[$translationCollection->getLanguageName()] = $translationCollection->getTypeName(
-                $type->getGameMasterTypeName()
+                $type->getType()
             );
         }
 

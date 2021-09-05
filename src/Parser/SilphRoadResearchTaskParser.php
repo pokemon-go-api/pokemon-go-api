@@ -55,11 +55,15 @@ class SilphRoadResearchTaskParser
 
         foreach ($tasksItems as $taskContainer) {
             assert($taskContainer instanceof DOMElement);
-            $taskText = $xpath->query('*[@class="taskText"]', $taskContainer);
+            assert($taskContainer->parentNode instanceof DOMElement);
+
+            $parentClasssName = $taskContainer->parentNode->getAttribute('class');
+            $isEventTask      = strpos($parentClasssName, 'eventTasks') !== false;
+            $taskText         = $xpath->query('*[@class="taskText"]', $taskContainer);
             assert($taskText instanceof DOMNodeList);
             $taskMessage = $taskText[0]->textContent;
 
-            $quest = $this->findQuest($taskMessage);
+            $quest = $this->findQuest($taskMessage, $isEventTask);
             if ($quest === null) {
                 continue;
             }
@@ -106,7 +110,7 @@ class SilphRoadResearchTaskParser
         return $tasks;
     }
 
-    private function findQuest(string $searchQuestName): ?ResearchTaskQuest
+    private function findQuest(string $searchQuestName, bool $isEventTask): ?ResearchTaskQuest
     {
         $searchQuestName = trim($searchQuestName, '. ');
         $matches         = [];
@@ -116,11 +120,11 @@ class SilphRoadResearchTaskParser
         $quests = $this->englishTranslationCollection->getQuests();
         foreach ($quests as $questKey => $questName) {
             if ($questName === $searchQuestName) {
-                return new ResearchTaskQuest($questKey, null);
+                return new ResearchTaskQuest($questKey, null, $isEventTask);
             }
 
             if ($questName === $searchQuestNameReplaced) {
-                return new ResearchTaskQuest($questKey, (int) ($matches['count'] ?? 1));
+                return new ResearchTaskQuest($questKey, (int) ($matches['count'] ?? 1), $isEventTask);
             }
         }
 

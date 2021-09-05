@@ -6,6 +6,7 @@ namespace PokemonGoApi\PogoAPI\Collections;
 
 use function array_key_exists;
 use function array_values;
+use function mb_strtolower;
 use function mb_strtoupper;
 use function sprintf;
 
@@ -28,6 +29,8 @@ final class TranslationCollection
     private array $customTranslations = [];
     /** @var array<string, string> */
     private array $quests = [];
+    /** @var array<string, string> */
+    private array $weather = [];
 
     public function __construct(string $languageName)
     {
@@ -42,6 +45,11 @@ final class TranslationCollection
     public function addQuest(string $key, string $translation): void
     {
         $this->quests[$key] = $translation;
+    }
+
+    public function addWeather(string $key, string $translation): void
+    {
+        $this->weather[mb_strtolower($key)] = $translation;
     }
 
     public function addPokemonName(int $dexNr, string $translation): void
@@ -67,7 +75,7 @@ final class TranslationCollection
 
     public function addTypeName(string $type, string $translation): void
     {
-        $this->typeNames[mb_strtoupper($type)] = $translation;
+        $this->typeNames[mb_strtolower($type)] = $translation;
     }
 
     public function addMoveName(int $moveId, string $translation): void
@@ -77,7 +85,12 @@ final class TranslationCollection
 
     public function getTypeName(string $typeName): ?string
     {
-        return $this->typeNames[mb_strtoupper($typeName)] ?? null;
+        return $this->typeNames[mb_strtolower($typeName)] ?? null;
+    }
+
+    public function getWeatherName(string $weatherName): ?string
+    {
+        return $this->weather[mb_strtolower($weatherName)] ?? null;
     }
 
     public function getMoveName(int $moveId): ?string
