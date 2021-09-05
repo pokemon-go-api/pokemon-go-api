@@ -85,7 +85,7 @@ class TranslationParser
                 }
 
                 if ($this->lineStartsWith($currentLine, 'RESOURCE ID: pokemon_type_')) {
-                    $type        = strtoupper(trim(substr($currentLine, 13)));
+                    $type        = strtoupper(trim(substr($currentLine, 26)));
                     $translation = $this->readTranslation($nextLine);
                     $collection->addTypeName($type, $translation);
                 }
@@ -100,6 +100,12 @@ class TranslationParser
                     $questKey    = trim(substr($currentLine, 19));
                     $translation = $this->readTranslation($nextLine);
                     $collection->addQuest($questKey, $translation);
+                }
+
+                if ($this->lineStartsWith($currentLine, 'RESOURCE ID: weather_')) {
+                    $weatherKey  = trim(substr($currentLine, 21));
+                    $translation = $this->readTranslation($nextLine);
+                    $collection->addWeather($weatherKey, $translation);
                 }
 
                 if (! $this->lineStartsWith($currentLine, 'RESOURCE ID: challenge_')) {

@@ -34,7 +34,7 @@ class TranslationParserTest extends TestCase
         self::assertNull($collection->getPokemonFormName('deoxys_defense'));
         self::assertNull($collection->getPokemonFormName('normal'));
         self::assertSame('Normal', $collection->getPokemonFormName('deoxys_normal'));
-        self::assertSame('Bug', $collection->getTypeName('pokemon_type_bug'));
+        self::assertSame('Bug', $collection->getTypeName('bug'));
         self::assertSame('Aeroblast', $collection->getMoveName(335));
         self::assertSame('Fly', $collection->getMoveName(341));
         self::assertSame('Dummy', $collection->getRegionalForm('dummy'));

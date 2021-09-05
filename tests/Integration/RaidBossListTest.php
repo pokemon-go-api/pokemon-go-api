@@ -5,16 +5,53 @@ declare(strict_types=1);
 namespace Tests\Integration\PokemonGoLingen\PogoAPI;
 
 use PHPUnit\Framework\TestCase;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
 use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
+use PokemonGoApi\PogoAPI\Parser\TranslationParser;
+use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
+use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
+
+use function file_put_contents;
 
 /**
  * @coversNothing
  */
 class RaidBossListTest extends TestCase
 {
-    public function testRenderDummyRaidList(): void
+    /**
+     * @depends testRenderDummyRaidList
+     */
+    public function testRenderDummyList(RaidBossCollection $raidBossCollection): void
+    {
+        $translationLoader     = new TranslationParser();
+        $translationCollection = $translationLoader->loadLanguage(
+            'English',
+            __DIR__ . '/../../data/tmp/latest_apk_English.txt',
+            __DIR__ . '/../../data/tmp/latest_remote_English.txt',
+            CustomTranslations::load()['English']
+        );
+
+        $renderer        = new RaidBossGraphicRenderer();
+        $raidBossGraphic = $renderer->buildGraphic(
+            $raidBossCollection,
+            $translationCollection,
+            new RaidBossGraphicConfig(
+                RaidBossGraphicConfig::ORDER_MEGA_TO_LVL1,
+                true,
+                __DIR__ . '/Fixtures/radilistTemplate.phtml'
+            )
+        );
+        file_put_contents(__DIR__ . '/../../data/tmp/raidBossListTest.svg', $raidBossGraphic->getImageContent());
+        self::assertFileEquals(
+            __DIR__ . '/Fixtures/expected_raidlist.svg',
+            __DIR__ . '/../../data/tmp/raidBossListTest.svg'
+        );
+    }
+
+    public function testRenderDummyRaidList(): RaidBossCollection
     {
         $pokemonImages = __DIR__ . '/../../data/tmp/pokemon_images.json';
         $gameMaster    = __DIR__ . '/../../data/tmp/GAME_MASTER_LATEST.json';
@@ -61,6 +98,13 @@ class RaidBossListTest extends TestCase
                 'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm18.fMEGA.icon.png',
             ],
             [
+                'dexNr' => 460,
+                'pokemonID' => 'ABOMASNOW',
+                'formID' => 'ABOMASNOW_MEGA',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_460_51.png',
+            ],
+            [
                 'dexNr' => 25,
                 'pokemonID' => 'PIKACHU',
                 'formID' => 'PIKACHU',
@@ -80,6 +124,13 @@ class RaidBossListTest extends TestCase
                 'formID' => 'RAICHU_ALOLA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
                 'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm26.fALOLA.icon.png',
+            ],
+            [
+                'dexNr' => 46,
+                'pokemonID' => 'PARAS',
+                'formID' => 'PARAS',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm46.icon.png',
             ],
             [
                 'dexNr' => 79,
@@ -131,5 +182,7 @@ class RaidBossListTest extends TestCase
                 'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm888.icon.png',
             ],
         ], $generatedRaidBosses);
+
+        return $raidBosses;
     }
 }

@@ -65,6 +65,23 @@ final class WeatherBoost
         return $this->weather;
     }
 
+    public function getWeatherTranslationKey(): string
+    {
+        switch ($this->weather) {
+            case self::PARTLY_CLOUDY:
+                return 'partly_cloudy';
+
+            case self::CLOUDY:
+                return 'overcast';
+
+            case self::RAIN:
+                return 'rainy';
+
+            default:
+                return $this->weather;
+        }
+    }
+
     /** @return array<int, PokemonType> */
     public function getBoostedTypes(): array
     {

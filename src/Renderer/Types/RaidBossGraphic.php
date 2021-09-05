@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Renderer\Types;
 
+use function preg_replace;
 use function sprintf;
 
 final class RaidBossGraphic
@@ -21,7 +22,11 @@ final class RaidBossGraphic
 
     public function getImageContent(): string
     {
-        return $this->imageContent;
+        return sprintf(
+            '%s<!-- CONVERT_IMAGE_SIZE=%s -->',
+            preg_replace('~\s+~', ' ', $this->imageContent),
+            $this->getWindowSize()
+        );
     }
 
     public function getWindowSize(): string

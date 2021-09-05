@@ -41,14 +41,7 @@
             "rm -rf public/api",
             "cp -r data/tmp/api public/"
         ],
-        "convert-svg": [
-            "mkdir -p public/api/graphics/German/",
-            "mkdir -p public/api/graphics/English/",
-            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size='$WINDOW_SIZE '--screenshot=/app/public/api/graphics/German/raidlist.png' '/app/data/tmp/api/graphics/German/raidlist.svg' 2>/dev/null",
-            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size='$WINDOW_SIZE '--screenshot=/app/public/api/graphics/German/raidlist_b.png' '/app/data/tmp/api/graphics/German/raidlist_b.svg' 2>/dev/null",
-            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size='$WINDOW_SIZE '--screenshot=/app/public/api/graphics/English/raidlist.png' '/app/data/tmp/api/graphics/English/raidlist.svg' 2>/dev/null",
-            "timeout --signal=SIGKILL 60 docker run -u`id -u` -v `pwd`:/app --entrypoint chrome --rm ghcr.io/montferret/chromium '--user-data-dir=/app/data/tmp/chromeCache' '--disk-cache-dir=/app/data/tmp/chromeCache' '--no-sandbox' '--headless' '--disable-gpu' '--hide-scrollbars' '--window-size='$WINDOW_SIZE '--screenshot=/app/public/api/graphics/English/raidlist_b.png' '/app/data/tmp/api/graphics/English/raidlist_b.svg' 2>/dev/null"
-        ],
+        "convert-svg": "./bin/convert-images.sh",
         "cs-check": "phpcs -s",
         "cs-fix": "phpcbf",
         "phpstan": "phpstan analyse",

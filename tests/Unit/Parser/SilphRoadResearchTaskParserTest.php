@@ -56,21 +56,21 @@ class SilphRoadResearchTaskParserTest extends TestCase
 
         self::assertEquals([
             new ResearchTask(
-                new ResearchTaskQuest('dummy_evolve', 1),
+                new ResearchTaskQuest('dummy_evolve', 1, true),
                 new ResearchRewardMegaEnergy('80', 20)
             ),
             new ResearchTask(
-                new ResearchTaskQuest('dummy_catch_fairy', 15),
+                new ResearchTaskQuest('dummy_catch_fairy', 15, false),
                 new ResearchRewardPokemon('PONYTA_GALARIAN', false)
             ),
             new ResearchTask(
-                new ResearchTaskQuest('dummy_catch_fairy', 5),
+                new ResearchTaskQuest('dummy_catch_fairy', 5, false),
                 new ResearchRewardPokemon('183', true),
                 new ResearchRewardPokemon('546', false),
                 new ResearchRewardPokemon('209', true)
             ),
             new ResearchTask(
-                new ResearchTaskQuest('dummy_level3_raid', null),
+                new ResearchTaskQuest('dummy_level3_raid', null, false),
                 new ResearchRewardPokemon('138', true),
                 new ResearchRewardPokemon('140', true)
             ),

@@ -42,6 +42,12 @@ final class ResearchTasksRenderer
                     (string) $researchTask->getResearchTaskQuest()->getReplaceArgument(),
                     $translationCollection->getQuest($researchTask->getResearchTaskQuest()->getTranslationKey()) ?? ''
                 );
+
+                if (! $researchTask->getResearchTaskQuest()->isEventTask()) {
+                    continue;
+                }
+
+                $questTranslations[$name] .= ' (Event)';
             }
 
             $rewards = [];

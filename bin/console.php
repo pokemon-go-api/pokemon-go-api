@@ -20,10 +20,21 @@ use PokemonGoApi\PogoAPI\Renderer\RaidBossListRenderer;
 use PokemonGoApi\PogoAPI\Renderer\ResearchTasksRenderer;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
+use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
+use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
 require __DIR__ . '/../vendor/autoload.php';
+
+$env = getenv('APP_CONFIG') ?: 'default';
+
+$applicationConfig = array_merge_recursive(
+    [
+        'raid-graphics' => [],
+    ],
+    require sprintf(__DIR__ . '/../config/raid-grahpics.%s.php', $env)
+);
 
 date_default_timezone_set('UTC');
 
@@ -67,32 +78,42 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
 $pokemonRenderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
 $files           = [];
 
-//$logger->debug('Generate Types');
-//
-//$typeWeatherCalculator = new TypeWeatherCalculator();
-//$outputTypes           = [];
-//foreach (PokemonType::ALL_TYPES as $typeName) {
-//    $type         = PokemonType::createFromPokemonType($typeName);
-//    $weatherBoost = [];
-//    foreach ($typeWeatherCalculator->getWeatherBoost($type, PokemonType::none()) as $weatherBoost) {
-//        $weatherBoost = [
-//            'id' => $weatherBoost->getWeather(),
-//            'name' => [], // read weather_snow
-//            'assetName' => $weatherBoost->getAssetsName(),
-//        ];
-//    }
-//
-//    $outputTypes[] = [
-//        'type' => $type->getType(),
-//        'name' => [], // read pokemon_type_fighting
-//        'doubleDamageFrom' => $type->getDoubleDamageFrom(),
-//        'halfDamageFrom' => $type->getHalfDamageFrom(),
-//        'noDamageFrom' => $type->getNoDamageFrom(),
-//        'weatherBoost' => $weatherBoost,
-//    ];
-//}
-//
-//$files['types'] = $outputTypes;
+$logger->debug('Generate Types');
+
+$typeWeatherCalculator = new TypeWeatherCalculator();
+$outputTypes           = [];
+foreach (PokemonType::ALL_TYPES as $typeName) {
+    $type         = PokemonType::createFromPokemonType($typeName);
+    $weatherBoost = [];
+    foreach ($typeWeatherCalculator->getWeatherBoost($type, PokemonType::none()) as $weatherBoost) {
+        $names = [];
+        foreach ($translations->getCollections() as $language => $languageCollection) {
+            $names[$language] = $languageCollection->getWeatherName($weatherBoost->getWeatherTranslationKey());
+        }
+
+        $weatherBoost = [
+            'id' => $weatherBoost->getWeather(),
+            'names' => $names,
+            'assetName' => $weatherBoost->getAssetsName(),
+        ];
+    }
+
+    $names = [];
+    foreach ($translations->getCollections() as $language => $languageCollection) {
+        $names[$language] = $languageCollection->getTypeName($type->getType());
+    }
+
+    $outputTypes[] = [
+        'type' => $type->getType(),
+        'names' => $names,
+        'doubleDamageFrom' => $type->getDoubleDamageFrom(),
+        'halfDamageFrom' => $type->getHalfDamageFrom(),
+        'noDamageFrom' => $type->getNoDamageFrom(),
+        'weatherBoost' => $weatherBoost,
+    ];
+}
+
+$files['types'] = $outputTypes;
 
 $logger->debug('Generate Pokemon');
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
@@ -185,7 +206,7 @@ $raidBossesWithDifficulty = $pokebattlerParser->appendResults($raidBosses);
 
 $logger->debug('Generate Images');
 
-$windowSize            = '0,0';
+$firstRaidGraphicName  = null;
 $raidBossImageRenderer = new RaidBossGraphicRenderer();
 foreach ($translations->getCollections() as $translationName => $translationCollection) {
     $raidListDir = sprintf('%s/graphics/%s', $apidir, $translationName);
@@ -193,30 +214,25 @@ foreach ($translations->getCollections() as $translationName => $translationColl
         @mkdir($raidListDir, 0777, true);
     }
 
-    $raidGraphic = $raidBossImageRenderer->buildGraphic(
-        $raidBossesWithDifficulty,
-        $translationCollection,
-        new RaidBossGraphicConfig()
-    );
+    foreach ($applicationConfig['raid-graphics'] as $raidGraphicName => $raidGraphicConfig) {
+        assert($raidGraphicConfig instanceof RaidBossGraphicConfig);
+        $raidGraphic = $raidBossImageRenderer->buildGraphic(
+            $raidBossesWithDifficulty,
+            $translationCollection,
+            $raidGraphicConfig
+        );
 
-    file_put_contents(
-        sprintf('%s/raidlist.svg', $raidListDir),
-        $raidGraphic->getImageContent()
-    );
+        file_put_contents(
+            sprintf('%s/%s.svg', $raidListDir, $raidGraphicName),
+            $raidGraphic->getImageContent()
+        );
 
-    $raidGraphicB = $raidBossImageRenderer->buildGraphic(
-        $raidBossesWithDifficulty,
-        $translationCollection,
-        new RaidBossGraphicConfig(RaidBossGraphicConfig::ORDER_LOW_TO_HIGH, false)
-    );
+        if ($firstRaidGraphicName !== null) {
+            continue;
+        }
 
-    file_put_contents(
-        sprintf('%s/raidlist_b.svg', $raidListDir),
-        $raidGraphicB->getImageContent()
-    );
-
-
-    $windowSize = $raidGraphic->getWindowSize();
+        $firstRaidGraphicName = $raidGraphicName;
+    }
 }
 
 $logger->debug('Generate Raidboss.json');
@@ -227,14 +243,14 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
     'currentList' => $raidBossesList,
     'graphics' => [
         'German' => [
-            'svg' => '/api/graphics/German/raidlist.svg',
-            'png' => '/api/graphics/German/raidlist.png',
-            'sha512' => hash_file('sha512', $apidir . '/graphics/German/raidlist.svg'),
+            'svg'    => sprintf('/api/graphics/German/%s.svg', $firstRaidGraphicName),
+            'png'    => sprintf('/api/graphics/German/%s.png', $firstRaidGraphicName),
+            'sha512' => hash_file('sha512', sprintf('%s/graphics/German/%s.svg', $apidir, $firstRaidGraphicName)),
         ],
         'English' => [
-            'svg' => '/api/graphics/English/raidlist.svg',
-            'png' => '/api/graphics/English/raidlist.png',
-            'sha512' => hash_file('sha512', $apidir . '/graphics/English/raidlist.svg'),
+            'svg'    => sprintf('/api/graphics/English/%s.svg', $firstRaidGraphicName),
+            'png'    => sprintf('/api/graphics/English/%s.png', $firstRaidGraphicName),
+            'sha512' => hash_file('sha512', sprintf('%s/graphics/English/%s.svg', $apidir, $firstRaidGraphicName)),
         ],
     ],
 ], JSON_PRETTY_PRINT));
@@ -263,4 +279,3 @@ file_put_contents(
 $hasChanges = $cacheLoader->hasChanges();
 $logger->debug(sprintf('CACHE_STATUS=%s', $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES'));
 echo sprintf('::set-output name=CACHE_STATUS::%s' . PHP_EOL, $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
-echo sprintf('::set-output name=WINDOW_SIZE::%s' . PHP_EOL, $windowSize);

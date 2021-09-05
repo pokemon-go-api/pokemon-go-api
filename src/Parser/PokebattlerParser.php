@@ -44,8 +44,8 @@ class PokebattlerParser
                         $this->buildCacheKey($raidBoss, $battleConfiguration)
                     );
                 } catch (Throwable $throwable) {
-
                 }
+
                 if ($pokebattlerResultFile === null) {
                     try {
                         $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
