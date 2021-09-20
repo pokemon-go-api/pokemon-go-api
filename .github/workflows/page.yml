@@ -16,8 +16,8 @@ on:
       - main
 
   schedule:
-    # At minute 7 past hour 8, 10, 11, 20, 22, and 23.
-    - cron:  '7 8,10,11,20,22,23 * * *'
+    # At minute 7 past hours in UTC
+    - cron: '7 6,8,9,10,18,20,21,22 * * *'
 
 jobs:
   publish:
@@ -30,7 +30,7 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
-          php-version: "7.4"
+          php-version: "8.0"
           ini-values: zend.assertions=1
           tools: composer:v2
 

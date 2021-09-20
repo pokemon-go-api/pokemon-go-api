@@ -29,8 +29,8 @@ class OpenApiTest extends TestCase
     public function testOpenAPISpecification(string $filePath, string $apiRoute): void
     {
         $this->expectNotToPerformAssertions();
-        $openApiFile = __DIR__ . '/../../public/Pokedex.yaml';
-        $validator   = (new ValidatorBuilder())->fromYamlFile($openApiFile)->getResponseValidator();
+        $openApiFile = __DIR__ . '/../../public/Pokedex.json';
+        $validator   = (new ValidatorBuilder())->fromJsonFile($openApiFile)->getResponseValidator();
 
         $responseContent = file_get_contents($filePath);
         if ($responseContent === false) {
