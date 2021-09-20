@@ -7,7 +7,7 @@
       "ext-json": "*",
       "ext-dom": "*",
       "ext-simplexml": "*",
-      "guzzlehttp/guzzle": "^7.2.0",
+      "guzzlehttp/guzzle": "^7.3.0",
       "psr/log": "^1.1.0"
     },
     "autoload": {
@@ -22,13 +22,13 @@
         }
     },
     "require-dev": {
-        "doctrine/coding-standard": "^8.2",
-        "phpstan/phpstan": "^0.12.83",
-        "phpstan/phpstan-phpunit": "^0.12.18",
+        "doctrine/coding-standard": "^9.0",
+        "phpstan/phpstan": "^0.12.99",
+        "phpstan/phpstan-phpunit": "^0.12.22",
         "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-master",
         "infection/infection": "^0.20.2",
-        "league/openapi-psr7-validator": "^0.12.2"
+        "league/openapi-psr7-validator": "^0.16.1"
     },
     "scripts": {
         "ci": [

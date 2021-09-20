@@ -12,11 +12,9 @@ class NoopLogger implements LoggerInterface
     use LoggerTrait;
 
     /**
-     * @param mixed               $level
-     * @param string|mixed        $message
      * @param array<mixed, mixed> $context
      */
-    public function log($level, $message, array $context = []): void
+    public function log(mixed $level, mixed $message, array $context = []): void
     {
     }
 }
