@@ -226,7 +226,7 @@
         {
           "schema": {
             "type": "string",
-            "pattern": "^[A-Z_]$"
+            "pattern": "^[A-Z_]+$"
           },
           "name": "name",
           "in": "path",
