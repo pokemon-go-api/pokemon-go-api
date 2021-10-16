@@ -88,7 +88,7 @@ class RaidBossListTest extends TestCase
                 'pokemonID' => 'CHARIZARD',
                 'formID' => 'CHARIZARD_MEGA_Y',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_006_52.png',
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_Y.icon.png',
             ],
             [
                 'dexNr' => 18,

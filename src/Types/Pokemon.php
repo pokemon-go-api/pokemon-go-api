@@ -247,7 +247,8 @@ final class Pokemon
         }
 
         if ($temporaryEvolution !== null) {
-            $assetBundleId = $temporaryEvolution->getAssetsBundleId();
+            $assetBundleId     = $temporaryEvolution->getAssetsBundleId();
+            $assetBundleSuffix = $temporaryEvolution->getAssetsAddressableSuffix();
         }
 
         foreach ($this->pokemonImages as $pokemonImage) {

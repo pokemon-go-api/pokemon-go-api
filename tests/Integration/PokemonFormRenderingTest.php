@@ -12,6 +12,7 @@ use function is_array;
 use function json_decode;
 
 /**
+ * phpcs:disable Generic.Files.LineLength.TooLong
  * @coversNothing
  */
 class PokemonFormRenderingTest extends TestCase
@@ -36,12 +37,34 @@ class PokemonFormRenderingTest extends TestCase
      */
     public function specialPokemonDataProvider(): iterable
     {
+        yield 'charizard' => [
+            'dexNr'    => 6,
+            'expected' => [
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.icon.png'],
+                'megaEvolutions' => [
+                    'CHARIZARD_MEGA_X' => [
+                        'id' => 'CHARIZARD_MEGA_X',
+                        'assets' => [
+                            'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_X.icon.png',
+                            'shinyImage' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_X.s.icon.png',
+                        ],
+                    ],
+                    'CHARIZARD_MEGA_Y' => [
+                        'id' => 'CHARIZARD_MEGA_Y',
+                        'assets' => [
+                            'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_Y.icon.png',
+                            'shinyImage' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_Y.s.icon.png',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
         yield 'pikachu' => [
             'dexNr'    => 25,
             'expected' => [
                 'id'          => 'PIKACHU',
                 'formId'      => 'PIKACHU',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm25.icon.png'],
                 'regionForms' => [
                     'PIKACHU_FLYING_5TH_ANNIV' => [],
@@ -91,7 +114,6 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'KYUREM',
                 'formId'      => 'KYUREM',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_646_11.png'],
                 'regionForms' => [
                     'KYUREM_BLACK' => [],
@@ -105,7 +127,6 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'DEOXYS',
                 'formId'      => 'DEOXYS',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_386_11.png'],
                 'regionForms' => [
                     'DEOXYS_ATTACK'  => [],
@@ -120,7 +141,6 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'THUNDURUS',
                 'formId'      => 'THUNDURUS_INCARNATE',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
                 'regionForms' => [
                     'THUNDURUS_THERIAN' => [
@@ -135,7 +155,6 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'GENESECT',
                 'formId'      => 'GENESECT',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_649_11.png'],
                 'regionForms' => [
                     'GENESECT_BURN'  => [],
@@ -151,7 +170,6 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'            => 'MEOWTH',
                 'formId'        => 'MEOWTH',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
                 'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm52.icon.png'],
                 'secondaryType' => null,
                 'regionForms'   => [
