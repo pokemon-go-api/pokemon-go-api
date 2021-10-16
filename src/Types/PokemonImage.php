@@ -166,4 +166,9 @@ final class PokemonImage
     {
         return $this->isShiny;
     }
+
+    public function isFemale(): bool
+    {
+        return $this->isFemale;
+    }
 }

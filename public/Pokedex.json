@@ -533,7 +533,7 @@
           "assetForms": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Assets"
+              "$ref": "#/components/schemas/AssetForm"
             }
           },
           "regionForms": {
@@ -857,6 +857,39 @@
         "required": [
           "image",
           "shinyImage"
+        ]
+      },
+      "AssetForm": {
+        "title": "AssetWithType",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "image": {
+            "type": "string",
+            "format": "uri"
+          },
+          "shinyImage": {
+            "type": "string",
+            "format": "uri"
+          },
+          "form": {
+            "type": "string",
+            "nullable": true
+          },
+          "costume": {
+            "type": "string",
+            "nullable": true
+          },
+          "isFemale": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "image",
+          "shinyImage",
+          "form",
+          "costume",
+          "isFemale"
         ]
       },
       "MegaEvolution": {
