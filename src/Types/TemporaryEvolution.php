@@ -7,6 +7,7 @@ namespace PokemonGoApi\PogoAPI\Types;
 use stdClass;
 
 use function assert;
+use function strpos;
 use function substr;
 
 final class TemporaryEvolution
@@ -71,6 +72,19 @@ final class TemporaryEvolution
     public function getAssetsBundleId(): ?int
     {
         return $this->assetsBundleId;
+    }
+
+    public function getAssetsAddressableSuffix(): ?string
+    {
+        if (strpos($this->id, '_X') !== false) {
+            return 'MEGA_X';
+        }
+
+        if (strpos($this->id, '_Y') !== false) {
+            return 'MEGA_Y';
+        }
+
+        return 'MEGA';
     }
 
     public function setAssetBundleId(int $assetBundleValue): void

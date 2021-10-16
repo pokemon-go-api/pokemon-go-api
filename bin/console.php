@@ -163,7 +163,7 @@ foreach ($files as $file => $data) {
         $data = reset($data);
     }
 
-    file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT));
+    file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 }
 
 $logger->debug('Generate Raidbosses');
