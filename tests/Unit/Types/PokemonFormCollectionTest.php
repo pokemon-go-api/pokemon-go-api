@@ -25,10 +25,10 @@ class PokemonFormCollectionTest extends TestCase
         $formCollection = PokemonFormCollection::createFromGameMaster($data->data);
 
         self::assertSame('RATTATA', $formCollection->getPokemonId());
-        self::assertCount(1, $formCollection->getPokemonForms());
-        $firstForm = $formCollection->getPokemonForms()[0];
+        self::assertCount(4, $formCollection->getPokemonForms());
+        $secondForm = $formCollection->getPokemonForms()[1];
 
-        self::assertSame('RATTATA_ALOLA', $firstForm->getId());
-        self::assertSame(61, $firstForm->getAssetBundleValue());
+        self::assertSame('RATTATA_ALOLA', $secondForm->getId());
+        self::assertSame(61, $secondForm->getAssetBundleValue());
     }
 }
