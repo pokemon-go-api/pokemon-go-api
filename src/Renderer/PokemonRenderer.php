@@ -206,7 +206,7 @@ final class PokemonRenderer
     }
 
     /**
-     * @return array<int, array<string, string>>
+     * @return array<int, array<string, string|bool|null>>
      */
     private function renderAssetsForms(Pokemon $pokemon): array
     {
@@ -228,7 +228,10 @@ final class PokemonRenderer
             }
 
             $out[] = [
-                'image' => $assetForm->buildUrl(false),
+                'form'       => empty($assetForm->getAssetBundleSuffix()) ? null : $assetForm->getAssetBundleSuffix(),
+                'costume'    => empty($assetForm->getCostume()) ? null : $assetForm->getCostume(),
+                'isFemale'   => $assetForm->isFemale(),
+                'image'      => $assetForm->buildUrl(false),
                 'shinyImage' => $assetForm->buildUrl(true),
             ];
         }
