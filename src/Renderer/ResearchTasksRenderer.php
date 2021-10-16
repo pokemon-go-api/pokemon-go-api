@@ -12,8 +12,6 @@ use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardPokemon;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
 use PokemonGoApi\PogoAPI\Util\CpCalculator;
 
-use function str_replace;
-
 final class ResearchTasksRenderer
 {
     private TranslationCollectionCollection $translations;
@@ -37,10 +35,9 @@ final class ResearchTasksRenderer
         foreach ($researchTasks as $researchTask) {
             $questTranslations = [];
             foreach ($this->translations->getCollections() as $name => $translationCollection) {
-                $questTranslations[$name] = str_replace(
-                    '{0}',
-                    (string) $researchTask->getResearchTaskQuest()->getReplaceArgument(),
-                    $translationCollection->getQuest($researchTask->getResearchTaskQuest()->getTranslationKey()) ?? ''
+                $questTranslations[$name] = $translationCollection->getQuest(
+                    $researchTask->getResearchTaskQuest()->getTranslationKey(),
+                    (string) $researchTask->getResearchTaskQuest()->getReplaceArgument()
                 );
 
                 if (! $researchTask->getResearchTaskQuest()->isEventTask()) {
