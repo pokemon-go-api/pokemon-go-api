@@ -542,6 +542,12 @@
               "$ref": "#/components/schemas/RegionPokemon"
             }
           },
+          "evolutions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evolution"
+            }
+          },
           "hasMegaEvolution": {
             "type": "boolean"
           },
@@ -568,8 +574,71 @@
           "assets",
           "assetForms",
           "regionForms",
+          "evolutions",
           "hasMegaEvolution",
           "megaEvolutions"
+        ]
+      },
+      "Evolution": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "formId": {
+            "type": "string"
+          },
+          "candies": {
+            "type": "integer"
+          },
+          "item": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "names": {
+                "$ref": "#/components/schemas/Names"
+              }
+            },
+            "required": [
+              "id",
+              "names"
+            ]
+          },
+          "quests": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "names": {
+                  "$ref": "#/components/schemas/Names"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "names"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "formId",
+          "candies",
+          "item",
+          "quests"
         ]
       },
       "RegionPokemon": {
@@ -650,6 +719,12 @@
               "$ref": "#/components/schemas/RegionPokemon"
             }
           },
+          "evolutions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evolution"
+            }
+          },
           "hasMegaEvolution": {
             "type": "boolean"
           },
@@ -675,6 +750,7 @@
           "eliteCinematicMoves",
           "assets",
           "regionForms",
+          "evolutions",
           "hasMegaEvolution",
           "megaEvolutions"
         ]

@@ -78,7 +78,7 @@ jobs:
         if: ${{ (steps.generated-data.outputs.CACHE_STATUS == 'HAS_CHANGES') && github.event_name != 'pull_request'}}
         uses: crazy-max/ghaction-github-pages@v2
         with:
-          keep_history: true
+          keep_history: false
           target_branch: gh-pages
           build_dir: public
         env:

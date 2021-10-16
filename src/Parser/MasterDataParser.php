@@ -8,7 +8,9 @@ use Exception;
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\QuestsCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
+use PokemonGoApi\PogoAPI\Types\EvolutionQuest;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
@@ -26,12 +28,14 @@ class MasterDataParser
 {
     private PokemonCollection $pokemonCollection;
     private AttacksCollection $attacksCollection;
+    private QuestsCollection $questsCollection;
     private PokemonAssetsCollection $pokemonAssetsCollection;
 
     public function __construct(PokemonAssetsCollection $pokemonAssetsCollection)
     {
         $this->pokemonCollection       = new PokemonCollection();
         $this->attacksCollection       = new AttacksCollection();
+        $this->questsCollection        = new QuestsCollection();
         $this->pokemonAssetsCollection = $pokemonAssetsCollection;
     }
 
@@ -45,6 +49,7 @@ class MasterDataParser
         $list                    = JsonParser::decodeToArray($fileContent);
         $this->attacksCollection = $this->parseMoves($list);
         $this->pokemonCollection = $this->parsePokemon($list);
+        $this->questsCollection  = $this->parseQuests($list);
 
         $this->addCombatMoves($list, $this->attacksCollection);
         $this->addTemporaryEvolutions($list, $this->pokemonCollection);
@@ -59,6 +64,11 @@ class MasterDataParser
     public function getPokemonCollection(): PokemonCollection
     {
         return $this->pokemonCollection;
+    }
+
+    public function getQuestsCollection(): QuestsCollection
+    {
+        return $this->questsCollection;
     }
 
     /**
@@ -122,6 +132,26 @@ class MasterDataParser
         }
 
         return $attacksCollection;
+    }
+
+    /**
+     * @param array<int, stdClass> $list
+     */
+    private function parseQuests(array $list): QuestsCollection
+    {
+        $questsCollection = new QuestsCollection();
+        foreach ($list as $item) {
+            $matches = [];
+            if (! preg_match('~(?<Quest>.*)_EVOLUTION_QUEST$~i', $item->templateId, $matches)) {
+                continue;
+            }
+
+            $questsCollection->add(
+                EvolutionQuest::createFromGameMaster($item->data)
+            );
+        }
+
+        return $questsCollection;
     }
 
     /**

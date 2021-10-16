@@ -11,6 +11,7 @@ use function feof;
 use function fgets;
 use function file_exists;
 use function fopen;
+use function strlen;
 use function strpos;
 use function strtoupper;
 use function substr;
@@ -97,7 +98,7 @@ class TranslationParser
                 }
 
                 if ($this->lineStartsWith($currentLine, 'RESOURCE ID: quest_')) {
-                    $questKey    = trim(substr($currentLine, 19));
+                    $questKey    = trim(substr($currentLine, 13));
                     $translation = $this->readTranslation($nextLine);
                     $collection->addQuest($questKey, $translation);
                 }
@@ -108,11 +109,20 @@ class TranslationParser
                     $collection->addWeather($weatherKey, $translation);
                 }
 
+                if (
+                    $this->lineStartsWith($currentLine, 'RESOURCE ID: item_')
+                    && $this->lineEndsWith($currentLine, '_name')
+                ) {
+                    $itemKey     = trim(substr($currentLine, 13, -5));
+                    $translation = $this->readTranslation($nextLine);
+                    $collection->addItem($itemKey, $translation);
+                }
+
                 if (! $this->lineStartsWith($currentLine, 'RESOURCE ID: challenge_')) {
                     continue;
                 }
 
-                $questKey    = trim(substr($currentLine, 23));
+                $questKey    = trim(substr($currentLine, 13));
                 $translation = $this->readTranslation($nextLine);
                 $collection->addQuest($questKey, $translation);
             } while (! feof($file));
@@ -136,6 +146,11 @@ class TranslationParser
     private function lineStartsWith(string $line, string $startsWith): bool
     {
         return strpos($line, $startsWith) === 0;
+    }
+
+    private function lineEndsWith(string $line, string $endsWith): bool
+    {
+        return substr($line, strlen($endsWith) * -1) === $endsWith;
     }
 
     private function readTranslation(string $line): string

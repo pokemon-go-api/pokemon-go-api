@@ -6,6 +6,7 @@ namespace PokemonGoApi\PogoAPI\Renderer;
 
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
+use PokemonGoApi\PogoAPI\Collections\QuestsCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
@@ -33,6 +34,7 @@ final class PokemonRenderer
     public function render(
         Pokemon $pokemon,
         AttacksCollection $attacksCollection,
+        QuestsCollection $questsCollection,
         bool $basePokemon = true
     ): array {
         $names = PokemonNameRenderer::renderPokemonNames(
@@ -76,9 +78,10 @@ final class PokemonRenderer
                 'shinyImage' => $pokemonImage->buildUrl(true),
             ] : null,
             'regionForms'         => array_map(
-                fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection, false),
+                fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection, $questsCollection, false),
                 $pokemon->getPokemonRegionForms()
             ),
+            'evolutions' => $this->renderEvolutions($pokemon, $questsCollection, $this->translations),
             'hasMegaEvolution'    => $pokemon->hasTemporaryEvolutions(),
             'megaEvolutions'      => $this->renderMegaEvolutions($pokemon, $this->translations),
         ];
@@ -233,6 +236,66 @@ final class PokemonRenderer
                 'isFemale'   => $assetForm->isFemale(),
                 'image'      => $assetForm->buildUrl(false),
                 'shinyImage' => $assetForm->buildUrl(true),
+            ];
+        }
+
+        return $out;
+    }
+
+    /**
+     * @return list<array<string, mixed>>
+     */
+    private function renderEvolutions(
+        Pokemon $pokemon,
+        QuestsCollection $questsCollection,
+        TranslationCollectionCollection $translations
+    ): array {
+        $out = [];
+        foreach ($pokemon->getEvolutions() as $evolution) {
+            $requiredItem = $evolution->getRequiredItem();
+
+            if ($requiredItem !== null) {
+                $itemNames = [];
+                foreach ($translations->getCollections() as $translationCollection) {
+                    $itemNames[$translationCollection->getLanguageName()] = $translationCollection->getItemName(
+                        $requiredItem
+                    );
+                }
+
+                $item = [
+                    'id' => $requiredItem,
+                    'names' => $itemNames,
+                ];
+            }
+
+            $quests = [];
+            foreach ($evolution->getQuestIds() as $questId) {
+                $quest = $questsCollection->getByName($questId);
+                if ($quest === null) {
+                    continue;
+                }
+
+                $questNames = [];
+                foreach ($translations->getCollections() as $translationCollection) {
+                    $questNames[$translationCollection->getLanguageName()] = $translationCollection->getQuest(
+                        $quest->getGoalTranslationId(),
+                        (string) $quest->getGoalTarget()
+                    );
+                }
+
+                $quests[] = [
+                    'id'    => $quest->getQuestId(),
+                    'type'  => $quest->getQuestType(),
+                    'names' => $questNames,
+                ];
+            }
+
+            $out[] = [
+                'id' => $evolution->getEvolutionId(),
+                'formId' => $evolution->getEvolutionFormId(),
+                'candies' => $evolution->getCandyCost(),
+                'item' => $item ?? null,
+                'quests' => $quests,
             ];
         }
 

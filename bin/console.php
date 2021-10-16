@@ -117,7 +117,11 @@ $files['types'] = $outputTypes;
 
 $logger->debug('Generate Pokemon');
 foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
-    $renderedPokemon = $pokemonRenderer->render($pokemon, $masterData->getAttacksCollection());
+    $renderedPokemon = $pokemonRenderer->render(
+        $pokemon,
+        $masterData->getAttacksCollection(),
+        $masterData->getQuestsCollection()
+    );
 
     $generation = GenerationDeterminer::fromDexNr($pokemon->getDexNr());
 

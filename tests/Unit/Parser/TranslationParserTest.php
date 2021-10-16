@@ -39,8 +39,8 @@ class TranslationParserTest extends TestCase
         self::assertSame('Fly', $collection->getMoveName(341));
         self::assertSame('Dummy', $collection->getRegionalForm('dummy'));
         self::assertSame([
-            'power_up_plural' => 'Power up Pokémon {0} times',
-            'buddy_affection_single' => 'Earn a heart with your buddy',
+            'quest_power_up_plural' => 'Power up Pokémon {0} times',
+            'challenge_buddy_affection_single' => 'Earn a heart with your buddy',
         ], $collection->getQuests());
         self::assertNull($collection->getRegionalForm('dummy2'));
     }

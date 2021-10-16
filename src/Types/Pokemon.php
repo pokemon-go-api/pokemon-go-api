@@ -35,6 +35,8 @@ final class Pokemon
     private array $pokemonRegionForms = [];
     /** @var array<int, PokemonImage> */
     private array $pokemonImages = [];
+    /** @var array<int, EvolutionBranch> */
+    private array $evolutions = [];
 
     public function __construct(
         int $dexNr,
@@ -90,6 +92,15 @@ final class Pokemon
         $pokemon->cinematicMoveNames      = $pokemonSettings->cinematicMoves ?? [];
         $pokemon->eliteQuickMoveNames     = $pokemonSettings->eliteQuickMove ?? [];
         $pokemon->eliteCinematicMoveNames = $pokemonSettings->eliteCinematicMove ?? [];
+
+        foreach ($pokemonSettings->evolutionBranch ?? [] as $evolutionBranch) {
+            if (! isset($evolutionBranch->evolution)) {
+                continue;
+            }
+
+            assert($evolutionBranch instanceof stdClass);
+            $pokemon->evolutions[] = EvolutionBranch::createFromGameMaster($evolutionBranch);
+        }
 
         $tempEvos = [];
         foreach ($pokemonSettings->tempEvoOverrides ?? [] as $evolutionBranch) {
@@ -199,6 +210,14 @@ final class Pokemon
     public function getPokemonForm(): ?PokemonForm
     {
         return $this->pokemonForm;
+    }
+
+    /**
+     * @return list<EvolutionBranch>
+     */
+    public function getEvolutions(): array
+    {
+        return $this->evolutions;
     }
 
     public function getAssetsBundleId(): int

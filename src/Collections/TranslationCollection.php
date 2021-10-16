@@ -9,6 +9,7 @@ use function array_values;
 use function mb_strtolower;
 use function mb_strtoupper;
 use function sprintf;
+use function str_replace;
 
 final class TranslationCollection
 {
@@ -31,6 +32,8 @@ final class TranslationCollection
     private array $quests = [];
     /** @var array<string, string> */
     private array $weather = [];
+    /** @var array<string, string> */
+    private array $items = [];
 
     public function __construct(string $languageName)
     {
@@ -44,12 +47,17 @@ final class TranslationCollection
 
     public function addQuest(string $key, string $translation): void
     {
-        $this->quests[$key] = $translation;
+        $this->quests[mb_strtolower($key)] = $translation;
     }
 
     public function addWeather(string $key, string $translation): void
     {
         $this->weather[mb_strtolower($key)] = $translation;
+    }
+
+    public function addItem(string $key, string $translation): void
+    {
+        $this->items[mb_strtolower($key)] = $translation;
     }
 
     public function addPokemonName(int $dexNr, string $translation): void
@@ -105,6 +113,11 @@ final class TranslationCollection
         return $this->pokemonNames[$dexNrKey] ?? null;
     }
 
+    public function getItemName(string $itemName): ?string
+    {
+        return $this->items[mb_strtolower($itemName)] ?? null;
+    }
+
     /**
      * @return string[]
      */
@@ -148,8 +161,17 @@ final class TranslationCollection
         return $this->quests;
     }
 
-    public function getQuest(string $quest): ?string
+    public function getQuest(string $quest, ?string $replaceArgument): ?string
     {
-        return $this->quests[$quest];
+        $questName = $this->quests[mb_strtolower($quest)] ?? null;
+        if ($replaceArgument !== null && $questName !== null) {
+            return str_replace(
+                '{0}',
+                $replaceArgument,
+                $questName
+            );
+        }
+
+        return $questName;
     }
 }
