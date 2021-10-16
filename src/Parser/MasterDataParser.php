@@ -79,7 +79,9 @@ class MasterDataParser
             assert($item->data instanceof stdClass);
 
             $pokemon = Pokemon::createFromGameMaster($item->data);
-            $pokemon = $pokemon->withAddedImages($this->pokemonAssetsCollection->getImages($pokemon->getDexNr()));
+            $pokemon = $pokemon->withAddedImages(
+                $this->pokemonAssetsCollection->getImages($pokemon->getDexNr())
+            );
 
             if (
                 strpos($pokemon->getFormId(), '_PURIFIED') !== false ||
@@ -202,8 +204,8 @@ class MasterDataParser
 
             $overwriteDefaultForms = [];
 
-            foreach ($pokemonFormCollection->getPokemonForms() as $pokemonForm) {
-                if ($pokemonForm->getId() === $pokemon->getId() . '_NORMAL') {
+            foreach ($pokemonFormCollection->getPokemonForms() as $index => $pokemonForm) {
+                if ($index === 0) {
                     $pokemon = $pokemon->withPokemonForm($pokemonForm);
                     $pokemonCollection->add($pokemon);
                     continue;

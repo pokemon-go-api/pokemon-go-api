@@ -38,9 +38,6 @@ final class PokemonFormCollection
         $forms = [];
         foreach ($gameMasterData->formSettings->forms ?? [] as $formData) {
             assert($formData instanceof stdClass);
-            if (! isset($formData->assetBundleValue) && ! isset($formData->assetBundleSuffix)) {
-                continue;
-            }
 
             $formOnlyId = str_replace($templateIdParts['name'] . '_', '', $formData->form);
 

@@ -140,11 +140,16 @@ class PokemonFormRenderingTest extends TestCase
             'dexNr'    => 642,
             'expected' => [
                 'id'          => 'THUNDURUS',
-                'formId'      => 'THUNDURUS_INCARNATE',
+                'formId'      => 'THUNDURUS',
                 'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
                 'regionForms' => [
+                    'THUNDURUS_INCARNATE' => [
+                        'names' => ['English' => 'Thundurus (Incarnate Forme)'],
+                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
+                    ],
                     'THUNDURUS_THERIAN' => [
                         'names' => ['English' => 'Thundurus (Therian Forme)'],
+                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_12.png'],
                     ],
                 ],
             ],
@@ -185,6 +190,15 @@ class PokemonFormRenderingTest extends TestCase
                 'id'            => 'VIVILLON',
                 'formId'        => 'VIVILLON',
                 'assets'        => null,
+            ],
+        ];
+
+        yield 'FURFROU' => [
+            'dexNr'    => 676,
+            'expected' => [
+                'id'            => 'FURFROU',
+                'formId'        => 'FURFROU',
+                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm676.fNATURAL.icon.png'],
             ],
         ];
     }
