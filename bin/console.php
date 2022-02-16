@@ -257,7 +257,7 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
             'sha512' => hash_file('sha512', sprintf('%s/graphics/English/%s.svg', $apidir, $firstRaidGraphicName)),
         ],
     ],
-], JSON_PRETTY_PRINT));
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $hashFiles = [
     $apidir . 'raidboss.json',
@@ -267,7 +267,7 @@ $hashFiles = [
 
 file_put_contents($apidir . 'hashes.json', json_encode(
     $cacheLoader->updateCaches($hashFiles),
-    JSON_PRETTY_PRINT
+    JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
 ));
 
 $date   = new DateTimeImmutable('now', new DateTimeZone('UTC'));

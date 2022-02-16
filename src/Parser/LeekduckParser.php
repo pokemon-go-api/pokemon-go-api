@@ -126,10 +126,12 @@ class LeekduckParser
                     if ($regionForm->getFormId() !== $pokemonFormId) {
                         $scorePercent = null;
                         similar_text($regionForm->getFormId(), $pokemonFormId, $scorePercent);
-                        $bestMatchingRegionForms[] = [
-                            'score' => $scorePercent,
-                            'form' => $regionForm,
-                        ];
+                        if ($scorePercent >= 70) {
+                            $bestMatchingRegionForms[] = [
+                                'score' => $scorePercent,
+                                'form'  => $regionForm,
+                            ];
+                        }
                         continue;
                     }
 
