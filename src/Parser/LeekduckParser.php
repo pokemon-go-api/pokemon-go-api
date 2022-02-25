@@ -132,6 +132,7 @@ class LeekduckParser
                                 'form'  => $regionForm,
                             ];
                         }
+
                         continue;
                     }
 

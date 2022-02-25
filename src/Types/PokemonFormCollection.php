@@ -8,6 +8,8 @@ use Exception;
 use stdClass;
 
 use function assert;
+use function count;
+use function get_object_vars;
 use function preg_match;
 use function str_replace;
 
@@ -38,6 +40,9 @@ final class PokemonFormCollection
         $forms = [];
         foreach ($gameMasterData->formSettings->forms ?? [] as $formData) {
             assert($formData instanceof stdClass);
+            if (count(get_object_vars($formData)) === 0) {
+                continue;
+            }
 
             $formOnlyId = str_replace($templateIdParts['name'] . '_', '', $formData->form);
 
