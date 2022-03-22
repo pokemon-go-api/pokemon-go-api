@@ -324,7 +324,7 @@
         <level>mega</level>
         <shiny>false</shiny>
     </raidboss>
-  
+
     <raidboss>
         <startDate>
             <date>2021-08-26 10:00:00</date>
@@ -338,4 +338,29 @@
         <shiny>false</shiny>
     </raidboss>
 
+    <raidboss>
+        <startDate>
+            <date>2022-03-22 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-03-29 20:00:00</date>
+        </endDate>
+        <pokemon>TAPU_LELE</pokemon>
+        <form>TAPU_LELE</form>
+        <level>lvl5</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-03-22 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-03-29 20:00:00</date>
+        </endDate>
+        <pokemon>CHARIZARD</pokemon>
+        <form>CHARIZARD_MEGA_Y</form>
+        <level>mega</level>
+        <shiny>true</shiny>
+    </raidboss>
 </root>
