@@ -92,7 +92,7 @@ class PokebattlerParser
             //phpcs:ignore Generic.Files.LineLength.TooLong
             'https://fight.pokebattler.com/raids/defenders/%s/levels/RAID_LEVEL_%s/attackers/levels/%d/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?',
             $this->raidBossName($raidBoss, $addForm),
-            $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel()),
+            $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel(), $raidBoss->getPokemon()->getId()),
             $battleConfiguration->getPokemonLevel()
         );
 
@@ -111,7 +111,7 @@ class PokebattlerParser
         return $url;
     }
 
-    private function raidLevelConstantToLevelNumber(string $raidLevel): string
+    private function raidLevelConstantToLevelNumber(string $raidLevel, string $pokemonId): string
     {
         switch ($raidLevel) {
             case RaidBoss::RAID_LEVEL_1:
@@ -127,6 +127,9 @@ class PokebattlerParser
                 return '6';
 
             case RaidBoss::RAID_LEVEL_MEGA:
+                if (in_array($pokemonId, ['LATIAS','LATIOS'], true)) {
+                    return 'MEGA_5';
+                }
                 return 'MEGA';
 
             default:
