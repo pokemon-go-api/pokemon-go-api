@@ -165,6 +165,9 @@ final class RenderingRaidBoss
             case RaidBoss::RAID_LEVEL_MEGA:
                 $levelIcon = '3';
                 break;
+            case RaidBoss::RAID_LEVEL_LEGENDARY_MEGA:
+                $levelIcon = '4';
+                break;
             case RaidBoss::RAID_LEVEL_5:
                 $levelIcon = '2';
                 break;

@@ -37,6 +37,7 @@ final class Pokemon
     private array $pokemonImages = [];
     /** @var array<int, EvolutionBranch> */
     private array $evolutions = [];
+    private ?string $rarity = null;
 
     public function __construct(
         int $dexNr,
@@ -78,6 +79,7 @@ final class Pokemon
             PokemonType::createFromPokemonType($pokemonSettings->type),
             $secondaryType
         );
+        $pokemon->rarity = $pokemonSettings->rarity ?? null;
 
         if (isset($pokemonSettings->stats->baseStamina)) {
             assert($pokemonSettings->stats instanceof stdClass);
@@ -251,6 +253,11 @@ final class Pokemon
                 && $formStats->getDefense() === $pokemonStats->getDefense()
                 && $formStats->getStamina() === $pokemonStats->getStamina()
             ) && strpos($this->getFormId(), '_FEMALE') === false;
+    }
+
+    public function getRarity(): ?string
+    {
+        return $this->rarity;
     }
 
     public function getPokemonImage(

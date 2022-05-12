@@ -6,11 +6,12 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 final class RaidBoss
 {
-    public const RAID_LEVEL_1    = 'lvl1';
-    public const RAID_LEVEL_3    = 'lvl3';
-    public const RAID_LEVEL_5    = 'lvl5';
-    public const RAID_LEVEL_EX   = 'ex';
-    public const RAID_LEVEL_MEGA = 'mega';
+    public const RAID_LEVEL_1              = 'lvl1';
+    public const RAID_LEVEL_3              = 'lvl3';
+    public const RAID_LEVEL_5              = 'lvl5';
+    public const RAID_LEVEL_EX             = 'ex';
+    public const RAID_LEVEL_MEGA           = 'mega';
+    public const RAID_LEVEL_LEGENDARY_MEGA = 'legendary_mega';
 
     private bool $shinyAvailable;
     private string $raidLevel;

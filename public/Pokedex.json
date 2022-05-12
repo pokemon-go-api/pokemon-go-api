@@ -253,12 +253,6 @@
                   "properties": {
                     "currentList": {
                       "type": "object",
-                      "required": [
-                        "lvl1",
-                        "lvl3",
-                        "lvl5",
-                        "mega"
-                      ],
                       "additionalProperties": false,
                       "properties": {
                         "lvl1": {
@@ -280,6 +274,12 @@
                           }
                         },
                         "mega": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "legendary_mega": {
                           "type": "array",
                           "items": {
                             "$ref": "#/components/schemas/RaidBoss"
@@ -498,6 +498,11 @@
             ],
             "nullable": true
           },
+          "rarity": {
+            "type": "string",
+            "enum": ["POKEMON_RARITY_MYTHIC", "POKEMON_RARITY_LEGENDARY"],
+            "nullable": true
+          },
           "quickMoves": {
             "type": "object",
             "additionalProperties": {
@@ -679,6 +684,11 @@
                 "$ref": "#/components/schemas/Type"
               }
             ],
+            "nullable": true
+          },
+          "rarity": {
+            "type": "string",
+            "enum": ["POKEMON_RARITY_MYTHIC", "POKEMON_RARITY_LEGENDARY"],
             "nullable": true
           },
           "quickMoves": {
@@ -1046,6 +1056,7 @@
             "enum": [
               "ex",
               "mega",
+              "legendary_mega",
               "lvl5",
               "lvl3",
               "lvl1"

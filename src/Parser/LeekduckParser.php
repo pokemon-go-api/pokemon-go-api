@@ -112,6 +112,7 @@ class LeekduckParser
 
                 $pokemonFormId = strtoupper(implode('_', $pokemonIdParts));
 
+                $raidTierLevel = $currentTierLevel;
                 $pokemonTemporaryEvolution = null;
                 foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
                     if ($temporaryEvolution->getId() !== $pokemonFormId) {
@@ -119,6 +120,10 @@ class LeekduckParser
                     }
 
                     $pokemonTemporaryEvolution = $temporaryEvolution;
+
+                    if ($raidTierLevel === RaidBoss::RAID_LEVEL_MEGA && $pokemon->getRarity() !== null) {
+                        $raidTierLevel = RaidBoss::RAID_LEVEL_LEGENDARY_MEGA;
+                    }
                 }
 
                 $bestMatchingRegionForms = [];
@@ -154,7 +159,7 @@ class LeekduckParser
                 $raidboss = new RaidBoss(
                     $pokemon,
                     count($this->getElementsByClass($liItem, 'shiny-icon')) === 1,
-                    $currentTierLevel,
+                    $raidTierLevel,
                     $pokemonTemporaryEvolution,
                     $pokemonImage->getCostume()
                 );

@@ -61,11 +61,12 @@ final class RaidBossCollection
     public function toArray(): array
     {
         $raidBossLevelMapping = [
-            RaidBoss::RAID_LEVEL_EX => 10,
-            RaidBoss::RAID_LEVEL_MEGA => 8,
-            RaidBoss::RAID_LEVEL_5 => 5,
-            RaidBoss::RAID_LEVEL_3 => 3,
-            RaidBoss::RAID_LEVEL_1 => 1,
+            RaidBoss::RAID_LEVEL_EX             => 12,
+            RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 10,
+            RaidBoss::RAID_LEVEL_MEGA           => 8,
+            RaidBoss::RAID_LEVEL_5              => 5,
+            RaidBoss::RAID_LEVEL_3              => 3,
+            RaidBoss::RAID_LEVEL_1              => 1,
         ];
         uasort(
             $this->storage,

@@ -127,10 +127,10 @@ class PokebattlerParser
                 return '6';
 
             case RaidBoss::RAID_LEVEL_MEGA:
-                if (in_array($pokemonId, ['LATIAS','LATIOS'], true)) {
-                    return 'MEGA_5';
-                }
                 return 'MEGA';
+
+            case RaidBoss::RAID_LEVEL_LEGENDARY_MEGA:
+                return 'MEGA_5';
 
             default:
                 throw new Exception('Unknown RaidLevel', 1618743729200);

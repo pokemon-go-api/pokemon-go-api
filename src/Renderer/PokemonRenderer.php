@@ -53,6 +53,7 @@ final class PokemonRenderer
             'stats'               => $pokemon->getStats(),
             'primaryType'         => $this->renderType($pokemon->getTypePrimary(), $this->translations),
             'secondaryType'       => $this->renderType($pokemon->getTypeSecondary(), $this->translations),
+            'rarity'              => $pokemon->getRarity(),
             'quickMoves'          => $this->renderAttacks(
                 $pokemon->getQuickMoveNames(),
                 $attacksCollection,
