@@ -106,10 +106,12 @@ final class Pokemon
 
         $tempEvos = [];
         foreach ($pokemonSettings->tempEvoOverrides ?? [] as $evolutionBranch) {
-            $tempEvos[] = TemporaryEvolution::createFromGameMaster(
-                $evolutionBranch,
-                $pokemonSettings->pokemonId
-            );
+            if (isset($evolutionBranch->tempEvoId)) {
+                $tempEvos[] = TemporaryEvolution::createFromGameMaster(
+                    $evolutionBranch,
+                    $pokemonSettings->pokemonId
+                );
+            }
         }
 
         return $pokemon->withAddedTemporaryEvolutions(...$tempEvos);
