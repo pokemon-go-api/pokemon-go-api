@@ -363,4 +363,165 @@
         <level>mega</level>
         <shiny>true</shiny>
     </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>CHANSEY</pokemon>
+        <level>lvl1</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>LARVITAR</pokemon>
+        <level>lvl1</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>TIMBURR</pokemon>
+        <level>lvl1</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>WIMPOD</pokemon>
+        <level>lvl1</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>EXEGGUTOR</pokemon>
+        <form>EXEGGUTOR_ALOLA</form>
+        <level>lvl3</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>SNORLAX</pokemon>
+        <level>lvl3</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>DRAGONITE</pokemon>
+        <level>lvl3</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>SLAKING</pokemon>
+        <level>lvl3</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>MEWTU</pokemon>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>CHARIZARD</pokemon>
+        <form>CHARIZARD_MEGA_Y</form>
+        <level>mega</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>CHARIZARD</pokemon>
+        <form>CHARIZARD_MEGA_X</form>
+        <level>mega</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>VENUSAUR</pokemon>
+        <form>VENUSAUR_MEGA</form>
+        <level>mega</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-06-16 10:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-06-30 20:00:00</date>
+        </endDate>
+        <pokemon>BLASTOISE</pokemon>
+        <form>BLASTOISE_MEGA</form>
+        <level>mega</level>
+        <shiny>true</shiny>
+    </raidboss>
 </root>
