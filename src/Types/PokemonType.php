@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
+use PokemonGoApi\PogoAPI\Util\TypeEffectivenessCalculator;
+
 use Exception;
 
 use function method_exists;
@@ -61,6 +63,8 @@ final class PokemonType
     private array $halfDamageFrom;
     /** @var array<int, string> */
     private array $noDamageFrom;
+    /** @var array<int, string> */
+    private array $DamageMultiplier;
 
     /**
      * @param array<int, string> $doubleDamageFrom
@@ -69,10 +73,13 @@ final class PokemonType
      */
     public function __construct(string $type, array $doubleDamageFrom, array $halfDamageFrom, array $noDamageFrom)
     {
+        $TypeEffectivenessCalculator = new TypeEffectivenessCalculator();
+
         $this->type             = $type;
         $this->doubleDamageFrom = $doubleDamageFrom;
         $this->halfDamageFrom   = $halfDamageFrom;
         $this->noDamageFrom     = $noDamageFrom;
+        $this->DamageMultiplier = $TypeEffectivenessCalculator->getAllTypes($this, $this);
     }
 
     /** @return array<int, string> */
@@ -91,6 +98,12 @@ final class PokemonType
     public function getNoDamageFrom(): array
     {
         return $this->noDamageFrom;
+    }
+
+    /** @return array<int, string> */
+    public function getDamageMultiplier(): array
+    {
+        return $this->DamageMultiplier;
     }
 
     public function getType(): string

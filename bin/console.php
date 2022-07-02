@@ -104,12 +104,13 @@ foreach (PokemonType::ALL_TYPES as $typeName) {
     }
 
     $outputTypes[] = [
-        'type' => $type->getType(),
+        'type'  => $type->getType(),
         'names' => $names,
         'doubleDamageFrom' => $type->getDoubleDamageFrom(),
-        'halfDamageFrom' => $type->getHalfDamageFrom(),
-        'noDamageFrom' => $type->getNoDamageFrom(),
-        'weatherBoost' => $weatherBoost,
+        'halfDamageFrom'   => $type->getHalfDamageFrom(),
+        'noDamageFrom'     => $type->getNoDamageFrom(),
+        'DamageMultiplier' => $type->getDamageMultiplier(),
+        'weatherBoost'     => $weatherBoost,
     ];
 }
 
