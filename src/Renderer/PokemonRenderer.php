@@ -74,6 +74,17 @@ final class PokemonRenderer
                 $attacksCollection,
                 $this->translations
             ),
+            'hasShadow' => $pokemon->hasShadow(),
+            'purifiedChargeMove' => $this->renderAttacks(
+                $pokemon->getPurifiedChargeMove(),
+                $attacksCollection,
+                $this->translations
+            ),  
+            'shadowChargeMove' => $this->renderAttacks(
+                $pokemon->getShadowChargeMove(),
+                $attacksCollection,
+                $this->translations
+            ),            
             'assets' => $pokemonImage ? [
                 'image'      => $pokemonImage->buildUrl(false),
                 'shinyImage' => $pokemonImage->buildUrl(true),
