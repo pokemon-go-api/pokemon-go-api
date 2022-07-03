@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Types;
 
 use PokemonGoApi\PogoAPI\Util\TypeEffectivenessCalculator;
-
 use Exception;
 
 use function method_exists;

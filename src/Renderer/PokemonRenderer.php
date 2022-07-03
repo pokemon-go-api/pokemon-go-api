@@ -205,15 +205,17 @@ final class PokemonRenderer
                     ];
                 }
             }
-
+            
             $out[$moveName] = [
-                'id'         => $moveName,
-                'power'      => $attack->getPower(),
-                'energy'     => $attack->getEnergy(),
-                'durationMs' => $attack->getDurationMs(),
-                'type'       => $this->renderType($attack->getPokemonType(), $translations),
-                'names'      => $names,
-                'combat'     => $combat,
+                'id'                  => $moveName,
+                'power'               => $attack->getPower(),
+                'energy'              => $attack->getEnergy(),
+                'durationMs'          => $attack->getDurationMs(),
+                'damageWindowStartMs' => $attack->getDamageWindowStartMs(),
+                'damageWindowEndMs'   => $attack->getDamageWindowEndMs(),
+                'type'                => $this->renderType($attack->getPokemonType(), $translations),
+                'names'               => $names,
+                'combat'              => $combat,
             ];
         }
 
