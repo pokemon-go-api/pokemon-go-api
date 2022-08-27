@@ -12,5 +12,4 @@ data/tmp/*
 !data/tmp/.gitkeep
 
 public/api
-composer.lock
 vendor

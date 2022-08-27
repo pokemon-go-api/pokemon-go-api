@@ -15,6 +15,9 @@ use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 
 use function file_put_contents;
+use function preg_replace;
+
+use const PHP_EOL;
 
 /**
  * @coversNothing
@@ -44,7 +47,10 @@ class RaidBossListTest extends TestCase
                 __DIR__ . '/Fixtures/radilistTemplate.phtml'
             )
         );
-        file_put_contents(__DIR__ . '/../../data/tmp/raidBossListTest.svg', $raidBossGraphic->getImageContent());
+        file_put_contents(
+            __DIR__ . '/../../data/tmp/raidBossListTest.svg',
+            preg_replace('~>\s?<~', '>' . PHP_EOL . '<', $raidBossGraphic->getImageContent())
+        );
         self::assertFileEquals(
             __DIR__ . '/Fixtures/expected_raidlist.svg',
             __DIR__ . '/../../data/tmp/raidBossListTest.svg'
@@ -102,7 +108,7 @@ class RaidBossListTest extends TestCase
                 'pokemonID' => 'ABOMASNOW',
                 'formID' => 'ABOMASNOW_MEGA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_460_51.png',
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm460.fMEGA.icon.png',
             ],
             [
                 'dexNr' => 25,
@@ -151,7 +157,14 @@ class RaidBossListTest extends TestCase
                 'pokemonID' => 'DEOXYS',
                 'formID' => 'DEOXYS_SPEED',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_386_14.png',
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm386.fSPEED.icon.png',
+            ],
+            [
+                'dexNr' => 422,
+                'pokemonID' => 'SHELLOS',
+                'formID' => 'SHELLOS_EAST_SEA',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm422.fEAST_SEA.icon.png',
             ],
             [
                 'dexNr' => 422,
@@ -159,13 +172,6 @@ class RaidBossListTest extends TestCase
                 'formID' => 'SHELLOS_WEST_SEA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
                 'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_422_11.png',
-            ],
-            [
-                'dexNr' => 422,
-                'pokemonID' => 'SHELLOS',
-                'formID' => 'SHELLOS_EAST_SEA',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_422_12.png',
             ],
             [
                 'dexNr' => 487,

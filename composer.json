@@ -3,7 +3,7 @@
     "description": "Pokemon GO Pokedex and Raid API",
     "license": "proprietary",
     "require": {
-      "php": "^7.4.0 || ~8.0.0",
+      "php": "~8.0.0",
       "ext-json": "*",
       "ext-dom": "*",
       "ext-simplexml": "*",
@@ -54,8 +54,8 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": false,
-            "infection/extension-installer": false
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "infection/extension-installer": true
         }
     }
 }

@@ -64,6 +64,7 @@ final class RaidBossCollection
             RaidBoss::RAID_LEVEL_EX             => 12,
             RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 10,
             RaidBoss::RAID_LEVEL_MEGA           => 8,
+            RaidBoss::RAID_LEVEL_ULTRA_BEAST    => 6,
             RaidBoss::RAID_LEVEL_5              => 5,
             RaidBoss::RAID_LEVEL_3              => 3,
             RaidBoss::RAID_LEVEL_1              => 1,
