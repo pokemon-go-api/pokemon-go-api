@@ -20,6 +20,9 @@ final class PokemonMove
     private bool $isFastMove;
     private ?PokemonCombatMove $combatMove = null;
 
+    private float $damageWindowStartMs;
+    private float $damageWindowEndMs;
+
     public function __construct(
         int $id,
         string $name,
@@ -27,7 +30,9 @@ final class PokemonMove
         float $power,
         float $energy,
         float $durationMs,
-        bool $isFastMove
+        bool $isFastMove,
+        float $damageWindowStartMs,
+        float $damageWindowEndMs
     ) {
         $this->id          = $id;
         $this->name        = $name;
@@ -36,6 +41,9 @@ final class PokemonMove
         $this->energy      = $energy;
         $this->durationMs  = $durationMs;
         $this->isFastMove  = $isFastMove;
+
+        $this->damageWindowStartMs = $damageWindowStartMs;
+        $this->damageWindowEndMs   = $damageWindowEndMs;
     }
 
     public static function createFromGameMaster(stdClass $moveData): self
@@ -50,7 +58,9 @@ final class PokemonMove
             $moveData->moveSettings->power ?? 0.0,
             $moveData->moveSettings->energyDelta ?? 0.0,
             $moveData->moveSettings->durationMs,
-            strpos($moveData->moveSettings->movementId, '_FAST') !== false
+            strpos($moveData->moveSettings->movementId, '_FAST') !== false,
+            $moveData->moveSettings->damageWindowStartMs, 
+            $moveData->moveSettings->damageWindowEndMs
         );
     }
 
@@ -97,5 +107,15 @@ final class PokemonMove
     public function getCombatMove(): ?PokemonCombatMove
     {
         return $this->combatMove;
+    }
+
+    public function getDamageWindowStartMs(): float
+    {
+        return $this->damageWindowStartMs;
+    }
+    
+    public function getDamageWindowEndMs(): float
+    {
+        return $this->damageWindowEndMs;
     }
 }

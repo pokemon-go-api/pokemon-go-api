@@ -74,6 +74,17 @@ final class PokemonRenderer
                 $attacksCollection,
                 $this->translations
             ),
+            'hasShadow' => $pokemon->hasShadow(),
+            'purifiedChargeMove' => $this->renderAttacks(
+                $pokemon->getPurifiedChargeMove(),
+                $attacksCollection,
+                $this->translations
+            ),  
+            'shadowChargeMove' => $this->renderAttacks(
+                $pokemon->getShadowChargeMove(),
+                $attacksCollection,
+                $this->translations
+            ),            
             'assets' => $pokemonImage ? [
                 'image'      => $pokemonImage->buildUrl(false),
                 'shinyImage' => $pokemonImage->buildUrl(true),
@@ -194,15 +205,17 @@ final class PokemonRenderer
                     ];
                 }
             }
-
+            
             $out[$moveName] = [
-                'id'         => $moveName,
-                'power'      => $attack->getPower(),
-                'energy'     => $attack->getEnergy(),
-                'durationMs' => $attack->getDurationMs(),
-                'type'       => $this->renderType($attack->getPokemonType(), $translations),
-                'names'      => $names,
-                'combat'     => $combat,
+                'id'                  => $moveName,
+                'power'               => $attack->getPower(),
+                'energy'              => $attack->getEnergy(),
+                'durationMs'          => $attack->getDurationMs(),
+                'damageWindowStartMs' => $attack->getDamageWindowStartMs(),
+                'damageWindowEndMs'   => $attack->getDamageWindowEndMs(),
+                'type'                => $this->renderType($attack->getPokemonType(), $translations),
+                'names'               => $names,
+                'combat'              => $combat,
             ];
         }
 

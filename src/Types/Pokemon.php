@@ -31,6 +31,10 @@ final class Pokemon
     private array $eliteQuickMoveNames = [];
     /** @var string[] */
     private array $eliteCinematicMoveNames = [];
+    /** @var string[] */
+    private array $purifiedChargeMove = [];
+    /** @var string[] */
+    private array $shadowChargeMove = [];
     /** @var array<string, Pokemon> */
     private array $pokemonRegionForms = [];
     /** @var array<int, PokemonImage> */
@@ -38,6 +42,8 @@ final class Pokemon
     /** @var array<int, EvolutionBranch> */
     private array $evolutions = [];
     private ?string $rarity = null;
+
+    private bool $hasShadow;
 
     public function __construct(
         int $dexNr,
@@ -79,7 +85,10 @@ final class Pokemon
             PokemonType::createFromPokemonType($pokemonSettings->type),
             $secondaryType
         );
+
         $pokemon->rarity = $pokemonSettings->rarity ?? null;
+
+        $pokemon->hasShadow = (bool)isset($pokemonSettings->shadow);
 
         if (isset($pokemonSettings->stats->baseStamina)) {
             assert($pokemonSettings->stats instanceof stdClass);
@@ -94,6 +103,15 @@ final class Pokemon
         $pokemon->cinematicMoveNames      = $pokemonSettings->cinematicMoves ?? [];
         $pokemon->eliteQuickMoveNames     = $pokemonSettings->eliteQuickMove ?? [];
         $pokemon->eliteCinematicMoveNames = $pokemonSettings->eliteCinematicMove ?? [];
+
+        echo '<pre>';
+        print_r($pokemonSettings);
+        echo '</pre>';
+
+        if($pokemon->hasShadow) {
+            $pokemon->purifiedChargeMove = isset($pokemonSettings->shadow->purifiedChargeMove) ? [$pokemonSettings->shadow->purifiedChargeMove] : [];
+            $pokemon->shadowChargeMove   = isset($pokemonSettings->shadow->shadowChargeMove) ? [$pokemonSettings->shadow->shadowChargeMove] : [];
+        }
 
         foreach ($pokemonSettings->evolutionBranch ?? [] as $evolutionBranch) {
             if (! isset($evolutionBranch->evolution)) {
@@ -148,6 +166,18 @@ final class Pokemon
     }
 
     /** @return string[] */
+    public function getPurifiedChargeMove(): array
+    {
+        return $this->purifiedChargeMove;
+    }
+
+    /** @return string[] */
+    public function getShadowChargeMove(): array
+    {
+        return $this->shadowChargeMove;
+    }
+
+    /** @return string[] */
     public function getCinematicMoveNames(): array
     {
         return $this->cinematicMoveNames;
@@ -180,6 +210,11 @@ final class Pokemon
     public function hasTemporaryEvolutions(): bool
     {
         return count($this->temporaryEvolutions) > 0;
+    }
+
+    public function hasShadow(): bool
+    {
+        return $this->hasShadow;
     }
 
     public function withAddedPokemonRegionForm(Pokemon $pokemonRegionForm): self
