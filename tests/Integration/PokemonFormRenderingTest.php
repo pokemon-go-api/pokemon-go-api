@@ -114,7 +114,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'KYUREM',
                 'formId'      => 'KYUREM',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_646_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm646.fNORMAL.icon.png'],
                 'regionForms' => [
                     'KYUREM_BLACK' => [],
                     'KYUREM_WHITE' => [],
@@ -141,7 +141,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'THUNDURUS',
                 'formId'      => 'THUNDURUS',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm642.fINCARNATE.icon.png'],
                 'regionForms' => [
                     'THUNDURUS_INCARNATE' => [
                         'names' => ['English' => 'Thundurus (Incarnate Forme)'],
@@ -149,7 +149,7 @@ class PokemonFormRenderingTest extends TestCase
                     ],
                     'THUNDURUS_THERIAN' => [
                         'names' => ['English' => 'Thundurus (Therian Forme)'],
-                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_12.png'],
+                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm642.fTHERIAN.icon.png'],
                     ],
                 ],
             ],
@@ -160,7 +160,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'GENESECT',
                 'formId'      => 'GENESECT',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_649_11.png'],
+                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm649.fNORMAL.icon.png'],
                 'regionForms' => [
                     'GENESECT_BURN'  => [],
                     'GENESECT_CHILL' => [],

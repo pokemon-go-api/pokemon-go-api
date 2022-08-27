@@ -159,23 +159,26 @@ final class RenderingRaidBoss
     public function getRaidBossEggUrl(): string
     {
         switch ($this->getLevel()) {
+            case RaidBoss::RAID_LEVEL_ULTRA_BEAST:
+                $levelIcon = 'ultra';
+                break;
             case RaidBoss::RAID_LEVEL_EX:
-                $levelIcon = '2';
+                $levelIcon = 'egg_2';
                 break;
             case RaidBoss::RAID_LEVEL_MEGA:
-                $levelIcon = '3';
+                $levelIcon = 'egg_3';
                 break;
             case RaidBoss::RAID_LEVEL_LEGENDARY_MEGA:
-                $levelIcon = '4';
+                $levelIcon = 'egg_4';
                 break;
             case RaidBoss::RAID_LEVEL_5:
-                $levelIcon = '2';
+                $levelIcon = 'egg_2';
                 break;
             case RaidBoss::RAID_LEVEL_3:
-                $levelIcon = '1';
+                $levelIcon = 'egg_1';
                 break;
             case RaidBoss::RAID_LEVEL_1:
-                $levelIcon = '0';
+                $levelIcon = 'egg_0';
                 break;
             default:
                 $levelIcon = '';
@@ -184,7 +187,7 @@ final class RenderingRaidBoss
 
         return sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong
-            'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Raids/raid_egg_%s_icon_notification.png',
+            'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Raids/raid_%s_icon_notification.png',
             $levelIcon
         );
     }

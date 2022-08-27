@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
+use Exception;
 use stdClass;
 
 use function assert;
@@ -25,8 +26,12 @@ final class TemporaryEvolution
         $this->typeSecondary = $typeSecondary ?? PokemonType::none();
     }
 
-    public static function createFromGameMaster(stdClass $tempEvoOverride, string $basePokemonId): self
+    public static function createFromGameMaster(object $tempEvoOverride, string $basePokemonId): self
     {
+        if (! isset($tempEvoOverride->tempEvoId, $tempEvoOverride->typeOverride1, $tempEvoOverride->stats)) {
+            throw new Exception('Invalid tempEvoOverride given', 1661601184);
+        }
+
         $secondaryType = null;
         if (isset($tempEvoOverride->typeOverride2)) {
             $secondaryType = PokemonType::createFromPokemonType($tempEvoOverride->typeOverride2);

@@ -12,6 +12,7 @@ final class RaidBoss
     public const RAID_LEVEL_EX             = 'ex';
     public const RAID_LEVEL_MEGA           = 'mega';
     public const RAID_LEVEL_LEGENDARY_MEGA = 'legendary_mega';
+    public const RAID_LEVEL_ULTRA_BEAST    = 'ultra_beast';
 
     private bool $shinyAvailable;
     private string $raidLevel;

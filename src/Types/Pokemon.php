@@ -36,8 +36,8 @@ final class Pokemon
     /** @var array<int, PokemonImage> */
     private array $pokemonImages = [];
     /** @var array<int, EvolutionBranch> */
-    private array $evolutions = [];
-    private ?string $rarity = null;
+    private array $evolutions     = [];
+    private ?string $pokemonClass = null;
 
     public function __construct(
         int $dexNr,
@@ -72,14 +72,14 @@ final class Pokemon
             $secondaryType = PokemonType::createFromPokemonType($pokemonSettings->type2);
         }
 
-        $pokemon = new self(
+        $pokemon               = new self(
             (int) $pokemonParts['id'],
             $pokemonSettings->pokemonId,
             $pokemonParts['name'],
             PokemonType::createFromPokemonType($pokemonSettings->type),
             $secondaryType
         );
-        $pokemon->rarity = $pokemonSettings->rarity ?? null;
+        $pokemon->pokemonClass = $pokemonSettings->pokemonClass ?? null;
 
         if (isset($pokemonSettings->stats->baseStamina)) {
             assert($pokemonSettings->stats instanceof stdClass);
@@ -106,12 +106,14 @@ final class Pokemon
 
         $tempEvos = [];
         foreach ($pokemonSettings->tempEvoOverrides ?? [] as $evolutionBranch) {
-            if (isset($evolutionBranch->tempEvoId)) {
-                $tempEvos[] = TemporaryEvolution::createFromGameMaster(
-                    $evolutionBranch,
-                    $pokemonSettings->pokemonId
-                );
+            if (! isset($evolutionBranch->tempEvoId)) {
+                continue;
             }
+
+            $tempEvos[] = TemporaryEvolution::createFromGameMaster(
+                $evolutionBranch,
+                $pokemonSettings->pokemonId
+            );
         }
 
         return $pokemon->withAddedTemporaryEvolutions(...$tempEvos);
@@ -257,9 +259,14 @@ final class Pokemon
             ) && strpos($this->getFormId(), '_FEMALE') === false;
     }
 
-    public function getRarity(): ?string
+    public function getPokemonClass(): ?string
     {
-        return $this->rarity;
+        return $this->pokemonClass;
+    }
+
+    public function isUltraBeast(): bool
+    {
+        return $this->pokemonClass === 'POKEMON_CLASS_ULTRA_BEAST';
     }
 
     public function getPokemonImage(

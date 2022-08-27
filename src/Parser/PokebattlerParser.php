@@ -132,6 +132,9 @@ class PokebattlerParser
             case RaidBoss::RAID_LEVEL_LEGENDARY_MEGA:
                 return 'MEGA_5';
 
+            case RaidBoss::RAID_LEVEL_ULTRA_BEAST:
+                return 'ULTRA_BEAST';
+
             default:
                 throw new Exception('Unknown RaidLevel', 1618743729200);
         }

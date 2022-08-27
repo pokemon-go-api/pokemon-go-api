@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokemon GO - Pokedex API</title>
-    <link rel="stylesheet" type="text/css" href="assets/swagger-ui.css">
+
     <link href="assets/bootstrap.css" rel="stylesheet">
     <link href="version.css" rel="stylesheet">
 </head>
@@ -12,7 +12,7 @@
 
     <main>
 
-        <section class="py-5 text-center container">
+        <section class="text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Pokemon GO API</h1>
@@ -25,31 +25,18 @@
             </div>
         </section>
 
-        <section class="py-2 px-5">
-            <div class="container" id="swagger-ui"></div>
-        </section>
+        <details class="py-2 container">
+            <summary>Changelog</summary>
+            <h3>2022-08-27</h3>
+            <ul>
+                <li>Moved the Ultra Beasts into an own Raid Level <code>ultra_beast</code></li>
+                <li>Renamed <code>rarity</code> to <code>pokemonClass</code></li>
+            </ul>
+        </details>
+
+        <redoc spec-url="Pokedex.json" expand-responses="all"></redoc>
+        <script src="assets/redoc.standalone.js"> </script>
 
     </main>
-
-
-<script src="assets/swagger-ui-bundle.js" charset="UTF-8"></script>
-<script src="assets/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
-<script>
-    window.onload = function () {
-        // Begin Swagger UI call region
-        const swaggerUI = SwaggerUIBundle({
-            url: "Pokedex.json",
-            dom_id: '#swagger-ui',
-            deepLinking: true,
-            presets: [
-                SwaggerUIBundle.presets.apis,
-                // SwaggerUIStandalonePreset
-            ],
-            plugins: [
-                SwaggerUIBundle.plugins.DownloadUrl
-            ]
-        });
-    }
-</script>
 </body>
 </html>

@@ -279,6 +279,12 @@
                             "$ref": "#/components/schemas/RaidBoss"
                           }
                         },
+                        "ultra_beast": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
                         "legendary_mega": {
                           "type": "array",
                           "items": {
@@ -390,6 +396,7 @@
               "application/json": {
                 "schema": {
                   "type": "array",
+                  "nullable": false,
                   "uniqueItems": true,
                   "items": {
                     "type": "object",
@@ -399,6 +406,7 @@
                         "type": "array",
                         "uniqueItems": true,
                         "items": {
+                          "nullable": false,
                           "oneOf": [
                             {
                               "$ref": "#/components/schemas/PokemonEncounter"
@@ -498,9 +506,9 @@
             ],
             "nullable": true
           },
-          "rarity": {
+          "pokemonClass": {
             "type": "string",
-            "enum": ["POKEMON_RARITY_MYTHIC", "POKEMON_RARITY_LEGENDARY"],
+            "enum": ["POKEMON_CLASS_LEGENDARY", "POKEMON_CLASS_MYTHIC", "POKEMON_CLASS_ULTRA_BEAST"],
             "nullable": true
           },
           "quickMoves": {
@@ -686,9 +694,9 @@
             ],
             "nullable": true
           },
-          "rarity": {
+          "pokemonClass": {
             "type": "string",
-            "enum": ["POKEMON_RARITY_MYTHIC", "POKEMON_RARITY_LEGENDARY"],
+            "enum": ["POKEMON_CLASS_LEGENDARY", "POKEMON_CLASS_MYTHIC", "POKEMON_CLASS_ULTRA_BEAST"],
             "nullable": true
           },
           "quickMoves": {
@@ -1057,6 +1065,7 @@
               "ex",
               "mega",
               "legendary_mega",
+              "ultra_beast",
               "lvl5",
               "lvl3",
               "lvl1"

@@ -112,7 +112,7 @@ class LeekduckParser
 
                 $pokemonFormId = strtoupper(implode('_', $pokemonIdParts));
 
-                $raidTierLevel = $currentTierLevel;
+                $raidTierLevel             = $currentTierLevel;
                 $pokemonTemporaryEvolution = null;
                 foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
                     if ($temporaryEvolution->getId() !== $pokemonFormId) {
@@ -121,9 +121,11 @@ class LeekduckParser
 
                     $pokemonTemporaryEvolution = $temporaryEvolution;
 
-                    if ($raidTierLevel === RaidBoss::RAID_LEVEL_MEGA && $pokemon->getRarity() !== null) {
-                        $raidTierLevel = RaidBoss::RAID_LEVEL_LEGENDARY_MEGA;
+                    if ($raidTierLevel !== RaidBoss::RAID_LEVEL_MEGA || $pokemon->getPokemonClass() === null) {
+                        continue;
                     }
+
+                    $raidTierLevel = RaidBoss::RAID_LEVEL_LEGENDARY_MEGA;
                 }
 
                 $bestMatchingRegionForms = [];
@@ -154,6 +156,10 @@ class LeekduckParser
                 ) {
                     usort($bestMatchingRegionForms, static fn (array $a, array $b): int => $b['score'] <=> $a['score']);
                     $pokemon = $bestMatchingRegionForms[0]['form'];
+                }
+
+                if ($raidTierLevel === RaidBoss::RAID_LEVEL_5 && $pokemon->isUltraBeast()) {
+                    $raidTierLevel = RaidBoss::RAID_LEVEL_ULTRA_BEAST;
                 }
 
                 $raidboss = new RaidBoss(
