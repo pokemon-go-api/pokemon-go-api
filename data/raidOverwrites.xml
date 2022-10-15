@@ -524,4 +524,19 @@
         <level>mega</level>
         <shiny>true</shiny>
     </raidboss>
+  
+    <raidboss>
+        <startDate>
+            <date>2022-10-15 11:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-10-16 18:00:00</date>
+        </endDate>
+        <pokemon>HOOPA</pokemon>
+        <form>HOOPA_UNBOUND</form>
+        <level>ex</level>
+        <shiny>false</shiny>
+    </raidboss>
+  
+  
 </root>
