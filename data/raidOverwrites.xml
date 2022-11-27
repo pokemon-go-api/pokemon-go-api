@@ -538,5 +538,100 @@
         <shiny>false</shiny>
     </raidboss>
   
-  
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>NIHILEGO</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>NIHILEGO</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>BUZZWOLE</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>PHEROMOSA</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>XURKITREE</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>CELESTEELA</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>KARTANA</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2022-11-27 10:30:00</date>
+        </startDate>
+        <endDate>
+            <date>2022-11-27 19:00:00</date>
+        </endDate>
+        <pokemon>GUZZLORD</pokemon>
+        <level>ultra_beast</level>
+        <shiny>false</shiny>
+    </raidboss>
+
 </root>
