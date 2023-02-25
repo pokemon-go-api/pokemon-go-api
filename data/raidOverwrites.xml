@@ -634,4 +634,82 @@
         <shiny>false</shiny>
     </raidboss>
 
+    <raidboss>
+        <startDate>
+            <date>2023-02-25 09:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2023-02-26 18:00:00</date>
+        </endDate>
+        <pokemon>GROUDON</pokemon>
+        <form>GROUDON_PRIMAL</form>
+        <level>legendary_mega</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2023-02-25 09:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2023-02-26 18:00:00</date>
+        </endDate>
+        <pokemon>KYOGRE</pokemon>
+        <form>KYOGRE_PRIMAL</form>
+        <level>legendary_mega</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2023-02-25 09:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2023-02-26 18:00:00</date>
+        </endDate>
+        <pokemon>DEOXYS</pokemon>
+        <form>DEOXYS</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2023-02-25 09:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2023-02-26 18:00:00</date>
+        </endDate>
+        <pokemon>DEOXYS</pokemon>
+        <form>DEOXYS_ATTACK</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2023-02-25 09:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2023-02-26 18:00:00</date>
+        </endDate>
+        <pokemon>DEOXYS</pokemon>
+        <form>DEOXYS_DEFENSE</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+
+    <raidboss>
+        <startDate>
+            <date>2023-02-25 09:00:00</date>
+        </startDate>
+        <endDate>
+            <date>2023-02-26 18:00:00</date>
+        </endDate>
+        <pokemon>DEOXYS</pokemon>
+        <form>DEOXYS_SPEED</form>
+        <level>lvl5</level>
+        <shiny>true</shiny>
+    </raidboss>
+
 </root>
