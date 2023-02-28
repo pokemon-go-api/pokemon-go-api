@@ -25,9 +25,7 @@ final class TranslationCollectionCollection
         return $this->collections[$language];
     }
 
-    /**
-     * @return array<string, TranslationCollection>
-     */
+    /** @return array<string, TranslationCollection> */
     public function getCollections(): array
     {
         return $this->collections;

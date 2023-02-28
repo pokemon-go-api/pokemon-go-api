@@ -14,21 +14,13 @@ use PokemonGoApi\PogoAPI\Util\CpCalculator;
 
 final class ResearchTasksRenderer
 {
-    private TranslationCollectionCollection $translations;
-
-    private PokemonCollection $pokemonCollection;
-
     public function __construct(
-        TranslationCollectionCollection $translations,
-        PokemonCollection $pokemonCollection
+        private TranslationCollectionCollection $translations,
+        private PokemonCollection $pokemonCollection,
     ) {
-        $this->translations      = $translations;
-        $this->pokemonCollection = $pokemonCollection;
     }
 
-    /**
-     * @return mixed[]
-     */
+    /** @return mixed[] */
     public function render(ResearchTask ...$researchTasks): array
     {
         $out = [];
@@ -37,7 +29,7 @@ final class ResearchTasksRenderer
             foreach ($this->translations->getCollections() as $name => $translationCollection) {
                 $questTranslations[$name] = $translationCollection->getQuest(
                     $researchTask->getResearchTaskQuest()->getTranslationKey(),
-                    (string) $researchTask->getResearchTaskQuest()->getReplaceArgument()
+                    (string) $researchTask->getResearchTaskQuest()->getReplaceArgument(),
                 );
 
                 if (! $researchTask->getResearchTaskQuest()->isEventTask()) {

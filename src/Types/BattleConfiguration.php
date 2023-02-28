@@ -10,18 +10,11 @@ final class BattleConfiguration
     public const NAME_NORMAL = 'normal';
     public const NAME_HARD   = 'hard';
 
-    private string $name;
-    private int $pokemonLevel;
-    private int $friendShipLevel;
-
     private function __construct(
-        string $name,
-        int $pokemonLevel,
-        int $friendShipLevel
+        private string $name,
+        private int $pokemonLevel,
+        private int $friendShipLevel,
     ) {
-        $this->name            = $name;
-        $this->pokemonLevel    = $pokemonLevel;
-        $this->friendShipLevel = $friendShipLevel;
     }
 
     public static function easy(): self

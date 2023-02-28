@@ -7,14 +7,10 @@ namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
-/**
- * @covers \PokemonGoApi\PogoAPI\Util\GenerationDeterminer
- */
+/** @covers \PokemonGoApi\PogoAPI\Util\GenerationDeterminer */
 class GenerationDeterminerTest extends TestCase
 {
-    /**
-     * @dataProvider dexNrDataProvider
-     */
+    /** @dataProvider dexNrDataProvider */
     public function testFromDexNr(int $input, int $expected): void
     {
         self::assertSame($expected, GenerationDeterminer::fromDexNr($input));

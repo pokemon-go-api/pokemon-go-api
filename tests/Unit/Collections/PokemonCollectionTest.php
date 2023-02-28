@@ -24,14 +24,14 @@ class PokemonCollectionTest extends TestCase
             'TESTPOKEMON',
             'TESTPOKEMON_FORM',
             PokemonType::water(),
-            PokemonType::fire()
+            PokemonType::fire(),
         );
         $pokemonRegionForm = new Pokemon(
             100,
             'TESTPOKEMON',
             'TESTPOKEMON_FORM',
             PokemonType::water(),
-            PokemonType::steel()
+            PokemonType::steel(),
         );
         $collection        = new PokemonCollection();
         $collection->add($pokemon);

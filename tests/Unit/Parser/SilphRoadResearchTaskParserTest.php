@@ -44,12 +44,12 @@ class SilphRoadResearchTaskParserTest extends TestCase
         $pokemonCollection->add(new Pokemon(80, '80', '80', PokemonType::none(), null));
         $ponyta = new Pokemon(77, 'PONYTA', 'PONYTA', PokemonType::none(), null);
         $pokemonCollection->add($ponyta->withAddedPokemonRegionForm(
-            new Pokemon(77, 'PONYTA', 'PONYTA_GALARIAN', PokemonType::none(), null)
+            new Pokemon(77, 'PONYTA', 'PONYTA_GALARIAN', PokemonType::none(), null),
         ));
 
         $sut = new SilphRoadResearchTaskParser(
             $pokemonCollection,
-            $translationCollection
+            $translationCollection,
         );
 
         $tasks = $sut->parseTasks(__DIR__ . '/Fixtures/silphroad_researchtasks.html');
@@ -57,22 +57,22 @@ class SilphRoadResearchTaskParserTest extends TestCase
         self::assertEquals([
             new ResearchTask(
                 new ResearchTaskQuest('dummy_evolve', 1, true),
-                new ResearchRewardMegaEnergy('80', 20)
+                new ResearchRewardMegaEnergy('80', 20),
             ),
             new ResearchTask(
                 new ResearchTaskQuest('dummy_catch_fairy', 15, false),
-                new ResearchRewardPokemon('PONYTA_GALARIAN', false)
+                new ResearchRewardPokemon('PONYTA_GALARIAN', false),
             ),
             new ResearchTask(
                 new ResearchTaskQuest('dummy_catch_fairy', 5, false),
                 new ResearchRewardPokemon('183', true),
                 new ResearchRewardPokemon('546', false),
-                new ResearchRewardPokemon('209', true)
+                new ResearchRewardPokemon('209', true),
             ),
             new ResearchTask(
                 new ResearchTaskQuest('dummy_level3_raid', null, false),
                 new ResearchRewardPokemon('138', true),
-                new ResearchRewardPokemon('140', true)
+                new ResearchRewardPokemon('140', true),
             ),
         ], $tasks);
     }

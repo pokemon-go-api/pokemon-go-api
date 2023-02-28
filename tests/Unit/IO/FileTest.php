@@ -11,9 +11,7 @@ use function random_bytes;
 use function sys_get_temp_dir;
 use function unlink;
 
-/**
- * @covers \PokemonGoApi\PogoAPI\IO\File
- */
+/** @covers \PokemonGoApi\PogoAPI\IO\File */
 class FileTest extends TestCase
 {
     public function testGetContent(): void

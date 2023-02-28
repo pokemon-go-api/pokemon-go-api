@@ -16,22 +16,12 @@ use function sprintf;
 
 class RaidBossOverwrite
 {
-    /** @var array<int, stdClass> $raidBossOverwrites */
-    private array $raidBossOverwrites;
-    private PokemonCollection $pokemonCollection;
-    private LoggerInterface $logger;
-
-    /**
-     * @param array<int, stdClass> $raidBossOverwrites
-     */
+    /** @param array<int, stdClass> $raidBossOverwrites */
     public function __construct(
-        array $raidBossOverwrites,
-        PokemonCollection $pokemonCollection,
-        LoggerInterface $logger
+        private array $raidBossOverwrites,
+        private PokemonCollection $pokemonCollection,
+        private LoggerInterface $logger,
     ) {
-        $this->raidBossOverwrites = $raidBossOverwrites;
-        $this->pokemonCollection  = $pokemonCollection;
-        $this->logger             = $logger;
     }
 
     public function overwrite(RaidBossCollection $raidBossCollection): void
@@ -65,7 +55,7 @@ class RaidBossOverwrite
             if ($pokemon === null) {
                 $this->logger->error(sprintf(
                     '[RaidBossOverwrite] Invalid Pokemon ID. Not Found in Collection %s',
-                    $raidOverwrite->getPokemon()
+                    $raidOverwrite->getPokemon(),
                 ));
                 continue;
             }
@@ -92,21 +82,19 @@ class RaidBossOverwrite
                 $raidOverwrite->isShiny(),
                 $raidOverwrite->getLevel(),
                 $temporaryEvolution,
-                null
+                null,
             );
 
             $this->logger->debug(sprintf(
                 '[RaidBossOverwrite] Add RaidBoss %s',
-                $raidBoss->getPokemonWithMegaFormId()
+                $raidBoss->getPokemonWithMegaFormId(),
             ));
 
             $raidBossCollection->add($raidBoss);
         }
     }
 
-    /**
-     * @return RaidBossOverwriteStruct[]
-     */
+    /** @return RaidBossOverwriteStruct[] */
     private function parseOverwrites(): array
     {
         return array_map(
@@ -118,7 +106,7 @@ class RaidBossOverwrite
                 $raidBossOverwrite->level,
                 $raidBossOverwrite->shiny === 'true',
             ),
-            $this->raidBossOverwrites
+            $this->raidBossOverwrites,
         );
     }
 }

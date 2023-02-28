@@ -11,7 +11,7 @@ final class EvolutionBranch
     private string $evolutionId;
     private string $evolutionFormId;
     private int $candyCost;
-    private ?string $requiredItem;
+    private string|null $requiredItem;
     /** @var list<string> */
     private array $questIds = [];
 
@@ -20,7 +20,7 @@ final class EvolutionBranch
         $self                  = new self();
         $self->evolutionId     = $evolutionBranch->evolution;
         $self->evolutionFormId = $evolutionBranch->form ?? $evolutionBranch->evolution;
-        $self->candyCost       = $evolutionBranch->candyCost;
+        $self->candyCost       = $evolutionBranch->candyCost ?? 0;
         $self->requiredItem    = $evolutionBranch->evolutionItemRequirement ?? null;
         foreach ($evolutionBranch->questDisplay ?? [] as $quest) {
             $self->questIds[] = $quest->questRequirementTemplateId;
@@ -44,7 +44,7 @@ final class EvolutionBranch
         return $this->candyCost;
     }
 
-    public function getRequiredItem(): ?string
+    public function getRequiredItem(): string|null
     {
         return $this->requiredItem;
     }

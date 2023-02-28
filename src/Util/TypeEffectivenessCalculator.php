@@ -18,9 +18,7 @@ use function sprintf;
 
 final class TypeEffectivenessCalculator
 {
-    /**
-     * @return array<string, float>
-     */
+    /** @return array<string, float> */
     public function getAllTypes(PokemonType $primaryType, PokemonType $secondaryType): array
     {
         $doubleEffective = [...$primaryType->getDoubleDamageFrom(), ...$secondaryType->getDoubleDamageFrom()];
@@ -47,45 +45,39 @@ final class TypeEffectivenessCalculator
 
         array_multisort(
             $allTypeSortKeys,
-            $allTypes
+            $allTypes,
         );
 
         return array_map(
             static fn (float $input): float => round($input, 3),
-            $allTypes
+            $allTypes,
         );
     }
 
-    /**
-     * @return array<string, float>
-     */
+    /** @return array<string, float> */
     public function getAllEffectiveTypes(PokemonType $primaryType, PokemonType $secondaryType): array
     {
         return array_filter(
             $this->getAllTypes($primaryType, $secondaryType),
-            static fn (float $multiplicator): bool => $multiplicator > 1.0
+            static fn (float $multiplicator): bool => $multiplicator > 1.0,
         );
     }
 
-    /**
-     * @return array<string>
-     */
+    /** @return array<string> */
     public function getOneAHalfEffectiveTypes(PokemonType $primaryType, PokemonType $secondaryType): array
     {
         return array_keys(array_filter(
             $this->getAllEffectiveTypes($primaryType, $secondaryType),
-            static fn (float $multiplicator): bool => $multiplicator < 2.0
+            static fn (float $multiplicator): bool => $multiplicator < 2.0,
         ));
     }
 
-    /**
-     * @return array<string>
-     */
+    /** @return array<string> */
     public function getDoubleEffectiveTypes(PokemonType $primaryType, PokemonType $secondaryType): array
     {
         return array_keys(array_filter(
             $this->getAllEffectiveTypes($primaryType, $secondaryType),
-            static fn (float $multiplicator): bool => $multiplicator >= 2.0
+            static fn (float $multiplicator): bool => $multiplicator >= 2.0,
         ));
     }
 }

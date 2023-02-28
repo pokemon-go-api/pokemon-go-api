@@ -31,13 +31,11 @@ final class WeatherBoost
         self::EXTREME,
     ];
 
-    private string $weather;
     /** @var PokemonType[] */
     private array $boostedTypes;
 
-    public function __construct(string $weather, PokemonType ...$boostedTypes)
+    public function __construct(private string $weather, PokemonType ...$boostedTypes)
     {
-        $this->weather      = $weather;
         $this->boostedTypes = $boostedTypes;
     }
 

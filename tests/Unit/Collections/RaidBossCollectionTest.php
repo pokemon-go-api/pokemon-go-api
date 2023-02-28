@@ -27,11 +27,11 @@ class RaidBossCollectionTest extends TestCase
                 'TESTPOKEMON',
                 'TESTPOKEMON_MEGA',
                 PokemonType::water(),
-                PokemonType::fire()
+                PokemonType::fire(),
             ),
             false,
             RaidBoss::RAID_LEVEL_EX,
-            null
+            null,
         );
         $collection = new RaidBossCollection();
         $collection->add($raidBoss);
@@ -55,13 +55,13 @@ class RaidBossCollectionTest extends TestCase
             new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_EX', PokemonType::water(), PokemonType::fire()),
             false,
             RaidBoss::RAID_LEVEL_EX,
-            null
+            null,
         );
         $raidBoss2  = new RaidBoss(
             new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_MEGA', PokemonType::water(), PokemonType::fire()),
             false,
             RaidBoss::RAID_LEVEL_MEGA,
-            null
+            null,
         );
         $collection = new RaidBossCollection();
         $collection->add($raidBoss2);

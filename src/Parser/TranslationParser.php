@@ -37,14 +37,12 @@ class TranslationParser
         self::SPANISH,
     ];
 
-    /**
-     * @param array<string, string> $customTranslations
-     */
+    /** @param array<string, string> $customTranslations */
     public function loadLanguage(
         string $language,
         string $apkFile,
         string $remoteFile,
-        array $customTranslations
+        array $customTranslations,
     ): TranslationCollection {
         $collection = new TranslationCollection($language);
         $files      = [$apkFile, $remoteFile];

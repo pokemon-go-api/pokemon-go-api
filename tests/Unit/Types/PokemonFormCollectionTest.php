@@ -6,6 +6,7 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
+use stdClass;
 
 use function file_get_contents;
 use function json_decode;
@@ -20,8 +21,9 @@ class PokemonFormCollectionTest extends TestCase
 {
     public function testCreateFromGameMaster(): void
     {
-        $gameMaster     = file_get_contents(__DIR__ . '/Fixtures/FORMS_V0019_POKEMON_RATTATA.json') ?: '{}';
-        $data           = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
+        $gameMaster = file_get_contents(__DIR__ . '/Fixtures/FORMS_V0019_POKEMON_RATTATA.json') ?: '{}';
+        $data       = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
+        self::assertInstanceOf(stdClass::class, $data);
         $formCollection = PokemonFormCollection::createFromGameMaster($data->data);
 
         self::assertSame('RATTATA', $formCollection->getPokemonId());

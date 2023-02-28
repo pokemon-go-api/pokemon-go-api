@@ -40,7 +40,7 @@ class PokefansNetParserTest extends TestCase
                     'shiny' => $raidBoss->isShinyAvailable(),
                 ];
             },
-            $parsedBosses
+            $parsedBosses,
         );
 
         $expected = [

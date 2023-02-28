@@ -29,14 +29,12 @@ class MasterDataParser
     private PokemonCollection $pokemonCollection;
     private AttacksCollection $attacksCollection;
     private QuestsCollection $questsCollection;
-    private PokemonAssetsCollection $pokemonAssetsCollection;
 
-    public function __construct(PokemonAssetsCollection $pokemonAssetsCollection)
+    public function __construct(private PokemonAssetsCollection $pokemonAssetsCollection)
     {
-        $this->pokemonCollection       = new PokemonCollection();
-        $this->attacksCollection       = new AttacksCollection();
-        $this->questsCollection        = new QuestsCollection();
-        $this->pokemonAssetsCollection = $pokemonAssetsCollection;
+        $this->pokemonCollection = new PokemonCollection();
+        $this->attacksCollection = new AttacksCollection();
+        $this->questsCollection  = new QuestsCollection();
     }
 
     public function parseFile(string $gameMasterFile): void
@@ -46,6 +44,7 @@ class MasterDataParser
             throw new Exception('file does not exists');
         }
 
+        /** @var list<stdClass> $list */
         $list                    = JsonParser::decodeToArray($fileContent);
         $this->attacksCollection = $this->parseMoves($list);
         $this->pokemonCollection = $this->parsePokemon($list);
@@ -71,9 +70,7 @@ class MasterDataParser
         return $this->questsCollection;
     }
 
-    /**
-     * @param array<int, stdClass> $list
-     */
+    /** @param array<int, stdClass> $list */
     private function parsePokemon(array $list): PokemonCollection
     {
         $pokemonCollection = new PokemonCollection();
@@ -90,7 +87,7 @@ class MasterDataParser
 
             $pokemon = Pokemon::createFromGameMaster($item->data);
             $pokemon = $pokemon->withAddedImages(
-                $this->pokemonAssetsCollection->getImages($pokemon->getDexNr())
+                $this->pokemonAssetsCollection->getImages($pokemon->getDexNr()),
             );
 
             if (
@@ -114,9 +111,7 @@ class MasterDataParser
         return $pokemonCollection;
     }
 
-    /**
-     * @param array<int, stdClass> $list
-     */
+    /** @param list<stdClass> $list */
     private function parseMoves(array $list): AttacksCollection
     {
         $attacksCollection = new AttacksCollection();
@@ -127,16 +122,14 @@ class MasterDataParser
             }
 
             $attacksCollection->add(
-                PokemonMove::createFromGameMaster($item->data)
+                PokemonMove::createFromGameMaster($item->data),
             );
         }
 
         return $attacksCollection;
     }
 
-    /**
-     * @param array<int, stdClass> $list
-     */
+    /** @param list<stdClass> $list */
     private function parseQuests(array $list): QuestsCollection
     {
         $questsCollection = new QuestsCollection();
@@ -147,16 +140,14 @@ class MasterDataParser
             }
 
             $questsCollection->add(
-                EvolutionQuest::createFromGameMaster($item->data)
+                EvolutionQuest::createFromGameMaster($item->data),
             );
         }
 
         return $questsCollection;
     }
 
-    /**
-     * @param array<int, stdClass> $list
-     */
+    /** @param list<stdClass> $list */
     private function addCombatMoves(array $list, AttacksCollection $attacksCollection): void
     {
         foreach ($list as $item) {
@@ -177,9 +168,7 @@ class MasterDataParser
         }
     }
 
-    /**
-     * @param array<int, stdClass> $list
-     */
+    /** @param list<stdClass> $list */
     private function addTemporaryEvolutions(array $list, PokemonCollection $pokemonCollection): void
     {
         foreach ($list as $item) {
@@ -188,7 +177,7 @@ class MasterDataParser
                 ! preg_match(
                     '~^TEMPORARY_EVOLUTION_V(?<DexNr>[0-9]{4})_POKEMON_(.*)$~i',
                     $item->templateId,
-                    $matches
+                    $matches,
                 )
             ) {
                 continue;
@@ -213,9 +202,7 @@ class MasterDataParser
         }
     }
 
-    /**
-     * @param array<int, stdClass> $list
-     */
+    /** @param list<stdClass> $list */
     private function addForms(array $list, PokemonCollection $pokemonCollection): void
     {
         foreach ($list as $item) {

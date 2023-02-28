@@ -13,10 +13,9 @@ use function str_replace;
 
 final class TranslationCollection
 {
-    private string $languageName;
     /** @var array<string, string> */
     private array $pokemonNames = [];
-    /** @var array<string, array<int, string>> */
+    /** @var array<string, array<string, string>> */
     private array $pokemonMegaNames = [];
     /** @var array<string, string> */
     private array $typeNames = [];
@@ -35,9 +34,8 @@ final class TranslationCollection
     /** @var array<string, string> */
     private array $items = [];
 
-    public function __construct(string $languageName)
+    public function __construct(private string $languageName)
     {
-        $this->languageName = $languageName;
     }
 
     public function getLanguageName(): string
@@ -62,13 +60,13 @@ final class TranslationCollection
 
     public function addPokemonName(int $dexNr, string $translation): void
     {
-        $dexNrKey                      = sprintf('%04d', $dexNr);
+        $dexNrKey                      = sprintf('pkm_%05d', $dexNr);
         $this->pokemonNames[$dexNrKey] = $translation;
     }
 
     public function addPokemonMegaName(int $dexNr, string $megaEvolutionIndex, string $translation): void
     {
-        $dexNrKey = sprintf('%04d', $dexNr);
+        $dexNrKey = sprintf('pkm_%05d', $dexNr);
         if (! array_key_exists($dexNrKey, $this->pokemonMegaNames)) {
             $this->pokemonMegaNames[$dexNrKey] = [];
         }
@@ -88,47 +86,45 @@ final class TranslationCollection
 
     public function addMoveName(int $moveId, string $translation): void
     {
-        $this->moveNames[sprintf('%04d', $moveId)] = $translation;
+        $this->moveNames[sprintf('move_%05d', $moveId)] = $translation;
     }
 
-    public function getTypeName(string $typeName): ?string
+    public function getTypeName(string $typeName): string|null
     {
         return $this->typeNames[mb_strtolower($typeName)] ?? null;
     }
 
-    public function getWeatherName(string $weatherName): ?string
+    public function getWeatherName(string $weatherName): string|null
     {
         return $this->weather[mb_strtolower($weatherName)] ?? null;
     }
 
-    public function getMoveName(int $moveId): ?string
+    public function getMoveName(int $moveId): string|null
     {
-        return $this->moveNames[sprintf('%04d', $moveId)] ?? null;
+        return $this->moveNames[sprintf('move_%05d', $moveId)] ?? null;
     }
 
-    public function getPokemonName(int $dexNr): ?string
+    public function getPokemonName(int $dexNr): string|null
     {
-        $dexNrKey = sprintf('%04d', $dexNr);
+        $dexNrKey = sprintf('pkm_%05d', $dexNr);
 
         return $this->pokemonNames[$dexNrKey] ?? null;
     }
 
-    public function getItemName(string $itemName): ?string
+    public function getItemName(string $itemName): string|null
     {
         return $this->items[mb_strtolower($itemName)] ?? null;
     }
 
-    /**
-     * @return string[]
-     */
+    /** @return string[] */
     public function getPokemonMegaNames(int $dexNr): array
     {
-        $dexNrKey = sprintf('%04d', $dexNr);
+        $dexNrKey = sprintf('pkm_%05d', $dexNr);
 
         return array_values($this->pokemonMegaNames[$dexNrKey] ?? []);
     }
 
-    public function getPokemonFormName(string $formName): ?string
+    public function getPokemonFormName(string $formName): string|null
     {
         return $this->pokemonFormNames[mb_strtoupper($formName)] ?? null;
     }
@@ -138,7 +134,7 @@ final class TranslationCollection
         $this->regionalForms[$regionalForm] = $translation;
     }
 
-    public function getRegionalForm(string $regionalForm): ?string
+    public function getRegionalForm(string $regionalForm): string|null
     {
         return $this->regionalForms[$regionalForm] ?? null;
     }
@@ -148,27 +144,25 @@ final class TranslationCollection
         $this->customTranslations[$key] = $translation;
     }
 
-    public function getCustomTranslation(string $key): ?string
+    public function getCustomTranslation(string $key): string|null
     {
         return $this->customTranslations[$key];
     }
 
-    /**
-     * @return array<string, string>
-     */
+    /** @return array<string, string> */
     public function getQuests(): array
     {
         return $this->quests;
     }
 
-    public function getQuest(string $quest, ?string $replaceArgument): ?string
+    public function getQuest(string $quest, string|null $replaceArgument): string|null
     {
         $questName = $this->quests[mb_strtolower($quest)] ?? null;
         if ($replaceArgument !== null && $questName !== null) {
             return str_replace(
                 '{0}',
                 $replaceArgument,
-                $questName
+                $questName,
             );
         }
 

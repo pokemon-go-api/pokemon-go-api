@@ -8,44 +8,34 @@ use DateTimeImmutable;
 use DateTimeZone;
 use stdClass;
 
-/**
- * @see data/raidOverwrites.xsd
- */
+/** @see data/raidOverwrites.xsd */
 class RaidBossOverwriteStruct
 {
     private const DEFAULT_TIMEZONE = 'Europe/Berlin';
 
     private DateTimeImmutable $startDate;
     private DateTimeImmutable $endDate;
-    private ?string $form;
-    private string $pokemon;
-    private string $level;
-    private bool $shiny;
 
     public function __construct(
         stdClass $startDate,
         stdClass $endDate,
-        string $pokemon,
-        ?string $form,
-        string $level,
-        bool $shiny
+        private string $pokemon,
+        private string|null $form,
+        private string $level,
+        private bool $shiny,
     ) {
         $this->startDate = new DateTimeImmutable(
             $startDate->date,
             new DateTimeZone(
-                $startDate->timezone ?? self::DEFAULT_TIMEZONE
-            )
+                $startDate->timezone ?? self::DEFAULT_TIMEZONE,
+            ),
         );
         $this->endDate   = new DateTimeImmutable(
             $endDate->date,
             new DateTimeZone(
-                $endDate->timezone ?? self::DEFAULT_TIMEZONE
-            )
+                $endDate->timezone ?? self::DEFAULT_TIMEZONE,
+            ),
         );
-        $this->form      = $form;
-        $this->pokemon   = $pokemon;
-        $this->level     = $level;
-        $this->shiny     = $shiny;
     }
 
     public function getStartDate(): DateTimeImmutable
@@ -73,7 +63,7 @@ class RaidBossOverwriteStruct
         return $this->shiny;
     }
 
-    public function getForm(): ?string
+    public function getForm(): string|null
     {
         return $this->form;
     }

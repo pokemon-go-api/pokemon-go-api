@@ -41,7 +41,7 @@ class LeekduckParserTest extends TestCase
                     'shiny' => $raidBoss->isShinyAvailable(),
                 ];
             },
-            $parsedBosses
+            $parsedBosses,
         );
 
         $expected = [

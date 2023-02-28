@@ -17,12 +17,10 @@ final class PokemonFormCollection
 {
     /** @var PokemonForm[] */
     private array $pokemonForms;
-    private string $pokemonId;
 
-    public function __construct(string $pokemonId, PokemonForm ...$pokemonForms)
+    public function __construct(private string $pokemonId, PokemonForm ...$pokemonForms)
     {
         $this->pokemonForms = $pokemonForms;
-        $this->pokemonId    = $pokemonId;
     }
 
     public static function createFromGameMaster(stdClass $gameMasterData): self
@@ -31,7 +29,7 @@ final class PokemonFormCollection
         $pregMatchResult = preg_match(
             '~^FORMS_V(?<id>\d{4})_POKEMON_(?<name>.*)$~i',
             $gameMasterData->templateId ?? '',
-            $templateIdParts
+            $templateIdParts,
         );
         if ($pregMatchResult < 1) {
             throw new Exception('Invalid input data provided', 1608128086204);
@@ -50,13 +48,13 @@ final class PokemonFormCollection
                 $formData->form,
                 $formOnlyId,
                 $formData->assetBundleValue ?? null,
-                $formData->assetBundleSuffix ?? null
+                $formData->assetBundleSuffix ?? null,
             );
         }
 
         return new self(
             $gameMasterData->formSettings->pokemon,
-            ...$forms
+            ...$forms,
         );
     }
 

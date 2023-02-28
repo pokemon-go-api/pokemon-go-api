@@ -6,21 +6,12 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 final class PokemonForm
 {
-    private string $id;
-    private ?int $assetBundleValue;
-    private ?string $assetBundleSuffix;
-    private string $formOnlyId;
-
     public function __construct(
-        string $id,
-        string $formOnlyId,
-        ?int $assetBundleValue,
-        ?string $assetBundleSuffix
+        private string $id,
+        private string $formOnlyId,
+        private int|null $assetBundleValue,
+        private string|null $assetBundleSuffix,
     ) {
-        $this->id                = $id;
-        $this->assetBundleValue  = $assetBundleValue;
-        $this->assetBundleSuffix = $assetBundleSuffix;
-        $this->formOnlyId        = $formOnlyId;
     }
 
     public function getId(): string
@@ -38,7 +29,7 @@ final class PokemonForm
         return $this->assetBundleValue ?? 0;
     }
 
-    public function getAssetBundleSuffix(): ?string
+    public function getAssetBundleSuffix(): string|null
     {
         return $this->assetBundleSuffix;
     }

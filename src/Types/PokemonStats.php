@@ -8,15 +8,8 @@ use JsonSerializable;
 
 final class PokemonStats implements JsonSerializable
 {
-    private int $stamina;
-    private int $attack;
-    private int $defense;
-
-    public function __construct(int $stamina, int $attack, int $defense)
+    public function __construct(private int $stamina, private int $attack, private int $defense)
     {
-        $this->stamina = $stamina;
-        $this->attack  = $attack;
-        $this->defense = $defense;
     }
 
     public function getAttack(): int
@@ -34,9 +27,7 @@ final class PokemonStats implements JsonSerializable
         return $this->stamina;
     }
 
-    /**
-     * @return array<string, int>
-     */
+    /** @return array<string, int> */
     public function jsonSerialize(): array
     {
         return [

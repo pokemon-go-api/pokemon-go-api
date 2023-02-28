@@ -19,7 +19,8 @@ class PokemonGoImagesParser
         }
 
         $fileContent = file_get_contents($gitSubtreeFilePath) ?: '[]';
-        $images      = JsonParser::decodeToArray($fileContent);
+        /** @var list<string> $images */
+        $images = JsonParser::decodeToArray($fileContent);
 
         return new PokemonAssetsCollection(...$images);
     }

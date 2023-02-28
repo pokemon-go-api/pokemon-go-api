@@ -18,14 +18,10 @@ use function implode;
 use function realpath;
 use function sprintf;
 
-/**
- * @coversNothing
- */
+/** @coversNothing */
 class OpenApiTest extends TestCase
 {
-    /**
-     * @dataProvider routesDataProvider
-     */
+    /** @dataProvider routesDataProvider */
     public function testOpenAPISpecification(string $filePath, string $apiRoute): void
     {
         $this->expectNotToPerformAssertions();
@@ -40,15 +36,15 @@ class OpenApiTest extends TestCase
         $response = new Response(
             200,
             ['Content-Type' => 'application/json'],
-            $responseContent
+            $responseContent,
         );
         try {
             $validator->validate(
                 new OperationAddress(
                     $apiRoute,
-                    'get'
+                    'get',
                 ),
-                $response
+                $response,
             );
         } catch (ValidationFailed $e) {
             $previous = $e->getPrevious();
@@ -67,9 +63,7 @@ class OpenApiTest extends TestCase
         }
     }
 
-    /**
-     * @return array<string, string[]>
-     */
+    /** @return array<string, string[]> */
     public function routesDataProvider(): iterable
     {
         $files = glob(__DIR__ . '/../../data/tmp/api/*.json') ?: [];

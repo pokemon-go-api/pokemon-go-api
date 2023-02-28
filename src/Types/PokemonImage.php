@@ -22,30 +22,15 @@ final class PokemonImage
     //phpcs:ignore Generic.Files.LineLength.TooLong
     private const ASSETS_BASE_URL_SHINY = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
 
-    private string $imageName;
-    private int $dexNr;
-    private ?int $assetBundleValue;
-    private bool $isShiny;
-    private ?string $assetBundleSuffix;
-    private ?string $costume;
-    private bool $isFemale;
-
     private function __construct(
-        string $imageName,
-        int $dexNr,
-        ?int $assetBundleValue,
-        bool $isShiny,
-        ?string $assetBundleSuffix,
-        ?string $costume,
-        bool $isFemale
+        private string $imageName,
+        private int $dexNr,
+        private int|null $assetBundleValue,
+        private bool $isShiny,
+        private string|null $assetBundleSuffix,
+        private string|null $costume,
+        private bool $isFemale,
     ) {
-        $this->dexNr             = $dexNr;
-        $this->assetBundleValue  = $assetBundleValue;
-        $this->isShiny           = $isShiny;
-        $this->assetBundleSuffix = $assetBundleSuffix;
-        $this->costume           = $costume;
-        $this->imageName         = $imageName;
-        $this->isFemale          = $isFemale;
     }
 
     public static function createFromFilePath(string $path): self
@@ -62,7 +47,7 @@ final class PokemonImage
              \.png$~x
             REGEX,
             $path,
-            $matches
+            $matches,
         );
 
         if ($result !== false && count($matches) > 0) {
@@ -75,7 +60,7 @@ final class PokemonImage
                     ? $matches['assetBundleSuffix']
                     : null,
                 isset($matches['costume']) && $matches['costume'] !== '' ? $matches['costume'] : null,
-                (int) ($matches['assetBundleValue'] ?: $matches['assetBundleValue2']) === 1
+                (int) ($matches['assetBundleValue'] ?: $matches['assetBundleValue2']) === 1,
             );
         }
 
@@ -89,7 +74,7 @@ final class PokemonImage
                 \.icon\.png~x
                 REGEX,
             $path,
-            $matches
+            $matches,
         );
 
         if ($result === false || count($matches) === 0) {
@@ -103,7 +88,7 @@ final class PokemonImage
             ($matches['isShiny'] ?? '') !== '',
             $matches['form'] ?? null,
             $matches['costume'] ?? null,
-            ($matches['gender'] ?? '') !== ''
+            ($matches['gender'] ?? '') !== '',
         );
     }
 
@@ -125,34 +110,34 @@ final class PokemonImage
         if ($this->assetBundleSuffix !== null) {
             return sprintf(
                 $assetUrl,
-                $this->assetBundleSuffix
+                $this->assetBundleSuffix,
             );
         }
 
         if ($this->costume !== null) {
             return sprintf(
                 $assetUrl,
-                sprintf('%03d_%02d_%02d', $this->dexNr, $this->assetBundleValue, $this->costume)
+                sprintf('%03d_%02d_%02d', $this->dexNr, $this->assetBundleValue, $this->costume),
             );
         }
 
         return sprintf(
             $assetUrl,
-            sprintf('%03d_%02d', $this->dexNr, $this->assetBundleValue)
+            sprintf('%03d_%02d', $this->dexNr, $this->assetBundleValue),
         );
     }
 
-    public function getAssetBundleSuffix(): ?string
+    public function getAssetBundleSuffix(): string|null
     {
         return $this->assetBundleSuffix;
     }
 
-    public function getAssetBundleValue(): ?int
+    public function getAssetBundleValue(): int|null
     {
         return $this->assetBundleValue;
     }
 
-    public function getCostume(): ?string
+    public function getCostume(): string|null
     {
         return $this->costume;
     }

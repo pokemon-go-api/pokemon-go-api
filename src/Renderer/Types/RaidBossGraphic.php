@@ -9,15 +9,8 @@ use function sprintf;
 
 final class RaidBossGraphic
 {
-    private string $imageContent;
-    private int $imageHeight;
-    private int $imageWidth;
-
-    public function __construct(string $imageContent, int $imageWidth, int $imageHeight)
+    public function __construct(private string $imageContent, private int $imageWidth, private int $imageHeight)
     {
-        $this->imageContent = $imageContent;
-        $this->imageHeight  = $imageHeight;
-        $this->imageWidth   = $imageWidth;
     }
 
     public function getImageContent(): string
@@ -25,7 +18,7 @@ final class RaidBossGraphic
         return sprintf(
             '%s<!-- CONVERT_IMAGE_SIZE=%s -->',
             preg_replace('~\s+~', ' ', $this->imageContent),
-            $this->getWindowSize()
+            $this->getWindowSize(),
         );
     }
 

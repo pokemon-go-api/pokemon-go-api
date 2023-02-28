@@ -54,25 +54,17 @@ final class PokemonType
         self::FAIRY,
     ];
 
-    private string $type;
-    /** @var array<int, string> */
-    private array $doubleDamageFrom;
-    /** @var array<int, string> */
-    private array $halfDamageFrom;
-    /** @var array<int, string> */
-    private array $noDamageFrom;
-
     /**
      * @param array<int, string> $doubleDamageFrom
      * @param array<int, string> $halfDamageFrom
      * @param array<int, string> $noDamageFrom
      */
-    public function __construct(string $type, array $doubleDamageFrom, array $halfDamageFrom, array $noDamageFrom)
-    {
-        $this->type             = $type;
-        $this->doubleDamageFrom = $doubleDamageFrom;
-        $this->halfDamageFrom   = $halfDamageFrom;
-        $this->noDamageFrom     = $noDamageFrom;
+    public function __construct(
+        private string $type,
+        private array $doubleDamageFrom,
+        private array $halfDamageFrom,
+        private array $noDamageFrom,
+    ) {
     }
 
     /** @return array<int, string> */
@@ -124,7 +116,7 @@ final class PokemonType
             self::NONE,
             [],
             [],
-            []
+            [],
         );
     }
 
@@ -134,7 +126,7 @@ final class PokemonType
             self::NORMAL,
             [self::FIGHTING],
             [],
-            [self::GHOST]
+            [self::GHOST],
         );
     }
 
@@ -144,7 +136,7 @@ final class PokemonType
             self::FIGHTING,
             [self::FLYING, self::PSYCHIC, self::FAIRY],
             [self::ROCK, self::BUG, self::DARK],
-            []
+            [],
         );
     }
 
@@ -154,7 +146,7 @@ final class PokemonType
             self::FLYING,
             [self::ROCK, self::ELECTRIC, self::ICE],
             [self::FIGHTING, self::BUG, self::GRASS],
-            [self::GROUND]
+            [self::GROUND],
         );
     }
 
@@ -164,7 +156,7 @@ final class PokemonType
             self::POISON,
             [self::GROUND, self::PSYCHIC],
             [self::FIGHTING, self::POISON, self::BUG, self::GRASS, self::FAIRY],
-            []
+            [],
         );
     }
 
@@ -174,7 +166,7 @@ final class PokemonType
             self::GROUND,
             [self::WATER, self::GRASS, self::ICE],
             [self::POISON, self::ROCK],
-            [self::ELECTRIC]
+            [self::ELECTRIC],
         );
     }
 
@@ -184,7 +176,7 @@ final class PokemonType
             self::ROCK,
             [self::FIGHTING, self::GROUND, self::STEEL, self::WATER, self::GRASS],
             [self::NORMAL, self::FLYING, self::POISON, self::FIRE],
-            []
+            [],
         );
     }
 
@@ -194,7 +186,7 @@ final class PokemonType
             self::BUG,
             [self::FLYING, self::ROCK, self::FIRE],
             [self::FIGHTING, self::GROUND, self::GRASS],
-            []
+            [],
         );
     }
 
@@ -204,7 +196,7 @@ final class PokemonType
             self::GHOST,
             [self::GHOST, self::DARK],
             [self::POISON, self::BUG],
-            [self::NORMAL, self::FIGHTING]
+            [self::NORMAL, self::FIGHTING],
         );
     }
 
@@ -225,7 +217,7 @@ final class PokemonType
                 self::DRAGON,
                 self::FAIRY,
             ],
-            [self::POISON]
+            [self::POISON],
         );
     }
 
@@ -235,7 +227,7 @@ final class PokemonType
             self::FIRE,
             [self::GROUND, self::ROCK, self::WATER],
             [self::BUG, self::STEEL, self::FIRE, self::GRASS, self::ICE, self::FAIRY],
-            []
+            [],
         );
     }
 
@@ -245,7 +237,7 @@ final class PokemonType
             self::WATER,
             [self::GRASS, self::ELECTRIC],
             [self::STEEL, self::FIRE, self::WATER, self::ICE],
-            []
+            [],
         );
     }
 
@@ -255,7 +247,7 @@ final class PokemonType
             self::GRASS,
             [self::FLYING, self::POISON, self::BUG, self::FIRE, self::ICE],
             [self::GROUND, self::WATER, self::GRASS, self::ELECTRIC],
-            []
+            [],
         );
     }
 
@@ -265,7 +257,7 @@ final class PokemonType
             self::ELECTRIC,
             [self::GROUND],
             [self::FLYING, self::STEEL, self::ELECTRIC],
-            []
+            [],
         );
     }
 
@@ -275,7 +267,7 @@ final class PokemonType
             self::PSYCHIC,
             [self::BUG, self::GHOST, self::DARK],
             [self::FIGHTING, self::PSYCHIC],
-            []
+            [],
         );
     }
 
@@ -285,7 +277,7 @@ final class PokemonType
             self::ICE,
             [self::FIGHTING, self::ROCK, self::STEEL, self::FIRE],
             [self::ICE],
-            []
+            [],
         );
     }
 
@@ -295,7 +287,7 @@ final class PokemonType
             self::DRAGON,
             [self::ICE, self::DRAGON, self::FAIRY],
             [self::FIRE, self::WATER, self::GRASS, self::ELECTRIC],
-            []
+            [],
         );
     }
 
@@ -305,7 +297,7 @@ final class PokemonType
             self::DARK,
             [self::FIGHTING, self::BUG, self::FAIRY],
             [self::GHOST, self::DARK],
-            [self::PSYCHIC]
+            [self::PSYCHIC],
         );
     }
 
@@ -315,7 +307,7 @@ final class PokemonType
             self::FAIRY,
             [self::POISON, self::STEEL],
             [self::FIGHTING, self::BUG, self::DARK],
-            [self::DRAGON]
+            [self::DRAGON],
         );
     }
 }

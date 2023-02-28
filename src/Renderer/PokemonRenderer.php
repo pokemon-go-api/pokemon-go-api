@@ -16,30 +16,22 @@ use function array_map;
 
 final class PokemonRenderer
 {
-    private TranslationCollectionCollection $translations;
-
-    private PokemonAssetsCollection $assetsCollection;
-
     public function __construct(
-        TranslationCollectionCollection $translations,
-        PokemonAssetsCollection $assetsCollection
+        private TranslationCollectionCollection $translations,
+        private PokemonAssetsCollection $assetsCollection,
     ) {
-        $this->translations     = $translations;
-        $this->assetsCollection = $assetsCollection;
     }
 
-    /**
-     * @return mixed[]
-     */
+    /** @return mixed[] */
     public function render(
         Pokemon $pokemon,
         AttacksCollection $attacksCollection,
         QuestsCollection $questsCollection,
-        bool $basePokemon = true
+        bool $basePokemon = true,
     ): array {
         $names = PokemonNameRenderer::renderPokemonNames(
             $pokemon,
-            $this->translations
+            $this->translations,
         );
 
         $pokemonImage = $pokemon->getPokemonImage();
@@ -57,22 +49,22 @@ final class PokemonRenderer
             'quickMoves'          => $this->renderAttacks(
                 $pokemon->getQuickMoveNames(),
                 $attacksCollection,
-                $this->translations
+                $this->translations,
             ),
             'cinematicMoves'      => $this->renderAttacks(
                 $pokemon->getCinematicMoveNames(),
                 $attacksCollection,
-                $this->translations
+                $this->translations,
             ),
             'eliteQuickMoves'     => $this->renderAttacks(
                 $pokemon->getEliteQuickMoveNames(),
                 $attacksCollection,
-                $this->translations
+                $this->translations,
             ),
             'eliteCinematicMoves' => $this->renderAttacks(
                 $pokemon->getEliteCinematicMoveNames(),
                 $attacksCollection,
-                $this->translations
+                $this->translations,
             ),
             'assets' => $pokemonImage ? [
                 'image'      => $pokemonImage->buildUrl(false),
@@ -80,7 +72,7 @@ final class PokemonRenderer
             ] : null,
             'regionForms'         => array_map(
                 fn (Pokemon $pokemon): array => $this->render($pokemon, $attacksCollection, $questsCollection, false),
-                $pokemon->getPokemonRegionForms()
+                $pokemon->getPokemonRegionForms(),
             ),
             'evolutions' => $this->renderEvolutions($pokemon, $questsCollection, $this->translations),
             'hasMegaEvolution'    => $pokemon->hasTemporaryEvolutions(),
@@ -94,9 +86,7 @@ final class PokemonRenderer
         return $struct;
     }
 
-    /**
-     * @return array<string, mixed>
-     */
+    /** @return array<string, mixed> */
     private function renderMegaEvolutions(Pokemon $pokemon, TranslationCollectionCollection $translations): array
     {
         $output = [];
@@ -106,7 +96,7 @@ final class PokemonRenderer
                 $tmpNames[$translationCollection->getLanguageName()] = PokemonNameRenderer::renderPokemonMegaName(
                     $pokemon,
                     $temporaryEvolution->getId(),
-                    $translationCollection
+                    $translationCollection,
                 );
             }
 
@@ -128,10 +118,8 @@ final class PokemonRenderer
         return $output;
     }
 
-    /**
-     * @return array<string, string|array<string, string|null>>
-     */
-    private function renderType(PokemonType $type, TranslationCollectionCollection $translations): ?array
+    /** @return array<string, string|array<string, string|null>> */
+    private function renderType(PokemonType $type, TranslationCollectionCollection $translations): array|null
     {
         if ($type->getType() === PokemonType::NONE) {
             return null;
@@ -140,7 +128,7 @@ final class PokemonRenderer
         $names = [];
         foreach ($translations->getCollections() as $translationCollection) {
             $names[$translationCollection->getLanguageName()] = $translationCollection->getTypeName(
-                $type->getType()
+                $type->getType(),
             );
         }
 
@@ -158,7 +146,7 @@ final class PokemonRenderer
     private function renderAttacks(
         array $moves,
         AttacksCollection $attacksCollection,
-        TranslationCollectionCollection $translations
+        TranslationCollectionCollection $translations,
     ): array {
         $out = [];
         foreach ($moves as $moveName) {
@@ -170,8 +158,8 @@ final class PokemonRenderer
             $names = [];
             foreach ($translations->getCollections() as $translationCollection) {
                 $names[$translationCollection->getLanguageName()] = $translationCollection->getMoveName(
-                    $attack->getId()
-                );
+                    $attack->getId(),
+                ) ?? $attack->getName();
             }
 
             $combatMove = $attack->getCombatMove();
@@ -209,9 +197,7 @@ final class PokemonRenderer
         return $out;
     }
 
-    /**
-     * @return array<int, array<string, string|bool|null>>
-     */
+    /** @return array<int, array<string, string|bool|null>> */
     private function renderAssetsForms(Pokemon $pokemon): array
     {
         $out = [];
@@ -243,13 +229,11 @@ final class PokemonRenderer
         return $out;
     }
 
-    /**
-     * @return list<array<string, mixed>>
-     */
+    /** @return list<array<string, mixed>> */
     private function renderEvolutions(
         Pokemon $pokemon,
         QuestsCollection $questsCollection,
-        TranslationCollectionCollection $translations
+        TranslationCollectionCollection $translations,
     ): array {
         $out = [];
         foreach ($pokemon->getEvolutions() as $evolution) {
@@ -259,7 +243,7 @@ final class PokemonRenderer
                 $itemNames = [];
                 foreach ($translations->getCollections() as $translationCollection) {
                     $itemNames[$translationCollection->getLanguageName()] = $translationCollection->getItemName(
-                        $requiredItem
+                        $requiredItem,
                     );
                 }
 
@@ -280,7 +264,7 @@ final class PokemonRenderer
                 foreach ($translations->getCollections() as $translationCollection) {
                     $questNames[$translationCollection->getLanguageName()] = $translationCollection->getQuest(
                         $quest->getGoalTranslationId(),
-                        (string) $quest->getGoalTarget()
+                        (string) $quest->getGoalTarget(),
                     );
                 }
 

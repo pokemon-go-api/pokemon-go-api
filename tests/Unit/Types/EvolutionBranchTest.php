@@ -9,14 +9,12 @@ use PokemonGoApi\PogoAPI\Types\EvolutionBranch;
 
 use function json_decode;
 
-/**
- * @covers \PokemonGoApi\PogoAPI\Types\EvolutionBranch
- */
+/** @covers \PokemonGoApi\PogoAPI\Types\EvolutionBranch */
 class EvolutionBranchTest extends TestCase
 {
     public function testCreateSlowking(): void
     {
-        $evolutionBranch = EvolutionBranch::createFromGameMaster(json_decode(<<<JSON
+        $evolutionBranch = EvolutionBranch::createFromGameMaster(json_decode(<<<'JSON'
         {
             "evolution": "SLOWKING",
             "evolutionItemRequirement": "ITEM_KINGS_ROCK",
@@ -35,7 +33,7 @@ class EvolutionBranchTest extends TestCase
 
     public function testCreateSlowkingGalarian(): void
     {
-        $evolutionBranch = EvolutionBranch::createFromGameMaster(json_decode(<<<JSON
+        $evolutionBranch = EvolutionBranch::createFromGameMaster(json_decode(<<<'JSON'
         {
             "evolution": "SLOWKING",
             "candyCost": 50,

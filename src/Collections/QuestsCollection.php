@@ -16,7 +16,7 @@ final class QuestsCollection
         $this->storage[$evolutionQuest->getQuestId()] = $evolutionQuest;
     }
 
-    public function getByName(string $questName): ?EvolutionQuest
+    public function getByName(string $questName): EvolutionQuest|null
     {
         return $this->storage[$questName] ?? null;
     }

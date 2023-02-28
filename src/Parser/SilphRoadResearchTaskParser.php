@@ -27,27 +27,20 @@ use function trim;
 
 class SilphRoadResearchTaskParser
 {
-    private PokemonCollection $pokemonCollection;
-    private TranslationCollection $englishTranslationCollection;
-
     public function __construct(
-        PokemonCollection $pokemonCollection,
-        TranslationCollection $englishTranslationCollection
+        private PokemonCollection $pokemonCollection,
+        private TranslationCollection $englishTranslationCollection,
     ) {
-        $this->pokemonCollection            = $pokemonCollection;
-        $this->englishTranslationCollection = $englishTranslationCollection;
     }
 
-    /**
-     * @return ResearchTask[]
-     */
+    /** @return ResearchTask[] */
     public function parseTasks(string $htmlPage): array
     {
         $domDocument = new DOMDocument();
         @$domDocument->loadHTMLFile($htmlPage);
         $xpath      = new DOMXPath($domDocument);
         $tasksItems = $xpath->query(
-            '//*[@id="taskGroupWraps"]//*[contains(@class, "task")][contains(@class, "pkmn")]'
+            '//*[@id="taskGroupWraps"]//*[contains(@class, "task")][contains(@class, "pkmn")]',
         );
         assert($tasksItems instanceof DOMNodeList);
 
@@ -71,7 +64,7 @@ class SilphRoadResearchTaskParser
             $rewards     = [];
             $rewardsList = $xpath->query(
                 '*/*[contains(@class, "task-reward")]',
-                $taskContainer
+                $taskContainer,
             );
             assert($rewardsList instanceof DOMNodeList);
             foreach ($rewardsList as $rewardItem) {
@@ -103,14 +96,14 @@ class SilphRoadResearchTaskParser
 
             $tasks[] = new ResearchTask(
                 $quest,
-                ...$rewards
+                ...$rewards,
             );
         }
 
         return $tasks;
     }
 
-    private function findQuest(string $searchQuestName, bool $isEventTask): ?ResearchTaskQuest
+    private function findQuest(string $searchQuestName, bool $isEventTask): ResearchTaskQuest|null
     {
         $searchQuestName = trim($searchQuestName, '. ');
         $matches         = [];
@@ -131,7 +124,7 @@ class SilphRoadResearchTaskParser
         return null;
     }
 
-    private function getPokemonIdFromImage(string $imageSrc): ?string
+    private function getPokemonIdFromImage(string $imageSrc): string|null
     {
         if (preg_match('~/(\d+)\.png$~', $imageSrc, $match)) {
             $pkmDexNr     = (int) $match[1];

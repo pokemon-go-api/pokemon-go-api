@@ -26,15 +26,13 @@ class PokemonFormRenderingTest extends TestCase
     {
         $pokedexEntry = json_decode(
             file_get_contents(__DIR__ . '/../../data/tmp/api/pokedex/id/' . $dexNr . '.json') ?: '[]',
-            true
+            true,
         );
-
+        self::assertIsArray($pokedexEntry);
         $this->validateSubset($expected, $pokedexEntry);
     }
 
-    /**
-     * @return array<string, mixed[]>
-     */
+    /** @return array<string, mixed[]> */
     public function specialPokemonDataProvider(): iterable
     {
         yield 'charizard' => [
@@ -189,7 +187,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'            => 'VIVILLON',
                 'formId'        => 'VIVILLON',
-                'assets'        => null,
+                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm666.fARCHIPELAGO.icon.png'],
             ],
         ];
 
@@ -213,6 +211,7 @@ class PokemonFormRenderingTest extends TestCase
         foreach ($expected as $key => $expectedValue) {
             $currentKeyChain = [...$keyChain, $key];
             if (is_array($expectedValue)) {
+                self::assertIsArray($current[$key]);
                 $this->validateSubset($expectedValue, $current[$key], $currentKeyChain);
                 continue;
             }

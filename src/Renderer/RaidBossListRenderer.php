@@ -20,12 +20,10 @@ use function count;
 
 final class RaidBossListRenderer
 {
-    /**
-     * @return array<string, array<int, mixed[]>>
-     */
+    /** @return array<string, array<int, mixed[]>> */
     public function buildList(
         RaidBossCollection $raidBossCollection,
-        TranslationCollectionCollection $translationCollection
+        TranslationCollectionCollection $translationCollection,
     ): array {
         $weatherCalculator = new TypeWeatherCalculator();
         $typeCalculator    = new TypeEffectivenessCalculator();
@@ -50,7 +48,7 @@ final class RaidBossListRenderer
                 array_filter(
                     $raidBossTypes,
                     static fn (PokemonType $pokemonType): bool => $pokemonType->getType() !== PokemonType::NONE
-                )
+                ),
             );
 
             $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
@@ -69,7 +67,7 @@ final class RaidBossListRenderer
                 'counter'      => $typeCalculator->getAllEffectiveTypes(...$raidBossTypes),
                 'weather'      => array_map(
                     static fn (WeatherBoost $weatherBoost): string => $weatherBoost->getAssetsName(),
-                    $weatherCalculator->getWeatherBoost(...$raidBossTypes)
+                    $weatherCalculator->getWeatherBoost(...$raidBossTypes),
                 ),
                 'cpRange'      => [
                     CpCalculator::calculateRaidMinCp($raidBossStats),
@@ -101,12 +99,10 @@ final class RaidBossListRenderer
         return $bosses;
     }
 
-    /**
-     * @return array<string, string>
-     */
+    /** @return array<string, string> */
     private function getNames(
         RaidBoss $raidBoss,
-        TranslationCollectionCollection $translationCollectionCollection
+        TranslationCollectionCollection $translationCollectionCollection,
     ): array {
         $out = [];
         foreach ($translationCollectionCollection->getCollections() as $translationName => $translationCollection) {
@@ -116,7 +112,7 @@ final class RaidBossListRenderer
                 $pokemonName = PokemonNameRenderer::renderPokemonMegaName(
                     $raidBoss->getPokemon(),
                     $temporary->getId(),
-                    $translationCollection
+                    $translationCollection,
                 );
             }
 

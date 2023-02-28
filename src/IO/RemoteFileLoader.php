@@ -15,21 +15,19 @@ use function sprintf;
 class RemoteFileLoader
 {
     private ClientInterface $client;
-    private LoggerInterface $logger;
 
-    public function __construct(LoggerInterface $logger, ?ClientInterface $client = null)
+    public function __construct(private LoggerInterface $logger, ClientInterface|null $client = null)
     {
         $this->client = $client ?? new Client();
-        $this->logger = $logger;
     }
 
-    public function receiveResponseHeader(string $url, string $headerName): ?string
+    public function receiveResponseHeader(string $url, string $headerName): string|null
     {
         $headerResponse = null;
         try {
             $this->logger->debug(sprintf('[RemoteFileLoader] HEAD %s', $url), ['ReceiveHeader' => $headerName]);
             $headerResponse = $this->client->request('HEAD', $url)->getHeaderLine($headerName);
-        } catch (ConnectException $connectException) {
+        } catch (ConnectException) {
         }
 
         return $headerResponse === '' ? null : $headerResponse;
@@ -40,7 +38,7 @@ class RemoteFileLoader
         try {
             $this->logger->debug(sprintf('[RemoteFileLoader] GET %s', $url));
             $content = $this->client->request('GET', $url, ['timeout' => 20])->getBody()->getContents();
-        } catch (ConnectException $connectException) {
+        } catch (ConnectException) {
             sleep(5);
             $content = $this->client->request('GET', $url, ['timeout' => 5])->getBody()->getContents();
         }

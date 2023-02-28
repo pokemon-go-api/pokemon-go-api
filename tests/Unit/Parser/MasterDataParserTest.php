@@ -55,7 +55,7 @@ class MasterDataParserTest extends TestCase
             'MEOWTH',
             'MEOWTH',
             PokemonType::normal(),
-            PokemonType::none()
+            PokemonType::none(),
         );
 
         foreach ($meowth->getPokemonRegionForms() as $form) {
@@ -64,7 +64,7 @@ class MasterDataParserTest extends TestCase
 
         $forms = array_map(
             static fn (Pokemon $form): string => $form->getFormId(),
-            $meowth->getPokemonRegionForms()
+            $meowth->getPokemonRegionForms(),
         );
 
         self::assertSame(61, $meowth->getPokemonRegionForms()['MEOWTH_ALOLA']->getAssetsBundleId());
@@ -94,7 +94,7 @@ class MasterDataParserTest extends TestCase
             90.0,
             -50.0,
             3700.0,
-            false
+            false,
         );
         $move49->setCombatMove(new PokemonCombatMove(
             90.0,
@@ -105,8 +105,8 @@ class MasterDataParserTest extends TestCase
                 null,
                 null,
                 null,
-                -1
-            )
+                -1,
+            ),
         ));
         self::assertEquals($move49, $moves['m49']);
 
@@ -117,7 +117,7 @@ class MasterDataParserTest extends TestCase
             7.0,
             8.0,
             700.0,
-            true
+            true,
         );
         $move203->setCombatMove(new PokemonCombatMove(5.0, 7.0, 1, null));
         self::assertEquals($move203, $moves['m203']);

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
+use function array_values;
+
 final class RaidBoss
 {
     public const RAID_LEVEL_1              = 'lvl1';
@@ -14,26 +16,16 @@ final class RaidBoss
     public const RAID_LEVEL_LEGENDARY_MEGA = 'legendary_mega';
     public const RAID_LEVEL_ULTRA_BEAST    = 'ultra_beast';
 
-    private bool $shinyAvailable;
-    private string $raidLevel;
-    private Pokemon $pokemon;
-    private ?TemporaryEvolution $temporaryEvolution;
-    private ?string $costumeId;
     /** @var array<int, BattleResult> */
     private array $battleResults = [];
 
     public function __construct(
-        Pokemon $pokemon,
-        bool $shinyAvailable,
-        string $raidLevel,
-        ?TemporaryEvolution $temporaryEvolution,
-        ?string $costumeId = null
+        private Pokemon $pokemon,
+        private bool $shinyAvailable,
+        private string $raidLevel,
+        private TemporaryEvolution|null $temporaryEvolution,
+        private string|null $costumeId = null,
     ) {
-        $this->shinyAvailable     = $shinyAvailable;
-        $this->raidLevel          = $raidLevel;
-        $this->pokemon            = $pokemon;
-        $this->temporaryEvolution = $temporaryEvolution;
-        $this->costumeId          = $costumeId;
     }
 
     public function getPokemonWithMegaFormId(): string
@@ -45,7 +37,7 @@ final class RaidBoss
         return $this->getPokemon()->getFormId();
     }
 
-    public function getCostumeId(): ?string
+    public function getCostumeId(): string|null
     {
         return $this->costumeId;
     }
@@ -65,7 +57,7 @@ final class RaidBoss
         return $this->shinyAvailable;
     }
 
-    public function getTemporaryEvolution(): ?TemporaryEvolution
+    public function getTemporaryEvolution(): TemporaryEvolution|null
     {
         return $this->temporaryEvolution;
     }
@@ -76,13 +68,13 @@ final class RaidBoss
         return $this->battleResults;
     }
 
-    public function getPokemonImage(): ?PokemonImage
+    public function getPokemonImage(): PokemonImage|null
     {
         return $this->getPokemon()->getPokemonImage($this->temporaryEvolution, $this->costumeId);
     }
 
     public function setBattleResults(BattleResult ...$battleResults): void
     {
-        $this->battleResults = $battleResults;
+        $this->battleResults = array_values($battleResults);
     }
 }

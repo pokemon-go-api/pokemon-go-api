@@ -30,7 +30,7 @@ class PokebattlerParserTest extends TestCase
     {
         $cacheLoaderMock = $this->createMock(CacheLoader::class);
         $cacheLoaderMock->expects(
-            self::exactly(6)
+            self::exactly(6),
         )->method('fetchPokebattlerUrl')
         ->withConsecutive(
             //phpcs:ignore Generic.Files.LineLength.TooLong
@@ -61,7 +61,7 @@ class PokebattlerParserTest extends TestCase
             false,
             RaidBoss::RAID_LEVEL_MEGA,
             new TemporaryEvolution('CHARIZARD_MEGA_X', PokemonType::none(), PokemonType::none()),
-            null
+            null,
         ));
 
         $raidBossCollection->add(new RaidBoss(
@@ -69,7 +69,7 @@ class PokebattlerParserTest extends TestCase
             false,
             RaidBoss::RAID_LEVEL_5,
             null,
-            null
+            null,
         ));
         $sut->appendResults($raidBossCollection);
     }

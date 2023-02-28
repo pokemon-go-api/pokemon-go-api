@@ -12,9 +12,7 @@ use function in_array;
 
 final class TypeWeatherCalculator
 {
-    /**
-     * @return array<int, WeatherBoost>
-     */
+    /** @return array<int, WeatherBoost> */
     public function getWeatherBoost(PokemonType $primaryType, PokemonType $secondaryType): array
     {
         $boostedWeather = [];

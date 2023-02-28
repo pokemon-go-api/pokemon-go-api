@@ -7,9 +7,7 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Types\PokemonStats;
 
-/**
- * @covers \PokemonGoApi\PogoAPI\Types\PokemonStats
- */
+/** @covers \PokemonGoApi\PogoAPI\Types\PokemonStats */
 class PokemonStatsTest extends TestCase
 {
     public function testGetters(): void

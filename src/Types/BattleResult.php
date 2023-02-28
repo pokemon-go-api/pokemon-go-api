@@ -6,13 +6,8 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 final class BattleResult
 {
-    private BattleConfiguration $battleConfiguration;
-    private float $totalEstimator;
-
-    public function __construct(BattleConfiguration $battleConfiguration, float $totalEstimator)
+    public function __construct(private BattleConfiguration $battleConfiguration, private float $totalEstimator)
     {
-        $this->totalEstimator      = $totalEstimator;
-        $this->battleConfiguration = $battleConfiguration;
     }
 
     public function getBattleConfiguration(): BattleConfiguration

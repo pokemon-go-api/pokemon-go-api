@@ -26,7 +26,7 @@ class AttacksCollectionTest extends TestCase
             10.0,
             15.0,
             100.0,
-            true
+            true,
         );
         $sut         = new AttacksCollection();
         $sut->add($pokemonMove);

@@ -19,11 +19,8 @@ use function strtoupper;
 
 class SerebiiParser
 {
-    private PokemonCollection $pokemonCollection;
-
-    public function __construct(PokemonCollection $pokemonCollection)
+    public function __construct(private PokemonCollection $pokemonCollection)
     {
-        $this->pokemonCollection = $pokemonCollection;
     }
 
     public function parseRaidBosses(string $htmlPage): RaidBossCollection
@@ -151,7 +148,7 @@ class SerebiiParser
                     $pokemon,
                     stripos($tableHtml, '/icons/shiny.png') !== false,
                     $currentTierLevel,
-                    $pokemonTemporaryEvolution
+                    $pokemonTemporaryEvolution,
                 );
                 $raids->add($raidboss);
             }

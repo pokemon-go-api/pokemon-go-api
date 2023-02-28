@@ -7,9 +7,7 @@ namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 
-/**
- * @covers \PokemonGoApi\PogoAPI\Collections\TranslationCollection
- */
+/** @covers \PokemonGoApi\PogoAPI\Collections\TranslationCollection */
 class TranslationCollectionTest extends TestCase
 {
     public function testCollection(): void
@@ -37,7 +35,7 @@ class TranslationCollectionTest extends TestCase
                 'Mega 1',
                 'Mega 2',
             ],
-            $collection->getPokemonMegaNames(5)
+            $collection->getPokemonMegaNames(5),
         );
         self::assertSame('Pokemon Form in testlanguage', $collection->getPokemonFormName('POKEMON_FORM'));
         self::assertNull($collection->getPokemonFormName('FALLBACK'));

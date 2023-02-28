@@ -30,31 +30,31 @@ class TypeEffectivenessCalculatorTest extends TestCase
         $effectiveTypes = $calculator->getAllTypes($primaryType, $secondaryType);
         self::assertSame(
             $expected,
-            $effectiveTypes
+            $effectiveTypes,
         );
 
         $effectiveTypes       = $calculator->getAllEffectiveTypes($primaryType, $secondaryType);
         $expectedAllEffective = array_filter($expected, static fn (float $multiplier): bool => $multiplier > 1.0);
         self::assertSame(
             $expectedAllEffective,
-            $effectiveTypes
+            $effectiveTypes,
         );
 
         $effectiveTypes          = $calculator->getDoubleEffectiveTypes($primaryType, $secondaryType);
         $expectedDoubleEffective = array_filter($expected, static fn (float $multiplier): bool => $multiplier > 2.0);
         self::assertSame(
             array_keys($expectedDoubleEffective),
-            $effectiveTypes
+            $effectiveTypes,
         );
 
         $effectiveTypes            = $calculator->getOneAHalfEffectiveTypes($primaryType, $secondaryType);
         $expectedOneAHalfEffective = array_filter(
             $expected,
-            static fn (float $multiplier): bool => $multiplier > 1.0 && $multiplier < 2.0
+            static fn (float $multiplier): bool => $multiplier > 1.0 && $multiplier < 2.0,
         );
         self::assertSame(
             array_keys($expectedOneAHalfEffective),
-            $effectiveTypes
+            $effectiveTypes,
         );
     }
 
@@ -65,9 +65,7 @@ class TypeEffectivenessCalculatorTest extends TestCase
         self::assertCount(7, $allEffectiveTypes);
     }
 
-    /**
-     * @return array<string, array<int, PokemonType|array<string, float>>>
-     */
+    /** @return array<string, array<int, PokemonType|array<string, float>>> */
     public function getEffectiveTypesDataProvider(): array
     {
         return [

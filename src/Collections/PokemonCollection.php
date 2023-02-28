@@ -26,7 +26,7 @@ class PokemonCollection
         }
     }
 
-    public function get(string $id): ?Pokemon
+    public function get(string $id): Pokemon|null
     {
         if (! array_key_exists($id, $this->storage)) {
             return null;
@@ -35,7 +35,7 @@ class PokemonCollection
         return $this->storage[$id];
     }
 
-    public function getByDexId(int $dexEntry): ?Pokemon
+    public function getByDexId(int $dexEntry): Pokemon|null
     {
         if (! array_key_exists($dexEntry, $this->indexedByDexId)) {
             return null;
@@ -44,7 +44,7 @@ class PokemonCollection
         return $this->indexedByDexId[$dexEntry];
     }
 
-    public function getByFormId(string $formId): ?Pokemon
+    public function getByFormId(string $formId): Pokemon|null
     {
         if (! array_key_exists($formId, $this->indexedByForm)) {
             return $this->get($formId);

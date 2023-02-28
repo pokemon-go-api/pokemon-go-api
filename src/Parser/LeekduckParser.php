@@ -28,11 +28,8 @@ use function usort;
 
 class LeekduckParser
 {
-    private PokemonCollection $pokemonCollection;
-
-    public function __construct(PokemonCollection $pokemonCollection)
+    public function __construct(private PokemonCollection $pokemonCollection)
     {
-        $this->pokemonCollection = $pokemonCollection;
     }
 
     public function parseRaidBosses(string $htmlPage): RaidBossCollection
@@ -50,7 +47,7 @@ class LeekduckParser
         $currentTierLevel = 'unknown';
         foreach ($liItems as $liItem) {
             assert($liItem instanceof DOMElement);
-            $attributeClass = $liItem->attributes !== null ? $liItem->attributes->getNamedItem('class') : null;
+            $attributeClass = $liItem->attributes->getNamedItem('class');
             if ($attributeClass !== null && $attributeClass->nodeValue === 'header-li') {
                 $currentTierLevelText = trim(preg_replace('~\s+~', ' ', $liItem->textContent) ?? '');
                 switch (true) {
@@ -71,7 +68,7 @@ class LeekduckParser
                         break;
                 }
             } else {
-                $bossNameValue = trim($this->getElementsByClass($liItem, 'boss-name')[0]->nodeValue);
+                $bossNameValue = trim($this->getElementsByClass($liItem, 'boss-name')[0]->nodeValue ?? '');
                 [, $formName]  = $this->extractFormBossName($bossNameValue);
 
                 $bossImageContainer = $this->getElementsByClass($liItem, 'boss-img')[0] ?? null;
@@ -82,7 +79,7 @@ class LeekduckParser
                         $imgSrc = $bossImage->getAttribute('src');
                         try {
                             $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
-                        } catch (Throwable $e) {
+                        } catch (Throwable) {
                         }
                     }
                 }
@@ -101,8 +98,8 @@ class LeekduckParser
                         $pokemon->getId(),
                         $pokemon->getFormId(),
                         $pokemonImage->getAssetBundleValue(),
-                        $pokemonImage->getAssetBundleSuffix()
-                    )
+                        $pokemonImage->getAssetBundleSuffix(),
+                    ),
                 );
 
                 $pokemonIdParts = [$basePokemon->getId()];
@@ -167,7 +164,7 @@ class LeekduckParser
                     count($this->getElementsByClass($liItem, 'shiny-icon')) === 1,
                     $raidTierLevel,
                     $pokemonTemporaryEvolution,
-                    $pokemonImage->getCostume()
+                    $pokemonImage->getCostume(),
                 );
                 $raids->add($raidboss);
             }
@@ -176,9 +173,7 @@ class LeekduckParser
         return $raids;
     }
 
-    /**
-     * @return DOMElement[]
-     */
+    /** @return DOMElement[] */
     private function getElementsByClass(DOMElement $node, string $className): array
     {
         $nodes = [];
@@ -200,9 +195,7 @@ class LeekduckParser
         return $nodes;
     }
 
-    /**
-     * @return array<int, string|null>
-     */
+    /** @return array<int, string|null> */
     private function extractFormBossName(string $bossName): array
     {
         if (stripos($bossName, 'Mega') !== false) {

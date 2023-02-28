@@ -11,31 +11,17 @@ use function strpos;
 
 final class PokemonMove
 {
-    private int $id;
-    private string $name;
-    private PokemonType $pokemonType;
-    private float $power;
-    private float $energy;
-    private float $durationMs;
-    private bool $isFastMove;
-    private ?PokemonCombatMove $combatMove = null;
+    private PokemonCombatMove|null $combatMove = null;
 
     public function __construct(
-        int $id,
-        string $name,
-        PokemonType $pokemonType,
-        float $power,
-        float $energy,
-        float $durationMs,
-        bool $isFastMove
+        private int $id,
+        private string $name,
+        private PokemonType $pokemonType,
+        private float $power,
+        private float $energy,
+        private float $durationMs,
+        private bool $isFastMove,
     ) {
-        $this->id          = $id;
-        $this->name        = $name;
-        $this->pokemonType = $pokemonType;
-        $this->power       = $power;
-        $this->energy      = $energy;
-        $this->durationMs  = $durationMs;
-        $this->isFastMove  = $isFastMove;
     }
 
     public static function createFromGameMaster(stdClass $moveData): self
@@ -50,7 +36,7 @@ final class PokemonMove
             $moveData->moveSettings->power ?? 0.0,
             $moveData->moveSettings->energyDelta ?? 0.0,
             $moveData->moveSettings->durationMs,
-            strpos($moveData->moveSettings->movementId, '_FAST') !== false
+            strpos($moveData->moveSettings->movementId, '_FAST') !== false,
         );
     }
 
@@ -94,7 +80,7 @@ final class PokemonMove
         return $this->isFastMove;
     }
 
-    public function getCombatMove(): ?PokemonCombatMove
+    public function getCombatMove(): PokemonCombatMove|null
     {
         return $this->combatMove;
     }

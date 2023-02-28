@@ -12,17 +12,13 @@ use const JSON_THROW_ON_ERROR;
 
 final class JsonParser
 {
-    /**
-     * @return array<mixed, mixed>
-     */
+    /** @return array<string, mixed> */
     public static function decodeToArray(string $data): array
     {
         return (array) (json_decode($data, false, 512, JSON_THROW_ON_ERROR) ?: []);
     }
 
-    /**
-     * @return array<mixed, mixed>
-     */
+    /** @return array<string, mixed> */
     public static function decodeToFullArray(string $data): array
     {
         return (array) (json_decode($data, true, 512, JSON_THROW_ON_ERROR) ?: []);

@@ -6,15 +6,10 @@ namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 
 final class ResearchRewardMegaEnergy implements ResearchReward
 {
-    private string $pokemonFormId;
-    private int $megaEnergy;
-
     public function __construct(
-        string $pokemonFormId,
-        int $megaEnergy
+        private string $pokemonFormId,
+        private int $megaEnergy,
     ) {
-        $this->pokemonFormId = $pokemonFormId;
-        $this->megaEnergy    = $megaEnergy;
     }
 
     public function getPokemonFormId(): string

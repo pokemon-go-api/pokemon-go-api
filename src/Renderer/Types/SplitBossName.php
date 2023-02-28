@@ -13,7 +13,7 @@ class SplitBossName
 {
     private string $fullName;
     private string $firstLine;
-    private ?string $secondLine;
+    private string|null $secondLine;
     private bool $isFirstLineSmall;
 
     public function __construct(string $name, int $splitByChars = 10)
@@ -49,7 +49,7 @@ class SplitBossName
         return $this->fullName;
     }
 
-    public function getSecondLine(): ?string
+    public function getSecondLine(): string|null
     {
         return $this->secondLine;
     }

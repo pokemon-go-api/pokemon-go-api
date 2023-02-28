@@ -10,9 +10,7 @@ use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 
 use function count;
 
-/**
- * @covers \PokemonGoApi\PogoAPI\Parser\CustomTranslations
- */
+/** @covers \PokemonGoApi\PogoAPI\Parser\CustomTranslations */
 class CustomTranslationsTest extends TestCase
 {
     public function testLoad(): void
@@ -20,7 +18,7 @@ class CustomTranslationsTest extends TestCase
         self::assertNotEmpty(CustomTranslations::load());
         self::assertCount(
             count(TranslationParser::LANGUAGES),
-            CustomTranslations::load()
+            CustomTranslations::load(),
         );
     }
 }

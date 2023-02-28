@@ -6,15 +6,10 @@ namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 
 final class ResearchRewardPokemon implements ResearchReward
 {
-    private string $pokemonFormId;
-    private bool $shiny;
-
     public function __construct(
-        string $pokemonFormId,
-        bool $shiny
+        private string $pokemonFormId,
+        private bool $shiny,
     ) {
-        $this->pokemonFormId = $pokemonFormId;
-        $this->shiny         = $shiny;
     }
 
     public function getPokemonFormId(): string

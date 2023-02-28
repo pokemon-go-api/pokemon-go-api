@@ -23,21 +23,12 @@ use function strtoupper;
 
 final class RenderingRaidBoss
 {
-    private RaidBoss $raidBoss;
-    private string $translatedName;
-    private TypeEffectivenessCalculator $typeCalculator;
-    private TypeWeatherCalculator $weatherCalculator;
-
     public function __construct(
-        RaidBoss $raidBoss,
-        string $translatedName,
-        TypeEffectivenessCalculator $typeCalculator,
-        TypeWeatherCalculator $weatherCalculator
+        private RaidBoss $raidBoss,
+        private string $translatedName,
+        private TypeEffectivenessCalculator $typeCalculator,
+        private TypeWeatherCalculator $weatherCalculator,
     ) {
-        $this->raidBoss          = $raidBoss;
-        $this->translatedName    = $translatedName;
-        $this->typeCalculator    = $typeCalculator;
-        $this->weatherCalculator = $weatherCalculator;
     }
 
     public function getSplitBossName(int $splitByChars): SplitBossName
@@ -65,9 +56,7 @@ final class RenderingRaidBoss
         return $this->raidBoss;
     }
 
-    /**
-     * @return array<int, WeatherBoost>
-     */
+    /** @return array<int, WeatherBoost> */
     public function getWeatherBoost(): array
     {
         return $this->weatherCalculator->getWeatherBoost(...$this->getTypes());
@@ -78,9 +67,7 @@ final class RenderingRaidBoss
         return $this->raidBoss->getPokemon()->getStats() ?? new PokemonStats(0, 0, 0);
     }
 
-    /**
-     * @return array<int, int>
-     */
+    /** @return array<int, int> */
     public function getCpRange(): array
     {
         $raidBossStats = $this->getRaidBossStats();
@@ -91,9 +78,7 @@ final class RenderingRaidBoss
         ];
     }
 
-    /**
-     * @return array<int, int>
-     */
+    /** @return array<int, int> */
     public function getCpRangeWeatherBoosted(): array
     {
         $raidBossStats = $this->getRaidBossStats();
@@ -104,9 +89,7 @@ final class RenderingRaidBoss
         ];
     }
 
-    /**
-     * @return array<string, string>
-     */
+    /** @return array<string, string> */
     public function getDifficulty(): array
     {
         $battleResults = $this->raidBoss->getBattleResults();
@@ -117,7 +100,7 @@ final class RenderingRaidBoss
                     max($battleResult->getTotalEstimator(), 0.1),
                     1,
                     '.',
-                    ''
+                    '',
                 );
             }
         }
@@ -152,7 +135,7 @@ final class RenderingRaidBoss
             array_filter(
                 $this->getTypes(),
                 static fn (PokemonType $pokemonType): bool => $pokemonType->getType() !== PokemonType::NONE
-            )
+            ),
         );
     }
 
@@ -188,7 +171,7 @@ final class RenderingRaidBoss
         return sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong
             'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Raids/raid_%s_icon_notification.png',
-            $levelIcon
+            $levelIcon,
         );
     }
 
@@ -196,7 +179,7 @@ final class RenderingRaidBoss
     {
         return sprintf(
             'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Types/POKEMON_TYPE_%s.png',
-            strtoupper($type)
+            strtoupper($type),
         );
     }
 
@@ -204,13 +187,11 @@ final class RenderingRaidBoss
     {
         return sprintf(
             'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Weather/weatherIcon_small_%s.png',
-            $weatherBoost->getAssetsName()
+            $weatherBoost->getAssetsName(),
         );
     }
 
-    /**
-     * @return array<string, float>
-     */
+    /** @return array<string, float> */
     public function getEffectiveCounterTypes(): array
     {
         return array_reverse($this->typeCalculator->getAllEffectiveTypes(...$this->getTypes()));

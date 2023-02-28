@@ -25,7 +25,7 @@ class TranslationParserTest extends TestCase
             [
                 CustomTranslations::REGIONAL_PREFIX . 'dummy' => 'Dummy',
                 'nonexisting_dummy2' => 'Dummy2',
-            ]
+            ],
         );
 
         self::assertSame('Charizard', $collection->getPokemonName(6));

@@ -33,7 +33,7 @@ $applicationConfig = array_merge_recursive(
     [
         'raid-graphics' => [],
     ],
-    require sprintf(__DIR__ . '/../config/raid-grahpics.%s.php', $env)
+    require sprintf(__DIR__ . '/../config/raid-grahpics.%s.php', $env),
 );
 
 date_default_timezone_set('UTC');
@@ -45,7 +45,7 @@ $cacheLoader = new CacheLoader(
     new RemoteFileLoader($logger),
     new DateTimeImmutable(),
     $tmpDir,
-    $logger
+    $logger,
 );
 
 $logger->debug('Parse Files');
@@ -70,8 +70,8 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
             $languageName,
             $languageFiles['apk'][$languageName],
             $languageFiles['remote'][$languageName],
-            $customTranslations[$languageName]
-        )
+            $customTranslations[$languageName],
+        ),
     );
 }
 
@@ -120,7 +120,7 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
     $renderedPokemon = $pokemonRenderer->render(
         $pokemon,
         $masterData->getAttacksCollection(),
-        $masterData->getQuestsCollection()
+        $masterData->getQuestsCollection(),
     );
 
     $generation = GenerationDeterminer::fromDexNr($pokemon->getDexNr());
@@ -151,10 +151,10 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
 $logger->debug('Generate Tasks');
 $taskParser    = new SilphRoadResearchTaskParser(
     $masterData->getPokemonCollection(),
-    $translations->getCollection('English')
+    $translations->getCollection('English'),
 );
 $tasks         = $taskParser->parseTasks(
-    $cacheLoader->fetchTasksFromSilphroad()
+    $cacheLoader->fetchTasksFromSilphroad(),
 );
 $tasksRenderer = new ResearchTasksRenderer($translations, $masterData->getPokemonCollection());
 
@@ -179,16 +179,23 @@ $logger->debug(
     sprintf('Got %d remote raid bosses', count($raidBosses->toArray())),
     array_map(
         static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonWithMegaFormId(),
-        $raidBosses->toArray()
-    )
+        $raidBosses->toArray(),
+    ),
 );
-$xmlData           = (array) (simplexml_load_string(
-    file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: ''
+$xmlData = (array) (simplexml_load_string(
+    file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: '',
 ) ?: []);
+
+$raidBossOverwriteData = json_decode(json_encode($xmlData['raidboss'] ?? []) ?: '[]');
+assert(is_array($raidBossOverwriteData));
+foreach ($raidBossOverwriteData as $raidBossOverwriteDataItem) {
+    assert($raidBossOverwriteDataItem instanceof stdClass);
+}
+
 $raidBossOverwrite = new RaidBossOverwrite(
-    json_decode(json_encode($xmlData['raidboss'] ?? []) ?: '[]'),
+    $raidBossOverwriteData,
     $masterData->getPokemonCollection(),
-    $logger
+    $logger,
 );
 $raidBossOverwrite->overwrite($raidBosses);
 
@@ -196,15 +203,15 @@ $logger->debug(
     sprintf('Got %d raid bosses to render', count($raidBosses->toArray())),
     array_map(
         static fn (RaidBoss $raidBoss): string => $raidBoss->getPokemonWithMegaFormId(),
-        $raidBosses->toArray()
-    )
+        $raidBosses->toArray(),
+    ),
 );
 
 $pokebattlerParser        = new PokebattlerParser(
     $cacheLoader,
     BattleConfiguration::easy(),
     BattleConfiguration::normal(),
-    BattleConfiguration::hard()
+    BattleConfiguration::hard(),
 );
 $raidBossesWithDifficulty = $pokebattlerParser->appendResults($raidBosses);
 
@@ -223,12 +230,12 @@ foreach ($translations->getCollections() as $translationName => $translationColl
         $raidGraphic = $raidBossImageRenderer->buildGraphic(
             $raidBossesWithDifficulty,
             $translationCollection,
-            $raidGraphicConfig
+            $raidGraphicConfig,
         );
 
         file_put_contents(
             sprintf('%s/%s.svg', $raidListDir, $raidGraphicName),
-            $raidGraphic->getImageContent()
+            $raidGraphic->getImageContent(),
         );
 
         if ($firstRaidGraphicName !== null) {
@@ -267,7 +274,7 @@ $hashFiles = [
 
 file_put_contents($apidir . 'hashes.json', json_encode(
     $cacheLoader->updateCaches($hashFiles),
-    JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
+    JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES,
 ));
 
 $date   = new DateTimeImmutable('now', new DateTimeZone('UTC'));
@@ -278,7 +285,7 @@ file_put_contents(
     #last-generated-display::before {
         content: "$format (UTC)";
     }
-    CSS
+    CSS,
 );
 $hasChanges = $cacheLoader->hasChanges();
 $logger->debug(sprintf('CACHE_STATUS=%s', $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES'));

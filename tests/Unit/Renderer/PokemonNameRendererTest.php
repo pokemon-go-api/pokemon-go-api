@@ -36,19 +36,19 @@ class PokemonNameRendererTest extends TestCase
         self::assertSame('Testpokemon', PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection));
 
         $pokemon = $pokemon->withPokemonForm(
-            new PokemonForm('dummy', 'ALOLA', 1, null)
+            new PokemonForm('dummy', 'ALOLA', 1, null),
         );
         self::assertSame(
             '(ALOLA)-Testpokemon',
-            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
+            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
         $pokemon = $pokemon->withPokemonForm(
-            new PokemonForm('dummy', 'GALARIAN', 1, null)
+            new PokemonForm('dummy', 'GALARIAN', 1, null),
         );
         self::assertSame(
             'Testpokemon-(GALAR)',
-            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
+            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
     }
 
@@ -67,25 +67,25 @@ class PokemonNameRendererTest extends TestCase
         $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_NORMAL', PokemonType::none(), null);
         self::assertSame(
             'Testpokemon (Normalform)',
-            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
+            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
         $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_ATTACK', PokemonType::none(), null);
         self::assertSame(
             'Testpokemon (Angriffsform)',
-            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
+            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
         $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_DEFENSE', PokemonType::none(), null);
         self::assertSame(
             'Testpokemon (Verteidgungsf.)',
-            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
+            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
         $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_SPEED', PokemonType::none(), null);
         self::assertSame(
             'Testpokemon (Initiativeform)',
-            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection)
+            PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
     }
 
@@ -94,7 +94,7 @@ class PokemonNameRendererTest extends TestCase
         $pokemon = new Pokemon(1, 'CHARIZARD', 'CHARIZARD', PokemonType::none(), null);
         $pokemon = $pokemon->withAddedTemporaryEvolutions(
             new TemporaryEvolution('MEGA_X', PokemonType::none(), null),
-            new TemporaryEvolution('MEGA_Y', PokemonType::none(), null)
+            new TemporaryEvolution('MEGA_Y', PokemonType::none(), null),
         );
 
         $translationCollection = new TranslationCollection('dummylanguage');
@@ -104,19 +104,19 @@ class PokemonNameRendererTest extends TestCase
 
         self::assertSame(
             'Mega CHARIZARD X',
-            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'CHARIZARD_MEGA_X', $translationCollection)
+            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'CHARIZARD_MEGA_X', $translationCollection),
         );
         self::assertSame(
             'Mega CHARIZARD X',
-            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'MEGA_X', $translationCollection)
+            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'MEGA_X', $translationCollection),
         );
         self::assertSame(
             'Mega CHARIZARD Y',
-            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'CHARIZARD_MEGA_Y', $translationCollection)
+            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'CHARIZARD_MEGA_Y', $translationCollection),
         );
         self::assertSame(
             'Mega CHARIZARD Y',
-            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'MEGA_Y', $translationCollection)
+            PokemonNameRenderer::renderPokemonMegaName($pokemon, 'MEGA_Y', $translationCollection),
         );
     }
 }

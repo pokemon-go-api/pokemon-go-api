@@ -35,18 +35,20 @@ class CacheLoaderTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
         $this->cacheDir = sprintf('%s/%s/', sys_get_temp_dir(), 'CacheLoaderTest');
     }
 
     protected function tearDown(): void
     {
         parent::tearDown();
+
         array_map(
             fn (string $file): bool => @unlink($this->cacheDir . $file),
             array_filter(
                 scandir($this->cacheDir) ?: [],
                 fn (string $file): bool => is_file($this->cacheDir . $file)
-            )
+            ),
         );
     }
 
@@ -58,7 +60,7 @@ class CacheLoaderTest extends TestCase
             $this->createStub(RemoteFileLoader::class),
             new DateTimeImmutable(),
             $this->cacheDir,
-            new NoopLogger()
+            new NoopLogger(),
         );
         self::assertFileDoesNotExist($cacheFile);
         unset($sut);
@@ -71,7 +73,7 @@ class CacheLoaderTest extends TestCase
 
         $remoteFileLoaderMock = $this->createMock(RemoteFileLoader::class);
         $remoteFileLoaderMock->expects(self::once())->method('load')->willReturn(
-            new File('testcontent')
+            new File('testcontent'),
         );
         $remoteFileLoaderMock->method('receiveResponseHeader')->willReturn($clock->format(DATE_ATOM));
 
@@ -79,7 +81,7 @@ class CacheLoaderTest extends TestCase
             $remoteFileLoaderMock,
             $clock,
             $this->cacheDir,
-            new NoopLogger()
+            new NoopLogger(),
         );
         // assert that three calls only load once
         $sut->fetchRaidBossesFromLeekduck();
@@ -89,16 +91,16 @@ class CacheLoaderTest extends TestCase
         // Response Header changed date
         $remoteFileLoaderMock = $this->createMock(RemoteFileLoader::class);
         $remoteFileLoaderMock->expects(self::once())->method('load')->willReturn(
-            new File('testcontent')
+            new File('testcontent'),
         );
         $remoteFileLoaderMock->method('receiveResponseHeader')->willReturn(
-            (new DateTimeImmutable())->format(DATE_ATOM)
+            (new DateTimeImmutable())->format(DATE_ATOM),
         );
         $sut = new CacheLoader(
             $remoteFileLoaderMock,
             $clock,
             $this->cacheDir,
-            new NoopLogger()
+            new NoopLogger(),
         );
         $sut->fetchRaidBossesFromLeekduck();
     }

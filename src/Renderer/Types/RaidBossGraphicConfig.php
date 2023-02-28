@@ -11,18 +11,14 @@ final class RaidBossGraphicConfig
     public const ORDER_MEGA_TO_LVL1 = 'megaToLvl1';
     public const ORDER_LVL1_TO_MEGA = 'lvl1ToMega';
 
-    private string $order;
-    private bool $useShinyImages;
     private string $templateFile;
 
     public function __construct(
-        string $order = self::ORDER_MEGA_TO_LVL1,
-        bool $useShinyImages = true,
-        string $template = RaidBossGraphicRenderer::TEMPLATE_PATH . '/raidlist_default.phtml'
+        private string $order = self::ORDER_MEGA_TO_LVL1,
+        private bool $useShinyImages = true,
+        string $template = RaidBossGraphicRenderer::TEMPLATE_PATH . '/raidlist_default.phtml',
     ) {
-        $this->order          = $order;
-        $this->useShinyImages = $useShinyImages;
-        $this->templateFile   = $template;
+        $this->templateFile = $template;
     }
 
     public function getOrder(): string

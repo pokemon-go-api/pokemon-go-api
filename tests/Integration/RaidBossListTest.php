@@ -19,14 +19,10 @@ use function preg_replace;
 
 use const PHP_EOL;
 
-/**
- * @coversNothing
- */
+/** @coversNothing */
 class RaidBossListTest extends TestCase
 {
-    /**
-     * @depends testRenderDummyRaidList
-     */
+    /** @depends testRenderDummyRaidList */
     public function testRenderDummyList(RaidBossCollection $raidBossCollection): void
     {
         $translationLoader     = new TranslationParser();
@@ -34,7 +30,7 @@ class RaidBossListTest extends TestCase
             'English',
             __DIR__ . '/../../data/tmp/latest_apk_English.txt',
             __DIR__ . '/../../data/tmp/latest_remote_English.txt',
-            CustomTranslations::load()['English']
+            CustomTranslations::load()['English'],
         );
 
         $renderer        = new RaidBossGraphicRenderer();
@@ -44,16 +40,16 @@ class RaidBossListTest extends TestCase
             new RaidBossGraphicConfig(
                 RaidBossGraphicConfig::ORDER_MEGA_TO_LVL1,
                 true,
-                __DIR__ . '/Fixtures/radilistTemplate.phtml'
-            )
+                __DIR__ . '/Fixtures/radilistTemplate.phtml',
+            ),
         );
         file_put_contents(
             __DIR__ . '/../../data/tmp/raidBossListTest.svg',
-            preg_replace('~>\s?<~', '>' . PHP_EOL . '<', $raidBossGraphic->getImageContent())
+            preg_replace('~>\s?<~', '>' . PHP_EOL . '<', $raidBossGraphic->getImageContent()),
         );
         self::assertFileEquals(
             __DIR__ . '/Fixtures/expected_raidlist.svg',
-            __DIR__ . '/../../data/tmp/raidBossListTest.svg'
+            __DIR__ . '/../../data/tmp/raidBossListTest.svg',
         );
     }
 
@@ -70,7 +66,7 @@ class RaidBossListTest extends TestCase
 
         $leekduckParser = new LeekduckParser($masterData->getPokemonCollection());
         $raidBosses     = $leekduckParser->parseRaidBosses(
-            __DIR__ . '/Fixtures/leekduck_bosses.html'
+            __DIR__ . '/Fixtures/leekduck_bosses.html',
         );
 
         $generatedRaidBosses = [];

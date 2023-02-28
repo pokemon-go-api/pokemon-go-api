@@ -17,7 +17,7 @@ final class PokemonAssetsCollection
         foreach ($images as $imageName) {
             try {
                 $image = PokemonImage::createFromFilePath($imageName);
-            } catch (Throwable $err) {
+            } catch (Throwable) {
                 continue;
             }
 
@@ -29,9 +29,7 @@ final class PokemonAssetsCollection
         }
     }
 
-    /**
-     * @return array<int, PokemonImage>
-     */
+    /** @return array<int, PokemonImage> */
     public function getImages(int $dexNr): array
     {
         return $this->imagesByDexNr['dex_' . $dexNr] ?? [];

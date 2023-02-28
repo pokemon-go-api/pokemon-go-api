@@ -25,7 +25,7 @@ final class RaidBossCollection
         $this->storage[$this->createRaidBossKey($raidBoss)] = $raidBoss;
     }
 
-    public function getById(string $id): ?RaidBoss
+    public function getById(string $id): RaidBoss|null
     {
         if (! array_key_exists($id, $this->storage)) {
             return null;
@@ -34,7 +34,7 @@ final class RaidBossCollection
         return $this->storage[$id];
     }
 
-    public function get(RaidBoss $raidBoss): ?RaidBoss
+    public function get(RaidBoss $raidBoss): RaidBoss|null
     {
         if (! $this->has($raidBoss)) {
             return null;
@@ -89,7 +89,7 @@ final class RaidBossCollection
                 $bImageUrl = $bPokemonImage ? $bPokemonImage->buildUrl(false) : '';
 
                 return $aImageUrl <=> $bImageUrl;
-            }
+            },
         );
 
         return array_values($this->storage);

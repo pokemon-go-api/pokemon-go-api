@@ -35,9 +35,7 @@ class TypeWeatherCalculatorTest extends TestCase
         }
     }
 
-    /**
-     * @return Generator<array<int, array<int, string>|PokemonType>>
-     */
+    /** @return Generator<array<int, array<int, string>|PokemonType>> */
     public function weatherTypesDataProvider(): Generator
     {
         yield [PokemonType::ice(), PokemonType::steel(), ['snow']];

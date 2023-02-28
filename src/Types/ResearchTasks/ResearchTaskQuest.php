@@ -6,21 +6,14 @@ namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 
 final class ResearchTaskQuest
 {
-    private string $translationKey;
-    private ?int $replaceArgument;
-    private bool $isEventTask;
-
     public function __construct(
-        string $translationKey,
-        ?int $replaceArgument,
-        bool $isEventTask
+        private string $translationKey,
+        private int|null $replaceArgument,
+        private bool $isEventTask,
     ) {
-        $this->translationKey  = $translationKey;
-        $this->replaceArgument = $replaceArgument;
-        $this->isEventTask     = $isEventTask;
     }
 
-    public function getReplaceArgument(): ?int
+    public function getReplaceArgument(): int|null
     {
         return $this->replaceArgument;
     }

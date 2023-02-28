@@ -32,13 +32,13 @@ class RaidBossOverwriteTest extends TestCase
     {
         $basePokemon               = new Pokemon(1, 'Test', '', PokemonType::normal(), PokemonType::none());
         $basePokemon               = $basePokemon->withAddedPokemonRegionForm(
-            new Pokemon(1, 'Test', 'Test_Form1', PokemonType::normal(), PokemonType::none())
+            new Pokemon(1, 'Test', 'Test_Form1', PokemonType::normal(), PokemonType::none()),
         );
         $basePokemon               = $basePokemon->withAddedPokemonRegionForm(
-            new Pokemon(1, 'Test', 'Test_Form2', PokemonType::normal(), PokemonType::none())
+            new Pokemon(1, 'Test', 'Test_Form2', PokemonType::normal(), PokemonType::none()),
         );
         $basePokemon               = $basePokemon->withAddedPokemonRegionForm(
-            new Pokemon(1, 'Test', 'Test_Form3', PokemonType::normal(), PokemonType::none())
+            new Pokemon(1, 'Test', 'Test_Form3', PokemonType::normal(), PokemonType::none()),
         );
         $existingPokemonCollection = new PokemonCollection();
         $existingPokemonCollection->add($basePokemon);
@@ -49,16 +49,16 @@ class RaidBossOverwriteTest extends TestCase
                 new Pokemon(1, 'Test', 'Test_Form1', PokemonType::none(), PokemonType::none()),
                 true,
                 RaidBoss::RAID_LEVEL_1,
-                null
-            )
+                null,
+            ),
         );
         $existingRaidBossCollection->add(
             new RaidBoss(
                 new Pokemon(1, 'Test', 'Test_Form2', PokemonType::none(), PokemonType::none()),
                 true,
                 RaidBoss::RAID_LEVEL_1,
-                null
-            )
+                null,
+            ),
         );
 
         $now = new DateTimeImmutable('now', new DateTimeZone('Europe/Berlin'));
@@ -90,7 +90,7 @@ class RaidBossOverwriteTest extends TestCase
                 ],
             ],
             $existingPokemonCollection,
-            new NoopLogger()
+            new NoopLogger(),
         );
 
         self::assertNotNull($existingRaidBossCollection->getById('Test_Form1'));

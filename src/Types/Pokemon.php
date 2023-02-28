@@ -14,13 +14,9 @@ use function strpos;
 
 final class Pokemon
 {
-    private int $dexNr;
-    private string $id;
-    private string $formId;
-    private PokemonType $typePrimary;
     private PokemonType $typeSecondary;
-    private ?PokemonStats $stats      = null;
-    private ?PokemonForm $pokemonForm = null;
+    private PokemonStats|null $stats      = null;
+    private PokemonForm|null $pokemonForm = null;
     /** @var TemporaryEvolution[] */
     private array $temporaryEvolutions = [];
     /** @var string[] */
@@ -36,20 +32,16 @@ final class Pokemon
     /** @var array<int, PokemonImage> */
     private array $pokemonImages = [];
     /** @var array<int, EvolutionBranch> */
-    private array $evolutions     = [];
-    private ?string $pokemonClass = null;
+    private array $evolutions         = [];
+    private string|null $pokemonClass = null;
 
     public function __construct(
-        int $dexNr,
-        string $id,
-        string $formId,
-        PokemonType $typePrimary,
-        ?PokemonType $typeSecondary
+        private int $dexNr,
+        private string $id,
+        private string $formId,
+        private PokemonType $typePrimary,
+        PokemonType|null $typeSecondary,
     ) {
-        $this->dexNr         = $dexNr;
-        $this->id            = $id;
-        $this->formId        = $formId;
-        $this->typePrimary   = $typePrimary;
         $this->typeSecondary = $typeSecondary ?? PokemonType::none();
     }
 
@@ -59,7 +51,7 @@ final class Pokemon
         $pregMatchResult = preg_match(
             '~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i',
             $pokemonData->templateId ?? '',
-            $pokemonParts
+            $pokemonParts,
         );
         if ($pregMatchResult < 1) {
             throw new Exception('Invalid input data provided', 1608127311711);
@@ -77,7 +69,7 @@ final class Pokemon
             $pokemonSettings->pokemonId,
             $pokemonParts['name'],
             PokemonType::createFromPokemonType($pokemonSettings->type),
-            $secondaryType
+            $secondaryType,
         );
         $pokemon->pokemonClass = $pokemonSettings->pokemonClass ?? null;
 
@@ -112,7 +104,7 @@ final class Pokemon
 
             $tempEvos[] = TemporaryEvolution::createFromGameMaster(
                 $evolutionBranch,
-                $pokemonSettings->pokemonId
+                $pokemonSettings->pokemonId,
             );
         }
 
@@ -144,7 +136,7 @@ final class Pokemon
         return $this->typeSecondary;
     }
 
-    public function getStats(): ?PokemonStats
+    public function getStats(): PokemonStats|null
     {
         return $this->stats;
     }
@@ -213,14 +205,12 @@ final class Pokemon
         unset($this->pokemonRegionForms[$pokemonForm->getId()]);
     }
 
-    public function getPokemonForm(): ?PokemonForm
+    public function getPokemonForm(): PokemonForm|null
     {
         return $this->pokemonForm;
     }
 
-    /**
-     * @return list<EvolutionBranch>
-     */
+    /** @return list<EvolutionBranch> */
     public function getEvolutions(): array
     {
         return $this->evolutions;
@@ -235,7 +225,7 @@ final class Pokemon
          return $this->pokemonForm->getAssetBundleValue();
     }
 
-    public function getAssetBundleSuffix(): ?string
+    public function getAssetBundleSuffix(): string|null
     {
         if ($this->pokemonForm === null) {
             return null;
@@ -259,7 +249,7 @@ final class Pokemon
             ) && strpos($this->getFormId(), '_FEMALE') === false;
     }
 
-    public function getPokemonClass(): ?string
+    public function getPokemonClass(): string|null
     {
         return $this->pokemonClass;
     }
@@ -270,9 +260,9 @@ final class Pokemon
     }
 
     public function getPokemonImage(
-        ?TemporaryEvolution $temporaryEvolution = null,
-        ?string $costume = null
-    ): ?PokemonImage {
+        TemporaryEvolution|null $temporaryEvolution = null,
+        string|null $costume = null,
+    ): PokemonImage|null {
         $pokemonForm       = $this->getPokemonForm();
         $assetBundleId     = null;
         $assetBundleSuffix = null;
@@ -317,9 +307,7 @@ final class Pokemon
         return $this->pokemonImages[0] ?? null;
     }
 
-    /**
-     * @param array<int, PokemonImage> $images
-     */
+    /** @param array<int, PokemonImage> $images */
     public function withAddedImages(array $images): self
     {
         $copy                = clone $this;

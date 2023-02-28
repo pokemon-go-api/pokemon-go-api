@@ -25,7 +25,7 @@ final class RaidBossGraphicRenderer
     public function buildGraphic(
         RaidBossCollection $raidBossCollection,
         TranslationCollection $translationCollection,
-        RaidBossGraphicConfig $raidBossGraphicConfig
+        RaidBossGraphicConfig $raidBossGraphicConfig,
     ): RaidBossGraphic {
         $weatherCalculator = new TypeWeatherCalculator();
         $typeCalculator    = new TypeEffectivenessCalculator();
@@ -38,7 +38,7 @@ final class RaidBossGraphicRenderer
                 $raidBoss,
                 $this->getName($raidBoss, $translationCollection),
                 new TypeEffectivenessCalculator(),
-                new TypeWeatherCalculator()
+                new TypeWeatherCalculator(),
             );
         }
 
@@ -51,7 +51,7 @@ final class RaidBossGraphicRenderer
         return new RaidBossGraphic(
             trim($content ?: ''),
             $svgWidth,
-            $svgHeight
+            $svgHeight,
         );
     }
 
@@ -63,7 +63,7 @@ final class RaidBossGraphicRenderer
             $pokemonName = PokemonNameRenderer::renderPokemonMegaName(
                 $raidBoss->getPokemon(),
                 $temporary->getId(),
-                $translationCollection
+                $translationCollection,
             );
         }
 

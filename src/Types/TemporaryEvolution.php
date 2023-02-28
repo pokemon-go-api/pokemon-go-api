@@ -13,16 +13,12 @@ use function substr;
 
 final class TemporaryEvolution
 {
-    private string $id;
-    private ?int $assetsBundleId = null;
-    private PokemonType $typePrimary;
+    private int|null $assetsBundleId = null;
     private PokemonType $typeSecondary;
-    private ?PokemonStats $stats = null;
+    private PokemonStats|null $stats = null;
 
-    public function __construct(string $id, PokemonType $typePrimary, ?PokemonType $typeSecondary)
+    public function __construct(private string $id, private PokemonType $typePrimary, PokemonType|null $typeSecondary)
     {
-        $this->id            = $id;
-        $this->typePrimary   = $typePrimary;
         $this->typeSecondary = $typeSecondary ?? PokemonType::none();
     }
 
@@ -40,7 +36,7 @@ final class TemporaryEvolution
         $temporaryEvolution = new self(
             $basePokemonId . substr($tempEvoOverride->tempEvoId, 14), // trim TEMP_EVOLUTION
             PokemonType::createFromPokemonType($tempEvoOverride->typeOverride1),
-            $secondaryType
+            $secondaryType,
         );
         if (isset($tempEvoOverride->stats->baseStamina)) {
             assert($tempEvoOverride->stats instanceof stdClass);
@@ -54,7 +50,7 @@ final class TemporaryEvolution
         return $temporaryEvolution;
     }
 
-    public function getStats(): ?PokemonStats
+    public function getStats(): PokemonStats|null
     {
         return $this->stats;
     }
@@ -74,12 +70,12 @@ final class TemporaryEvolution
         return $this->id;
     }
 
-    public function getAssetsBundleId(): ?int
+    public function getAssetsBundleId(): int|null
     {
         return $this->assetsBundleId;
     }
 
-    public function getAssetsAddressableSuffix(): ?string
+    public function getAssetsAddressableSuffix(): string|null
     {
         if (strpos($this->id, '_X') !== false) {
             return 'MEGA_X';

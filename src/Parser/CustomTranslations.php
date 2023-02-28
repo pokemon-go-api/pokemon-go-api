@@ -11,9 +11,7 @@ class CustomTranslations
     public const REGIONFORM_ALOLAN   = 'alola';
     public const REGIONFORM_GALARIAN = 'galar';
 
-    /**
-     * @return array<string, array<string, string>>
-     */
+    /** @return array<string, array<string, string>> */
     public static function load(): array
     {
         return [

@@ -15,25 +15,23 @@ use function str_replace;
 
 class PokemonNameRenderer
 {
-    /**
-     * @return array<string, string|null>
-     */
+    /** @return array<string, string|null> */
     public static function renderPokemonNames(
         Pokemon $pokemon,
-        TranslationCollectionCollection $translationCollectionCollection
+        TranslationCollectionCollection $translationCollectionCollection,
     ): array {
         $names = [];
         foreach ($translationCollectionCollection->getCollections() as $translationCollection) {
             $names[$translationCollection->getLanguageName()] = self::renderPokemonName(
                 $pokemon,
-                $translationCollection
+                $translationCollection,
             );
         }
 
         return $names;
     }
 
-    public static function renderPokemonName(Pokemon $pokemon, TranslationCollection $translationCollection): ?string
+    public static function renderPokemonName(Pokemon $pokemon, TranslationCollection $translationCollection): string
     {
         $pokemonName = $translationCollection->getPokemonName($pokemon->getDexNr());
 
@@ -53,26 +51,26 @@ class PokemonNameRenderer
             if ($pokemonForm->isAlola()) {
                 $pokemonName = sprintf(
                     $translationCollection->getRegionalForm(CustomTranslations::REGIONFORM_ALOLAN) ?: '%s',
-                    $pokemonName
+                    $pokemonName,
                 );
             }
 
             if ($pokemonForm->isGalarian()) {
                 $pokemonName = sprintf(
                     $translationCollection->getRegionalForm(CustomTranslations::REGIONFORM_GALARIAN) ?: '%s',
-                    $pokemonName
+                    $pokemonName,
                 );
             }
         }
 
-        return $pokemonName;
+        return $pokemonName ?? $pokemon->getId();
     }
 
     public static function renderPokemonMegaName(
         Pokemon $pokemon,
         string $megaEvolutionId,
-        TranslationCollection $translationCollection
-    ): ?string {
+        TranslationCollection $translationCollection,
+    ): string|null {
         $megaNamesByPokemonId = [];
         $megaNames            = $translationCollection->getPokemonMegaNames($pokemon->getDexNr());
 

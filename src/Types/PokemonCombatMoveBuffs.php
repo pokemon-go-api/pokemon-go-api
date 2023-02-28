@@ -6,24 +6,13 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 final class PokemonCombatMoveBuffs
 {
-    private int $activationChance;
-    private ?int $attackerAttackStatStageChange;
-    private ?int $attackerDefenseStatStageChange;
-    private ?int $targetAttackStatStageChange;
-    private ?int $targetDefenseStatStageChange;
-
     public function __construct(
-        int $activationChance,
-        ?int $attackerAttackStatStageChange,
-        ?int $attackerDefenseStatStageChange,
-        ?int $targetAttackStatStageChange,
-        ?int $targetDefenseStatStageChange
+        private int $activationChance,
+        private int|null $attackerAttackStatStageChange,
+        private int|null $attackerDefenseStatStageChange,
+        private int|null $targetAttackStatStageChange,
+        private int|null $targetDefenseStatStageChange,
     ) {
-        $this->activationChance               = $activationChance;
-        $this->attackerAttackStatStageChange  = $attackerAttackStatStageChange;
-        $this->attackerDefenseStatStageChange = $attackerDefenseStatStageChange;
-        $this->targetAttackStatStageChange    = $targetAttackStatStageChange;
-        $this->targetDefenseStatStageChange   = $targetDefenseStatStageChange;
     }
 
     public function getActivationChance(): int
@@ -31,22 +20,22 @@ final class PokemonCombatMoveBuffs
         return $this->activationChance;
     }
 
-    public function getAttackerAttackStatStageChange(): ?int
+    public function getAttackerAttackStatStageChange(): int|null
     {
         return $this->attackerAttackStatStageChange;
     }
 
-    public function getAttackerDefenseStatStageChange(): ?int
+    public function getAttackerDefenseStatStageChange(): int|null
     {
         return $this->attackerDefenseStatStageChange;
     }
 
-    public function getTargetAttackStatStageChange(): ?int
+    public function getTargetAttackStatStageChange(): int|null
     {
         return $this->targetAttackStatStageChange;
     }
 
-    public function getTargetDefenseStatStageChange(): ?int
+    public function getTargetDefenseStatStageChange(): int|null
     {
         return $this->targetDefenseStatStageChange;
     }

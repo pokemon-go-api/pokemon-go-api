@@ -19,12 +19,12 @@ final class AttacksCollection
         $this->indexedByName[$pokemonMove->getName()] = &$this->storage['m' . $pokemonMove->getId()];
     }
 
-    public function getById(int $moveId): ?PokemonMove
+    public function getById(int $moveId): PokemonMove|null
     {
         return $this->storage['m' . $moveId] ?? null;
     }
 
-    public function getByName(string $moveName): ?PokemonMove
+    public function getByName(string $moveName): PokemonMove|null
     {
         return $this->indexedByName[$moveName] ?? null;
     }

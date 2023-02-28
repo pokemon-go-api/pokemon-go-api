@@ -19,15 +19,13 @@ use function sprintf;
 
 class PokebattlerParser
 {
-    private CacheLoader $cacheLoader;
     /** @var BattleConfiguration[] */
     private array $battleConfigurations;
 
     public function __construct(
-        CacheLoader $cacheLoader,
-        BattleConfiguration ...$battleConfigurations
+        private CacheLoader $cacheLoader,
+        BattleConfiguration ...$battleConfigurations,
     ) {
-        $this->cacheLoader          = $cacheLoader;
         $this->battleConfigurations = $battleConfigurations;
     }
 
@@ -41,18 +39,18 @@ class PokebattlerParser
                 try {
                     $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
                         $this->buildApiUrl($raidBoss, $battleConfiguration),
-                        $this->buildCacheKey($raidBoss, $battleConfiguration)
+                        $this->buildCacheKey($raidBoss, $battleConfiguration),
                     );
-                } catch (Throwable $throwable) {
+                } catch (Throwable) {
                 }
 
                 if ($pokebattlerResultFile === null) {
                     try {
                         $pokebattlerResultFile = $this->cacheLoader->fetchPokebattlerUrl(
                             $this->buildApiUrl($raidBoss, $battleConfiguration, true),
-                            $this->buildCacheKey($raidBoss, $battleConfiguration)
+                            $this->buildCacheKey($raidBoss, $battleConfiguration),
                         );
-                    } catch (Throwable $throwable) {
+                    } catch (Throwable) {
                     }
                 }
 
@@ -68,7 +66,7 @@ class PokebattlerParser
 
                 $battleResults[] = new BattleResult(
                     $battleConfiguration,
-                    $json->attackers[0]->randomMove->total->estimator
+                    $json->attackers[0]->randomMove->total->estimator,
                 );
             }
 
@@ -86,14 +84,14 @@ class PokebattlerParser
     private function buildApiUrl(
         RaidBoss $raidBoss,
         BattleConfiguration $battleConfiguration,
-        bool $addForm = false
+        bool $addForm = false,
     ): string {
         $url = sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong
             'https://fight.pokebattler.com/raids/defenders/%s/levels/RAID_LEVEL_%s/attackers/levels/%d/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?',
             $this->raidBossName($raidBoss, $addForm),
             $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel(), $raidBoss->getPokemon()->getId()),
-            $battleConfiguration->getPokemonLevel()
+            $battleConfiguration->getPokemonLevel(),
         );
 
         $url .= http_build_query([

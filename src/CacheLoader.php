@@ -17,6 +17,7 @@ use function array_filter;
 use function array_key_exists;
 use function array_keys;
 use function array_values;
+use function assert;
 use function basename;
 use function date;
 use function file_exists;
@@ -45,26 +46,17 @@ class CacheLoader
     //phpcs:ignore Generic.Files.LineLength.TooLong
     private const IMAGES_CONTENT = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Images';
 
-    private string $cacheDir;
     /** @var array<string, mixed> */
     private array $cachedData = [];
-    /** @var array<string, string> */
+    /** @var array<string, mixed> */
     private array $originalCachedData = [];
-    private RemoteFileLoader $remoteFileLoader;
-    private DateTimeImmutable $clock;
-    private LoggerInterface $logger;
 
     public function __construct(
-        RemoteFileLoader $remoteFileLoader,
-        DateTimeImmutable $clock,
-        string $cacheDir,
-        LoggerInterface $logger
+        private RemoteFileLoader $remoteFileLoader,
+        private DateTimeImmutable $clock,
+        private string $cacheDir,
+        private LoggerInterface $logger,
     ) {
-        $this->remoteFileLoader = $remoteFileLoader;
-        $this->clock            = $clock;
-        $this->cacheDir         = $cacheDir;
-        $this->logger           = $logger;
-
         Directory::create($this->cacheDir);
 
         if (! is_file($this->cacheDir . self::CACHE_FILE)) {
@@ -73,9 +65,9 @@ class CacheLoader
 
         try {
             $this->originalCachedData = $this->cachedData = JsonParser::decodeToArray(
-                file_get_contents($this->cacheDir . self::CACHE_FILE) ?: '[]'
+                file_get_contents($this->cacheDir . self::CACHE_FILE) ?: '[]',
             );
-        } catch (JsonException $jsonException) {
+        } catch (JsonException) {
         }
     }
 
@@ -95,11 +87,14 @@ class CacheLoader
 
         $gameMasterLatestResponse = $this->remoteFileLoader->load(self::GAME_MASTER_LATEST_FILE)->getContent() ?: '[]';
 
+        /** @var array<string, stdClass> $gameMasterLatest */
         $gameMasterLatest = JsonParser::decodeToArray($gameMasterLatestResponse);
         $latestJsonFile   = array_values(array_filter(
             $gameMasterLatest,
-            static fn (stdClass $fileMeta): bool => $fileMeta->name === 'latest.json'
-        ))[0] ?? [];
+            static fn (stdClass $fileMeta): bool => $fileMeta->name === 'latest.json',
+        ))[0] ?? new stdClass();
+
+        assert($latestJsonFile instanceof stdClass);
 
         if ($latestJsonFile->sha === ($this->cachedData[$cacheKey] ?? null)) {
             return $cacheFile;
@@ -111,9 +106,9 @@ class CacheLoader
         $this->logger->debug(
             sprintf(
                 '[CacheLoader] Missing cache entry for %s',
-                $latestJsonFile->path
+                $latestJsonFile->path,
             ),
-            ['newHash' => $latestJsonFile->sha]
+            ['newHash' => $latestJsonFile->sha],
         );
 
         return $cacheFile;
@@ -130,10 +125,11 @@ class CacheLoader
 
         $imagesFolderResponse = $this->remoteFileLoader->load(self::IMAGES_CONTENT)->getContent() ?: '[]';
 
+        /** @var array<string, stdClass> $imagesFolderResult */
         $imagesFolderResult  = JsonParser::decodeToArray($imagesFolderResponse);
         $pokemonImagesFolder = array_values(array_filter(
             $imagesFolderResult,
-            static fn (stdClass $meta): bool => $meta->name === 'Pokemon'
+            static fn (stdClass $meta): bool => $meta->name === 'Pokemon',
         ))[0] ?? null;
 
         if ($pokemonImagesFolder === null) {
@@ -167,21 +163,22 @@ class CacheLoader
         $this->logger->debug(
             sprintf(
                 '[CacheLoader] Missing cache entry for %s',
-                $cacheKey
+                $cacheKey,
             ),
-            ['newHash' => $pokemonImagesFolder->sha]
+            ['newHash' => $pokemonImagesFolder->sha],
         );
 
         return $cacheFile;
     }
 
-    /**
-     * @return array<string, array<string, string>>
-     */
+    /** @return array<string, array<string, string>> */
     public function fetchLanguageFiles(): array
     {
         if ($this->wasRunningInThePastMinutes()) {
-            return JsonParser::decodeToFullArray(json_encode($this->cachedData['languageFiles']) ?: '[]');
+            /** @var array<string, array<string, string>> $response */
+            $response = JsonParser::decodeToFullArray(json_encode($this->cachedData['languageFiles']) ?: '[]');
+
+            return $response;
         }
 
         $fileApiResponse = $this->remoteFileLoader->load(self::LATEST_REMOTE_LANGUAGE_FILE)->getContent() ?: '[]';
@@ -198,6 +195,7 @@ class CacheLoader
         $output = [];
         foreach ($allTexts as $textType => $files) {
             foreach ($files as $file) {
+                assert($file instanceof stdClass);
                 if ($file->type !== 'file') {
                     continue;
                 }
@@ -208,9 +206,9 @@ class CacheLoader
                     $this->logger->debug(
                         sprintf(
                             '[CacheLoader] Missing cache entry for %s',
-                            $cacheKey
+                            $cacheKey,
                         ),
-                        ['newHash' => $file->sha]
+                        ['newHash' => $file->sha],
                     );
                     $this->cachedData[$cacheKey] = $file->sha;
                     //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
@@ -239,7 +237,7 @@ class CacheLoader
 
         $lastModified = $this->remoteFileLoader->receiveResponseHeader(
             $raidBossUrl,
-            'last-modified'
+            'last-modified',
         ) ?: date(DATE_ATOM);
 
         if ($cacheEntry === $lastModified) {
@@ -251,9 +249,9 @@ class CacheLoader
         $this->logger->debug(
             sprintf(
                 '[CacheLoader] Missing cache entry for %s',
-                $cacheKey
+                $cacheKey,
             ),
-            ['lastModified' => $lastModified]
+            ['lastModified' => $lastModified],
         );
 
         return $cacheFile;
@@ -269,7 +267,7 @@ class CacheLoader
 
         $this->logger->debug(sprintf(
             '[CacheLoader] Missing cache entry for %s',
-            $cacheKey
+            $cacheKey,
         ));
         $this->remoteFileLoader->load($pokebattlerApiUrl)->saveTo($cacheFile);
         $this->cachedData[$cacheKey] = date(DATE_ATOM);

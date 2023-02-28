@@ -6,6 +6,7 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Types\PokemonMove;
+use stdClass;
 
 use function file_get_contents;
 use function json_decode;
@@ -23,7 +24,8 @@ class PokemonMoveTest extends TestCase
     {
         $gameMaster = file_get_contents(__DIR__ . '/Fixtures/V0021_MOVE_FLAME_WHEEL.json') ?: '{}';
         $data       = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
-        $move       = PokemonMove::createFromGameMaster($data->data);
+        self::assertInstanceOf(stdClass::class, $data);
+        $move = PokemonMove::createFromGameMaster($data->data);
         self::assertSame(21, $move->getId());
         self::assertSame('FLAME_WHEEL', $move->getName());
         self::assertSame('POKEMON_TYPE_FIRE', $move->getPokemonType()->getGameMasterTypeName());
@@ -37,7 +39,8 @@ class PokemonMoveTest extends TestCase
     {
         $gameMaster = file_get_contents(__DIR__ . '/Fixtures/V0253_MOVE_DRAGON_TAIL_FAST.json') ?: '{}';
         $data       = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
-        $move       = PokemonMove::createFromGameMaster($data->data);
+        self::assertInstanceOf(stdClass::class, $data);
+        $move = PokemonMove::createFromGameMaster($data->data);
         self::assertSame(253, $move->getId());
         self::assertSame('DRAGON_TAIL_FAST', $move->getName());
         self::assertSame('POKEMON_TYPE_DRAGON', $move->getPokemonType()->getGameMasterTypeName());

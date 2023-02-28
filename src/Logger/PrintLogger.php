@@ -19,16 +19,14 @@ class PrintLogger implements LoggerInterface
 {
     use LoggerTrait;
 
-    /**
-     * @param array<mixed, mixed> $context
-     */
+    /** @param array<mixed, mixed> $context */
     public function log(mixed $level, mixed $message, array $context = []): void
     {
         printf(
             trim('[%s] %s %s') . PHP_EOL,
             date('H:i:s'),
             $message,
-            count($context) !== 0 ? '-> ' . json_encode($context) : ''
+            count($context) !== 0 ? '-> ' . json_encode($context) : '',
         );
     }
 }

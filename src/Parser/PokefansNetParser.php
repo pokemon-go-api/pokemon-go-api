@@ -17,11 +17,8 @@ use function stripos;
 
 class PokefansNetParser
 {
-    private PokemonCollection $pokemonCollection;
-
-    public function __construct(PokemonCollection $pokemonCollection)
+    public function __construct(private PokemonCollection $pokemonCollection)
     {
-        $this->pokemonCollection = $pokemonCollection;
     }
 
     public function parseRaidBosses(string $htmlPage): RaidBossCollection
@@ -98,7 +95,7 @@ class PokefansNetParser
                 $pokemon,
                 stripos($raidBossHtml, 'ic_shiny.png') !== false,
                 $currentTierLevel,
-                $pokemonTemporaryEvolution
+                $pokemonTemporaryEvolution,
             );
             $raids->add($raidboss);
         }
@@ -106,9 +103,7 @@ class PokefansNetParser
         return $raids;
     }
 
-    /**
-     * @return DOMElement[]
-     */
+    /** @return DOMElement[] */
     private function getElementsByClass(DOMElement $node, string $className): array
     {
         $nodes = [];

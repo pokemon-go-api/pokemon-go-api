@@ -25,7 +25,7 @@ class RemoteFileLoaderTest extends TestCase
             new NoopLogger(),
             new Client([
                 'handler' => new MockHandler([new Response(200, [], 'Dummy')]),
-            ])
+            ]),
         );
 
         $response = $sut->load('foo');
