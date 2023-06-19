@@ -42,10 +42,10 @@ final class PokemonFormCollection
                 continue;
             }
 
-            $formOnlyId = (string)str_replace($templateIdParts['name'] . '_', '', (string)$formData->form);
+            $formOnlyId = (string) str_replace($templateIdParts['name'] . '_', '', (string) $formData->form);
 
             $forms[] = new PokemonForm(
-                (string)$formData->form,
+                (string) $formData->form,
                 $formOnlyId,
                 $formData->assetBundleValue ?? null,
                 $formData->assetBundleSuffix ?? null,
