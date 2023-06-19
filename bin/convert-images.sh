@@ -12,7 +12,7 @@ do
       GRAPHIC_NAME=$(basename $GRAPHIC_FILE)
       WINDOW_SIZE=$(grep -o -E "CONVERT_IMAGE_SIZE=[0-9]+,[0-9]+" $GRAPHIC_FILE | cut -d"=" -f2)
       timeout --signal=SIGKILL 60 \
-        docker run -u${USER_ID} -v ${CONTENT_ROOT}:/app --entrypoint chrome --rm ghcr.io/montferret/chromium \
+        docker run -u${USER_ID} -v ${CONTENT_ROOT}:/app --entrypoint chrome --rm ghcr.io/montferret/chromium:99.0.4844.0 \
           '--user-data-dir=/app/data/tmp/chromeCache' \
           '--disk-cache-dir=/app/data/tmp/chromeCache' \
           '--no-sandbox' \
