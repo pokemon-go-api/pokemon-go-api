@@ -45,7 +45,7 @@ final class PokemonFormCollection
             $formOnlyId = (string)str_replace($templateIdParts['name'] . '_', '', (string)$formData->form);
 
             $forms[] = new PokemonForm(
-                $formData->form,
+                (string)$formData->form,
                 $formOnlyId,
                 $formData->assetBundleValue ?? null,
                 $formData->assetBundleSuffix ?? null,
