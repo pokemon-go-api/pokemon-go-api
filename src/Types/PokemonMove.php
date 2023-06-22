@@ -31,12 +31,12 @@ final class PokemonMove
 
         return new self(
             (int) $moveParts['id'],
-            $moveData->moveSettings->movementId,
+            (string) $moveData->moveSettings->movementId,
             PokemonType::createFromPokemonType($moveData->moveSettings->pokemonType),
             $moveData->moveSettings->power ?? 0.0,
             $moveData->moveSettings->energyDelta ?? 0.0,
             $moveData->moveSettings->durationMs,
-            strpos($moveData->moveSettings->movementId, '_FAST') !== false,
+            strpos((string) $moveData->moveSettings->movementId, '_FAST') !== false,
         );
     }
 
