@@ -150,7 +150,7 @@ final class PokemonRenderer
     ): array {
         $out = [];
         foreach ($moves as $moveName) {
-            $attack = $attacksCollection->getByName($moveName);
+            $attack = $attacksCollection->getByName((string)$moveName);
             if ($attack === null) {
                 continue;
             }
