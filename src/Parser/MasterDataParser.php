@@ -197,9 +197,12 @@ class MasterDataParser
             foreach ($item->data->temporaryEvolutionSettings->temporaryEvolutions as $temporaryEvolution) {
                 $temporaryEvolutionId = $item->data->temporaryEvolutionSettings->pokemonId
                     . substr($temporaryEvolution->temporaryEvolutionId, 14); // trim TEMP_EVOLUTION
-                if (isset($temporaryEvolutions[$temporaryEvolutionId])) {
-                    $temporaryEvolutions[$temporaryEvolutionId]->setAssetBundleId($temporaryEvolution->assetBundleValue);
+                if (!isset($temporaryEvolutions[$temporaryEvolutionId])) {
+                    continue;
                 }
+                $temporaryEvolutions[$temporaryEvolutionId]->setAssetBundleId(
+                    $temporaryEvolution->assetBundleValue
+                );
             }
         }
     }
