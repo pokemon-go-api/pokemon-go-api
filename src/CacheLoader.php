@@ -328,24 +328,6 @@ class CacheLoader
         return ($this->originalCachedData['hashes.json'] ?? null) !== ($this->cachedData['hashes.json'] ?? null);
     }
 
-    public function fetchTasksFromSilphroad(): string
-    {
-        $cacheFile = $this->cacheDir . 'tasks_silphroad.html';
-        if ($this->wasRunningInThePastMinutes()) {
-            return $cacheFile;
-        }
-
-        $cacheKey = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
-
-        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
-        if ($cacheEntry !== $cacheKey) {
-            $this->remoteFileLoader->load('https://thesilphroad.com/research-tasks')->saveTo($cacheFile);
-            $this->cachedData[$cacheFile] = $cacheKey;
-        }
-
-        return $cacheFile;
-    }
-
     private function wasRunningInThePastMinutes(): bool
     {
         if (! file_exists($this->cacheDir . self::CACHE_FILE)) {

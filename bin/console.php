@@ -11,7 +11,6 @@ use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Parser\PokebattlerParser;
 use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
-use PokemonGoApi\PogoAPI\Parser\SilphRoadResearchTaskParser;
 use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoApi\PogoAPI\Renderer\PokemonRenderer;
@@ -149,13 +148,7 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
 }
 
 $logger->debug('Generate Tasks');
-$taskParser    = new SilphRoadResearchTaskParser(
-    $masterData->getPokemonCollection(),
-    $translations->getCollection('English'),
-);
-$tasks         = $taskParser->parseTasks(
-    $cacheLoader->fetchTasksFromSilphroad(),
-);
+$tasks         = [];
 $tasksRenderer = new ResearchTasksRenderer($translations, $masterData->getPokemonCollection());
 
 $files['quests'] = $tasksRenderer->render(...$tasks);
