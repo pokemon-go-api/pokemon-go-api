@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Types\EvolutionBranch;
 
 use function json_decode;
 
-/** @covers \PokemonGoApi\PogoAPI\Types\EvolutionBranch */
+#[CoversClass(EvolutionBranch::class)]
 class EvolutionBranchTest extends TestCase
 {
     public function testCreateSlowking(): void
@@ -24,11 +25,11 @@ class EvolutionBranchTest extends TestCase
         }
         JSON));
 
-        self::assertSame('SLOWKING', $evolutionBranch->getEvolutionId());
-        self::assertSame('SLOWKING_NORMAL', $evolutionBranch->getEvolutionFormId());
-        self::assertSame(50, $evolutionBranch->getCandyCost());
-        self::assertSame('ITEM_KINGS_ROCK', $evolutionBranch->getRequiredItem());
-        self::assertEmpty($evolutionBranch->getQuestIds());
+        $this->assertSame('SLOWKING', $evolutionBranch->getEvolutionId());
+        $this->assertSame('SLOWKING_NORMAL', $evolutionBranch->getEvolutionFormId());
+        $this->assertSame(50, $evolutionBranch->getCandyCost());
+        $this->assertSame('ITEM_KINGS_ROCK', $evolutionBranch->getRequiredItem());
+        $this->assertEmpty($evolutionBranch->getQuestIds());
     }
 
     public function testCreateSlowkingGalarian(): void
@@ -48,10 +49,10 @@ class EvolutionBranchTest extends TestCase
         }
         JSON));
 
-        self::assertSame('SLOWKING', $evolutionBranch->getEvolutionId());
-        self::assertSame('SLOWKING_GALARIAN', $evolutionBranch->getEvolutionFormId());
-        self::assertSame(50, $evolutionBranch->getCandyCost());
-        self::assertNull($evolutionBranch->getRequiredItem());
-        self::assertSame(['SLOWKING_G_EVOLUTION_QUEST'], $evolutionBranch->getQuestIds());
+        $this->assertSame('SLOWKING', $evolutionBranch->getEvolutionId());
+        $this->assertSame('SLOWKING_GALARIAN', $evolutionBranch->getEvolutionFormId());
+        $this->assertSame(50, $evolutionBranch->getCandyCost());
+        $this->assertNull($evolutionBranch->getRequiredItem());
+        $this->assertSame(['SLOWKING_G_EVOLUTION_QUEST'], $evolutionBranch->getQuestIds());
     }
 }

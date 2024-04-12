@@ -15,13 +15,12 @@ use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 use function array_filter;
 use function array_map;
 use function array_reverse;
-use function count;
 use function max;
 use function number_format;
 use function sprintf;
 use function strtoupper;
 
-final class RenderingRaidBoss
+final readonly class RenderingRaidBoss
 {
     public function __construct(
         private RaidBoss $raidBoss,
@@ -94,15 +93,13 @@ final class RenderingRaidBoss
     {
         $battleResults = $this->raidBoss->getBattleResults();
         $difficulty    = [];
-        if (count($battleResults) > 0) {
-            foreach ($battleResults as $battleResult) {
-                $difficulty[$battleResult->getBattleConfiguration()->getName()] = number_format(
-                    max($battleResult->getTotalEstimator(), 0.1),
-                    1,
-                    '.',
-                    '',
-                );
-            }
+        foreach ($battleResults as $battleResult) {
+            $difficulty[$battleResult->getBattleConfiguration()->getName()] = number_format(
+                max($battleResult->getTotalEstimator(), 0.1),
+                1,
+                '.',
+                '',
+            );
         }
 
         return $difficulty;
@@ -134,39 +131,23 @@ final class RenderingRaidBoss
             static fn (PokemonType $pokemonType): string => $pokemonType->getType(),
             array_filter(
                 $this->getTypes(),
-                static fn (PokemonType $pokemonType): bool => $pokemonType->getType() !== PokemonType::NONE
+                static fn (PokemonType $pokemonType): bool => $pokemonType->getType() !== PokemonType::NONE,
             ),
         );
     }
 
     public function getRaidBossEggUrl(): string
     {
-        switch ($this->getLevel()) {
-            case RaidBoss::RAID_LEVEL_ULTRA_BEAST:
-                $levelIcon = 'ultra';
-                break;
-            case RaidBoss::RAID_LEVEL_EX:
-                $levelIcon = 'egg_2';
-                break;
-            case RaidBoss::RAID_LEVEL_MEGA:
-                $levelIcon = 'egg_3';
-                break;
-            case RaidBoss::RAID_LEVEL_LEGENDARY_MEGA:
-                $levelIcon = 'egg_4';
-                break;
-            case RaidBoss::RAID_LEVEL_5:
-                $levelIcon = 'egg_2';
-                break;
-            case RaidBoss::RAID_LEVEL_3:
-                $levelIcon = 'egg_1';
-                break;
-            case RaidBoss::RAID_LEVEL_1:
-                $levelIcon = 'egg_0';
-                break;
-            default:
-                $levelIcon = '';
-                break;
-        }
+        $levelIcon = match ($this->getLevel()) {
+            RaidBoss::RAID_LEVEL_ULTRA_BEAST => 'ultra',
+            RaidBoss::RAID_LEVEL_EX => 'egg_2',
+            RaidBoss::RAID_LEVEL_MEGA => 'egg_3',
+            RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 'egg_4',
+            RaidBoss::RAID_LEVEL_5 => 'egg_2',
+            RaidBoss::RAID_LEVEL_3 => 'egg_1',
+            RaidBoss::RAID_LEVEL_1 => 'egg_0',
+            default => '',
+        };
 
         return sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong

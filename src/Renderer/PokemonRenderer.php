@@ -14,7 +14,7 @@ use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
 use function array_map;
 
-final class PokemonRenderer
+final readonly class PokemonRenderer
 {
     public function __construct(
         private TranslationCollectionCollection $translations,

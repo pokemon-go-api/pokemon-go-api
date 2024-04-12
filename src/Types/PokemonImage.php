@@ -11,16 +11,16 @@ use function count;
 use function preg_match;
 use function sprintf;
 use function str_replace;
-use function strpos;
+use function str_starts_with;
 
-final class PokemonImage
+final readonly class PokemonImage
 {
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s.png';
+    private const string ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s.png';
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_NEW_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets';
+    private const string ASSETS_NEW_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets';
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const ASSETS_BASE_URL_SHINY = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
+    private const string ASSETS_BASE_URL_SHINY = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
 
     private function __construct(
         private string $imageName,
@@ -94,7 +94,7 @@ final class PokemonImage
 
     public function buildUrl(bool $shiny = false): string
     {
-        if (strpos($this->imageName, '/pm') === 0) {
+        if (str_starts_with($this->imageName, '/pm')) {
             if ($shiny) {
                 return self::ASSETS_NEW_BASE_URL . str_replace('.icon', '.s.icon', $this->imageName);
             }

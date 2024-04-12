@@ -7,7 +7,7 @@ namespace PokemonGoApi\PogoAPI\Renderer\Types;
 use function preg_replace;
 use function sprintf;
 
-final class RaidBossGraphic
+final readonly class RaidBossGraphic
 {
     public function __construct(private string $imageContent, private int $imageWidth, private int $imageHeight)
     {

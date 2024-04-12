@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 
-final class ResearchTaskQuest
+final readonly class ResearchTaskQuest
 {
     public function __construct(
         private string $translationKey,

@@ -2,41 +2,39 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Util;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Util;
 
 use Generator;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 use PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator;
 
 use function count;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses \PokemonGoApi\PogoAPI\Types\WeatherBoost
- *
- * @covers \PokemonGoApi\PogoAPI\Util\TypeWeatherCalculator
- */
+#[CoversClass(TypeWeatherCalculator::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(WeatherBoost::class)]
 class TypeWeatherCalculatorTest extends TestCase
 {
-    /**
-     * @param string[] $expectedWeather
-     *
-     * @dataProvider weatherTypesDataProvider
-     */
+    /** @param string[] $expectedWeather */
+    #[DataProvider('weatherTypesDataProvider')]
     public function testGetWeatherBoost(PokemonType $typeA, PokemonType $typeB, array $expectedWeather): void
     {
         $sut               = new TypeWeatherCalculator();
         $calculatedWeather = $sut->getWeatherBoost($typeA, $typeB);
 
-        self::assertCount(count($expectedWeather), $calculatedWeather);
+        $this->assertCount(count($expectedWeather), $calculatedWeather);
         foreach ($expectedWeather as $index => $weather) {
-            self::assertSame($weather, $calculatedWeather[$index]->getWeather());
+            $this->assertSame($weather, $calculatedWeather[$index]->getWeather());
         }
     }
 
     /** @return Generator<array<int, array<int, string>|PokemonType>> */
-    public function weatherTypesDataProvider(): Generator
+    public static function weatherTypesDataProvider(): Generator
     {
         yield [PokemonType::ice(), PokemonType::steel(), ['snow']];
         yield [PokemonType::ice(), PokemonType::none(), ['snow']];

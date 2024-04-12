@@ -20,10 +20,10 @@ use function sprintf;
 class PokebattlerParser
 {
     /** @var BattleConfiguration[] */
-    private array $battleConfigurations;
+    private readonly array $battleConfigurations;
 
     public function __construct(
-        private CacheLoader $cacheLoader,
+        private readonly CacheLoader $cacheLoader,
         BattleConfiguration ...$battleConfigurations,
     ) {
         $this->battleConfigurations = $battleConfigurations;
@@ -90,11 +90,11 @@ class PokebattlerParser
             //phpcs:ignore Generic.Files.LineLength.TooLong
             'https://fight.pokebattler.com/raids/defenders/%s/levels/RAID_LEVEL_%s/attackers/levels/%d/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?',
             $this->raidBossName($raidBoss, $addForm),
-            $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel(), $raidBoss->getPokemon()->getId()),
+            $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel()),
             $battleConfiguration->getPokemonLevel(),
         );
 
-        $url .= http_build_query([
+        return $url . http_build_query([
             'sort'             => 'ESTIMATOR',
             'weatherCondition' => 'NO_WEATHER',
             'dodgeStrategy'    => 'DODGE_REACTION_TIME',
@@ -105,37 +105,20 @@ class PokebattlerParser
             'attackerTypes'    => 'POKEMON_TYPE_ALL',
             'friendLevel'      => 'FRIENDSHIP_LEVEL_' . $battleConfiguration->getFriendShipLevel(),
         ]);
-
-        return $url;
     }
 
-    private function raidLevelConstantToLevelNumber(string $raidLevel, string $pokemonId): string
+    private function raidLevelConstantToLevelNumber(string $raidLevel): string
     {
-        switch ($raidLevel) {
-            case RaidBoss::RAID_LEVEL_1:
-                return '1';
-
-            case RaidBoss::RAID_LEVEL_3:
-                return '3';
-
-            case RaidBoss::RAID_LEVEL_5:
-                return '5';
-
-            case RaidBoss::RAID_LEVEL_EX:
-                return '6';
-
-            case RaidBoss::RAID_LEVEL_MEGA:
-                return 'MEGA';
-
-            case RaidBoss::RAID_LEVEL_LEGENDARY_MEGA:
-                return 'MEGA_5';
-
-            case RaidBoss::RAID_LEVEL_ULTRA_BEAST:
-                return 'ULTRA_BEAST';
-
-            default:
-                throw new Exception('Unknown RaidLevel', 1618743729200);
-        }
+        return match ($raidLevel) {
+            RaidBoss::RAID_LEVEL_1 => '1',
+            RaidBoss::RAID_LEVEL_3 => '3',
+            RaidBoss::RAID_LEVEL_5 => '5',
+            RaidBoss::RAID_LEVEL_EX => '6',
+            RaidBoss::RAID_LEVEL_MEGA => 'MEGA',
+            RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 'MEGA_5',
+            RaidBoss::RAID_LEVEL_ULTRA_BEAST => 'ULTRA_BEAST',
+            default => throw new Exception('Unknown RaidLevel', 1618743729200),
+        };
     }
 
     private function raidBossName(RaidBoss $raidBoss, bool $addForm): string

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
-final class PokemonForm
+final readonly class PokemonForm
 {
     public function __construct(
         private string $id,

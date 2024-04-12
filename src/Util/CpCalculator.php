@@ -8,15 +8,14 @@ use Exception;
 use PokemonGoApi\PogoAPI\Types\PokemonStats;
 
 use function floor;
-use function pow;
 
 class CpCalculator
 {
     // source https://gamepress.gg/pokemongo/cp-multiplier
-    private const CPM_LEVEL_15 = 0.51739395;
-    private const CPM_LEVEL_20 = 0.5974;
-    private const CPM_LEVEL_25 = 0.667934;
-    private const CMP_MAP      = [
+    private const float CPM_LEVEL_15 = 0.51739395;
+    private const float CPM_LEVEL_20 = 0.5974;
+    private const float CPM_LEVEL_25 = 0.667934;
+    private const array CMP_MAP      = [
         self::LEVEL_15 => self::CPM_LEVEL_15,
         self::LEVEL_20 => self::CPM_LEVEL_20,
         self::LEVEL_25 => self::CPM_LEVEL_25,
@@ -84,6 +83,6 @@ class CpCalculator
 
     private static function calculateCP(int $attack, int $defense, int $stamina, float $levelCPM): int
     {
-        return (int) floor($attack * pow($defense, 0.5) * pow($stamina, 0.5) * pow($levelCPM, 2) / 10);
+        return (int) floor($attack * $defense ** 0.5 * $stamina ** 0.5 * $levelCPM ** 2 / 10);
     }
 }

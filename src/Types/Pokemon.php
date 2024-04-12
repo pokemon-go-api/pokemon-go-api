@@ -10,7 +10,8 @@ use stdClass;
 use function assert;
 use function count;
 use function preg_match;
-use function strpos;
+use function str_contains;
+use function str_replace;
 
 final class Pokemon
 {
@@ -246,7 +247,7 @@ final class Pokemon
                 && $formStats->getAttack() === $pokemonStats->getAttack()
                 && $formStats->getDefense() === $pokemonStats->getDefense()
                 && $formStats->getStamina() === $pokemonStats->getStamina()
-            ) && strpos($this->getFormId(), '_FEMALE') === false;
+            ) && ! str_contains($this->getFormId(), '_FEMALE');
     }
 
     public function getPokemonClass(): string|null
@@ -263,9 +264,10 @@ final class Pokemon
         TemporaryEvolution|null $temporaryEvolution = null,
         string|null $costume = null,
     ): PokemonImage|null {
-        $pokemonForm       = $this->getPokemonForm();
-        $assetBundleId     = null;
-        $assetBundleSuffix = null;
+        $pokemonForm            = $this->getPokemonForm();
+        $assetBundleId          = null;
+        $assetBundleSuffix      = $this->getFormId();
+        $assetBundleSuffixFixed = null;
         if ($pokemonForm !== null) {
             $assetBundleId     = $pokemonForm->getAssetBundleValue();
             $assetBundleSuffix = $pokemonForm->getAssetBundleSuffix() ?? $pokemonForm->getFormOnlyId();
@@ -276,9 +278,14 @@ final class Pokemon
             $assetBundleSuffix = $temporaryEvolution->getAssetsAddressableSuffix();
         }
 
+        if ($assetBundleSuffix !== null) {
+            $assetBundleSuffixFixed = str_replace($this->getId() . '_', '', $assetBundleSuffix);
+        }
+
         foreach ($this->pokemonImages as $pokemonImage) {
             if (
-                $pokemonImage->getAssetBundleSuffix() === $assetBundleSuffix
+                ($pokemonImage->getAssetBundleSuffix() === $assetBundleSuffix
+                || $pokemonImage->getAssetBundleSuffix() === $assetBundleSuffixFixed)
                 && $pokemonImage->getCostume() === $costume
             ) {
                 return $pokemonImage;

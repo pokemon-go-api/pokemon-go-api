@@ -29,6 +29,7 @@ use function hash_file;
 use function is_file;
 use function json_encode;
 use function pathinfo;
+use function rtrim;
 use function sleep;
 use function sprintf;
 
@@ -37,14 +38,15 @@ use const PATHINFO_FILENAME;
 
 class CacheLoader
 {
-    private const CACHE_FILE              = 'hashes.json';
-    private const GAME_MASTER_LATEST_FILE = 'https://api.github.com/repos/PokeMiners/game_masters/contents/latest';
+    private const string CACHE_FILE = 'hashes.json';
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const LATEST_REMOTE_LANGUAGE_FILE = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Texts/Latest%20Remote';
+    private const string GAME_MASTER_LATEST_FILE = 'https://api.github.com/repos/PokeMiners/game_masters/contents/latest';
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const LATEST_APK_LANGUAGE_FILE = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Texts/Latest%20APK';
+    private const string LATEST_REMOTE_LANGUAGE_FILE = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Texts/Latest%20Remote';
     //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const IMAGES_CONTENT = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Images';
+    private const string LATEST_APK_LANGUAGE_FILE = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Texts/Latest%20APK';
+    //phpcs:ignore Generic.Files.LineLength.TooLong
+    private const string IMAGES_CONTENT = 'https://api.github.com/repos/PokeMiners/pogo_assets/contents/Images';
 
     /** @var array<string, mixed> */
     private array $cachedData = [];
@@ -52,20 +54,20 @@ class CacheLoader
     private array $originalCachedData = [];
 
     public function __construct(
-        private RemoteFileLoader $remoteFileLoader,
-        private DateTimeImmutable $clock,
-        private string $cacheDir,
-        private LoggerInterface $logger,
+        private readonly RemoteFileLoader $remoteFileLoader,
+        private readonly DateTimeImmutable $clock,
+        private readonly string $cacheDir,
+        private readonly LoggerInterface $logger,
     ) {
-        Directory::create($this->cacheDir);
+        Directory::create($this->getCacheDir());
 
-        if (! is_file($this->cacheDir . self::CACHE_FILE)) {
+        if (! is_file($this->getCacheDir() . self::CACHE_FILE)) {
             return;
         }
 
         try {
             $this->originalCachedData = $this->cachedData = JsonParser::decodeToArray(
-                file_get_contents($this->cacheDir . self::CACHE_FILE) ?: '[]',
+                file_get_contents($this->getCacheDir() . self::CACHE_FILE) ?: '[]',
             );
         } catch (JsonException) {
         }
@@ -73,12 +75,12 @@ class CacheLoader
 
     public function __destruct()
     {
-        file_put_contents($this->cacheDir . self::CACHE_FILE, json_encode($this->cachedData));
+        file_put_contents($this->getCacheDir() . self::CACHE_FILE, json_encode($this->cachedData));
     }
 
     public function fetchGameMasterFile(): string
     {
-        $cacheFile = $this->cacheDir . 'GAME_MASTER_LATEST.json';
+        $cacheFile = $this->getCacheDir() . 'GAME_MASTER_LATEST.json';
         $cacheKey  = 'github/game_master';
 
         if ($this->wasRunningInThePastMinutes()) {
@@ -116,7 +118,7 @@ class CacheLoader
 
     public function fetchPokemonImages(): string
     {
-        $cacheFile = $this->cacheDir . 'pokemon_images.json';
+        $cacheFile = $this->getCacheDir() . 'pokemon_images.json';
         $cacheKey  = 'github/pokemon_images';
 
         if ($this->wasRunningInThePastMinutes()) {
@@ -201,7 +203,7 @@ class CacheLoader
                 }
 
                 $cacheKey  = 'github/text_latest_' . $textType . '_' . $file->name;
-                $cacheFile = $this->cacheDir . 'latest_' . $textType . '_' . $file->name;
+                $cacheFile = $this->getCacheDir() . 'latest_' . $textType . '_' . $file->name;
                 if ($file->sha !== ($this->cachedData[$cacheKey] ?? null)) {
                     $this->logger->debug(
                         sprintf(
@@ -215,7 +217,7 @@ class CacheLoader
                     $this->remoteFileLoader->load($file->download_url)->saveTo($cacheFile);
                 }
 
-                $output[$textType][pathinfo($file->name, PATHINFO_FILENAME)] = $cacheFile;
+                $output[$textType][pathinfo((string) $file->name, PATHINFO_FILENAME)] = $cacheFile;
             }
         }
 
@@ -227,7 +229,7 @@ class CacheLoader
     public function fetchRaidBossesFromLeekduck(): string
     {
         $raidBossUrl = 'https://leekduck.com/boss/';
-        $cacheFile   = $this->cacheDir . 'raidlist_leekduck.html';
+        $cacheFile   = $this->getCacheDir() . 'raidlist_leekduck.html';
         $cacheKey    = 'leekduck_LastFetched';
         $cacheEntry  = $this->cachedData[$cacheKey] ?? null;
 
@@ -259,7 +261,7 @@ class CacheLoader
 
     public function fetchPokebattlerUrl(string $pokebattlerApiUrl, string $cacheKey): string
     {
-        $cacheFile = $this->cacheDir . 'pokebattler_' . $cacheKey . '.json';
+        $cacheFile = $this->getCacheDir() . 'pokebattler_' . $cacheKey . '.json';
         $cacheKey  = 'pokebattler/' . $cacheKey;
         if (array_key_exists($cacheKey, $this->cachedData) && is_file($cacheFile)) {
             return $cacheFile;
@@ -278,7 +280,7 @@ class CacheLoader
 
     public function fetchRaidBossesFromSerebii(): string
     {
-        $cacheFile = $this->cacheDir . 'raidlist_serebii.html';
+        $cacheFile = $this->getCacheDir() . 'raidlist_serebii.html';
         $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
 
         $cacheEntry = $this->cachedData[$cacheFile] ?? null;
@@ -292,7 +294,7 @@ class CacheLoader
 
     public function fetchRaidBossesFromPokefansNet(): string
     {
-        $cacheFile = $this->cacheDir . 'raidlist_pokefansNet.html';
+        $cacheFile = $this->getCacheDir() . 'raidlist_pokefansNet.html';
         $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
 
         $cacheEntry = $this->cachedData[$cacheFile] ?? null;
@@ -330,10 +332,15 @@ class CacheLoader
 
     private function wasRunningInThePastMinutes(): bool
     {
-        if (! file_exists($this->cacheDir . self::CACHE_FILE)) {
+        if (! file_exists($this->getCacheDir() . self::CACHE_FILE)) {
             return false;
         }
 
-        return abs($this->clock->getTimestamp() - filemtime($this->cacheDir . self::CACHE_FILE)) < 300;
+        return abs($this->clock->getTimestamp() - filemtime($this->getCacheDir() . self::CACHE_FILE)) < 300;
+    }
+
+    private function getCacheDir(): string
+    {
+        return rtrim($this->cacheDir, '/') . '/';
     }
 }

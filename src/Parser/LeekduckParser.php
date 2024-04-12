@@ -28,7 +28,7 @@ use function usort;
 
 class LeekduckParser
 {
-    public function __construct(private PokemonCollection $pokemonCollection)
+    public function __construct(private readonly PokemonCollection $pokemonCollection)
     {
     }
 

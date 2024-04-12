@@ -72,7 +72,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm888.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm888.fHERO.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -127,7 +127,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_487_11.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm487.fALTERED.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -195,7 +195,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_422_11.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm422.fWEST_SEA.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>

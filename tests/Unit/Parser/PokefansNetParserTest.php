@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Parser\PokefansNetParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
@@ -13,33 +16,34 @@ use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function array_map;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Collections\RaidBossCollection
- * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses \PokemonGoApi\PogoAPI\Types\RaidBoss
- *
- * @covers \PokemonGoApi\PogoAPI\Parser\PokefansNetParser
- */
+#[CoversClass(PokefansNetParser::class)]
+#[UsesClass(RaidBossCollection::class)]
+#[UsesClass(Pokemon::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(RaidBoss::class)]
 class PokefansNetParserTest extends TestCase
 {
     public function testParse(): void
     {
         $collection = $this->createMock(PokemonCollection::class);
-        $collection->method('getByDexId')->willReturnCallback(static function (int $dexNr) {
-            return new Pokemon($dexNr, 'id_' . $dexNr, 'id_' . $dexNr, PokemonType::none(), PokemonType::none());
-        });
+        $collection->method('getByDexId')->willReturnCallback(
+            static fn (int $dexNr) => new Pokemon(
+                $dexNr,
+                'id_' . $dexNr,
+                'id_' . $dexNr,
+                PokemonType::none(),
+                PokemonType::none(),
+            ),
+        );
 
         $sut          = new PokefansNetParser($collection);
         $parsedBosses = $sut->parseRaidBosses(__DIR__ . '/Fixtures/pokefansNet_raids.html')->toArray();
         $simpleResult = array_map(
-            static function (RaidBoss $raidBoss): array {
-                return [
-                    'dexNr' => $raidBoss->getPokemon()->getDexNr(),
-                    'level' => $raidBoss->getRaidLevel(),
-                    'shiny' => $raidBoss->isShinyAvailable(),
-                ];
-            },
+            static fn (RaidBoss $raidBoss): array => [
+                'dexNr' => $raidBoss->getPokemon()->getDexNr(),
+                'level' => $raidBoss->getRaidLevel(),
+                'shiny' => $raidBoss->isShinyAvailable(),
+            ],
             $parsedBosses,
         );
 
@@ -63,6 +67,6 @@ class PokefansNetParserTest extends TestCase
             ['dexNr' => 599, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
         ];
 
-        self::assertSame($expected, $simpleResult);
+        $this->assertSame($expected, $simpleResult);
     }
 }

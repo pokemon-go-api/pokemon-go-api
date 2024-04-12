@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
-final class BattleResult
+final readonly class BattleResult
 {
     public function __construct(private BattleConfiguration $battleConfiguration, private float $totalEstimator)
     {

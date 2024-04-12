@@ -14,9 +14,9 @@ use function sprintf;
 
 class RemoteFileLoader
 {
-    private ClientInterface $client;
+    private readonly ClientInterface $client;
 
-    public function __construct(private LoggerInterface $logger, ClientInterface|null $client = null)
+    public function __construct(private readonly LoggerInterface $logger, ClientInterface|null $client = null)
     {
         $this->client = $client ?? new Client();
     }

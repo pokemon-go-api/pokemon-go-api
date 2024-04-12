@@ -2,44 +2,49 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Parser;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
+use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
+use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Types\PokemonCombatMoveBuffs;
+use PokemonGoApi\PogoAPI\Types\PokemonForm;
+use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
 use PokemonGoApi\PogoAPI\Types\PokemonMove;
 use PokemonGoApi\PogoAPI\Types\PokemonStats;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
+use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
 
 use function array_map;
 use function assert;
 
-/**
- * @uses   \PokemonGoApi\PogoAPI\Collections\AttacksCollection
- * @uses   \PokemonGoApi\PogoAPI\Collections\PokemonCollection
- * @uses   \PokemonGoApi\PogoAPI\Types\PokemonCombatMove
- * @uses   \PokemonGoApi\PogoAPI\Types\PokemonMove
- * @uses   \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses   \PokemonGoApi\PogoAPI\Types\Pokemon
- * @uses   \PokemonGoApi\PogoAPI\Types\PokemonStats
- * @uses   \PokemonGoApi\PogoAPI\Types\PokemonCombatMoveBuffs
- * @uses   \PokemonGoLingen\PogoAPI\IO\JsonParser
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonForm
- * @uses   \PokemonGoLingen\PogoAPI\Types\PokemonFormCollection
- * @uses   \PokemonGoLingen\PogoAPI\Types\TemporaryEvolution
- *
- * @covers \PokemonGoApi\PogoAPI\Parser\MasterDataParser
- */
+#[CoversClass(MasterDataParser::class)]
+#[UsesClass(AttacksCollection::class)]
+#[UsesClass(PokemonCollection::class)]
+#[UsesClass(PokemonCombatMove::class)]
+#[UsesClass(PokemonMove::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(Pokemon::class)]
+#[UsesClass(PokemonStats::class)]
+#[UsesClass(PokemonCombatMoveBuffs::class)]
+#[UsesClass(JsonParser::class)]
+#[UsesClass(PokemonForm::class)]
+#[UsesClass(PokemonFormCollection::class)]
+#[UsesClass(TemporaryEvolution::class)]
 class MasterDataParserTest extends TestCase
 {
     public function testConstruct(): void
     {
         $sut = new MasterDataParser(new PokemonAssetsCollection());
-        self::assertEmpty($sut->getAttacksCollection()->toArray());
-        self::assertEmpty($sut->getPokemonCollection()->toArray());
+        $this->assertEmpty($sut->getAttacksCollection()->toArray());
+        $this->assertEmpty($sut->getPokemonCollection()->toArray());
     }
 
     public function testParseFileWithPokemons(): void
@@ -48,7 +53,7 @@ class MasterDataParserTest extends TestCase
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $pokemons = $sut->getPokemonCollection()->toArray();
-        self::assertArrayHasKey('MEOWTH', $pokemons);
+        $this->assertArrayHasKey('MEOWTH', $pokemons);
         $meowth        = $pokemons['MEOWTH'];
         $pokemonMeowth = new Pokemon(
             52,
@@ -67,17 +72,17 @@ class MasterDataParserTest extends TestCase
             $meowth->getPokemonRegionForms(),
         );
 
-        self::assertSame(61, $meowth->getPokemonRegionForms()['MEOWTH_ALOLA']->getAssetsBundleId());
-        self::assertSame(31, $meowth->getPokemonRegionForms()['MEOWTH_GALARIAN']->getAssetsBundleId());
+        $this->assertSame(61, $meowth->getPokemonRegionForms()['MEOWTH_ALOLA']->getAssetsBundleId());
+        $this->assertSame(31, $meowth->getPokemonRegionForms()['MEOWTH_GALARIAN']->getAssetsBundleId());
 
-        self::assertEquals([
+        $this->assertSame([
             'MEOWTH_ALOLA'    => 'MEOWTH_ALOLA',
             'MEOWTH_GALARIAN' => 'MEOWTH_GALARIAN',
         ], $forms);
-        self::assertEquals(new PokemonStats(120, 92, 78), $meowth->getStats());
-        self::assertEquals(['SCRATCH_FAST', 'BITE_FAST'], $meowth->getQuickMoveNames());
-        self::assertEquals(['NIGHT_SLASH', 'DARK_PULSE', 'FOUL_PLAY'], $meowth->getCinematicMoveNames());
-        self::assertEquals(['BODY_SLAM'], $meowth->getEliteCinematicMoveNames());
+        $this->assertEquals(new PokemonStats(120, 92, 78), $meowth->getStats());
+        $this->assertSame(['SCRATCH_FAST', 'BITE_FAST'], $meowth->getQuickMoveNames());
+        $this->assertSame(['NIGHT_SLASH', 'DARK_PULSE', 'FOUL_PLAY'], $meowth->getCinematicMoveNames());
+        $this->assertSame(['BODY_SLAM'], $meowth->getEliteCinematicMoveNames());
     }
 
     public function testParseFileWithPokemonMoves(): void
@@ -86,7 +91,7 @@ class MasterDataParserTest extends TestCase
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $moves = $sut->getAttacksCollection()->toArray();
-        self::assertCount(2, $moves);
+        $this->assertCount(2, $moves);
         $move49 = new PokemonMove(
             49,
             'BUG_BUZZ',
@@ -108,7 +113,7 @@ class MasterDataParserTest extends TestCase
                 -1,
             ),
         ));
-        self::assertEquals($move49, $moves['m49']);
+        $this->assertEquals($move49, $moves['m49']);
 
         $move203 = new PokemonMove(
             203,
@@ -120,7 +125,7 @@ class MasterDataParserTest extends TestCase
             true,
         );
         $move203->setCombatMove(new PokemonCombatMove(5.0, 7.0, 1, null));
-        self::assertEquals($move203, $moves['m203']);
+        $this->assertEquals($move203, $moves['m203']);
     }
 
     public function testParseFileWithTempoarayEvolutions(): void
@@ -129,13 +134,13 @@ class MasterDataParserTest extends TestCase
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $collection = $sut->getPokemonCollection()->toArray();
-        self::assertArrayHasKey('CHARIZARD', $collection);
+        $this->assertArrayHasKey('CHARIZARD', $collection);
         $charizard = $collection['CHARIZARD'];
         assert($charizard instanceof Pokemon);
-        self::assertCount(2, $charizard->getTemporaryEvolutions());
-        self::assertSame('CHARIZARD_MEGA_X', $charizard->getTemporaryEvolutions()[0]->getId());
-        self::assertSame(51, $charizard->getTemporaryEvolutions()[0]->getAssetsBundleId());
-        self::assertSame('CHARIZARD_MEGA_Y', $charizard->getTemporaryEvolutions()[1]->getId());
-        self::assertSame(52, $charizard->getTemporaryEvolutions()[1]->getAssetsBundleId());
+        $this->assertCount(2, $charizard->getTemporaryEvolutions());
+        $this->assertSame('CHARIZARD_MEGA_X', $charizard->getTemporaryEvolutions()[0]->getId());
+        $this->assertSame(51, $charizard->getTemporaryEvolutions()[0]->getAssetsBundleId());
+        $this->assertSame('CHARIZARD_MEGA_Y', $charizard->getTemporaryEvolutions()[1]->getId());
+        $this->assertSame(52, $charizard->getTemporaryEvolutions()[1]->getAssetsBundleId());
     }
 }

@@ -2,30 +2,30 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\RaidOverwrite;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\RaidOverwrite;
 
 use DateTimeImmutable;
 use DateTimeZone;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Logger\NoopLogger;
 use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
+use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwriteStruct;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Collections\PokemonCollection
- * @uses \PokemonGoApi\PogoAPI\Collections\RaidBossCollection
- * @uses \PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwriteStruct
- * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
- * @uses \PokemonGoApi\PogoAPI\Types\RaidBoss
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
- *
- * @covers \PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite
- */
+#[CoversClass(RaidBossOverwrite::class)]
+#[UsesClass(PokemonCollection::class)]
+#[UsesClass(RaidBossCollection::class)]
+#[UsesClass(RaidBossOverwriteStruct::class)]
+#[UsesClass(Pokemon::class)]
+#[UsesClass(RaidBoss::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(NoopLogger::class)]
 class RaidBossOverwriteTest extends TestCase
 {
     public function testOverwrite(): void
@@ -93,14 +93,14 @@ class RaidBossOverwriteTest extends TestCase
             new NoopLogger(),
         );
 
-        self::assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
-        self::assertNotNull($existingRaidBossCollection->getById('Test_Form2'));
-        self::assertNull($existingRaidBossCollection->getById('Test_Form3'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form2'));
+        $this->assertNull($existingRaidBossCollection->getById('Test_Form3'));
 
         $sut->overwrite($existingRaidBossCollection);
 
-        self::assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
-        self::assertNull($existingRaidBossCollection->getById('Test_Form2'));
-        self::assertNotNull($existingRaidBossCollection->getById('Test_Form3'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
+        $this->assertNull($existingRaidBossCollection->getById('Test_Form2'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form3'));
     }
 }

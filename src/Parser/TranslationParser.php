@@ -11,8 +11,9 @@ use function feof;
 use function fgets;
 use function file_exists;
 use function fopen;
+use function str_contains;
+use function str_starts_with;
 use function strlen;
-use function strpos;
 use function strtoupper;
 use function substr;
 use function trim;
@@ -129,7 +130,7 @@ class TranslationParser
         }
 
         foreach ($customTranslations as $customTranslation => $translation) {
-            if (strpos($customTranslation, CustomTranslations::REGIONAL_PREFIX) !== false) {
+            if (str_contains($customTranslation, CustomTranslations::REGIONAL_PREFIX)) {
                 $regionalForm = substr($customTranslation, 14);
                 $collection->addRegionalForm($regionalForm, $translation);
                 continue;
@@ -143,7 +144,7 @@ class TranslationParser
 
     private function lineStartsWith(string $line, string $startsWith): bool
     {
-        return strpos($line, $startsWith) === 0;
+        return str_starts_with($line, $startsWith);
     }
 
     private function lineEndsWith(string $line, string $endsWith): bool

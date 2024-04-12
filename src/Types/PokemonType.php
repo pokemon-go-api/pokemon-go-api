@@ -5,35 +5,37 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Types;
 
 use Exception;
+use Override;
+use Stringable;
 
 use function method_exists;
 use function str_replace;
 use function strtolower;
 use function strtoupper;
 
-final class PokemonType
+final readonly class PokemonType implements Stringable
 {
-    public const NONE      = 'None';
-    private const NORMAL   = 'Normal';
-    private const FIGHTING = 'Fighting';
-    private const FLYING   = 'Flying';
-    private const POISON   = 'Poison';
-    private const GROUND   = 'Ground';
-    private const ROCK     = 'Rock';
-    private const BUG      = 'Bug';
-    private const GHOST    = 'Ghost';
-    private const STEEL    = 'Steel';
-    private const FIRE     = 'Fire';
-    private const WATER    = 'Water';
-    private const GRASS    = 'Grass';
-    private const ELECTRIC = 'Electric';
-    private const PSYCHIC  = 'Psychic';
-    private const ICE      = 'Ice';
-    private const DRAGON   = 'Dragon';
-    private const DARK     = 'Dark';
-    private const FAIRY    = 'Fairy';
+    public const string NONE      = 'None';
+    private const string NORMAL   = 'Normal';
+    private const string FIGHTING = 'Fighting';
+    private const string FLYING   = 'Flying';
+    private const string POISON   = 'Poison';
+    private const string GROUND   = 'Ground';
+    private const string ROCK     = 'Rock';
+    private const string BUG      = 'Bug';
+    private const string GHOST    = 'Ghost';
+    private const string STEEL    = 'Steel';
+    private const string FIRE     = 'Fire';
+    private const string WATER    = 'Water';
+    private const string GRASS    = 'Grass';
+    private const string ELECTRIC = 'Electric';
+    private const string PSYCHIC  = 'Psychic';
+    private const string ICE      = 'Ice';
+    private const string DRAGON   = 'Dragon';
+    private const string DARK     = 'Dark';
+    private const string FAIRY    = 'Fairy';
 
-    public const ALL_TYPES = [
+    public const array ALL_TYPES = [
         self::NORMAL,
         self::FIGHTING,
         self::FLYING,
@@ -95,6 +97,7 @@ final class PokemonType
         return strtoupper('POKEMON_TYPE_' . $this->type);
     }
 
+    #[Override]
     public function __toString(): string
     {
         return $this->type;

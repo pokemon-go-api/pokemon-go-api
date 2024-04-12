@@ -34,7 +34,7 @@ final class TranslationCollection
     /** @var array<string, string> */
     private array $items = [];
 
-    public function __construct(private string $languageName)
+    public function __construct(private readonly string $languageName)
     {
     }
 
