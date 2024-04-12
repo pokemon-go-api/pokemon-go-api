@@ -11,16 +11,16 @@ use function strtolower;
 
 final class WeatherBoost
 {
-    public const SUNNY         = 'sunny';
-    public const RAIN          = 'rain';
-    public const PARTLY_CLOUDY = 'partlyCloudy';
-    public const CLOUDY        = 'cloudy';
-    public const WINDY         = 'windy';
-    public const SNOW          = 'snow';
-    public const FOG           = 'fog';
-    public const EXTREME       = 'extreme';
+    public const string SUNNY         = 'sunny';
+    public const string RAIN          = 'rain';
+    public const string PARTLY_CLOUDY = 'partlyCloudy';
+    public const string CLOUDY        = 'cloudy';
+    public const string WINDY         = 'windy';
+    public const string SNOW          = 'snow';
+    public const string FOG           = 'fog';
+    public const string EXTREME       = 'extreme';
 
-    public const ALL_WEATHER_TYPES = [
+    public const array ALL_WEATHER_TYPES = [
         self::SUNNY,
         self::RAIN,
         self::PARTLY_CLOUDY,
@@ -32,9 +32,9 @@ final class WeatherBoost
     ];
 
     /** @var PokemonType[] */
-    private array $boostedTypes;
+    private readonly array $boostedTypes;
 
-    public function __construct(private string $weather, PokemonType ...$boostedTypes)
+    public function __construct(private readonly string $weather, PokemonType ...$boostedTypes)
     {
         $this->boostedTypes = $boostedTypes;
     }
@@ -65,19 +65,12 @@ final class WeatherBoost
 
     public function getWeatherTranslationKey(): string
     {
-        switch ($this->weather) {
-            case self::PARTLY_CLOUDY:
-                return 'partly_cloudy';
-
-            case self::CLOUDY:
-                return 'overcast';
-
-            case self::RAIN:
-                return 'rainy';
-
-            default:
-                return $this->weather;
-        }
+        return match ($this->weather) {
+            self::PARTLY_CLOUDY => 'partly_cloudy',
+            self::CLOUDY => 'overcast',
+            self::RAIN => 'rainy',
+            default => $this->weather,
+        };
     }
 
     /** @return array<int, PokemonType> */

@@ -8,23 +8,23 @@ use function array_values;
 
 final class RaidBoss
 {
-    public const RAID_LEVEL_1              = 'lvl1';
-    public const RAID_LEVEL_3              = 'lvl3';
-    public const RAID_LEVEL_5              = 'lvl5';
-    public const RAID_LEVEL_EX             = 'ex';
-    public const RAID_LEVEL_MEGA           = 'mega';
-    public const RAID_LEVEL_LEGENDARY_MEGA = 'legendary_mega';
-    public const RAID_LEVEL_ULTRA_BEAST    = 'ultra_beast';
+    public const string RAID_LEVEL_1              = 'lvl1';
+    public const string RAID_LEVEL_3              = 'lvl3';
+    public const string RAID_LEVEL_5              = 'lvl5';
+    public const string RAID_LEVEL_EX             = 'ex';
+    public const string RAID_LEVEL_MEGA           = 'mega';
+    public const string RAID_LEVEL_LEGENDARY_MEGA = 'legendary_mega';
+    public const string RAID_LEVEL_ULTRA_BEAST    = 'ultra_beast';
 
     /** @var array<int, BattleResult> */
     private array $battleResults = [];
 
     public function __construct(
-        private Pokemon $pokemon,
-        private bool $shinyAvailable,
-        private string $raidLevel,
-        private TemporaryEvolution|null $temporaryEvolution,
-        private string|null $costumeId = null,
+        private readonly Pokemon $pokemon,
+        private readonly bool $shinyAvailable,
+        private readonly string $raidLevel,
+        private readonly TemporaryEvolution|null $temporaryEvolution,
+        private readonly string|null $costumeId = null,
     ) {
     }
 

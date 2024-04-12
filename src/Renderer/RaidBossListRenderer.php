@@ -47,7 +47,7 @@ final class RaidBossListRenderer
                 static fn (PokemonType $pokemonType): string => $pokemonType->getType(),
                 array_filter(
                     $raidBossTypes,
-                    static fn (PokemonType $pokemonType): bool => $pokemonType->getType() !== PokemonType::NONE
+                    static fn (PokemonType $pokemonType): bool => $pokemonType->getType() !== PokemonType::NONE,
                 ),
             );
 

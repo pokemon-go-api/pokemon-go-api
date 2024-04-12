@@ -2,11 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI;
+namespace Tests\Unit\PokemonGoApi\PogoAPI;
 
 use DateTimeImmutable;
+use Override;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\CacheLoader;
+use PokemonGoApi\PogoAPI\IO\Directory;
 use PokemonGoApi\PogoAPI\IO\File;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoApi\PogoAPI\Logger\NoopLogger;
@@ -21,17 +25,15 @@ use function unlink;
 
 use const DATE_ATOM;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\IO\File
- * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
- * @uses \PokemonGoLingen\PogoAPI\IO\Directory
- *
- * @covers \PokemonGoApi\PogoAPI\CacheLoader
- */
+#[CoversClass(CacheLoader::class)]
+#[UsesClass(File::class)]
+#[UsesClass(NoopLogger::class)]
+#[UsesClass(Directory::class)]
 class CacheLoaderTest extends TestCase
 {
     private string $cacheDir;
 
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();
@@ -39,6 +41,7 @@ class CacheLoaderTest extends TestCase
         $this->cacheDir = sprintf('%s/%s/', sys_get_temp_dir(), 'CacheLoaderTest');
     }
 
+    #[Override]
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -47,7 +50,7 @@ class CacheLoaderTest extends TestCase
             fn (string $file): bool => @unlink($this->cacheDir . $file),
             array_filter(
                 scandir($this->cacheDir) ?: [],
-                fn (string $file): bool => is_file($this->cacheDir . $file)
+                fn (string $file): bool => is_file($this->cacheDir . $file),
             ),
         );
     }
@@ -62,9 +65,9 @@ class CacheLoaderTest extends TestCase
             $this->cacheDir,
             new NoopLogger(),
         );
-        self::assertFileDoesNotExist($cacheFile);
+        $this->assertFileDoesNotExist($cacheFile);
         unset($sut);
-        self::assertFileExists($cacheFile);
+        $this->assertFileExists($cacheFile);
     }
 
     public function testFetchRaidBosses(): void

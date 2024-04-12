@@ -6,31 +6,29 @@ namespace PokemonGoApi\PogoAPI\Renderer\Types;
 
 use function count;
 use function explode;
+use function str_contains;
+use function str_starts_with;
 use function strlen;
-use function strpos;
 
 class SplitBossName
 {
-    private string $fullName;
-    private string $firstLine;
-    private string|null $secondLine;
-    private bool $isFirstLineSmall;
+    private readonly string $firstLine;
+    private readonly string|null $secondLine;
+    private readonly bool $isFirstLineSmall;
 
-    public function __construct(string $name, int $splitByChars = 10)
+    public function __construct(private readonly string $fullName, int $splitByChars = 10)
     {
-        $this->fullName = $name;
-
-        $explodedName = [$name];
-        if (strlen($name) >= $splitByChars) {
-            if (strpos($name, '-') !== false) {
-                $explodedName = explode('-', $name, 2);
-            } elseif (strpos($name, ' ') !== false) {
-                $explodedName = explode(' ', $name, 2);
+        $explodedName = [$this->fullName];
+        if (strlen($this->fullName) >= $splitByChars) {
+            if (str_contains($this->fullName, '-')) {
+                $explodedName = explode('-', $this->fullName, 2);
+            } elseif (str_contains($this->fullName, ' ')) {
+                $explodedName = explode(' ', $this->fullName, 2);
             }
         }
 
         $firstLineSmall = true;
-        if (count($explodedName) === 2 && strpos($explodedName[1], '(') === 0) {
+        if (count($explodedName) === 2 && str_starts_with($explodedName[1], '(')) {
             $firstLineSmall = false;
         }
 

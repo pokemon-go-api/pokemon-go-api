@@ -2,19 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
- *
- * @covers \PokemonGoApi\PogoAPI\Collections\PokemonCollection
- */
+#[CoversClass(PokemonCollection::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(Pokemon::class)]
 class PokemonCollectionTest extends TestCase
 {
     public function testCollection(): void
@@ -36,23 +35,23 @@ class PokemonCollectionTest extends TestCase
         $collection        = new PokemonCollection();
         $collection->add($pokemon);
 
-        self::assertNull($collection->getByFormId('TESTPOKEMON_FORM'));
+        $this->assertNull($collection->getByFormId('TESTPOKEMON_FORM'));
 
         $pokemon = $pokemon->withAddedPokemonRegionForm($pokemonRegionForm);
         $collection->add($pokemon);
-        self::assertSame($pokemonRegionForm, $collection->getByFormId('TESTPOKEMON_FORM'));
-        self::assertSame($pokemon, $collection->getByFormId('TESTPOKEMON'));
+        $this->assertSame($pokemonRegionForm, $collection->getByFormId('TESTPOKEMON_FORM'));
+        $this->assertSame($pokemon, $collection->getByFormId('TESTPOKEMON'));
 
-        self::assertCount(1, $collection->toArray());
+        $this->assertCount(1, $collection->toArray());
         // assert the same pokemon can't be added twice
         $collection->add($pokemon);
-        self::assertCount(1, $collection->toArray());
+        $this->assertCount(1, $collection->toArray());
 
-        self::assertSame($pokemon, $collection->get('TESTPOKEMON'));
-        self::assertSame($pokemon, $collection->getByDexId(100));
-        self::assertTrue($collection->has($pokemon));
+        $this->assertSame($pokemon, $collection->get('TESTPOKEMON'));
+        $this->assertSame($pokemon, $collection->getByDexId(100));
+        $this->assertTrue($collection->has($pokemon));
 
-        self::assertNull($collection->get('NOT_EXISTINGS'));
-        self::assertNull($collection->getByDexId(0));
+        $this->assertNull($collection->get('NOT_EXISTINGS'));
+        $this->assertNull($collection->getByDexId(0));
     }
 }

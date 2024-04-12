@@ -7,10 +7,10 @@ namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 final class ResearchTask
 {
     /** @var ResearchReward[] */
-    private array $rewards;
+    private readonly array $rewards;
 
     public function __construct(
-        private ResearchTaskQuest $researchTaskQuest,
+        private readonly ResearchTaskQuest $researchTaskQuest,
         ResearchReward ...$rewards,
     ) {
         $this->rewards = $rewards;

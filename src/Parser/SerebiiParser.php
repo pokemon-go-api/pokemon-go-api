@@ -19,7 +19,7 @@ use function strtoupper;
 
 class SerebiiParser
 {
-    public function __construct(private PokemonCollection $pokemonCollection)
+    public function __construct(private readonly PokemonCollection $pokemonCollection)
     {
     }
 
@@ -52,23 +52,13 @@ class SerebiiParser
                 $levelText = $previousSibling->textContent;
             }
 
-            switch ($levelText) {
-                case '&star; List':
-                    $level = RaidBoss::RAID_LEVEL_1;
-                    break;
-                case '&star;&star;&star; List':
-                    $level = RaidBoss::RAID_LEVEL_3;
-                    break;
-                case '&star;&star;&star;&star;&star; List':
-                    $level = RaidBoss::RAID_LEVEL_5;
-                    break;
-                case 'Mega Raid List':
-                    $level = RaidBoss::RAID_LEVEL_MEGA;
-                    break;
-                default:
-                    $level = null;
-                    break;
-            }
+            $level = match ($levelText) {
+                '&star; List' => RaidBoss::RAID_LEVEL_1,
+                '&star;&star;&star; List' => RaidBoss::RAID_LEVEL_3,
+                '&star;&star;&star;&star;&star; List' => RaidBoss::RAID_LEVEL_5,
+                'Mega Raid List' => RaidBoss::RAID_LEVEL_MEGA,
+                default => null,
+            };
 
             if ($level === null) {
                 continue;

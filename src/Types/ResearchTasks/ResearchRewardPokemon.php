@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types\ResearchTasks;
 
-final class ResearchRewardPokemon implements ResearchReward
+final readonly class ResearchRewardPokemon implements ResearchReward
 {
     public function __construct(
         private string $pokemonFormId,

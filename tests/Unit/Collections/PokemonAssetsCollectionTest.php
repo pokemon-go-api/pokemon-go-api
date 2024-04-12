@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
+use PokemonGoApi\PogoAPI\Types\PokemonImage;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonImage
- *
- * @covers \PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection
- */
+#[CoversClass(PokemonAssetsCollection::class)]
+#[UsesClass(PokemonImage::class)]
 class PokemonAssetsCollectionTest extends TestCase
 {
     public function testCollection(): void
@@ -34,6 +34,6 @@ class PokemonAssetsCollectionTest extends TestCase
         // - pokemon_icon_003_00
         // - pokemon_icon_003_01
         // - pokemon_icon_003_51
-        self::assertCount(5, $sut->getImages(3));
+        $this->assertCount(5, $sut->getImages(3));
     }
 }

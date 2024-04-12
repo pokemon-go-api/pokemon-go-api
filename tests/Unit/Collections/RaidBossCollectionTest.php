@@ -2,21 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses \PokemonGoApi\PogoAPI\Types\Pokemon
- * @uses \PokemonGoApi\PogoAPI\Types\RaidBoss
- *
- * @covers \PokemonGoApi\PogoAPI\Collections\RaidBossCollection
- */
+#[CoversClass(RaidBossCollection::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(Pokemon::class)]
+#[UsesClass(RaidBoss::class)]
 class RaidBossCollectionTest extends TestCase
 {
     public function testCollection(): void
@@ -35,18 +34,18 @@ class RaidBossCollectionTest extends TestCase
         );
         $collection = new RaidBossCollection();
         $collection->add($raidBoss);
-        self::assertCount(1, $collection->toArray());
+        $this->assertCount(1, $collection->toArray());
         // assert the same Boss can't be added twice
         $collection->add($raidBoss);
-        self::assertCount(1, $collection->toArray());
+        $this->assertCount(1, $collection->toArray());
 
-        self::assertSame($raidBoss, $collection->getById('TESTPOKEMON_MEGA'));
-        self::assertTrue($collection->has($raidBoss));
+        $this->assertSame($raidBoss, $collection->getById('TESTPOKEMON_MEGA'));
+        $this->assertTrue($collection->has($raidBoss));
 
-        self::assertNull($collection->getById('NOT_EXISTINGS'));
+        $this->assertNull($collection->getById('NOT_EXISTINGS'));
 
         $collection->remove($raidBoss->getPokemonWithMegaFormId());
-        self::assertFalse($collection->has($raidBoss));
+        $this->assertFalse($collection->has($raidBoss));
     }
 
     public function testOrderOfCollection(): void
@@ -67,6 +66,6 @@ class RaidBossCollectionTest extends TestCase
         $collection->add($raidBoss2);
         $collection->add($raidBoss1);
 
-        self::assertSame('TESTPOKEMON_EX', $collection->toArray()[0]->getPokemonWithMegaFormId());
+        $this->assertSame('TESTPOKEMON_EX', $collection->toArray()[0]->getPokemonWithMegaFormId());
     }
 }

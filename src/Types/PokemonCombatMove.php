@@ -6,7 +6,7 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 use stdClass;
 
-final class PokemonCombatMove
+final readonly class PokemonCombatMove
 {
     public function __construct(
         private float $power,

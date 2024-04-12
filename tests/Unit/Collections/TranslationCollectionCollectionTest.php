@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Collections\TranslationCollection
- *
- * @covers \PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection
- */
+#[CoversClass(TranslationCollectionCollection::class)]
+#[UsesClass(TranslationCollection::class)]
 class TranslationCollectionCollectionTest extends TestCase
 {
     public function testAddCollection(): void
@@ -20,8 +19,8 @@ class TranslationCollectionCollectionTest extends TestCase
         $translationCollection = new TranslationCollection('dummyLanguage');
         $sut                   = new TranslationCollectionCollection();
         $sut->addTranslationCollection($translationCollection);
-        self::assertCount(1, $sut->getCollections());
+        $this->assertCount(1, $sut->getCollections());
         $sut->addTranslationCollection($translationCollection);
-        self::assertCount(1, $sut->getCollections());
+        $this->assertCount(1, $sut->getCollections());
     }
 }

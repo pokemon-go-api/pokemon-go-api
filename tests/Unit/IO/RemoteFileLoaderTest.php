@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\IO;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\IO;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
+use PokemonGoApi\PogoAPI\IO\File;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoApi\PogoAPI\Logger\NoopLogger;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\IO\File
- * @uses \PokemonGoApi\PogoAPI\Logger\NoopLogger
- *
- * @covers \PokemonGoApi\PogoAPI\IO\RemoteFileLoader
- */
+#[CoversClass(RemoteFileLoader::class)]
+#[UsesClass(File::class)]
+#[UsesClass(NoopLogger::class)]
 class RemoteFileLoaderTest extends TestCase
 {
     public function testLoad(): void
@@ -29,6 +29,6 @@ class RemoteFileLoaderTest extends TestCase
         );
 
         $response = $sut->load('foo');
-        self::assertSame('Dummy', $response->getContent());
+        $this->assertSame('Dummy', $response->getContent());
     }
 }

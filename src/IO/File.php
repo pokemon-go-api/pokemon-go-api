@@ -6,7 +6,7 @@ namespace PokemonGoApi\PogoAPI\IO;
 
 use function file_put_contents;
 
-final class File
+final readonly class File
 {
     public function __construct(private string $content)
     {

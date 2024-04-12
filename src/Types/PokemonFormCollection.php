@@ -16,9 +16,9 @@ use function str_replace;
 final class PokemonFormCollection
 {
     /** @var PokemonForm[] */
-    private array $pokemonForms;
+    private readonly array $pokemonForms;
 
-    public function __construct(private string $pokemonId, PokemonForm ...$pokemonForms)
+    public function __construct(private readonly string $pokemonId, PokemonForm ...$pokemonForms)
     {
         $this->pokemonForms = $pokemonForms;
     }
@@ -42,7 +42,7 @@ final class PokemonFormCollection
                 continue;
             }
 
-            $formOnlyId = (string) str_replace($templateIdParts['name'] . '_', '', (string) $formData->form);
+            $formOnlyId = str_replace($templateIdParts['name'] . '_', '', (string) $formData->form);
 
             $forms[] = new PokemonForm(
                 (string) $formData->form,

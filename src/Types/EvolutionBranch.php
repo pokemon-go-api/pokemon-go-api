@@ -11,7 +11,7 @@ final class EvolutionBranch
     private string $evolutionId;
     private string $evolutionFormId;
     private int $candyCost;
-    private string|null $requiredItem;
+    private string|null $requiredItem = null;
     /** @var list<string> */
     private array $questIds = [];
 

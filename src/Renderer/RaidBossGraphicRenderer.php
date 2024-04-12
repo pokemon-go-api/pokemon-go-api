@@ -20,7 +20,7 @@ use function trim;
 
 final class RaidBossGraphicRenderer
 {
-    public const TEMPLATE_PATH = __DIR__ . '/templates';
+    public const string TEMPLATE_PATH = __DIR__ . '/templates';
 
     public function buildGraphic(
         RaidBossCollection $raidBossCollection,

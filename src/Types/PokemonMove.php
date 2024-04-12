@@ -7,27 +7,27 @@ namespace PokemonGoApi\PogoAPI\Types;
 use stdClass;
 
 use function preg_match;
-use function strpos;
+use function str_contains;
 
 final class PokemonMove
 {
     private PokemonCombatMove|null $combatMove = null;
 
     public function __construct(
-        private int $id,
-        private string $name,
-        private PokemonType $pokemonType,
-        private float $power,
-        private float $energy,
-        private float $durationMs,
-        private bool $isFastMove,
+        private readonly int $id,
+        private readonly string $name,
+        private readonly PokemonType $pokemonType,
+        private readonly float $power,
+        private readonly float $energy,
+        private readonly float $durationMs,
+        private readonly bool $isFastMove,
     ) {
     }
 
     public static function createFromGameMaster(stdClass $moveData): self
     {
         $moveParts = [];
-        preg_match('~^V(?<id>\d{4})_MOVE_(?<name>.*)$~i', $moveData->templateId, $moveParts);
+        preg_match('~^V(?<id>\d{4})_MOVE_(?<name>.*)$~i', (string) $moveData->templateId, $moveParts);
 
         return new self(
             (int) $moveParts['id'],
@@ -36,7 +36,7 @@ final class PokemonMove
             $moveData->moveSettings->power ?? 0.0,
             $moveData->moveSettings->energyDelta ?? 0.0,
             $moveData->moveSettings->durationMs,
-            strpos((string) $moveData->moveSettings->movementId, '_FAST') !== false,
+            str_contains((string) $moveData->moveSettings->movementId, '_FAST'),
         );
     }
 

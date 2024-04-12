@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Integration\PokemonGoLingen\PogoAPI;
+namespace Tests\Integration\PokemonGoApi\PogoAPI;
 
+use PHPUnit\Framework\Attributes\CoversNothing;
+use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
@@ -19,10 +21,10 @@ use function preg_replace;
 
 use const PHP_EOL;
 
-/** @coversNothing */
+#[CoversNothing]
 class RaidBossListTest extends TestCase
 {
-    /** @depends testRenderDummyRaidList */
+    #[Depends('testRenderDummyRaidList')]
     public function testRenderDummyList(RaidBossCollection $raidBossCollection): void
     {
         $translationLoader     = new TranslationParser();
@@ -47,7 +49,7 @@ class RaidBossListTest extends TestCase
             __DIR__ . '/../../data/tmp/raidBossListTest.svg',
             preg_replace('~>\s?<~', '>' . PHP_EOL . '<', $raidBossGraphic->getImageContent()),
         );
-        self::assertFileEquals(
+        $this->assertFileEquals(
             __DIR__ . '/Fixtures/expected_raidlist.svg',
             __DIR__ . '/../../data/tmp/raidBossListTest.svg',
         );
@@ -84,7 +86,7 @@ class RaidBossListTest extends TestCase
             ];
         }
 
-        self::assertSame([
+        $this->assertSame([
             [
                 'dexNr' => 6,
                 'pokemonID' => 'CHARIZARD',
@@ -167,21 +169,21 @@ class RaidBossListTest extends TestCase
                 'pokemonID' => 'SHELLOS',
                 'formID' => 'SHELLOS_WEST_SEA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_422_11.png',
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm422.fWEST_SEA.icon.png',
             ],
             [
                 'dexNr' => 487,
                 'pokemonID' => 'GIRATINA',
                 'formID' => 'GIRATINA_ALTERED',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_487_11.png',
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm487.fALTERED.icon.png',
             ],
             [
                 'dexNr' => 888,
                 'pokemonID' => 'ZACIAN',
                 'formID' => 'ZACIAN_HERO',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm888.icon.png',
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm888.fHERO.icon.png',
             ],
         ], $generatedRaidBosses);
 

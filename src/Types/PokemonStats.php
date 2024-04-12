@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Types;
 
 use JsonSerializable;
+use Override;
 
-final class PokemonStats implements JsonSerializable
+final readonly class PokemonStats implements JsonSerializable
 {
     public function __construct(private int $stamina, private int $attack, private int $defense)
     {
@@ -28,6 +29,7 @@ final class PokemonStats implements JsonSerializable
     }
 
     /** @return array<string, int> */
+    #[Override]
     public function jsonSerialize(): array
     {
         return [

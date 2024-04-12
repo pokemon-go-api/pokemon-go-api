@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\IO;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\IO;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\IO\File;
 
@@ -11,19 +12,19 @@ use function random_bytes;
 use function sys_get_temp_dir;
 use function unlink;
 
-/** @covers \PokemonGoApi\PogoAPI\IO\File */
+#[CoversClass(File::class)]
 class FileTest extends TestCase
 {
     public function testGetContent(): void
     {
         $data = random_bytes(32);
         $sut  = new File($data);
-        self::assertSame($data, $sut->getContent());
+        $this->assertSame($data, $sut->getContent());
         $tmpFile = sys_get_temp_dir() . '/testfile.dat';
 
         try {
             $sut->saveTo($tmpFile);
-            self::assertStringEqualsFile($tmpFile, $data);
+            $this->assertStringEqualsFile($tmpFile, $data);
         } finally {
             @unlink($tmpFile);
         }

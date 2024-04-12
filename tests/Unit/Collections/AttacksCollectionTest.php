@@ -2,19 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoLingen\PogoAPI\Collections;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Types\PokemonMove;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
-/**
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonType
- * @uses \PokemonGoApi\PogoAPI\Types\PokemonMove
- *
- * @covers \PokemonGoApi\PogoAPI\Collections\AttacksCollection
- */
+#[CoversClass(AttacksCollection::class)]
+#[UsesClass(PokemonType::class)]
+#[UsesClass(PokemonMove::class)]
 class AttacksCollectionTest extends TestCase
 {
     public function testCollection(): void
@@ -31,8 +30,8 @@ class AttacksCollectionTest extends TestCase
         $sut         = new AttacksCollection();
         $sut->add($pokemonMove);
 
-        self::assertCount(1, $sut->toArray());
-        self::assertSame($pokemonMove, $sut->getById(100));
-        self::assertSame($pokemonMove, $sut->getByName('TESTMOVE'));
+        $this->assertCount(1, $sut->toArray());
+        $this->assertSame($pokemonMove, $sut->getById(100));
+        $this->assertSame($pokemonMove, $sut->getByName('TESTMOVE'));
     }
 }

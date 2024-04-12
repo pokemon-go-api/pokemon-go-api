@@ -12,7 +12,7 @@ use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardPokemon;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
 use PokemonGoApi\PogoAPI\Util\CpCalculator;
 
-final class ResearchTasksRenderer
+final readonly class ResearchTasksRenderer
 {
     public function __construct(
         private TranslationCollectionCollection $translations,

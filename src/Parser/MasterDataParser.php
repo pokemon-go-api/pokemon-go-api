@@ -21,7 +21,7 @@ use function assert;
 use function count;
 use function file_get_contents;
 use function preg_match;
-use function strpos;
+use function str_contains;
 use function substr;
 
 class MasterDataParser
@@ -30,7 +30,7 @@ class MasterDataParser
     private AttacksCollection $attacksCollection;
     private QuestsCollection $questsCollection;
 
-    public function __construct(private PokemonAssetsCollection $pokemonAssetsCollection)
+    public function __construct(private readonly PokemonAssetsCollection $pokemonAssetsCollection)
     {
         $this->pokemonCollection = new PokemonCollection();
         $this->attacksCollection = new AttacksCollection();
@@ -77,7 +77,7 @@ class MasterDataParser
         foreach ($list as $item) {
             $matches = [];
             if (
-                ! preg_match('~^v(?<DexNr>[0-9]{4})_POKEMON_.*~i', $item->templateId, $matches)
+                ! preg_match('~^v(?<DexNr>[0-9]{4})_POKEMON_.*~i', (string) $item->templateId, $matches)
                 || ! isset($item->data->pokemonSettings)
             ) {
                 continue;
@@ -91,10 +91,10 @@ class MasterDataParser
             );
 
             if (
-                strpos($pokemon->getFormId(), '_PURIFIED') !== false ||
-                strpos($pokemon->getFormId(), '_SHADOW') !== false ||
-                strpos($pokemon->getFormId(), '_NORMAL') !== false ||
-                strpos($pokemon->getFormId(), '_COPY') !== false ||
+                str_contains($pokemon->getFormId(), '_PURIFIED') ||
+                str_contains($pokemon->getFormId(), '_SHADOW') ||
+                str_contains($pokemon->getFormId(), '_NORMAL') ||
+                str_contains($pokemon->getFormId(), '_COPY') ||
                 preg_match('~_\d{4}$~', $pokemon->getFormId())
             ) {
                 continue;
@@ -117,7 +117,7 @@ class MasterDataParser
         $attacksCollection = new AttacksCollection();
         foreach ($list as $item) {
             $matches = [];
-            if (! preg_match('~^v(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $item->templateId, $matches)) {
+            if (! preg_match('~^v(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', (string) $item->templateId, $matches)) {
                 continue;
             }
 
@@ -135,7 +135,7 @@ class MasterDataParser
         $questsCollection = new QuestsCollection();
         foreach ($list as $item) {
             $matches = [];
-            if (! preg_match('~(?<Quest>.*)_EVOLUTION_QUEST$~i', $item->templateId, $matches)) {
+            if (! preg_match('~(?<Quest>.*)_EVOLUTION_QUEST$~i', (string) $item->templateId, $matches)) {
                 continue;
             }
 
@@ -152,7 +152,13 @@ class MasterDataParser
     {
         foreach ($list as $item) {
             $matches = [];
-            if (! preg_match('~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $item->templateId, $matches)) {
+            if (
+                ! preg_match(
+                    '~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i',
+                    (string) $item->templateId,
+                    $matches,
+                )
+            ) {
                 continue;
             }
 
@@ -176,7 +182,7 @@ class MasterDataParser
             if (
                 ! preg_match(
                     '~^TEMPORARY_EVOLUTION_V(?<DexNr>[0-9]{4})_POKEMON_(.*)$~i',
-                    $item->templateId,
+                    (string) $item->templateId,
                     $matches,
                 )
             ) {
@@ -196,12 +202,13 @@ class MasterDataParser
 
             foreach ($item->data->temporaryEvolutionSettings->temporaryEvolutions as $temporaryEvolution) {
                 $temporaryEvolutionId = $item->data->temporaryEvolutionSettings->pokemonId
-                    . substr($temporaryEvolution->temporaryEvolutionId, 14); // trim TEMP_EVOLUTION
-                if (!isset($temporaryEvolutions[$temporaryEvolutionId])) {
+                    . substr((string) $temporaryEvolution->temporaryEvolutionId, 14); // trim TEMP_EVOLUTION
+                if (! isset($temporaryEvolutions[$temporaryEvolutionId])) {
                     continue;
                 }
+
                 $temporaryEvolutions[$temporaryEvolutionId]->setAssetBundleId(
-                    $temporaryEvolution->assetBundleValue
+                    $temporaryEvolution->assetBundleValue,
                 );
             }
         }
@@ -212,7 +219,7 @@ class MasterDataParser
     {
         foreach ($list as $item) {
             $matches = [];
-            if (! preg_match('~^FORMS_V(?<DexNr>\d{4})_POKEMON_(?<name>.*)$~i', $item->templateId, $matches)) {
+            if (! preg_match('~^FORMS_V(?<DexNr>\d{4})_POKEMON_(?<name>.*)$~i', (string) $item->templateId, $matches)) {
                 continue;
             }
 

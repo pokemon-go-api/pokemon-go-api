@@ -11,18 +11,18 @@ use stdClass;
 /** @see data/raidOverwrites.xsd */
 class RaidBossOverwriteStruct
 {
-    private const DEFAULT_TIMEZONE = 'Europe/Berlin';
+    private const string DEFAULT_TIMEZONE = 'Europe/Berlin';
 
-    private DateTimeImmutable $startDate;
-    private DateTimeImmutable $endDate;
+    private readonly DateTimeImmutable $startDate;
+    private readonly DateTimeImmutable $endDate;
 
     public function __construct(
         stdClass $startDate,
         stdClass $endDate,
-        private string $pokemon,
-        private string|null $form,
-        private string $level,
-        private bool $shiny,
+        private readonly string $pokemon,
+        private readonly string|null $form,
+        private readonly string $level,
+        private readonly bool $shiny,
     ) {
         $this->startDate = new DateTimeImmutable(
             $startDate->date,

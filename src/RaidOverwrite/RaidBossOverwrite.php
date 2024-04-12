@@ -18,9 +18,9 @@ class RaidBossOverwrite
 {
     /** @param array<int, stdClass> $raidBossOverwrites */
     public function __construct(
-        private array $raidBossOverwrites,
-        private PokemonCollection $pokemonCollection,
-        private LoggerInterface $logger,
+        private readonly array $raidBossOverwrites,
+        private readonly PokemonCollection $pokemonCollection,
+        private readonly LoggerInterface $logger,
     ) {
     }
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
-final class PokemonCombatMoveBuffs
+final readonly class PokemonCombatMoveBuffs
 {
     public function __construct(
         private int $activationChance,

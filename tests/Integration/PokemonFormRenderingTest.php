@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Integration\PokemonGoLingen\PogoAPI;
+namespace Tests\Integration\PokemonGoApi\PogoAPI;
 
+use PHPUnit\Framework\Attributes\CoversNothing;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 use function file_get_contents;
@@ -11,29 +13,24 @@ use function implode;
 use function is_array;
 use function json_decode;
 
-/**
- * phpcs:disable Generic.Files.LineLength.TooLong
- * @coversNothing
- */
+/** phpcs:disable Generic.Files.LineLength.TooLong */
+#[CoversNothing]
 class PokemonFormRenderingTest extends TestCase
 {
-    /**
-     * @param array<string, mixed[]> $expected
-     *
-     * @dataProvider specialPokemonDataProvider
-     */
+    /** @param array<string, mixed[]> $expected */
+    #[DataProvider('specialPokemonDataProvider')]
     public function testRenderingPokemonWithForms(int $dexNr, array $expected): void
     {
         $pokedexEntry = json_decode(
             file_get_contents(__DIR__ . '/../../data/tmp/api/pokedex/id/' . $dexNr . '.json') ?: '[]',
             true,
         );
-        self::assertIsArray($pokedexEntry);
+        $this->assertIsArray($pokedexEntry);
         $this->validateSubset($expected, $pokedexEntry);
     }
 
     /** @return array<string, mixed[]> */
-    public function specialPokemonDataProvider(): iterable
+    public static function specialPokemonDataProvider(): iterable
     {
         yield 'charizard' => [
             'dexNr'    => 6,
@@ -143,7 +140,7 @@ class PokemonFormRenderingTest extends TestCase
                 'regionForms' => [
                     'THUNDURUS_INCARNATE' => [
                         'names' => ['English' => 'Thundurus (Incarnate Forme)'],
-                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_642_11.png'],
+                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm642.fINCARNATE.icon.png'],
                     ],
                     'THUNDURUS_THERIAN' => [
                         'names' => ['English' => 'Thundurus (Therian Forme)'],
@@ -211,12 +208,12 @@ class PokemonFormRenderingTest extends TestCase
         foreach ($expected as $key => $expectedValue) {
             $currentKeyChain = [...$keyChain, $key];
             if (is_array($expectedValue)) {
-                self::assertIsArray($current[$key]);
+                $this->assertIsArray($current[$key]);
                 $this->validateSubset($expectedValue, $current[$key], $currentKeyChain);
                 continue;
             }
 
-            self::assertSame($expectedValue, $current[$key], 'Expected field: ' . implode('.', $currentKeyChain));
+            $this->assertSame($expectedValue, $current[$key], 'Expected field: ' . implode('.', $currentKeyChain));
         }
     }
 }

@@ -8,17 +8,20 @@ use Exception;
 use stdClass;
 
 use function assert;
-use function strpos;
+use function str_contains;
 use function substr;
 
 final class TemporaryEvolution
 {
     private int|null $assetsBundleId = null;
-    private PokemonType $typeSecondary;
+    private readonly PokemonType $typeSecondary;
     private PokemonStats|null $stats = null;
 
-    public function __construct(private string $id, private PokemonType $typePrimary, PokemonType|null $typeSecondary)
-    {
+    public function __construct(
+        private readonly string $id,
+        private readonly PokemonType $typePrimary,
+        PokemonType|null $typeSecondary,
+    ) {
         $this->typeSecondary = $typeSecondary ?? PokemonType::none();
     }
 
@@ -34,7 +37,7 @@ final class TemporaryEvolution
         }
 
         $temporaryEvolution = new self(
-            $basePokemonId . substr($tempEvoOverride->tempEvoId, 14), // trim TEMP_EVOLUTION
+            $basePokemonId . substr((string) $tempEvoOverride->tempEvoId, 14), // trim TEMP_EVOLUTION
             PokemonType::createFromPokemonType($tempEvoOverride->typeOverride1),
             $secondaryType,
         );
@@ -77,11 +80,11 @@ final class TemporaryEvolution
 
     public function getAssetsAddressableSuffix(): string|null
     {
-        if (strpos($this->id, '_X') !== false) {
+        if (str_contains($this->id, '_X')) {
             return 'MEGA_X';
         }
 
-        if (strpos($this->id, '_Y') !== false) {
+        if (str_contains($this->id, '_Y')) {
             return 'MEGA_Y';
         }
 

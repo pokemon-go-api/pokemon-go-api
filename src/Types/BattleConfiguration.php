@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
-final class BattleConfiguration
+final readonly class BattleConfiguration
 {
-    public const NAME_EASY   = 'easy';
-    public const NAME_NORMAL = 'normal';
-    public const NAME_HARD   = 'hard';
+    public const string NAME_EASY   = 'easy';
+    public const string NAME_NORMAL = 'normal';
+    public const string NAME_HARD   = 'hard';
 
     private function __construct(
         private string $name,
