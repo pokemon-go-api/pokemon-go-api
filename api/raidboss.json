@@ -1,0 +1,681 @@
+{
+    "currentList": {
+        "mega": [
+            {
+                "id": "ABOMASNOW",
+                "form": "ABOMASNOW_MEGA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm460.fMEGA.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm460.fMEGA.s.icon.png"
+                },
+                "level": "mega",
+                "names": {
+                    "English": "Mega Abomasnow",
+                    "German": "Mega-Rexblisar",
+                    "French": "M\u00e9ga-Blizzaroi",
+                    "Italian": "MegaAbomasnow",
+                    "Japanese": "\u30e1\u30ac\u30e6\u30ad\u30ce\u30aa\u30fc",
+                    "Korean": "\uba54\uac00\ub208\uc124\uc655",
+                    "Spanish": "Mega-Abomasnow"
+                },
+                "shiny": true,
+                "types": [
+                    "Grass",
+                    "Ice"
+                ],
+                "counter": {
+                    "Fire": 2.56,
+                    "Bug": 1.6,
+                    "Fighting": 1.6,
+                    "Flying": 1.6,
+                    "Poison": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "sunny",
+                    "snow"
+                ],
+                "cpRange": [
+                    1281,
+                    1349
+                ],
+                "cpRangeBoost": [
+                    1601,
+                    1687
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.2059556
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.84314984
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.7387572
+                    }
+                }
+            }
+        ],
+        "lvl5": [
+            {
+                "id": "GIRATINA",
+                "form": "GIRATINA_ALTERED",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm487.fALTERED.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm487.fALTERED.s.icon.png"
+                },
+                "level": "lvl5",
+                "names": {
+                    "English": "Giratina (Altered Forme)",
+                    "German": "Giratina (Wandelform)",
+                    "French": "Giratina (Forme Alternative)",
+                    "Italian": "Giratina (Forma Alterata)",
+                    "Japanese": "\u30ae\u30e9\u30c6\u30a3\u30ca (\u30a2\u30ca\u30b6\u30fc\u30d5\u30a9\u30eb\u30e0)",
+                    "Korean": "\uae30\ub77c\ud2f0\ub098 (\uc5b4\ub098\ub354\ud3fc)",
+                    "Spanish": "Giratina (Forma Modificada)"
+                },
+                "shiny": true,
+                "types": [
+                    "Ghost",
+                    "Dragon"
+                ],
+                "counter": {
+                    "Dark": 1.6,
+                    "Dragon": 1.6,
+                    "Fairy": 1.6,
+                    "Ghost": 1.6,
+                    "Ice": 1.6
+                },
+                "weather": [
+                    "windy",
+                    "fog"
+                ],
+                "cpRange": [
+                    1848,
+                    1931
+                ],
+                "cpRangeBoost": [
+                    2310,
+                    2414
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 2.9149964
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 2.1214602
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 1.850215
+                    }
+                }
+            }
+        ],
+        "lvl3": [
+            {
+                "id": "DEWGONG",
+                "form": "DEWGONG",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm87.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm87.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Dewgong",
+                    "German": "Jugong",
+                    "French": "Lamantine",
+                    "Italian": "Dewgong",
+                    "Japanese": "\u30b8\u30e5\u30b4\u30f3",
+                    "Korean": "\uc96c\ub808\uace4",
+                    "Spanish": "Dewgong"
+                },
+                "shiny": false,
+                "types": [
+                    "Water",
+                    "Ice"
+                ],
+                "counter": {
+                    "Electric": 1.6,
+                    "Fighting": 1.6,
+                    "Grass": 1.6,
+                    "Rock": 1.6
+                },
+                "weather": [
+                    "rain",
+                    "snow"
+                ],
+                "cpRange": [
+                    1071,
+                    1134
+                ],
+                "cpRangeBoost": [
+                    1339,
+                    1418
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.96060556
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.68852353
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.6071825
+                    }
+                }
+            },
+            {
+                "id": "MIGHTYENA",
+                "form": "MIGHTYENA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm262.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm262.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Mightyena",
+                    "German": "Magnayen",
+                    "French": "Grahy\u00e8na",
+                    "Italian": "Mightyena",
+                    "Japanese": "\u30b0\u30e9\u30a8\u30ca",
+                    "Korean": "\uadf8\ub77c\uc5d0\ub098",
+                    "Spanish": "Mightyena"
+                },
+                "shiny": false,
+                "types": [
+                    "Dark"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Fairy": 1.6,
+                    "Fighting": 1.6
+                },
+                "weather": [
+                    "fog"
+                ],
+                "cpRange": [
+                    1038,
+                    1100
+                ],
+                "cpRangeBoost": [
+                    1298,
+                    1375
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.7664666
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.56325954
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.4979739
+                    }
+                }
+            },
+            {
+                "id": "ABSOL",
+                "form": "ABSOL",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm359.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm359.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Absol",
+                    "German": "Absol",
+                    "French": "Absol",
+                    "Italian": "Absol",
+                    "Japanese": "\u30a2\u30d6\u30bd\u30eb",
+                    "Korean": "\uc571\uc194",
+                    "Spanish": "Absol"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Fairy": 1.6,
+                    "Fighting": 1.6
+                },
+                "weather": [
+                    "fog"
+                ],
+                "cpRange": [
+                    1370,
+                    1443
+                ],
+                "cpRangeBoost": [
+                    1712,
+                    1805
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.7380223
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.5227368
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.45846918
+                    }
+                }
+            },
+            {
+                "id": "BOMBIRDIER",
+                "form": "BOMBIRDIER",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm962.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm962.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Bombirdier",
+                    "German": "Adebom",
+                    "French": "Lestombaile",
+                    "Italian": "Bombirdier",
+                    "Japanese": "\u30aa\u30c8\u30b7\u30c9\u30ea",
+                    "Korean": "\ub5a8\uad6c\uc0c8",
+                    "Spanish": "Bombirdier"
+                },
+                "shiny": true,
+                "types": [
+                    "Flying",
+                    "Dark"
+                ],
+                "counter": {
+                    "Electric": 1.6,
+                    "Fairy": 1.6,
+                    "Ice": 1.6,
+                    "Rock": 1.6
+                },
+                "weather": [
+                    "windy",
+                    "fog"
+                ],
+                "cpRange": [
+                    1351,
+                    1421
+                ],
+                "cpRangeBoost": [
+                    1688,
+                    1777
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.0076731
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.62206334
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.54009145
+                    }
+                }
+            }
+        ],
+        "lvl1": [
+            {
+                "id": "RATTATA",
+                "form": "RATTATA_ALOLA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm19.fALOLA.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm19.fALOLA.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Alolan Rattata",
+                    "German": "Alola-Rattfratz",
+                    "French": "Rattata d'Alola",
+                    "Italian": "Rattata di Alola",
+                    "Japanese": "\u30a2\u30ed\u30fc\u30e9 \u30b3\u30e9\u30c3\u30bf",
+                    "Korean": "\uc54c\ub85c\ub77c \uaf2c\ub81b",
+                    "Spanish": "Rattata de Alola"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark",
+                    "Normal"
+                ],
+                "counter": {
+                    "Fighting": 2.56,
+                    "Bug": 1.6,
+                    "Fairy": 1.6
+                },
+                "weather": [
+                    "partlycloudy_day",
+                    "fog"
+                ],
+                "cpRange": [
+                    381,
+                    419
+                ],
+                "cpRangeBoost": [
+                    477,
+                    524
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.040053487
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.033627946
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.03078977
+                    }
+                }
+            },
+            {
+                "id": "ZIGZAGOON",
+                "form": "ZIGZAGOON_GALARIAN",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm263.fGALARIAN.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm263.fGALARIAN.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Galarian Zigzagoon",
+                    "German": "Galar-Zigzachs",
+                    "French": "Zigzaton de Galar",
+                    "Italian": "Zigzagoon di Galar",
+                    "Japanese": "\u30ac\u30e9\u30eb \u30b8\u30b0\u30b6\u30b0\u30de",
+                    "Korean": "\uac00\ub77c\ub974 \uc9c0\uadf8\uc81c\uad6c\ub9ac",
+                    "Spanish": "Zigzagoon de Galar"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark",
+                    "Normal"
+                ],
+                "counter": {
+                    "Fighting": 2.56,
+                    "Bug": 1.6,
+                    "Fairy": 1.6
+                },
+                "weather": [
+                    "partlycloudy_day",
+                    "fog"
+                ],
+                "cpRange": [
+                    258,
+                    290
+                ],
+                "cpRangeBoost": [
+                    323,
+                    363
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.04223445
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.035344478
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.031040862
+                    }
+                }
+            },
+            {
+                "id": "SNORUNT",
+                "form": "SNORUNT",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm361.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm361.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Snorunt",
+                    "German": "Schneppke",
+                    "French": "Stalgamin",
+                    "Italian": "Snorunt",
+                    "Japanese": "\u30e6\u30ad\u30ef\u30e9\u30b7",
+                    "Korean": "\ub208\uaf2c\ub9c8",
+                    "Spanish": "Snorunt"
+                },
+                "shiny": true,
+                "types": [
+                    "Ice"
+                ],
+                "counter": {
+                    "Fighting": 1.6,
+                    "Fire": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "snow"
+                ],
+                "cpRange": [
+                    465,
+                    507
+                ],
+                "cpRangeBoost": [
+                    581,
+                    634
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.072419874
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.058615074
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.05402869
+                    }
+                }
+            },
+            {
+                "id": "BLITZLE",
+                "form": "BLITZLE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm522.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm522.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Blitzle",
+                    "German": "Elezeba",
+                    "French": "Z\u00e9bibron",
+                    "Italian": "Blitzle",
+                    "Japanese": "\u30b7\u30de\u30de",
+                    "Korean": "\uc904\ubba4\ub9c8",
+                    "Spanish": "Blitzle"
+                },
+                "shiny": true,
+                "types": [
+                    "Electric"
+                ],
+                "counter": {
+                    "Ground": 1.6
+                },
+                "weather": [
+                    "rain"
+                ],
+                "cpRange": [
+                    461,
+                    504
+                ],
+                "cpRangeBoost": [
+                    577,
+                    630
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.06463516
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.050335556
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.045083936
+                    }
+                }
+            },
+            {
+                "id": "PANCHAM",
+                "form": "PANCHAM",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm674.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm674.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Pancham",
+                    "German": "Pam-Pam",
+                    "French": "Pandespi\u00e8gle",
+                    "Italian": "Pancham",
+                    "Japanese": "\u30e4\u30f3\u30c1\u30e3\u30e0",
+                    "Korean": "\ud310\uc9f1",
+                    "Spanish": "Pancham"
+                },
+                "shiny": true,
+                "types": [
+                    "Fighting"
+                ],
+                "counter": {
+                    "Fairy": 1.6,
+                    "Flying": 1.6,
+                    "Psychic": 1.6
+                },
+                "weather": [
+                    "cloudy"
+                ],
+                "cpRange": [
+                    796,
+                    850
+                ],
+                "cpRangeBoost": [
+                    995,
+                    1063
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.07928414
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.060173646
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.053915303
+                    }
+                }
+            }
+        ]
+    },
+    "graphics": {
+        "German": {
+            "svg": "/api/graphics/German/default.svg",
+            "png": "/api/graphics/German/default.png",
+            "sha512": "db4aa0071a9ba002bd20d852e3fe2326889229feceb998c15c923b63e099b665db06a4f38ad7b147237c44743fa3628ae61a0743306112a6f58899384530db74"
+        },
+        "English": {
+            "svg": "/api/graphics/English/default.svg",
+            "png": "/api/graphics/English/default.png",
+            "sha512": "6da22667cc3730f76d57b5f9fbf3d3c1a7b158cbf1fdc3f92ebbabb5b64a21cfae39859e84c5a1757f61c8f1574dff2eeae2cbf3f0059a0a8588766515c9d0bc"
+        }
+    }
+}

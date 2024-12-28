@@ -1,0 +1,1516 @@
+{
+    "id": "GOURGEIST",
+    "formId": "GOURGEIST",
+    "dexNr": 711,
+    "generation": 6,
+    "names": {
+        "English": "Gourgeist",
+        "German": "Pumpdjinn",
+        "French": "Banshitrouye",
+        "Italian": "Gourgeist",
+        "Japanese": "\u30d1\u30f3\u30d7\u30b8\u30f3",
+        "Korean": "\ud38c\ud0a8\uc778",
+        "Spanish": "Gourgeist"
+    },
+    "stats": {
+        "stamina": 146,
+        "attack": 171,
+        "defense": 219
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "HEX_FAST": {
+            "id": "HEX_FAST",
+            "power": 8,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Hex",
+                "German": "B\u00fcrde",
+                "French": "Ch\u00e2timent",
+                "Italian": "Sciagura",
+                "Japanese": "\u305f\u305f\u308a\u3081",
+                "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                "Spanish": "Infortunio"
+            },
+            "combat": {
+                "energy": 12,
+                "power": 6,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "RAZOR_LEAF_FAST": {
+            "id": "RAZOR_LEAF_FAST",
+            "power": 13,
+            "energy": 7,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Razor Leaf",
+                "German": "Rasierblatt",
+                "French": "Tranch\u2019Herbe",
+                "Italian": "Foglielama",
+                "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                "Spanish": "Hoja Afilada"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 9,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SEED_BOMB": {
+            "id": "SEED_BOMB",
+            "power": 55,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Seed Bomb",
+                "German": "Samenbomben",
+                "French": "Canon Graine",
+                "Italian": "Semebomba",
+                "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                "Korean": "\uc528\ud3ed\ud0c4",
+                "Spanish": "Bomba Germen"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 65,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "Bola Sombra"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FOUL_PLAY": {
+            "id": "FOUL_PLAY",
+            "power": 70,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Foul Play",
+                "German": "Schmarotzer",
+                "French": "Tricherie",
+                "Italian": "Ripicca",
+                "Japanese": "\u30a4\u30ab\u30b5\u30de",
+                "Korean": "\uc18d\uc784\uc218",
+                "Spanish": "Juego Sucio"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FIRE_BLAST": {
+            "id": "FIRE_BLAST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "Fuego"
+                }
+            },
+            "names": {
+                "English": "Fire Blast",
+                "German": "Feuersturm",
+                "French": "D\u00e9flagration",
+                "Italian": "Fuocobomba",
+                "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                "Korean": "\ubd88\ub300\ubb38\uc790",
+                "Spanish": "Llamarada"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 140,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POLTERGEIST": {
+            "id": "POLTERGEIST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Poltergeist",
+                "German": "Poltergeist",
+                "French": "Esprit Frappeur",
+                "Italian": "Poltergeist",
+                "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                "Spanish": "Poltergeist"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.s.icon.png"
+    },
+    "regionForms": {
+        "GOURGEIST_AVERAGE": {
+            "id": "GOURGEIST",
+            "formId": "GOURGEIST_AVERAGE",
+            "dexNr": 711,
+            "generation": 6,
+            "names": {
+                "English": "Gourgeist (Average Size)",
+                "German": "Pumpdjinn (Gr\u00f6\u00dfe M)",
+                "French": "Banshitrouye (Taille Normale)",
+                "Italian": "Gourgeist (Normale)",
+                "Japanese": "\u30d1\u30f3\u30d7\u30b8\u30f3 (\u3075\u3064\u3046\u306e\u30b5\u30a4\u30ba)",
+                "Korean": "\ud38c\ud0a8\uc778 (\ubcf4\ud1b5 \uc0ac\uc774\uc988)",
+                "Spanish": "Gourgeist (Tama\u00f1o Normal)"
+            },
+            "stats": {
+                "stamina": 163,
+                "attack": 175,
+                "defense": 213
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "HEX_FAST": {
+                    "id": "HEX_FAST",
+                    "power": 8,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Hex",
+                        "German": "B\u00fcrde",
+                        "French": "Ch\u00e2timent",
+                        "Italian": "Sciagura",
+                        "Japanese": "\u305f\u305f\u308a\u3081",
+                        "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                        "Spanish": "Infortunio"
+                    },
+                    "combat": {
+                        "energy": 12,
+                        "power": 6,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "RAZOR_LEAF_FAST": {
+                    "id": "RAZOR_LEAF_FAST",
+                    "power": 13,
+                    "energy": 7,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Razor Leaf",
+                        "German": "Rasierblatt",
+                        "French": "Tranch\u2019Herbe",
+                        "Italian": "Foglielama",
+                        "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                        "Spanish": "Hoja Afilada"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 9,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SEED_BOMB": {
+                    "id": "SEED_BOMB",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Seed Bomb",
+                        "German": "Samenbomben",
+                        "French": "Canon Graine",
+                        "Italian": "Semebomba",
+                        "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                        "Korean": "\uc528\ud3ed\ud0c4",
+                        "Spanish": "Bomba Germen"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FOUL_PLAY": {
+                    "id": "FOUL_PLAY",
+                    "power": 70,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DARK",
+                        "names": {
+                            "English": "Dark",
+                            "German": "Unlicht",
+                            "French": "T\u00e9n\u00e8bres",
+                            "Italian": "Buio",
+                            "Japanese": "\u3042\u304f",
+                            "Korean": "\uc545",
+                            "Spanish": "Siniestro"
+                        }
+                    },
+                    "names": {
+                        "English": "Foul Play",
+                        "German": "Schmarotzer",
+                        "French": "Tricherie",
+                        "Italian": "Ripicca",
+                        "Japanese": "\u30a4\u30ab\u30b5\u30de",
+                        "Korean": "\uc18d\uc784\uc218",
+                        "Spanish": "Juego Sucio"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FIRE_BLAST": {
+                    "id": "FIRE_BLAST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIRE",
+                        "names": {
+                            "English": "Fire",
+                            "German": "Feuer",
+                            "French": "Feu",
+                            "Italian": "Fuoco",
+                            "Japanese": "\u307b\u306e\u304a",
+                            "Korean": "\ubd88\uaf43",
+                            "Spanish": "Fuego"
+                        }
+                    },
+                    "names": {
+                        "English": "Fire Blast",
+                        "German": "Feuersturm",
+                        "French": "D\u00e9flagration",
+                        "Italian": "Fuocobomba",
+                        "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                        "Korean": "\ubd88\ub300\ubb38\uc790",
+                        "Spanish": "Llamarada"
+                    },
+                    "combat": {
+                        "energy": -80,
+                        "power": 140,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "POLTERGEIST": {
+                    "id": "POLTERGEIST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Poltergeist",
+                        "German": "Poltergeist",
+                        "French": "Esprit Frappeur",
+                        "Italian": "Poltergeist",
+                        "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                        "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                        "Spanish": "Poltergeist"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fAVERAGE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fAVERAGE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": []
+        },
+        "GOURGEIST_LARGE": {
+            "id": "GOURGEIST",
+            "formId": "GOURGEIST_LARGE",
+            "dexNr": 711,
+            "generation": 6,
+            "names": {
+                "English": "Gourgeist (Large Size)",
+                "German": "Pumpdjinn (Gr\u00f6\u00dfe L)",
+                "French": "Banshitrouye (Taille Maxi)",
+                "Italian": "Gourgeist (Grande)",
+                "Japanese": "\u30d1\u30f3\u30d7\u30b8\u30f3 (\u304a\u304a\u304d\u3044\u30b5\u30a4\u30ba)",
+                "Korean": "\ud38c\ud0a8\uc778 (\ud070 \uc0ac\uc774\uc988)",
+                "Spanish": "Gourgeist (Tama\u00f1o Grande)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 179,
+                "defense": 206
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "HEX_FAST": {
+                    "id": "HEX_FAST",
+                    "power": 8,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Hex",
+                        "German": "B\u00fcrde",
+                        "French": "Ch\u00e2timent",
+                        "Italian": "Sciagura",
+                        "Japanese": "\u305f\u305f\u308a\u3081",
+                        "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                        "Spanish": "Infortunio"
+                    },
+                    "combat": {
+                        "energy": 12,
+                        "power": 6,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "RAZOR_LEAF_FAST": {
+                    "id": "RAZOR_LEAF_FAST",
+                    "power": 13,
+                    "energy": 7,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Razor Leaf",
+                        "German": "Rasierblatt",
+                        "French": "Tranch\u2019Herbe",
+                        "Italian": "Foglielama",
+                        "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                        "Spanish": "Hoja Afilada"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 9,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SEED_BOMB": {
+                    "id": "SEED_BOMB",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Seed Bomb",
+                        "German": "Samenbomben",
+                        "French": "Canon Graine",
+                        "Italian": "Semebomba",
+                        "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                        "Korean": "\uc528\ud3ed\ud0c4",
+                        "Spanish": "Bomba Germen"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FOUL_PLAY": {
+                    "id": "FOUL_PLAY",
+                    "power": 70,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DARK",
+                        "names": {
+                            "English": "Dark",
+                            "German": "Unlicht",
+                            "French": "T\u00e9n\u00e8bres",
+                            "Italian": "Buio",
+                            "Japanese": "\u3042\u304f",
+                            "Korean": "\uc545",
+                            "Spanish": "Siniestro"
+                        }
+                    },
+                    "names": {
+                        "English": "Foul Play",
+                        "German": "Schmarotzer",
+                        "French": "Tricherie",
+                        "Italian": "Ripicca",
+                        "Japanese": "\u30a4\u30ab\u30b5\u30de",
+                        "Korean": "\uc18d\uc784\uc218",
+                        "Spanish": "Juego Sucio"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FIRE_BLAST": {
+                    "id": "FIRE_BLAST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIRE",
+                        "names": {
+                            "English": "Fire",
+                            "German": "Feuer",
+                            "French": "Feu",
+                            "Italian": "Fuoco",
+                            "Japanese": "\u307b\u306e\u304a",
+                            "Korean": "\ubd88\uaf43",
+                            "Spanish": "Fuego"
+                        }
+                    },
+                    "names": {
+                        "English": "Fire Blast",
+                        "German": "Feuersturm",
+                        "French": "D\u00e9flagration",
+                        "Italian": "Fuocobomba",
+                        "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                        "Korean": "\ubd88\ub300\ubb38\uc790",
+                        "Spanish": "Llamarada"
+                    },
+                    "combat": {
+                        "energy": -80,
+                        "power": 140,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "POLTERGEIST": {
+                    "id": "POLTERGEIST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Poltergeist",
+                        "German": "Poltergeist",
+                        "French": "Esprit Frappeur",
+                        "Italian": "Poltergeist",
+                        "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                        "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                        "Spanish": "Poltergeist"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fLARGE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fLARGE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": []
+        },
+        "GOURGEIST_SMALL": {
+            "id": "GOURGEIST",
+            "formId": "GOURGEIST_SMALL",
+            "dexNr": 711,
+            "generation": 6,
+            "names": {
+                "English": "Gourgeist (Small Size)",
+                "German": "Pumpdjinn (Gr\u00f6\u00dfe S)",
+                "French": "Banshitrouye (Taille Mini)",
+                "Italian": "Gourgeist (Mini)",
+                "Japanese": "\u30d1\u30f3\u30d7\u30b8\u30f3 (\u3061\u3044\u3055\u3044\u30b5\u30a4\u30ba)",
+                "Korean": "\ud38c\ud0a8\uc778 (\uc791\uc740 \uc0ac\uc774\uc988)",
+                "Spanish": "Gourgeist (Tama\u00f1o Peque\u00f1o)"
+            },
+            "stats": {
+                "stamina": 146,
+                "attack": 171,
+                "defense": 219
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "HEX_FAST": {
+                    "id": "HEX_FAST",
+                    "power": 8,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Hex",
+                        "German": "B\u00fcrde",
+                        "French": "Ch\u00e2timent",
+                        "Italian": "Sciagura",
+                        "Japanese": "\u305f\u305f\u308a\u3081",
+                        "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                        "Spanish": "Infortunio"
+                    },
+                    "combat": {
+                        "energy": 12,
+                        "power": 6,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "RAZOR_LEAF_FAST": {
+                    "id": "RAZOR_LEAF_FAST",
+                    "power": 13,
+                    "energy": 7,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Razor Leaf",
+                        "German": "Rasierblatt",
+                        "French": "Tranch\u2019Herbe",
+                        "Italian": "Foglielama",
+                        "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                        "Spanish": "Hoja Afilada"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 9,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SEED_BOMB": {
+                    "id": "SEED_BOMB",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Seed Bomb",
+                        "German": "Samenbomben",
+                        "French": "Canon Graine",
+                        "Italian": "Semebomba",
+                        "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                        "Korean": "\uc528\ud3ed\ud0c4",
+                        "Spanish": "Bomba Germen"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FOUL_PLAY": {
+                    "id": "FOUL_PLAY",
+                    "power": 70,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DARK",
+                        "names": {
+                            "English": "Dark",
+                            "German": "Unlicht",
+                            "French": "T\u00e9n\u00e8bres",
+                            "Italian": "Buio",
+                            "Japanese": "\u3042\u304f",
+                            "Korean": "\uc545",
+                            "Spanish": "Siniestro"
+                        }
+                    },
+                    "names": {
+                        "English": "Foul Play",
+                        "German": "Schmarotzer",
+                        "French": "Tricherie",
+                        "Italian": "Ripicca",
+                        "Japanese": "\u30a4\u30ab\u30b5\u30de",
+                        "Korean": "\uc18d\uc784\uc218",
+                        "Spanish": "Juego Sucio"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FIRE_BLAST": {
+                    "id": "FIRE_BLAST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIRE",
+                        "names": {
+                            "English": "Fire",
+                            "German": "Feuer",
+                            "French": "Feu",
+                            "Italian": "Fuoco",
+                            "Japanese": "\u307b\u306e\u304a",
+                            "Korean": "\ubd88\uaf43",
+                            "Spanish": "Fuego"
+                        }
+                    },
+                    "names": {
+                        "English": "Fire Blast",
+                        "German": "Feuersturm",
+                        "French": "D\u00e9flagration",
+                        "Italian": "Fuocobomba",
+                        "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                        "Korean": "\ubd88\ub300\ubb38\uc790",
+                        "Spanish": "Llamarada"
+                    },
+                    "combat": {
+                        "energy": -80,
+                        "power": 140,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "POLTERGEIST": {
+                    "id": "POLTERGEIST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Poltergeist",
+                        "German": "Poltergeist",
+                        "French": "Esprit Frappeur",
+                        "Italian": "Poltergeist",
+                        "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                        "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                        "Spanish": "Poltergeist"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": []
+        },
+        "GOURGEIST_SUPER": {
+            "id": "GOURGEIST",
+            "formId": "GOURGEIST_SUPER",
+            "dexNr": 711,
+            "generation": 6,
+            "names": {
+                "English": "Gourgeist (Super Size)",
+                "German": "Pumpdjinn (Gr\u00f6\u00dfe XL)",
+                "French": "Banshitrouye (Taille Ultra)",
+                "Italian": "Gourgeist (Maxi)",
+                "Japanese": "\u30d1\u30f3\u30d7\u30b8\u30f3 (\u3068\u304f\u3060\u3044\u30b5\u30a4\u30ba)",
+                "Korean": "\ud38c\ud0a8\uc778 (\ud2b9\ub300 \uc0ac\uc774\uc988)",
+                "Spanish": "Gourgeist (Tama\u00f1o Extragrande)"
+            },
+            "stats": {
+                "stamina": 198,
+                "attack": 182,
+                "defense": 200
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "HEX_FAST": {
+                    "id": "HEX_FAST",
+                    "power": 8,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Hex",
+                        "German": "B\u00fcrde",
+                        "French": "Ch\u00e2timent",
+                        "Italian": "Sciagura",
+                        "Japanese": "\u305f\u305f\u308a\u3081",
+                        "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                        "Spanish": "Infortunio"
+                    },
+                    "combat": {
+                        "energy": 12,
+                        "power": 6,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "RAZOR_LEAF_FAST": {
+                    "id": "RAZOR_LEAF_FAST",
+                    "power": 13,
+                    "energy": 7,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Razor Leaf",
+                        "German": "Rasierblatt",
+                        "French": "Tranch\u2019Herbe",
+                        "Italian": "Foglielama",
+                        "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                        "Spanish": "Hoja Afilada"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 9,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SEED_BOMB": {
+                    "id": "SEED_BOMB",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Seed Bomb",
+                        "German": "Samenbomben",
+                        "French": "Canon Graine",
+                        "Italian": "Semebomba",
+                        "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                        "Korean": "\uc528\ud3ed\ud0c4",
+                        "Spanish": "Bomba Germen"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FOUL_PLAY": {
+                    "id": "FOUL_PLAY",
+                    "power": 70,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DARK",
+                        "names": {
+                            "English": "Dark",
+                            "German": "Unlicht",
+                            "French": "T\u00e9n\u00e8bres",
+                            "Italian": "Buio",
+                            "Japanese": "\u3042\u304f",
+                            "Korean": "\uc545",
+                            "Spanish": "Siniestro"
+                        }
+                    },
+                    "names": {
+                        "English": "Foul Play",
+                        "German": "Schmarotzer",
+                        "French": "Tricherie",
+                        "Italian": "Ripicca",
+                        "Japanese": "\u30a4\u30ab\u30b5\u30de",
+                        "Korean": "\uc18d\uc784\uc218",
+                        "Spanish": "Juego Sucio"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FIRE_BLAST": {
+                    "id": "FIRE_BLAST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIRE",
+                        "names": {
+                            "English": "Fire",
+                            "German": "Feuer",
+                            "French": "Feu",
+                            "Italian": "Fuoco",
+                            "Japanese": "\u307b\u306e\u304a",
+                            "Korean": "\ubd88\uaf43",
+                            "Spanish": "Fuego"
+                        }
+                    },
+                    "names": {
+                        "English": "Fire Blast",
+                        "German": "Feuersturm",
+                        "French": "D\u00e9flagration",
+                        "Italian": "Fuocobomba",
+                        "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                        "Korean": "\ubd88\ub300\ubb38\uc790",
+                        "Spanish": "Llamarada"
+                    },
+                    "combat": {
+                        "energy": -80,
+                        "power": 140,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "POLTERGEIST": {
+                    "id": "POLTERGEIST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Poltergeist",
+                        "German": "Poltergeist",
+                        "French": "Esprit Frappeur",
+                        "Italian": "Poltergeist",
+                        "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                        "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                        "Spanish": "Poltergeist"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSUPER.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSUPER.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": []
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": "AVERAGE",
+            "costume": "FALL_2022",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fAVERAGE.cFALL_2022.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fAVERAGE.cFALL_2022.s.icon.png"
+        },
+        {
+            "form": "AVERAGE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fAVERAGE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fAVERAGE.s.icon.png"
+        },
+        {
+            "form": "LARGE",
+            "costume": "FALL_2022",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fLARGE.cFALL_2022.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fLARGE.cFALL_2022.s.icon.png"
+        },
+        {
+            "form": "LARGE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fLARGE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fLARGE.s.icon.png"
+        },
+        {
+            "form": "SMALL",
+            "costume": "FALL_2022",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.cFALL_2022.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.cFALL_2022.s.icon.png"
+        },
+        {
+            "form": "SMALL",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSMALL.s.icon.png"
+        },
+        {
+            "form": "SUPER",
+            "costume": "FALL_2022",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSUPER.cFALL_2022.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSUPER.cFALL_2022.s.icon.png"
+        },
+        {
+            "form": "SUPER",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSUPER.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.fSUPER.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm711.s.icon.png"
+        }
+    ]
+}
