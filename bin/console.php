@@ -280,7 +280,7 @@ file_put_contents(
     }
     CSS,
 );
-$hasChanges = $cacheLoader->hasChanges();
+$hasChanges  = $cacheLoader->hasChanges();
 $cacheStatus = $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES';
 $logger->debug(sprintf('CACHE_STATUS=%s', $cacheStatus));
-exec('echo "CACHE_STATUS='.$cacheStatus.'" >> $GITHUB_OUTPUT');
+exec('echo "CACHE_STATUS=' . $cacheStatus . '" >> $GITHUB_OUTPUT');
