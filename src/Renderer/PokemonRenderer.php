@@ -184,7 +184,7 @@ final readonly class PokemonRenderer
             }
 
             $out[$moveName] = [
-                'id'         => $moveName,
+                'id'         => (string) $moveName,
                 'power'      => $attack->getPower(),
                 'energy'     => $attack->getEnergy(),
                 'durationMs' => $attack->getDurationMs(),
