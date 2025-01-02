@@ -311,6 +311,12 @@ final class Pokemon
             }
         }
 
+        foreach ($this->pokemonImages as $pokemonImage) {
+            if ($pokemonImage->getAssetBundleSuffix() === null) {
+                return $pokemonImage;
+            }
+        }
+        
         return $this->pokemonImages[0] ?? null;
     }
 
