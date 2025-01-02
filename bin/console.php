@@ -281,5 +281,6 @@ file_put_contents(
     CSS,
 );
 $hasChanges = $cacheLoader->hasChanges();
-$logger->debug(sprintf('CACHE_STATUS=%s', $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES'));
-echo sprintf('::set-output name=CACHE_STATUS::%s' . PHP_EOL, $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES');
+$cacheStatus = $hasChanges ? 'HAS_CHANGES' : 'NO_CHANGES';
+$logger->debug(sprintf('CACHE_STATUS=%s', $cacheStatus));
+exec('echo "CACHE_STATUS='.$cacheStatus.'" >> $GITHUB_OUTPUT');
