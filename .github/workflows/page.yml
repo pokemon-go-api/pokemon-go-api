@@ -34,14 +34,14 @@ jobs:
           ini-values: zend.assertions=1
           tools: composer:v2
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: data/tmp
           key: download-data-tmp-${{ github.run_id }}
           restore-keys: |
             download-data-tmp-
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: |
             vendor/

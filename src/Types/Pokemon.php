@@ -316,7 +316,7 @@ final class Pokemon
                 return $pokemonImage;
             }
         }
-        
+
         return $this->pokemonImages[0] ?? null;
     }
 

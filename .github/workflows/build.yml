@@ -32,7 +32,7 @@ jobs:
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: "Cache dependencies"
-        uses: "actions/cache@v2"
+        uses: "actions/cache@v4"
         with:
           path: "~/.composer/cache"
           key: "php-composer-${{ hashFiles('**/composer.json') }}"
@@ -50,7 +50,7 @@ jobs:
         run: "composer run-script ci"
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Raid Images
           retention-days: 1
