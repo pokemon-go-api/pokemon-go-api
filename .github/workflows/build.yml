@@ -50,7 +50,7 @@ jobs:
         run: "composer run-script ci"
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Raid Images
           retention-days: 1
