@@ -1,0 +1,26 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method PokemonGoApi\\\\PogoAPI\\\\IO\\\\JsonParser\\:\\:decodeToArray\\(\\) should return array\\<string, mixed\\> but returns array\\.$#"
+			count: 1
+			path: src/IO/JsonParser.php
+
+		-
+			message: "#^Method PokemonGoApi\\\\PogoAPI\\\\IO\\\\JsonParser\\:\\:decodeToFullArray\\(\\) should return array\\<string, mixed\\> but returns array\\.$#"
+			count: 1
+			path: src/IO/JsonParser.php
+
+		-
+			message: "#^Offset 'assetBundleValue' does not exist on array\\{0\\?\\: string, 1\\?\\: non\\-falsy\\-string, 2\\?\\: non\\-falsy\\-string, dexNr\\: ''\\|'0'\\|\\(non\\-falsy\\-string&numeric\\-string\\), 3\\?\\: ''\\|numeric\\-string, assetBundleValue\\?\\: ''\\|\\(non\\-falsy\\-string&numeric\\-string\\), 4\\?\\: ''\\|\\(non\\-falsy\\-string&numeric\\-string\\), 5\\?\\: string, \\.\\.\\.\\}\\.$#"
+			count: 1
+			path: src/Types/PokemonImage.php
+
+		-
+			message: "#^Offset 'assetBundleValue2' does not exist on array\\{0\\?\\: string, 1\\?\\: non\\-falsy\\-string, 2\\?\\: non\\-falsy\\-string, dexNr\\: ''\\|'0'\\|\\(non\\-falsy\\-string&numeric\\-string\\), 3\\?\\: ''\\|numeric\\-string, assetBundleValue\\: '', 4\\?\\: ''\\|\\(non\\-falsy\\-string&numeric\\-string\\), 5\\?\\: string, \\.\\.\\.\\}\\.$#"
+			count: 2
+			path: src/Types/PokemonImage.php
+
+		-
+			message: "#^Offset 'id' does not exist on array\\{0\\?\\: string, id\\?\\: non\\-falsy\\-string&numeric\\-string, 1\\?\\: non\\-falsy\\-string&numeric\\-string, name\\?\\: string, 2\\?\\: string\\}\\.$#"
+			count: 1
+			path: src/Types/PokemonMove.php

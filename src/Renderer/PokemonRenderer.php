@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Renderer;
 
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Collections\ItemsCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\Collections\QuestsCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
@@ -12,6 +13,7 @@ use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
+use function array_filter;
 use function array_map;
 
 final readonly class PokemonRenderer
@@ -19,6 +21,7 @@ final readonly class PokemonRenderer
     public function __construct(
         private TranslationCollectionCollection $translations,
         private PokemonAssetsCollection $assetsCollection,
+        private ItemsCollection $itemsCollection,
     ) {
     }
 
@@ -238,18 +241,23 @@ final readonly class PokemonRenderer
         $out = [];
         foreach ($pokemon->getEvolutions() as $evolution) {
             $requiredItem = $evolution->getRequiredItem();
+            $item         = $this->itemsCollection->getByItemId($requiredItem ?? -1);
 
-            if ($requiredItem !== null) {
+            if ($requiredItem !== null && $item !== null) {
                 $itemNames = [];
                 foreach ($translations->getCollections() as $translationCollection) {
                     $itemNames[$translationCollection->getLanguageName()] = $translationCollection->getItemName(
-                        $requiredItem,
+                        $item->templateId,
                     );
                 }
 
+                if (array_filter($itemNames) === []) {
+                    continue;
+                }
+
                 $item = [
-                    'id' => $requiredItem,
-                    'names' => $itemNames,
+                    'id' => $item->templateId,
+                    'names' => array_filter($itemNames),
                 ];
             }
 

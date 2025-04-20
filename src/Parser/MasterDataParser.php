@@ -6,11 +6,13 @@ namespace PokemonGoApi\PogoAPI\Parser;
 
 use Exception;
 use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Collections\ItemsCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\QuestsCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Types\EvolutionQuest;
+use PokemonGoApi\PogoAPI\Types\Item;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
@@ -22,16 +24,19 @@ use function count;
 use function file_get_contents;
 use function preg_match;
 use function str_contains;
+use function str_starts_with;
 use function substr;
 
 class MasterDataParser
 {
+    private ItemsCollection $itemsCollection;
     private PokemonCollection $pokemonCollection;
     private AttacksCollection $attacksCollection;
     private QuestsCollection $questsCollection;
 
     public function __construct(private readonly PokemonAssetsCollection $pokemonAssetsCollection)
     {
+        $this->itemsCollection   = new ItemsCollection();
         $this->pokemonCollection = new PokemonCollection();
         $this->attacksCollection = new AttacksCollection();
         $this->questsCollection  = new QuestsCollection();
@@ -46,6 +51,7 @@ class MasterDataParser
 
         /** @var list<stdClass> $list */
         $list                    = JsonParser::decodeToArray($fileContent);
+        $this->itemsCollection   = $this->parseItems($list);
         $this->attacksCollection = $this->parseMoves($list);
         $this->pokemonCollection = $this->parsePokemon($list);
         $this->questsCollection  = $this->parseQuests($list);
@@ -60,6 +66,11 @@ class MasterDataParser
         return $this->attacksCollection;
     }
 
+    public function getItemsCollection(): ItemsCollection
+    {
+        return $this->itemsCollection;
+    }
+
     public function getPokemonCollection(): PokemonCollection
     {
         return $this->pokemonCollection;
@@ -68,6 +79,32 @@ class MasterDataParser
     public function getQuestsCollection(): QuestsCollection
     {
         return $this->questsCollection;
+    }
+
+    /** @param array<int, stdClass> $list */
+    private function parseItems(array $list): ItemsCollection
+    {
+        $itemsCollection = new ItemsCollection();
+        foreach ($list as $item) {
+            if (! str_starts_with($item->templateId, 'ITEM_')) {
+                continue;
+            }
+
+            assert($item->data instanceof stdClass);
+
+            if (! isset($item->data->itemSettings->itemId)) {
+                continue;
+            }
+
+            $itemsCollection->add(
+                new Item(
+                    $item->data->templateId,
+                    $item->data->itemSettings->itemId,
+                ),
+            );
+        }
+
+        return $itemsCollection;
     }
 
     /** @param array<int, stdClass> $list */
