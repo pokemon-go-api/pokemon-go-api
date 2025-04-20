@@ -74,7 +74,11 @@ foreach (TranslationParser::LANGUAGES as $languageName) {
     );
 }
 
-$pokemonRenderer = new PokemonRenderer($translations, $pokemonAssetsCollection);
+$pokemonRenderer = new PokemonRenderer(
+    $translations,
+    $pokemonAssetsCollection,
+    $masterData->getItemsCollection(),
+);
 $files           = [];
 
 $logger->debug('Generate Types');

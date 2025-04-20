@@ -11,7 +11,7 @@ final class EvolutionBranch
     private string $evolutionId;
     private string $evolutionFormId;
     private int $candyCost;
-    private string|null $requiredItem = null;
+    private string|int|null $requiredItem = null;
     /** @var list<string> */
     private array $questIds = [];
 
@@ -44,7 +44,7 @@ final class EvolutionBranch
         return $this->candyCost;
     }
 
-    public function getRequiredItem(): string|null
+    public function getRequiredItem(): string|int|null
     {
         return $this->requiredItem;
     }
