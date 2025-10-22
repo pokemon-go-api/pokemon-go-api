@@ -6,6 +6,8 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 use stdClass;
 
+use function get_object_vars;
+
 final readonly class PokemonCombatMove
 {
     public function __construct(
@@ -19,7 +21,7 @@ final readonly class PokemonCombatMove
     public static function createFromGameMaster(stdClass $combatMoveData): self
     {
         $moveBuffs = null;
-        if (isset($combatMoveData->combatMove->buffs)) {
+        if (isset($combatMoveData->combatMove->buffs) && get_object_vars($combatMoveData->combatMove->buffs) !== []) {
             $moveBuffs = new PokemonCombatMoveBuffs(
                 (int) ($combatMoveData->combatMove->buffs->buffActivationChance * 100),
                 $combatMoveData->combatMove->buffs->attackerAttackStatStageChange ?? null,
