@@ -53,7 +53,7 @@ final class PokemonFormCollection
         }
 
         return new self(
-            $gameMasterData->formSettings->pokemon,
+            (string) $gameMasterData->formSettings->pokemon,
             ...$forms,
         );
     }

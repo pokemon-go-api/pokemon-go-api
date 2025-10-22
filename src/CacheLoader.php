@@ -83,7 +83,7 @@ class CacheLoader
         $cacheFile = $this->getCacheDir() . 'GAME_MASTER_LATEST.json';
         $cacheKey  = 'github/game_master';
 
-        if ($this->wasRunningInThePastMinutes()) {
+        if (file_exists($cacheFile) && $this->wasRunningInThePastMinutes()) {
             return $cacheFile;
         }
 

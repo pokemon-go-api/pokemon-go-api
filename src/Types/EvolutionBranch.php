@@ -18,8 +18,8 @@ final class EvolutionBranch
     public static function createFromGameMaster(stdClass $evolutionBranch): self
     {
         $self                  = new self();
-        $self->evolutionId     = $evolutionBranch->evolution;
-        $self->evolutionFormId = $evolutionBranch->form ?? $evolutionBranch->evolution;
+        $self->evolutionId     = (string) $evolutionBranch->evolution;
+        $self->evolutionFormId = (string) ($evolutionBranch->form ?? $evolutionBranch->evolution);
         $self->candyCost       = $evolutionBranch->candyCost ?? 0;
         $self->requiredItem    = $evolutionBranch->evolutionItemRequirement ?? null;
         foreach ($evolutionBranch->questDisplay ?? [] as $quest) {

@@ -65,9 +65,11 @@ final class Pokemon
             $secondaryType = PokemonType::createFromPokemonType($pokemonSettings->type2);
         }
 
+        $pokemonId = (string) $pokemonSettings->pokemonId;
+
         $pokemon               = new self(
             (int) $pokemonParts['id'],
-            $pokemonSettings->pokemonId,
+            $pokemonId,
             $pokemonParts['name'],
             PokemonType::createFromPokemonType($pokemonSettings->type),
             $secondaryType,
@@ -105,7 +107,7 @@ final class Pokemon
 
             $tempEvos[] = TemporaryEvolution::createFromGameMaster(
                 $evolutionBranch,
-                $pokemonSettings->pokemonId,
+                $pokemonId,
             );
         }
 
