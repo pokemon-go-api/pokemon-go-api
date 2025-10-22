@@ -2,778 +2,425 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test</title>
 </head>
 <body>
 <section>
-    <div id="raid-list">
-        <div class="raidboss-search">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input class="search boss-search" id="search" autocomplete="off" placeholder="Search Raid Bosses... Try typing Rain">
+    <div class="raid-bosses">
+        <div class="tier"><h2 class="header" data-tier="1">Tier 1</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm562.fGALARIAN.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name small-type">Galarian Yamask</p>
+                        <div class="boss-type"><span class="type type-ground"> <img class="type1" title="Ground"
+                                                                                    src="/assets/img/types/ground.png"> <span
+                                class="type-label">Ground</span> </span> <span class="type type-ghost"> <img
+                                class="type2" title="Ghost" src="/assets/img/types/ghost.png"> <span class="type-label">Ghost</span> </span>
+                        </div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>516 - 561</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>646 - 701</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Sunny" src="/assets/img/weather/sunny.png"> <span
+                            class="label">Sunny</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Fog"
+                                                                                                src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm854.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name">Sinistea</p>
+                        <div class="boss-type"><span class="type type-ghost"> <img class="type1" title="Ghost"
+                                                                                   src="/assets/img/types/ghost.png"> <span
+                                class="type-label">Ghost</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>603 - 650</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>754 - 813</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Fog" src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm1012.fCOUNTERFEIT.icon.png"></div>
+                    <div class="identity"><p class="name">Poltchageist</p>
+                        <div class="boss-type"><span class="type type-grass"> <img class="type1" title="Grass"
+                                                                                   src="/assets/img/types/grass.png"> <span
+                                class="type-label">Grass</span> </span> <span class="type type-ghost"> <img
+                                class="type2" title="Ghost" src="/assets/img/types/ghost.png"> <span class="type-label">Ghost</span> </span>
+                        </div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>603 - 650</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>754 - 813</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Sunny" src="/assets/img/weather/sunny.png"> <span
+                            class="label">Sunny</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Fog"
+                                                                                                src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+            </div>
         </div>
-        <ul class="list">
-            <li class="header-li"><h2 class="boss-tier-header tier-1" style="background: #eeeeee; color: black; border-radius: 5px;"
-                                      alt="Pikachu Electric None Rainy shiny Swinub Ice Ground Snowy Sunny Clear Snorunt Timburr Fighting Cloudy Klink Steel Cubchoo Espurr Psychic Windy ">Tier 1</h2>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 256;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_pm0025_00_pgo_movie2020.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
+        <div class="tier"><h2 class="header" data-tier="3">Tier 3</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm105.fALOLA.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
                     </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Pikachu</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Electric" src="/assets/img/types/electric.png">
-
+                    <div class="identity"><p class="name small-type">Alolan Marowak</p>
+                        <div class="boss-type"><span class="type type-fire"> <img class="type1" title="Fire"
+                                                                                  src="/assets/img/types/fire.png"> <span
+                                class="type-label">Fire</span> </span> <span class="type type-ghost"> <img class="type2"
+                                                                                                           title="Ghost"
+                                                                                                           src="/assets/img/types/ghost.png"> <span
+                                class="type-label">Ghost</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>988 - 1048</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>1235 - 1311</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Sunny" src="/assets/img/weather/sunny.png"> <span
+                            class="label">Sunny</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Fog"
+                                                                                                src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm157.fHISUIAN.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name small-type">Hisuian Typhlosion</p>
+                        <div class="boss-type"><span class="type type-fire"> <img class="type1" title="Fire"
+                                                                                  src="/assets/img/types/fire.png"> <span
+                                class="type-label">Fire</span> </span> <span class="type type-ghost"> <img class="type2"
+                                                                                                           title="Ghost"
+                                                                                                           src="/assets/img/types/ghost.png"> <span
+                                class="type-label">Ghost</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1632 - 1710</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>2041 - 2138</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Sunny" src="/assets/img/weather/sunny.png"> <span
+                            class="label">Sunny</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Fog"
+                                                                                                src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm503.fHISUIAN.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name small-type">Hisuian Samurott</p>
+                        <div class="boss-type"><span class="type type-water"> <img class="type1" title="Water"
+                                                                                   src="/assets/img/types/water.png"> <span
+                                class="type-label">Water</span> </span> <span class="type type-dark"> <img class="type2"
+                                                                                                           title="Dark"
+                                                                                                           src="/assets/img/types/dark.png"> <span
+                                class="type-label">Dark</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1525 - 1601</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>1907 - 2001</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Rainy" src="/assets/img/weather/rainy.png"> <span
+                            class="label">Rainy</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Fog"
+                                                                                                src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+            </div>
+        </div>
+        <div class="tier"><h2 class="header" data-tier="5">Tier 5</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm649.fNORMAL.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name">Genesect</p>
+                        <div class="boss-type"><span class="type type-bug"> <img class="type1" title="Bug"
+                                                                                 src="/assets/img/types/bug.png"> <span
+                                class="type-label">Bug</span> </span> <span class="type type-steel"> <img class="type2"
+                                                                                                          title="Steel"
+                                                                                                          src="/assets/img/types/steel.png"> <span
+                                class="type-label">Steel</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1833 - 1916</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>2292 - 2395</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Rainy" src="/assets/img/weather/rainy.png"> <span
+                            class="label">Rainy</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Snow"
+                                                                                                src="/assets/img/weather/snowy.png"> <span
+                            class="label">Snow</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm649.fDOUSE.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name small-type">Genesect (Douse)</p>
+                        <div class="boss-type"><span class="type type-bug"> <img class="type1" title="Bug"
+                                                                                 src="/assets/img/types/bug.png"> <span
+                                class="type-label">Bug</span> </span> <span class="type type-steel"> <img class="type2"
+                                                                                                          title="Steel"
+                                                                                                          src="/assets/img/types/steel.png"> <span
+                                class="type-label">Steel</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1833 - 1916</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>2292 - 2395</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Rainy" src="/assets/img/weather/rainy.png"> <span
+                            class="label">Rainy</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Snow"
+                                                                                                src="/assets/img/weather/snowy.png"> <span
+                            class="label">Snow</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm649.fSHOCK.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name small-type">Genesect (Shock)</p>
+                        <div class="boss-type"><span class="type type-bug"> <img class="type1" title="Bug"
+                                                                                 src="/assets/img/types/bug.png"> <span
+                                class="type-label">Bug</span> </span> <span class="type type-steel"> <img class="type2"
+                                                                                                          title="Steel"
+                                                                                                          src="/assets/img/types/steel.png"> <span
+                                class="type-label">Steel</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1833 - 1916</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>2292 - 2395</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Rainy" src="/assets/img/weather/rainy.png"> <span
+                            class="label">Rainy</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Snow"
+                                                                                                src="/assets/img/weather/snowy.png"> <span
+                            class="label">Snow</span> </span> </span></div>
+                </div>
+            </div>
+        </div>
+        <div class="tier"><h2 class="header" data-tier="Mega">Mega</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm229.fMEGA.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name">Mega Houndoom</p>
+                        <div class="boss-type"><span class="type type-dark"> <img class="type1" title="Dark"
+                                                                                  src="/assets/img/types/dark.png"> <span
+                                class="type-label">Dark</span> </span> <span class="type type-fire"> <img class="type2"
+                                                                                                          title="Fire"
+                                                                                                          src="/assets/img/types/fire.png"> <span
+                                class="type-label">Fire</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1432 - 1505</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>1790 - 1882</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Fog" src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                              alt="Sunny"
+                                                                                              src="/assets/img/weather/sunny.png"> <span
+                            class="label">Sunny</span> </span> </span></div>
+                </div>
+                <div class="card">
+                    <div class="boss-img"><img
+                            src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm359.fMEGA.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="identity"><p class="name">Mega Absol</p>
+                        <div class="boss-type"><span class="type type-dark"> <img class="type1" title="Dark"
+                                                                                  src="/assets/img/types/dark.png"> <span
+                                class="type-label">Dark</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1370 - 1443</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>1712 - 1805</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Fog" src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shadow-raid-bosses">
+        <div class="tier"><h2 class="header" data-tier="1">Shadow Tier 1</h2>
+            <div class="grid">
+                <div class="card -shadow">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm562.icon.png">
+                    </div>
+                    <div class="identity"><p class="name">Yamask</p>
+                        <div class="boss-type"><span class="type type-ghost"> <img class="type1" title="Ghost"
+                                                                                   src="/assets/img/types/ghost.png"> <span
+                                class="type-label">Ghost</span> </span></div>
+                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>482 - 561</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>603 - 701</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Fog" src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
+                </div>
+                <div class="card -shadow">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm708.icon.png">
+                    </div>
+                    <div class="identity"><p class="name">Phantump</p>
+                        <div class="boss-type"><span class="type type-ghost"> <img class="type1" title="Ghost"
+                                                                                   src="/assets/img/types/ghost.png"> <span
+                                class="type-label">Ghost</span> </span> <span class="type type-grass"> <img
+                                class="type2" title="Grass" src="/assets/img/types/grass.png"> <span class="type-label">Grass</span> </span>
                         </div>
                     </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>493 - 536
-                    </div>
-                    <div class="boss-3 larger-cp ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Rainy" src="/assets/img/weather/rainy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>616 - 670</span>
-                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>558 - 642</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>698 - 802</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Fog" src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                              alt="Sunny"
+                                                                                              src="/assets/img/weather/sunny.png"> <span
+                            class="label">Sunny</span> </span> </span></div>
                 </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 255;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_220_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
+            </div>
+        </div>
+        <div class="tier"><h2 class="header" data-tier="3">Shadow Tier 3</h2>
+            <div class="grid">
+                <div class="card -shadow">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm123.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
                     </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Swinub</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Ice" src="/assets/img/types/ice.png">
-
-                            <img class="type2" title="Ground" src="/assets/img/types/ground.png">
-
-                        </div>
+                    <div class="identity"><p class="name">Scyther</p>
+                        <div class="boss-type"><span class="type type-bug"> <img class="type1" title="Bug"
+                                                                                 src="/assets/img/types/bug.png"> <span
+                                class="type-label">Bug</span> </span> <span class="type type-flying"> <img class="type2"
+                                                                                                           title="Flying"
+                                                                                                           src="/assets/img/types/flying.png"> <span
+                                class="type-label">Flying</span> </span></div>
                     </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>384 - 423
-                    </div>
-                    <div class="boss-3  larger-cp2">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				  <img class="weather2" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>480 - 529</span>
-                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1414 - 1546</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>1768 - 1933</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Rainy" src="/assets/img/weather/rainy.png"> <span
+                            class="label">Rainy</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                alt="Windy"
+                                                                                                src="/assets/img/weather/windy.png"> <span
+                            class="label">Windy</span> </span> </span></div>
                 </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 254;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_361_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
+                <div class="card -shadow">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm142.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
                     </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Snorunt</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Ice" src="/assets/img/types/ice.png">
-
-                        </div>
+                    <div class="identity"><p class="name">Aerodactyl</p>
+                        <div class="boss-type"><span class="type type-rock"> <img class="type1" title="Rock"
+                                                                                  src="/assets/img/types/rock.png"> <span
+                                class="type-label">Rock</span> </span> <span class="type type-flying"> <img
+                                class="type2" title="Flying" src="/assets/img/types/flying.png"> <span
+                                class="type-label">Flying</span> </span></div>
                     </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>465 - 507
-                    </div>
-                    <div class="boss-3 larger-cp ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>581 - 634</span>
-                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1456 - 1590</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>1821 - 1988</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Partly Cloudy" src="/assets/img/weather/partlycloudy.png"> <span
+                            class="label">Partly Cloudy</span> </span> <span class="weather-pill"> <img class="weather2"
+                                                                                                        alt="Windy"
+                                                                                                        src="/assets/img/weather/windy.png"> <span
+                            class="label">Windy</span> </span> </span></div>
                 </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 253;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_532_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
+                <div class="card -shadow">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm302.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
                     </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Timburr</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fighting" src="/assets/img/types/fighting.png">
-
-                        </div>
+                    <div class="identity"><p class="name">Sableye</p>
+                        <div class="boss-type"><span class="type type-dark"> <img class="type1" title="Dark"
+                                                                                  src="/assets/img/types/dark.png"> <span
+                                class="type-label">Dark</span> </span> <span class="type type-ghost"> <img class="type2"
+                                                                                                           title="Ghost"
+                                                                                                           src="/assets/img/types/ghost.png"> <span
+                                class="type-label">Ghost</span> </span></div>
                     </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>699 - 751
-                    </div>
-                    <div class="boss-3 larger-cp ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Cloudy" src="/assets/img/weather/cloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>874 - 939</span>
-                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>747 - 843</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>934 - 1054</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Fog" src="/assets/img/weather/foggy.png"> <span
+                            class="label">Fog</span> </span> </span></div>
                 </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 252;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_599_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
+            </div>
+        </div>
+        <div class="tier"><h2 class="header" data-tier="5">Shadow Tier 5</h2>
+            <p class="note">5-star Shadow Raids appear on Saturday and Sunday. They are also appearing on some weekdays
+                for some reason.</p>
+            <div class="grid">
+                <div class="card -shadow">
+                    <div class="boss-img"><img src="https://cdn.leekduck.com/assets/img/pokemon_icons/pm380.icon.png">
+                        <svg class="shiny-icon">
+                            <use href="#shiny-icon"></use>
+                        </svg>
                     </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Klink</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Steel" src="/assets/img/types/steel.png">
-
-                        </div>
+                    <div class="identity"><p class="name">Latias</p>
+                        <div class="boss-type"><span class="type type-dragon"> <img class="type1" title="Dragon"
+                                                                                    src="/assets/img/types/dragon.png"> <span
+                                class="type-label">Dragon</span> </span> <span class="type type-psychic"> <img
+                                class="type2" title="Psychic" src="/assets/img/types/psychic.png"> <span
+                                class="type-label">Psychic</span> </span></div>
                     </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>502 - 546
-                    </div>
-                    <div class="boss-3 larger-cp ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>628 - 683</span>
-                    </div>
+                    <div class="cp-range"><span class="cp_prefix">CP </span>1855 - 2006</div>
+                    <div class="boosted-cp-row"><span class="boosted-cp"><span
+                            class="cp_prefix">CP </span>2320 - 2507</span></div>
+                    <div class="weather-boosted"><span class="boss-weather"> <span class="weather-pill"> <img
+                            class="weather1" alt="Windy" src="/assets/img/weather/windy.png"> <span
+                            class="label">Windy</span> </span> </span></div>
                 </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 251;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_613_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Cubchoo</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Ice" src="/assets/img/types/ice.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>563 - 610
-                    </div>
-                    <div class="boss-3 larger-cp ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>704 - 763</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 250;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_677_00.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Espurr</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>669 - 719
-                    </div>
-                    <div class="boss-3 larger-cp ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>837 - 899</span>
-                    </div>
-                </div>
-            </li>
-            <li class="header-li"><h2 class="boss-tier-header tier-3" style="background: #eeeeee; color: black; border-radius: 5px;"
-                                      alt="Machamp Fighting None Cloudy Alolan Marowak Fire Ghost Sunny Clear Foggy shiny Hariyama Mawile Steel Fairy Snowy Aggron Rock Partly Excadrill Ground ">Tier
-                3</h2></li>
-
-            <li class="boss-item">
-                <div class="boss-border">
-                    <div class="boss-img">
-                        <img src="/pokemon_icons/pokemon_icon_103_61.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Alolan Exeggutor</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Grass" src="/assets/img/types/grass.png">
-
-                            <img class="type2" title="Dragon" src="/assets/img/types/dragon.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1643 - 1722
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Sunny" src="/assets/img/weather/sunny.png">
-
-				  <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>2055 - 2153</span>
-                    </div>
-                </div>
-            </li>
-
-            <li class="boss-item">
-                <div class="boss-border">
-                    <div class="boss-img">
-                        <img src="/pokemon_icons/pokemon_icon_026_61.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Alolan Raichu</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Electric" src="/assets/img/types/electric.png">
-
-                            <img class="type2" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1238 - 1306
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Rainy" src="/assets/img/weather/rainy.png">
-
-				  <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1548 - 1633</span>
-                    </div>
-                </div>
-            </li>
-
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 249;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_068_00.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Machamp</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fighting" src="/assets/img/types/fighting.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1667 - 1746
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Cloudy" src="/assets/img/weather/cloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>2084 - 2183</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 248;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_105_61.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Alolan Marowak</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fire" src="/assets/img/types/fire.png">
-
-                            <img class="type2" title="Ghost" src="/assets/img/types/ghost.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>988 - 1048
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				  <img class="weather2" title="Foggy" src="/assets/img/weather/foggy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1235 - 1311</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 247;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_297_00.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Hariyama</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fighting" src="/assets/img/types/fighting.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1537 - 1616
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Cloudy" src="/assets/img/weather/cloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1921 - 2020</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 246;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_303_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Mawile</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Steel" src="/assets/img/types/steel.png">
-
-                            <img class="type2" title="Fairy" src="/assets/img/types/fairy.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>877 - 934
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				  <img class="weather2" title="Cloudy" src="/assets/img/weather/cloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1096 - 1167</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 245;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_306_00.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Aggron</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Steel" src="/assets/img/types/steel.png">
-
-                            <img class="type2" title="Rock" src="/assets/img/types/rock.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1636 - 1714
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				  <img class="weather2" title="Partly" src="/assets/img/weather/partlycloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>2045 - 2143</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 244;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_530_00.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Excadrill</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Ground" src="/assets/img/types/ground.png">
-
-                            <img class="type2" title="Steel" src="/assets/img/types/steel.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1770 - 1853
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				  <img class="weather2" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>2212 - 2317</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 240;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_110_31.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Galarian Weezing</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Poison" src="/assets/img/types/poison.png">
-
-                            <img class="type2" title="Fairy" src="/assets/img/types/fairy.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1242 - 1310
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Cloudy" src="/assets/img/weather/cloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1553 - 1637</span>
-                    </div>
-                </div>
-            </li>
-            <li class="header-li"><h2 class="boss-tier-header tier-5" style="background: #eeeeee; color: black; border-radius: 5px;" alt="Registeel Steel None Snowy shiny Kyurem Dragon Ice Windy ">
-                Tier
-                5</h2></li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 243;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_379_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Registeel</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Steel" src="/assets/img/types/steel.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1326 - 1398
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1658 - 1748</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 242;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_646_11.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Kyurem</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Dragon" src="/assets/img/types/dragon.png">
-
-                            <img class="type2" title="Ice" src="/assets/img/types/ice.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1957 - 2042
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Windy" src="/assets/img/weather/windy.png">
-
-				  <img class="weather2" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>2446 - 2553</span>
-                    </div>
-                </div>
-            </li>
-            <li class="header-li"><h2 class="boss-tier-header tier-Mega" style="background: #eeeeee; color: black; border-radius: 5px;"
-                                      alt="Mega Charizard X Fire Dragon Sunny Clear Windy shiny Mega Gengar Ghost Poison Foggy Cloudy Mega Abomasnow Grass Ice Snowy ">Mega</h2></li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 241;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_006_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Mega Charizard X</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fire" src="/assets/img/types/fire.png">
-
-                            <img class="type2" title="Dragon" src="/assets/img/types/dragon.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1574 - 1651
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				  <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1968 - 2064</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 240;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_094_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Mega Gengar</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Ghost" src="/assets/img/types/ghost.png">
-
-                            <img class="type2" title="Poison" src="/assets/img/types/poison.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1566 - 1644
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Foggy" src="/assets/img/weather/foggy.png">
-
-				  <img class="weather2" title="Cloudy" src="/assets/img/weather/cloudy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1958 - 2055</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 239;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_460_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Mega Abomasnow</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Grass" src="/assets/img/types/grass.png">
-
-                            <img class="type2" title="Ice" src="/assets/img/types/ice.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1281 - 1349
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				  <img class="weather2" title="Snowy" src="/assets/img/weather/snowy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1601 - 1687</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 240;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_006_52.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Mega Charizard Y</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fire" src="/assets/img/types/fire.png">
-
-                            <img class="type2" title="Flying" src="/assets/img/types/flying.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1574 - 1651
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				  <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1968 - 2064</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 239;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_009_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Mega Blastoise</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Water" src="/assets/img/types/water.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1338 - 1409
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Rainy" src="/assets/img/weather/rainy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1673 - 1761</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 238;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_018_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Mega Pidgeot</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Normal" src="/assets/img/types/normal.png">
-
-                            <img class="type2" title="Flying" src="/assets/img/types/flying.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1151 - 1216
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Partly" src="/assets/img/weather/partlycloudy.png">
-
-				  <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1439 - 1521</span>
-                    </div>
-                </div>
-            </li>
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 236;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_229_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Mega Houndoom</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Dark" src="/assets/img/types/dark.png">
-
-                            <img class="type2" title="Fire" src="/assets/img/types/fire.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1432 - 1505
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Foggy" src="/assets/img/weather/foggy.png">
-
-				  <img class="weather2" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1790 - 1882</span>
-                    </div>
-                </div>
-            </li>
-            <li class="header-li"><h2 class="boss-tier-header tier-EX" style="background: #eeeeee; color: black; border-radius: 5px;" alt="Deoxys (Speed) Psychic None Windy ">EX</h2></li>
-            <li class="boss-item">
-                <div class="boss-border">
-                    <div class="boss-img">
-                        <img src="/pokemon_icons/pokemon_icon_386_14.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Deoxys (Speed)</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1568 - 1645
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1960 - 2056</span>
-                    </div>
-                </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 </section>
 </body>

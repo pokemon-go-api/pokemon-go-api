@@ -6,6 +6,7 @@ namespace PokemonGoApi\PogoAPI\RaidOverwrite;
 
 use DateTimeImmutable;
 use DateTimeZone;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use stdClass;
 
 /** @see data/raidOverwrites.xsd */
@@ -21,7 +22,7 @@ class RaidBossOverwriteStruct
         stdClass $endDate,
         private readonly string $pokemon,
         private readonly string|null $form,
-        private readonly string $level,
+        private readonly RaidLevel $level,
         private readonly bool $shiny,
     ) {
         $this->startDate = new DateTimeImmutable(
@@ -48,7 +49,7 @@ class RaidBossOverwriteStruct
         return $this->endDate;
     }
 
-    public function getLevel(): string
+    public function getLevel(): RaidLevel
     {
         return $this->level;
     }

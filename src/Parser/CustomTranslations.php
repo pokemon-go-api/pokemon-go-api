@@ -10,6 +10,7 @@ class CustomTranslations
     public const REGIONAL_PREFIX     = 'regional_form_';
     public const REGIONFORM_ALOLAN   = 'alola';
     public const REGIONFORM_GALARIAN = 'galar';
+    public const REGIONFORM_HISUIAN  = 'hisuian';
 
     /** @return array<string, array<string, string>> */
     public static function load(): array
@@ -18,6 +19,7 @@ class CustomTranslations
             TranslationParser::ENGLISH  => [
                 self::REGIONAL_PREFIX . self::REGIONFORM_ALOLAN   => 'Alolan %s',
                 self::REGIONAL_PREFIX . self::REGIONFORM_GALARIAN => 'Galarian %s',
+                self::REGIONAL_PREFIX . self::REGIONFORM_HISUIAN  => 'Hisuian %s',
                 'raidgraphic_header_level' => 'Level',
                 'raidgraphic_header_boss' => 'Raidboss',
                 'raidgraphic_header_type' => 'Types',
@@ -35,6 +37,7 @@ class CustomTranslations
             TranslationParser::GERMAN   => [
                 self::REGIONAL_PREFIX . self::REGIONFORM_ALOLAN   => 'Alola-%s',
                 self::REGIONAL_PREFIX . self::REGIONFORM_GALARIAN => 'Galar-%s',
+                self::REGIONAL_PREFIX . self::REGIONFORM_HISUIAN  => 'Hisuian-%s',
                 'raidgraphic_header_level' => 'Level',
                 'raidgraphic_header_boss' => 'Raidboss',
                 'raidgraphic_header_type' => 'Typen',
@@ -52,6 +55,7 @@ class CustomTranslations
             TranslationParser::FRENCH   => [
                 self::REGIONAL_PREFIX . self::REGIONFORM_ALOLAN   => '%s d\'Alola',
                 self::REGIONAL_PREFIX . self::REGIONFORM_GALARIAN => '%s de Galar',
+                self::REGIONAL_PREFIX . self::REGIONFORM_HISUIAN  => '%s de Hisuian',
                 'raidgraphic_header_level' => 'Level',
                 'raidgraphic_header_boss' => 'Raidboss',
                 'raidgraphic_header_type' => 'Types',
@@ -69,6 +73,7 @@ class CustomTranslations
             TranslationParser::ITALIAN  => [
                 self::REGIONAL_PREFIX . self::REGIONFORM_ALOLAN   => '%s di Alola',
                 self::REGIONAL_PREFIX . self::REGIONFORM_GALARIAN => '%s di Galar',
+                self::REGIONAL_PREFIX . self::REGIONFORM_HISUIAN  => '%s di Hisuian',
                 'raidgraphic_header_level' => 'Level',
                 'raidgraphic_header_boss' => 'Raidboss',
                 'raidgraphic_header_type' => 'Types',
@@ -120,6 +125,7 @@ class CustomTranslations
             TranslationParser::SPANISH  => [
                 self::REGIONAL_PREFIX . self::REGIONFORM_ALOLAN   => '%s de Alola',
                 self::REGIONAL_PREFIX . self::REGIONFORM_GALARIAN => '%s de Galar',
+                self::REGIONAL_PREFIX . self::REGIONFORM_HISUIAN  => '%s de Galar',
                 'raidgraphic_header_level' => 'Level',
                 'raidgraphic_header_boss' => 'Raidboss',
                 'raidgraphic_header_type' => 'Types',

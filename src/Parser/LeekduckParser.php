@@ -6,11 +6,14 @@ namespace PokemonGoApi\PogoAPI\Parser;
 
 use DOMDocument;
 use DOMElement;
+use DOMXPath;
+use Exception;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use Throwable;
 
 use function assert;
@@ -18,10 +21,11 @@ use function count;
 use function explode;
 use function implode;
 use function preg_match;
-use function preg_replace;
 use function similar_text;
 use function str_replace;
+use function str_starts_with;
 use function stripos;
+use function strtolower;
 use function strtoupper;
 use function trim;
 use function usort;
@@ -37,136 +41,114 @@ class LeekduckParser
         $domDocument = new DOMDocument();
         @$domDocument->loadHTMLFile($htmlPage);
 
-        $raidList = $domDocument->getElementById('raid-list');
-        if ($raidList === null) {
+        $xpath         = new DOMXPath($domDocument);
+        $raidListItems = $xpath->query(
+            "//div[contains(@class, 'raid-bosses')] | //div[contains(@class, 'shadow-raid-bosses')]",
+        );
+        if (! $raidListItems || $raidListItems->length === 0) {
             return new RaidBossCollection();
         }
 
-        $liItems          = $raidList->getElementsByTagName('li');
-        $raids            = new RaidBossCollection();
-        $currentTierLevel = 'unknown';
-        foreach ($liItems as $liItem) {
-            assert($liItem instanceof DOMElement);
-            $attributeClass = $liItem->attributes->getNamedItem('class');
-            if ($attributeClass !== null && $attributeClass->nodeValue === 'header-li') {
-                $currentTierLevelText = trim(preg_replace('~\s+~', ' ', $liItem->textContent) ?? '');
-                switch (true) {
-                    case stripos($currentTierLevelText, 'EX') === 0:
-                        $currentTierLevel = RaidBoss::RAID_LEVEL_EX;
-                        break;
-                    case stripos($currentTierLevelText, 'Mega') === 0:
-                        $currentTierLevel = RaidBoss::RAID_LEVEL_MEGA;
-                        break;
-                    case stripos($currentTierLevelText, 'Tier 5') === 0:
-                        $currentTierLevel = RaidBoss::RAID_LEVEL_5;
-                        break;
-                    case stripos($currentTierLevelText, 'Tier 3') === 0:
-                        $currentTierLevel = RaidBoss::RAID_LEVEL_3;
-                        break;
-                    case stripos($currentTierLevelText, 'Tier 1') === 0:
-                        $currentTierLevel = RaidBoss::RAID_LEVEL_1;
-                        break;
-                }
-            } else {
-                $bossNameValue = trim($this->getElementsByClass($liItem, 'boss-name')[0]->nodeValue ?? '');
-                [, $formName]  = $this->extractFormBossName($bossNameValue);
+        $raids = new RaidBossCollection();
+        foreach ($raidListItems->getIterator() as $raidList) {
+            assert($raidList instanceof DOMElement);
+            $tiers = $this->getElementsByClass($raidList, 'tier');
 
-                $bossImageContainer = $this->getElementsByClass($liItem, 'boss-img')[0] ?? null;
-                $pokemonImage       = null;
-                if ($bossImageContainer !== null) {
-                    $bossImage = $bossImageContainer->getElementsByTagName('img')[0];
-                    if ($bossImage !== null) {
-                        $imgSrc = $bossImage->getAttribute('src');
-                        try {
-                            $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
-                        } catch (Throwable) {
-                        }
-                    }
-                }
+            foreach ($tiers as $tierContainer) {
+                $raidTierLevel = $this->extractTierLevel($tierContainer);
 
-                if ($pokemonImage === null) {
-                    continue;
-                }
+                foreach ($this->getElementsByClass($tierContainer, 'card') as $cardContainer) {
+                    $pokemonImage = $this->extractPokemonImage($cardContainer);
+                    $isShiny      = count($this->getElementsByClass($cardContainer, 'shiny-icon')) > 0;
 
-                $pokemon = $basePokemon = $this->pokemonCollection->getByDexId($pokemonImage->getDexNr());
-                if ($basePokemon === null || $pokemon === null) {
-                    continue;
-                }
-
-                $pokemon = $pokemon->withPokemonForm(
-                    new PokemonForm(
-                        $pokemon->getId(),
-                        $pokemon->getFormId(),
-                        $pokemonImage->getAssetBundleValue(),
-                        $pokemonImage->getAssetBundleSuffix(),
-                    ),
-                );
-
-                $pokemonIdParts = [$basePokemon->getId()];
-                if ($formName !== null) {
-                    $pokemonIdParts = [...$pokemonIdParts, ...explode(' ', trim($formName))];
-                }
-
-                $pokemonFormId = strtoupper(implode('_', $pokemonIdParts));
-
-                $raidTierLevel             = $currentTierLevel;
-                $pokemonTemporaryEvolution = null;
-                foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
-                    if ($temporaryEvolution->getId() !== $pokemonFormId) {
+                    if ($pokemonImage === null) {
                         continue;
                     }
 
-                    $pokemonTemporaryEvolution = $temporaryEvolution;
+                    [, $formName] = $this->extractFormBossName($cardContainer);
 
-                    if ($raidTierLevel !== RaidBoss::RAID_LEVEL_MEGA || $pokemon->getPokemonClass() === null) {
+                    $pokemon = $basePokemon = $this->pokemonCollection->getByDexId($pokemonImage->getDexNr());
+                    if ($basePokemon === null || $pokemon === null) {
                         continue;
                     }
 
-                    $raidTierLevel = RaidBoss::RAID_LEVEL_LEGENDARY_MEGA;
-                }
+                    $pokemon = $pokemon->withPokemonForm(
+                        new PokemonForm(
+                            $pokemon->getId(),
+                            $pokemon->getFormId(),
+                            $pokemonImage->getAssetBundleValue(),
+                            $pokemonImage->getAssetBundleSuffix(),
+                        ),
+                    );
 
-                $bestMatchingRegionForms = [];
-                foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
-                    if ($regionForm->getFormId() !== $pokemonFormId) {
-                        $scorePercent = null;
-                        similar_text($regionForm->getFormId(), $pokemonFormId, $scorePercent);
-                        if ($scorePercent >= 70) {
-                            $bestMatchingRegionForms[] = [
-                                'score' => $scorePercent,
-                                'form'  => $regionForm,
-                            ];
+                    $pokemonIdParts = [$basePokemon->getId()];
+                    if ($formName !== null) {
+                        $pokemonIdParts = [...$pokemonIdParts, ...explode(' ', trim($formName))];
+                    }
+
+                    $pokemonFormId = strtoupper(implode('_', $pokemonIdParts));
+
+                    $pokemonTemporaryEvolution = null;
+                    foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
+                        if ($temporaryEvolution->getId() !== $pokemonFormId) {
+                            continue;
                         }
 
-                        continue;
+                        $pokemonTemporaryEvolution = $temporaryEvolution;
+
+                        if ($raidTierLevel !== RaidLevel::RaidMega || $pokemon->getPokemonClass() === null) {
+                            continue;
+                        }
+
+                        $raidTierLevel = RaidLevel::RaidLegendaryMega;
                     }
 
-                    $pokemon = $regionForm;
-                }
+                    $bestMatchingRegionForms = [];
+                    foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
+                        if ($regionForm->getFormId() !== $pokemonFormId) {
+                            $scorePercent = null;
+                            similar_text($regionForm->getFormId(), $pokemonFormId, $scorePercent);
+                            if ($scorePercent >= 70) {
+                                $bestMatchingRegionForms[] = [
+                                    'score' => $scorePercent,
+                                    'form' => $regionForm,
+                                ];
+                            }
 
-                // handle not 100% correct form names like Shellos for "east" and "west"
-                // but with internal name "east_sea" and "west_sea"
-                if (
-                    $pokemonTemporaryEvolution === null
-                    && $formName !== null
-                    && $pokemon->getId() === $pokemon->getFormId()
-                    && count($bestMatchingRegionForms) > 0
-                ) {
-                    usort($bestMatchingRegionForms, static fn (array $a, array $b): int => $b['score'] <=> $a['score']);
-                    $pokemon = $bestMatchingRegionForms[0]['form'];
-                }
+                            continue;
+                        }
 
-                if ($raidTierLevel === RaidBoss::RAID_LEVEL_5 && $pokemon->isUltraBeast()) {
-                    $raidTierLevel = RaidBoss::RAID_LEVEL_ULTRA_BEAST;
-                }
+                        $pokemon = $regionForm;
+                    }
 
-                $raidboss = new RaidBoss(
-                    $pokemon,
-                    count($this->getElementsByClass($liItem, 'shiny-icon')) === 1,
-                    $raidTierLevel,
-                    $pokemonTemporaryEvolution,
-                    $pokemonImage->getCostume(),
-                );
-                $raids->add($raidboss);
+                    // handle not 100% correct form names like Shellos for "east" and "west"
+                    // but with internal name "east_sea" and "west_sea"
+                    if (
+                        $pokemonTemporaryEvolution === null
+                        && $formName !== null
+                        && $pokemon->getId() === $pokemon->getFormId()
+                        && count($bestMatchingRegionForms) > 0
+                    ) {
+                        usort(
+                            $bestMatchingRegionForms,
+                            static fn (array $a, array $b): int => $b['score'] <=> $a['score'],
+                        );
+                        $pokemon = $bestMatchingRegionForms[0]['form'];
+                    }
+
+                    if ($raidTierLevel === RaidLevel::Raid5 && $pokemon->isUltraBeast()) {
+                        $raidTierLevel = RaidLevel::RaidUltraBeast;
+                    }
+
+                    $raidboss = new RaidBoss(
+                        $pokemon,
+                        $isShiny,
+                        $raidTierLevel,
+                        $pokemonTemporaryEvolution,
+                        $pokemonImage->getCostume(),
+                    );
+                    $raids->add($raidboss);
+                }
             }
         }
 
@@ -196,8 +178,9 @@ class LeekduckParser
     }
 
     /** @return array<int, string|null> */
-    private function extractFormBossName(string $bossName): array
+    private function extractFormBossName(DOMElement $container): array
     {
+        $bossName = $this->extractBossName($container);
         if (stripos($bossName, 'Mega') !== false) {
             if (stripos($bossName, ' X') !== false) {
                 return [$bossName, 'Mega X'];
@@ -218,11 +201,81 @@ class LeekduckParser
             return [$bossName, 'Galarian'];
         }
 
+        if (stripos($bossName, 'Hisuian') !== false) {
+            return [$bossName, 'Hisuian'];
+        }
+
         $matches = [];
         if (preg_match('~\((?<FormName>\w+)\)~', $bossName, $matches)) {
             return [str_replace($matches[0], '', $bossName), $matches['FormName']];
         }
 
         return [$bossName, null];
+    }
+
+    public function extractTierLevel(DOMElement $tierContainer): RaidLevel
+    {
+        $isShadow    = false;
+        $tierLevel   = null;
+        $header      = null;
+        $tierHeaders = $tierContainer->getElementsByTagName('h2');
+        foreach ($tierHeaders as $header) {
+            if ($header->getAttribute('class') === 'header') {
+                $tierLevel = $header->getAttribute('data-tier');
+                $isShadow  = str_starts_with($header->nodeValue ?? '', 'Shadow ');
+                break;
+            }
+        }
+
+        if ($isShadow) {
+            return match ($tierLevel) {
+                '1' => RaidLevel::ShadowRaid1,
+                '3' => RaidLevel::ShadowRaid3,
+                '5' => RaidLevel::ShadowRaid5,
+                default => throw new Exception(
+                    'Can not extract shadow raid tier level from ' . $header?->nodeValue,
+                )
+            };
+        }
+
+        return match (strtolower($tierLevel ?? '')) {
+            '1' => RaidLevel::Raid1,
+            '3' => RaidLevel::Raid3,
+            '5' => RaidLevel::Raid5,
+            'mega' => RaidLevel::RaidMega,
+            default => throw new Exception('Can not extract raid tier level from ' . $header?->nodeValue)
+        };
+    }
+
+    public function extractBossName(DOMElement $tierContainer): string
+    {
+        $bossNamesElems = $tierContainer->getElementsByTagName('p');
+        foreach ($bossNamesElems as $elem) {
+            if ($elem->getAttribute('class') === 'name' || $elem->getAttribute('class') === 'name small-type') {
+                return trim($elem->nodeValue ?? '');
+            }
+        }
+
+        return '';
+    }
+
+    public function extractPokemonImage(DOMElement $card): PokemonImage|null
+    {
+        $bossImageContainer = $this->getElementsByClass($card, 'boss-img')[0] ?? null;
+        if ($bossImageContainer === null) {
+            return null;
+        }
+
+        $pokemonImage = null;
+        $bossImage    = $bossImageContainer->getElementsByTagName('img')[0];
+        if ($bossImage !== null) {
+            $imgSrc = $bossImage->getAttribute('src');
+            try {
+                $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
+            } catch (Throwable) {
+            }
+        }
+
+        return $pokemonImage;
     }
 }

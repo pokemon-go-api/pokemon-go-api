@@ -17,6 +17,7 @@ use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwriteStruct;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 
 #[CoversClass(RaidBossOverwrite::class)]
 #[UsesClass(PokemonCollection::class)]
@@ -48,7 +49,7 @@ class RaidBossOverwriteTest extends TestCase
             new RaidBoss(
                 new Pokemon(1, 'Test', 'Test_Form1', PokemonType::none(), PokemonType::none()),
                 true,
-                RaidBoss::RAID_LEVEL_1,
+                RaidLevel::Raid1,
                 null,
             ),
         );
@@ -56,7 +57,7 @@ class RaidBossOverwriteTest extends TestCase
             new RaidBoss(
                 new Pokemon(1, 'Test', 'Test_Form2', PokemonType::none(), PokemonType::none()),
                 true,
-                RaidBoss::RAID_LEVEL_1,
+                RaidLevel::Raid1,
                 null,
             ),
         );
@@ -69,7 +70,7 @@ class RaidBossOverwriteTest extends TestCase
                     'startDate' => (object) ['date' => $now->modify('-1 Week')->format('Y-m-d H:i')],
                     'endDate' => (object) ['date' => $now->modify('-2 Hours 59 Minutes')->format('Y-m-d H:i')],
                     'pokemon' => 'Test',
-                    'level' => RaidBoss::RAID_LEVEL_1,
+                    'level' => RaidLevel::Raid1->value,
                     'shiny' => 'false',
                 ],
                 (object) [
@@ -77,7 +78,7 @@ class RaidBossOverwriteTest extends TestCase
                     'endDate' => (object) ['date' => $now->modify('-3 Hours 1 Minute')->format('Y-m-d H:i')],
                     'pokemon' => 'Test',
                     'form' => 'Test_Form2',
-                    'level' => RaidBoss::RAID_LEVEL_1,
+                    'level' => RaidLevel::Raid1->value,
                     'shiny' => 'false',
                 ],
                 (object) [
@@ -85,7 +86,7 @@ class RaidBossOverwriteTest extends TestCase
                     'endDate' => (object) ['date' => $now->modify('+3 Hours')->format('Y-m-d H:i')],
                     'pokemon' => 'Test',
                     'form' => 'Test_Form3',
-                    'level' => RaidBoss::RAID_LEVEL_1,
+                    'level' => RaidLevel::Raid1->value,
                     'shiny' => 'false',
                 ],
             ],
@@ -93,14 +94,13 @@ class RaidBossOverwriteTest extends TestCase
             new NoopLogger(),
         );
 
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form2'));
-        $this->assertNull($existingRaidBossCollection->getById('Test_Form3'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1-lvl1'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form2-lvl1'));
+        $this->assertNull($existingRaidBossCollection->getById('Test_Form3-lvl1'));
 
         $sut->overwrite($existingRaidBossCollection);
 
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1'));
-        $this->assertNull($existingRaidBossCollection->getById('Test_Form2'));
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form3'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1-lvl1'));
+        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form3-lvl1'));
     }
 }

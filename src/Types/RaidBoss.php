@@ -8,21 +8,13 @@ use function array_values;
 
 final class RaidBoss
 {
-    public const string RAID_LEVEL_1              = 'lvl1';
-    public const string RAID_LEVEL_3              = 'lvl3';
-    public const string RAID_LEVEL_5              = 'lvl5';
-    public const string RAID_LEVEL_EX             = 'ex';
-    public const string RAID_LEVEL_MEGA           = 'mega';
-    public const string RAID_LEVEL_LEGENDARY_MEGA = 'legendary_mega';
-    public const string RAID_LEVEL_ULTRA_BEAST    = 'ultra_beast';
-
     /** @var array<int, BattleResult> */
     private array $battleResults = [];
 
     public function __construct(
         private readonly Pokemon $pokemon,
         private readonly bool $shinyAvailable,
-        private readonly string $raidLevel,
+        private readonly RaidLevel $raidLevel,
         private readonly TemporaryEvolution|null $temporaryEvolution,
         private readonly string|null $costumeId = null,
     ) {
@@ -47,7 +39,7 @@ final class RaidBoss
         return $this->pokemon;
     }
 
-    public function getRaidLevel(): string
+    public function getRaidLevel(): RaidLevel
     {
         return $this->raidLevel;
     }

@@ -1,408 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
 <body>
-    <article class="article-page">
-        <div id="raid-list">
-            <li class="header-li"><h2 class="boss-tier-header tier-5">Tier 5</h2></li>
-
-            <!-- Expect Zacian hero form -->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 249;">
-                    <div class="boss-img">
-                        <img src="../assets/img/pokemon_icons/pm888.icon.png">
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Zacian (Hero)</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fairy" src="/assets/img/types/fairy.png">
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>2100 - 2188
-                    </div>
-                    <div class="boss-3  ">
-                    <span class="boss-weather">
-                        <img class="weather1" title="Cloudy" src="/assets/img/weather/cloudy.png">
-                    </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>2625 - 2735</span>
-                    </div>
+<div class="raid-bosses">
+    <div class="tier">
+        <h2 class="header" data-tier="5">Tier 5</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pm888.icon.png" />
                 </div>
-            </li>
-
-            <!-- Expect Galarian slowpoke in normal form -->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 256;">
-                    <div class="boss-img">
-                        <img src="../assets/img/pokemon_icons/pokemon_icon_079_31.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Galarian Slowpoke</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>650 - 700
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Windy" src="/assets/img/weather/windy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>812 - 876</span>
-                    </div>
+                <div class="identity"><p class="name small-type">Zacian (Hero)</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_079_31.png" />
                 </div>
-            </li>
-
-            <!-- Expect Unown U with FormID 31 -->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 254;">
-                    <div class="boss-img">
-                        <img src="../assets/img/pokemon_icons/pokemon_icon_201_31.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Unown U</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>628 - 677
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Windy" src="/assets/img/weather/windy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>785 - 846</span>
-                    </div>
+                <div class="identity"><p class="name small-type">GALARIAN SLOWPOKE</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_201_31.png" />
+                    <svg class="shiny-icon"><use href="#shiny-icon"></use></svg>
                 </div>
-            </li>
-
-            <!-- Expect Alolan Raichu -->
-
-            <li class="boss-item">
-                <div class="boss-border">
-                    <div class="boss-img">
-                        <img src="/pokemon_icons/pokemon_icon_026_61.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Alolan Raichu</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Electric" src="/assets/img/types/electric.png">
-
-                            <img class="type2" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1238 - 1306
-                    </div>
-                    <div class="boss-3  ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Rainy" src="/assets/img/weather/rainy.png">
-
-                          <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1548 - 1633</span>
-                    </div>
+                <div class="identity"><p class="name small-type">pokemon_icon_201_31.png</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_026_61.png" />
+                    <svg class="shiny-icon"><use href="#shiny-icon"></use></svg>
                 </div>
-            </li>
-
-
-            <!-- Expect Deoxys (Speed)-->
-
-            <li class="boss-item">
-                <div class="boss-border">
-                    <div class="boss-img">
-                        <img src="/pokemon_icons/pokemon_icon_386_14.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Deoxys (Speed)</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Psychic" src="/assets/img/types/psychic.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1568 - 1645
-                    </div>
-                    <div class="boss-3  ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Windy" src="/assets/img/weather/windy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1960 - 2056</span>
-                    </div>
+                <div class="identity"><p class="name small-type">ALOLAN RAICHU</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_386_14.png" />
                 </div>
-            </li>
-
-
-            <!-- Expect Shellos (East) -->
-
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 255;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_422_12.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Shellos (East)</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Water" src="assets/img/types/water.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>600 - 649
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Rainy" src="assets/img/weather/rainy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>751 - 811</span>
-                    </div>
+                <div class="identity"><p class="name small-type">Deoxys (Speed)</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_422_12.png" />
                 </div>
-            </li>
-
-            <!-- Expect Shellos (West) -->
-
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 254;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_422_11.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Shellos (West)</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Water" src="assets/img/types/water.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>600 - 649
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Rainy" src="assets/img/weather/rainy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>751 - 811</span>
-                    </div>
+                <div class="identity"><p class="name small-type">Shellos (East)</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_422_11.png" />
                 </div>
-            </li>
-
-            <!-- Expect Pikachu 5th Anniversary -->
-
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 254;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_pm0025_01_pgo_5thanniversary.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Pikachu</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Water" src="assets/img/types/water.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>600 - 649
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Rainy" src="assets/img/weather/rainy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>751 - 811</span>
-                    </div>
+                <div class="identity"><p class="name small-type">Shellos (West)</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_pm0025_01_pgo_5thanniversary.png" />
                 </div>
-            </li>
-
-            <!-- Expect Pikachu normal -->
-
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 254;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_025_00.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Pikachu</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Water" src="assets/img/types/water.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>600 - 649
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Rainy" src="assets/img/weather/rainy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>751 - 811</span>
-                    </div>
+                <div class="identity"><p class="name small-type">pokemon_icon_pm0025_01_pgo_5thanniversary.png</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_025_00.png" />
                 </div>
-            </li>
-
-            <!-- Expect: GIRATINA_ALTERED -->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 254;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_487_11.png">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Giratina (altered)</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Water" src="assets/img/types/water.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 larger-cp">
-                        <span class="cp_prefix">CP </span>600 - 649
-                    </div>
-                    <div class="boss-3 larger-cp ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="Rainy" src="assets/img/weather/rainy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>751 - 811</span>
-                    </div>
+                <div class="identity"><p class="name small-type">pokemon_icon_025_00.png</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_487_11.png" />
                 </div>
-            </li>
-
-            <!-- Expect paras with multiple weakness-->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 248;">
-                    <div class="boss-img">
-                        <img src="../assets/img/pokemon_icons/pokemon_icon_046_00.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Paras</p>
-                    </div>
-                    <div class="boss-2 ">
-
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span></span>
-                    </div>
+                <div class="identity"><p class="name small-type">Giratina (altered)</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_046_00.png" />
+                    <svg class="shiny-icon"><use href="#shiny-icon"></use></svg>
                 </div>
-            </li>
-
-            <li class="header-li"><h2 class="boss-tier-header tier-Mega">Mega</h2></li>
-
-            <!-- Expect Mega Charizard Y-->
-
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 240;">
-                    <div class="boss-img">
-                        <img src="/pokemon_icon_006_52.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name small-type">Mega Charizard Y</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Fire" src="/assets/img/types/fire.png">
-
-                            <img class="type2" title="Flying" src="/assets/img/types/flying.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1574 - 1651
-                    </div>
-                    <div class="boss-3  ">
-                        <span class="boss-weather">
-                          <img class="weather1" title="SunnyClear" src="/assets/img/weather/sunny.png">
-
-                          <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-                        </span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1968 - 2064</span>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Expect Mega Pidgeot-->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 248;">
-                    <div class="boss-img">
-                        <img src="../assets/img/pokemon_icons/pm18.fMEGA.icon.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Mega Pidgeot</p>
-                        <div class="boss-type">
-                            <img class="type1" title="Normal" src="/assets/img/types/normal.png">
-
-                            <img class="type2" title="Flying" src="/assets/img/types/flying.png">
-
-                        </div>
-                    </div>
-                    <div class="boss-2 ">
-                        <span class="cp_prefix">CP </span>1151 - 1216
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				  <img class="weather1" title="Partly" src="/assets/img/weather/partlycloudy.png">
-
-				  <img class="weather2" title="Windy" src="/assets/img/weather/windy.png">
-
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span>1439 - 1521</span>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Expect Mega Abomasnow-->
-            <li class="boss-item">
-                <div class="boss-border" style="z-index: 248;">
-                    <div class="boss-img">
-                        <img src="../assets/img/pokemon_icons/pokemon_icon_460_51.png">
-
-                        <img class="shiny-icon" src="/assets/img/shiny-icon.png" alt="shiny">
-
-                    </div>
-                    <div class="boss-1">
-                        <p class="boss-name">Mega Abomasnow</p>
-                    </div>
-                    <div class="boss-2 ">
-
-                    </div>
-                    <div class="boss-3  ">
-				<span class="boss-weather">
-				</span>
-                        <span class="boosted-cp"><span class="cp_prefix">CP </span></span>
-                    </div>
-                </div>
-            </li>
+                <div class="identity"><p class="name small-type">pokemon_icon_046_00.png</p></div>
+            </div>
         </div>
-    </article>
+    </div>
+    
+    <div class="tier">
+        <h2 class="header" data-tier="mega">Mega</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_006_52.png" />
+                    <svg class="shiny-icon"><use href="#shiny-icon"></use></svg>
+                </div>
+                <div class="identity"><p class="name small-type">Mega Charizard Y</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pm18.fMEGA.icon.png" />
+                    <svg class="shiny-icon"><use href="#shiny-icon"></use></svg>
+                </div>
+                <div class="identity"><p class="name small-type">pm18.fMEGA.icon.png</p></div>
+            </div>
+            <div class="card">
+                <div class="boss-img">
+                    <img src="/pokemon_icon_460_51.png" />
+                    <svg class="shiny-icon"><use href="#shiny-icon"></use></svg>
+                </div>
+                <div class="identity"><p class="name small-type">Mega Abomasnow</p></div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

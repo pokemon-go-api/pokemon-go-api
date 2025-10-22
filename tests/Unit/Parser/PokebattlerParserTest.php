@@ -17,6 +17,7 @@ use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
 use Psr\Log\LoggerInterface;
 
@@ -72,7 +73,7 @@ class PokebattlerParserTest extends TestCase
         $raidBossCollection->add(new RaidBoss(
             new Pokemon(2, 'MEGA_POKEMON', 'MEGA_POKEMON', PokemonType::none(), null),
             false,
-            RaidBoss::RAID_LEVEL_MEGA,
+            RaidLevel::RaidMega,
             new TemporaryEvolution('CHARIZARD_MEGA_X', PokemonType::none(), PokemonType::none()),
             null,
         ));
@@ -80,7 +81,7 @@ class PokebattlerParserTest extends TestCase
         $raidBossCollection->add(new RaidBoss(
             new Pokemon(1, 'DUMMY', 'DUMMY_FORM_ID', PokemonType::none(), null),
             false,
-            RaidBoss::RAID_LEVEL_5,
+            RaidLevel::Raid5,
             null,
             null,
         ));

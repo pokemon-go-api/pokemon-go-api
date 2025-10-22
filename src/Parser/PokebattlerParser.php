@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser;
 
-use Exception;
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
@@ -89,8 +88,8 @@ class PokebattlerParser
         $url = sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong
             'https://fight.pokebattler.com/raids/defenders/%s/levels/RAID_LEVEL_%s/attackers/levels/%d/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?',
-            $this->raidBossName($raidBoss, $addForm),
-            $this->raidLevelConstantToLevelNumber($raidBoss->getRaidLevel()),
+            $this->raidBossName($raidBoss, $addForm, $raidBoss->getRaidLevel()->isShadow()),
+            $raidBoss->getRaidLevel()->toPokebattlerLevel(),
             $battleConfiguration->getPokemonLevel(),
         );
 
@@ -107,31 +106,18 @@ class PokebattlerParser
         ]);
     }
 
-    private function raidLevelConstantToLevelNumber(string $raidLevel): string
+    private function raidBossName(RaidBoss $raidBoss, bool $addForm, bool $isShadow): string
     {
-        return match ($raidLevel) {
-            RaidBoss::RAID_LEVEL_1 => '1',
-            RaidBoss::RAID_LEVEL_3 => '3',
-            RaidBoss::RAID_LEVEL_5 => '5',
-            RaidBoss::RAID_LEVEL_EX => '6',
-            RaidBoss::RAID_LEVEL_MEGA => 'MEGA',
-            RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 'MEGA_5',
-            RaidBoss::RAID_LEVEL_ULTRA_BEAST => 'ULTRA_BEAST',
-            default => throw new Exception('Unknown RaidLevel', 1618743729200),
-        };
-    }
-
-    private function raidBossName(RaidBoss $raidBoss, bool $addForm): string
-    {
+        $suffix = $isShadow ? '_SHADOW_FORM' : '';
         if ($addForm && $raidBoss->getPokemon()->getPokemonForm() !== null) {
             return $raidBoss->getPokemonWithMegaFormId() . '_FORM';
         }
 
         if ($addForm) {
-            return $raidBoss->getPokemon()->getId();
+            return $raidBoss->getPokemon()->getId() . $suffix;
         }
 
-        return $raidBoss->getPokemonWithMegaFormId();
+        return $raidBoss->getPokemonWithMegaFormId() . $suffix;
     }
 
     private function buildCacheKey(RaidBoss $raidBoss, BattleConfiguration $battleConfiguration): string
