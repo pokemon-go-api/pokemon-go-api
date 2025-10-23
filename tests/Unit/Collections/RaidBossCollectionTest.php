@@ -11,6 +11,7 @@ use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 
 #[CoversClass(RaidBossCollection::class)]
 #[UsesClass(PokemonType::class)]
@@ -29,7 +30,7 @@ class RaidBossCollectionTest extends TestCase
                 PokemonType::fire(),
             ),
             false,
-            RaidBoss::RAID_LEVEL_EX,
+            RaidLevel::RaidEx,
             null,
         );
         $collection = new RaidBossCollection();
@@ -39,12 +40,13 @@ class RaidBossCollectionTest extends TestCase
         $collection->add($raidBoss);
         $this->assertCount(1, $collection->toArray());
 
-        $this->assertSame($raidBoss, $collection->getById('TESTPOKEMON_MEGA'));
+        $raidBossId = 'TESTPOKEMON_MEGA-ex';
+        $this->assertSame($raidBoss, $collection->getById($raidBossId));
         $this->assertTrue($collection->has($raidBoss));
 
         $this->assertNull($collection->getById('NOT_EXISTINGS'));
 
-        $collection->remove($raidBoss->getPokemonWithMegaFormId());
+        $collection->remove($raidBossId);
         $this->assertFalse($collection->has($raidBoss));
     }
 
@@ -53,13 +55,13 @@ class RaidBossCollectionTest extends TestCase
         $raidBoss1  = new RaidBoss(
             new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_EX', PokemonType::water(), PokemonType::fire()),
             false,
-            RaidBoss::RAID_LEVEL_EX,
+            RaidLevel::RaidEx,
             null,
         );
         $raidBoss2  = new RaidBoss(
             new Pokemon(100, 'TESTPOKEMON', 'TESTPOKEMON_MEGA', PokemonType::water(), PokemonType::fire()),
             false,
-            RaidBoss::RAID_LEVEL_MEGA,
+            RaidLevel::RaidMega,
             null,
         );
         $collection = new RaidBossCollection();

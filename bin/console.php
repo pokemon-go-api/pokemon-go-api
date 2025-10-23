@@ -143,7 +143,7 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
         }
 
         $regionName = strtolower(substr($regionForm->getFormId(), strlen($regionForm->getId()) + 1));
-        if (! in_array($regionName, ['alola', 'galarian'])) {
+        if (! in_array($regionName, ['alola', 'galarian', 'hisuian'])) {
             continue;
         }
 

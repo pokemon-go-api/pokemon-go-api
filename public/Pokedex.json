@@ -296,6 +296,24 @@
                           "items": {
                             "$ref": "#/components/schemas/RaidBoss"
                           }
+                        },
+                        "shadow_lvl5": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "shadow_lvl3": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "shadow_lvl1": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
                         }
                       }
                     },
@@ -1068,7 +1086,10 @@
               "ultra_beast",
               "lvl5",
               "lvl3",
-              "lvl1"
+              "lvl1",
+              "shadow_lvl1",
+              "shadow_lvl3",
+              "shadow_lvl5"
             ]
           },
           "shiny": {

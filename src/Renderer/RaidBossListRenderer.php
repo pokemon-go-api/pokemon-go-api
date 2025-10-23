@@ -93,7 +93,7 @@ final class RaidBossListRenderer
                 }
             }
 
-            $bosses[$raidBoss->getRaidLevel()][] = $raidData;
+            $bosses[$raidBoss->getRaidLevel()->value][] = $raidData;
         }
 
         return $bosses;

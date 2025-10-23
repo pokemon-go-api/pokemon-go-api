@@ -7,6 +7,7 @@ namespace PokemonGoApi\PogoAPI\Renderer\Types;
 use PokemonGoApi\PogoAPI\Types\PokemonStats;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 use PokemonGoApi\PogoAPI\Util\CpCalculator;
 use PokemonGoApi\PogoAPI\Util\TypeEffectivenessCalculator;
@@ -45,7 +46,7 @@ final readonly class RenderingRaidBoss
         return $this->raidBoss->getPokemonWithMegaFormId();
     }
 
-    public function getLevel(): string
+    public function getLevel(): RaidLevel
     {
         return $this->raidBoss->getRaidLevel();
     }
@@ -138,16 +139,7 @@ final readonly class RenderingRaidBoss
 
     public function getRaidBossEggUrl(): string
     {
-        $levelIcon = match ($this->getLevel()) {
-            RaidBoss::RAID_LEVEL_ULTRA_BEAST => 'ultra',
-            RaidBoss::RAID_LEVEL_EX => 'egg_2',
-            RaidBoss::RAID_LEVEL_MEGA => 'egg_3',
-            RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 'egg_4',
-            RaidBoss::RAID_LEVEL_5 => 'egg_2',
-            RaidBoss::RAID_LEVEL_3 => 'egg_1',
-            RaidBoss::RAID_LEVEL_1 => 'egg_0',
-            default => '',
-        };
+        $levelIcon = $this->getLevel()->getEggIconName();
 
         return sprintf(
             //phpcs:ignore Generic.Files.LineLength.TooLong

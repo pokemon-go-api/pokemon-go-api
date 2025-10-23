@@ -6,8 +6,10 @@ namespace PokemonGoApi\PogoAPI\Collections;
 
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
+use function array_filter;
 use function array_key_exists;
 use function array_values;
+use function implode;
 use function sha1;
 use function uasort;
 
@@ -25,6 +27,7 @@ final class RaidBossCollection
         $this->storage[$this->createRaidBossKey($raidBoss)] = $raidBoss;
     }
 
+    /** @internal */
     public function getById(string $id): RaidBoss|null
     {
         if (! array_key_exists($id, $this->storage)) {
@@ -60,19 +63,10 @@ final class RaidBossCollection
     /** @return RaidBoss[] */
     public function toArray(): array
     {
-        $raidBossLevelMapping = [
-            RaidBoss::RAID_LEVEL_EX             => 12,
-            RaidBoss::RAID_LEVEL_LEGENDARY_MEGA => 10,
-            RaidBoss::RAID_LEVEL_MEGA           => 8,
-            RaidBoss::RAID_LEVEL_ULTRA_BEAST    => 6,
-            RaidBoss::RAID_LEVEL_5              => 5,
-            RaidBoss::RAID_LEVEL_3              => 3,
-            RaidBoss::RAID_LEVEL_1              => 1,
-        ];
         uasort(
             $this->storage,
-            static function (RaidBoss $a, RaidBoss $b) use ($raidBossLevelMapping): int {
-                $lvlSort = $raidBossLevelMapping[$b->getRaidLevel()] <=> $raidBossLevelMapping[$a->getRaidLevel()];
+            static function (RaidBoss $a, RaidBoss $b): int {
+                $lvlSort = $b->getRaidLevel()->getSortNr() <=> $a->getRaidLevel()->getSortNr();
                 if ($lvlSort !== 0) {
                     return $lvlSort;
                 }
@@ -97,11 +91,17 @@ final class RaidBossCollection
 
     private function createRaidBossKey(RaidBoss $raidBoss): string
     {
+        $keyParts     = [];
         $pokemonImage = $raidBoss->getPokemonImage();
-        if ($pokemonImage === null) {
-            return $raidBoss->getPokemonWithMegaFormId();
+        if ($pokemonImage !== null) {
+            $keyParts[] = sha1($pokemonImage->buildUrl(false));
+        } else {
+            $keyParts[] = $raidBoss->getPokemonWithMegaFormId();
+            $keyParts[] = $raidBoss->getPokemon()->getAssetBundleSuffix();
         }
 
-        return sha1($pokemonImage->buildUrl(false));
+        $keyParts[] = $raidBoss->getRaidLevel()->value;
+
+        return implode('-', array_filter($keyParts));
     }
 }

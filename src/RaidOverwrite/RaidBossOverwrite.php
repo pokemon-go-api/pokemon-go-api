@@ -8,6 +8,7 @@ use DateTimeImmutable;
 use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use Psr\Log\LoggerInterface;
 use stdClass;
 
@@ -103,7 +104,7 @@ class RaidBossOverwrite
                 $raidBossOverwrite->endDate,
                 $raidBossOverwrite->pokemon,
                 $raidBossOverwrite->form ?? null,
-                $raidBossOverwrite->level,
+                RaidLevel::from($raidBossOverwrite->level),
                 $raidBossOverwrite->shiny === 'true',
             ),
             $this->raidBossOverwrites,

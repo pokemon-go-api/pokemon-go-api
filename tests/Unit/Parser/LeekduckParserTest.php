@@ -14,6 +14,7 @@ use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 
 use function array_map;
 
@@ -45,40 +46,29 @@ class LeekduckParserTest extends TestCase
                 'dexNr' => $raidBoss->getPokemon()->getDexNr(),
                 'level' => $raidBoss->getRaidLevel(),
                 'shiny' => $raidBoss->isShinyAvailable(),
+                'region' => $raidBoss->getPokemon()->getAssetBundleSuffix(),
             ],
             $parsedBosses,
         );
 
         $expected = [
-            ['dexNr' => 386, 'level' => RaidBoss::RAID_LEVEL_EX, 'shiny' => false],
-
-            ['dexNr' => 6, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
-            ['dexNr' => 9, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
-            ['dexNr' => 18, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
-            ['dexNr' => 94, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
-            ['dexNr' => 229, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
-            ['dexNr' => 460, 'level' => RaidBoss::RAID_LEVEL_MEGA, 'shiny' => true],
-
-            ['dexNr' => 379, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => true],
-            ['dexNr' => 646, 'level' => RaidBoss::RAID_LEVEL_5, 'shiny' => false],
-
-            ['dexNr' => 26, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
-            ['dexNr' => 68, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
-            ['dexNr' => 103, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
-            ['dexNr' => 105, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
-            ['dexNr' => 110, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
-            ['dexNr' => 297, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
-            ['dexNr' => 303, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => true],
-            ['dexNr' => 306, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
-            ['dexNr' => 530, 'level' => RaidBoss::RAID_LEVEL_3, 'shiny' => false],
-
-            ['dexNr' => 25, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
-            ['dexNr' => 220, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
-            ['dexNr' => 361, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
-            ['dexNr' => 532, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
-            ['dexNr' => 599, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
-            ['dexNr' => 613, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => true],
-            ['dexNr' => 677, 'level' => RaidBoss::RAID_LEVEL_1, 'shiny' => false],
+            ['dexNr' => 229, 'level' => RaidLevel::RaidMega, 'shiny' => true, 'region' => 'MEGA'],
+            ['dexNr' => 359, 'level' => RaidLevel::RaidMega, 'shiny' => true, 'region' => 'MEGA'],
+            ['dexNr' => 649, 'level' => RaidLevel::Raid5, 'shiny' => true, 'region' => 'NORMAL'],
+            ['dexNr' => 649, 'level' => RaidLevel::Raid5, 'shiny' => true, 'region' => 'DOUSE'],
+            ['dexNr' => 649, 'level' => RaidLevel::Raid5, 'shiny' => true, 'region' => 'SHOCK'],
+            ['dexNr' => 105, 'level' => RaidLevel::Raid3, 'shiny' => true, 'region' => 'ALOLA'],
+            ['dexNr' => 157, 'level' => RaidLevel::Raid3, 'shiny' => true, 'region' => 'HISUIAN'],
+            ['dexNr' => 503, 'level' => RaidLevel::Raid3, 'shiny' => true, 'region' => 'HISUIAN'],
+            ['dexNr' => 562, 'level' => RaidLevel::Raid1, 'shiny' => true, 'region' => 'GALARIAN'],
+            ['dexNr' => 854, 'level' => RaidLevel::Raid1, 'shiny' => true, 'region' => null],
+            ['dexNr' => 1012, 'level' => RaidLevel::Raid1, 'shiny' => false, 'region' => 'COUNTERFEIT'],
+            ['dexNr' => 380, 'level' => RaidLevel::ShadowRaid5, 'shiny' => true, 'region' => null],
+            ['dexNr' => 123, 'level' => RaidLevel::ShadowRaid3, 'shiny' => true, 'region' => null],
+            ['dexNr' => 142, 'level' => RaidLevel::ShadowRaid3, 'shiny' => true, 'region' => null],
+            ['dexNr' => 302, 'level' => RaidLevel::ShadowRaid3, 'shiny' => true, 'region' => null],
+            ['dexNr' => 562, 'level' => RaidLevel::ShadowRaid1, 'shiny' => false, 'region' => null],
+            ['dexNr' => 708, 'level' => RaidLevel::ShadowRaid1, 'shiny' => false, 'region' => null],
         ];
 
         $this->assertSame($expected, $simpleResult);

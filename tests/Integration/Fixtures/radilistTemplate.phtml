@@ -4,6 +4,7 @@ use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoApi\PogoAPI\Renderer\Types\RenderingRaidBoss;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
+use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 
 /** @var $bosses array<int, RenderingRaidBoss> */
@@ -214,23 +215,23 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
             <stop offset="0%" stop-color="#000"/>
             <stop offset="100%" stop-color="#333"/>
         </linearGradient>
-        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_EX ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidLevel::RaidEx->value ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#000"/>
             <stop offset="100%" stop-color="#333"/>
         </linearGradient>
-        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_MEGA ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidLevel::RaidMega->value ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#8e3628"/>
             <stop offset="100%" stop-color="#c14936"/>
         </linearGradient>
-        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_5 ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidLevel::Raid5->value ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#3f577c"/>
             <stop offset="100%" stop-color="#6c89b4"/>
         </linearGradient>
-        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_3 ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidLevel::Raid3->value ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#806b2e"/>
             <stop offset="100%" stop-color="#b1943f"/>
         </linearGradient>
-        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidBoss::RAID_LEVEL_1 ?>" gradientTransform="rotate(90)">
+        <linearGradient class="raidGradient" id="raidBossGradient_<?= RaidLevel::Raid1->value ?>" gradientTransform="rotate(90)">
             <stop offset="0%" stop-color="#870f52"/>
             <stop offset="100%" stop-color="#b7146f"/>
         </linearGradient>
@@ -264,7 +265,7 @@ echo '<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>';
 
     <?php foreach ($bosses as $index => $boss) : ?>
         <svg id="raidbosswrapper-<?= $boss->getFormId() ?>" x="0" y="<?= $index * $lineHeight + $graphicHeaderHeight ?>" width="100%" height="<?= $lineHeight + 10 ?>">
-            <rect fill="url('#raidBossGradient_<?= $boss->getLevel() ?>')" width="100%" height="<?= $lineHeight ?>" x="0" y="0"/>
+            <rect fill="url('#raidBossGradient_<?= $boss->getLevel()->value ?>')" width="100%" height="<?= $lineHeight ?>" x="0" y="0"/>
 
             <g class="boss-level">
                 <rect width="35" height="<?= $lineHeight ?>" x="0" y="0"/>

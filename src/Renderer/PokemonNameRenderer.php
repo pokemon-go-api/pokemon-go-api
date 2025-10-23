@@ -10,8 +10,11 @@ use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 
 use function array_shift;
+use function is_numeric;
 use function sprintf;
 use function str_replace;
+use function strtolower;
+use function ucfirst;
 
 class PokemonNameRenderer
 {
@@ -61,9 +64,21 @@ class PokemonNameRenderer
                     $pokemonName,
                 );
             }
+
+            if ($pokemonForm->isHisuian()) {
+                $pokemonName = sprintf(
+                    $translationCollection->getRegionalForm(CustomTranslations::REGIONFORM_HISUIAN) ?: '%s',
+                    $pokemonName,
+                );
+            }
         }
 
-        return $pokemonName ?? $pokemon->getId();
+        $pokemonFallbackName = $pokemon->getId();
+        if (is_numeric($pokemonFallbackName)) {
+            $pokemonFallbackName = ucfirst(strtolower($singleFormOnly ?? $pokemon->getFormId()));
+        }
+
+        return $pokemonName ?? $pokemonFallbackName;
     }
 
     public static function renderPokemonMegaName(

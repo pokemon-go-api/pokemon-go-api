@@ -43,4 +43,9 @@ final readonly class PokemonForm
     {
         return $this->formOnlyId === 'GALARIAN';
     }
+
+    public function isHisuian(): bool
+    {
+        return $this->formOnlyId === 'HISUIAN';
+    }
 }
