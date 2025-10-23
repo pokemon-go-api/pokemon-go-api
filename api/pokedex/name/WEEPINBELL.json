@@ -1,0 +1,282 @@
+{
+    "id": "WEEPINBELL",
+    "formId": "WEEPINBELL",
+    "dexNr": 70,
+    "generation": 1,
+    "names": {
+        "English": "Weepinbell",
+        "German": "Ultrigaria",
+        "French": "Boustiflor",
+        "Italian": "Weepinbell",
+        "Japanese": "\u30a6\u30c4\u30c9\u30f3",
+        "Korean": "\uc6b0\uce20\ub3d9",
+        "Spanish": "\u0412\u0438\u043f\u0438\u043d\u0431\u0435\u043b\u043b"
+    },
+    "stats": {
+        "stamina": 163,
+        "attack": 172,
+        "defense": 92
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "\u042f\u0434"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "BULLET_SEED_FAST": {
+            "id": "BULLET_SEED_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Bullet Seed",
+                "German": "Kugelsaat",
+                "French": "Balle Graine",
+                "Italian": "Semitraglia",
+                "Japanese": "\u30bf\u30cd\u30de\u30b7\u30f3\u30ac\u30f3",
+                "Korean": "\uc528\uae30\uad00\ucd1d",
+                "Spanish": "\u0412\u044b\u0441\u0442\u0440\u0435\u043b\u0438\u0432\u0430\u044e\u0449\u0438\u0435 \u0421\u0435\u043c\u0435\u043d\u0430"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "ACID_FAST": {
+            "id": "ACID_FAST",
+            "power": 11,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "\u042f\u0434"
+                }
+            },
+            "names": {
+                "English": "Acid",
+                "German": "S\u00e4ure",
+                "French": "Acide",
+                "Italian": "Acido",
+                "Japanese": "\u3088\u3046\u304b\u3044\u3048\u304d",
+                "Korean": "\uc6a9\ud574\uc561",
+                "Spanish": "\u041a\u0438\u0441\u043b\u043e\u0442\u0430"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "POWER_WHIP": {
+            "id": "POWER_WHIP",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Power Whip",
+                "German": "Blattgei\u00dfel",
+                "French": "M\u00e9gafouet",
+                "Italian": "Vigorcolpo",
+                "Japanese": "\u30d1\u30ef\u30fc\u30a6\u30a3\u30c3\u30d7",
+                "Korean": "\ud30c\uc6cc\ud729",
+                "Spanish": "\u041a\u043d\u0443\u0442 \u0421\u0438\u043b\u044b"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SLUDGE_BOMB": {
+            "id": "SLUDGE_BOMB",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "\u042f\u0434"
+                }
+            },
+            "names": {
+                "English": "Sludge Bomb",
+                "German": "Matschbombe",
+                "French": "Bombe Beurk",
+                "Italian": "Fangobomba",
+                "Japanese": "\u30d8\u30c9\u30ed\u3070\u304f\u3060\u3093",
+                "Korean": "\uc624\ubb3c\ud3ed\ud0c4",
+                "Spanish": "\u0411\u043e\u043c\u0431\u0430 \u0441\u043e \u0421\u043b\u0438\u0437\u044c\u044e"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SEED_BOMB": {
+            "id": "SEED_BOMB",
+            "power": 55,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Seed Bomb",
+                "German": "Samenbomben",
+                "French": "Canon Graine",
+                "Italian": "Semebomba",
+                "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                "Korean": "\uc528\ud3ed\ud0c4",
+                "Spanish": "\u0421\u0435\u043c\u044f-\u0411\u043e\u043c\u0431\u0430"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": {
+        "RAZOR_LEAF_FAST": {
+            "id": "RAZOR_LEAF_FAST",
+            "power": 13,
+            "energy": 7,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Razor Leaf",
+                "German": "Rasierblatt",
+                "French": "Tranch\u2019Herbe",
+                "Italian": "Foglielama",
+                "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                "Spanish": "\u0411\u0440\u0438\u0442\u0432\u043e\u043b\u0438\u0441\u0442"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 9,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm70.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm70.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "VICTREEBEL",
+            "formId": "VICTREEBEL_NORMAL",
+            "candies": 100,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm70.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm70.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_070_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_070_00_shiny.png"
+        }
+    ]
+}

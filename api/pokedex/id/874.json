@@ -1,0 +1,189 @@
+{
+    "id": "STONJOURNER",
+    "formId": "STONJOURNER",
+    "dexNr": 874,
+    "generation": 8,
+    "names": {
+        "English": "Stonjourner",
+        "German": "Humanolith",
+        "French": "Dolman",
+        "Italian": "Stonjourner",
+        "Japanese": "\u30a4\u30b7\u30d8\u30f3\u30b8\u30f3",
+        "Korean": "\ub3cc\ud5e8\uc9c4",
+        "Spanish": "\u0421\u0442\u043e\u043d\u0434\u0436\u043e\u0440\u043d\u0435\u0440"
+    },
+    "stats": {
+        "stamina": 225,
+        "attack": 222,
+        "defense": 182
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ROCK",
+        "names": {
+            "English": "Rock",
+            "German": "Gestein",
+            "French": "Roche",
+            "Italian": "Roccia",
+            "Japanese": "\u3044\u308f",
+            "Korean": "\ubc14\uc704",
+            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "ROCK_THROW_FAST": {
+            "id": "ROCK_THROW_FAST",
+            "power": 13,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Rock Throw",
+                "German": "Steinwurf",
+                "French": "Jet-Pierres",
+                "Italian": "Sassata",
+                "Japanese": "\u3044\u308f\u304a\u3068\u3057",
+                "Korean": "\ub3cc\ub5a8\uad6c\uae30",
+                "Spanish": "\u0411\u0440\u043e\u0441\u043e\u043a \u041a\u0430\u043c\u043d\u044f"
+            },
+            "combat": {
+                "energy": 5,
+                "power": 8,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "STONE_EDGE": {
+            "id": "STONE_EDGE",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Stone Edge",
+                "German": "Steinkante",
+                "French": "Lame de Roc",
+                "Italian": "Pietrataglio",
+                "Japanese": "\u30b9\u30c8\u30fc\u30f3\u30a8\u30c3\u30b8",
+                "Korean": "\uc2a4\ud1a4\uc5d0\uc9c0",
+                "Spanish": "\u041a\u0430\u043c\u0435\u043d\u043d\u043e\u0435 \u041e\u0441\u0442\u0440\u0438\u0451"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ROCK_SLIDE": {
+            "id": "ROCK_SLIDE",
+            "power": 75,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Rock Slide",
+                "German": "Steinhagel",
+                "French": "\u00c9boulement",
+                "Italian": "Frana",
+                "Japanese": "\u3044\u308f\u306a\u3060\u308c",
+                "Korean": "\uc2a4\ud1a4\uc0e4\uc6cc",
+                "Spanish": "\u0421\u0434\u0432\u0438\u0433 \u0421\u043a\u0430\u043b\u044b"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "STOMP": {
+            "id": "STOMP",
+            "power": 50,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "\u041e\u0431\u044b\u0447\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Stomp",
+                "German": "Stampfer",
+                "French": "\u00c9crasement",
+                "Italian": "Pestone",
+                "Japanese": "\u3075\u307f\u3064\u3051",
+                "Korean": "\uc9d3\ubc1f\uae30",
+                "Spanish": "\u0422\u043e\u043f\u043e\u0442"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm874.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm874.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm874.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm874.s.icon.png"
+        }
+    ]
+}

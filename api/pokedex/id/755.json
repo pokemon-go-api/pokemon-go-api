@@ -1,0 +1,175 @@
+{
+    "id": "MORELULL",
+    "formId": "MORELULL",
+    "dexNr": 755,
+    "generation": 7,
+    "names": {
+        "English": "Morelull",
+        "German": "Bubungus",
+        "French": "Spododo",
+        "Italian": "Morelull",
+        "Japanese": "\u30cd\u30de\u30b7\u30e5",
+        "Korean": "\uc790\ub9c8\uc288",
+        "Spanish": "\u041c\u043e\u0440\u0438\u043b\u0430\u043b\u043b"
+    },
+    "stats": {
+        "stamina": 120,
+        "attack": 108,
+        "defense": 119
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FAIRY",
+        "names": {
+            "English": "Fairy",
+            "German": "Fee",
+            "French": "F\u00e9e",
+            "Italian": "Folletto",
+            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+            "Korean": "\ud398\uc5b4\ub9ac",
+            "Spanish": "\u0424\u0435\u044f"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "\u0418\u0437\u0443\u043c\u043b\u0435\u043d\u0438\u0435"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DAZZLING_GLEAM": {
+            "id": "DAZZLING_GLEAM",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "\u0424\u0435\u044f"
+                }
+            },
+            "names": {
+                "English": "Dazzling Gleam",
+                "German": "Zauberschein",
+                "French": "\u00c9clat Magique",
+                "Italian": "Magibrillio",
+                "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                "Spanish": "\u041e\u0441\u043b\u0435\u043f\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u041f\u0440\u043e\u0431\u043b\u0435\u0441\u043a"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SEED_BOMB": {
+            "id": "SEED_BOMB",
+            "power": 55,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Seed Bomb",
+                "German": "Samenbomben",
+                "French": "Canon Graine",
+                "Italian": "Semebomba",
+                "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                "Korean": "\uc528\ud3ed\ud0c4",
+                "Spanish": "\u0421\u0435\u043c\u044f-\u0411\u043e\u043c\u0431\u0430"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm755.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm755.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "SHIINOTIC",
+            "formId": "SHIINOTIC",
+            "candies": 50,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm755.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm755.s.icon.png"
+        }
+    ]
+}

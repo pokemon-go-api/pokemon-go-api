@@ -1,0 +1,241 @@
+{
+    "id": "DRAKLOAK",
+    "formId": "DRAKLOAK",
+    "dexNr": 886,
+    "generation": 8,
+    "names": {
+        "English": "Drakloak",
+        "German": "Phandra",
+        "French": "Dispareptil",
+        "Italian": "Drakloak",
+        "Japanese": "\u30c9\u30ed\u30f3\u30c1",
+        "Korean": "\ub4dc\ub798\ub7f0\uce58",
+        "Spanish": "\u0414\u0440\u0430\u043a\u043b\u043e\u0430\u043a"
+    },
+    "stats": {
+        "stamina": 169,
+        "attack": 163,
+        "defense": 105
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_DRAGON",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "\u0414\u0440\u0430\u043a\u043e\u043d"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "\u0418\u0437\u0443\u043c\u043b\u0435\u043d\u0438\u0435"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "DRAGON_TAIL_FAST": {
+            "id": "DRAGON_TAIL_FAST",
+            "power": 14,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "\u0414\u0440\u0430\u043a\u043e\u043d"
+                }
+            },
+            "names": {
+                "English": "Dragon Tail",
+                "German": "Drachenrute",
+                "French": "Draco-Queue",
+                "Italian": "Codadrago",
+                "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30c6\u30fc\u30eb",
+                "Korean": "\ub4dc\ub798\uace4\ud14c\uc77c",
+                "Spanish": "\u0414\u0440\u0430\u043a\u043e\u043d\u0438\u0439 \u0425\u0432\u043e\u0441\u0442"
+            },
+            "combat": {
+                "energy": 12,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DRAGON_PULSE": {
+            "id": "DRAGON_PULSE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "\u0414\u0440\u0430\u043a\u043e\u043d"
+                }
+            },
+            "names": {
+                "English": "Dragon Pulse",
+                "German": "Drachenpuls",
+                "French": "Draco-Choc",
+                "Italian": "Dragopulsar",
+                "Japanese": "\u308a\u3085\u3046\u306e\u306f\u3069\u3046",
+                "Korean": "\uc6a9\uc758\ud30c\ub3d9",
+                "Spanish": "\u041f\u0443\u043b\u044c\u0441 \u0414\u0440\u0430\u043a\u043e\u043d\u0430"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "\u0428\u0430\u0440 \u0422\u044c\u043c\u044b"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "OUTRAGE": {
+            "id": "OUTRAGE",
+            "power": 110,
+            "energy": -50,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "\u0414\u0440\u0430\u043a\u043e\u043d"
+                }
+            },
+            "names": {
+                "English": "Outrage",
+                "German": "Wutanfall",
+                "French": "Col\u00e8re",
+                "Italian": "Oltraggio",
+                "Japanese": "\u3052\u304d\u308a\u3093",
+                "Korean": "\uc5ed\ub9b0",
+                "Spanish": "\u0413\u043d\u0435\u0432"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm886.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm886.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "DRAGAPULT",
+            "formId": "DRAGAPULT",
+            "candies": 100,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm886.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm886.s.icon.png"
+        }
+    ]
+}

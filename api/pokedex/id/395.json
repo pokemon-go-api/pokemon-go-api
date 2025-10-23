@@ -1,0 +1,373 @@
+{
+    "id": "EMPOLEON",
+    "formId": "EMPOLEON",
+    "dexNr": 395,
+    "generation": 4,
+    "names": {
+        "English": "Empoleon",
+        "German": "Impoleon",
+        "French": "Pingol\u00e9on",
+        "Italian": "Empoleon",
+        "Japanese": "\u30a8\u30f3\u30da\u30eb\u30c8",
+        "Korean": "\uc5e0\ud398\ub974\ud2b8",
+        "Spanish": "\u042d\u043c\u043f\u043e\u043b\u0435\u043e\u043d"
+    },
+    "stats": {
+        "stamina": 197,
+        "attack": 210,
+        "defense": 186
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "\u0412\u043e\u0434\u0430"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_STEEL",
+        "names": {
+            "English": "Steel",
+            "German": "Stahl",
+            "French": "Acier",
+            "Italian": "Acciaio",
+            "Japanese": "\u306f\u304c\u306d",
+            "Korean": "\uac15\ucca0",
+            "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "WATERFALL_FAST": {
+            "id": "WATERFALL_FAST",
+            "power": 13,
+            "energy": 7,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "\u0412\u043e\u0434\u0430"
+                }
+            },
+            "names": {
+                "English": "Waterfall",
+                "German": "Kaskade",
+                "French": "Cascade",
+                "Italian": "Cascata",
+                "Japanese": "\u305f\u304d\u306e\u307c\u308a",
+                "Korean": "\ud3ed\ud3ec\uc624\ub974\uae30",
+                "Spanish": "\u0412\u043e\u0434\u043e\u043f\u0430\u0434"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "METAL_CLAW_FAST": {
+            "id": "METAL_CLAW_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Metal Claw",
+                "German": "Metallklaue",
+                "French": "Griffe Acier",
+                "Italian": "Ferrartigli",
+                "Japanese": "\u30e1\u30bf\u30eb\u30af\u30ed\u30fc",
+                "Korean": "\uba54\ud0c8\ud074\ub85c",
+                "Spanish": "\u041c\u0435\u0442\u0430\u043b\u043b\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u041a\u043e\u0433\u043e\u0442\u044c"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "STEEL_WING_FAST": {
+            "id": "STEEL_WING_FAST",
+            "power": 14,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Steel Wing",
+                "German": "Stahlfl\u00fcgel",
+                "French": "Ailes d\u2019Acier",
+                "Italian": "Alacciaio",
+                "Japanese": "\u306f\u304c\u306d\u306e\u3064\u3070\u3055",
+                "Korean": "\uac15\ucca0\ub0a0\uac1c",
+                "Spanish": "\u0421\u0442\u0430\u043b\u044c\u043d\u043e\u0435 \u041a\u0440\u044b\u043b\u043e"
+            },
+            "combat": {
+                "energy": 5,
+                "power": 7,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "METAL_SOUND_FAST": {
+            "id": "METAL_SOUND_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Metal Sound",
+                "German": "Metallsound",
+                "French": "Strido-Son",
+                "Italian": "Ferrostrido",
+                "Japanese": "\u304d\u3093\u305e\u304f\u304a\u3093",
+                "Korean": "\uae08\uc18d\uc74c",
+                "Spanish": "\u041c\u0435\u0442\u0430\u043b\u043b\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0417\u0432\u0443\u043a"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "HYDRO_PUMP": {
+            "id": "HYDRO_PUMP",
+            "power": 135,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "\u0412\u043e\u0434\u0430"
+                }
+            },
+            "names": {
+                "English": "Hydro Pump",
+                "German": "Hydropumpe",
+                "French": "Hydrocanon",
+                "Italian": "Idropompa",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                "Spanish": "\u0413\u0438\u0434\u0440\u043e\u043d\u0430\u0441\u043e\u0441"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BLIZZARD": {
+            "id": "BLIZZARD",
+            "power": 130,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "\u041b\u0451\u0434"
+                }
+            },
+            "names": {
+                "English": "Blizzard",
+                "German": "Blizzard",
+                "French": "Blizzard",
+                "Italian": "Bora",
+                "Japanese": "\u3075\u3076\u304d",
+                "Korean": "\ub208\ubcf4\ub77c",
+                "Spanish": "\u041c\u0435\u0442\u0435\u043b\u044c"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 140,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FLASH_CANNON": {
+            "id": "FLASH_CANNON",
+            "power": 100,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Flash Cannon",
+                "German": "Lichtkanone",
+                "French": "Luminocanon",
+                "Italian": "Cannonflash",
+                "Japanese": "\u30e9\u30b9\u30bf\u30fc\u30ab\u30ce\u30f3",
+                "Korean": "\ub7ec\uc2a4\ud130\uce90\ub17c",
+                "Spanish": "\u0411\u044b\u0441\u0442\u0440\u0430\u044f \u041f\u0443\u0448\u043a\u0430"
+            },
+            "combat": {
+                "energy": -70,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "DRILL_PECK": {
+            "id": "DRILL_PECK",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "\u041b\u0435\u0442\u0430\u044e\u0449\u0438\u0439"
+                }
+            },
+            "names": {
+                "English": "Drill Peck",
+                "German": "Bohrschnabel",
+                "French": "Bec Vrille",
+                "Italian": "Perforbecco",
+                "Japanese": "\u30c9\u30ea\u30eb\u304f\u3061\u3070\u3057",
+                "Korean": "\ud68c\uc804\ubd80\ub9ac",
+                "Spanish": "\u0421\u0432\u0435\u0440\u043b\u044f\u0449\u0438\u0439 \u041a\u043b\u044e\u0432"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": {
+        "HYDRO_CANNON": {
+            "id": "HYDRO_CANNON",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "\u0412\u043e\u0434\u0430"
+                }
+            },
+            "names": {
+                "English": "Hydro Cannon",
+                "German": "Aquahaubitze",
+                "French": "Hydroblast",
+                "Italian": "Idrocannone",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30ab\u30ce\u30f3",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\uce90\ub17c",
+                "Spanish": "\u0413\u0438\u0434\u0440\u043e\u043f\u0443\u0448\u043a\u0430"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm395.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm395.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm395.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm395.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_395_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_395_00_shiny.png"
+        }
+    ]
+}

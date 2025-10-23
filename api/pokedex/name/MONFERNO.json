@@ -1,0 +1,248 @@
+{
+    "id": "MONFERNO",
+    "formId": "MONFERNO",
+    "dexNr": 391,
+    "generation": 4,
+    "names": {
+        "English": "Monferno",
+        "German": "Panpyro",
+        "French": "Chimpenfeu",
+        "Italian": "Monferno",
+        "Japanese": "\u30e2\u30a6\u30ab\u30b6\u30eb",
+        "Korean": "\ud30c\uc774\uc22d\uc774",
+        "Spanish": "\u041c\u043e\u043d\u0444\u0435\u0440\u043d\u043e"
+    },
+    "stats": {
+        "stamina": 162,
+        "attack": 158,
+        "defense": 105
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_FIRE",
+        "names": {
+            "English": "Fire",
+            "German": "Feuer",
+            "French": "Feu",
+            "Italian": "Fuoco",
+            "Japanese": "\u307b\u306e\u304a",
+            "Korean": "\ubd88\uaf43",
+            "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FIGHTING",
+        "names": {
+            "English": "Fighting",
+            "German": "Kampf",
+            "French": "Combat",
+            "Italian": "Lotta",
+            "Japanese": "\u304b\u304f\u3068\u3046",
+            "Korean": "\uaca9\ud22c",
+            "Spanish": "\u0411\u043e\u0435\u0432\u043e\u0439"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "EMBER_FAST": {
+            "id": "EMBER_FAST",
+            "power": 10,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Ember",
+                "German": "Glut",
+                "French": "Flamm\u00e8che",
+                "Italian": "Braciere",
+                "Japanese": "\u3072\u306e\u3053",
+                "Korean": "\ubd88\uaf43\uc138\ub840",
+                "Spanish": "\u0422\u043b\u0435\u044e\u0449\u0438\u0435 \u0423\u0433\u043b\u0438"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "ROCK_SMASH_FAST": {
+            "id": "ROCK_SMASH_FAST",
+            "power": 17,
+            "energy": 12,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "\u0411\u043e\u0435\u0432\u043e\u0439"
+                }
+            },
+            "names": {
+                "English": "Rock Smash",
+                "German": "Zertr\u00fcmmerer",
+                "French": "\u00c9clate-Roc",
+                "Italian": "Spaccaroccia",
+                "Japanese": "\u3044\u308f\u304f\u3060\u304d",
+                "Korean": "\ubc14\uc704\uae68\uae30",
+                "Spanish": "\u041a\u0430\u043c\u043d\u0435\u0434\u0440\u043e\u0431\u0438\u043b\u043a\u0430"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "FLAME_WHEEL": {
+            "id": "FLAME_WHEEL",
+            "power": 55,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Flame Wheel",
+                "German": "Flammenrad",
+                "French": "Roue de Feu",
+                "Italian": "Ruotafuoco",
+                "Japanese": "\u304b\u3048\u3093\u3050\u308b\u307e",
+                "Korean": "\ud654\uc5fc\ubc14\ud034",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043d\u043d\u043e\u0435 \u041a\u043e\u043b\u0435\u0441\u043e"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FLAMETHROWER": {
+            "id": "FLAMETHROWER",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Flamethrower",
+                "German": "Flammenwurf",
+                "French": "Lance-Flammes",
+                "Italian": "Lanciafiamme",
+                "Japanese": "\u304b\u3048\u3093\u307b\u3046\u3057\u3083",
+                "Korean": "\ud654\uc5fc\ubc29\uc0ac",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043c\u0451\u0442"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "LOW_SWEEP": {
+            "id": "LOW_SWEEP",
+            "power": 40,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "\u0411\u043e\u0435\u0432\u043e\u0439"
+                }
+            },
+            "names": {
+                "English": "Low Sweep",
+                "German": "Fu\u00dftritt",
+                "French": "Balayette",
+                "Italian": "Calciobasso",
+                "Japanese": "\u30ed\u30fc\u30ad\u30c3\u30af",
+                "Korean": "\ub85c\ud0a5",
+                "Spanish": "\u041d\u0438\u0437\u043a\u0438\u0439 \u0417\u0430\u0445\u0432\u0430\u0442"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 40,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm391.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm391.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "INFERNAPE",
+            "formId": "INFERNAPE_NORMAL",
+            "candies": 100,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm391.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm391.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_391_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_391_00_shiny.png"
+        }
+    ]
+}

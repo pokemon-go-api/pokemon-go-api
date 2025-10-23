@@ -1,0 +1,203 @@
+{
+    "id": "BOUNSWEET",
+    "formId": "BOUNSWEET",
+    "dexNr": 761,
+    "generation": 7,
+    "names": {
+        "English": "Bounsweet",
+        "German": "Frubberl",
+        "French": "Croquine",
+        "Italian": "Bounsweet",
+        "Japanese": "\u30a2\u30de\u30ab\u30b8",
+        "Korean": "\ub2ec\ucf64\uc544",
+        "Spanish": "\u0411\u0430\u0443\u043d\u0441\u0432\u0438\u0442"
+    },
+    "stats": {
+        "stamina": 123,
+        "attack": 55,
+        "defense": 69
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "RAZOR_LEAF_FAST": {
+            "id": "RAZOR_LEAF_FAST",
+            "power": 13,
+            "energy": 7,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Razor Leaf",
+                "German": "Rasierblatt",
+                "French": "Tranch\u2019Herbe",
+                "Italian": "Foglielama",
+                "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                "Spanish": "\u0411\u0440\u0438\u0442\u0432\u043e\u043b\u0438\u0441\u0442"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 9,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "CHARM_FAST": {
+            "id": "CHARM_FAST",
+            "power": 20,
+            "energy": 11,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "\u0424\u0435\u044f"
+                }
+            },
+            "names": {
+                "English": "Charm",
+                "German": "Charme",
+                "French": "Charme",
+                "Italian": "Fascino",
+                "Japanese": "\u3042\u307e\u3048\u308b",
+                "Korean": "\uc560\uad50\ubd80\ub9ac\uae30",
+                "Spanish": "\u0428\u0430\u0440\u043c"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 13,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "ENERGY_BALL": {
+            "id": "ENERGY_BALL",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+                }
+            },
+            "names": {
+                "English": "Energy Ball",
+                "German": "Energieball",
+                "French": "\u00c9co-Sph\u00e8re",
+                "Italian": "Energipalla",
+                "Japanese": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc5d0\ub108\uc9c0\ubcfc",
+                "Spanish": "\u042d\u043d\u0435\u0440\u0433\u0435\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0428\u0430\u0440"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "DRAINING_KISS": {
+            "id": "DRAINING_KISS",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "\u0424\u0435\u044f"
+                }
+            },
+            "names": {
+                "English": "Draining Kiss",
+                "German": "Diebeskuss",
+                "French": "Vampibaiser",
+                "Italian": "Assorbibacio",
+                "Japanese": "\u30c9\u30ec\u30a4\u30f3\u30ad\u30c3\u30b9",
+                "Korean": "\ub4dc\ub808\uc778\ud0a4\uc2a4",
+                "Spanish": "\u041f\u043e\u0446\u0435\u043b\u0443\u0439 \u0412\u0430\u043c\u043f\u0438\u0440\u0430"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm761.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm761.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "STEENEE",
+            "formId": "STEENEE",
+            "candies": 25,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm761.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm761.s.icon.png"
+        }
+    ]
+}
