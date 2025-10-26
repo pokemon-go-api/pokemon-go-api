@@ -132,6 +132,10 @@ foreach ($masterData->getPokemonCollection()->toArray() as $pokemon) {
     $files['pokedex/generation/' . $generation][]  = $renderedPokemon;
     $files['pokedex/id/' . $pokemon->getDexNr()][] = $renderedPokemon;
     $files['pokedex/name/' . $pokemon->getId()][]  = $renderedPokemon;
+    if (is_numeric($pokemon->getId())) {
+        $files['pokedex/name/' . $pokemon->getFormId()][] = $renderedPokemon;
+    }
+
     foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
         $files['pokedex/name/' . $temporaryEvolution->getId()][] = $renderedPokemon;
         $files['pokedex/mega'][]                                 = $renderedPokemon;
