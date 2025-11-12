@@ -1,0 +1,366 @@
+{
+    "id": "TYRANITAR",
+    "formId": "TYRANITAR",
+    "dexNr": 248,
+    "generation": 2,
+    "names": {
+        "English": "Tyranitar",
+        "German": "Despotar",
+        "French": "Tyranocif",
+        "Italian": "Tyranitar",
+        "Japanese": "\u30d0\u30f3\u30ae\u30e9\u30b9",
+        "Korean": "\ub9c8\uae30\ub77c\uc2a4",
+        "Spanish": "\u0422\u0438\u0440\u0430\u043d\u0438\u0442\u0430\u0440"
+    },
+    "stats": {
+        "stamina": 225,
+        "attack": 251,
+        "defense": 207
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ROCK",
+        "names": {
+            "English": "Rock",
+            "German": "Gestein",
+            "French": "Roche",
+            "Italian": "Roccia",
+            "Japanese": "\u3044\u308f",
+            "Korean": "\ubc14\uc704",
+            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_DARK",
+        "names": {
+            "English": "Dark",
+            "German": "Unlicht",
+            "French": "T\u00e9n\u00e8bres",
+            "Italian": "Buio",
+            "Japanese": "\u3042\u304f",
+            "Korean": "\uc545",
+            "Spanish": "\u0422\u0451\u043c\u043d\u044b\u0439"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "BITE_FAST": {
+            "id": "BITE_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "\u0422\u0451\u043c\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Bite",
+                "German": "Biss",
+                "French": "Morsure",
+                "Italian": "Morso",
+                "Japanese": "\u304b\u307f\u3064\u304f",
+                "Korean": "\ubb3c\uae30",
+                "Spanish": "\u0423\u043a\u0443\u0441"
+            },
+            "combat": {
+                "energy": 2,
+                "power": 4,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "IRON_TAIL_FAST": {
+            "id": "IRON_TAIL_FAST",
+            "power": 14,
+            "energy": 6,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Iron Tail",
+                "German": "Eisenschweif",
+                "French": "Queue de Fer",
+                "Italian": "Codacciaio",
+                "Japanese": "\u30a2\u30a4\u30a2\u30f3\u30c6\u30fc\u30eb",
+                "Korean": "\uc544\uc774\uc5b8\ud14c\uc77c",
+                "Spanish": "\u0421\u0442\u0430\u043b\u044c\u043d\u043e\u0439 \u0425\u0432\u043e\u0441\u0442"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 10,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "FIRE_BLAST": {
+            "id": "FIRE_BLAST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Fire Blast",
+                "German": "Feuersturm",
+                "French": "D\u00e9flagration",
+                "Italian": "Fuocobomba",
+                "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                "Korean": "\ubd88\ub300\ubb38\uc790",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0417\u0430\u043b\u043f"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 140,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "CRUNCH": {
+            "id": "CRUNCH",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "\u0422\u0451\u043c\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Crunch",
+                "German": "Knirscher",
+                "French": "M\u00e2chouille",
+                "Italian": "Sgranocchio",
+                "Japanese": "\u304b\u307f\u304f\u3060\u304f",
+                "Korean": "\uae68\ubb3c\uc5b4\ubd80\uc218\uae30",
+                "Spanish": "\u0425\u0440\u0443\u0441\u0442"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 70,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 20,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "STONE_EDGE": {
+            "id": "STONE_EDGE",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Stone Edge",
+                "German": "Steinkante",
+                "French": "Lame de Roc",
+                "Italian": "Pietrataglio",
+                "Japanese": "\u30b9\u30c8\u30fc\u30f3\u30a8\u30c3\u30b8",
+                "Korean": "\uc2a4\ud1a4\uc5d0\uc9c0",
+                "Spanish": "\u041a\u0430\u043c\u0435\u043d\u043d\u043e\u0435 \u041e\u0441\u0442\u0440\u0438\u0451"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BRUTAL_SWING": {
+            "id": "BRUTAL_SWING",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "\u0422\u0451\u043c\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Brutal Swing",
+                "German": "Wirbler",
+                "French": "Centrifugifle",
+                "Italian": "Vorticolpo",
+                "Japanese": "\u3076\u3093\u307e\u308f\u3059",
+                "Korean": "\uc138\ucc28\uac8c\ud718\ub450\ub974\uae30",
+                "Spanish": "\u0420\u0435\u0437\u043a\u0438\u0439 \u041f\u043e\u0432\u043e\u0440\u043e\u0442"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": {
+        "SMACK_DOWN_FAST": {
+            "id": "SMACK_DOWN_FAST",
+            "power": 13,
+            "energy": 7,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Smack Down",
+                "German": "Katapult",
+                "French": "Anti-Air",
+                "Italian": "Abbattimento",
+                "Japanese": "\u3046\u3061\u304a\u3068\u3059",
+                "Korean": "\ub5a8\uc5b4\ub728\ub9ac\uae30",
+                "Spanish": "\u0420\u0430\u0437\u0440\u044b\u0432"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": true,
+    "megaEvolutions": {
+        "TYRANITAR_MEGA": {
+            "id": "TYRANITAR_MEGA",
+            "names": {
+                "English": "Mega Tyranitar",
+                "German": "Mega-Despotar",
+                "French": "M\u00e9ga-Tyranocif",
+                "Italian": "MegaTyranitar",
+                "Japanese": "\u30e1\u30ac\u30d0\u30f3\u30ae\u30e9\u30b9",
+                "Korean": "\uba54\uac00\ub9c8\uae30\ub77c\uc2a4",
+                "Spanish": "\u041c\u0435\u0433\u0430-\u0422\u0438\u0440\u0430\u043d\u0438\u0442\u0430\u0440"
+            },
+            "stats": {
+                "stamina": 225,
+                "attack": 309,
+                "defense": 276
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "\u0422\u0451\u043c\u043d\u044b\u0439"
+                }
+            },
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.fMEGA.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.fMEGA.s.icon.png"
+            }
+        }
+    },
+    "assetForms": [
+        {
+            "form": "MEGA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.fMEGA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.fMEGA.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm248.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_248_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_248_00_shiny.png"
+        }
+    ]
+}

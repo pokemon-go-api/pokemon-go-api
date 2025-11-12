@@ -1,0 +1,264 @@
+{
+    "id": "GIMMIGHOUL",
+    "formId": "GIMMIGHOUL",
+    "dexNr": 999,
+    "generation": 9,
+    "names": {
+        "English": "Gimmighoul",
+        "German": "Gierspenst",
+        "French": "Mordudor",
+        "Italian": "Gimmighoul",
+        "Japanese": "\u30b3\u30ec\u30af\u30ec\u30fc",
+        "Korean": "\ubaa8\uc73c\ub839",
+        "Spanish": "\u0413\u0438\u043c\u043c\u0438\u0433\u0443\u043b"
+    },
+    "stats": {
+        "stamina": 128,
+        "attack": 140,
+        "defense": 76
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "\u0418\u0437\u0443\u043c\u043b\u0435\u043d\u0438\u0435"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "\u0428\u0430\u0440 \u0422\u044c\u043c\u044b"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.s.icon.png"
+    },
+    "regionForms": {
+        "GIMMIGHOUL_COIN_A1": {
+            "id": "GIMMIGHOUL",
+            "formId": "GIMMIGHOUL_COIN_A1",
+            "dexNr": 999,
+            "generation": 9,
+            "names": {
+                "English": "Gimmighoul",
+                "German": "Gierspenst",
+                "French": "Mordudor",
+                "Italian": "Gimmighoul",
+                "Japanese": "\u30b3\u30ec\u30af\u30ec\u30fc",
+                "Korean": "\ubaa8\uc73c\ub839",
+                "Spanish": "\u0413\u0438\u043c\u043c\u0438\u0433\u0443\u043b"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 140,
+                "defense": 76
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "ASTONISH_FAST": {
+                    "id": "ASTONISH_FAST",
+                    "power": 7,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                        }
+                    },
+                    "names": {
+                        "English": "Astonish",
+                        "German": "Erstauner",
+                        "French": "\u00c9tonnement",
+                        "Italian": "Sgomento",
+                        "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                        "Korean": "\ub180\ub798\ud0a4\uae30",
+                        "Spanish": "\u0418\u0437\u0443\u043c\u043b\u0435\u043d\u0438\u0435"
+                    },
+                    "combat": {
+                        "energy": 10,
+                        "power": 12,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "\u0428\u0430\u0440 \u0422\u044c\u043c\u044b"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.fCOIN_A1.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.fCOIN_A1.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": []
+        }
+    },
+    "evolutions": [
+        {
+            "id": "GHOLDENGO",
+            "formId": "GHOLDENGO",
+            "candies": 0,
+            "item": {
+                "id": "ITEM_OTHER_EVOLUTION_STONE_A",
+                "names": {
+                    "English": "Gimmighoul Coins",
+                    "German": "Gierspenst-M\u00fcnzen",
+                    "French": "Pi\u00e8ce\u00a0??????",
+                    "Italian": "Monete di Gimmighoul",
+                    "Japanese": "??????\u30b3\u30a4\u30f3",
+                    "Korean": "??????\ucf54\uc778",
+                    "Spanish": "\u041c\u043e\u043d\u0435\u0442\u0430 \u0413\u0438\u043c\u043c\u0438\u0433\u0443\u043b\u0430"
+                }
+            },
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": "COIN_A1",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.fCOIN_A1.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.fCOIN_A1.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm999.s.icon.png"
+        }
+    ]
+}

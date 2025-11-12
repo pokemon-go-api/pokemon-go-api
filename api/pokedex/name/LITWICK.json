@@ -1,0 +1,293 @@
+{
+    "id": "LITWICK",
+    "formId": "LITWICK",
+    "dexNr": 607,
+    "generation": 5,
+    "names": {
+        "English": "Litwick",
+        "German": "Lichtel",
+        "French": "Fun\u00e9cire",
+        "Italian": "Litwick",
+        "Japanese": "\u30d2\u30c8\u30e2\u30b7",
+        "Korean": "\ubd88\ucf1c\ubbf8",
+        "Spanish": "\u041b\u0438\u0442\u0432\u0438\u043a"
+    },
+    "stats": {
+        "stamina": 137,
+        "attack": 108,
+        "defense": 98
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FIRE",
+        "names": {
+            "English": "Fire",
+            "German": "Feuer",
+            "French": "Feu",
+            "Italian": "Fuoco",
+            "Japanese": "\u307b\u306e\u304a",
+            "Korean": "\ubd88\uaf43",
+            "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "\u0418\u0437\u0443\u043c\u043b\u0435\u043d\u0438\u0435"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "EMBER_FAST": {
+            "id": "EMBER_FAST",
+            "power": 10,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Ember",
+                "German": "Glut",
+                "French": "Flamm\u00e8che",
+                "Italian": "Braciere",
+                "Japanese": "\u3072\u306e\u3053",
+                "Korean": "\ubd88\uaf43\uc138\ub840",
+                "Spanish": "\u0422\u043b\u0435\u044e\u0449\u0438\u0435 \u0423\u0433\u043b\u0438"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "FLAME_CHARGE": {
+            "id": "FLAME_CHARGE",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Flame Charge",
+                "German": "Nitroladung",
+                "French": "Nitrocharge",
+                "Italian": "Nitrocarica",
+                "Japanese": "\u30cb\u30c8\u30ed\u30c1\u30e3\u30fc\u30b8",
+                "Korean": "\ub2c8\ud2b8\ub85c\ucc28\uc9c0",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0417\u0430\u0440\u044f\u0434"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 65,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "FLAME_BURST": {
+            "id": "FLAME_BURST",
+            "power": 70,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Flame Burst",
+                "German": "Funkenflug",
+                "French": "Rebondifeu",
+                "Italian": "Pirolancio",
+                "Japanese": "\u306f\u3058\u3051\u308b\u307b\u306e\u304a",
+                "Korean": "\ubd88\uaf43\ud280\uae30\uae30",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0412\u0437\u0440\u044b\u0432"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "HEAT_WAVE": {
+            "id": "HEAT_WAVE",
+            "power": 95,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Heat Wave",
+                "German": "Hitzewelle",
+                "French": "Canicule",
+                "Italian": "Ondacalda",
+                "Japanese": "\u306d\u3063\u3077\u3046",
+                "Korean": "\uc5f4\ud48d",
+                "Spanish": "\u0412\u043e\u043b\u043d\u0430 \u0416\u0430\u0440\u0430"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 95,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "MYSTICAL_FIRE": {
+            "id": "MYSTICAL_FIRE",
+            "power": 60,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Mystical Fire",
+                "German": "Magieflamme",
+                "French": "Feu Ensorcel\u00e9",
+                "Italian": "Magifiamma",
+                "Japanese": "\u30de\u30b8\u30ab\u30eb\u30d5\u30ec\u30a4\u30e0",
+                "Korean": "\ub9e4\uc9c0\uceec\ud50c\ub808\uc784",
+                "Spanish": "\u041c\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u041e\u0433\u043e\u043d\u044c"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm607.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm607.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "LAMPENT",
+            "formId": "LAMPENT",
+            "candies": 25,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm607.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm607.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_607_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_607_00_shiny.png"
+        }
+    ]
+}

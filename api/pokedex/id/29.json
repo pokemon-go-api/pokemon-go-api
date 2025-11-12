@@ -1,0 +1,243 @@
+{
+    "id": "NIDORAN_FEMALE",
+    "formId": "NIDORAN",
+    "dexNr": 29,
+    "generation": 1,
+    "names": {
+        "English": "Nidoran\u2640",
+        "German": "Nidoran\u2640",
+        "French": "Nidoran\u2640",
+        "Italian": "Nidoran\u2640",
+        "Japanese": "\u30cb\u30c9\u30e9\u30f3\u2640",
+        "Korean": "\ub2c8\ub4dc\ub7f0\u2640",
+        "Spanish": "\u041d\u0438\u0434\u043e\u0440\u0430\u043d\u2640"
+    },
+    "stats": {
+        "stamina": 146,
+        "attack": 86,
+        "defense": 89
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "\u042f\u0434"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "BITE_FAST": {
+            "id": "BITE_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "\u0422\u0451\u043c\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Bite",
+                "German": "Biss",
+                "French": "Morsure",
+                "Italian": "Morso",
+                "Japanese": "\u304b\u307f\u3064\u304f",
+                "Korean": "\ubb3c\uae30",
+                "Spanish": "\u0423\u043a\u0443\u0441"
+            },
+            "combat": {
+                "energy": 2,
+                "power": 4,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POISON_STING_FAST": {
+            "id": "POISON_STING_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "\u042f\u0434"
+                }
+            },
+            "names": {
+                "English": "Poison Sting",
+                "German": "Giftstachel",
+                "French": "Dard-Venin",
+                "Italian": "Velenospina",
+                "Japanese": "\u3069\u304f\u3070\u308a",
+                "Korean": "\ub3c5\uce68",
+                "Spanish": "\u042f\u0434\u043e\u0432\u0438\u0442\u043e\u0435 \u0416\u0430\u043b\u043e"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "POISON_FANG": {
+            "id": "POISON_FANG",
+            "power": 30,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "\u042f\u0434"
+                }
+            },
+            "names": {
+                "English": "Poison Fang",
+                "German": "Giftzahn",
+                "French": "Crochet Venin",
+                "Italian": "Velenodenti",
+                "Japanese": "\u3069\u304f\u3069\u304f\u306e\u30ad\u30d0",
+                "Korean": "\ub9f9\ub3c5\uc5c4\ub2c8",
+                "Spanish": "\u042f\u0434\u043e\u0432\u0438\u0442\u044b\u0439 \u0417\u0443\u0431"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 45,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "BODY_SLAM": {
+            "id": "BODY_SLAM",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "\u041e\u0431\u044b\u0447\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Body Slam",
+                "German": "Bodyslam",
+                "French": "Plaquage",
+                "Italian": "Corposcontro",
+                "Japanese": "\u306e\u3057\u304b\u304b\u308a",
+                "Korean": "\ub204\ub974\uae30",
+                "Spanish": "\u0423\u0434\u0430\u0440 \u0422\u0435\u043b\u043e\u043c"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SLUDGE_BOMB": {
+            "id": "SLUDGE_BOMB",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "\u042f\u0434"
+                }
+            },
+            "names": {
+                "English": "Sludge Bomb",
+                "German": "Matschbombe",
+                "French": "Bombe Beurk",
+                "Italian": "Fangobomba",
+                "Japanese": "\u30d8\u30c9\u30ed\u3070\u304f\u3060\u3093",
+                "Korean": "\uc624\ubb3c\ud3ed\ud0c4",
+                "Spanish": "\u0411\u043e\u043c\u0431\u0430 \u0441\u043e \u0421\u043b\u0438\u0437\u044c\u044e"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm29.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm29.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "NIDORINA",
+            "formId": "NIDORINA_NORMAL",
+            "candies": 25,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm29.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm29.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_029_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_029_00_shiny.png"
+        }
+    ]
+}

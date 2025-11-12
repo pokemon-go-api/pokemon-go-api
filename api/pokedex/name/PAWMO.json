@@ -1,0 +1,327 @@
+{
+    "id": "PAWMO",
+    "formId": "PAWMO",
+    "dexNr": 922,
+    "generation": 9,
+    "names": {
+        "English": "Pawmo",
+        "German": "Pamamo",
+        "French": "Pohmotte",
+        "Italian": "Pawmo",
+        "Japanese": "\u30d1\u30e2\u30c3\u30c8",
+        "Korean": "\ube60\ubaa8\ud2b8",
+        "Spanish": "\u041f\u043e\u043c\u043e"
+    },
+    "stats": {
+        "stamina": 155,
+        "attack": 147,
+        "defense": 82
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FIGHTING",
+        "names": {
+            "English": "Fighting",
+            "German": "Kampf",
+            "French": "Combat",
+            "Italian": "Lotta",
+            "Japanese": "\u304b\u304f\u3068\u3046",
+            "Korean": "\uaca9\ud22c",
+            "Spanish": "\u0411\u043e\u0435\u0432\u043e\u0439"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "SPARK_FAST": {
+            "id": "SPARK_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Spark",
+                "German": "Funkensprung",
+                "French": "\u00c9tincelle",
+                "Italian": "Scintilla",
+                "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                "Korean": "\uc2a4\ud30c\ud06c",
+                "Spanish": "\u0418\u0441\u043a\u0440\u0430"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "CHARGE_BEAM_FAST": {
+            "id": "CHARGE_BEAM_FAST",
+            "power": 7,
+            "energy": 14,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Charge Beam",
+                "German": "Ladestrahl",
+                "French": "Rayon Charg\u00e9",
+                "Italian": "Raggioscossa",
+                "Japanese": "\u30c1\u30e3\u30fc\u30b8\u30d3\u30fc\u30e0",
+                "Korean": "\ucc28\uc9c0\ube54",
+                "Spanish": "\u0417\u0430\u0440\u044f\u0436\u0435\u043d\u043d\u044b\u0439 \u041b\u0443\u0447"
+            },
+            "combat": {
+                "energy": 11,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "THUNDER_SHOCK_FAST": {
+            "id": "THUNDER_SHOCK_FAST",
+            "power": 4,
+            "energy": 7,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Thunder Shock",
+                "German": "Donnerschock",
+                "French": "\u00c9clair",
+                "Italian": "Tuonoshock",
+                "Japanese": "\u3067\u3093\u304d\u30b7\u30e7\u30c3\u30af",
+                "Korean": "\uc804\uae30\uc1fc\ud06c",
+                "Spanish": "\u0423\u0434\u0430\u0440 \u0413\u0440\u043e\u043c\u0430"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "THUNDERBOLT": {
+            "id": "THUNDERBOLT",
+            "power": 80,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Thunderbolt",
+                "German": "Donnerblitz",
+                "French": "Tonnerre",
+                "Italian": "Fulmine",
+                "Japanese": "\uff11\uff10\u307e\u3093\u30dc\u30eb\u30c8",
+                "Korean": "10\ub9cc\ubcfc\ud2b8",
+                "Spanish": "\u0423\u0434\u0430\u0440 \u041c\u043e\u043b\u043d\u0438\u0438"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "DISCHARGE": {
+            "id": "DISCHARGE",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Discharge",
+                "German": "Ladungssto\u00df",
+                "French": "Coup d\u2019Jus",
+                "Italian": "Scarica",
+                "Japanese": "\u307b\u3046\u3067\u3093",
+                "Korean": "\ubc29\uc804",
+                "Spanish": "\u0420\u0430\u0437\u0440\u044f\u0434"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "WILD_CHARGE": {
+            "id": "WILD_CHARGE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Wild Charge",
+                "German": "Stromsto\u00df",
+                "French": "\u00c9clair Fou",
+                "Italian": "Sprizzalampo",
+                "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                "Spanish": "\u0414\u0438\u043a\u0438\u0439 \u0420\u0430\u0437\u0440\u044f\u0434"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": -2,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "THUNDER_PUNCH": {
+            "id": "THUNDER_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Thunder Punch",
+                "German": "Donnerschlag",
+                "French": "Poing \u00c9clair",
+                "Italian": "Tuonopugno",
+                "Japanese": "\u304b\u307f\u306a\u308a\u30d1\u30f3\u30c1",
+                "Korean": "\ubc88\uac1c\ud380\uce58",
+                "Spanish": "\u0413\u0440\u043e\u043c\u043e\u0432\u043e\u0439 \u041a\u0443\u043b\u0430\u043a"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm922.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm922.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "PAWMOT",
+            "formId": "PAWMOT",
+            "candies": 100,
+            "item": null,
+            "quests": [
+                {
+                    "id": "PAWMOT_EVOLUTION_QUEST",
+                    "type": "QUEST_BUDDY_EVOLUTION_WALK",
+                    "names": {
+                        "English": "Walk 25 km with your buddy",
+                        "German": "Laufe 25 km mit deinem Kumpel.",
+                        "French": "Marche 25\u00a0km avec ton copain",
+                        "Italian": "Percorri 25 km con il tuo compagno",
+                        "Japanese": "\u76f8\u68d2\u306e\u30dd\u30b1\u30e2\u30f3\u3068\u4e00\u7dd2\u306b25km\u6b69\u304f",
+                        "Korean": "\ud30c\ud2b8\ub108 \ud3ec\ucf13\ubaac\uacfc 25 km \uac77\ub294\ub2e4",
+                        "Spanish": "\u041f\u0440\u043e\u0439\u0434\u0438 25\u00a0\u043a\u043c \u0441\u043e \u0441\u0432\u043e\u0438\u043c \u041f\u043e\u043a\u0435\u043c\u043e\u043d\u043e\u043c-\u043f\u0440\u0438\u044f\u0442\u0435\u043b\u0435\u043c"
+                    }
+                }
+            ]
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm922.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm922.s.icon.png"
+        }
+    ]
+}

@@ -1,0 +1,250 @@
+{
+    "id": "CUBONE",
+    "formId": "CUBONE",
+    "dexNr": 104,
+    "generation": 1,
+    "names": {
+        "English": "Cubone",
+        "German": "Tragosso",
+        "French": "Osselait",
+        "Italian": "Cubone",
+        "Japanese": "\u30ab\u30e9\u30ab\u30e9",
+        "Korean": "\ud0d5\uad6c\ub9ac",
+        "Spanish": "\u041a\u044c\u044e\u0431\u043e\u043d"
+    },
+    "stats": {
+        "stamina": 137,
+        "attack": 90,
+        "defense": 144
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GROUND",
+        "names": {
+            "English": "Ground",
+            "German": "Boden",
+            "French": "Sol",
+            "Italian": "Terra",
+            "Japanese": "\u3058\u3081\u3093",
+            "Korean": "\ub545",
+            "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "MUD_SLAP_FAST": {
+            "id": "MUD_SLAP_FAST",
+            "power": 19,
+            "energy": 13,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Mud-Slap",
+                "German": "Lehmschelle",
+                "French": "Coud\u2019Boue",
+                "Italian": "Fangosberla",
+                "Japanese": "\u3069\u308d\u304b\u3051",
+                "Korean": "\uc9c4\ud759\ubfcc\ub9ac\uae30",
+                "Spanish": "\u041f\u043b\u0435\u0432\u043e\u043a \u0413\u0440\u044f\u0437\u044c\u044e"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "ROCK_SMASH_FAST": {
+            "id": "ROCK_SMASH_FAST",
+            "power": 17,
+            "energy": 12,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "\u0411\u043e\u0435\u0432\u043e\u0439"
+                }
+            },
+            "names": {
+                "English": "Rock Smash",
+                "German": "Zertr\u00fcmmerer",
+                "French": "\u00c9clate-Roc",
+                "Italian": "Spaccaroccia",
+                "Japanese": "\u3044\u308f\u304f\u3060\u304d",
+                "Korean": "\ubc14\uc704\uae68\uae30",
+                "Spanish": "\u041a\u0430\u043c\u043d\u0435\u0434\u0440\u043e\u0431\u0438\u043b\u043a\u0430"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "BONE_CLUB": {
+            "id": "BONE_CLUB",
+            "power": 40,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Bone Club",
+                "German": "Knochenkeule",
+                "French": "Massd\u2019Os",
+                "Italian": "Ossoclava",
+                "Japanese": "\u30db\u30cd\u3053\u3093\u307c\u3046",
+                "Korean": "\ubf08\ub2e4\uadc0\uce58\uae30",
+                "Spanish": "\u041a\u043e\u0441\u0442\u044f\u043d\u0430\u044f \u0414\u0443\u0431\u0438\u043d\u0430"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "DIG": {
+            "id": "DIG",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 4500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Dig",
+                "German": "Schaufler",
+                "French": "Tunnel",
+                "Italian": "Fossa",
+                "Japanese": "\u3042\u306a\u3092\u307b\u308b",
+                "Korean": "\uad6c\uba4d\ud30c\uae30",
+                "Spanish": "\u0420\u044b\u0442\u044c\u0451"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BULLDOZE": {
+            "id": "BULLDOZE",
+            "power": 80,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Bulldoze",
+                "German": "Dampfwalze",
+                "French": "Pi\u00e9tisol",
+                "Italian": "Battiterra",
+                "Japanese": "\u3058\u306a\u3089\u3057",
+                "Korean": "\ub545\uace0\ub974\uae30",
+                "Spanish": "\u0411\u0443\u043b\u044c\u0434\u043e\u0437\u0435\u0440"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 45,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 50,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm104.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm104.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "MAROWAK",
+            "formId": "MAROWAK_NORMAL",
+            "candies": 50,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": "FALL_2023",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm104.cFALL_2023.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm104.cFALL_2023.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm104.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm104.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_104_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_104_00_shiny.png"
+        }
+    ]
+}

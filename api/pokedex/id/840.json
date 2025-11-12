@@ -1,0 +1,189 @@
+{
+    "id": "APPLIN",
+    "formId": "APPLIN",
+    "dexNr": 840,
+    "generation": 8,
+    "names": {
+        "English": "Applin",
+        "German": "Knapfel",
+        "French": "Verpom",
+        "Italian": "Applin",
+        "Japanese": "\u30ab\u30b8\u30c3\u30c1\u30e5",
+        "Korean": "\uacfc\uc0ac\uc0ad\ubc8c\ub808",
+        "Spanish": "\u0410\u043f\u043f\u043b\u0438\u043d"
+    },
+    "stats": {
+        "stamina": 120,
+        "attack": 71,
+        "defense": 116
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "\u0422\u0440\u0430\u0432\u0430"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_DRAGON",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "\u0414\u0440\u0430\u043a\u043e\u043d"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "\u041f\u0440\u0438\u0432\u0438\u0434\u0435\u043d\u0438\u0435"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "\u0418\u0437\u0443\u043c\u043b\u0435\u043d\u0438\u0435"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "STRUGGLE": {
+            "id": "STRUGGLE",
+            "power": 35,
+            "energy": 0,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "\u041e\u0431\u044b\u0447\u043d\u044b\u0439"
+                }
+            },
+            "names": {
+                "English": "Struggle",
+                "German": "Verzweifler",
+                "French": "Lutte",
+                "Italian": "Scontro",
+                "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                "Korean": "\ubc1c\ubc84\ub465",
+                "Spanish": "\u0411\u043e\u0440\u044c\u0431\u0430"
+            },
+            "combat": {
+                "energy": -100,
+                "power": 35,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm840.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm840.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "APPLETUN",
+            "formId": "APPLETUN",
+            "candies": 200,
+            "item": {
+                "id": "ITEM_OTHER_EVOLUTION_STONE_MAPLE_A",
+                "names": {
+                    "English": "Sweet Apple",
+                    "German": "S\u00fc\u00dfer Apfel",
+                    "French": "Pomme Sucr\u00e9e",
+                    "Italian": "Dolcepomo",
+                    "Japanese": "\u3042\u307e\u30fc\u3044\u308a\u3093\u3054",
+                    "Korean": "\ub2ec\ucf64\ud55c\uc0ac\uacfc",
+                    "Spanish": "\u0421\u043b\u0430\u0434\u043a\u043e\u0435 \u042f\u0431\u043b\u043e\u043a\u043e"
+                }
+            },
+            "quests": []
+        },
+        {
+            "id": "FLAPPLE",
+            "formId": "FLAPPLE",
+            "candies": 200,
+            "item": {
+                "id": "ITEM_OTHER_EVOLUTION_STONE_MAPLE_B",
+                "names": {
+                    "English": "Tart Apple",
+                    "German": "Saurer Apfel",
+                    "French": "Pomme Acidul\u00e9e",
+                    "Italian": "Aspropomo",
+                    "Japanese": "\u3059\u3063\u3071\u3044\u308a\u3093\u3054",
+                    "Korean": "\uc0c8\ucf64\ud55c\uc0ac\uacfc",
+                    "Spanish": "\u041a\u0438\u0441\u043b\u043e\u0435 \u042f\u0431\u043b\u043e\u043a\u043e"
+                }
+            },
+            "quests": []
+        },
+        {
+            "id": "1011",
+            "formId": "1011",
+            "candies": 200,
+            "item": {
+                "id": "ITEM_OTHER_EVOLUTION_STONE_MAPLE_C",
+                "names": {
+                    "English": "Syrupy Apple",
+                    "German": "Saftiger Apfel",
+                    "French": "Pomme Nectar",
+                    "Italian": "Sciroppomo",
+                    "Japanese": "\u307f\u3064\u3044\u308a\u308a\u3093\u3054",
+                    "Korean": "\uafc0\ub9db\uc0ac\uacfc",
+                    "Spanish": "\u0421\u043e\u0447\u043d\u043e\u0435 \u042f\u0431\u043b\u043e\u043a\u043e"
+                }
+            },
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm840.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm840.s.icon.png"
+        }
+    ]
+}

@@ -1,0 +1,584 @@
+{
+    "id": "GOLEM",
+    "formId": "GOLEM",
+    "dexNr": 76,
+    "generation": 1,
+    "names": {
+        "English": "Golem",
+        "German": "Geowaz",
+        "French": "Grolem",
+        "Italian": "Golem",
+        "Japanese": "\u30b4\u30ed\u30fc\u30cb\u30e3",
+        "Korean": "\ub531\uad6c\ub9ac",
+        "Spanish": "\u0413\u043e\u043b\u0435\u043c"
+    },
+    "stats": {
+        "stamina": 190,
+        "attack": 211,
+        "defense": 198
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ROCK",
+        "names": {
+            "English": "Rock",
+            "German": "Gestein",
+            "French": "Roche",
+            "Italian": "Roccia",
+            "Japanese": "\u3044\u308f",
+            "Korean": "\ubc14\uc704",
+            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GROUND",
+        "names": {
+            "English": "Ground",
+            "German": "Boden",
+            "French": "Sol",
+            "Italian": "Terra",
+            "Japanese": "\u3058\u3081\u3093",
+            "Korean": "\ub545",
+            "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ROCK_THROW_FAST": {
+            "id": "ROCK_THROW_FAST",
+            "power": 13,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Rock Throw",
+                "German": "Steinwurf",
+                "French": "Jet-Pierres",
+                "Italian": "Sassata",
+                "Japanese": "\u3044\u308f\u304a\u3068\u3057",
+                "Korean": "\ub3cc\ub5a8\uad6c\uae30",
+                "Spanish": "\u0411\u0440\u043e\u0441\u043e\u043a \u041a\u0430\u043c\u043d\u044f"
+            },
+            "combat": {
+                "energy": 5,
+                "power": 8,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "MUD_SLAP_FAST": {
+            "id": "MUD_SLAP_FAST",
+            "power": 19,
+            "energy": 13,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Mud-Slap",
+                "German": "Lehmschelle",
+                "French": "Coud\u2019Boue",
+                "Italian": "Fangosberla",
+                "Japanese": "\u3069\u308d\u304b\u3051",
+                "Korean": "\uc9c4\ud759\ubfcc\ub9ac\uae30",
+                "Spanish": "\u041f\u043b\u0435\u0432\u043e\u043a \u0413\u0440\u044f\u0437\u044c\u044e"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "MUD_SHOT_FAST": {
+            "id": "MUD_SHOT_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Mud Shot",
+                "German": "Lehmschuss",
+                "French": "Tir de Boue",
+                "Italian": "Colpodifango",
+                "Japanese": "\u30de\u30c3\u30c9\u30b7\u30e7\u30c3\u30c8",
+                "Korean": "\uba38\ub4dc\uc0f7",
+                "Spanish": "\u0428\u043b\u0435\u043f\u043e\u043a \u0413\u0440\u044f\u0437\u044c\u044e"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "STONE_EDGE": {
+            "id": "STONE_EDGE",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Stone Edge",
+                "German": "Steinkante",
+                "French": "Lame de Roc",
+                "Italian": "Pietrataglio",
+                "Japanese": "\u30b9\u30c8\u30fc\u30f3\u30a8\u30c3\u30b8",
+                "Korean": "\uc2a4\ud1a4\uc5d0\uc9c0",
+                "Spanish": "\u041a\u0430\u043c\u0435\u043d\u043d\u043e\u0435 \u041e\u0441\u0442\u0440\u0438\u0451"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ROCK_BLAST": {
+            "id": "ROCK_BLAST",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Rock Blast",
+                "German": "Felswurf",
+                "French": "Boule Roc",
+                "Italian": "Cadutamassi",
+                "Japanese": "\u30ed\u30c3\u30af\u30d6\u30e9\u30b9\u30c8",
+                "Korean": "\ub85d\ube14\ub77c\uc2a4\ud2b8",
+                "Spanish": "\u041a\u0430\u043c\u0435\u043d\u043d\u044b\u0439 \u0412\u0437\u0440\u044b\u0432"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 50,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "EARTHQUAKE": {
+            "id": "EARTHQUAKE",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Earthquake",
+                "German": "Erdbeben",
+                "French": "S\u00e9isme",
+                "Italian": "Terremoto",
+                "Japanese": "\u3058\u3057\u3093",
+                "Korean": "\uc9c0\uc9c4",
+                "Spanish": "\u0417\u0435\u043c\u043b\u0435\u0442\u0440\u044f\u0441\u0435\u043d\u0438\u0435"
+            },
+            "combat": {
+                "energy": -65,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ANCIENT_POWER": {
+            "id": "ANCIENT_POWER",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Ancient Power",
+                "German": "Antik-Kraft",
+                "French": "Pouvoir Antique",
+                "Italian": "Forzantica",
+                "Japanese": "\u3052\u3093\u3057\u306e\u3061\u304b\u3089",
+                "Korean": "\uc6d0\uc2dc\uc758\ud798",
+                "Spanish": "\u0414\u0440\u0435\u0432\u043d\u044f\u044f \u0421\u0438\u043b\u0430"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": 1,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.s.icon.png"
+    },
+    "regionForms": {
+        "GOLEM_ALOLA": {
+            "id": "GOLEM",
+            "formId": "GOLEM_ALOLA",
+            "dexNr": 76,
+            "generation": 1,
+            "names": {
+                "English": "Alolan Golem",
+                "German": "Alola-Geowaz",
+                "French": "Grolem d'Alola",
+                "Italian": "Golem di Alola",
+                "Japanese": "\u30a2\u30ed\u30fc\u30e9 \u30b4\u30ed\u30fc\u30cb\u30e3",
+                "Korean": "\uc54c\ub85c\ub77c \ub531\uad6c\ub9ac",
+                "Spanish": "\u0413\u043e\u043b\u0435\u043c de Alola"
+            },
+            "stats": {
+                "stamina": 190,
+                "attack": 211,
+                "defense": 198
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "ROCK_THROW_FAST": {
+                    "id": "ROCK_THROW_FAST",
+                    "power": 13,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_ROCK",
+                        "names": {
+                            "English": "Rock",
+                            "German": "Gestein",
+                            "French": "Roche",
+                            "Italian": "Roccia",
+                            "Japanese": "\u3044\u308f",
+                            "Korean": "\ubc14\uc704",
+                            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                        }
+                    },
+                    "names": {
+                        "English": "Rock Throw",
+                        "German": "Steinwurf",
+                        "French": "Jet-Pierres",
+                        "Italian": "Sassata",
+                        "Japanese": "\u3044\u308f\u304a\u3068\u3057",
+                        "Korean": "\ub3cc\ub5a8\uad6c\uae30",
+                        "Spanish": "\u0411\u0440\u043e\u0441\u043e\u043a \u041a\u0430\u043c\u043d\u044f"
+                    },
+                    "combat": {
+                        "energy": 5,
+                        "power": 8,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "VOLT_SWITCH_FAST": {
+                    "id": "VOLT_SWITCH_FAST",
+                    "power": 13,
+                    "energy": 20,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                        }
+                    },
+                    "names": {
+                        "English": "Volt Switch",
+                        "German": "Voltwechsel",
+                        "French": "Change \u00c9clair",
+                        "Italian": "Invertivolt",
+                        "Japanese": "\u30dc\u30eb\u30c8\u30c1\u30a7\u30f3\u30b8",
+                        "Korean": "\ubcfc\ud2b8\uccb4\uc778\uc9c0",
+                        "Spanish": "\u0412\u043e\u043b\u044c\u0442 \u0425\u043b\u044b\u0441\u0442"
+                    },
+                    "combat": {
+                        "energy": 16,
+                        "power": 14,
+                        "turns": 4,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STONE_EDGE": {
+                    "id": "STONE_EDGE",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ROCK",
+                        "names": {
+                            "English": "Rock",
+                            "German": "Gestein",
+                            "French": "Roche",
+                            "Italian": "Roccia",
+                            "Japanese": "\u3044\u308f",
+                            "Korean": "\ubc14\uc704",
+                            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                        }
+                    },
+                    "names": {
+                        "English": "Stone Edge",
+                        "German": "Steinkante",
+                        "French": "Lame de Roc",
+                        "Italian": "Pietrataglio",
+                        "Japanese": "\u30b9\u30c8\u30fc\u30f3\u30a8\u30c3\u30b8",
+                        "Korean": "\uc2a4\ud1a4\uc5d0\uc9c0",
+                        "Spanish": "\u041a\u0430\u043c\u0435\u043d\u043d\u043e\u0435 \u041e\u0441\u0442\u0440\u0438\u0451"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "ROCK_BLAST": {
+                    "id": "ROCK_BLAST",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_ROCK",
+                        "names": {
+                            "English": "Rock",
+                            "German": "Gestein",
+                            "French": "Roche",
+                            "Italian": "Roccia",
+                            "Japanese": "\u3044\u308f",
+                            "Korean": "\ubc14\uc704",
+                            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                        }
+                    },
+                    "names": {
+                        "English": "Rock Blast",
+                        "German": "Felswurf",
+                        "French": "Boule Roc",
+                        "Italian": "Cadutamassi",
+                        "Japanese": "\u30ed\u30c3\u30af\u30d6\u30e9\u30b9\u30c8",
+                        "Korean": "\ub85d\ube14\ub77c\uc2a4\ud2b8",
+                        "Spanish": "\u041a\u0430\u043c\u0435\u043d\u043d\u044b\u0439 \u0412\u0437\u0440\u044b\u0432"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 50,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "WILD_CHARGE": {
+                    "id": "WILD_CHARGE",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                        }
+                    },
+                    "names": {
+                        "English": "Wild Charge",
+                        "German": "Stromsto\u00df",
+                        "French": "\u00c9clair Fou",
+                        "Italian": "Sprizzalampo",
+                        "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                        "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                        "Spanish": "\u0414\u0438\u043a\u0438\u0439 \u0420\u0430\u0437\u0440\u044f\u0434"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": -2,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": {
+                "ROLLOUT_FAST": {
+                    "id": "ROLLOUT_FAST",
+                    "power": 15,
+                    "energy": 19,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ROCK",
+                        "names": {
+                            "English": "Rock",
+                            "German": "Gestein",
+                            "French": "Roche",
+                            "Italian": "Roccia",
+                            "Japanese": "\u3044\u308f",
+                            "Korean": "\ubc14\uc704",
+                            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                        }
+                    },
+                    "names": {
+                        "English": "Rollout",
+                        "German": "Walzer",
+                        "French": "Roulade",
+                        "Italian": "Rotolamento",
+                        "Japanese": "\u3053\u308d\u304c\u308b",
+                        "Korean": "\uad6c\ub974\uae30",
+                        "Spanish": "\u041f\u0435\u0440\u0435\u043a\u0430\u0442"
+                    },
+                    "combat": {
+                        "energy": 13,
+                        "power": 7,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.fALOLA.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.fALOLA.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": []
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": "ALOLA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.fALOLA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.fALOLA.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm76.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_076_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_076_00_shiny.png"
+        }
+    ]
+}

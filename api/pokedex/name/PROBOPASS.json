@@ -1,0 +1,279 @@
+{
+    "id": "PROBOPASS",
+    "formId": "PROBOPASS",
+    "dexNr": 476,
+    "generation": 4,
+    "names": {
+        "English": "Probopass",
+        "German": "Voluminas",
+        "French": "Tarinorme",
+        "Italian": "Probopass",
+        "Japanese": "\u30c0\u30a4\u30ce\u30fc\u30ba",
+        "Korean": "\ub300\ucf54\ud30c\uc2a4",
+        "Spanish": "\u041f\u0440\u043e\u0431\u043e\u043f\u0430\u0441\u0441"
+    },
+    "stats": {
+        "stamina": 155,
+        "attack": 135,
+        "defense": 275
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ROCK",
+        "names": {
+            "English": "Rock",
+            "German": "Gestein",
+            "French": "Roche",
+            "Italian": "Roccia",
+            "Japanese": "\u3044\u308f",
+            "Korean": "\ubc14\uc704",
+            "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_STEEL",
+        "names": {
+            "English": "Steel",
+            "German": "Stahl",
+            "French": "Acier",
+            "Italian": "Acciaio",
+            "Japanese": "\u306f\u304c\u306d",
+            "Korean": "\uac15\ucca0",
+            "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ROCK_THROW_FAST": {
+            "id": "ROCK_THROW_FAST",
+            "power": 13,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Rock Throw",
+                "German": "Steinwurf",
+                "French": "Jet-Pierres",
+                "Italian": "Sassata",
+                "Japanese": "\u3044\u308f\u304a\u3068\u3057",
+                "Korean": "\ub3cc\ub5a8\uad6c\uae30",
+                "Spanish": "\u0411\u0440\u043e\u0441\u043e\u043a \u041a\u0430\u043c\u043d\u044f"
+            },
+            "combat": {
+                "energy": 5,
+                "power": 8,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "SPARK_FAST": {
+            "id": "SPARK_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Spark",
+                "German": "Funkensprung",
+                "French": "\u00c9tincelle",
+                "Italian": "Scintilla",
+                "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                "Korean": "\uc2a4\ud30c\ud06c",
+                "Spanish": "\u0418\u0441\u043a\u0440\u0430"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "MAGNET_BOMB": {
+            "id": "MAGNET_BOMB",
+            "power": 75,
+            "energy": -33,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Magnet Bomb",
+                "German": "Magnetbombe",
+                "French": "Bombe Aimant",
+                "Italian": "Bombagnete",
+                "Japanese": "\u30de\u30b0\u30cd\u30c3\u30c8\u30dc\u30e0",
+                "Korean": "\ub9c8\uadf8\ub137\ubd04",
+                "Spanish": "\u041c\u0430\u0433\u043d\u0438\u0442\u043d\u0430\u044f \u0411\u043e\u043c\u0431\u0430"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ROCK_SLIDE": {
+            "id": "ROCK_SLIDE",
+            "power": 75,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "\u041a\u0430\u043c\u0435\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Rock Slide",
+                "German": "Steinhagel",
+                "French": "\u00c9boulement",
+                "Italian": "Frana",
+                "Japanese": "\u3044\u308f\u306a\u3060\u308c",
+                "Korean": "\uc2a4\ud1a4\uc0e4\uc6cc",
+                "Spanish": "\u0421\u0434\u0432\u0438\u0433 \u0421\u043a\u0430\u043b\u044b"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "THUNDERBOLT": {
+            "id": "THUNDERBOLT",
+            "power": 80,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Thunderbolt",
+                "German": "Donnerblitz",
+                "French": "Tonnerre",
+                "Italian": "Fulmine",
+                "Japanese": "\uff11\uff10\u307e\u3093\u30dc\u30eb\u30c8",
+                "Korean": "10\ub9cc\ubcfc\ud2b8",
+                "Spanish": "\u0423\u0434\u0430\u0440 \u041c\u043e\u043b\u043d\u0438\u0438"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ZAP_CANNON": {
+            "id": "ZAP_CANNON",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e"
+                }
+            },
+            "names": {
+                "English": "Zap Cannon",
+                "German": "Blitzkanone",
+                "French": "\u00c9lecanon",
+                "Italian": "Falcecannone",
+                "Japanese": "\u3067\u3093\u3058\u307b\u3046",
+                "Korean": "\uc804\uc790\ud3ec",
+                "Spanish": "\u0413\u0440\u043e\u0445\u043e\u0442 \u041f\u0443\u0448\u0435\u043a"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 150,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 33,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm476.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm476.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm476.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm476.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_476_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_476_00_shiny.png"
+        }
+    ]
+}

@@ -1,0 +1,248 @@
+{
+    "id": "BALTOY",
+    "formId": "BALTOY",
+    "dexNr": 343,
+    "generation": 3,
+    "names": {
+        "English": "Baltoy",
+        "German": "Puppance",
+        "French": "Balbuto",
+        "Italian": "Baltoy",
+        "Japanese": "\u30e4\u30b8\u30ed\u30f3",
+        "Korean": "\uc624\ub69d\uad70",
+        "Spanish": "\u0411\u0430\u043b\u0442\u043e\u0439"
+    },
+    "stats": {
+        "stamina": 120,
+        "attack": 77,
+        "defense": 124
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GROUND",
+        "names": {
+            "English": "Ground",
+            "German": "Boden",
+            "French": "Sol",
+            "Italian": "Terra",
+            "Japanese": "\u3058\u3081\u3093",
+            "Korean": "\ub545",
+            "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_PSYCHIC",
+        "names": {
+            "English": "Psychic",
+            "German": "Psycho",
+            "French": "Psy",
+            "Italian": "Psico",
+            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+            "Korean": "\uc5d0\uc2a4\ud37c",
+            "Spanish": "\u041f\u0441\u0438\u0445\u043e"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "CONFUSION_FAST": {
+            "id": "CONFUSION_FAST",
+            "power": 19,
+            "energy": 14,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "\u041f\u0441\u0438\u0445\u043e"
+                }
+            },
+            "names": {
+                "English": "Confusion",
+                "German": "Konfusion",
+                "French": "Choc Mental",
+                "Italian": "Confusione",
+                "Japanese": "\u306d\u3093\u308a\u304d",
+                "Korean": "\uc5fc\ub3d9\ub825",
+                "Spanish": "\u0417\u0430\u043c\u0435\u0448\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e"
+            },
+            "combat": {
+                "energy": 14,
+                "power": 16,
+                "turns": 4,
+                "buffs": null
+            }
+        },
+        "EXTRASENSORY_FAST": {
+            "id": "EXTRASENSORY_FAST",
+            "power": 11,
+            "energy": 11,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "\u041f\u0441\u0438\u0445\u043e"
+                }
+            },
+            "names": {
+                "English": "Extrasensory",
+                "German": "Sondersensor",
+                "French": "Extrasenseur",
+                "Italian": "Extrasenso",
+                "Japanese": "\u3058\u3093\u3064\u3046\u308a\u304d",
+                "Korean": "\uc2e0\ud1b5\ub825",
+                "Spanish": "\u042d\u043a\u0441\u0442\u0440\u0430\u0441\u0435\u043d\u0441\u043e\u0440\u0438\u043a\u0430"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 8,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "GYRO_BALL": {
+            "id": "GYRO_BALL",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "\u0421\u0442\u0430\u043b\u044c"
+                }
+            },
+            "names": {
+                "English": "Gyro Ball",
+                "German": "Gyroball",
+                "French": "Gyroballe",
+                "Italian": "Vortexpalla",
+                "Japanese": "\u30b8\u30e3\u30a4\u30ed\u30dc\u30fc\u30eb",
+                "Korean": "\uc790\uc774\ub85c\ubcfc",
+                "Spanish": "\u0413\u0438\u0440\u043e-\u0428\u0430\u0440"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PSYBEAM": {
+            "id": "PSYBEAM",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "\u041f\u0441\u0438\u0445\u043e"
+                }
+            },
+            "names": {
+                "English": "Psybeam",
+                "German": "Psystrahl",
+                "French": "Rafale Psy",
+                "Italian": "Psicoraggio",
+                "Japanese": "\u30b5\u30a4\u30b1\u3053\u3046\u305b\u3093",
+                "Korean": "\ud658\uc0c1\ube54",
+                "Spanish": "\u041f\u0441\u0438\u0445\u043e\u043b\u0443\u0447"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "DIG": {
+            "id": "DIG",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 4500,
+            "type": {
+                "type": "POKEMON_TYPE_GROUND",
+                "names": {
+                    "English": "Ground",
+                    "German": "Boden",
+                    "French": "Sol",
+                    "Italian": "Terra",
+                    "Japanese": "\u3058\u3081\u3093",
+                    "Korean": "\ub545",
+                    "Spanish": "\u0417\u0435\u043c\u043b\u044f"
+                }
+            },
+            "names": {
+                "English": "Dig",
+                "German": "Schaufler",
+                "French": "Tunnel",
+                "Italian": "Fossa",
+                "Japanese": "\u3042\u306a\u3092\u307b\u308b",
+                "Korean": "\uad6c\uba4d\ud30c\uae30",
+                "Spanish": "\u0420\u044b\u0442\u044c\u0451"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm343.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm343.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "CLAYDOL",
+            "formId": "CLAYDOL",
+            "candies": 50,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm343.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm343.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_343_00.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_343_00_shiny.png"
+        }
+    ]
+}

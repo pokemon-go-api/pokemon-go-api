@@ -1,0 +1,272 @@
+{
+    "id": "ARMAROUGE",
+    "formId": "ARMAROUGE",
+    "dexNr": 936,
+    "generation": 9,
+    "names": {
+        "English": "Armarouge",
+        "German": "Crimanzo",
+        "French": "Carmadura",
+        "Italian": "Armarouge",
+        "Japanese": "\u30b0\u30ec\u30f3\u30a2\u30eb\u30de",
+        "Korean": "\uce74\ub514\ub098\ub974\ub9c8",
+        "Spanish": "\u0410\u0440\u043c\u0430\u0440\u0443\u0436"
+    },
+    "stats": {
+        "stamina": 198,
+        "attack": 234,
+        "defense": 185
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_FIRE",
+        "names": {
+            "English": "Fire",
+            "German": "Feuer",
+            "French": "Feu",
+            "Italian": "Fuoco",
+            "Japanese": "\u307b\u306e\u304a",
+            "Korean": "\ubd88\uaf43",
+            "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_PSYCHIC",
+        "names": {
+            "English": "Psychic",
+            "German": "Psycho",
+            "French": "Psy",
+            "Italian": "Psico",
+            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+            "Korean": "\uc5d0\uc2a4\ud37c",
+            "Spanish": "\u041f\u0441\u0438\u0445\u043e"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "EMBER_FAST": {
+            "id": "EMBER_FAST",
+            "power": 10,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Ember",
+                "German": "Glut",
+                "French": "Flamm\u00e8che",
+                "Italian": "Braciere",
+                "Japanese": "\u3072\u306e\u3053",
+                "Korean": "\ubd88\uaf43\uc138\ub840",
+                "Spanish": "\u0422\u043b\u0435\u044e\u0449\u0438\u0435 \u0423\u0433\u043b\u0438"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "INCINERATE_FAST": {
+            "id": "INCINERATE_FAST",
+            "power": 32,
+            "energy": 22,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Incinerate",
+                "German": "Ein\u00e4schern",
+                "French": "Calcination",
+                "Italian": "Bruciatutto",
+                "Japanese": "\u3084\u304d\u3064\u304f\u3059",
+                "Korean": "\ubd88\ud0dc\uc6b0\uae30",
+                "Spanish": "\u041f\u0440\u0435\u0432\u0440\u0430\u0449\u0435\u043d\u0438\u0435 \u0432 \u041f\u0435\u043f\u0435\u043b"
+            },
+            "combat": {
+                "energy": 20,
+                "power": 20,
+                "turns": 5,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "FLAME_CHARGE": {
+            "id": "FLAME_CHARGE",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Flame Charge",
+                "German": "Nitroladung",
+                "French": "Nitrocharge",
+                "Italian": "Nitrocarica",
+                "Japanese": "\u30cb\u30c8\u30ed\u30c1\u30e3\u30fc\u30b8",
+                "Korean": "\ub2c8\ud2b8\ub85c\ucc28\uc9c0",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043d\u043d\u044b\u0439 \u0417\u0430\u0440\u044f\u0434"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 65,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "HEAT_WAVE": {
+            "id": "HEAT_WAVE",
+            "power": 95,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Heat Wave",
+                "German": "Hitzewelle",
+                "French": "Canicule",
+                "Italian": "Ondacalda",
+                "Japanese": "\u306d\u3063\u3077\u3046",
+                "Korean": "\uc5f4\ud48d",
+                "Spanish": "\u0412\u043e\u043b\u043d\u0430 \u0416\u0430\u0440\u0430"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 95,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FLAMETHROWER": {
+            "id": "FLAMETHROWER",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "\u041e\u0433\u043e\u043d\u044c"
+                }
+            },
+            "names": {
+                "English": "Flamethrower",
+                "German": "Flammenwurf",
+                "French": "Lance-Flammes",
+                "Italian": "Lanciafiamme",
+                "Japanese": "\u304b\u3048\u3093\u307b\u3046\u3057\u3083",
+                "Korean": "\ud654\uc5fc\ubc29\uc0ac",
+                "Spanish": "\u041e\u0433\u043d\u0435\u043c\u0451\u0442"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PSYSHOCK": {
+            "id": "PSYSHOCK",
+            "power": 60,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "\u041f\u0441\u0438\u0445\u043e"
+                }
+            },
+            "names": {
+                "English": "Psyshock",
+                "German": "Psychoschock",
+                "French": "Choc Psy",
+                "Italian": "Psicoshock",
+                "Japanese": "\u30b5\u30a4\u30b3\u30b7\u30e7\u30c3\u30af",
+                "Korean": "\uc0ac\uc774\ucf54\uc1fc\ud06c",
+                "Spanish": "\u041f\u0441\u0438\u0445\u043e\u0448\u043e\u043a"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm936.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm936.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm936.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm936.s.icon.png"
+        }
+    ]
+}
