@@ -144,6 +144,27 @@ class RaidBossListTest extends TestCase
                 'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm79.fGALARIAN.icon.png',
             ],
             [
+                'dexNr' => 128,
+                'pokemonID' => 'TAUROS',
+                'formID' => 'TAUROS_PALDEA_AQUA',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm128.fPALDEA_AQUA.icon.png',
+            ],
+            [
+                'dexNr' => 128,
+                'pokemonID' => 'TAUROS',
+                'formID' => 'TAUROS_PALDEA_BLAZE',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm128.fPALDEA_BLAZE.icon.png',
+            ],
+            [
+                'dexNr' => 128,
+                'pokemonID' => 'TAUROS',
+                'formID' => 'TAUROS_PALDEA_COMBAT',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm128.fPALDEA_COMBAT.icon.png',
+            ],
+            [
                 'dexNr' => 201,
                 'pokemonID' => 'UNOWN',
                 'formID' => 'UNOWN',
