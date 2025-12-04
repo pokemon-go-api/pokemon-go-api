@@ -20,6 +20,7 @@ use function assert;
 use function count;
 use function explode;
 use function implode;
+use function in_array;
 use function preg_match;
 use function similar_text;
 use function str_replace;
@@ -86,7 +87,11 @@ class LeekduckParser
                         $pokemonIdParts = [...$pokemonIdParts, ...explode(' ', trim($formName))];
                     }
 
-                    $pokemonFormId = strtoupper(implode('_', $pokemonIdParts));
+                    $pokemonFormId          = strtoupper(implode('_', $pokemonIdParts));
+                    $pokemonFormIdWithAsset = strtoupper(implode('_', [
+                        ...$pokemonIdParts,
+                        $pokemonImage->getAssetBundleSuffix(),
+                    ]));
 
                     $pokemonTemporaryEvolution = null;
                     foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
@@ -105,7 +110,7 @@ class LeekduckParser
 
                     $bestMatchingRegionForms = [];
                     foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
-                        if ($regionForm->getFormId() !== $pokemonFormId) {
+                        if (! in_array($regionForm->getFormId(), [$pokemonFormId, $pokemonFormIdWithAsset], true)) {
                             $scorePercent = null;
                             similar_text($regionForm->getFormId(), $pokemonFormId, $scorePercent);
                             if ($scorePercent >= 70) {
