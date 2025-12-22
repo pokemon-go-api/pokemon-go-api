@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\IO\GithubLoader;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoApi\PogoAPI\Logger\PrintLogger;
 use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
@@ -39,9 +40,11 @@ date_default_timezone_set('UTC');
 
 $logger = new PrintLogger();
 
-$tmpDir      = __DIR__ . '/../data/tmp/';
-$cacheLoader = new CacheLoader(
-    new RemoteFileLoader($logger),
+$remoteFileLoader = new RemoteFileLoader($logger);
+$tmpDir           = __DIR__ . '/../data/tmp/';
+$cacheLoader      = new CacheLoader(
+    $remoteFileLoader,
+    new GithubLoader($remoteFileLoader),
     new DateTimeImmutable(),
     $tmpDir,
     $logger,
@@ -59,6 +62,7 @@ $languageFiles      = $cacheLoader->fetchLanguageFiles();
 $translationLoader  = new TranslationParser();
 $translations       = new TranslationCollectionCollection();
 $customTranslations = CustomTranslations::load();
+
 foreach (TranslationParser::LANGUAGES as $languageName) {
     if (! isset($languageFiles['apk'][$languageName])) {
         continue;
@@ -220,6 +224,7 @@ $logger->debug('Generate Images');
 
 $firstRaidGraphicName  = null;
 $raidBossImageRenderer = new RaidBossGraphicRenderer();
+
 foreach ($translations->getCollections() as $translationName => $translationCollection) {
     $raidListDir = sprintf('%s/graphics/%s', $apidir, $translationName);
     if (! is_readable($raidListDir)) {

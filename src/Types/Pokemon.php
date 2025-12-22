@@ -179,6 +179,17 @@ final class Pokemon
         return count($this->temporaryEvolutions) > 0;
     }
 
+    public function hasGigantamax(): bool
+    {
+        foreach ($this->pokemonImages as $pokemonImage) {
+            if ($pokemonImage->getAssetBundleSuffix() === 'GIGANTAMAX') {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public function withAddedPokemonRegionForm(Pokemon $pokemonRegionForm): self
     {
         $copy                                                      = clone $this;

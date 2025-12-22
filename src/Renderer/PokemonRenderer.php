@@ -80,6 +80,7 @@ final readonly class PokemonRenderer
             'evolutions' => $this->renderEvolutions($pokemon, $questsCollection, $this->translations),
             'hasMegaEvolution'    => $pokemon->hasTemporaryEvolutions(),
             'megaEvolutions'      => $this->renderMegaEvolutions($pokemon, $this->translations),
+            'hasGigantamaxEvolution' => $pokemon->hasGigantamax(),
         ];
 
         if ($basePokemon) {

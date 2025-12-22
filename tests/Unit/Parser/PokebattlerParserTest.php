@@ -10,6 +10,7 @@ use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\IO\GithubLoader;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoApi\PogoAPI\Parser\PokebattlerParser;
@@ -37,6 +38,7 @@ class PokebattlerParserTest extends TestCase
         $cacheLoaderMock = $this->getMockBuilder(CacheLoader::class)
             ->setConstructorArgs([
                 $this->createMock(RemoteFileLoader::class),
+                $this->createMock(GithubLoader::class),
                 $this->createMock(DateTimeImmutable::class),
                 sys_get_temp_dir(),
                 $this->createMock(LoggerInterface::class),

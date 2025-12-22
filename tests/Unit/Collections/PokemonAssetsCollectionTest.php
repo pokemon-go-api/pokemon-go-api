@@ -17,23 +17,16 @@ class PokemonAssetsCollectionTest extends TestCase
     public function testCollection(): void
     {
         $sut = new PokemonAssetsCollection(
-            'pokemon_icon_pm0003_00_pgo_copy2019.png',
-            'pokemon_icon_pm0003_01_pgo_copy2019.png',
-            'invalid_file.png',
-            'pokemon_icon_003_00.png',
-            'pokemon_icon_003_01.png',
-            'pokemon_icon_003_51.png',
-            'pokemon_icon_003_00_shiny.png',
-            'pokemon_icon_003_01_shiny.png',
-            'pokemon_icon_003_51_shiny.png',
+            'pm0003.fcopy2019.icon.png',
+            'pm0003.fcopy2019.g2.icon.png',
+            'invalid_file.icon.png',
+            'pm3.c00.icon.png',
+            'pm3.c01.icon.png',
+            'pm3.c51.icon.png',
+            'pm3.c00.s.icon.png',
+            'pm3.c01.s.icon.png',
+            'pm3.c51.s.icon.png',
         );
-
-        // allowed:
-        // - pokemon_icon_pm0003_00_pgo_copy2019
-        // - pokemon_icon_pm0003_01_pgo_copy2019
-        // - pokemon_icon_003_00
-        // - pokemon_icon_003_01
-        // - pokemon_icon_003_51
         $this->assertCount(5, $sut->getImages(3));
     }
 }
