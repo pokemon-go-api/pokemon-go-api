@@ -8,6 +8,7 @@ use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\IO\GithubLoader;
 use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
 use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
@@ -30,8 +31,8 @@ class RaidBossListTest extends TestCase
         $translationLoader     = new TranslationParser();
         $translationCollection = $translationLoader->loadLanguage(
             'English',
-            __DIR__ . '/../../data/tmp/latest_apk_English.txt',
-            __DIR__ . '/../../data/tmp/latest_remote_English.txt',
+            __DIR__ . '/../../data/tmp/latest_apk_en-us_formatted.txt',
+            __DIR__ . '/../../data/tmp/latest_remote_en-us_formatted.txt',
             CustomTranslations::load()['English'],
         );
 
@@ -92,119 +93,119 @@ class RaidBossListTest extends TestCase
                 'pokemonID' => 'CHARIZARD',
                 'formID' => 'CHARIZARD_MEGA_Y',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_Y.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm6.fMEGA_Y.icon.png',
             ],
             [
                 'dexNr' => 18,
                 'pokemonID' => 'PIDGEOT',
                 'formID' => 'PIDGEOT_MEGA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm18.fMEGA.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm18.fMEGA.icon.png',
             ],
             [
                 'dexNr' => 460,
                 'pokemonID' => 'ABOMASNOW',
                 'formID' => 'ABOMASNOW_MEGA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm460.fMEGA.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm460.fMEGA.icon.png',
+            ],
+            [
+                'dexNr' => 25,
+                'pokemonID' => 'PIKACHU',
+                'formID' => 'PIKACHU_FLYING_5TH_ANNIV',
+                //phpcs:ignore Generic.Files.LineLength.TooLong
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm25.fFLYING_5TH_ANNIV.icon.png',
             ],
             [
                 'dexNr' => 25,
                 'pokemonID' => 'PIKACHU',
                 'formID' => 'PIKACHU',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm25.icon.png',
-            ],
-            [
-                'dexNr' => 25,
-                'pokemonID' => 'PIKACHU',
-                'formID' => 'PIKACHU',
-                //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_pm0025_01_pgo_5thanniversary.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm25.icon.png',
             ],
             [
                 'dexNr' => 26,
                 'pokemonID' => 'RAICHU',
                 'formID' => 'RAICHU_ALOLA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm26.fALOLA.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm26.fALOLA.icon.png',
             ],
             [
                 'dexNr' => 46,
                 'pokemonID' => 'PARAS',
                 'formID' => 'PARAS',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm46.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm46.icon.png',
             ],
             [
                 'dexNr' => 79,
                 'pokemonID' => 'SLOWPOKE',
                 'formID' => 'SLOWPOKE_GALARIAN',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm79.fGALARIAN.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm79.fGALARIAN.icon.png',
             ],
             [
                 'dexNr' => 128,
                 'pokemonID' => 'TAUROS',
                 'formID' => 'TAUROS_PALDEA_AQUA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm128.fPALDEA_AQUA.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm128.fPALDEA_AQUA.icon.png',
             ],
             [
                 'dexNr' => 128,
                 'pokemonID' => 'TAUROS',
                 'formID' => 'TAUROS_PALDEA_BLAZE',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm128.fPALDEA_BLAZE.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm128.fPALDEA_BLAZE.icon.png',
             ],
             [
                 'dexNr' => 128,
                 'pokemonID' => 'TAUROS',
                 'formID' => 'TAUROS_PALDEA_COMBAT',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm128.fPALDEA_COMBAT.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm128.fPALDEA_COMBAT.icon.png',
             ],
             [
                 'dexNr' => 201,
                 'pokemonID' => 'UNOWN',
                 'formID' => 'UNOWN',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_201_31.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm201.fUNOWN_T.icon.png',
             ],
             [
                 'dexNr' => 386,
                 'pokemonID' => 'DEOXYS',
                 'formID' => 'DEOXYS_SPEED',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm386.fSPEED.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm386.fSPEED.icon.png',
             ],
             [
                 'dexNr' => 422,
                 'pokemonID' => 'SHELLOS',
                 'formID' => 'SHELLOS_EAST_SEA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm422.fEAST_SEA.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm422.fEAST_SEA.icon.png',
             ],
             [
                 'dexNr' => 422,
                 'pokemonID' => 'SHELLOS',
                 'formID' => 'SHELLOS_WEST_SEA',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm422.fWEST_SEA.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm422.fWEST_SEA.icon.png',
             ],
             [
                 'dexNr' => 487,
                 'pokemonID' => 'GIRATINA',
                 'formID' => 'GIRATINA_ALTERED',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm487.fALTERED.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm487.fALTERED.icon.png',
             ],
             [
                 'dexNr' => 888,
                 'pokemonID' => 'ZACIAN',
                 'formID' => 'ZACIAN_HERO',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
-                'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm888.fHERO.icon.png',
+                'image' => GithubLoader::ASSETS_BASE_URL . 'pm888.fHERO.icon.png',
             ],
         ], $generatedRaidBosses);
 

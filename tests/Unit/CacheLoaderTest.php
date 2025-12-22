@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\CacheLoader;
 use PokemonGoApi\PogoAPI\IO\Directory;
 use PokemonGoApi\PogoAPI\IO\File;
+use PokemonGoApi\PogoAPI\IO\GithubLoader;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
 use PokemonGoApi\PogoAPI\Logger\NoopLogger;
 
@@ -61,6 +62,7 @@ class CacheLoaderTest extends TestCase
 
         $sut = new CacheLoader(
             $this->createStub(RemoteFileLoader::class),
+            $this->createStub(GithubLoader::class),
             new DateTimeImmutable(),
             $this->cacheDir,
             new NoopLogger(),
@@ -82,6 +84,7 @@ class CacheLoaderTest extends TestCase
 
         $sut = new CacheLoader(
             $remoteFileLoaderMock,
+            $this->createMock(GithubLoader::class),
             $clock,
             $this->cacheDir,
             new NoopLogger(),
@@ -101,6 +104,7 @@ class CacheLoaderTest extends TestCase
         );
         $sut = new CacheLoader(
             $remoteFileLoaderMock,
+            $this->createMock(GithubLoader::class),
             $clock,
             $this->cacheDir,
             new NoopLogger(),

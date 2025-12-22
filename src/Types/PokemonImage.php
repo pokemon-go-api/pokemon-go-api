@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Types;
 
 use Exception;
+use PokemonGoApi\PogoAPI\IO\GithubLoader;
 
-use function array_key_exists;
 use function count;
 use function preg_match;
 use function sprintf;
@@ -17,8 +17,6 @@ final readonly class PokemonImage
 {
     //phpcs:ignore Generic.Files.LineLength.TooLong
     private const string ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s.png';
-    //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const string ASSETS_NEW_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets';
     //phpcs:ignore Generic.Files.LineLength.TooLong
     private const string ASSETS_BASE_URL_SHINY = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
 
@@ -38,35 +36,7 @@ final readonly class PokemonImage
         $matches = [];
         $result  = preg_match(
             <<<'REGEX'
-            ~(pokemon_icon_(
-                (?<dexNr>\d{1,4})_(?<assetBundleValue>\d{2})(_(?<costume>\d{2}))?
-                |
-                (?<assetBundleSuffix>pm(?<dexNr2>\d{1,4})_(?<assetBundleValue2>\d{2})\w+?)
-             )
-             (?<isShiny>_shiny)?)
-             \.png$~x
-            REGEX,
-            $path,
-            $matches,
-        );
-
-        if ($result !== false && count($matches) > 0) {
-            return new self(
-                $matches[0],
-                (int) ($matches['dexNr'] ?: $matches['dexNr2']),
-                (int) ($matches['assetBundleValue'] ?: $matches['assetBundleValue2']),
-                array_key_exists('isShiny', $matches),
-                isset($matches['assetBundleSuffix']) && $matches['assetBundleSuffix'] !== ''
-                    ? $matches['assetBundleSuffix']
-                    : null,
-                isset($matches['costume']) && $matches['costume'] !== '' ? $matches['costume'] : null,
-                (int) ($matches['assetBundleValue'] ?: $matches['assetBundleValue2']) === 1,
-            );
-        }
-
-        $result = preg_match(
-            <<<'REGEX'
-                ~/pm(?<dexNr>\d{1,4})
+                ~/?pm(?<dexNr>\d{1,4})
                 (\.f(?<form>[^\.]*))?
                 (\.c(?<costume>[^\.]*))?
                 (?<gender>\.g2)?
@@ -94,12 +64,12 @@ final readonly class PokemonImage
 
     public function buildUrl(bool $shiny = false): string
     {
-        if (str_starts_with($this->imageName, '/pm')) {
+        if (str_starts_with($this->imageName, 'pm')) {
             if ($shiny) {
-                return self::ASSETS_NEW_BASE_URL . str_replace('.icon', '.s.icon', $this->imageName);
+                return GithubLoader::ASSETS_BASE_URL . str_replace('.icon', '.s.icon', $this->imageName);
             }
 
-            return self::ASSETS_NEW_BASE_URL . $this->imageName;
+            return GithubLoader::ASSETS_BASE_URL . $this->imageName;
         }
 
         $assetUrl = self::ASSETS_BASE_URL;

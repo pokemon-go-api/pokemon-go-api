@@ -7,6 +7,7 @@ namespace Tests\Integration\PokemonGoApi\PogoAPI;
 use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
+use PokemonGoApi\PogoAPI\IO\GithubLoader;
 
 use function file_get_contents;
 use function implode;
@@ -35,20 +36,20 @@ class PokemonFormRenderingTest extends TestCase
         yield 'charizard' => [
             'dexNr'    => 6,
             'expected' => [
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.icon.png'],
+                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm6.icon.png'],
                 'megaEvolutions' => [
                     'CHARIZARD_MEGA_X' => [
                         'id' => 'CHARIZARD_MEGA_X',
                         'assets' => [
-                            'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_X.icon.png',
-                            'shinyImage' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_X.s.icon.png',
+                            'image' => GithubLoader::ASSETS_BASE_URL . 'pm6.fMEGA_X.icon.png',
+                            'shinyImage' => GithubLoader::ASSETS_BASE_URL . 'pm6.fMEGA_X.s.icon.png',
                         ],
                     ],
                     'CHARIZARD_MEGA_Y' => [
                         'id' => 'CHARIZARD_MEGA_Y',
                         'assets' => [
-                            'image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_Y.icon.png',
-                            'shinyImage' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm6.fMEGA_Y.s.icon.png',
+                            'image' => GithubLoader::ASSETS_BASE_URL . 'pm6.fMEGA_Y.icon.png',
+                            'shinyImage' => GithubLoader::ASSETS_BASE_URL . 'pm6.fMEGA_Y.s.icon.png',
                         ],
                     ],
                 ],
@@ -60,7 +61,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'PIKACHU',
                 'formId'      => 'PIKACHU',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm25.icon.png'],
+                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm25.icon.png'],
                 'regionForms' => [
                     'PIKACHU_FLYING_5TH_ANNIV' => [],
                     'PIKACHU_KARIYUSHI'        => [],
@@ -70,46 +71,12 @@ class PokemonFormRenderingTest extends TestCase
             ],
         ];
 
-//        yield 'burmi' => [
-//            'dexNr'    => 412,
-//            'expected' => [
-//                'id'     => 'BURMY',
-//                'formId' => 'BURMY_PLANT',
-//                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_412_11.png'],
-//                'regionForms' => [
-//                    'BURMY_SANDY' => [],
-//                    'BURMY_TRASH' => [],
-//                ],
-//            ],
-//        ];
-//
-//        yield 'cherrim' => [
-//            'dexNr'    => 421,
-//            'expected' => [
-//                'id'     => 'CHERRIM',
-//                'formId' => 'CHERRIM_OVERCAST',
-//                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_421_11.png'],
-//                'regionForms' => [
-//                    'CHERRIM_SUNNY' => [],
-//                ],
-//            ],
-//        ];
-//
-//        yield 'keldeo' => [
-//            'dexNr'    => 647,
-//            'expected' => [
-//                'id'     => 'KELDEO',
-//                'formId' => 'KELDEO_ORDINARY',
-//                'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_647_11.png'],
-//            ],
-//        ];
-
         yield 'kyurem' => [
             'dexNr'    => 646,
             'expected' => [
                 'id'          => 'KYUREM',
                 'formId'      => 'KYUREM',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm646.fNORMAL.icon.png'],
+                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm646.fNORMAL.icon.png'],
                 'regionForms' => [
                     'KYUREM_BLACK' => [],
                     'KYUREM_WHITE' => [],
@@ -122,7 +89,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'DEOXYS',
                 'formId'      => 'DEOXYS',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_386_11.png'],
+                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm386.icon.png'],
                 'regionForms' => [
                     'DEOXYS_ATTACK'  => [],
                     'DEOXYS_DEFENSE' => [],
@@ -136,15 +103,15 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'THUNDURUS',
                 'formId'      => 'THUNDURUS',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm642.fINCARNATE.icon.png'],
+                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm642.fINCARNATE.icon.png'],
                 'regionForms' => [
                     'THUNDURUS_INCARNATE' => [
                         'names' => ['English' => 'Thundurus (Incarnate Forme)'],
-                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm642.fINCARNATE.icon.png'],
+                        'assets' => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm642.fINCARNATE.icon.png'],
                     ],
                     'THUNDURUS_THERIAN' => [
                         'names' => ['English' => 'Thundurus (Therian Forme)'],
-                        'assets' => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm642.fTHERIAN.icon.png'],
+                        'assets' => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm642.fTHERIAN.icon.png'],
                     ],
                 ],
             ],
@@ -155,7 +122,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'GENESECT',
                 'formId'      => 'GENESECT',
-                'assets'      => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm649.fNORMAL.icon.png'],
+                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm649.fNORMAL.icon.png'],
                 'regionForms' => [
                     'GENESECT_BURN'  => [],
                     'GENESECT_CHILL' => [],
@@ -170,7 +137,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'            => 'MEOWTH',
                 'formId'        => 'MEOWTH',
-                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm52.icon.png'],
+                'assets'        => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm52.icon.png'],
                 'secondaryType' => null,
                 'regionForms'   => [
                     'MEOWTH_ALOLA'    => [],
@@ -184,7 +151,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'            => 'VIVILLON',
                 'formId'        => 'VIVILLON',
-                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm666.fARCHIPELAGO.icon.png'],
+                'assets'        => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm666.fARCHIPELAGO.icon.png'],
             ],
         ];
 
@@ -193,7 +160,7 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'            => 'FURFROU',
                 'formId'        => 'FURFROU',
-                'assets'        => ['image' => 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm676.fNATURAL.icon.png'],
+                'assets'        => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm676.fNATURAL.icon.png'],
             ],
         ];
     }
