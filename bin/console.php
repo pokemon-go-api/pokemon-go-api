@@ -12,6 +12,7 @@ use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Parser\PokebattlerParser;
 use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
+use PokemonGoApi\PogoAPI\Parser\SnacknapParser;
 use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoApi\PogoAPI\Renderer\PokemonRenderer;
@@ -179,6 +180,10 @@ $logger->debug('Generate Raidbosses');
 $raidBossHtmlList = $cacheLoader->fetchRaidBossesFromLeekduck();
 $leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
 $raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
+
+$maxBattleHtmlList = $cacheLoader->fetchMaxBattlesFromSnacknap();
+$snacknapParser    = new SnacknapParser($masterData->getPokemonCollection());
+$maxBattles        = $snacknapParser->parseMaxBattle($maxBattleHtmlList);
 
 $logger->debug(
     sprintf('Got %d remote raid bosses', count($raidBosses->toArray())),

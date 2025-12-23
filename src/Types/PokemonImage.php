@@ -9,17 +9,10 @@ use PokemonGoApi\PogoAPI\IO\GithubLoader;
 
 use function count;
 use function preg_match;
-use function sprintf;
 use function str_replace;
-use function str_starts_with;
 
 final readonly class PokemonImage
 {
-    //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const string ASSETS_BASE_URL = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s.png';
-    //phpcs:ignore Generic.Files.LineLength.TooLong
-    private const string ASSETS_BASE_URL_SHINY = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_%s_shiny.png';
-
     private function __construct(
         private string $imageName,
         private int $dexNr,
@@ -64,37 +57,11 @@ final readonly class PokemonImage
 
     public function buildUrl(bool $shiny = false): string
     {
-        if (str_starts_with($this->imageName, 'pm')) {
-            if ($shiny) {
-                return GithubLoader::ASSETS_BASE_URL . str_replace('.icon', '.s.icon', $this->imageName);
-            }
-
-            return GithubLoader::ASSETS_BASE_URL . $this->imageName;
-        }
-
-        $assetUrl = self::ASSETS_BASE_URL;
         if ($shiny) {
-            $assetUrl = self::ASSETS_BASE_URL_SHINY;
+            return GithubLoader::ASSETS_BASE_URL . str_replace('.icon', '.s.icon', $this->imageName);
         }
 
-        if ($this->assetBundleSuffix !== null) {
-            return sprintf(
-                $assetUrl,
-                $this->assetBundleSuffix,
-            );
-        }
-
-        if ($this->costume !== null) {
-            return sprintf(
-                $assetUrl,
-                sprintf('%03d_%02d_%02d', $this->dexNr, $this->assetBundleValue, $this->costume),
-            );
-        }
-
-        return sprintf(
-            $assetUrl,
-            sprintf('%03d_%02d', $this->dexNr, $this->assetBundleValue),
-        );
+        return GithubLoader::ASSETS_BASE_URL . $this->imageName;
     }
 
     public function getAssetBundleSuffix(): string|null

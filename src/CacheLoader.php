@@ -174,6 +174,21 @@ class CacheLoader
         return $output;
     }
 
+    public function fetchMaxBattlesFromSnacknap(): string
+    {
+        $url       = 'https://www.snacknap.com/max-battles';
+        $cacheFile = $this->getCacheDir() . 'maxbattles_snacknap.html';
+
+        if ($this->wasRunningInThePastMinutes()) {
+            return $cacheFile;
+        }
+
+        $this->remoteFileLoader->load($url)->saveTo($cacheFile);
+        $this->logger->debug('[CacheLoader] Load max-battles');
+
+        return $cacheFile;
+    }
+
     public function fetchRaidBossesFromLeekduck(): string
     {
         $raidBossUrl = 'https://leekduck.com/boss/';
