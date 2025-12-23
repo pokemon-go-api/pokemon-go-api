@@ -13,7 +13,7 @@ use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 
 #[CoversClass(TranslationParser::class)]
 #[UsesClass(TranslationCollection::class)]
-class TranslationParserTest extends TestCase
+final class TranslationParserTest extends TestCase
 {
     public function testParseFile(): void
     {

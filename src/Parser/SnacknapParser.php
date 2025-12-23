@@ -6,7 +6,7 @@ namespace PokemonGoApi\PogoAPI\Parser;
 
 use Dom\HTMLDocument;
 use PokemonGoApi\PogoAPI\Collections\MaxBattleCollection;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Types\MaxBattle;
 use PokemonGoApi\PogoAPI\Types\MaxBattleLevel;
 
@@ -21,7 +21,9 @@ class SnacknapParser
     public function parseMaxBattle(string $htmlPage): MaxBattleCollection
     {
         $maxBattleCollection = new MaxBattleCollection();
-        $domDocument         = HTMLDocument::createFromFile($htmlPage);
+        $tidy = tidy_parse_file($htmlPage);
+        $tidy->cleanRepair();
+        $domDocument         = HTMLDocument::createFromString((string) $tidy);
 
         $rows = $domDocument->getElementById('pokemon')->getElementsByClassName('row');
 

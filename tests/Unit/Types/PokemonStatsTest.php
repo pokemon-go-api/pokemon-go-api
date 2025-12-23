@@ -6,10 +6,10 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 
 #[CoversClass(PokemonStats::class)]
-class PokemonStatsTest extends TestCase
+final class PokemonStatsTest extends TestCase
 {
     public function testGetters(): void
     {

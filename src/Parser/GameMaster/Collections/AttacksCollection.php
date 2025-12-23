@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoApi\PogoAPI\Collections;
+namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Collections;
 
-use PokemonGoApi\PogoAPI\Types\PokemonMove;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
 
 final class AttacksCollection
 {
     /** @var array<string, PokemonMove> */
     private array $storage = [];
+
     /** @var array<string, PokemonMove> */
     private array $indexedByName = [];
 

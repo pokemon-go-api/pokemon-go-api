@@ -7,8 +7,8 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
@@ -24,13 +24,13 @@ use function array_map;
 #[UsesClass(PokemonType::class)]
 #[UsesClass(RaidBoss::class)]
 #[UsesClass(PokemonImage::class)]
-class LeekduckParserTest extends TestCase
+final class LeekduckParserTest extends TestCase
 {
     public function testParse(): void
     {
         $collection = $this->createMock(PokemonCollection::class);
         $collection->method('getByDexId')->willReturnCallback(
-            static fn (int $dexNr) => new Pokemon(
+            static fn (int $dexNr): Pokemon => new Pokemon(
                 $dexNr,
                 'id_' . $dexNr,
                 'id_' . $dexNr,

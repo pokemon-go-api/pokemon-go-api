@@ -15,6 +15,7 @@ class RaidBossOverwriteStruct
     private const string DEFAULT_TIMEZONE = 'Europe/Berlin';
 
     private readonly DateTimeImmutable $startDate;
+
     private readonly DateTimeImmutable $endDate;
 
     public function __construct(

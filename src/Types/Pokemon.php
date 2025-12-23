@@ -5,113 +5,112 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Types;
 
 use Exception;
-use stdClass;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionBranch;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolutionBranch;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolutionCamera;
 
-use function assert;
-use function count;
 use function preg_match;
 use function str_contains;
 use function str_replace;
 
 final class Pokemon
 {
+    private int $dexNr;
+    private string $id;
+    private string $formId;
+    private PokemonType $typePrimary;
     private PokemonType $typeSecondary;
-    private PokemonStats|null $stats      = null;
+
+    private PokemonStats $stats;
+
     private PokemonForm|null $pokemonForm = null;
+
     /** @var TemporaryEvolution[] */
     private array $temporaryEvolutions = [];
+
     /** @var string[] */
     private array $quickMoveNames = [];
+
     /** @var string[] */
     private array $cinematicMoveNames = [];
+
     /** @var string[] */
     private array $eliteQuickMoveNames = [];
+
     /** @var string[] */
     private array $eliteCinematicMoveNames = [];
+
     /** @var array<string, Pokemon> */
     private array $pokemonRegionForms = [];
+
     /** @var array<int, PokemonImage> */
     private array $pokemonImages = [];
-    /** @var array<int, EvolutionBranch> */
-    private array $evolutions         = [];
+
+    /** @var array<int, EvolutionBranch|TemporaryEvolutionBranch> */
+    private array $evolutions = [];
+
     private string|null $pokemonClass = null;
 
+    /**
+     * @param array{
+     *     pokemonId: string,
+     *     type: string,
+     *     type2?: string,
+     *     pokemonClass?: string,
+     *     stats: PokemonStats,
+     *     quickMoves: list<string>,
+     *     cinematicMoves: list<string>,
+     *     eliteQuickMove?: list<string>,
+     *     eliteCinematicMove?: list<string>,
+     *     evolutionBranch: list<EvolutionBranch|TemporaryEvolutionBranch>,
+     *     tempEvoOverrides: list<TemporaryEvolution|TemporaryEvolutionCamera>
+     * } $pokemonSettings
+     */
     public function __construct(
-        private int $dexNr,
-        private string $id,
-        private string $formId,
-        private PokemonType $typePrimary,
-        PokemonType|null $typeSecondary,
+        string $templateId,
+        array $pokemonSettings,
     ) {
-        $this->typeSecondary = $typeSecondary ?? PokemonType::none();
-    }
-
-    public static function createFromGameMaster(stdClass $pokemonData): self
-    {
-        $pokemonParts    = [];
-        $pregMatchResult = preg_match(
-            '~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i',
-            $pokemonData->templateId ?? '',
-            $pokemonParts,
-        );
-        if ($pregMatchResult < 1) {
-            throw new Exception('Invalid input data provided', 1608127311711);
+        if (
+            ! preg_match(
+                '~^V(?<id>\d{4})_POKEMON_(?<name>.*)$~i',
+                $templateId,
+                $pokemonParts,
+            )
+        ) {
+            throw new Exception('Invalid pokemon template ID', 1766499467296);
         }
 
-        $pokemonSettings = $pokemonData->pokemonSettings;
+        $this->dexNr       = (int) $pokemonParts['id'];
+        $this->id          = $pokemonSettings['pokemonId'];
+        $this->formId      = $pokemonParts['name'];
+        $this->typePrimary = PokemonType::createFromPokemonType($pokemonSettings['type']);
 
-        $secondaryType = null;
-        if (isset($pokemonSettings->type2)) {
-            $secondaryType = PokemonType::createFromPokemonType($pokemonSettings->type2);
+        if (isset($pokemonSettings['type2'])) {
+            $this->typeSecondary = PokemonType::createFromPokemonType($pokemonSettings['type2']);
+        } else {
+            $this->typeSecondary = PokemonType::none();
         }
 
-        $pokemonId = (string) $pokemonSettings->pokemonId;
+        $this->pokemonClass = $pokemonSettings['pokemonClass'] ?? null;
+        $this->stats        = $pokemonSettings['stats'];
 
-        $pokemon               = new self(
-            (int) $pokemonParts['id'],
-            $pokemonId,
-            $pokemonParts['name'],
-            PokemonType::createFromPokemonType($pokemonSettings->type),
-            $secondaryType,
-        );
-        $pokemon->pokemonClass = $pokemonSettings->pokemonClass ?? null;
+        $this->quickMoveNames          = $pokemonSettings['quickMoves'] ?? [];
+        $this->cinematicMoveNames      = $pokemonSettings['cinematicMoves'] ?? [];
+        $this->eliteQuickMoveNames     = $pokemonSettings['eliteQuickMove'] ?? [];
+        $this->eliteCinematicMoveNames = $pokemonSettings['eliteCinematicMove'] ?? [];
 
-        if (isset($pokemonSettings->stats->baseStamina)) {
-            assert($pokemonSettings->stats instanceof stdClass);
-            $pokemon->stats = new PokemonStats(
-                $pokemonSettings->stats->baseStamina,
-                $pokemonSettings->stats->baseAttack,
-                $pokemonSettings->stats->baseDefense,
-            );
-        }
+        $this->evolutions = $pokemonSettings['evolutionBranch'] ?? [];
 
-        $pokemon->quickMoveNames          = $pokemonSettings->quickMoves ?? [];
-        $pokemon->cinematicMoveNames      = $pokemonSettings->cinematicMoves ?? [];
-        $pokemon->eliteQuickMoveNames     = $pokemonSettings->eliteQuickMove ?? [];
-        $pokemon->eliteCinematicMoveNames = $pokemonSettings->eliteCinematicMove ?? [];
-
-        foreach ($pokemonSettings->evolutionBranch ?? [] as $evolutionBranch) {
-            if (! isset($evolutionBranch->evolution)) {
+        foreach ($pokemonSettings['tempEvoOverrides'] ?? [] as $temporaryEvolution) {
+            if (! ($temporaryEvolution instanceof TemporaryEvolution)) {
                 continue;
             }
 
-            assert($evolutionBranch instanceof stdClass);
-            $pokemon->evolutions[] = EvolutionBranch::createFromGameMaster($evolutionBranch);
+            $temporaryEvolution->setPokemonId($this->id);
+            $this->temporaryEvolutions[] = $temporaryEvolution;
         }
-
-        $tempEvos = [];
-        foreach ($pokemonSettings->tempEvoOverrides ?? [] as $evolutionBranch) {
-            if (! isset($evolutionBranch->tempEvoId)) {
-                continue;
-            }
-
-            $tempEvos[] = TemporaryEvolution::createFromGameMaster(
-                $evolutionBranch,
-                $pokemonId,
-            );
-        }
-
-        return $pokemon->withAddedTemporaryEvolutions(...$tempEvos);
     }
 
     public function getDexNr(): int
@@ -176,7 +175,7 @@ final class Pokemon
 
     public function hasTemporaryEvolutions(): bool
     {
-        return count($this->temporaryEvolutions) > 0;
+        return $this->temporaryEvolutions !== [];
     }
 
     public function hasGigantamax(): bool
@@ -224,15 +223,15 @@ final class Pokemon
         return $this->pokemonForm;
     }
 
-    /** @return list<EvolutionBranch> */
-    public function getEvolutions(): array
+    /** @return list<EvolutionBranch|TemporaryEvolutionBranch> */
+    public function getEvolutionsBranches(): array
     {
         return $this->evolutions;
     }
 
     public function getAssetsBundleId(): int
     {
-        if ($this->pokemonForm === null) {
+        if (! $this->pokemonForm instanceof PokemonForm) {
             return 0;
         }
 
@@ -241,7 +240,7 @@ final class Pokemon
 
     public function getAssetBundleSuffix(): string|null
     {
-        if ($this->pokemonForm === null) {
+        if (! $this->pokemonForm instanceof PokemonForm) {
             return null;
         }
 
@@ -256,7 +255,7 @@ final class Pokemon
         return $this->getTypePrimary()->getType() === $pokemon->getTypePrimary()->getType()
             && $this->getTypeSecondary()->getType() === $pokemon->getTypeSecondary()->getType()
             && (
-                $pokemonStats !== null && $formStats !== null
+                $pokemonStats instanceof PokemonStats && $formStats instanceof PokemonStats
                 && $formStats->getAttack() === $pokemonStats->getAttack()
                 && $formStats->getDefense() === $pokemonStats->getDefense()
                 && $formStats->getStamina() === $pokemonStats->getStamina()
@@ -281,19 +280,17 @@ final class Pokemon
         $assetBundleId          = null;
         $assetBundleSuffix      = $this->getFormId();
         $assetBundleSuffixFixed = null;
-        if ($pokemonForm !== null) {
+        if ($pokemonForm instanceof PokemonForm) {
             $assetBundleId     = $pokemonForm->getAssetBundleValue();
             $assetBundleSuffix = $pokemonForm->getAssetBundleSuffix() ?? $pokemonForm->getFormOnlyId();
         }
 
-        if ($temporaryEvolution !== null) {
+        if ($temporaryEvolution instanceof TemporaryEvolution) {
             $assetBundleId     = $temporaryEvolution->getAssetsBundleId();
             $assetBundleSuffix = $temporaryEvolution->getAssetsAddressableSuffix();
         }
 
-        if ($assetBundleSuffix !== null) {
-            $assetBundleSuffixFixed = str_replace($this->getId() . '_', '', $assetBundleSuffix);
-        }
+        $assetBundleSuffixFixed = str_replace($this->getId() . '_', '', $assetBundleSuffix);
 
         foreach ($this->pokemonImages as $pokemonImage) {
             if (

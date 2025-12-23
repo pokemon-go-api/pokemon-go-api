@@ -7,26 +7,23 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
+use PokemonGoApi\PogoAPI\IO\JsonParser;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
-use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
-use stdClass;
 
 use function file_get_contents;
-use function json_decode;
-
-use const JSON_THROW_ON_ERROR;
 
 #[CoversClass(Pokemon::class)]
 #[UsesClass(PokemonStats::class)]
 #[UsesClass(PokemonType::class)]
 #[UsesClass(TemporaryEvolution::class)]
-class PokemonTest extends TestCase
+final class PokemonTest extends TestCase
 {
     public function testCreateFromGameMasterWillFail(): void
     {
-        self::expectExceptionCode(1608127311711);
+        $this->expectExceptionCode(1608127311711);
         Pokemon::createFromGameMaster((object) []);
     }
 
@@ -34,9 +31,8 @@ class PokemonTest extends TestCase
     {
         $gameMaster = file_get_contents(__DIR__ . '/Fixtures/V0105_POKEMON_MAROWAK_ALOLA.json') ?: '{}';
 
-        $pokemonData = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
-        $this->assertInstanceOf(stdClass::class, $pokemonData);
-        $pokemon = Pokemon::createFromGameMaster($pokemonData->data);
+        $pokemonData = JsonParser::decodeGameMasterFileData($gameMaster);
+        $pokemon     = Pokemon::createFromGameMaster($pokemonData);
 
         $this->assertSame(105, $pokemon->getDexNr());
         $this->assertSame(0, $pokemon->getAssetsBundleId());
@@ -44,7 +40,6 @@ class PokemonTest extends TestCase
         $this->assertSame('MAROWAK_ALOLA', $pokemon->getFormId());
         $this->assertSame('POKEMON_TYPE_FIRE', $pokemon->getTypePrimary()->getGameMasterTypeName());
         $secondaryType = $pokemon->getTypeSecondary();
-        $this->assertNotNull($secondaryType);
         $this->assertSame('POKEMON_TYPE_GHOST', $secondaryType->getGameMasterTypeName());
         $this->assertEquals(new PokemonStats(155, 144, 186), $pokemon->getStats());
 
@@ -58,9 +53,8 @@ class PokemonTest extends TestCase
     {
         $gameMaster = file_get_contents(__DIR__ . '/Fixtures/V0006_POKEMON_CHARIZARD.json') ?: '{}';
 
-        $pokemonData = json_decode($gameMaster, false, 512, JSON_THROW_ON_ERROR);
-        $this->assertInstanceOf(stdClass::class, $pokemonData);
-        $pokemon             = Pokemon::createFromGameMaster($pokemonData->data);
+        $pokemonData         = JsonParser::decodeGameMasterFileData($gameMaster);
+        $pokemon             = Pokemon::createFromGameMaster($pokemonData);
         $temporaryEvolutions = $pokemon->getTemporaryEvolutions();
         $this->assertTrue($pokemon->hasTemporaryEvolutions());
         $this->assertCount(2, $temporaryEvolutions);

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoApi\PogoAPI\Collections;
+namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Collections;
 
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 
@@ -12,8 +12,10 @@ class PokemonCollection
 {
     /** @var array<string, Pokemon> */
     private array $storage = [];
+
     /** @var array<int, Pokemon> */
     private array $indexedByDexId = [];
+
     /** @var array<string, Pokemon> */
     private array $indexedByForm = [];
 

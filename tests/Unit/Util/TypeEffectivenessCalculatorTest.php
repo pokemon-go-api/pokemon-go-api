@@ -16,7 +16,7 @@ use function array_keys;
 
 #[CoversClass(TypeEffectivenessCalculator::class)]
 #[UsesClass(PokemonType::class)]
-class TypeEffectivenessCalculatorTest extends TestCase
+final class TypeEffectivenessCalculatorTest extends TestCase
 {
     /** @param array<string, float> $expected */
     #[DataProvider('getEffectiveTypesDataProvider')]

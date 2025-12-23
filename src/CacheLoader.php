@@ -10,13 +10,11 @@ use PokemonGoApi\PogoAPI\IO\Directory;
 use PokemonGoApi\PogoAPI\IO\GithubLoader;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
-use PokemonGoApi\PogoAPI\IO\Struct\GithubFileResponse;
 use Psr\Log\LoggerInterface;
 
 use function abs;
 use function array_key_exists;
 use function array_keys;
-use function assert;
 use function basename;
 use function date;
 use function file_exists;
@@ -44,6 +42,7 @@ class CacheLoader
 
     /** @var array<string, mixed> */
     private array $cachedData = [];
+
     /** @var array<string, mixed> */
     private array $originalCachedData = [];
 
@@ -61,9 +60,10 @@ class CacheLoader
         }
 
         try {
-            $this->originalCachedData = $this->cachedData = JsonParser::decodeToArray(
+            $this->originalCachedData = JsonParser::decodeToArray(
                 file_get_contents($this->getCacheDir() . self::CACHE_FILE) ?: '[]',
             );
+            $this->cachedData         = $this->originalCachedData;
         } catch (JsonException) {
         }
     }
@@ -149,7 +149,6 @@ class CacheLoader
         $output = [];
         foreach ($allTexts as $textType => $files) {
             foreach ($files as $languageAlias => $file) {
-                assert($file instanceof GithubFileResponse);
                 $cacheKey  = 'github/text_latest_' . $textType . '_' . $file->name;
                 $cacheFile = $this->getCacheDir() . 'latest_' . $textType . '_' . $file->name;
                 if ($file->sha !== ($this->cachedData[$cacheKey] ?? null)) {
@@ -179,7 +178,7 @@ class CacheLoader
         $url       = 'https://www.snacknap.com/max-battles';
         $cacheFile = $this->getCacheDir() . 'maxbattles_snacknap.html';
 
-        if ($this->wasRunningInThePastMinutes()) {
+        if ($this->wasRunningInThePastMinutes() && file_exists($cacheFile)) {
             return $cacheFile;
         }
 
@@ -299,7 +298,7 @@ class CacheLoader
             return false;
         }
 
-        return abs($this->clock->getTimestamp() - filemtime($this->getCacheDir() . self::CACHE_FILE)) < 300;
+        return abs($this->clock->getTimestamp() - filemtime($this->getCacheDir() . self::CACHE_FILE)) < 900;
     }
 
     private function getCacheDir(): string

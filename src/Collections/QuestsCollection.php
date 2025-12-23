@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Collections;
 
-use PokemonGoApi\PogoAPI\Types\EvolutionQuest;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionQuest;
 
 final class QuestsCollection
 {

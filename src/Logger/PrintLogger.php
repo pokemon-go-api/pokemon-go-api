@@ -8,7 +8,6 @@ use Override;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerTrait;
 
-use function count;
 use function date;
 use function json_encode;
 use function printf;
@@ -28,7 +27,7 @@ class PrintLogger implements LoggerInterface
             trim('[%s] %s %s') . PHP_EOL,
             date('H:i:s'),
             $message,
-            count($context) !== 0 ? '-> ' . json_encode($context) : '',
+            $context !== [] ? '-> ' . json_encode($context) : '',
         );
     }
 }

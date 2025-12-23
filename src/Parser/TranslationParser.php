@@ -20,13 +20,19 @@ use function trim;
 
 class TranslationParser
 {
-    public const ENGLISH  = 'English';
-    public const GERMAN   = 'German';
-    public const FRENCH   = 'French';
-    public const ITALIAN  = 'Italian';
+    public const ENGLISH = 'English';
+
+    public const GERMAN = 'German';
+
+    public const FRENCH = 'French';
+
+    public const ITALIAN = 'Italian';
+
     public const JAPANESE = 'Japanese';
-    public const KOREAN   = 'Korean';
-    public const SPANISH  = 'Spanish';
+
+    public const KOREAN = 'Korean';
+
+    public const SPANISH = 'Spanish';
 
     public const LANGUAGES = [
         self::ENGLISH,
@@ -61,7 +67,7 @@ class TranslationParser
             do {
                 $currentLine = trim(fgets($file) ?: '');
 
-                if (empty($currentLine)) {
+                if ($currentLine === '' || $currentLine === '0') {
                     continue;
                 }
 
@@ -71,7 +77,7 @@ class TranslationParser
                     $megaEvolutionIndex = substr($currentLine, 30) ?: '';
 
                     $translation = $this->readTranslation($nextLine);
-                    if (empty($megaEvolutionIndex)) {
+                    if ($megaEvolutionIndex === '' || $megaEvolutionIndex === '0') {
                         $collection->addPokemonName($dexId, $translation);
                     } else {
                         $collection->addPokemonMegaName($dexId, $megaEvolutionIndex, $translation);

@@ -8,6 +8,7 @@ use GuzzleHttp\Psr7\Response;
 use League\OpenAPIValidation\PSR7\Exception\ValidationFailed;
 use League\OpenAPIValidation\PSR7\OperationAddress;
 use League\OpenAPIValidation\PSR7\ValidatorBuilder;
+use League\OpenAPIValidation\Schema\BreadCrumb;
 use League\OpenAPIValidation\Schema\Exception\KeywordMismatch;
 use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -21,7 +22,7 @@ use function realpath;
 use function sprintf;
 
 #[CoversNothing]
-class OpenApiTest extends TestCase
+final class OpenApiTest extends TestCase
 {
     #[DataProvider('routesDataProvider')]
     public function testOpenAPISpecification(string $filePath, string $apiRoute): void
@@ -48,24 +49,24 @@ class OpenApiTest extends TestCase
                 ),
                 $response,
             );
-        } catch (ValidationFailed $e) {
-            $previous = $e->getPrevious();
+        } catch (ValidationFailed $validationFailed) {
+            $previous = $validationFailed->getPrevious();
 
             if ($previous instanceof KeywordMismatch) {
                 $failMessage = $previous->getMessage();
 
-                if ($previous->dataBreadCrumb() !== null) {
+                if ($previous->dataBreadCrumb() instanceof BreadCrumb) {
                     $failMessage .= ' -> [' . implode('.', $previous->dataBreadCrumb()->buildChain()) . ']';
                 }
 
                 self::fail($failMessage);
             }
 
-            throw $e;
+            throw $validationFailed;
         }
     }
 
-    /** @return array<string, string[]> */
+    /** @return iterable<string, string[]> */
     public static function routesDataProvider(): iterable
     {
         $files = glob(__DIR__ . '/../../data/tmp/api/*.json') ?: [];

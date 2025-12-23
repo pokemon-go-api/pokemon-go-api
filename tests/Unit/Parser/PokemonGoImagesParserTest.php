@@ -16,7 +16,7 @@ use PokemonGoApi\PogoAPI\Types\PokemonImage;
 #[UsesClass(PokemonAssetsCollection::class)]
 #[UsesClass(PokemonImage::class)]
 #[UsesClass(JsonParser::class)]
-class PokemonGoImagesParserTest extends TestCase
+final class PokemonGoImagesParserTest extends TestCase
 {
     public function testParseFile(): void
     {

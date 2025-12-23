@@ -7,23 +7,21 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMove;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMoveBuffs;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonForms;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
-use PokemonGoApi\PogoAPI\Types\PokemonCombatMove;
-use PokemonGoApi\PogoAPI\Types\PokemonCombatMoveBuffs;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
-use PokemonGoApi\PogoAPI\Types\PokemonFormCollection;
-use PokemonGoApi\PogoAPI\Types\PokemonMove;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
-use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
-
 use function array_map;
-use function assert;
 
 #[CoversClass(MasterDataParser::class)]
 #[UsesClass(AttacksCollection::class)]
@@ -36,9 +34,9 @@ use function assert;
 #[UsesClass(PokemonCombatMoveBuffs::class)]
 #[UsesClass(JsonParser::class)]
 #[UsesClass(PokemonForm::class)]
-#[UsesClass(PokemonFormCollection::class)]
+#[UsesClass(PokemonForms::class)]
 #[UsesClass(TemporaryEvolution::class)]
-class MasterDataParserTest extends TestCase
+final class MasterDataParserTest extends TestCase
 {
     public function testConstruct(): void
     {
@@ -136,7 +134,6 @@ class MasterDataParserTest extends TestCase
         $collection = $sut->getPokemonCollection()->toArray();
         $this->assertArrayHasKey('CHARIZARD', $collection);
         $charizard = $collection['CHARIZARD'];
-        assert($charizard instanceof Pokemon);
         $this->assertCount(2, $charizard->getTemporaryEvolutions());
         $this->assertSame('CHARIZARD_MEGA_X', $charizard->getTemporaryEvolutions()[0]->getId());
         $this->assertSame(51, $charizard->getTemporaryEvolutions()[0]->getAssetsBundleId());

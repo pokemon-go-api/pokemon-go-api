@@ -7,7 +7,6 @@ namespace PokemonGoApi\PogoAPI\Types;
 use Exception;
 use PokemonGoApi\PogoAPI\IO\GithubLoader;
 
-use function count;
 use function preg_match;
 use function str_replace;
 
@@ -40,7 +39,7 @@ final readonly class PokemonImage
             $matches,
         );
 
-        if ($result === false || count($matches) === 0) {
+        if ($result === false || $matches === []) {
             throw new Exception('Path "' . $path . '" does not match Regex', 1617886414508);
         }
 

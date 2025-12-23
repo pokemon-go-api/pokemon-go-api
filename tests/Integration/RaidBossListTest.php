@@ -23,7 +23,7 @@ use function preg_replace;
 use const PHP_EOL;
 
 #[CoversNothing]
-class RaidBossListTest extends TestCase
+final class RaidBossListTest extends TestCase
 {
     #[Depends('testRenderDummyRaidList')]
     public function testRenderDummyList(RaidBossCollection $raidBossCollection): void

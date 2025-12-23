@@ -9,9 +9,9 @@ use DateTimeZone;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Logger\NoopLogger;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
 use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwriteStruct;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
@@ -27,7 +27,7 @@ use PokemonGoApi\PogoAPI\Types\RaidLevel;
 #[UsesClass(RaidBoss::class)]
 #[UsesClass(PokemonType::class)]
 #[UsesClass(NoopLogger::class)]
-class RaidBossOverwriteTest extends TestCase
+final class RaidBossOverwriteTest extends TestCase
 {
     public function testOverwrite(): void
     {
@@ -94,13 +94,13 @@ class RaidBossOverwriteTest extends TestCase
             new NoopLogger(),
         );
 
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1-lvl1'));
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form2-lvl1'));
-        $this->assertNull($existingRaidBossCollection->getById('Test_Form3-lvl1'));
+        $this->assertInstanceOf(RaidBoss::class, $existingRaidBossCollection->getById('Test_Form1-lvl1'));
+        $this->assertInstanceOf(RaidBoss::class, $existingRaidBossCollection->getById('Test_Form2-lvl1'));
+        $this->assertNotInstanceOf(RaidBoss::class, $existingRaidBossCollection->getById('Test_Form3-lvl1'));
 
         $sut->overwrite($existingRaidBossCollection);
 
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form1-lvl1'));
-        $this->assertNotNull($existingRaidBossCollection->getById('Test_Form3-lvl1'));
+        $this->assertInstanceOf(RaidBoss::class, $existingRaidBossCollection->getById('Test_Form1-lvl1'));
+        $this->assertInstanceOf(RaidBoss::class, $existingRaidBossCollection->getById('Test_Form3-lvl1'));
     }
 }

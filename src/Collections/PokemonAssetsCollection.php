@@ -29,7 +29,7 @@ final class PokemonAssetsCollection
         }
     }
 
-    /** @return array<int, PokemonImage> */
+    /** @return list<PokemonImage> */
     public function getImages(int $dexNr): array
     {
         return $this->imagesByDexNr['dex_' . $dexNr] ?? [];

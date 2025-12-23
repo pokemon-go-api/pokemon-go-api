@@ -6,6 +6,7 @@ namespace PokemonGoApi\PogoAPI\Renderer;
 
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphic;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
 use PokemonGoApi\PogoAPI\Renderer\Types\RenderingRaidBoss;
@@ -42,7 +43,8 @@ final class RaidBossGraphicRenderer
             );
         }
 
-        $svgWidth = $svgHeight = 0;
+        $svgWidth  = 0;
+        $svgHeight = 0;
         ob_start();
         include $raidBossGraphicConfig->getTemplateFile();
         $content = ob_get_contents();
@@ -59,7 +61,7 @@ final class RaidBossGraphicRenderer
     {
         $pokemonName = PokemonNameRenderer::renderPokemonName($raidBoss->getPokemon(), $translationCollection);
         $temporary   = $raidBoss->getTemporaryEvolution();
-        if ($temporary !== null) {
+        if ($temporary instanceof TemporaryEvolution) {
             $pokemonName = PokemonNameRenderer::renderPokemonMegaName(
                 $raidBoss->getPokemon(),
                 $temporary->getId(),

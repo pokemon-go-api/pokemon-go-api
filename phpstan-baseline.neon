@@ -1,16 +1,2 @@
 parameters:
 	ignoreErrors:
-		-
-			message: "#^Method PokemonGoApi\\\\PogoAPI\\\\IO\\\\JsonParser\\:\\:decodeToArray\\(\\) should return array\\<string, mixed\\> but returns array\\.$#"
-			count: 1
-			path: src/IO/JsonParser.php
-
-		-
-			message: "#^Method PokemonGoApi\\\\PogoAPI\\\\IO\\\\JsonParser\\:\\:decodeToFullArray\\(\\) should return array\\<string, mixed\\> but returns array\\.$#"
-			count: 1
-			path: src/IO/JsonParser.php
-
-		-
-			message: "#^Offset 'id' does not exist on array\\{0\\?\\: string, id\\?\\: non\\-falsy\\-string&numeric\\-string, 1\\?\\: non\\-falsy\\-string&numeric\\-string, name\\?\\: string, 2\\?\\: string\\}\\.$#"
-			count: 1
-			path: src/Types/PokemonMove.php

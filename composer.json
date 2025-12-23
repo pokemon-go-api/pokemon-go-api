@@ -3,12 +3,13 @@
     "description": "Pokemon GO Pokedex and Raid API",
     "license": "proprietary",
     "require": {
-      "php": "~8.3.0 || ~8.4.0",
-      "ext-json": "*",
-      "ext-dom": "*",
-      "ext-simplexml": "*",
-      "guzzlehttp/guzzle": "^7.3.0",
-      "psr/log": "^1.1.0"
+        "php": "~8.5.0",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "cuyz/valinor": "^2.3",
+        "guzzlehttp/guzzle": "^7.10.0",
+        "psr/log": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -23,13 +24,13 @@
     },
     "require-dev": {
         "doctrine/coding-standard": "^12.0",
-        "phpstan/phpstan": "^1.10",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^12.5",
         "roave/security-advisories": "dev-master",
-        "infection/infection": "^0.29",
-        "league/openapi-psr7-validator": "^0.22",
-        "rector/rector": "^1.0.4"
+        "infection/infection": "^0.31",
+        "league/openapi-psr7-validator": "^0.16",
+        "rector/rector": "^2.2"
     },
     "scripts": {
         "ci": [
@@ -47,7 +48,7 @@
         "cs-fix": "phpcbf",
         "phpstan": "phpstan analyse --memory-limit 512M",
         "phpunit": "phpunit",
-        "rector": "rector -v",
+        "rector": "rector",
         "infection": [
             "@putenv XDEBUG_MODE=coverage",
             "infection --only-covered"

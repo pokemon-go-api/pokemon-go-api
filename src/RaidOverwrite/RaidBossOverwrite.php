@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\RaidOverwrite;
 
 use DateTimeImmutable;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use Psr\Log\LoggerInterface;
@@ -53,7 +54,7 @@ class RaidBossOverwrite
             }
 
             $pokemon = $this->pokemonCollection->get($raidOverwrite->getPokemon());
-            if ($pokemon === null) {
+            if (! $pokemon instanceof Pokemon) {
                 $this->logger->error(sprintf(
                     '[RaidBossOverwrite] Invalid Pokemon ID. Not Found in Collection %s',
                     $raidOverwrite->getPokemon(),
@@ -83,7 +84,6 @@ class RaidBossOverwrite
                 $raidOverwrite->isShiny(),
                 $raidOverwrite->getLevel(),
                 $temporaryEvolution,
-                null,
             );
 
             $this->logger->debug(sprintf(

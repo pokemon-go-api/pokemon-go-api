@@ -7,14 +7,14 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
-use PokemonGoApi\PogoAPI\Types\PokemonMove;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 #[CoversClass(AttacksCollection::class)]
 #[UsesClass(PokemonType::class)]
 #[UsesClass(PokemonMove::class)]
-class AttacksCollectionTest extends TestCase
+final class AttacksCollectionTest extends TestCase
 {
     public function testCollection(): void
     {

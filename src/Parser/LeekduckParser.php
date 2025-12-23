@@ -8,8 +8,9 @@ use DOMDocument;
 use DOMElement;
 use DOMXPath;
 use Exception;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
@@ -17,7 +18,6 @@ use PokemonGoApi\PogoAPI\Types\RaidLevel;
 use Throwable;
 
 use function assert;
-use function count;
 use function explode;
 use function implode;
 use function in_array;
@@ -60,16 +60,16 @@ class LeekduckParser
 
                 foreach ($this->getElementsByClass($tierContainer, 'card') as $cardContainer) {
                     $pokemonImage = $this->extractPokemonImage($cardContainer);
-                    $isShiny      = count($this->getElementsByClass($cardContainer, 'shiny-icon')) > 0;
+                    $isShiny      = $this->getElementsByClass($cardContainer, 'shiny-icon') !== [];
 
-                    if ($pokemonImage === null) {
+                    if (! $pokemonImage instanceof PokemonImage) {
                         continue;
                     }
 
                     [, $formName] = $this->extractFormBossName($cardContainer);
-
-                    $pokemon = $basePokemon = $this->pokemonCollection->getByDexId($pokemonImage->getDexNr());
-                    if ($basePokemon === null || $pokemon === null) {
+                    $pokemon      = $this->pokemonCollection->getByDexId($pokemonImage->getDexNr());
+                    $basePokemon  = $pokemon;
+                    if (! $basePokemon instanceof Pokemon || ! $pokemon instanceof Pokemon) {
                         continue;
                     }
 
@@ -77,6 +77,7 @@ class LeekduckParser
                         new PokemonForm(
                             $pokemon->getId(),
                             $pokemon->getFormId(),
+                            true,
                             $pokemonImage->getAssetBundleValue(),
                             $pokemonImage->getAssetBundleSuffix(),
                         ),
@@ -132,7 +133,7 @@ class LeekduckParser
                         $pokemonTemporaryEvolution === null
                         && $formName !== null
                         && $pokemon->getId() === $pokemon->getFormId()
-                        && count($bestMatchingRegionForms) > 0
+                        && $bestMatchingRegionForms !== []
                     ) {
                         usort(
                             $bestMatchingRegionForms,

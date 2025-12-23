@@ -2,15 +2,25 @@
 
 declare(strict_types=1);
 
-namespace PokemonGoApi\PogoAPI\Types;
+namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
 use JsonSerializable;
 use Override;
 
 final readonly class PokemonStats implements JsonSerializable
 {
-    public function __construct(private int $stamina, private int $attack, private int $defense)
-    {
+    private int $stamina;
+    private int $attack;
+    private int $defense;
+
+    public function __construct(
+        int $baseStamina,
+        int $baseAttack,
+        int $baseDefense,
+    ) {
+        $this->stamina = $baseStamina;
+        $this->attack  = $baseAttack;
+        $this->defense = $baseDefense;
     }
 
     public function getAttack(): int

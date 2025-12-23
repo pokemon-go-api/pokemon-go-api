@@ -9,6 +9,7 @@ use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
 final readonly class RaidBossGraphicConfig
 {
     public const string ORDER_MEGA_TO_LVL1 = 'megaToLvl1';
+
     public const string ORDER_LVL1_TO_MEGA = 'lvl1ToMega';
 
     public function __construct(

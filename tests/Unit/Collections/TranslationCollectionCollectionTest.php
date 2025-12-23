@@ -12,7 +12,7 @@ use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
 
 #[CoversClass(TranslationCollectionCollection::class)]
 #[UsesClass(TranslationCollection::class)]
-class TranslationCollectionCollectionTest extends TestCase
+final class TranslationCollectionCollectionTest extends TestCase
 {
     public function testAddCollection(): void
     {

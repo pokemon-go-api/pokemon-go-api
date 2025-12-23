@@ -12,11 +12,11 @@ use PokemonGoApi\PogoAPI\Types\WeatherBoost;
 
 #[CoversClass(WeatherBoost::class)]
 #[UsesClass(PokemonType::class)]
-class WeatherBoostTest extends TestCase
+final class WeatherBoostTest extends TestCase
 {
     public function testCreateFromTypeWithException(): void
     {
-        self::expectExceptionCode(1609070869725);
+        $this->expectExceptionCode(1609070869725);
         WeatherBoost::createFromType('non existing');
     }
 

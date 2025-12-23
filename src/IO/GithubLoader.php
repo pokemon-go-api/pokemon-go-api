@@ -45,7 +45,7 @@ class GithubLoader
             ],
         ],
     ];
-    //phpcs:ignore Generic.Files.LineLength.TooLong
+
     public const string ASSETS_BASE_URL = 'https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/';
 
     public function __construct(
@@ -78,7 +78,8 @@ class GithubLoader
     /** @return array{remote: array<string, GithubFileResponse>, apk: array<string, GithubFileResponse>} */
     public function getLatestTextFiles(): array
     {
-        $remoteFiles = $apkFiles = [];
+        $remoteFiles = [];
+        $apkFiles    = [];
         foreach (self::AVAILABLE_TEXT_REPOS as $textRepoConfig) {
             foreach ($textRepoConfig['filesRemote'] as $fileAlias => $remoteFile) {
                 $textFileData            = $this->remoteFileLoader->load(sprintf(

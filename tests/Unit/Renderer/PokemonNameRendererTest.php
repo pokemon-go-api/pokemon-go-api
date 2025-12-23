@@ -9,11 +9,11 @@ use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Renderer\PokemonNameRenderer;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
-use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
 
 #[CoversClass(PokemonNameRenderer::class)]
 #[UsesClass(Pokemon::class)]
@@ -22,7 +22,7 @@ use PokemonGoApi\PogoAPI\Types\TemporaryEvolution;
 #[UsesClass(TemporaryEvolution::class)]
 #[UsesClass(PokemonForm::class)]
 #[UsesClass(CustomTranslations::class)]
-class PokemonNameRendererTest extends TestCase
+final class PokemonNameRendererTest extends TestCase
 {
     public function testRenderPokemonName(): void
     {

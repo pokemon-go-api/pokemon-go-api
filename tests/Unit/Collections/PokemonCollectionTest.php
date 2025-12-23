@@ -7,14 +7,14 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Collections;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 #[CoversClass(PokemonCollection::class)]
 #[UsesClass(PokemonType::class)]
 #[UsesClass(Pokemon::class)]
-class PokemonCollectionTest extends TestCase
+final class PokemonCollectionTest extends TestCase
 {
     public function testCollection(): void
     {
@@ -35,7 +35,7 @@ class PokemonCollectionTest extends TestCase
         $collection        = new PokemonCollection();
         $collection->add($pokemon);
 
-        $this->assertNull($collection->getByFormId('TESTPOKEMON_FORM'));
+        $this->assertNotInstanceOf(Pokemon::class, $collection->getByFormId('TESTPOKEMON_FORM'));
 
         $pokemon = $pokemon->withAddedPokemonRegionForm($pokemonRegionForm);
         $collection->add($pokemon);
@@ -51,7 +51,7 @@ class PokemonCollectionTest extends TestCase
         $this->assertSame($pokemon, $collection->getByDexId(100));
         $this->assertTrue($collection->has($pokemon));
 
-        $this->assertNull($collection->get('NOT_EXISTINGS'));
-        $this->assertNull($collection->getByDexId(0));
+        $this->assertNotInstanceOf(Pokemon::class, $collection->get('NOT_EXISTINGS'));
+        $this->assertNotInstanceOf(Pokemon::class, $collection->getByDexId(0));
     }
 }

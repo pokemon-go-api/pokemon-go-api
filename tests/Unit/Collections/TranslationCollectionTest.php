@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 
 #[CoversClass(TranslationCollection::class)]
-class TranslationCollectionTest extends TestCase
+final class TranslationCollectionTest extends TestCase
 {
     public function testCollection(): void
     {

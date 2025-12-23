@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
 
 #[CoversClass(GenerationDeterminer::class)]
-class GenerationDeterminerTest extends TestCase
+final class GenerationDeterminerTest extends TestCase
 {
     #[DataProvider('dexNrDataProvider')]
     public function testFromDexNr(int $input, int $expected): void

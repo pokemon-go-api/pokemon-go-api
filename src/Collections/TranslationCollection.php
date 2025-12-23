@@ -15,22 +15,31 @@ final class TranslationCollection
 {
     /** @var array<string, string> */
     private array $pokemonNames = [];
+
     /** @var array<string, array<string, string>> */
     private array $pokemonMegaNames = [];
+
     /** @var array<string, string> */
     private array $typeNames = [];
+
     /** @var array<string, string> */
     private array $moveNames = [];
+
     /** @var array<string, string> */
     private array $pokemonFormNames = [];
+
     /** @var array<string, string> */
     private array $regionalForms = [];
+
     /** @var array<string, string> */
     private array $customTranslations = [];
+
     /** @var array<string, string> */
     private array $quests = [];
+
     /** @var array<string, string> */
     private array $weather = [];
+
     /** @var array<string, string> */
     private array $items = [];
 
@@ -76,6 +85,9 @@ final class TranslationCollection
 
     public function addPokemonFormName(string $formName, string $translation): void
     {
+        if ($translation === '') {
+            return;
+        }
         $this->pokemonFormNames[mb_strtoupper($formName)] = $translation;
     }
 

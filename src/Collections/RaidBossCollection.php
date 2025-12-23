@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Collections;
 
+use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 
 use function array_filter;
@@ -79,8 +80,8 @@ final class RaidBossCollection
                 $aPokemonImage = $a->getPokemonImage();
                 $bPokemonImage = $b->getPokemonImage();
 
-                $aImageUrl = $aPokemonImage ? $aPokemonImage->buildUrl(false) : '';
-                $bImageUrl = $bPokemonImage ? $bPokemonImage->buildUrl(false) : '';
+                $aImageUrl = $aPokemonImage instanceof PokemonImage ? $aPokemonImage->buildUrl(false) : '';
+                $bImageUrl = $bPokemonImage instanceof PokemonImage ? $bPokemonImage->buildUrl(false) : '';
 
                 return $aImageUrl <=> $bImageUrl;
             },
@@ -93,7 +94,7 @@ final class RaidBossCollection
     {
         $keyParts     = [];
         $pokemonImage = $raidBoss->getPokemonImage();
-        if ($pokemonImage !== null) {
+        if ($pokemonImage instanceof PokemonImage) {
             $keyParts[] = sha1($pokemonImage->buildUrl(false));
         } else {
             $keyParts[] = $raidBoss->getPokemonWithMegaFormId();

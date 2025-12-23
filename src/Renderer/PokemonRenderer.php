@@ -4,15 +4,23 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Renderer;
 
-use PokemonGoApi\PogoAPI\Collections\AttacksCollection;
-use PokemonGoApi\PogoAPI\Collections\ItemsCollection;
 use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\Collections\QuestsCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\AttacksCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\ItemsCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionBranch;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionQuest;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Item;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMove;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMoveBuffs;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolutionBranch;
 use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
-
 use function array_filter;
 use function array_map;
 
@@ -69,7 +77,7 @@ final readonly class PokemonRenderer
                 $attacksCollection,
                 $this->translations,
             ),
-            'assets' => $pokemonImage ? [
+            'assets' => $pokemonImage instanceof PokemonImage ? [
                 'image'      => $pokemonImage->buildUrl(false),
                 'shinyImage' => $pokemonImage->buildUrl(true),
             ] : null,
@@ -104,6 +112,14 @@ final readonly class PokemonRenderer
                 );
             }
 
+            $energyCost = null;
+            foreach ($pokemon->getEvolutionsBranches() as $evolution) {
+                if ($evolution instanceof TemporaryEvolutionBranch && $evolution->tempEvoId === $temporaryEvolution->getTempEvoId()) {
+                    $energyCost = $evolution->energyCost;
+                    break;
+                }
+            }
+            
             $pokemonImage = $pokemon->getPokemonImage($temporaryEvolution);
 
             $output[$temporaryEvolution->getId()] = [
@@ -112,7 +128,8 @@ final readonly class PokemonRenderer
                 'stats'         => $temporaryEvolution->getStats(),
                 'primaryType'   => $this->renderType($temporaryEvolution->getTypePrimary(), $translations),
                 'secondaryType' => $this->renderType($temporaryEvolution->getTypeSecondary(), $translations),
-                'assets'        => $pokemonImage ? [
+                'energyCost'    => $energyCost,
+                'assets'        => $pokemonImage instanceof PokemonImage ? [
                     'image'      => $pokemonImage->buildUrl(false),
                     'shinyImage' => $pokemonImage->buildUrl(true),
                 ] : null,
@@ -155,7 +172,7 @@ final readonly class PokemonRenderer
         $out = [];
         foreach ($moves as $moveName) {
             $attack = $attacksCollection->getByName((string) $moveName);
-            if ($attack === null) {
+            if (! $attack instanceof PokemonMove) {
                 continue;
             }
 
@@ -168,7 +185,7 @@ final readonly class PokemonRenderer
 
             $combatMove = $attack->getCombatMove();
             $combat     = null;
-            if ($combatMove !== null) {
+            if ($combatMove instanceof PokemonCombatMove) {
                 $combat = [
                     'energy' => $combatMove->getEnergy(),
                     'power'  => $combatMove->getPower(),
@@ -176,7 +193,7 @@ final readonly class PokemonRenderer
                     'buffs' => null,
                 ];
                 $buffs  = $combatMove->getBuffs();
-                if ($buffs !== null) {
+                if ($buffs instanceof PokemonCombatMoveBuffs) {
                     $combat['buffs'] = [
                         'activationChance' => $buffs->getActivationChance(),
                         'attackerAttackStatsChange' => $buffs->getAttackerAttackStatStageChange(),
@@ -240,11 +257,16 @@ final readonly class PokemonRenderer
         TranslationCollectionCollection $translations,
     ): array {
         $out = [];
-        foreach ($pokemon->getEvolutions() as $evolution) {
+        foreach ($pokemon->getEvolutionsBranches() as $evolution) {
+            
+            if (!$evolution instanceof EvolutionBranch) {
+                continue;
+            }
+            
             $requiredItem = $evolution->getRequiredItem();
-            $item         = $this->itemsCollection->getByItemId($requiredItem ?? -1);
+            $item         = $this->itemsCollection->getByItemId($requiredItem ?? '');
 
-            if ($requiredItem !== null && $item !== null) {
+            if ($requiredItem !== null && $item instanceof Item) {
                 $itemNames = [];
                 foreach ($translations->getCollections() as $translationCollection) {
                     $itemNames[$translationCollection->getLanguageName()] = $translationCollection->getItemName(
@@ -265,7 +287,7 @@ final readonly class PokemonRenderer
             $quests = [];
             foreach ($evolution->getQuestIds() as $questId) {
                 $quest = $questsCollection->getByName($questId);
-                if ($quest === null) {
+                if (! $quest instanceof EvolutionQuest) {
                     continue;
                 }
 

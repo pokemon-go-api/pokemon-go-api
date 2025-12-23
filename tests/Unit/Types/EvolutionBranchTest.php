@@ -6,12 +6,12 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Types\EvolutionBranch;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionBranch;
 
 use function json_decode;
 
 #[CoversClass(EvolutionBranch::class)]
-class EvolutionBranchTest extends TestCase
+final class EvolutionBranchTest extends TestCase
 {
     public function testCreateSlowking(): void
     {

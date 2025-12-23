@@ -9,6 +9,7 @@ use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
 use PokemonGoApi\PogoAPI\Types\BattleResult;
+use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use Throwable;
 
@@ -70,7 +71,7 @@ class PokebattlerParser
             }
 
             $raidBossReference = $raidBossesWithDifficulty->get($raidBoss);
-            if ($raidBossReference === null) {
+            if (! $raidBossReference instanceof RaidBoss) {
                 continue;
             }
 
@@ -109,7 +110,7 @@ class PokebattlerParser
     private function raidBossName(RaidBoss $raidBoss, bool $addForm, bool $isShadow): string
     {
         $suffix = $isShadow ? '_SHADOW_FORM' : '';
-        if ($addForm && $raidBoss->getPokemon()->getPokemonForm() !== null) {
+        if ($addForm && $raidBoss->getPokemon()->getPokemonForm() instanceof PokemonForm) {
             return $raidBoss->getPokemonWithMegaFormId() . '_FORM';
         }
 

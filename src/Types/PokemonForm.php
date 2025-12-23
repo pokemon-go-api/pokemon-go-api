@@ -9,6 +9,7 @@ final readonly class PokemonForm
     public function __construct(
         private string $id,
         private string $formOnlyId,
+        private bool $isCostume,
         private int|null $assetBundleValue,
         private string|null $assetBundleSuffix,
     ) {
@@ -17,6 +18,11 @@ final readonly class PokemonForm
     public function getId(): string
     {
         return $this->id;
+    }
+
+    public function isCostume(): bool
+    {
+        return $this->isCostume;
     }
 
     public function getFormOnlyId(): string

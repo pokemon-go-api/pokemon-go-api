@@ -17,7 +17,7 @@ use PokemonGoApi\PogoAPI\Logger\NoopLogger;
 #[CoversClass(RemoteFileLoader::class)]
 #[UsesClass(File::class)]
 #[UsesClass(NoopLogger::class)]
-class RemoteFileLoaderTest extends TestCase
+final class RemoteFileLoaderTest extends TestCase
 {
     public function testLoad(): void
     {
