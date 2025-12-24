@@ -16,6 +16,7 @@ use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
 use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoApi\PogoAPI\Renderer\Types\RaidBossGraphicConfig;
+use Psr\Log\LoggerInterface;
 
 use function file_put_contents;
 use function preg_replace;
@@ -23,7 +24,7 @@ use function preg_replace;
 use const PHP_EOL;
 
 #[CoversNothing]
-class RaidBossListTest extends TestCase
+final class RaidBossListTest extends TestCase
 {
     #[Depends('testRenderDummyRaidList')]
     public function testRenderDummyList(RaidBossCollection $raidBossCollection): void
@@ -64,7 +65,7 @@ class RaidBossListTest extends TestCase
         $pokemonImagesParser     = new PokemonGoImagesParser();
         $pokemonAssetsCollection = $pokemonImagesParser->parseFile($pokemonImages);
 
-        $masterData = new MasterDataParser($pokemonAssetsCollection);
+        $masterData = new MasterDataParser($pokemonAssetsCollection, $this->createStub(LoggerInterface::class));
         $masterData->parseFile($gameMaster);
 
         $leekduckParser = new LeekduckParser($masterData->getPokemonCollection());
@@ -168,7 +169,7 @@ class RaidBossListTest extends TestCase
             [
                 'dexNr' => 201,
                 'pokemonID' => 'UNOWN',
-                'formID' => 'UNOWN',
+                'formID' => 'UNOWN_T',
                 //phpcs:ignore Generic.Files.LineLength.TooLong
                 'image' => GithubLoader::ASSETS_BASE_URL . 'pm201.fUNOWN_T.icon.png',
             ],

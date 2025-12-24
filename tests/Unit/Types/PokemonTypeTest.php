@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 #[CoversClass(PokemonType::class)]
-class PokemonTypeTest extends TestCase
+final class PokemonTypeTest extends TestCase
 {
     public function testDark(): void
     {

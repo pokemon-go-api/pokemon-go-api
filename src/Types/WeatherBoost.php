@@ -6,19 +6,28 @@ namespace PokemonGoApi\PogoAPI\Types;
 
 use Exception;
 
+use function array_values;
+use function assert;
 use function method_exists;
 use function strtolower;
 
 final class WeatherBoost
 {
-    public const string SUNNY         = 'sunny';
-    public const string RAIN          = 'rain';
+    public const string SUNNY = 'sunny';
+
+    public const string RAIN = 'rain';
+
     public const string PARTLY_CLOUDY = 'partlyCloudy';
-    public const string CLOUDY        = 'cloudy';
-    public const string WINDY         = 'windy';
-    public const string SNOW          = 'snow';
-    public const string FOG           = 'fog';
-    public const string EXTREME       = 'extreme';
+
+    public const string CLOUDY = 'cloudy';
+
+    public const string WINDY = 'windy';
+
+    public const string SNOW = 'snow';
+
+    public const string FOG = 'fog';
+
+    public const string EXTREME = 'extreme';
 
     public const array ALL_WEATHER_TYPES = [
         self::SUNNY,
@@ -31,19 +40,22 @@ final class WeatherBoost
         self::EXTREME,
     ];
 
-    /** @var PokemonType[] */
+    /** @var list<PokemonType> */
     private readonly array $boostedTypes;
 
     public function __construct(private readonly string $weather, PokemonType ...$boostedTypes)
     {
-        $this->boostedTypes = $boostedTypes;
+        $this->boostedTypes = array_values($boostedTypes);
     }
 
     public static function createFromType(string $weatherType): self
     {
         $typeNormalized = strtolower($weatherType);
         if (method_exists(self::class, $typeNormalized)) {
-            return self::{$typeNormalized}();
+            $self = self::{$typeNormalized}();
+            assert($self instanceof self);
+
+            return $self;
         }
 
         throw new Exception('weather type ' . $weatherType . ' does not exists', 1609070869725);
@@ -73,7 +85,7 @@ final class WeatherBoost
         };
     }
 
-    /** @return array<int, PokemonType> */
+    /** @return list<PokemonType> */
     public function getBoostedTypes(): array
     {
         return $this->boostedTypes;

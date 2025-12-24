@@ -9,6 +9,7 @@
     <rule ref="Doctrine">
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming" />
+        <exclude name="Generic.Files.LineLength.TooLong" />
     </rule>
 
     <!-- Paths to check -->

@@ -1,0 +1,164 @@
+{
+  "templateId": "V0006_POKEMON_CHARIZARD",
+  "data": {
+    "templateId": "V0006_POKEMON_CHARIZARD",
+    "pokemonSettings": {
+      "pokemonId": "CHARIZARD",
+      "modelScale": 0.81,
+      "type": "POKEMON_TYPE_FIRE",
+      "type2": "POKEMON_TYPE_FLYING",
+      "camera": {
+        "diskRadiusM": 1.215,
+        "cylinderRadiusM": 1.25,
+        "cylinderHeightM": 1.5,
+        "cylinderGroundM": 0.5,
+        "shoulderModeScale": 0.5
+      },
+      "encounter": {
+        "baseCaptureRate": 0.05,
+        "baseFleeRate": 0.05,
+        "collisionRadiusM": 0.405,
+        "collisionHeightM": 1.0125,
+        "collisionHeadRadiusM": 0.2025,
+        "movementType": "MOVEMENT_FLYING",
+        "movementTimerS": 11.0,
+        "jumpTimeS": 1.0,
+        "attackTimerS": 4.0,
+        "bonusCandyCaptureReward": 7,
+        "bonusStardustCaptureReward": 400,
+        "attackProbability": 0.2,
+        "dodgeProbability": 0.15,
+        "dodgeDurationS": 0.7,
+        "dodgeDistance": 1.0,
+        "cameraDistance": 5.0,
+        "minPokemonActionFrequencyS": 0.2,
+        "maxPokemonActionFrequencyS": 1.6
+      },
+      "stats": {
+        "baseStamina": 186,
+        "baseAttack": 223,
+        "baseDefense": 173
+      },
+      "quickMoves": [
+        "FIRE_SPIN_FAST",
+        "AIR_SLASH_FAST"
+      ],
+      "cinematicMoves": [
+        "FIRE_BLAST",
+        "DRAGON_CLAW",
+        "OVERHEAT"
+      ],
+      "animationTime": [
+        2.2,
+        0.6667,
+        1.6667,
+        0.8667,
+        6.666667,
+        2.0,
+        1.6,
+        2.0
+      ],
+      "evolutionPips": 1,
+      "pokedexHeightM": 1.7,
+      "pokedexWeightKg": 90.5,
+      "parentPokemonId": "CHARMELEON",
+      "heightStdDev": 0.2125,
+      "weightStdDev": 11.3125,
+      "familyId": "FAMILY_CHARMANDER",
+      "kmBuddyDistance": 3.0,
+      "buddySize": "BUDDY_BIG",
+      "modelHeight": 1.91,
+      "evolutionBranch": [
+        {
+          "temporaryEvolution": "TEMP_EVOLUTION_MEGA_X",
+          "temporaryEvolutionEnergyCost": 200,
+          "temporaryEvolutionEnergyCostSubsequent": 40
+        },
+        {
+          "temporaryEvolution": "TEMP_EVOLUTION_MEGA_Y",
+          "temporaryEvolutionEnergyCost": 200,
+          "temporaryEvolutionEnergyCostSubsequent": 40
+        }
+      ],
+      "modelScaleV2": 1.1,
+      "buddyOffsetMale": [
+        1.8,
+        -11.4,
+        36.04
+      ],
+      "buddyOffsetFemale": [
+        1.9,
+        -11.4,
+        36.04
+      ],
+      "buddyScale": 19.0,
+      "thirdMove": {
+        "stardustToUnlock": 10000,
+        "candyToUnlock": 25
+      },
+      "isTransferable": true,
+      "isDeployable": true,
+      "buddyGroupNumber": 3,
+      "eliteQuickMove": [
+        "EMBER_FAST",
+        "WING_ATTACK_FAST",
+        "DRAGON_BREATH_FAST"
+      ],
+      "eliteCinematicMove": [
+        "BLAST_BURN",
+        "FLAMETHROWER"
+      ],
+      "tempEvoOverrides": [
+        {
+          "tempEvoId": "TEMP_EVOLUTION_MEGA_X",
+          "stats": {
+            "baseStamina": 186,
+            "baseAttack": 273,
+            "baseDefense": 213
+          },
+          "averageHeightM": 1.7,
+          "averageWeightKg": 110.5,
+          "typeOverride1": "POKEMON_TYPE_FIRE",
+          "typeOverride2": "POKEMON_TYPE_DRAGON",
+          "camera": {
+            "cylinderRadiusM": 1.25,
+            "cylinderHeightM": 1.75,
+            "cylinderGroundM": 1.0
+          },
+          "modelScaleV2": 1.1,
+          "modelHeight": 1.91
+        },
+        {
+          "tempEvoId": "TEMP_EVOLUTION_MEGA_Y",
+          "stats": {
+            "baseStamina": 186,
+            "baseAttack": 319,
+            "baseDefense": 212
+          },
+          "averageHeightM": 1.7,
+          "averageWeightKg": 100.5,
+          "typeOverride1": "POKEMON_TYPE_FIRE",
+          "typeOverride2": "POKEMON_TYPE_FLYING",
+          "camera": {
+            "cylinderRadiusM": 2.0,
+            "cylinderHeightM": 2.7,
+            "cylinderGroundM": 0.45
+          },
+          "modelScaleV2": 1.1,
+          "modelHeight": 3.18,
+          "buddyOffsetMale": [
+            15.0,
+            -11.4,
+            -34.8
+          ],
+          "buddyOffsetFemale": [
+            15.0,
+            -11.4,
+            -34.8
+          ]
+        }
+      ],
+      "buddyWalkedMegaEnergyAward": 15
+    }
+  }
+}

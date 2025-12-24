@@ -30,7 +30,7 @@ use const DATE_ATOM;
 #[UsesClass(File::class)]
 #[UsesClass(NoopLogger::class)]
 #[UsesClass(Directory::class)]
-class CacheLoaderTest extends TestCase
+final class CacheLoaderTest extends TestCase
 {
     private string $cacheDir;
 
@@ -77,14 +77,14 @@ class CacheLoaderTest extends TestCase
         $clock = new DateTimeImmutable('2020-06-01 12:00:00');
 
         $remoteFileLoaderMock = $this->createMock(RemoteFileLoader::class);
-        $remoteFileLoaderMock->expects(self::once())->method('load')->willReturn(
+        $remoteFileLoaderMock->expects($this->once())->method('load')->willReturn(
             new File('testcontent'),
         );
         $remoteFileLoaderMock->method('receiveResponseHeader')->willReturn($clock->format(DATE_ATOM));
 
         $sut = new CacheLoader(
             $remoteFileLoaderMock,
-            $this->createMock(GithubLoader::class),
+            $this->createStub(GithubLoader::class),
             $clock,
             $this->cacheDir,
             new NoopLogger(),
@@ -96,7 +96,7 @@ class CacheLoaderTest extends TestCase
 
         // Response Header changed date
         $remoteFileLoaderMock = $this->createMock(RemoteFileLoader::class);
-        $remoteFileLoaderMock->expects(self::once())->method('load')->willReturn(
+        $remoteFileLoaderMock->expects($this->once())->method('load')->willReturn(
             new File('testcontent'),
         );
         $remoteFileLoaderMock->method('receiveResponseHeader')->willReturn(
@@ -104,7 +104,7 @@ class CacheLoaderTest extends TestCase
         );
         $sut = new CacheLoader(
             $remoteFileLoaderMock,
-            $this->createMock(GithubLoader::class),
+            $this->createStub(GithubLoader::class),
             $clock,
             $this->cacheDir,
             new NoopLogger(),

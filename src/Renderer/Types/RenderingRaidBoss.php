@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Renderer\Types;
 
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use PokemonGoApi\PogoAPI\Types\RaidLevel;
@@ -64,7 +65,7 @@ final readonly class RenderingRaidBoss
 
     public function getRaidBossStats(): PokemonStats
     {
-        return $this->raidBoss->getPokemon()->getStats() ?? new PokemonStats(0, 0, 0);
+        return $this->raidBoss->getPokemon()->getStats();
     }
 
     /** @return array<int, int> */
@@ -115,7 +116,7 @@ final readonly class RenderingRaidBoss
             $raidBossPokemon->getTypePrimary(),
             $raidBossPokemon->getTypeSecondary(),
         ];
-        if ($temporaryEvolution !== null) {
+        if ($temporaryEvolution instanceof TemporaryEvolution) {
             $raidBossTypes = [
                 $temporaryEvolution->getTypePrimary(),
                 $temporaryEvolution->getTypeSecondary(),

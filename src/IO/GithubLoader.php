@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\IO;
 
 use PokemonGoApi\PogoAPI\IO\Struct\GithubFileResponse;
-use stdClass;
+use PokemonGoApi\PogoAPI\Parser\JsonMapper;
 
 use function array_map;
-use function assert;
 use function basename;
 use function explode;
+use function realpath;
 use function shell_exec;
 use function sprintf;
 
@@ -45,7 +45,7 @@ class GithubLoader
             ],
         ],
     ];
-    //phpcs:ignore Generic.Files.LineLength.TooLong
+
     public const string ASSETS_BASE_URL = 'https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/';
 
     public function __construct(
@@ -62,23 +62,17 @@ class GithubLoader
                 $gameMasterConfig['repo'],
                 $gameMasterConfig['path'],
             ))->getContent() ?: '[]';
-            $gameMasterFile     = JsonParser::decodeToObject($gameMasterFileData);
-            assert($gameMasterFile instanceof stdClass);
+            $gameMasterFile     = JsonParser::decodeToArray($gameMasterFileData);
 
-            return new GithubFileResponse(
-                $gameMasterFile->name,
-                $gameMasterFile->path,
-                $gameMasterFile->sha,
-                //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-                $gameMasterFile->download_url,
-            );
+            return JsonMapper::map(GithubFileResponse::class, $gameMasterFile);
         }
     }
 
     /** @return array{remote: array<string, GithubFileResponse>, apk: array<string, GithubFileResponse>} */
     public function getLatestTextFiles(): array
     {
-        $remoteFiles = $apkFiles = [];
+        $remoteFiles = [];
+        $apkFiles    = [];
         foreach (self::AVAILABLE_TEXT_REPOS as $textRepoConfig) {
             foreach ($textRepoConfig['filesRemote'] as $fileAlias => $remoteFile) {
                 $textFileData            = $this->remoteFileLoader->load(sprintf(
@@ -87,14 +81,8 @@ class GithubLoader
                     $textRepoConfig['repo'],
                     $remoteFile,
                 ))->getContent() ?: '[]';
-                $textFile                = JsonParser::decodeToObject($textFileData);
-                $remoteFiles[$fileAlias] = new GithubFileResponse(
-                    $textFile->name,
-                    $textFile->path,
-                    $textFile->sha,
-                    //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-                    $textFile->download_url,
-                );
+                $textFile                = JsonParser::decodeToArray($textFileData);
+                $remoteFiles[$fileAlias] = JsonMapper::map(GithubFileResponse::class, $textFile);
             }
 
             foreach ($textRepoConfig['filesApk'] as $fileAlias => $aplFile) {
@@ -104,14 +92,8 @@ class GithubLoader
                     $textRepoConfig['repo'],
                     $aplFile,
                 ))->getContent() ?: '[]';
-                $textFile             = JsonParser::decodeToObject($textFileData);
-                $apkFiles[$fileAlias] = new GithubFileResponse(
-                    $textFile->name,
-                    $textFile->path,
-                    $textFile->sha,
-                    //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-                    $textFile->download_url,
-                );
+                $textFile             = JsonParser::decodeToArray($textFileData);
+                $apkFiles[$fileAlias] = JsonMapper::map(GithubFileResponse::class, $textFile);
             }
         }
 
@@ -124,12 +106,11 @@ class GithubLoader
     /** @return list<string> */
     public function getImageList(): array
     {
-        shell_exec('rm -rf data/tmp/git-assets && mkdir data/tmp/git-assets');
+        $baseDir = realpath(__DIR__ . '/../../') ?: '.';
+        shell_exec('rm -rf ' . $baseDir . '/data/tmp/git-assets && mkdir ' . $baseDir . '/data/tmp/git-assets');
         //phpcs:ignore Generic.Files.LineLength.TooLong
-        shell_exec('git clone -q --filter=blob:none --no-checkout https://github.com/RetroJohn86/PoGo-Unpacked-DL-Assets.git data/tmp/git-assets');
-        $files = shell_exec(<<<'SHELL'
-        git --git-dir data/tmp/git-assets/.git ls-tree --name-only HEAD 'Sprite/pm and portraits/'
-        SHELL);
+        shell_exec('git clone -q --filter=blob:none --no-checkout https://github.com/RetroJohn86/PoGo-Unpacked-DL-Assets.git ' . $baseDir . '/data/tmp/git-assets');
+        $files = shell_exec('git --git-dir ' . $baseDir . '/data/tmp/git-assets/.git ls-tree --name-only HEAD "Sprite/pm and portraits/"');
 
         $allFiles = explode("\n", (string) $files);
 

@@ -12,8 +12,9 @@ use PokemonGoApi\PogoAPI\Parser\LeekduckParser;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
 use PokemonGoApi\PogoAPI\Parser\PokebattlerParser;
 use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
+use PokemonGoApi\PogoAPI\Parser\SnacknapParser;
 use PokemonGoApi\PogoAPI\Parser\TranslationParser;
-use PokemonGoApi\PogoAPI\RaidOverwrite\RaidBossOverwrite;
+use PokemonGoApi\PogoAPI\Renderer\MaxBattleListRenderer;
 use PokemonGoApi\PogoAPI\Renderer\PokemonRenderer;
 use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoApi\PogoAPI\Renderer\RaidBossListRenderer;
@@ -29,11 +30,22 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $env = getenv('APP_CONFIG') ?: 'default';
 
+$raidGraphicSettings = sprintf(__DIR__ . '/../config/raid-grahpics.%s.php', $env);
+if (! file_exists($raidGraphicSettings)) {
+    throw new Exception('Raid graphics settings not found');
+}
+
+$envSpecificFiles = require $raidGraphicSettings;
+if (! is_array($envSpecificFiles)) {
+    throw new Exception('Raid graphics settings should be an array');
+}
+
+/** @var array<string, mixed> $applicationConfig */
 $applicationConfig = array_merge_recursive(
     [
         'raid-graphics' => [],
     ],
-    require sprintf(__DIR__ . '/../config/raid-grahpics.%s.php', $env),
+    $envSpecificFiles,
 );
 
 date_default_timezone_set('UTC');
@@ -55,8 +67,9 @@ $logger->debug('Parse Files');
 $pokemonImagesParser     = new PokemonGoImagesParser();
 $pokemonAssetsCollection = $pokemonImagesParser->parseFile($cacheLoader->fetchPokemonImages());
 
-$masterData = new MasterDataParser($pokemonAssetsCollection);
+$masterData = new MasterDataParser($pokemonAssetsCollection, $logger);
 $masterData->parseFile($cacheLoader->fetchGameMasterFile());
+$logger->debug(' - Done');
 
 $languageFiles      = $cacheLoader->fetchLanguageFiles();
 $translationLoader  = new TranslationParser();
@@ -175,6 +188,16 @@ foreach ($files as $file => $data) {
     file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 }
 
+$logger->debug('Generate MaxBattles');
+$maxBattleHtmlList     = $cacheLoader->fetchMaxBattlesFromSnacknap();
+$snacknapParser        = new SnacknapParser($masterData->getPokemonCollection());
+$maxBattles            = $snacknapParser->parseMaxBattle($maxBattleHtmlList);
+$maxBattleListRenderer = new MaxBattleListRenderer();
+
+file_put_contents($apidir . 'maxbattles.json', json_encode([
+    'currentList' => $maxBattleListRenderer->buildList($maxBattles, $translations),
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+
 $logger->debug('Generate Raidbosses');
 $raidBossHtmlList = $cacheLoader->fetchRaidBossesFromLeekduck();
 $leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
@@ -187,22 +210,6 @@ $logger->debug(
         $raidBosses->toArray(),
     ),
 );
-$xmlData = (array) (simplexml_load_string(
-    file_get_contents(__DIR__ . '/../data/raidOverwrites.xml') ?: '',
-) ?: []);
-
-$raidBossOverwriteData = json_decode(json_encode($xmlData['raidboss'] ?? []) ?: '[]');
-assert(is_array($raidBossOverwriteData));
-foreach ($raidBossOverwriteData as $raidBossOverwriteDataItem) {
-    assert($raidBossOverwriteDataItem instanceof stdClass);
-}
-
-$raidBossOverwrite = new RaidBossOverwrite(
-    $raidBossOverwriteData,
-    $masterData->getPokemonCollection(),
-    $logger,
-);
-$raidBossOverwrite->overwrite($raidBosses);
 
 $logger->debug(
     sprintf('Got %d raid bosses to render', count($raidBosses->toArray())),
@@ -231,7 +238,12 @@ foreach ($translations->getCollections() as $translationName => $translationColl
         @mkdir($raidListDir, 0777, true);
     }
 
+    if (! is_array($applicationConfig['raid-graphics'])) {
+        continue;
+    }
+
     foreach ($applicationConfig['raid-graphics'] as $raidGraphicName => $raidGraphicConfig) {
+        assert(is_string($raidGraphicName));
         assert($raidGraphicConfig instanceof RaidBossGraphicConfig);
         $raidGraphic = $raidBossImageRenderer->buildGraphic(
             $raidBossesWithDifficulty,
@@ -273,6 +285,7 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $hashFiles = [
+    $apidir . 'maxbattles.json',
     $apidir . 'raidboss.json',
     $apidir . 'pokedex.json',
     $apidir . 'quests.json',
@@ -289,7 +302,7 @@ file_put_contents(
     __DIR__ . '/../public/version.css',
     <<<CSS
     #last-generated-display::before {
-        content: "$format (UTC)";
+        content: "{$format} (UTC)";
     }
     CSS,
 );

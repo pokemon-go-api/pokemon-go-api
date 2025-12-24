@@ -6,7 +6,7 @@ namespace PokemonGoApi\PogoAPI\Renderer;
 
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use PokemonGoApi\PogoAPI\Types\WeatherBoost;
@@ -51,7 +51,7 @@ final class RaidBossListRenderer
                 ),
             );
 
-            $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
+            $raidBossStats = $raidBossPokemon->getStats();
             $pokemonImage  = $raidBoss->getPokemonImage();
             $raidData      = [
                 'id'           => $raidBoss->getPokemon()->getId(),
@@ -108,7 +108,7 @@ final class RaidBossListRenderer
         foreach ($translationCollectionCollection->getCollections() as $translationName => $translationCollection) {
             $pokemonName = PokemonNameRenderer::renderPokemonName($raidBoss->getPokemon(), $translationCollection);
             $temporary   = $raidBoss->getTemporaryEvolution();
-            if ($temporary !== null) {
+            if ($temporary instanceof TemporaryEvolution) {
                 $pokemonName = PokemonNameRenderer::renderPokemonMegaName(
                     $raidBoss->getPokemon(),
                     $temporary->getId(),

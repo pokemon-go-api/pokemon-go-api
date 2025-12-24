@@ -18,7 +18,7 @@ use function count;
 #[CoversClass(TypeWeatherCalculator::class)]
 #[UsesClass(PokemonType::class)]
 #[UsesClass(WeatherBoost::class)]
-class TypeWeatherCalculatorTest extends TestCase
+final class TypeWeatherCalculatorTest extends TestCase
 {
     /** @param string[] $expectedWeather */
     #[DataProvider('weatherTypesDataProvider')]

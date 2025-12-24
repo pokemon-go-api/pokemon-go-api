@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Renderer;
 
-use PokemonGoApi\PogoAPI\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
+use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardMegaEnergy;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardPokemon;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchTask;
@@ -43,7 +44,7 @@ final readonly class ResearchTasksRenderer
             foreach ($researchTask->getRewards() as $reward) {
                 if ($reward instanceof ResearchRewardMegaEnergy) {
                     $pokemon = $this->pokemonCollection->getByFormId($reward->getPokemonFormId());
-                    if ($pokemon === null) {
+                    if (! $pokemon instanceof Pokemon) {
                         continue;
                     }
 
@@ -55,11 +56,11 @@ final readonly class ResearchTasksRenderer
                     ];
                 } elseif ($reward instanceof ResearchRewardPokemon) {
                     $pokemon = $this->pokemonCollection->getByFormId($reward->getPokemonFormId());
-                    if ($pokemon === null) {
+                    if (! $pokemon instanceof Pokemon) {
                         continue;
                     }
 
-                    $pokemonStats = $pokemon->getStats() ?? new PokemonStats(0, 0, 0);
+                    $pokemonStats = $pokemon->getStats();
 
                     $pokemonImage = $pokemon->getPokemonImage();
                     $rewards[]    = [
@@ -71,7 +72,7 @@ final readonly class ResearchTasksRenderer
                             CpCalculator::calculateQuestMinCp($pokemonStats),
                             CpCalculator::calculateQuestMaxCp($pokemonStats),
                         ],
-                        'assets'  => $pokemonImage ? [
+                        'assets'  => $pokemonImage instanceof PokemonImage ? [
                             'image'      => $pokemonImage->buildUrl(false),
                             'shinyImage' => $pokemonImage->buildUrl(true),
                         ] : null,

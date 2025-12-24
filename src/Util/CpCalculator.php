@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\Util;
 
 use Exception;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 
 use function floor;
 
@@ -13,16 +13,21 @@ class CpCalculator
 {
     // source https://gamepress.gg/pokemongo/cp-multiplier
     private const float CPM_LEVEL_15 = 0.51739395;
+
     private const float CPM_LEVEL_20 = 0.5974;
+
     private const float CPM_LEVEL_25 = 0.667934;
-    private const array CMP_MAP      = [
+
+    private const array CMP_MAP = [
         self::LEVEL_15 => self::CPM_LEVEL_15,
         self::LEVEL_20 => self::CPM_LEVEL_20,
         self::LEVEL_25 => self::CPM_LEVEL_25,
     ];
 
     public const LEVEL_15 = 15;
+
     public const LEVEL_20 = 20;
+
     public const LEVEL_25 = 25;
 
     public static function calculateMinCpForLevel(PokemonStats $stats, int $level): int

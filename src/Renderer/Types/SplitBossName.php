@@ -13,7 +13,9 @@ use function strlen;
 class SplitBossName
 {
     private readonly string $firstLine;
+
     private readonly string|null $secondLine;
+
     private readonly bool $isFirstLineSmall;
 
     public function __construct(private readonly string $fullName, int $splitByChars = 10)

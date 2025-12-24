@@ -22,6 +22,9 @@
       "name": "Raid"
     },
     {
+      "name": "Max Battle"
+    },
+    {
       "name": "Utils"
     },
     {
@@ -346,6 +349,76 @@
         }
       }
     },
+    "/api/maxbattles.json": {
+      "get": {
+        "operationId": "get-api-maxbattles.json",
+        "summary": "Receive the current max battles",
+        "description": "Return the list of the current available Max Battles. The datasource is [snacknap.com](https://snacknap.com)",
+        "tags": [
+          "Max Battle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "currentList": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "tier_1": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_2": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_3": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_4": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_5": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_6": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "currentList"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/hashes.json": {
       "get": {
         "operationId": "get-api-hashes.json",
@@ -366,12 +439,18 @@
                     "sha512": {
                       "type": "object",
                       "required": [
+                        "maxbattles.json",
                         "raidboss.json",
                         "pokedex.json",
                         "quests.json"
                       ],
                       "additionalProperties": false,
                       "properties": {
+                        "maxbattles.json": {
+                          "type": "string",
+                          "minLength": 128,
+                          "maxLength": 128
+                        },
                         "raidboss.json": {
                           "type": "string",
                           "minLength": 128,
@@ -1022,6 +1101,7 @@
           "stats",
           "primaryType",
           "secondaryType",
+          "energyCost",
           "assets"
         ],
         "additionalProperties": false,
@@ -1046,6 +1126,9 @@
               }
             ],
             "nullable": true
+          },
+          "energyCost": {
+            "type": "integer"
           },
           "assets": {
             "$ref": "#/components/schemas/Assets"
@@ -1170,6 +1253,51 @@
           "cpRangeBoost",
           "names",
           "battleResult"
+        ]
+      },
+      "MaxBattle": {
+        "description": "MaxBattle Pokemon",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "assets": {
+            "$ref": "#/components/schemas/Assets"
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "shiny": {
+            "type": "boolean"
+          },
+          "types": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "cpRange": {
+            "$ref": "#/components/schemas/CpRange"
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          }
+        },
+        "required": [
+          "id",
+          "assets",
+          "level",
+          "shiny",
+          "types",
+          "cpRange",
+          "names"
         ]
       },
       "BattleResult": {

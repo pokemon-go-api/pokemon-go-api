@@ -16,7 +16,7 @@ use function json_decode;
 
 /** phpcs:disable Generic.Files.LineLength.TooLong */
 #[CoversNothing]
-class PokemonFormRenderingTest extends TestCase
+final class PokemonFormRenderingTest extends TestCase
 {
     /** @param array<string, mixed[]> $expected */
     #[DataProvider('specialPokemonDataProvider')]
@@ -30,7 +30,7 @@ class PokemonFormRenderingTest extends TestCase
         $this->validateSubset($expected, $pokedexEntry);
     }
 
-    /** @return array<string, mixed[]> */
+    /** @return iterable<string, mixed[]> */
     public static function specialPokemonDataProvider(): iterable
     {
         yield 'charizard' => [
@@ -61,12 +61,11 @@ class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'PIKACHU',
                 'formId'      => 'PIKACHU',
-                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm25.icon.png'],
-                'regionForms' => [
-                    'PIKACHU_FLYING_5TH_ANNIV' => [],
-                    'PIKACHU_KARIYUSHI'        => [],
-                    'PIKACHU_POP_STAR'         => [],
-                    'PIKACHU_ROCK_STAR'        => [],
+                'assets'      => [
+                    'image' => GithubLoader::ASSETS_BASE_URL . 'pm25.icon.png',
+                ],
+                'assetForms' => [
+                    ['costume' => 'ANNIVERSARY'],
                 ],
             ],
         ];
@@ -166,9 +165,9 @@ class PokemonFormRenderingTest extends TestCase
     }
 
     /**
-     * @param array<string, mixed> $expected
-     * @param array<string, mixed> $current
-     * @param array<string>        $keyChain
+     * @param array<mixed>  $expected
+     * @param array<mixed>  $current
+     * @param array<string> $keyChain
      */
     private function validateSubset(array $expected, array $current, array $keyChain = []): void
     {

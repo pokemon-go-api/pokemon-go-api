@@ -12,7 +12,7 @@ use PokemonGoApi\PogoAPI\Parser\TranslationParser;
 use function count;
 
 #[CoversClass(CustomTranslations::class)]
-class CustomTranslationsTest extends TestCase
+final class CustomTranslationsTest extends TestCase
 {
     public function testLoad(): void
     {

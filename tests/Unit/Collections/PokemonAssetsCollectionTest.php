@@ -12,7 +12,7 @@ use PokemonGoApi\PogoAPI\Types\PokemonImage;
 
 #[CoversClass(PokemonAssetsCollection::class)]
 #[UsesClass(PokemonImage::class)]
-class PokemonAssetsCollectionTest extends TestCase
+final class PokemonAssetsCollectionTest extends TestCase
 {
     public function testCollection(): void
     {

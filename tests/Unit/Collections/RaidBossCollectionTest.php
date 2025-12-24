@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use PokemonGoApi\PogoAPI\Types\RaidLevel;
@@ -17,7 +17,7 @@ use PokemonGoApi\PogoAPI\Types\RaidLevel;
 #[UsesClass(PokemonType::class)]
 #[UsesClass(Pokemon::class)]
 #[UsesClass(RaidBoss::class)]
-class RaidBossCollectionTest extends TestCase
+final class RaidBossCollectionTest extends TestCase
 {
     public function testCollection(): void
     {
@@ -44,7 +44,7 @@ class RaidBossCollectionTest extends TestCase
         $this->assertSame($raidBoss, $collection->getById($raidBossId));
         $this->assertTrue($collection->has($raidBoss));
 
-        $this->assertNull($collection->getById('NOT_EXISTINGS'));
+        $this->assertNotInstanceOf(RaidBoss::class, $collection->getById('NOT_EXISTINGS'));
 
         $collection->remove($raidBossId);
         $this->assertFalse($collection->has($raidBoss));

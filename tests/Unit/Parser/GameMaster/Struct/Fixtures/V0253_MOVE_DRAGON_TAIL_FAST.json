@@ -1,0 +1,21 @@
+{
+  "templateId": "V0253_MOVE_DRAGON_TAIL_FAST",
+  "data": {
+    "templateId": "V0253_MOVE_DRAGON_TAIL_FAST",
+    "moveSettings": {
+      "movementId": "DRAGON_TAIL_FAST",
+      "animationId": 4,
+      "pokemonType": "POKEMON_TYPE_DRAGON",
+      "power": 15.0,
+      "accuracyChance": 1.0,
+      "staminaLossScalar": 0.01,
+      "trainerLevelMin": 1,
+      "trainerLevelMax": 100,
+      "vfxName": "dragon_tail_fast",
+      "durationMs": 1100,
+      "damageWindowStartMs": 850,
+      "damageWindowEndMs": 1050,
+      "energyDelta": 9
+    }
+  }
+}

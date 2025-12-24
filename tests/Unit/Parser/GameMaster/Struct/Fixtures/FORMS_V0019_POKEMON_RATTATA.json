@@ -1,0 +1,24 @@
+{
+  "templateId": "FORMS_V0019_POKEMON_RATTATA",
+  "data": {
+    "templateId": "FORMS_V0019_POKEMON_RATTATA",
+    "formSettings": {
+      "pokemon": "RATTATA",
+      "forms": [
+        {
+          "form": "RATTATA_NORMAL"
+        },
+        {
+          "form": "RATTATA_ALOLA",
+          "assetBundleValue": 61
+        },
+        {
+          "form": "RATTATA_SHADOW"
+        },
+        {
+          "form": "RATTATA_PURIFIED"
+        }
+      ]
+    }
+  }
+}

@@ -53,5 +53,11 @@ automatically add the Size into the svg Image as an comment and parse it in the 
 This repo is for educational use only. All available information found within this repo is the property of The Pokemon Company and Niantic. All copyright belongs to the respective companies. Please respect the original source material.
 
 ## Source
-This repository uses the latest Game Master files for Pokemon GO from https://github.com/PokeMiners/
-Any resources linked from the API are linked directly to the assets repository from the PokeMiners https://github.com/PokeMiners/pogo_assets
+This repository uses different external systems to collect all necessary information to provide this API.
+Thanks to the third parties that provide the data
+- Latest GameMaster Version: https://github.com/alexelgt/game_masters
+- Translation Files: https://github.com/sora10pls/holoholo-text/
+- Linked Images: https://github.com/RetroJohn86/PoGo-Unpacked-DL-Assets
+- Current List of the RaidBoss: https://leekduck.com/boss/
+- Current List of the MaxBattles: https://www.snacknap.com/max-battles
+- Calculations for the RaidBoss Difficulty: https://www.pokebattler.com/

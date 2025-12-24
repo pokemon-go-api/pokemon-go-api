@@ -7,12 +7,12 @@ namespace Tests\Unit\PokemonGoApi\PogoAPI\Util;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
-use PokemonGoApi\PogoAPI\Types\PokemonStats;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 use PokemonGoApi\PogoAPI\Util\CpCalculator;
 
 #[CoversClass(CpCalculator::class)]
 #[UsesClass(PokemonStats::class)]
-class CpCalculatorTest extends TestCase
+final class CpCalculatorTest extends TestCase
 {
     public function testCalculateRaidMaxLevelCp(): void
     {

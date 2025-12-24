@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
+
 use function array_values;
 
 final class RaidBoss
@@ -22,7 +25,7 @@ final class RaidBoss
 
     public function getPokemonWithMegaFormId(): string
     {
-        if ($this->temporaryEvolution !== null) {
+        if ($this->temporaryEvolution instanceof TemporaryEvolution) {
             return $this->temporaryEvolution->getId();
         }
 
