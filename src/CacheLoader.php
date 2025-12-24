@@ -111,7 +111,7 @@ class CacheLoader
         $cacheFile = $this->getCacheDir() . 'pokemon_images.json';
         $cacheKey  = 'github/pokemon_images';
 
-        if ($this->wasRunningInThePastMinutes()) {
+        if ($this->wasRunningInThePastMinutes() && file_exists($cacheFile)) {
             return $cacheFile;
         }
 
@@ -120,18 +120,18 @@ class CacheLoader
             $existingHash = sha1_file('data/tmp/git-assets/.git/packed-refs');
         }
 
-        if ($existingHash === ($this->cachedData[$cacheKey] ?? null)) {
+        if ($existingHash === ($this->cachedData[$cacheKey] ?? null) && file_exists($cacheFile)) {
             return $cacheFile;
         }
 
         $cacheFileContent = $this->githubLoader->getImageList();
+        file_put_contents($cacheFile, json_encode($cacheFileContent));
 
         if (file_exists('data/tmp/git-assets/.git/packed-refs')) {
             $existingHash = sha1_file('data/tmp/git-assets/.git/packed-refs');
         }
 
         $this->cachedData[$cacheKey] = $existingHash;
-        file_put_contents($cacheFile, json_encode($cacheFileContent));
 
         $this->logger->debug(
             sprintf(

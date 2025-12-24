@@ -10,6 +10,7 @@ use PokemonGoApi\PogoAPI\Parser\JsonMapper;
 use function array_map;
 use function basename;
 use function explode;
+use function realpath;
 use function shell_exec;
 use function sprintf;
 
@@ -105,12 +106,11 @@ class GithubLoader
     /** @return list<string> */
     public function getImageList(): array
     {
-        shell_exec('rm -rf data/tmp/git-assets && mkdir data/tmp/git-assets');
+        $baseDir = realpath(__DIR__ . '/../../') ?: '.';
+        shell_exec('rm -rf ' . $baseDir . '/data/tmp/git-assets && mkdir ' . $baseDir . '/data/tmp/git-assets');
         //phpcs:ignore Generic.Files.LineLength.TooLong
-        shell_exec('git clone -q --filter=blob:none --no-checkout https://github.com/RetroJohn86/PoGo-Unpacked-DL-Assets.git data/tmp/git-assets');
-        $files = shell_exec(<<<'SHELL'
-        git --git-dir data/tmp/git-assets/.git ls-tree --name-only HEAD 'Sprite/pm and portraits/'
-        SHELL);
+        shell_exec('git clone -q --filter=blob:none --no-checkout https://github.com/RetroJohn86/PoGo-Unpacked-DL-Assets.git ' . $baseDir . '/data/tmp/git-assets');
+        $files = shell_exec('git --git-dir ' . $baseDir . '/data/tmp/git-assets/.git ls-tree --name-only HEAD "Sprite/pm and portraits/"');
 
         $allFiles = explode("\n", (string) $files);
 
