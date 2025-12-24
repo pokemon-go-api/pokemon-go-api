@@ -84,7 +84,7 @@ final class CacheLoaderTest extends TestCase
 
         $sut = new CacheLoader(
             $remoteFileLoaderMock,
-            $this->createMock(GithubLoader::class),
+            $this->createStub(GithubLoader::class),
             $clock,
             $this->cacheDir,
             new NoopLogger(),

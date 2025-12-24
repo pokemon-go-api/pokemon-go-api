@@ -26,16 +26,6 @@ final class MaxBattleCollection
         $this->storage[$this->createIdKey($maxBattle)] = $maxBattle;
     }
 
-    /** @internal */
-    public function getById(string $id): MaxBattle|null
-    {
-        if (! array_key_exists($id, $this->storage)) {
-            return null;
-        }
-
-        return $this->storage[$id];
-    }
-
     public function get(MaxBattle $maxBattle): MaxBattle|null
     {
         if (! $this->has($maxBattle)) {
@@ -65,17 +55,12 @@ final class MaxBattleCollection
         uasort(
             $this->storage,
             static function (MaxBattle $a, MaxBattle $b): int {
-                $lvlSort = $b->maxBattleLevel->value <=> $a->maxBattleLevel->value;
+                $lvlSort = $a->maxBattleLevel->value <=> $b->maxBattleLevel->value;
                 if ($lvlSort !== 0) {
                     return $lvlSort;
                 }
 
-                $sortByDex = $a->pokemon->getDexNr() <=> $b->pokemon->getDexNr();
-                if ($sortByDex !== 0) {
-                    return $sortByDex;
-                }
-
-                return 0;
+                return $a->pokemon->getDexNr() <=> $b->pokemon->getDexNr();
             },
         );
 

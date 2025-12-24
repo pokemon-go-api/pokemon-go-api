@@ -50,10 +50,10 @@ final class SnacknapParserTest extends TestCase
             $parsedBosses,
         );
         $expected     = [
-            ['dexNr' => 12, 'level' => 6, 'shiny' => true],
-            ['dexNr' => 1, 'level' => 2, 'shiny' => true],
             ['dexNr' => 1, 'level' => 1, 'shiny' => true],
             ['dexNr' => 813, 'level' => 1, 'shiny' => false],
+            ['dexNr' => 1, 'level' => 2, 'shiny' => true],
+            ['dexNr' => 12, 'level' => 6, 'shiny' => true],
         ];
 
         $this->assertSame($expected, $simpleResult);

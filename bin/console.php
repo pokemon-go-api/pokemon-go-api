@@ -14,6 +14,7 @@ use PokemonGoApi\PogoAPI\Parser\PokebattlerParser;
 use PokemonGoApi\PogoAPI\Parser\PokemonGoImagesParser;
 use PokemonGoApi\PogoAPI\Parser\SnacknapParser;
 use PokemonGoApi\PogoAPI\Parser\TranslationParser;
+use PokemonGoApi\PogoAPI\Renderer\MaxBattleListRenderer;
 use PokemonGoApi\PogoAPI\Renderer\PokemonRenderer;
 use PokemonGoApi\PogoAPI\Renderer\RaidBossGraphicRenderer;
 use PokemonGoApi\PogoAPI\Renderer\RaidBossListRenderer;
@@ -187,14 +188,20 @@ foreach ($files as $file => $data) {
     file_put_contents($apidir . $file . '.json', json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 }
 
+$logger->debug('Generate MaxBattles');
+$maxBattleHtmlList     = $cacheLoader->fetchMaxBattlesFromSnacknap();
+$snacknapParser        = new SnacknapParser($masterData->getPokemonCollection());
+$maxBattles            = $snacknapParser->parseMaxBattle($maxBattleHtmlList);
+$maxBattleListRenderer = new MaxBattleListRenderer();
+
+file_put_contents($apidir . 'maxbattles.json', json_encode([
+    'currentList' => $maxBattleListRenderer->buildList($maxBattles, $translations),
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+
 $logger->debug('Generate Raidbosses');
 $raidBossHtmlList = $cacheLoader->fetchRaidBossesFromLeekduck();
 $leekduckParser   = new LeekduckParser($masterData->getPokemonCollection());
 $raidBosses       = $leekduckParser->parseRaidBosses($raidBossHtmlList);
-
-$maxBattleHtmlList = $cacheLoader->fetchMaxBattlesFromSnacknap();
-$snacknapParser    = new SnacknapParser($masterData->getPokemonCollection());
-$maxBattles        = $snacknapParser->parseMaxBattle($maxBattleHtmlList);
 
 $logger->debug(
     sprintf('Got %d remote raid bosses', count($raidBosses->toArray())),
@@ -278,6 +285,7 @@ file_put_contents($apidir . 'raidboss.json', json_encode([
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $hashFiles = [
+    $apidir . 'maxbattles.json',
     $apidir . 'raidboss.json',
     $apidir . 'pokedex.json',
     $apidir . 'quests.json',
