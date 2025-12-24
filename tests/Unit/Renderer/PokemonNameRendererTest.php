@@ -9,9 +9,10 @@ use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Renderer\PokemonNameRenderer;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
@@ -26,7 +27,7 @@ final class PokemonNameRendererTest extends TestCase
 {
     public function testRenderPokemonName(): void
     {
-        $pokemon               = new Pokemon(1, 'test', 'normal', PokemonType::none(), null);
+        $pokemon               = new Pokemon(1, 'test', 'normal', PokemonType::none(), PokemonType::none());
         $translationCollection = new TranslationCollection('dummylanguage');
         $translationCollection->addPokemonName(1, 'Testpokemon');
         $translationCollection->addRegionalForm(CustomTranslations::REGIONFORM_ALOLAN, '(ALOLA)-%s');
@@ -38,7 +39,7 @@ final class PokemonNameRendererTest extends TestCase
         );
 
         $pokemon = $pokemon->withPokemonForm(
-            new PokemonForm('dummy', 'ALOLA', 1, null),
+            new PokemonForm('dummy', 'ALOLA', false, 1, null),
         );
         $this->assertSame(
             '(ALOLA)-Testpokemon',
@@ -46,7 +47,7 @@ final class PokemonNameRendererTest extends TestCase
         );
 
         $pokemon = $pokemon->withPokemonForm(
-            new PokemonForm('dummy', 'GALARIAN', 1, null),
+            new PokemonForm('dummy', 'GALARIAN', false, 1, null),
         );
         $this->assertSame(
             'Testpokemon-(GALAR)',
@@ -56,7 +57,7 @@ final class PokemonNameRendererTest extends TestCase
 
     public function testRenderPokemonNameWithForm(): void
     {
-        $pokemon               = new Pokemon(1, 'DEOXYS', 'DEOXYS', PokemonType::none(), null);
+        $pokemon               = new Pokemon(1, 'DEOXYS', 'DEOXYS', PokemonType::none(), PokemonType::none());
         $translationCollection = new TranslationCollection('dummylanguage');
         $translationCollection->addPokemonName(1, 'Testpokemon');
         $translationCollection->addPokemonFormName('attack', 'Angriffsform');
@@ -66,25 +67,25 @@ final class PokemonNameRendererTest extends TestCase
 
         $this->assertSame('Testpokemon', PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection));
 
-        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_NORMAL', PokemonType::none(), null);
+        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_NORMAL', PokemonType::none(), PokemonType::none());
         $this->assertSame(
             'Testpokemon (Normalform)',
             PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
-        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_ATTACK', PokemonType::none(), null);
+        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_ATTACK', PokemonType::none(), PokemonType::none());
         $this->assertSame(
             'Testpokemon (Angriffsform)',
             PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
-        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_DEFENSE', PokemonType::none(), null);
+        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_DEFENSE', PokemonType::none(), PokemonType::none());
         $this->assertSame(
             'Testpokemon (Verteidgungsf.)',
             PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
         );
 
-        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_SPEED', PokemonType::none(), null);
+        $pokemon = new Pokemon(1, 'DEOXYS', 'DEOXYS_SPEED', PokemonType::none(), PokemonType::none());
         $this->assertSame(
             'Testpokemon (Initiativeform)',
             PokemonNameRenderer::renderPokemonName($pokemon, $translationCollection),
@@ -93,10 +94,10 @@ final class PokemonNameRendererTest extends TestCase
 
     public function testRenderPokemonMegaName(): void
     {
-        $pokemon = new Pokemon(1, 'CHARIZARD', 'CHARIZARD', PokemonType::none(), null);
+        $pokemon = new Pokemon(1, 'CHARIZARD', 'CHARIZARD', PokemonType::none(), PokemonType::none());
         $pokemon = $pokemon->withAddedTemporaryEvolutions(
-            new TemporaryEvolution('MEGA_X', PokemonType::none(), null),
-            new TemporaryEvolution('MEGA_Y', PokemonType::none(), null),
+            new TemporaryEvolution('MEGA_X', new PokemonStats(0, 0, 0), PokemonType::none(), PokemonType::none()),
+            new TemporaryEvolution('MEGA_Y', new PokemonStats(0, 0, 0), PokemonType::none(), PokemonType::none()),
         );
 
         $translationCollection = new TranslationCollection('dummylanguage');

@@ -4,38 +4,43 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
+use CuyZ\Valinor\Mapper\Object\Constructor;
+
 final class EvolutionBranch
 {
-    private string $evolutionId;
-
-    private string $evolutionFormId;
-
-    private int $candyCost;
-
-    private string|int|null $requiredItem = null;
-
-    /** @var list<string> */
-    private array $questIds = [];
+    public function __construct(
+        private string $evolutionId,
+        private string $evolutionFormId,
+        private int $candyCost,
+        private string|null $requiredItem,
+        /** @var list<string> */
+        private array $questIds = [],
+    ) {
+    }
 
     /** @param list<array{questRequirementTemplateId: string}> $questDisplay */
-    public function __construct(
+    #[Constructor]
+    public static function fromArray(
         string $evolution,
         int|null $candyCost,
         string|null $form,
         string|null $evolutionItemRequirement,
         array|null $questDisplay,
-    ) {
-        $this->evolutionId     = $evolution;
-        $this->evolutionFormId = $form ?? $evolution;
-        $this->candyCost       = $candyCost ?? 0;
-        $this->requiredItem    = $evolutionItemRequirement ?? null;
-        if ($questDisplay === null) {
-            return;
+    ): self {
+        $questIds = [];
+        if ($questDisplay !== null) {
+            foreach ($questDisplay as $questDisplayItem) {
+                $questIds[] = $questDisplayItem['questRequirementTemplateId'];
+            }
         }
 
-        foreach ($questDisplay as $questDisplayItem) {
-            $this->questIds[] = $questDisplayItem['questRequirementTemplateId'];
-        }
+        return new self(
+            $evolution,
+            $form ?? $evolution,
+            $candyCost ?? 0,
+            $evolutionItemRequirement ?? null,
+            $questIds,
+        );
     }
 
     public function getEvolutionId(): string
@@ -53,7 +58,7 @@ final class EvolutionBranch
         return $this->candyCost;
     }
 
-    public function getRequiredItem(): string|int|null
+    public function getRequiredItem(): string|null
     {
         return $this->requiredItem;
     }

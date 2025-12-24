@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
+use PokemonGoApi\PogoAPI\Parser\JsonMapper;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function file_get_contents;
@@ -23,8 +24,7 @@ final class PokemonMoveTest extends TestCase
     {
         $gameMaster  = file_get_contents(__DIR__ . '/Fixtures/V0021_MOVE_FLAME_WHEEL.json') ?: '{}';
         $pokemonData = JsonParser::decodeGameMasterFileData($gameMaster);
-
-        $move = PokemonMove::createFromGameMaster($pokemonData);
+        $move        = JsonMapper::map(PokemonMove::class, $pokemonData);
         $this->assertSame(21, $move->getId());
         $this->assertSame('FLAME_WHEEL', $move->getName());
         $this->assertSame('POKEMON_TYPE_FIRE', $move->getPokemonType()->getGameMasterTypeName());
@@ -39,7 +39,7 @@ final class PokemonMoveTest extends TestCase
         $gameMaster  = file_get_contents(__DIR__ . '/Fixtures/V0253_MOVE_DRAGON_TAIL_FAST.json') ?: '{}';
         $pokemonData = JsonParser::decodeGameMasterFileData($gameMaster);
 
-        $move = PokemonMove::createFromGameMaster($pokemonData);
+        $move = JsonMapper::map(PokemonMove::class, $pokemonData);
         $this->assertSame(253, $move->getId());
         $this->assertSame('DRAGON_TAIL_FAST', $move->getName());
         $this->assertSame('POKEMON_TYPE_DRAGON', $move->getPokemonType()->getGameMasterTypeName());

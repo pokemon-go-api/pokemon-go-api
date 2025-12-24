@@ -65,7 +65,7 @@ final readonly class RenderingRaidBoss
 
     public function getRaidBossStats(): PokemonStats
     {
-        return $this->raidBoss->getPokemon()->getStats() ?? new PokemonStats(0, 0, 0);
+        return $this->raidBoss->getPokemon()->getStats();
     }
 
     /** @return array<int, int> */

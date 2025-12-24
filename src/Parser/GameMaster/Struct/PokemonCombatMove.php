@@ -4,42 +4,40 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
+use CuyZ\Valinor\Mapper\Object\Constructor;
 use Exception;
 
 use function preg_match;
 
 final readonly class PokemonCombatMove
 {
-    private int $moveId;
-    private float $power;
-    private float $energy;
-    private int $durationTurns;
-    private PokemonCombatMoveBuffs|null $buffs;
-
-    /**
-     * @param array{
-     *  templateId: string,
-     *  combatMove: array{
-     *     power?: float,
-     *     energyDelta?: int,
-     *     durationTurns?: int,
-     *     buffs?: PokemonCombatMoveBuffs|null
-     *   }
-     * } $data
-     */
     public function __construct(
-        array $data,
+        private int $moveId,
+        private float $power,
+        private float $energy,
+        private int $durationTurns,
+        private PokemonCombatMoveBuffs|null $buffs,
     ) {
+    }
+
+    /** @param array{ power?: float, energyDelta?: int, durationTurns?: int, buffs?: PokemonCombatMoveBuffs|null } $combatMove */
+    #[Constructor]
+    public static function fromArray(
+        string $templateId,
+        array $combatMove,
+    ): self {
         $moveParts = [];
-        if (! preg_match('~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $data['templateId'], $moveParts)) {
+        if (! preg_match('~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i', $templateId, $moveParts)) {
             throw new Exception('Given template id is invalid', 1766498635686);
         }
 
-        $this->moveId        = (int) $moveParts['MoveId'];
-        $this->power         = $data['combatMove']['power'] ?? 0;
-        $this->energy        = $data['combatMove']['energyDelta'] ?? 0;
-        $this->durationTurns = $data['combatMove']['durationTurns'] ?? 0;
-        $this->buffs         = $data['combatMove']['buffs'] ?? null;
+        return new self(
+            (int) $moveParts['MoveId'],
+            $combatMove['power'] ?? 0,
+            $combatMove['energyDelta'] ?? 0,
+            $combatMove['durationTurns'] ?? 0,
+            $combatMove['buffs'] ?? null,
+        );
     }
 
     public function getMoveId(): int

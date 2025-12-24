@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
+use CuyZ\Valinor\Mapper\Object\Constructor;
 use Exception;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
@@ -12,44 +13,40 @@ use function str_contains;
 
 final class PokemonMove
 {
-    private readonly int $id;
-    private readonly string $name;
-    private readonly PokemonType $pokemonType;
-    private readonly float $power;
-    private readonly float $energy;
-    private readonly float $durationMs;
-    private readonly bool $isFastMove;
-    private PokemonCombatMove|null $combatMove = null;
-
-    /**
-     * @param array{
-     *  templateId: string,
-     *  moveSettings: array{
-     *     movementId: string,
-     *     pokemonType: string,
-     *     power?: float,
-     *     energyDelta?: float,
-     *     durationMs: float
-     *   }
-     * } $data
-     */
     public function __construct(
-        array $data,
+        private readonly int $id,
+        private readonly string $name,
+        private readonly PokemonType $pokemonType,
+        private readonly float $power,
+        private readonly float $energy,
+        private readonly float $durationMs,
+        private readonly bool $isFastMove,
+        private PokemonCombatMove|null $combatMove = null,
     ) {
+    }
+
+    /** @param array{ movementId: string, pokemonType: string, power?: float, energyDelta?: float, durationMs: float } $moveSettings */
+    #[Constructor]
+    public static function fromArray(
+        string $templateId,
+        array $moveSettings,
+    ): self {
         $moveParts = [];
-        if (! preg_match('~^V(?<id>\d{4})_MOVE_(?<name>.*)$~i', $data['templateId'], $moveParts)) {
+        if (! preg_match('~^V(?<id>\d{4})_MOVE_(?<name>.*)$~i', $templateId, $moveParts)) {
             throw new Exception('Given template id is invalid', 1766492698655);
         }
 
-        $this->id          = (int) $moveParts['id'];
-        $this->name        = $data['moveSettings']['movementId'];
-        $this->pokemonType = PokemonType::createFromPokemonType(
-            $data['moveSettings']['pokemonType'],
+        return new self(
+            (int) $moveParts['id'],
+            $moveSettings['movementId'],
+            PokemonType::createFromPokemonType(
+                $moveSettings['pokemonType'],
+            ),
+            $moveSettings['power'] ?? 0,
+            $moveSettings['energyDelta'] ?? 0,
+            $moveSettings['durationMs'],
+            str_contains($moveSettings['movementId'], '_FAST'),
         );
-        $this->power       = $data['moveSettings']['power'] ?? 0;
-        $this->energy      = $data['moveSettings']['energyDelta'] ?? 0;
-        $this->durationMs  = $data['moveSettings']['durationMs'];
-        $this->isFastMove  = str_contains($this->name, '_FAST');
     }
 
     public function setCombatMove(PokemonCombatMove $combatMove): void

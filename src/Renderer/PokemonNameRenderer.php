@@ -7,7 +7,7 @@ namespace PokemonGoApi\PogoAPI\Renderer;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoApi\PogoAPI\Parser\CustomTranslations;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 
 use function array_shift;
@@ -91,9 +91,10 @@ class PokemonNameRenderer
         $megaNames            = $translationCollection->getPokemonMegaNames($pokemon->getDexNr());
 
         foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
-            $megaEvolutionName                                                            = array_shift($megaNames);
-            $megaNamesByPokemonId[$pokemon->getId() . '_' . $temporaryEvolution->getId()] = $megaEvolutionName;
-            $megaNamesByPokemonId[$temporaryEvolution->getId()]                           = $megaEvolutionName;
+            $megaEvolutionName                                                                   = array_shift($megaNames);
+            $megaNamesByPokemonId[$temporaryEvolution->getTempEvoId()]                           = $megaEvolutionName;
+            $megaNamesByPokemonId[$pokemon->getId() . '_' . $temporaryEvolution->getTempEvoId()] = $megaEvolutionName;
+            $megaNamesByPokemonId[$temporaryEvolution->getId()]                                  = $megaEvolutionName;
         }
 
         return $megaNamesByPokemonId[$megaEvolutionId] ?? null;

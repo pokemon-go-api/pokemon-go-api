@@ -13,16 +13,17 @@ use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\ItemsCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionQuest;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Item;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonForms;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolutionSettings;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
-use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use Psr\Log\LoggerInterface;
 use Throwable;
-use function count;
+
 use function file_get_contents;
+use function is_array;
+use function is_string;
 use function preg_match;
 use function str_contains;
 use function str_starts_with;
@@ -54,7 +55,7 @@ class MasterDataParser
             throw new Exception('file does not exists');
         }
 
-        /** @var list<array> $list */
+        /** @var list<array<mixed>> $list */
         $list                  = JsonParser::decodeToFullArray($fileContent);
         $this->itemsCollection = $this->parseItems($list);
 
@@ -65,7 +66,7 @@ class MasterDataParser
         $this->questsCollection  = $this->parseQuests($list);
 
         $this->addTemporaryEvolutions($list, $this->pokemonCollection);
-//        $this->addForms($list, $this->pokemonCollection);
+        $this->addForms($list, $this->pokemonCollection);
     }
 
     public function getAttacksCollection(): AttacksCollection
@@ -88,17 +89,21 @@ class MasterDataParser
         return $this->questsCollection;
     }
 
-    /** @param array<int, array> $list */
+    /** @param array<int, array<mixed>> $list */
     private function parseItems(array $list): ItemsCollection
     {
         $itemsCollection = new ItemsCollection();
         foreach ($list as $item) {
-            if (! str_starts_with($item['templateId'], 'ITEM_')) {
+            if (
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! str_starts_with($item['templateId'], 'ITEM_')
+            ) {
                 continue;
             }
 
             try {
-                $itemObj = GameMasterMapper::map(Item::class, $item);
+                $itemObj = JsonMapper::map(Item::class, $item);
             } catch (Throwable $e) {
                 $this->logger->warning('Failed to parse game master data: ' . $e->getMessage());
                 continue;
@@ -110,49 +115,72 @@ class MasterDataParser
         return $itemsCollection;
     }
 
-    /** @param array<int, array> $list */
+    /** @param list<array<mixed>> $list */
     private function parsePokemon(array $list): PokemonCollection
     {
         $pokemonCollection = new PokemonCollection();
         foreach ($list as $item) {
             $matches = [];
             if (
-                ! preg_match('~^v(?<DexNr>[0-9]{4})_POKEMON_.*~i', $item['templateId'], $matches)
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! isset($item['data'])
+                || ! is_array($item['data'])
+                || ! preg_match('~^v(?<DexNr>[0-9]{4})_POKEMON_.*~i', $item['templateId'], $matches)
                 || ! isset($item['data']['pokemonSettings'])
             ) {
                 continue;
             }
 
             try {
-                $pokemon = GameMasterMapper::map(Pokemon::class, $item['data']);
+                $pokemon = JsonMapper::map(Pokemon::class, $item['data']);
             } catch (Throwable $e) {
-                $this->logger->warning('Failed to parse game master data for '. $item['templateId'] .' : ' . $e->getMessage());
+                $this->logger->warning('Failed to parse game master data for ' . $item['templateId'] . ' : ' . $e->getMessage());
                 continue;
             }
-
-            $pokemonCollection->add($pokemon);
 
             $pokemon = $pokemon->withAddedImages(
                 $this->pokemonAssetsCollection->getImages($pokemon->getDexNr()),
             );
 
-            $pokemonCollection->add($pokemon);
+            if (
+                str_contains($pokemon->getFormId(), '_PURIFIED') ||
+                str_contains($pokemon->getFormId(), '_SHADOW') ||
+                str_contains($pokemon->getFormId(), '_NORMAL') ||
+                str_contains($pokemon->getFormId(), '_COPY') ||
+                preg_match('~_\d{4}$~', $pokemon->getFormId())
+            ) {
+                continue;
+            }
+
+            $basePokemon = $pokemonCollection->get($pokemon->getId());
+            if ($basePokemon instanceof Pokemon) {
+                $basePokemon = $basePokemon->withAddedPokemonRegionForm($pokemon);
+            }
+
+            $pokemonCollection->add($basePokemon ?? $pokemon);
         }
 
         return $pokemonCollection;
     }
 
-    /** @param list<array> $list */
+    /** @param list<array<mixed>> $list */
     private function parseMoves(array $list): AttacksCollection
     {
         $attacksCollection = new AttacksCollection();
         foreach ($list as $item) {
-            if (! preg_match('~^V\d{4}_MOVE~i', $item['templateId'])) {
+            if (
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! isset($item['data'])
+                || ! is_array($item['data'])
+                || ! preg_match('~^V\d{4}_MOVE~i', $item['templateId'])
+            ) {
                 continue;
             }
 
             try {
-                $itemObj = GameMasterMapper::map(PokemonMove::class, $item);
+                $itemObj = JsonMapper::map(PokemonMove::class, $item['data']);
             } catch (Throwable $e) {
                 $this->logger->warning('Failed to parse game master data: ' . $e->getMessage());
                 continue;
@@ -164,18 +192,24 @@ class MasterDataParser
         return $attacksCollection;
     }
 
-    /** @param list<array> $list */
+    /** @param list<array<mixed>> $list */
     private function parseQuests(array $list): QuestsCollection
     {
         $questsCollection = new QuestsCollection();
         foreach ($list as $item) {
             $matches = [];
-            if (! preg_match('~(?<Quest>.*)_EVOLUTION_QUEST$~i', $item['templateId'], $matches)) {
+            if (
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! isset($item['data'])
+                || ! is_array($item['data'])
+                || ! preg_match('~(?<Quest>.*)_EVOLUTION_QUEST$~i', $item['templateId'], $matches)
+            ) {
                 continue;
             }
 
             try {
-                $itemObj = GameMasterMapper::map(EvolutionQuest::class, $item['data']);
+                $itemObj = JsonMapper::map(EvolutionQuest::class, $item['data']);
             } catch (Throwable $e) {
                 $this->logger->warning('Failed to parse game master data: ' . $e->getMessage());
                 continue;
@@ -187,12 +221,16 @@ class MasterDataParser
         return $questsCollection;
     }
 
-    /** @param list<array> $list */
+    /** @param list<array<mixed>> $list */
     private function addCombatMoves(array $list, AttacksCollection $attacksCollection): void
     {
         foreach ($list as $item) {
             if (
-                ! preg_match(
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! isset($item['data'])
+                || ! is_array($item['data'])
+                || ! preg_match(
                     '~^COMBAT_V(?<MoveId>[0-9]{4})_MOVE_(?<MoveName>.*)$~i',
                     $item['templateId'],
                 )
@@ -201,7 +239,7 @@ class MasterDataParser
             }
 
             try {
-                $itemObj = GameMasterMapper::map(PokemonCombatMove::class, $item);
+                $itemObj = JsonMapper::map(PokemonCombatMove::class, $item['data']);
             } catch (Throwable $e) {
                 $this->logger->warning('Failed to parse game master data: ' . $e->getMessage());
                 continue;
@@ -212,13 +250,17 @@ class MasterDataParser
         }
     }
 
-    /** @param list<array> $list */
+    /** @param list<array<mixed>> $list */
     private function addTemporaryEvolutions(array $list, PokemonCollection $pokemonCollection): void
     {
         foreach ($list as $item) {
             $matches = [];
             if (
-                ! preg_match(
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! isset($item['data'])
+                || ! is_array($item['data'])
+                || ! preg_match(
                     '~^TEMPORARY_EVOLUTION_V(?<DexNr>[0-9]{4})_POKEMON_(.*)$~i',
                     $item['templateId'],
                     $matches,
@@ -228,7 +270,7 @@ class MasterDataParser
             }
 
             try {
-                $itemObj = GameMasterMapper::map(TemporaryEvolutionSettings::class, $item['data']);
+                $itemObj = JsonMapper::map(TemporaryEvolutionSettings::class, $item['data']);
             } catch (Throwable $e) {
                 $this->logger->warning('Failed to parse game master data: ' . $e->getMessage());
                 continue;
@@ -244,7 +286,6 @@ class MasterDataParser
             foreach ($temporaryEvolutions as $temporaryEvolution) {
                 $temporaryEvolutions[$temporaryEvolution->getTempEvoId()] = $temporaryEvolution;
             }
-            assert($itemObj instanceof TemporaryEvolutionSettings);
 
             foreach ($itemObj->evolutions as $temporaryEvolution) {
                 $temporaryEvolutionId = $temporaryEvolution['evoId'];
@@ -259,12 +300,18 @@ class MasterDataParser
         }
     }
 
-    /** @param list<array> $list */
+    /** @param list<array<mixed>> $list */
     private function addForms(array $list, PokemonCollection $pokemonCollection): void
     {
         foreach ($list as $item) {
             $matches = [];
-            if (! preg_match('~^FORMS_V(?<DexNr>\d{4})_POKEMON_(?<name>.*)$~i', $item['templateId'], $matches)) {
+            if (
+                ! isset($item['templateId'])
+                || ! is_string($item['templateId'])
+                || ! isset($item['data'])
+                || ! is_array($item['data'])
+                || ! preg_match('~^FORMS_V(?<DexNr>\d{4})_POKEMON_(?<name>.*)$~i', $item['templateId'], $matches)
+            ) {
                 continue;
             }
 
@@ -273,43 +320,37 @@ class MasterDataParser
             if (! $pokemon instanceof Pokemon) {
                 continue;
             }
-            
+
             try {
-                $itemObj = GameMasterMapper::map(PokemonForms::class, $item['data']);
-                assert($itemObj instanceof PokemonForms);
+                $itemObj = JsonMapper::map(PokemonForms::class, $item['data']);
             } catch (Throwable $e) {
                 $this->logger->warning('Failed to parse game master data: ' . $e->getMessage());
                 continue;
             }
 
-            $overwriteDefaultForms = [];
+            $pokemonForms = $itemObj->getPokemonForms();
+            if ($pokemonForms === []) {
+                continue;
+            }
 
-            foreach ($itemObj->getPokemonForms() as $pokemonForm) {
+            $pokemon->setForm($pokemonForms[0]);
+
+            foreach ($pokemonForms as $pokemonForm) {
                 foreach ($pokemon->getPokemonRegionForms() as $pokemonRegionForm) {
                     if ($pokemonRegionForm->getFormId() !== $pokemonForm->getId()) {
+                        continue;
+                    }
+
+                    if ($pokemonForm->isCostume()) {
+                        $pokemon->removeRegionForm($pokemonRegionForm);
                         continue;
                     }
 
                     $pokemonRegionForm = $pokemonRegionForm->withPokemonForm($pokemonForm);
                     $pokemon           = $pokemon->withAddedPokemonRegionForm($pokemonRegionForm);
                     $pokemonCollection->add($pokemon);
-
-                    if (
-                        $pokemon->getPokemonForm() instanceof PokemonForm
-                        || ! $pokemonRegionForm->isSameFormAsBasePokemon($pokemon)
-                    ) {
-                        continue;
-                    }
-
-                    $overwriteDefaultForms[] = $pokemonForm;
                 }
             }
-
-            if (count($overwriteDefaultForms) !== 1) {
-                continue;
-            }
-
-            $pokemon->overwriteDefaultPokemonForm($overwriteDefaultForms[0]);
         }
     }
 }

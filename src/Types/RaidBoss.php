@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Types;
 
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 
 use function array_values;

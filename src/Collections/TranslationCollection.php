@@ -88,6 +88,7 @@ final class TranslationCollection
         if ($translation === '') {
             return;
         }
+
         $this->pokemonFormNames[mb_strtoupper($formName)] = $translation;
     }
 
@@ -158,7 +159,7 @@ final class TranslationCollection
 
     public function getCustomTranslation(string $key): string|null
     {
-        return $this->customTranslations[$key];
+        return $this->customTranslations[$key] ?? null;
     }
 
     /** @return array<string, string> */

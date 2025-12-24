@@ -1,0 +1,47 @@
+{
+  "attackers": [
+    {
+      "pokemonId": "CHARIZARD_MEGA_X",
+      "byMove": [],
+      "cp": 41255,
+      "numSims": "681280",
+      "boss": "RAID_LEVEL_MEGA",
+      "randomMove": {
+        "move1": "RANDOM",
+        "move2": "RANDOM",
+        "defenders": [],
+        "total": {
+          "combatTime": 571516,
+          "numWins": 419,
+          "numLosses": 181,
+          "power": 1.5161454601172653,
+          "effectiveCombatTime": 2779401,
+          "potions": 264.7856666666666,
+          "overallRating": 0.38154534632649484,
+          "numSims": "86000",
+          "numResults": 6,
+          "effectiveDeaths": 29.592662565624767,
+          "tdo": 156.99241603244053,
+          "estimator": 1.7321919,
+          "tdi": 342.8895830962581
+        }
+      },
+      "stats": {
+        "attack": 15,
+        "defense": 15,
+        "stamina": 5510,
+        "level": "45",
+        "boss": "RAID_LEVEL_MEGA"
+      }
+    }
+  ],
+  "attackStrategy": "DEFENSE_RANDOM_MC",
+  "defenseStrategy": "CINEMATIC_ATTACK_WHEN_POSSIBLE",
+  "numSims": "751312",
+  "seed": "1606686000001",
+  "sortType": "ESTIMATOR",
+  "filterType": "RAID",
+  "filterValue": "CHARIZARD_MEGA_X",
+  "monteCarlo": "DEFENSE_RANDOM_MC",
+  "randomAssistants": -1
+}

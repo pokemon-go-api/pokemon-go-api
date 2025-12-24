@@ -6,7 +6,6 @@ namespace PokemonGoApi\PogoAPI\Renderer;
 
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
-use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
@@ -52,7 +51,7 @@ final class RaidBossListRenderer
                 ),
             );
 
-            $raidBossStats = $raidBossPokemon->getStats() ?: new PokemonStats(0, 0, 0);
+            $raidBossStats = $raidBossPokemon->getStats();
             $pokemonImage  = $raidBoss->getPokemonImage();
             $raidData      = [
                 'id'           => $raidBoss->getPokemon()->getId(),

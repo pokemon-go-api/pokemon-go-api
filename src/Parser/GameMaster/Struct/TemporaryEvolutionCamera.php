@@ -8,7 +8,7 @@ final class TemporaryEvolutionCamera
 {
     /** @param array{cylinderRadiusM?: float} $camera */
     public function __construct(
-        array $camera,
+        public readonly array $camera,
     ) {
     }
 }

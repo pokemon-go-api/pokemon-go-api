@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace PokemonGoApi\PogoAPI\IO;
 
 use PokemonGoApi\PogoAPI\IO\Struct\GithubFileResponse;
-use stdClass;
+use PokemonGoApi\PogoAPI\Parser\JsonMapper;
 
 use function array_map;
-use function assert;
 use function basename;
 use function explode;
 use function shell_exec;
@@ -62,16 +61,9 @@ class GithubLoader
                 $gameMasterConfig['repo'],
                 $gameMasterConfig['path'],
             ))->getContent() ?: '[]';
-            $gameMasterFile     = JsonParser::decodeToObject($gameMasterFileData);
-            assert($gameMasterFile instanceof stdClass);
+            $gameMasterFile     = JsonParser::decodeToArray($gameMasterFileData);
 
-            return new GithubFileResponse(
-                $gameMasterFile->name,
-                $gameMasterFile->path,
-                $gameMasterFile->sha,
-                //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-                $gameMasterFile->download_url,
-            );
+            return JsonMapper::map(GithubFileResponse::class, $gameMasterFile);
         }
     }
 
@@ -88,14 +80,8 @@ class GithubLoader
                     $textRepoConfig['repo'],
                     $remoteFile,
                 ))->getContent() ?: '[]';
-                $textFile                = JsonParser::decodeToObject($textFileData);
-                $remoteFiles[$fileAlias] = new GithubFileResponse(
-                    $textFile->name,
-                    $textFile->path,
-                    $textFile->sha,
-                    //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-                    $textFile->download_url,
-                );
+                $textFile                = JsonParser::decodeToArray($textFileData);
+                $remoteFiles[$fileAlias] = JsonMapper::map(GithubFileResponse::class, $textFile);
             }
 
             foreach ($textRepoConfig['filesApk'] as $fileAlias => $aplFile) {
@@ -105,14 +91,8 @@ class GithubLoader
                     $textRepoConfig['repo'],
                     $aplFile,
                 ))->getContent() ?: '[]';
-                $textFile             = JsonParser::decodeToObject($textFileData);
-                $apkFiles[$fileAlias] = new GithubFileResponse(
-                    $textFile->name,
-                    $textFile->path,
-                    $textFile->sha,
-                    //phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
-                    $textFile->download_url,
-                );
+                $textFile             = JsonParser::decodeToArray($textFileData);
+                $apkFiles[$fileAlias] = JsonMapper::map(GithubFileResponse::class, $textFile);
             }
         }
 

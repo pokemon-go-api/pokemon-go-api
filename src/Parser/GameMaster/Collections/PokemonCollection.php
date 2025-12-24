@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Collections;
 
-use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 
 use function array_key_exists;
 

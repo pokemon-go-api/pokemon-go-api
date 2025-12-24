@@ -12,15 +12,15 @@ use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\ItemsCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionBranch;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionQuest;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Item;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMoveBuffs;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
-use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolutionBranch;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 use PokemonGoApi\PogoAPI\Util\GenerationDeterminer;
+
 use function array_filter;
 use function array_map;
 
@@ -119,7 +119,7 @@ final readonly class PokemonRenderer
                     break;
                 }
             }
-            
+
             $pokemonImage = $pokemon->getPokemonImage($temporaryEvolution);
 
             $output[$temporaryEvolution->getId()] = [
@@ -171,7 +171,7 @@ final readonly class PokemonRenderer
     ): array {
         $out = [];
         foreach ($moves as $moveName) {
-            $attack = $attacksCollection->getByName((string) $moveName);
+            $attack = $attacksCollection->getByName($moveName);
             if (! $attack instanceof PokemonMove) {
                 continue;
             }
@@ -205,7 +205,7 @@ final readonly class PokemonRenderer
             }
 
             $out[$moveName] = [
-                'id'         => (string) $moveName,
+                'id'         => $moveName,
                 'power'      => $attack->getPower(),
                 'energy'     => $attack->getEnergy(),
                 'durationMs' => $attack->getDurationMs(),
@@ -223,24 +223,9 @@ final readonly class PokemonRenderer
     {
         $out = [];
         foreach ($this->assetsCollection->getImages($pokemon->getDexNr()) as $assetForm) {
-            foreach ($pokemon->getPokemonRegionForms() as $regionForm) {
-                if (
-                    $regionForm->getAssetBundleSuffix() === $assetForm->getAssetBundleSuffix()
-                    && $regionForm->getAssetsBundleId() === $assetForm->getAssetBundleValue()
-                ) {
-                    continue 2;
-                }
-            }
-
-            foreach ($pokemon->getTemporaryEvolutions() as $temporaryEvolution) {
-                if ($temporaryEvolution->getAssetsBundleId() === $assetForm->getAssetBundleValue()) {
-                    continue 2;
-                }
-            }
-
             $out[] = [
-                'form'       => empty($assetForm->getAssetBundleSuffix()) ? null : $assetForm->getAssetBundleSuffix(),
-                'costume'    => empty($assetForm->getCostume()) ? null : $assetForm->getCostume(),
+                'form'       => $assetForm->getForm(),
+                'costume'    => $assetForm->getCostume(),
                 'isFemale'   => $assetForm->isFemale(),
                 'image'      => $assetForm->buildUrl(false),
                 'shinyImage' => $assetForm->buildUrl(true),
@@ -258,11 +243,10 @@ final readonly class PokemonRenderer
     ): array {
         $out = [];
         foreach ($pokemon->getEvolutionsBranches() as $evolution) {
-            
-            if (!$evolution instanceof EvolutionBranch) {
+            if (! $evolution instanceof EvolutionBranch) {
                 continue;
             }
-            
+
             $requiredItem = $evolution->getRequiredItem();
             $item         = $this->itemsCollection->getByItemId($requiredItem ?? '');
 

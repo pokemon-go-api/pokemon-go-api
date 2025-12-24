@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\EvolutionBranch;
+use PokemonGoApi\PogoAPI\Parser\JsonMapper;
 
 use function json_decode;
 
@@ -15,7 +16,7 @@ final class EvolutionBranchTest extends TestCase
 {
     public function testCreateSlowking(): void
     {
-        $evolutionBranch = EvolutionBranch::createFromGameMaster(json_decode(<<<'JSON'
+        $evolutionBranch = JsonMapper::map(EvolutionBranch::class, json_decode(<<<'JSON'
         {
             "evolution": "SLOWKING",
             "evolutionItemRequirement": "ITEM_KINGS_ROCK",
@@ -23,7 +24,7 @@ final class EvolutionBranchTest extends TestCase
             "form": "SLOWKING_NORMAL",
             "obPurificationEvolutionCandyCost": 45
         }
-        JSON));
+        JSON, true));
 
         $this->assertSame('SLOWKING', $evolutionBranch->getEvolutionId());
         $this->assertSame('SLOWKING_NORMAL', $evolutionBranch->getEvolutionFormId());
@@ -34,7 +35,7 @@ final class EvolutionBranchTest extends TestCase
 
     public function testCreateSlowkingGalarian(): void
     {
-        $evolutionBranch = EvolutionBranch::createFromGameMaster(json_decode(<<<'JSON'
+        $evolutionBranch = JsonMapper::map(EvolutionBranch::class, json_decode(<<<'JSON'
         {
             "evolution": "SLOWKING",
             "candyCost": 50,
@@ -47,7 +48,7 @@ final class EvolutionBranchTest extends TestCase
             ],
             "obPurificationEvolutionCandyCost": 45
         }
-        JSON));
+        JSON, true));
 
         $this->assertSame('SLOWKING', $evolutionBranch->getEvolutionId());
         $this->assertSame('SLOWKING_GALARIAN', $evolutionBranch->getEvolutionFormId());

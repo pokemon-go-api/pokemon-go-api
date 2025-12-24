@@ -11,6 +11,7 @@ use PokemonGoApi\PogoAPI\Collections\PokemonAssetsCollection;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\AttacksCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMove;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonCombatMoveBuffs;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonForms;
@@ -18,9 +19,10 @@ use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonMove;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
 use PokemonGoApi\PogoAPI\Parser\MasterDataParser;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
+use Psr\Log\LoggerInterface;
+
 use function array_map;
 
 #[CoversClass(MasterDataParser::class)]
@@ -40,14 +42,14 @@ final class MasterDataParserTest extends TestCase
 {
     public function testConstruct(): void
     {
-        $sut = new MasterDataParser(new PokemonAssetsCollection());
+        $sut = new MasterDataParser(new PokemonAssetsCollection(), $this->createStub(LoggerInterface::class));
         $this->assertEmpty($sut->getAttacksCollection()->toArray());
         $this->assertEmpty($sut->getPokemonCollection()->toArray());
     }
 
     public function testParseFileWithPokemons(): void
     {
-        $sut = new MasterDataParser(new PokemonAssetsCollection());
+        $sut = new MasterDataParser(new PokemonAssetsCollection(), $this->createStub(LoggerInterface::class));
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $pokemons = $sut->getPokemonCollection()->toArray();
@@ -85,7 +87,7 @@ final class MasterDataParserTest extends TestCase
 
     public function testParseFileWithPokemonMoves(): void
     {
-        $sut = new MasterDataParser(new PokemonAssetsCollection());
+        $sut = new MasterDataParser(new PokemonAssetsCollection(), $this->createStub(LoggerInterface::class));
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $moves = $sut->getAttacksCollection()->toArray();
@@ -100,11 +102,12 @@ final class MasterDataParserTest extends TestCase
             false,
         );
         $move49->setCombatMove(new PokemonCombatMove(
+            49,
             90.0,
             -60.0,
             0,
             new PokemonCombatMoveBuffs(
-                30,
+                0.3,
                 null,
                 null,
                 null,
@@ -122,13 +125,13 @@ final class MasterDataParserTest extends TestCase
             700.0,
             true,
         );
-        $move203->setCombatMove(new PokemonCombatMove(5.0, 7.0, 1, null));
+        $move203->setCombatMove(new PokemonCombatMove(203, 5.0, 7.0, 1, null));
         $this->assertEquals($move203, $moves['m203']);
     }
 
     public function testParseFileWithTempoarayEvolutions(): void
     {
-        $sut = new MasterDataParser(new PokemonAssetsCollection());
+        $sut = new MasterDataParser(new PokemonAssetsCollection(), $this->createStub(LoggerInterface::class));
         $sut->parseFile(__DIR__ . '/Fixtures/GAME_MASTER_LATEST.json');
 
         $collection = $sut->getPokemonCollection()->toArray();

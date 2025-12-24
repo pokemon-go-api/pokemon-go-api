@@ -39,6 +39,7 @@ if (! is_array($envSpecificFiles)) {
     throw new Exception('Raid graphics settings should be an array');
 }
 
+/** @var array<string, mixed> $applicationConfig */
 $applicationConfig = array_merge_recursive(
     [
         'raid-graphics' => [],
@@ -230,7 +231,12 @@ foreach ($translations->getCollections() as $translationName => $translationColl
         @mkdir($raidListDir, 0777, true);
     }
 
+    if (! is_array($applicationConfig['raid-graphics'])) {
+        continue;
+    }
+
     foreach ($applicationConfig['raid-graphics'] as $raidGraphicName => $raidGraphicConfig) {
+        assert(is_string($raidGraphicName));
         assert($raidGraphicConfig instanceof RaidBossGraphicConfig);
         $raidGraphic = $raidBossImageRenderer->buildGraphic(
             $raidBossesWithDifficulty,

@@ -61,12 +61,11 @@ final class PokemonFormRenderingTest extends TestCase
             'expected' => [
                 'id'          => 'PIKACHU',
                 'formId'      => 'PIKACHU',
-                'assets'      => ['image' => GithubLoader::ASSETS_BASE_URL . 'pm25.icon.png'],
-                'regionForms' => [
-                    'PIKACHU_FLYING_5TH_ANNIV' => [],
-                    'PIKACHU_KARIYUSHI'        => [],
-                    'PIKACHU_POP_STAR'         => [],
-                    'PIKACHU_ROCK_STAR'        => [],
+                'assets'      => [
+                    'image' => GithubLoader::ASSETS_BASE_URL . 'pm25.icon.png',
+                ],
+                'assetForms' => [
+                    ['costume' => 'ANNIVERSARY'],
                 ],
             ],
         ];

@@ -6,8 +6,7 @@ namespace PokemonGoApi\PogoAPI\Renderer;
 
 use PokemonGoApi\PogoAPI\Collections\TranslationCollectionCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
-use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardMegaEnergy;
 use PokemonGoApi\PogoAPI\Types\ResearchTasks\ResearchRewardPokemon;
@@ -61,7 +60,7 @@ final readonly class ResearchTasksRenderer
                         continue;
                     }
 
-                    $pokemonStats = $pokemon->getStats() ?? new PokemonStats(0, 0, 0);
+                    $pokemonStats = $pokemon->getStats();
 
                     $pokemonImage = $pokemon->getPokemonImage();
                     $rewards[]    = [

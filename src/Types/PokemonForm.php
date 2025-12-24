@@ -11,7 +11,7 @@ final readonly class PokemonForm
         private string $formOnlyId,
         private bool $isCostume,
         private int|null $assetBundleValue,
-        private string|null $assetBundleSuffix,
+        private string|null $assetForm,
     ) {
     }
 
@@ -35,9 +35,9 @@ final readonly class PokemonForm
         return $this->assetBundleValue ?? 0;
     }
 
-    public function getAssetBundleSuffix(): string|null
+    public function getAssetForm(): string|null
     {
-        return $this->assetBundleSuffix;
+        return $this->assetForm;
     }
 
     public function isAlola(): bool

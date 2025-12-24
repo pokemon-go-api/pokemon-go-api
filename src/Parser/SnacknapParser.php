@@ -7,8 +7,10 @@ namespace PokemonGoApi\PogoAPI\Parser;
 use Dom\HTMLDocument;
 use PokemonGoApi\PogoAPI\Collections\MaxBattleCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Types\MaxBattle;
 use PokemonGoApi\PogoAPI\Types\MaxBattleLevel;
+use tidy;
 
 use function preg_match;
 
@@ -21,16 +23,18 @@ class SnacknapParser
     public function parseMaxBattle(string $htmlPage): MaxBattleCollection
     {
         $maxBattleCollection = new MaxBattleCollection();
-        $tidy = tidy_parse_file($htmlPage);
+        $tidy                = new tidy();
+        $tidy->parseFile($htmlPage);
         $tidy->cleanRepair();
-        $domDocument         = HTMLDocument::createFromString((string) $tidy);
 
-        $rows = $domDocument->getElementById('pokemon')->getElementsByClassName('row');
+        $domDocument = HTMLDocument::createFromString($tidy->value ?? '');
 
-        $tierLevel = null;
+        $rows = $domDocument->getElementById('pokemon')?->getElementsByClassName('row') ?? [];
+
+        $tierLevel = MaxBattleLevel::LEVEL_1;
         foreach ($rows as $row) {
-            if (preg_match('~Tier (?<tierLevel>\d)~', $row->textContent, $matches)) {
-                $tierLevel = MaxBattleLevel::tryFrom((int) $matches['tierLevel']);
+            if (preg_match('~Tier (?<tierLevel>\d)~', $row->textContent ?? '', $matches)) {
+                $tierLevel = MaxBattleLevel::from((int) $matches['tierLevel']);
                 continue;
             }
 
@@ -41,10 +45,17 @@ class SnacknapParser
                 }
 
                 $isShiny = $pokemonLink->getElementsByClassName('shiny')->count() === 1;
-                $href    = $pokemonLink->getAttribute('href');
-                preg_match('~(?<dexNr>\d+)$~', $href, $matches);
+                $href    = $pokemonLink->getAttribute('href') ?? '';
+                if (! preg_match('~(?<dexNr>\d+)$~', $href, $matches)) {
+                    continue;
+                }
+
                 $pokemonNumber = (int) $matches['dexNr'];
                 $pokemon       = $this->pokemonCollection->getByDexId($pokemonNumber);
+                if (! $pokemon instanceof Pokemon) {
+                    continue;
+                }
+
                 $maxBattleCollection->add(
                     new MaxBattle(
                         $pokemon,

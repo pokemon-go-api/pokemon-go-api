@@ -4,34 +4,29 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
-use stdClass;
+use CuyZ\Valinor\Mapper\Object\Constructor;
 
 final class EvolutionQuest
 {
-    private string $questId;
+    /** @param array{ questTemplateId: string, questType: string, goals: list<array{target: int}>, display: array{title: string} } $evolutionQuestTemplate */
+    #[Constructor]
+    public static function fromArray(
+        array $evolutionQuestTemplate,
+    ): self {
+        return new self(
+            $evolutionQuestTemplate['questTemplateId'],
+            $evolutionQuestTemplate['questType'],
+            $evolutionQuestTemplate['goals'][0]['target'] ?? 0,
+            $evolutionQuestTemplate['display']['title'],
+        );
+    }
 
-    private string $questType;
-
-    private int $goalTarget;
-
-    private string $goalTranslationId;
-
-    /**
-     * @param array{
-     *     questTemplateId: string,
-     *     questType: string,
-     *     goals: list<array{target: int}>,
-     *     display: array{title: string}
-     * } $evolutionQuestTemplate
-     */
     public function __construct(
-        array $evolutionQuestTemplate
-    )
-    {
-        $this->questId = $evolutionQuestTemplate['questTemplateId'];
-        $this->questType = $evolutionQuestTemplate['questType'];
-        $this->goalTarget = $evolutionQuestTemplate['goals'][0]['target'] ?? 0;
-        $this->goalTranslationId = $evolutionQuestTemplate['display']['title'];
+        private string $questId,
+        private string $questType,
+        private int $goalTarget,
+        private string $goalTranslationId,
+    ) {
     }
 
     public function getQuestId(): string

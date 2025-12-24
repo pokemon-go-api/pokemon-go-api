@@ -15,9 +15,8 @@ final readonly class PokemonImage
     private function __construct(
         private string $imageName,
         private int $dexNr,
-        private int|null $assetBundleValue,
         private bool $isShiny,
-        private string|null $assetBundleSuffix,
+        private string|null $form,
         private string|null $costume,
         private bool $isFemale,
     ) {
@@ -29,8 +28,8 @@ final readonly class PokemonImage
         $result  = preg_match(
             <<<'REGEX'
                 ~/?pm(?<dexNr>\d{1,4})
-                (\.f(?<form>[^\.]*))?
-                (\.c(?<costume>[^\.]*))?
+                (\.f(?<form>[^\.]+))?
+                (\.c(?<costume>[^\.]+))?
                 (?<gender>\.g2)?
                 (?<isShiny>\.s)?
                 \.icon\.png~x
@@ -46,10 +45,9 @@ final readonly class PokemonImage
         return new self(
             $matches[0],
             (int) ($matches['dexNr']),
-            null,
             ($matches['isShiny'] ?? '') !== '',
-            $matches['form'] ?? null,
-            $matches['costume'] ?? null,
+            ! isset($matches['form']) || $matches['form'] === '' ? null : $matches['form'],
+            ! isset($matches['costume']) || $matches['costume'] === '' ? null : $matches['costume'],
             ($matches['gender'] ?? '') !== '',
         );
     }
@@ -63,14 +61,9 @@ final readonly class PokemonImage
         return GithubLoader::ASSETS_BASE_URL . $this->imageName;
     }
 
-    public function getAssetBundleSuffix(): string|null
+    public function getForm(): string|null
     {
-        return $this->assetBundleSuffix;
-    }
-
-    public function getAssetBundleValue(): int|null
-    {
-        return $this->assetBundleValue;
+        return $this->form;
     }
 
     public function getCostume(): string|null

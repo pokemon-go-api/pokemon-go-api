@@ -348,7 +348,7 @@
 </svg>
 </g>
 </svg>
-<svg id="raidbosswrapper-UNOWN" x="0" y="630" width="100%" height="60">
+<svg id="raidbosswrapper-UNOWN_T" x="0" y="630" width="100%" height="60">
 <rect fill="url('#raidBossGradient_lvl5')" width="100%" height="50" x="0" y="0"/>
 <g class="boss-level">
 <rect width="35" height="50" x="0" y="0"/>

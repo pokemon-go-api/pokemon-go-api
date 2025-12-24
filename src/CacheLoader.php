@@ -10,7 +10,11 @@ use PokemonGoApi\PogoAPI\IO\Directory;
 use PokemonGoApi\PogoAPI\IO\GithubLoader;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
 use PokemonGoApi\PogoAPI\IO\RemoteFileLoader;
+use PokemonGoApi\PogoAPI\Types\BattleConfiguration;
+use PokemonGoApi\PogoAPI\Types\PokemonForm;
+use PokemonGoApi\PogoAPI\Types\RaidBoss;
 use Psr\Log\LoggerInterface;
+use Throwable;
 
 use function abs;
 use function array_key_exists;
@@ -21,8 +25,8 @@ use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
 use function filemtime;
-use function floor;
 use function hash_file;
+use function http_build_query;
 use function is_file;
 use function json_encode;
 use function rtrim;
@@ -40,10 +44,10 @@ class CacheLoader
 {
     private const string CACHE_FILE = 'hashes.json';
 
-    /** @var array<string, mixed> */
+    /** @var array<mixed> */
     private array $cachedData = [];
 
-    /** @var array<string, mixed> */
+    /** @var array<mixed> */
     private array $originalCachedData = [];
 
     public function __construct(
@@ -111,16 +115,22 @@ class CacheLoader
             return $cacheFile;
         }
 
-        $newSha = sha1_file('data/tmp/git-assets/.git/packed-refs');
+        $existingHash = null;
+        if (file_exists('data/tmp/git-assets/.git/packed-refs')) {
+            $existingHash = sha1_file('data/tmp/git-assets/.git/packed-refs');
+        }
 
-        if ($newSha === ($this->cachedData[$cacheKey] ?? null)) {
+        if ($existingHash === ($this->cachedData[$cacheKey] ?? null)) {
             return $cacheFile;
         }
 
-        $this->cachedData[$cacheKey] = $newSha;
-
         $cacheFileContent = $this->githubLoader->getImageList();
 
+        if (file_exists('data/tmp/git-assets/.git/packed-refs')) {
+            $existingHash = sha1_file('data/tmp/git-assets/.git/packed-refs');
+        }
+
+        $this->cachedData[$cacheKey] = $existingHash;
         file_put_contents($cacheFile, json_encode($cacheFileContent));
 
         $this->logger->debug(
@@ -128,7 +138,7 @@ class CacheLoader
                 '[CacheLoader] Missing cache entry for %s',
                 $cacheKey,
             ),
-            ['newHash' => $newSha],
+            ['newHash' => $existingHash],
         );
 
         return $cacheFile;
@@ -221,8 +231,9 @@ class CacheLoader
         return $cacheFile;
     }
 
-    public function fetchPokebattlerUrl(string $pokebattlerApiUrl, string $cacheKey): string
+    public function fetchPokebattlerUrl(RaidBoss $raidBoss, BattleConfiguration $battleConfiguration): string
     {
+        $cacheKey  = $raidBoss->getPokemonWithMegaFormId() . '_' . $battleConfiguration->getName();
         $cacheFile = $this->getCacheDir() . 'pokebattler_' . $cacheKey . '.json';
         $cacheKey  = 'pokebattler/' . $cacheKey;
         if (array_key_exists($cacheKey, $this->cachedData) && is_file($cacheFile)) {
@@ -233,39 +244,20 @@ class CacheLoader
             '[CacheLoader] Missing cache entry for %s',
             $cacheKey,
         ));
-        $this->remoteFileLoader->load($pokebattlerApiUrl)->saveTo($cacheFile);
-        $this->cachedData[$cacheKey] = date(DATE_ATOM);
-        sleep(1);
+        $apiUrls = $this->buildPokebattlerApiUrl($raidBoss, $battleConfiguration);
+        foreach ($apiUrls as $pokebattlerApiUrl) {
+            try {
+                $this->remoteFileLoader->load($pokebattlerApiUrl)->saveTo($cacheFile);
+                $this->cachedData[$cacheKey] = date(DATE_ATOM);
 
-        return $cacheFile;
-    }
+                return $cacheFile;
+            } catch (Throwable) {
+            }
 
-    public function fetchRaidBossesFromSerebii(): string
-    {
-        $cacheFile = $this->getCacheDir() . 'raidlist_serebii.html';
-        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
-
-        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
-        if ($cacheEntry !== $cacheKey) {
-            $this->remoteFileLoader->load('https://www.serebii.net/pokemongo/raidbattles.shtml')->saveTo($cacheFile);
-            $this->cachedData[$cacheFile] = $cacheKey;
+            sleep(2);
         }
 
-        return $cacheFile;
-    }
-
-    public function fetchRaidBossesFromPokefansNet(): string
-    {
-        $cacheFile = $this->getCacheDir() . 'raidlist_pokefansNet.html';
-        $cacheKey  = $this->clock->format('Y-m-d') . '_' . floor($this->clock->format('H') / 6);
-
-        $cacheEntry = $this->cachedData[$cacheFile] ?? null;
-        if ($cacheEntry !== $cacheKey) {
-            $this->remoteFileLoader->load('https://pokefans.net/spiele/pokemon-go/raid-bosse')->saveTo($cacheFile);
-            $this->cachedData[$cacheFile] = $cacheKey;
-        }
-
-        return $cacheFile;
+        return '';
     }
 
     /**
@@ -304,5 +296,42 @@ class CacheLoader
     private function getCacheDir(): string
     {
         return rtrim($this->cacheDir, '/') . '/';
+    }
+
+    /** @return iterable<string> */
+    private function buildPokebattlerApiUrl(
+        RaidBoss $raidBoss,
+        BattleConfiguration $battleConfiguration,
+    ): iterable {
+        $suffix    = $raidBoss->getRaidLevel()->isShadow() ? '_SHADOW_FORM' : '';
+        $bossNames = [];
+        if ($raidBoss->getPokemon()->getPokemonForm() instanceof PokemonForm) {
+            $bossNames[] = $raidBoss->getPokemonWithMegaFormId() . '_FORM';
+        }
+
+        $bossNames[] = $raidBoss->getPokemonWithMegaFormId() . $suffix;
+        $bossNames[] = $raidBoss->getPokemon()->getId() . $suffix;
+
+        foreach ($bossNames as $bossName) {
+            $url = sprintf(
+            //phpcs:ignore Generic.Files.LineLength.TooLong
+                'https://fight.pokebattler.com/raids/defenders/%s/levels/RAID_LEVEL_%s/attackers/levels/%d/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?',
+                $bossName,
+                $raidBoss->getRaidLevel()->toPokebattlerLevel(),
+                $battleConfiguration->getPokemonLevel(),
+            );
+
+            yield $url . http_build_query([
+                'sort' => 'ESTIMATOR',
+                'weatherCondition' => 'NO_WEATHER',
+                'dodgeStrategy' => 'DODGE_REACTION_TIME',
+                'aggregation' => 'AVERAGE',
+                'includeLegendary' => 'true',
+                'includeShadow' => 'false',
+                'includeMegas' => 'false',
+                'attackerTypes' => 'POKEMON_TYPE_ALL',
+                'friendLevel' => 'FRIENDSHIP_LEVEL_' . $battleConfiguration->getFriendShipLevel(),
+            ]);
+        }
     }
 }

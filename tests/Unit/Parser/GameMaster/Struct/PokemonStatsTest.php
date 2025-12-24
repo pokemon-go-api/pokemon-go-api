@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;

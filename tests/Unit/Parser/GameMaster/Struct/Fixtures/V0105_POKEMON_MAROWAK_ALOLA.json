@@ -1,0 +1,96 @@
+{
+  "templateId": "V0105_POKEMON_MAROWAK_ALOLA",
+  "data": {
+    "templateId": "V0105_POKEMON_MAROWAK_ALOLA",
+    "pokemonSettings": {
+      "pokemonId": "MAROWAK",
+      "modelScale": 1.0,
+      "type": "POKEMON_TYPE_FIRE",
+      "type2": "POKEMON_TYPE_GHOST",
+      "camera": {
+        "diskRadiusM": 0.525,
+        "cylinderRadiusM": 0.4,
+        "cylinderHeightM": 1.0,
+        "shoulderModeScale": 0.5
+      },
+      "encounter": {
+        "baseCaptureRate": 0.15,
+        "baseFleeRate": 0.06,
+        "collisionRadiusM": 0.25,
+        "collisionHeightM": 0.75,
+        "collisionHeadRadiusM": 0.25,
+        "movementType": "MOVEMENT_JUMP",
+        "movementTimerS": 14.0,
+        "jumpTimeS": 0.85,
+        "attackTimerS": 5.0,
+        "bonusCandyCaptureReward": 2,
+        "bonusStardustCaptureReward": 400,
+        "attackProbability": 0.1,
+        "dodgeProbability": 0.15,
+        "dodgeDurationS": 1.0,
+        "dodgeDistance": 1.0,
+        "cameraDistance": 3.2,
+        "minPokemonActionFrequencyS": 0.2,
+        "maxPokemonActionFrequencyS": 1.6
+      },
+      "stats": {
+        "baseStamina": 155,
+        "baseAttack": 144,
+        "baseDefense": 186
+      },
+      "quickMoves": [
+        "HEX_FAST",
+        "ROCK_SMASH_FAST",
+        "FIRE_SPIN_FAST"
+      ],
+      "cinematicMoves": [
+        "BONE_CLUB",
+        "SHADOW_BALL",
+        "FIRE_BLAST",
+        "FLAME_WHEEL"
+      ],
+      "animationTime": [
+        2.0,
+        0.6667,
+        1.6667,
+        1.5,
+        0.0,
+        2.0,
+        1.4,
+        0.0
+      ],
+      "evolutionPips": 1,
+      "pokedexHeightM": 1.0,
+      "pokedexWeightKg": 34.0,
+      "parentPokemonId": "CUBONE",
+      "heightStdDev": 0.125,
+      "weightStdDev": 4.25,
+      "familyId": "FAMILY_CUBONE",
+      "kmBuddyDistance": 3.0,
+      "modelHeight": 1.0,
+      "modelScaleV2": 1.0,
+      "form": "MAROWAK_ALOLA",
+      "buddyOffsetMale": [
+        0.0,
+        0.0,
+        20.0
+      ],
+      "buddyOffsetFemale": [
+        0.0,
+        0.0,
+        20.0
+      ],
+      "buddyScale": 19.0,
+      "thirdMove": {
+        "stardustToUnlock": 50000,
+        "candyToUnlock": 50
+      },
+      "isTransferable": true,
+      "isDeployable": true,
+      "buddyGroupNumber": 2,
+      "eliteCinematicMove": [
+        "SHADOW_BONE"
+      ]
+    }
+  }
+}

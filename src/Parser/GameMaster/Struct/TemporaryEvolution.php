@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
+use CuyZ\Valinor\Mapper\Object\Constructor;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function str_contains;
@@ -11,25 +12,35 @@ use function substr;
 
 final class TemporaryEvolution
 {
-    private string $pokemonId = '';
-    private readonly string $tempEvoId;
-    private readonly PokemonType $typePrimary;
-    private readonly PokemonType $typeSecondary;
-    private int|null $assetsBundleId = null;
-
     public function __construct(
-        string $tempEvoId,
+        private readonly string $tempEvoId,
         private readonly PokemonStats $stats,
+        private readonly PokemonType $typePrimary,
+        private readonly PokemonType $typeSecondary,
+        private string $pokemonId = '',
+        private int|null $assetsBundleId = null,
+    ) {
+    }
+
+    #[Constructor]
+    public static function fromArray(
+        string $tempEvoId,
+        PokemonStats $stats,
         string $typeOverride1,
         string|null $typeOverride2,
-    ) {
-        $this->tempEvoId   = $tempEvoId;
-        $this->typePrimary = PokemonType::createFromPokemonType($typeOverride1);
+    ): self {
+        $typeSecondary = PokemonType::none();
         if ($typeOverride2 !== null) {
-            $this->typeSecondary = PokemonType::createFromPokemonType($typeOverride2);
-        } else {
-            $this->typeSecondary = PokemonType::none();
+            $typeSecondary = PokemonType::createFromPokemonType($typeOverride2);
         }
+
+        return new self(
+            $tempEvoId,
+            $stats,
+            PokemonType::createFromPokemonType($typeOverride1),
+            $typeSecondary,
+            '',
+        );
     }
 
     public function setPokemonId(string $pokemonId): void

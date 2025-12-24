@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\PokemonGoApi\PogoAPI\Types;
+namespace Tests\Unit\PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use PokemonGoApi\PogoAPI\IO\JsonParser;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\PokemonStats;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\TemporaryEvolution;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\JsonMapper;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function file_get_contents;
@@ -21,18 +22,12 @@ use function file_get_contents;
 #[UsesClass(TemporaryEvolution::class)]
 final class PokemonTest extends TestCase
 {
-    public function testCreateFromGameMasterWillFail(): void
-    {
-        $this->expectExceptionCode(1608127311711);
-        Pokemon::createFromGameMaster((object) []);
-    }
-
     public function testCreateFromGameMaster(): void
     {
         $gameMaster = file_get_contents(__DIR__ . '/Fixtures/V0105_POKEMON_MAROWAK_ALOLA.json') ?: '{}';
 
         $pokemonData = JsonParser::decodeGameMasterFileData($gameMaster);
-        $pokemon     = Pokemon::createFromGameMaster($pokemonData);
+        $pokemon     = JsonMapper::map(Pokemon::class, $pokemonData);
 
         $this->assertSame(105, $pokemon->getDexNr());
         $this->assertSame(0, $pokemon->getAssetsBundleId());
@@ -53,8 +48,9 @@ final class PokemonTest extends TestCase
     {
         $gameMaster = file_get_contents(__DIR__ . '/Fixtures/V0006_POKEMON_CHARIZARD.json') ?: '{}';
 
-        $pokemonData         = JsonParser::decodeGameMasterFileData($gameMaster);
-        $pokemon             = Pokemon::createFromGameMaster($pokemonData);
+        $pokemonData = JsonParser::decodeGameMasterFileData($gameMaster);
+        $pokemon     = JsonMapper::map(Pokemon::class, $pokemonData);
+
         $temporaryEvolutions = $pokemon->getTemporaryEvolutions();
         $this->assertTrue($pokemon->hasTemporaryEvolutions());
         $this->assertCount(2, $temporaryEvolutions);

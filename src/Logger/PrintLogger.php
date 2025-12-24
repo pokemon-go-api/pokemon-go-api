@@ -7,6 +7,7 @@ namespace PokemonGoApi\PogoAPI\Logger;
 use Override;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LoggerTrait;
+use Stringable;
 
 use function date;
 use function json_encode;
@@ -21,7 +22,7 @@ class PrintLogger implements LoggerInterface
 
     /** @param array<mixed, mixed> $context */
     #[Override]
-    public function log(mixed $level, mixed $message, array $context = []): void
+    public function log(mixed $level, string|Stringable $message, array $context = []): void
     {
         printf(
             trim('[%s] %s %s') . PHP_EOL,

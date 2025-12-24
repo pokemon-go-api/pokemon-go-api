@@ -10,7 +10,9 @@ use Override;
 final readonly class PokemonStats implements JsonSerializable
 {
     private int $stamina;
+
     private int $attack;
+
     private int $defense;
 
     public function __construct(

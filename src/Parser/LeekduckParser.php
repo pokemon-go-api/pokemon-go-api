@@ -10,7 +10,7 @@ use DOMXPath;
 use Exception;
 use PokemonGoApi\PogoAPI\Collections\RaidBossCollection;
 use PokemonGoApi\PogoAPI\Parser\GameMaster\Collections\PokemonCollection;
-use PokemonGoApi\PogoAPI\Types\Pokemon;
+use PokemonGoApi\PogoAPI\Parser\GameMaster\Struct\Pokemon;
 use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\RaidBoss;
@@ -68,18 +68,19 @@ class LeekduckParser
 
                     [, $formName] = $this->extractFormBossName($cardContainer);
                     $pokemon      = $this->pokemonCollection->getByDexId($pokemonImage->getDexNr());
-                    $basePokemon  = $pokemon;
-                    if (! $basePokemon instanceof Pokemon || ! $pokemon instanceof Pokemon) {
+                    if (! $pokemon instanceof Pokemon) {
                         continue;
                     }
+
+                    $basePokemon = $pokemon;
 
                     $pokemon = $pokemon->withPokemonForm(
                         new PokemonForm(
                             $pokemon->getId(),
-                            $pokemon->getFormId(),
+                            $pokemonImage->getForm() ?? $pokemon->getFormId(),
                             true,
-                            $pokemonImage->getAssetBundleValue(),
-                            $pokemonImage->getAssetBundleSuffix(),
+                            null,
+                            $pokemonImage->getForm(),
                         ),
                     );
 
@@ -91,7 +92,7 @@ class LeekduckParser
                     $pokemonFormId          = strtoupper(implode('_', $pokemonIdParts));
                     $pokemonFormIdWithAsset = strtoupper(implode('_', [
                         ...$pokemonIdParts,
-                        $pokemonImage->getAssetBundleSuffix(),
+                        $pokemonImage->getForm(),
                     ]));
 
                     $pokemonTemporaryEvolution = null;
@@ -274,7 +275,7 @@ class LeekduckParser
 
         $pokemonImage = null;
         $bossImage    = $bossImageContainer->getElementsByTagName('img')[0];
-        if ($bossImage !== null) {
+        if ($bossImage instanceof DOMElement) {
             $imgSrc = $bossImage->getAttribute('src');
             try {
                 $pokemonImage = PokemonImage::createFromFilePath($imgSrc);
