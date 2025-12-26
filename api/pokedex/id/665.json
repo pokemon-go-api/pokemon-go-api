@@ -1,0 +1,2593 @@
+{
+    "id": "SPEWPA",
+    "formId": "SPEWPA",
+    "dexNr": 665,
+    "generation": 6,
+    "names": {
+        "English": "Spewpa",
+        "German": "Puponcho",
+        "French": "P\u00e9r\u00e9grain",
+        "Italian": "Spewpa",
+        "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+        "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+        "Spanish": "Spewpa"
+    },
+    "stats": {
+        "stamina": 128,
+        "attack": 48,
+        "defense": 89
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_BUG",
+        "names": {
+            "English": "Bug",
+            "German": "K\u00e4fer",
+            "French": "Insecte",
+            "Italian": "Coleottero",
+            "Japanese": "\u3080\u3057",
+            "Korean": "\ubc8c\ub808",
+            "Spanish": "Bicho"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "STRUGGLE_BUG_FAST": {
+            "id": "STRUGGLE_BUG_FAST",
+            "power": 15,
+            "energy": 15,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Struggle Bug",
+                "German": "K\u00e4fertrutz",
+                "French": "Survinsecte",
+                "Italian": "Entomoblocco",
+                "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                "Spanish": "Estoicismo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "STRUGGLE": {
+            "id": "STRUGGLE",
+            "power": 35,
+            "energy": 0,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Struggle",
+                "German": "Verzweifler",
+                "French": "Lutte",
+                "Italian": "Scontro",
+                "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                "Korean": "\ubc1c\ubc84\ub465",
+                "Spanish": "Combate"
+            },
+            "combat": {
+                "energy": -100,
+                "power": 35,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+    },
+    "regionForms": {
+        "SPEWPA_ARCHIPELAGO": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_ARCHIPELAGO",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_ARCHIPELAGO",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_CONTINENTAL": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_CONTINENTAL",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_CONTINENTAL",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_ELEGANT": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_ELEGANT",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_ELEGANT",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_FANCY": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_FANCY",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_FANCY",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_GARDEN": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_GARDEN",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_GARDEN",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_HIGH_PLAINS": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_HIGH_PLAINS",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_HIGH_PLAINS",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_ICY_SNOW": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_ICY_SNOW",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_ICY_SNOW",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_JUNGLE": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_JUNGLE",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_JUNGLE",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_MARINE": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_MARINE",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_MARINE",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_MEADOW": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_MEADOW",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_MEADOW",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_MODERN": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_MODERN",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_MODERN",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_MONSOON": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_MONSOON",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_MONSOON",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_OCEAN": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_OCEAN",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_OCEAN",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_POKEBALL": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_POKEBALL",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_POKEBALL",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_POLAR": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_POLAR",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_POLAR",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_RIVER": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_RIVER",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_RIVER",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_SANDSTORM": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_SANDSTORM",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_SANDSTORM",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_SAVANNA": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_SAVANNA",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_SAVANNA",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_SUN": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_SUN",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa (Sunny)",
+                "German": "Puponcho (Sonnenform)",
+                "French": "P\u00e9r\u00e9grain (Solaire)",
+                "Italian": "Spewpa (Sole)",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4 (\u305f\u3044\u3088\u3046\u306e\u3059\u304c\u305f)",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac (\ud0dc\uc591\uc758 \ubaa8\uc2b5)",
+                "Spanish": "Spewpa (Sol)"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_SUN",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SPEWPA_TUNDRA": {
+            "id": "SPEWPA",
+            "formId": "SPEWPA_TUNDRA",
+            "dexNr": 665,
+            "generation": 6,
+            "names": {
+                "English": "Spewpa",
+                "German": "Puponcho",
+                "French": "P\u00e9r\u00e9grain",
+                "Italian": "Spewpa",
+                "Japanese": "\u30b3\u30d5\u30fc\u30e9\u30a4",
+                "Korean": "\ubd84\ub5a0\ub3c4\ub9ac",
+                "Spanish": "Spewpa"
+            },
+            "stats": {
+                "stamina": 128,
+                "attack": 48,
+                "defense": 89
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "STRUGGLE_BUG_FAST": {
+                    "id": "STRUGGLE_BUG_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle Bug",
+                        "German": "K\u00e4fertrutz",
+                        "French": "Survinsecte",
+                        "Italian": "Entomoblocco",
+                        "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                        "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                        "Spanish": "Estoicismo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "VIVILLON",
+                    "formId": "VIVILLON_TUNDRA",
+                    "candies": 100,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [
+        {
+            "id": "VIVILLON",
+            "formId": "VIVILLON",
+            "candies": 100,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm665.s.icon.png"
+        }
+    ]
+}

@@ -1,0 +1,223 @@
+{
+    "id": "AZELF",
+    "formId": "AZELF",
+    "dexNr": 482,
+    "generation": 4,
+    "names": {
+        "English": "Azelf",
+        "German": "Tobutz",
+        "French": "Cr\u00e9fadet",
+        "Italian": "Azelf",
+        "Japanese": "\u30a2\u30b0\u30ce\u30e0",
+        "Korean": "\uc544\uadf8\ub188",
+        "Spanish": "Azelf"
+    },
+    "stats": {
+        "stamina": 181,
+        "attack": 270,
+        "defense": 151
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_PSYCHIC",
+        "names": {
+            "English": "Psychic",
+            "German": "Psycho",
+            "French": "Psy",
+            "Italian": "Psico",
+            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+            "Korean": "\uc5d0\uc2a4\ud37c",
+            "Spanish": "Ps\u00edquico"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "CONFUSION_FAST": {
+            "id": "CONFUSION_FAST",
+            "power": 19,
+            "energy": 14,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Confusion",
+                "German": "Konfusion",
+                "French": "Choc Mental",
+                "Italian": "Confusione",
+                "Japanese": "\u306d\u3093\u308a\u304d",
+                "Korean": "\uc5fc\ub3d9\ub825",
+                "Spanish": "Confusi\u00f3n"
+            },
+            "combat": {
+                "energy": 14,
+                "power": 16,
+                "turns": 4,
+                "buffs": null
+            }
+        },
+        "EXTRASENSORY_FAST": {
+            "id": "EXTRASENSORY_FAST",
+            "power": 11,
+            "energy": 11,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Extrasensory",
+                "German": "Sondersensor",
+                "French": "Extrasenseur",
+                "Italian": "Extrasenso",
+                "Japanese": "\u3058\u3093\u3064\u3046\u308a\u304d",
+                "Korean": "\uc2e0\ud1b5\ub825",
+                "Spanish": "Paranormal"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 8,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "FUTURESIGHT": {
+            "id": "FUTURESIGHT",
+            "power": 115,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Future Sight",
+                "German": "Seher",
+                "French": "Prescience",
+                "Italian": "Divinazione",
+                "Japanese": "\u307f\u3089\u3044\u3088\u3061",
+                "Korean": "\ubbf8\ub798\uc608\uc9c0",
+                "Spanish": "Premonici\u00f3n"
+            },
+            "combat": {
+                "energy": -65,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SWIFT": {
+            "id": "SWIFT",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Swift",
+                "German": "Sternschauer",
+                "French": "M\u00e9t\u00e9ores",
+                "Italian": "Comete",
+                "Japanese": "\u30b9\u30d4\u30fc\u30c9\u30b9\u30bf\u30fc",
+                "Korean": "\uc2a4\ud53c\ub4dc\uc2a4\ud0c0",
+                "Spanish": "Rapidez"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FIRE_BLAST": {
+            "id": "FIRE_BLAST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "Fuego"
+                }
+            },
+            "names": {
+                "English": "Fire Blast",
+                "German": "Feuersturm",
+                "French": "D\u00e9flagration",
+                "Italian": "Fuocobomba",
+                "Japanese": "\u3060\u3044\u3082\u3093\u3058",
+                "Korean": "\ubd88\ub300\ubb38\uc790",
+                "Spanish": "Llamarada"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 140,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm482.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm482.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm482.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm482.s.icon.png"
+        }
+    ]
+}

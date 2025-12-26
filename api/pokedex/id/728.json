@@ -1,0 +1,231 @@
+{
+    "id": "POPPLIO",
+    "formId": "POPPLIO",
+    "dexNr": 728,
+    "generation": 7,
+    "names": {
+        "English": "Popplio",
+        "German": "Robball",
+        "French": "Otaquin",
+        "Italian": "Popplio",
+        "Japanese": "\u30a2\u30b7\u30de\u30ea",
+        "Korean": "\ub204\ub9ac\uacf5",
+        "Spanish": "Popplio"
+    },
+    "stats": {
+        "stamina": 137,
+        "attack": 120,
+        "defense": 103
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "POUND_FAST": {
+            "id": "POUND_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Pound",
+                "German": "Klaps",
+                "French": "\u00c9cras\u2019Face",
+                "Italian": "Botta",
+                "Japanese": "\u306f\u305f\u304f",
+                "Korean": "\ub9c9\uce58\uae30",
+                "Spanish": "Destructor"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "WATER_GUN_FAST": {
+            "id": "WATER_GUN_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Water Gun",
+                "German": "Aquaknarre",
+                "French": "Pistolet \u00e0 O",
+                "Italian": "Pistolacqua",
+                "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                "Korean": "\ubb3c\ub300\ud3ec",
+                "Spanish": "Pistola Agua"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "AQUA_JET": {
+            "id": "AQUA_JET",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Aqua Jet",
+                "German": "Wasserd\u00fcse",
+                "French": "Aqua-Jet",
+                "Italian": "Acquagetto",
+                "Japanese": "\u30a2\u30af\u30a2\u30b8\u30a7\u30c3\u30c8",
+                "Korean": "\uc544\ucfe0\uc544\uc81c\ud2b8",
+                "Spanish": "Acua Jet"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "WATER_PULSE": {
+            "id": "WATER_PULSE",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Water Pulse",
+                "German": "Aquawelle",
+                "French": "Vibraqua",
+                "Italian": "Idropulsar",
+                "Japanese": "\u307f\u305a\u306e\u306f\u3069\u3046",
+                "Korean": "\ubb3c\uc758\ud30c\ub3d9",
+                "Spanish": "Hidropulso"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "AQUA_TAIL": {
+            "id": "AQUA_TAIL",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Aqua Tail",
+                "German": "Nassschweif",
+                "French": "Hydro-Queue",
+                "Italian": "Idrondata",
+                "Japanese": "\u30a2\u30af\u30a2\u30c6\u30fc\u30eb",
+                "Korean": "\uc544\ucfe0\uc544\ud14c\uc77c",
+                "Spanish": "Acua Cola"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm728.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm728.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "BRIONNE",
+            "formId": "BRIONNE",
+            "candies": 25,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm728.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm728.s.icon.png"
+        }
+    ]
+}

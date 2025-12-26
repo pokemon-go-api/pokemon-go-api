@@ -1,0 +1,289 @@
+{
+    "id": "BISHARP",
+    "formId": "BISHARP",
+    "dexNr": 625,
+    "generation": 5,
+    "names": {
+        "English": "Bisharp",
+        "German": "Caesurio",
+        "French": "Scalproie",
+        "Italian": "Bisharp",
+        "Japanese": "\u30ad\u30ea\u30ad\u30b6\u30f3",
+        "Korean": "\uc808\uac01\ucc38",
+        "Spanish": "Bisharp"
+    },
+    "stats": {
+        "stamina": 163,
+        "attack": 232,
+        "defense": 176
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_DARK",
+        "names": {
+            "English": "Dark",
+            "German": "Unlicht",
+            "French": "T\u00e9n\u00e8bres",
+            "Italian": "Buio",
+            "Japanese": "\u3042\u304f",
+            "Korean": "\uc545",
+            "Spanish": "Siniestro"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_STEEL",
+        "names": {
+            "English": "Steel",
+            "German": "Stahl",
+            "French": "Acier",
+            "Italian": "Acciaio",
+            "Japanese": "\u306f\u304c\u306d",
+            "Korean": "\uac15\ucca0",
+            "Spanish": "Acero"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "SNARL_FAST": {
+            "id": "SNARL_FAST",
+            "power": 11,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Snarl",
+                "German": "Standpauke",
+                "French": "Aboiement",
+                "Italian": "Urlorabbia",
+                "Japanese": "\u30d0\u30fc\u30af\u30a2\u30a6\u30c8",
+                "Korean": "\ubc14\ud06c\uc544\uc6c3",
+                "Spanish": "Alarido"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "METAL_CLAW_FAST": {
+            "id": "METAL_CLAW_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "Acero"
+                }
+            },
+            "names": {
+                "English": "Metal Claw",
+                "German": "Metallklaue",
+                "French": "Griffe Acier",
+                "Italian": "Ferrartigli",
+                "Japanese": "\u30e1\u30bf\u30eb\u30af\u30ed\u30fc",
+                "Korean": "\uba54\ud0c8\ud074\ub85c",
+                "Spanish": "Garra Metal"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DARK_PULSE": {
+            "id": "DARK_PULSE",
+            "power": 80,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Dark Pulse",
+                "German": "Finsteraura",
+                "French": "Vibrobscur",
+                "Italian": "Neropulsar",
+                "Japanese": "\u3042\u304f\u306e\u306f\u3069\u3046",
+                "Korean": "\uc545\uc758\ud30c\ub3d9",
+                "Spanish": "Pulso Umbr\u00edo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "IRON_HEAD": {
+            "id": "IRON_HEAD",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "Acero"
+                }
+            },
+            "names": {
+                "English": "Iron Head",
+                "German": "Eisensch\u00e4del",
+                "French": "T\u00eate de Fer",
+                "Italian": "Metaltestata",
+                "Japanese": "\u30a2\u30a4\u30a2\u30f3\u30d8\u30c3\u30c9",
+                "Korean": "\uc544\uc774\uc5b8\ud5e4\ub4dc",
+                "Spanish": "Cabeza de Hierro"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "X_SCISSOR": {
+            "id": "X_SCISSOR",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "X-Scissor",
+                "German": "Kreuzschere",
+                "French": "Plaie Croix",
+                "Italian": "Forbice X",
+                "Japanese": "\u30b7\u30b6\u30fc\u30af\u30ed\u30b9",
+                "Korean": "\uc2dc\uc800\ud06c\ub85c\uc2a4",
+                "Spanish": "Tijera X"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 65,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FOCUS_BLAST": {
+            "id": "FOCUS_BLAST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Focus Blast",
+                "German": "Fokussto\u00df",
+                "French": "Exploforce",
+                "Italian": "Focalcolpo",
+                "Japanese": "\u304d\u3042\u3044\u3060\u307e",
+                "Korean": "\uae30\ud569\uad6c\uc2ac",
+                "Spanish": "Onda Certera"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm625.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm625.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "KINGAMBIT",
+            "formId": "KINGAMBIT",
+            "candies": 100,
+            "item": null,
+            "quests": [
+                {
+                    "id": "BISHARP_KINGAMBIT_EVOLUTION_QUEST",
+                    "type": "QUEST_COMPLETE_BATTLE",
+                    "names": {
+                        "English": "Defeat 15 Dark- or Steel-type Raid Bosses",
+                        "German": "Besiege 15 Raid-Bosse vom Typ Unlicht oder Stahl.",
+                        "French": "Remporte un combat contre 15\u00a0Boss de Raids de type T\u00e9n\u00e8bres ou Acier",
+                        "Italian": "Sconfiggi 15 boss dei raid di tipo Buio o Acciaio",
+                        "Japanese": "\u3042\u304f\u30bf\u30a4\u30d7\u304b\u306f\u304c\u306d\u30bf\u30a4\u30d7\u306e\u30dc\u30b9\u30dd\u30b1\u30e2\u30f315\u5339\u306b\u52dd\u3064",
+                        "Korean": "\uc545\ud0c0\uc785 \ub610\ub294 \uac15\ucca0\ud0c0\uc785\uc758 \ubcf4\uc2a4 \ud3ec\ucf13\ubaac 15\ub9c8\ub9ac\uc5d0\uac8c \uc774\uae34\ub2e4",
+                        "Spanish": "Derrota a 15 jefes de incursi\u00f3n de tipo Siniestro o Acero"
+                    }
+                }
+            ]
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm625.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm625.s.icon.png"
+        }
+    ]
+}

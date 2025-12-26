@@ -1,0 +1,455 @@
+{
+    "id": "AMPHAROS",
+    "formId": "AMPHAROS",
+    "dexNr": 181,
+    "generation": 2,
+    "names": {
+        "English": "Ampharos",
+        "German": "Ampharos",
+        "French": "Pharamp",
+        "Italian": "Ampharos",
+        "Japanese": "\u30c7\u30f3\u30ea\u30e5\u30a6",
+        "Korean": "\uc804\ub8e1",
+        "Spanish": "Ampharos"
+    },
+    "stats": {
+        "stamina": 207,
+        "attack": 211,
+        "defense": 169
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "CHARGE_BEAM_FAST": {
+            "id": "CHARGE_BEAM_FAST",
+            "power": 7,
+            "energy": 14,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Charge Beam",
+                "German": "Ladestrahl",
+                "French": "Rayon Charg\u00e9",
+                "Italian": "Raggioscossa",
+                "Japanese": "\u30c1\u30e3\u30fc\u30b8\u30d3\u30fc\u30e0",
+                "Korean": "\ucc28\uc9c0\ube54",
+                "Spanish": "Rayo Carga"
+            },
+            "combat": {
+                "energy": 11,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "VOLT_SWITCH_FAST": {
+            "id": "VOLT_SWITCH_FAST",
+            "power": 13,
+            "energy": 20,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Volt Switch",
+                "German": "Voltwechsel",
+                "French": "Change \u00c9clair",
+                "Italian": "Invertivolt",
+                "Japanese": "\u30dc\u30eb\u30c8\u30c1\u30a7\u30f3\u30b8",
+                "Korean": "\ubcfc\ud2b8\uccb4\uc778\uc9c0",
+                "Spanish": "Voltiocambio"
+            },
+            "combat": {
+                "energy": 16,
+                "power": 14,
+                "turns": 4,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "ZAP_CANNON": {
+            "id": "ZAP_CANNON",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Zap Cannon",
+                "German": "Blitzkanone",
+                "French": "\u00c9lecanon",
+                "Italian": "Falcecannone",
+                "Japanese": "\u3067\u3093\u3058\u307b\u3046",
+                "Korean": "\uc804\uc790\ud3ec",
+                "Spanish": "Electroca\u00f1\u00f3n"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 150,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 33,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "FOCUS_BLAST": {
+            "id": "FOCUS_BLAST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Focus Blast",
+                "German": "Fokussto\u00df",
+                "French": "Exploforce",
+                "Italian": "Focalcolpo",
+                "Japanese": "\u304d\u3042\u3044\u3060\u307e",
+                "Korean": "\uae30\ud569\uad6c\uc2ac",
+                "Spanish": "Onda Certera"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "THUNDER": {
+            "id": "THUNDER",
+            "power": 100,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder",
+                "German": "Donner",
+                "French": "Fatal-Foudre",
+                "Italian": "Tuono",
+                "Japanese": "\u304b\u307f\u306a\u308a",
+                "Korean": "\ubc88\uac1c",
+                "Spanish": "Trueno"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POWER_GEM": {
+            "id": "POWER_GEM",
+            "power": 80,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "Roca"
+                }
+            },
+            "names": {
+                "English": "Power Gem",
+                "German": "Juwelenkraft",
+                "French": "Rayon Gemme",
+                "Italian": "Gemmoforza",
+                "Japanese": "\u30d1\u30ef\u30fc\u30b8\u30a7\u30e0",
+                "Korean": "\ud30c\uc6cc\uc82c",
+                "Spanish": "Joya de Luz"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 85,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "THUNDER_PUNCH": {
+            "id": "THUNDER_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder Punch",
+                "German": "Donnerschlag",
+                "French": "Poing \u00c9clair",
+                "Italian": "Tuonopugno",
+                "Japanese": "\u304b\u307f\u306a\u308a\u30d1\u30f3\u30c1",
+                "Korean": "\ubc88\uac1c\ud380\uce58",
+                "Spanish": "Pu\u00f1o Trueno"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BRUTAL_SWING": {
+            "id": "BRUTAL_SWING",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Brutal Swing",
+                "German": "Wirbler",
+                "French": "Centrifugifle",
+                "Italian": "Vorticolpo",
+                "Japanese": "\u3076\u3093\u307e\u308f\u3059",
+                "Korean": "\uc138\ucc28\uac8c\ud718\ub450\ub974\uae30",
+                "Spanish": "Giro Vil"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "TRAILBLAZE": {
+            "id": "TRAILBLAZE",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Trailblaze",
+                "German": "Wegbereiter",
+                "French": "D\u00e9sherbaffe",
+                "Italian": "Apripista",
+                "Japanese": "\u304f\u3055\u308f\u3051",
+                "Korean": "\uac1c\ucc99\ud558\uae30",
+                "Spanish": "Abrecaminos"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 65,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": {
+        "DRAGON_PULSE": {
+            "id": "DRAGON_PULSE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Pulse",
+                "German": "Drachenpuls",
+                "French": "Draco-Choc",
+                "Italian": "Dragopulsar",
+                "Japanese": "\u308a\u3085\u3046\u306e\u306f\u3069\u3046",
+                "Korean": "\uc6a9\uc758\ud30c\ub3d9",
+                "Spanish": "Pulso Drag\u00f3n"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": true,
+    "megaEvolutions": {
+        "AMPHAROS_MEGA": {
+            "id": "AMPHAROS_MEGA",
+            "names": {
+                "English": "Mega Ampharos",
+                "German": "Mega-Ampharos",
+                "French": "M\u00e9ga-Pharamp",
+                "Italian": "MegaAmpharos",
+                "Japanese": "\u30e1\u30ac\u30c7\u30f3\u30ea\u30e5\u30a6",
+                "Korean": "\uba54\uac00\uc804\ub8e1",
+                "Spanish": "Mega-Ampharos"
+            },
+            "stats": {
+                "stamina": 207,
+                "attack": 294,
+                "defense": 203
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "energyCost": 200,
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.fMEGA.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.fMEGA.s.icon.png"
+            }
+        }
+    },
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "MEGA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.fMEGA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.fMEGA.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm181.s.icon.png"
+        }
+    ]
+}

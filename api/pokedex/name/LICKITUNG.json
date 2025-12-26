@@ -1,0 +1,315 @@
+{
+    "id": "LICKITUNG",
+    "formId": "LICKITUNG",
+    "dexNr": 108,
+    "generation": 1,
+    "names": {
+        "English": "Lickitung",
+        "German": "Schlurp",
+        "French": "Excelangue",
+        "Italian": "Lickitung",
+        "Japanese": "\u30d9\u30ed\u30ea\u30f3\u30ac",
+        "Korean": "\ub0b4\ub8e8\ubbf8",
+        "Spanish": "Lickitung"
+    },
+    "stats": {
+        "stamina": 207,
+        "attack": 108,
+        "defense": 137
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_NORMAL",
+        "names": {
+            "English": "Normal",
+            "German": "Normal",
+            "French": "Normal",
+            "Italian": "Normale",
+            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+            "Korean": "\ub178\ub9d0",
+            "Spanish": "Normal"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "LICK_FAST": {
+            "id": "LICK_FAST",
+            "power": 5,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Lick",
+                "German": "Schlecker",
+                "French": "L\u00e9chouille",
+                "Italian": "Leccata",
+                "Japanese": "\u3057\u305f\u3067\u306a\u3081\u308b",
+                "Korean": "\ud565\uae30",
+                "Spanish": "Leng\u00fcetazo"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ZEN_HEADBUTT_FAST": {
+            "id": "ZEN_HEADBUTT_FAST",
+            "power": 11,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Zen Headbutt",
+                "German": "Zen-Kopfsto\u00df",
+                "French": "Psykoud\u2019Boul",
+                "Italian": "Cozzata Zen",
+                "Japanese": "\u3057\u306d\u3093\u306e\u305a\u3064\u304d",
+                "Korean": "\uc0ac\ub150\uc758\ubc15\uce58\uae30",
+                "Spanish": "Cabezazo Zen"
+            },
+            "combat": {
+                "energy": 6,
+                "power": 8,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "HYPER_BEAM": {
+            "id": "HYPER_BEAM",
+            "power": 150,
+            "energy": -100,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Hyper Beam",
+                "German": "Hyperstrahl",
+                "French": "Ultralaser",
+                "Italian": "Iper Raggio",
+                "Japanese": "\u306f\u304b\u3044\u3053\u3046\u305b\u3093",
+                "Korean": "\ud30c\uad34\uad11\uc120",
+                "Spanish": "Hiperrayo"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "STOMP": {
+            "id": "STOMP",
+            "power": 50,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Stomp",
+                "German": "Stampfer",
+                "French": "\u00c9crasement",
+                "Italian": "Pestone",
+                "Japanese": "\u3075\u307f\u3064\u3051",
+                "Korean": "\uc9d3\ubc1f\uae30",
+                "Spanish": "Pisot\u00f3n"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POWER_WHIP": {
+            "id": "POWER_WHIP",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Power Whip",
+                "German": "Blattgei\u00dfel",
+                "French": "M\u00e9gafouet",
+                "Italian": "Vigorcolpo",
+                "Japanese": "\u30d1\u30ef\u30fc\u30a6\u30a3\u30c3\u30d7",
+                "Korean": "\ud30c\uc6cc\ud729",
+                "Spanish": "Latigazo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "WRAP": {
+            "id": "WRAP",
+            "power": 60,
+            "energy": -33,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Wrap",
+                "German": "Wickel",
+                "French": "Ligotage",
+                "Italian": "Avvolgibotta",
+                "Japanese": "\u307e\u304d\u3064\u304f",
+                "Korean": "\uae40\ubc25\ub9d0\uc774",
+                "Spanish": "Constricci\u00f3n"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": {
+        "BODY_SLAM": {
+            "id": "BODY_SLAM",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Body Slam",
+                "German": "Bodyslam",
+                "French": "Plaquage",
+                "Italian": "Corposcontro",
+                "Japanese": "\u306e\u3057\u304b\u304b\u308a",
+                "Korean": "\ub204\ub974\uae30",
+                "Spanish": "Golpe Cuerpo"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm108.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm108.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "LICKILICKY",
+            "formId": "LICKILICKY",
+            "candies": 100,
+            "item": {
+                "id": "ITEM_GEN4_EVOLUTION_STONE",
+                "names": {
+                    "English": "Sinnoh Stone",
+                    "German": "Sinnoh-Stein",
+                    "French": "Pierre Sinnoh",
+                    "Italian": "Pietra Sinnoh",
+                    "Japanese": "\u30b7\u30f3\u30aa\u30a6\u306e\u3044\u3057",
+                    "Korean": "\uc2e0\uc624\uc758 \ub3cc",
+                    "Spanish": "Piedra Sinnoh"
+                }
+            },
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm108.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm108.s.icon.png"
+        }
+    ]
+}

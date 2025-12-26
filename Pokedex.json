@@ -1,0 +1,1468 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Pokemon GO Pokedex",
+    "version": "1.0",
+    "description": "Provides different Endpoints to receive information about the available Pokemon in Pokemon GO. As source the Gamemaster File from the Pokeminers are used. Additional information are used by [thesilphroad.com](https://thesilphroad.com) [leekduck.com](https://leekduck.com) and [pokebattler.com](https://pokebattler.com)",
+    "contact": {
+      "url": "https://github.com/pokemon-go-api/pokemon-go-api"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://pokemon-go-api.github.io/pokemon-go-api",
+      "description": "The latest version hosted on Github"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Pokemon"
+    },
+    {
+      "name": "Raid"
+    },
+    {
+      "name": "Max Battle"
+    },
+    {
+      "name": "Utils"
+    },
+    {
+      "name": "Quest"
+    },
+    {
+      "name": "Types"
+    }
+  ],
+  "paths": {
+    "/api/pokedex.json": {
+      "get": {
+        "operationId": "get-api-pokedex.json",
+        "summary": "Receive all Pokemon",
+        "description": "Return the complete list of all available Pokemon in the GAMEMASTER File in Pokemon GO",
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pokemon"
+                  },
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pokedex/mega.json": {
+      "get": {
+        "operationId": "get-api-pokedex-mega.json",
+        "summary": "Receive all Mega-Pokemon",
+        "description": "List of all available Mega Pokemon evolutions",
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pokemon"
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pokedex/generation/{generationNumber}.json": {
+      "get": {
+        "operationId": "get-api-pokedex-generation-id.json",
+        "summary": "List Pokemon of a Generation",
+        "description": "List all Pokemon of the given Generation.",
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pokemon"
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "generationNumber",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/api/pokedex/id/{id}.json": {
+      "get": {
+        "operationId": "get-api-pokedex-id-id.json",
+        "summary": "Receive a single Pokemon by the Pokedex number",
+        "description": "Receive only the single Pokemon by the given Pokedex number",
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pokemon"
+                }
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/api/pokedex/region/{name}.json": {
+      "get": {
+        "operationId": "get-api-pokedex-region-name.json",
+        "summary": "List Pokemon of a region",
+        "description": "Receive all available Pokemon for the given region by name",
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pokemon"
+                  },
+                  "required": [
+                    "items"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string",
+            "enum": [
+              "alola",
+              "galarian",
+              "hisuian"
+            ]
+          },
+          "name": "name",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/api/pokedex/name/{name}.json": {
+      "get": {
+        "operationId": "get-api-pokedex-name-name.json",
+        "summary": "Receive a single Pokemon by the internal name",
+        "description": "Receive a single Pokemon by the PokemonGo internal name that must be in UPPERCASE",
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pokemon"
+                }
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string",
+            "pattern": "^[A-Z_]+$"
+          },
+          "name": "name",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/api/raidboss.json": {
+      "get": {
+        "operationId": "get-api-raidboss.json",
+        "summary": "Receive the current raid Bosses",
+        "description": "Return the list of the current available raidbosses. The datasource for the raidboss is [leekduck.com](https://leekduck.com)",
+        "tags": [
+          "Raid"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "currentList": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "lvl1": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "lvl3": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "lvl5": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "mega": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "ultra_beast": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "legendary_mega": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "ex": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "shadow_lvl5": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "shadow_lvl3": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        },
+                        "shadow_lvl1": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/RaidBoss"
+                          }
+                        }
+                      }
+                    },
+                    "graphics": {
+                      "type": "object",
+                      "required": [
+                        "German",
+                        "English"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "German": {
+                          "$ref": "#/components/schemas/RaidBossGraphic"
+                        },
+                        "English": {
+                          "$ref": "#/components/schemas/RaidBossGraphic"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "currentList",
+                    "graphics"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/maxbattles.json": {
+      "get": {
+        "operationId": "get-api-maxbattles.json",
+        "summary": "Receive the current max battles",
+        "description": "Return the list of the current available Max Battles. The datasource is [snacknap.com](https://snacknap.com)",
+        "tags": [
+          "Max Battle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "currentList": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "tier_1": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_2": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_3": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_4": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_5": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        },
+                        "tier_6": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MaxBattle"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "currentList"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hashes.json": {
+      "get": {
+        "operationId": "get-api-hashes.json",
+        "summary": "Current Hashes of list endpoints",
+        "description": "Receive the latest SHA512 hashes of the large list endpoints to prevent unnecessary calls for the larger API Endpoints",
+        "tags": [
+          "Utils"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "sha512": {
+                      "type": "object",
+                      "required": [
+                        "maxbattles.json",
+                        "raidboss.json",
+                        "pokedex.json",
+                        "quests.json"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "maxbattles.json": {
+                          "type": "string",
+                          "minLength": 128,
+                          "maxLength": 128
+                        },
+                        "raidboss.json": {
+                          "type": "string",
+                          "minLength": 128,
+                          "maxLength": 128
+                        },
+                        "quests.json": {
+                          "type": "string",
+                          "minLength": 128,
+                          "maxLength": 128
+                        },
+                        "pokedex.json": {
+                          "type": "string",
+                          "minLength": 128,
+                          "maxLength": 128
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "sha512"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/quests.json": {
+      "get": {
+        "operationId": "get-quests.json",
+        "summary": "List the current Quests",
+        "description": "Receive the current Quests with Pokemon and Mega-Energy. The datasource for the quests is [thesilphroad.com](https://thesilphroad.com)",
+        "tags": [
+          "Quest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "nullable": false,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "rewards": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "nullable": false,
+                          "oneOf": [
+                            {
+                              "$ref": "#/components/schemas/PokemonEncounter"
+                            },
+                            {
+                              "$ref": "#/components/schemas/MegaEnergyEncounter"
+                            }
+                          ]
+                        }
+                      },
+                      "quest": {
+                        "$ref": "#/components/schemas/Names"
+                      }
+                    },
+                    "required": [
+                      "rewards",
+                      "quest"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/types.json": {
+      "get": {
+        "operationId": "get-api-types.json",
+        "summary": "List all pokemon types",
+        "description": "Receive all pokemon types with damage multiplier and weather boost",
+        "tags": [
+          "Types"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonFullType"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pokemon": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "",
+        "title": "Pokemon",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "formId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dexNr": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "generation": {
+            "type": "integer"
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          },
+          "stats": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PokemonStats"
+              }
+            ],
+            "nullable": true
+          },
+          "primaryType": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "secondaryType": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Type"
+              }
+            ],
+            "nullable": true
+          },
+          "pokemonClass": {
+            "type": "string",
+            "enum": ["POKEMON_CLASS_LEGENDARY", "POKEMON_CLASS_MYTHIC", "POKEMON_CLASS_ULTRA_BEAST"],
+            "nullable": true
+          },
+          "quickMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "cinematicMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "eliteQuickMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "eliteCinematicMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "assets": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Assets"
+              }
+            ],
+            "nullable": true
+          },
+          "assetForms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssetForm"
+            }
+          },
+          "regionForms": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/RegionPokemon"
+            }
+          },
+          "evolutions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evolution"
+            }
+          },
+          "hasGigantamaxEvolution": {
+            "type": "boolean"
+          },
+          "hasMegaEvolution": {
+            "type": "boolean"
+          },
+          "megaEvolutions": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/MegaEvolution"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "formId",
+          "dexNr",
+          "generation",
+          "names",
+          "stats",
+          "primaryType",
+          "secondaryType",
+          "quickMoves",
+          "cinematicMoves",
+          "eliteQuickMoves",
+          "eliteCinematicMoves",
+          "assets",
+          "assetForms",
+          "regionForms",
+          "evolutions",
+          "hasGigantamaxEvolution",
+          "hasMegaEvolution",
+          "megaEvolutions"
+        ]
+      },
+      "Evolution": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "formId": {
+            "type": "string"
+          },
+          "candies": {
+            "type": "integer"
+          },
+          "item": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "names": {
+                "$ref": "#/components/schemas/Names"
+              }
+            },
+            "required": [
+              "id",
+              "names"
+            ]
+          },
+          "quests": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "names": {
+                  "$ref": "#/components/schemas/Names"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "names"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "formId",
+          "candies",
+          "item",
+          "quests"
+        ]
+      },
+      "RegionPokemon": {
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "formId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dexNr": {
+            "type": "integer"
+          },
+          "generation": {
+            "type": "integer"
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          },
+          "stats": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PokemonStats"
+              }
+            ],
+            "nullable": true
+          },
+          "primaryType": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "secondaryType": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Type"
+              }
+            ],
+            "nullable": true
+          },
+          "pokemonClass": {
+            "type": "string",
+            "enum": ["POKEMON_CLASS_LEGENDARY", "POKEMON_CLASS_MYTHIC", "POKEMON_CLASS_ULTRA_BEAST"],
+            "nullable": true
+          },
+          "quickMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "cinematicMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "eliteQuickMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "eliteCinematicMoves": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PokemonMove"
+            }
+          },
+          "assets": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Assets"
+              }
+            ],
+            "nullable": true
+          },
+          "regionForms": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/RegionPokemon"
+            }
+          },
+          "evolutions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Evolution"
+            }
+          },
+          "hasGigantamaxEvolution": {
+            "type": "boolean"
+          },
+          "hasMegaEvolution": {
+            "type": "boolean"
+          },
+          "megaEvolutions": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/MegaEvolution"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "formId",
+          "dexNr",
+          "generation",
+          "names",
+          "stats",
+          "primaryType",
+          "secondaryType",
+          "quickMoves",
+          "cinematicMoves",
+          "eliteQuickMoves",
+          "eliteCinematicMoves",
+          "assets",
+          "regionForms",
+          "evolutions",
+          "hasGigantamaxEvolution",
+          "hasMegaEvolution",
+          "megaEvolutions"
+        ]
+      },
+      "Names": {
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "English": {
+            "type": "string"
+          },
+          "German": {
+            "type": "string"
+          },
+          "French": {
+            "type": "string"
+          },
+          "Italian": {
+            "type": "string"
+          },
+          "Japanese": {
+            "type": "string"
+          },
+          "Korean": {
+            "type": "string"
+          },
+          "Spanish": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "English",
+          "German"
+        ]
+      },
+      "Type": {
+        "description": "",
+        "type": "object",
+        "required": [
+          "type",
+          "names"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          }
+        }
+      },
+      "PokemonStats": {
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "stamina": {
+            "type": "integer"
+          },
+          "attack": {
+            "type": "integer"
+          },
+          "defense": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "stamina",
+          "attack",
+          "defense"
+        ]
+      },
+      "PokemonMove": {
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "power": {
+            "type": "number"
+          },
+          "energy": {
+            "type": "number"
+          },
+          "durationMs": {
+            "type": "number"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          },
+          "combat": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "energy",
+              "power",
+              "turns",
+              "buffs"
+            ],
+            "nullable": true,
+            "properties": {
+              "energy": {
+                "type": "number"
+              },
+              "power": {
+                "type": "number"
+              },
+              "turns": {
+                "type": "number"
+              },
+              "buffs": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "activationChance",
+                  "attackerAttackStatsChange",
+                  "attackerDefenseStatsChange",
+                  "targetAttackStatsChange",
+                  "targetDefenseStatsChange"
+                ],
+                "nullable": true,
+                "properties": {
+                  "activationChance": {
+                    "type": "integer"
+                  },
+                  "attackerAttackStatsChange": {
+                    "type": "integer",
+                    "nullable": true
+                  },
+                  "attackerDefenseStatsChange": {
+                    "type": "integer",
+                    "nullable": true
+                  },
+                  "targetAttackStatsChange": {
+                    "type": "integer",
+                    "nullable": true
+                  },
+                  "targetDefenseStatsChange": {
+                    "type": "integer",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "power",
+          "energy",
+          "durationMs",
+          "type",
+          "names",
+          "combat"
+        ]
+      },
+      "Assets": {
+        "title": "Assets",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "image": {
+            "type": "string",
+            "format": "uri"
+          },
+          "shinyImage": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "image",
+          "shinyImage"
+        ]
+      },
+      "AssetForm": {
+        "title": "AssetWithType",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "image": {
+            "type": "string",
+            "format": "uri"
+          },
+          "shinyImage": {
+            "type": "string",
+            "format": "uri"
+          },
+          "form": {
+            "type": "string",
+            "nullable": true
+          },
+          "costume": {
+            "type": "string",
+            "nullable": true
+          },
+          "isFemale": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "image",
+          "shinyImage",
+          "form",
+          "costume",
+          "isFemale"
+        ]
+      },
+      "MegaEvolution": {
+        "title": "MegaEvolution",
+        "type": "object",
+        "required": [
+          "id",
+          "names",
+          "stats",
+          "primaryType",
+          "secondaryType",
+          "energyCost",
+          "assets"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          },
+          "stats": {
+            "$ref": "#/components/schemas/PokemonStats"
+          },
+          "primaryType": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "secondaryType": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Type"
+              }
+            ],
+            "nullable": true
+          },
+          "energyCost": {
+            "type": "integer"
+          },
+          "assets": {
+            "$ref": "#/components/schemas/Assets"
+          }
+        }
+      },
+      "RaidBossGraphic": {
+        "type": "object",
+        "required": [
+          "svg",
+          "png",
+          "sha512"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "svg": {
+            "type": "string"
+          },
+          "png": {
+            "type": "string"
+          },
+          "sha512": {
+            "type": "string"
+          }
+        }
+      },
+      "RaidBoss": {
+        "description": "",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "form": {
+            "type": "string"
+          },
+          "assets": {
+            "$ref": "#/components/schemas/Assets"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "ex",
+              "mega",
+              "legendary_mega",
+              "ultra_beast",
+              "lvl5",
+              "lvl3",
+              "lvl1",
+              "shadow_lvl1",
+              "shadow_lvl3",
+              "shadow_lvl5"
+            ]
+          },
+          "shiny": {
+            "type": "boolean"
+          },
+          "types": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "counter": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "weather": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "cpRange": {
+            "$ref": "#/components/schemas/CpRange"
+          },
+          "cpRangeBoost": {
+            "$ref": "#/components/schemas/CpRange"
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          },
+          "battleResult": {
+            "type": "object",
+            "properties": {
+              "easy": {
+                "$ref": "#/components/schemas/BattleResult"
+              },
+              "normal": {
+                "$ref": "#/components/schemas/BattleResult"
+              },
+              "hard": {
+                "$ref": "#/components/schemas/BattleResult"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "form",
+          "assets",
+          "level",
+          "shiny",
+          "types",
+          "counter",
+          "weather",
+          "cpRange",
+          "cpRangeBoost",
+          "names",
+          "battleResult"
+        ]
+      },
+      "MaxBattle": {
+        "description": "MaxBattle Pokemon",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "assets": {
+            "$ref": "#/components/schemas/Assets"
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "shiny": {
+            "type": "boolean"
+          },
+          "types": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "cpRange": {
+            "$ref": "#/components/schemas/CpRange"
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          }
+        },
+        "required": [
+          "id",
+          "assets",
+          "level",
+          "shiny",
+          "types",
+          "cpRange",
+          "names"
+        ]
+      },
+      "BattleResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "friendshipLevel": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4
+          },
+          "pokemonLevel": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 50
+          },
+          "totalEstimator": {
+            "type": "number",
+            "format": "double",
+            "minimum": 0,
+            "maximum": 20
+          }
+        },
+        "required": [
+          "name",
+          "friendshipLevel",
+          "pokemonLevel",
+          "totalEstimator"
+        ]
+      },
+      "CpRange": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "MegaEnergyEncounter": {
+        "type": "object",
+        "title": "Mega Energy",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MEGA_ENERGY"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "energy": {
+            "type": "integer"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Names"
+          }
+        },
+        "required": [
+          "type",
+          "id",
+          "energy",
+          "name"
+        ]
+      },
+      "PokemonEncounter": {
+        "type": "object",
+        "title": "Encounter",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "POKEMON"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "shiny": {
+            "type": "boolean"
+          },
+          "cpRange": {
+            "$ref": "#/components/schemas/CpRange"
+          },
+          "assets": {
+            "$ref": "#/components/schemas/Assets"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Names"
+          }
+        },
+        "required": [
+          "type",
+          "id",
+          "shiny",
+          "cpRange",
+          "assets",
+          "name"
+        ]
+      },
+      "PokemonFullType": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "names": {
+            "$ref": "#/components/schemas/Names"
+          },
+          "doubleDamageFrom": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "halfDamageFrom": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "noDamageFrom": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "weatherBoost": {
+            "type": "object",
+            "required": [
+              "id",
+              "names",
+              "assetName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "names": {
+                "$ref": "#/components/schemas/Names"
+              },
+              "assetName": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "required": [
+          "type",
+          "names",
+          "doubleDamageFrom",
+          "halfDamageFrom",
+          "noDamageFrom",
+          "weatherBoost"
+        ]
+      }
+    }
+  }
+}

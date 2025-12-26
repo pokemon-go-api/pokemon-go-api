@@ -1,0 +1,229 @@
+{
+    "id": "THIEVUL",
+    "formId": "THIEVUL",
+    "dexNr": 828,
+    "generation": 8,
+    "names": {
+        "English": "Thievul",
+        "German": "Gaunux",
+        "French": "Roublenard",
+        "Italian": "Thievul",
+        "Japanese": "\u30d5\u30a9\u30af\u30b9\u30e9\u30a4",
+        "Korean": "\ud3ed\uc2ac\ub77c\uc774",
+        "Spanish": "Thievul"
+    },
+    "stats": {
+        "stamina": 172,
+        "attack": 172,
+        "defense": 164
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_DARK",
+        "names": {
+            "English": "Dark",
+            "German": "Unlicht",
+            "French": "T\u00e9n\u00e8bres",
+            "Italian": "Buio",
+            "Japanese": "\u3042\u304f",
+            "Korean": "\uc545",
+            "Spanish": "Siniestro"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "SUCKER_PUNCH_FAST": {
+            "id": "SUCKER_PUNCH_FAST",
+            "power": 5,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Sucker Punch",
+                "German": "Tiefschlag",
+                "French": "Coup Bas",
+                "Italian": "Sbigoattacco",
+                "Japanese": "\u3075\u3044\u3046\u3061",
+                "Korean": "\uae30\uc2b5",
+                "Spanish": "Golpe Bajo"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 8,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "SNARL_FAST": {
+            "id": "SNARL_FAST",
+            "power": 11,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Snarl",
+                "German": "Standpauke",
+                "French": "Aboiement",
+                "Italian": "Urlorabbia",
+                "Japanese": "\u30d0\u30fc\u30af\u30a2\u30a6\u30c8",
+                "Korean": "\ubc14\ud06c\uc544\uc6c3",
+                "Spanish": "Alarido"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "QUICK_ATTACK_FAST": {
+            "id": "QUICK_ATTACK_FAST",
+            "power": 10,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Quick Attack",
+                "German": "Ruckzuckhieb",
+                "French": "Vive-Attaque",
+                "Italian": "Attacco Rapido",
+                "Japanese": "\u3067\u3093\u3053\u3046\u305b\u3063\u304b",
+                "Korean": "\uc804\uad11\uc11d\ud654",
+                "Spanish": "Ataque R\u00e1pido"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "NIGHT_SLASH": {
+            "id": "NIGHT_SLASH",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Night Slash",
+                "German": "Nachthieb",
+                "French": "Tranche-Nuit",
+                "Italian": "Nottesferza",
+                "Japanese": "\u3064\u3058\u304e\u308a",
+                "Korean": "\uae5c\uc9dd\ubca0\uae30",
+                "Spanish": "Tajo Umbr\u00edo"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 50,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 12,
+                    "attackerAttackStatsChange": 2,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "PLAY_ROUGH": {
+            "id": "PLAY_ROUGH",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Play Rough",
+                "German": "Knuddler",
+                "French": "C\u00e2linerie",
+                "Italian": "Carineria",
+                "Japanese": "\u3058\u3083\u308c\u3064\u304f",
+                "Korean": "\uce58\uadfc\uac70\ub9ac\uae30",
+                "Spanish": "Caranto\u00f1a"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm828.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm828.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm828.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm828.s.icon.png"
+        }
+    ]
+}

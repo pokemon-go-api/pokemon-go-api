@@ -1,0 +1,156 @@
+{
+    "id": "TOXEL",
+    "formId": "TOXEL",
+    "dexNr": 848,
+    "generation": 8,
+    "names": {
+        "English": "Toxel",
+        "German": "Toxel",
+        "French": "Toxizap",
+        "Italian": "Toxel",
+        "Japanese": "\u30a8\u30ec\u30ba\u30f3",
+        "Korean": "\uc77c\ub808\uc98c",
+        "Spanish": "Toxel"
+    },
+    "stats": {
+        "stamina": 120,
+        "attack": 97,
+        "defense": 65
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ACID_FAST": {
+            "id": "ACID_FAST",
+            "power": 11,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Acid",
+                "German": "S\u00e4ure",
+                "French": "Acide",
+                "Italian": "Acido",
+                "Japanese": "\u3088\u3046\u304b\u3044\u3048\u304d",
+                "Korean": "\uc6a9\ud574\uc561",
+                "Spanish": "\u00c1cido"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "POWER_UP_PUNCH": {
+            "id": "POWER_UP_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Power-Up Punch",
+                "German": "Steigerungshieb",
+                "French": "Poing Boost",
+                "Italian": "Crescipugno",
+                "Japanese": "\u30b0\u30ed\u30a6\u30d1\u30f3\u30c1",
+                "Korean": "\uadf8\ub85c\uc6b0\ud380\uce58",
+                "Spanish": "Pu\u00f1o Incremento"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 20,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm848.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm848.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "TOXTRICITY",
+            "formId": "TOXTRICITY_LOW_KEY",
+            "candies": 400,
+            "item": null,
+            "quests": []
+        },
+        {
+            "id": "TOXTRICITY",
+            "formId": "TOXTRICITY_AMPED",
+            "candies": 400,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm848.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm848.s.icon.png"
+        }
+    ]
+}

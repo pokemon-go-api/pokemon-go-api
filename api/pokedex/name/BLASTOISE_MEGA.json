@@ -1,0 +1,400 @@
+{
+    "id": "BLASTOISE",
+    "formId": "BLASTOISE",
+    "dexNr": 9,
+    "generation": 1,
+    "names": {
+        "English": "Blastoise",
+        "German": "Turtok",
+        "French": "Tortank",
+        "Italian": "Blastoise",
+        "Japanese": "\u30ab\u30e1\u30c3\u30af\u30b9",
+        "Korean": "\uac70\ubd81\uc655",
+        "Spanish": "Blastoise"
+    },
+    "stats": {
+        "stamina": 188,
+        "attack": 171,
+        "defense": 207
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "WATER_GUN_FAST": {
+            "id": "WATER_GUN_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Water Gun",
+                "German": "Aquaknarre",
+                "French": "Pistolet \u00e0 O",
+                "Italian": "Pistolacqua",
+                "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                "Korean": "\ubb3c\ub300\ud3ec",
+                "Spanish": "Pistola Agua"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BITE_FAST": {
+            "id": "BITE_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Bite",
+                "German": "Biss",
+                "French": "Morsure",
+                "Italian": "Morso",
+                "Japanese": "\u304b\u307f\u3064\u304f",
+                "Korean": "\ubb3c\uae30",
+                "Spanish": "Mordisco"
+            },
+            "combat": {
+                "energy": 2,
+                "power": 4,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ROLLOUT_FAST": {
+            "id": "ROLLOUT_FAST",
+            "power": 15,
+            "energy": 19,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "Roca"
+                }
+            },
+            "names": {
+                "English": "Rollout",
+                "German": "Walzer",
+                "French": "Roulade",
+                "Italian": "Rotolamento",
+                "Japanese": "\u3053\u308d\u304c\u308b",
+                "Korean": "\uad6c\ub974\uae30",
+                "Spanish": "Desenrollar"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 7,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "FLASH_CANNON": {
+            "id": "FLASH_CANNON",
+            "power": 100,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_STEEL",
+                "names": {
+                    "English": "Steel",
+                    "German": "Stahl",
+                    "French": "Acier",
+                    "Italian": "Acciaio",
+                    "Japanese": "\u306f\u304c\u306d",
+                    "Korean": "\uac15\ucca0",
+                    "Spanish": "Acero"
+                }
+            },
+            "names": {
+                "English": "Flash Cannon",
+                "German": "Lichtkanone",
+                "French": "Luminocanon",
+                "Italian": "Cannonflash",
+                "Japanese": "\u30e9\u30b9\u30bf\u30fc\u30ab\u30ce\u30f3",
+                "Korean": "\ub7ec\uc2a4\ud130\uce90\ub17c",
+                "Spanish": "Foco Resplandor"
+            },
+            "combat": {
+                "energy": -70,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ICE_BEAM": {
+            "id": "ICE_BEAM",
+            "power": 95,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Ice Beam",
+                "German": "Eisstrahl",
+                "French": "Laser Glace",
+                "Italian": "Geloraggio",
+                "Japanese": "\u308c\u3044\u3068\u3046\u30d3\u30fc\u30e0",
+                "Korean": "\ub0c9\ub3d9\ube54",
+                "Spanish": "Rayo Hielo"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "HYDRO_PUMP": {
+            "id": "HYDRO_PUMP",
+            "power": 135,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Hydro Pump",
+                "German": "Hydropumpe",
+                "French": "Hydrocanon",
+                "Italian": "Idropompa",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                "Spanish": "Hidrobomba"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SKULL_BASH": {
+            "id": "SKULL_BASH",
+            "power": 130,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Skull Bash",
+                "German": "Sch\u00e4delwumme",
+                "French": "Coud\u2019Kr\u00e2ne",
+                "Italian": "Capocciata",
+                "Japanese": "\u30ed\u30b1\u30c3\u30c8\u305a\u3064\u304d",
+                "Korean": "\ub85c\ucf13\ubc15\uce58\uae30",
+                "Spanish": "Cabezazo"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": 1,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": {
+        "HYDRO_CANNON": {
+            "id": "HYDRO_CANNON",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Hydro Cannon",
+                "German": "Aquahaubitze",
+                "French": "Hydroblast",
+                "Italian": "Idrocannone",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30ab\u30ce\u30f3",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\uce90\ub17c",
+                "Spanish": "Hidroca\u00f1\u00f3n"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": true,
+    "megaEvolutions": {
+        "BLASTOISE_MEGA": {
+            "id": "BLASTOISE_MEGA",
+            "names": {
+                "English": "Mega Blastoise",
+                "German": "Mega-Turtok",
+                "French": "M\u00e9ga-Tortank",
+                "Italian": "MegaBlastoise",
+                "Japanese": "\u30e1\u30ac\u30ab\u30e1\u30c3\u30af\u30b9",
+                "Korean": "\uba54\uac00\uac70\ubd81\uc655",
+                "Spanish": "Mega-Blastoise"
+            },
+            "stats": {
+                "stamina": 188,
+                "attack": 264,
+                "defense": 237
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "secondaryType": null,
+            "energyCost": 200,
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fMEGA.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fMEGA.s.icon.png"
+            }
+        }
+    },
+    "hasGigantamaxEvolution": true,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": "JAN_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.cJAN_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.cJAN_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SUMMER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.cSUMMER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.cSUMMER_2018.s.icon.png"
+        },
+        {
+            "form": "COPY_2019",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fCOPY_2019.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fCOPY_2019.s.icon.png"
+        },
+        {
+            "form": "GIGANTAMAX",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fGIGANTAMAX.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fGIGANTAMAX.s.icon.png"
+        },
+        {
+            "form": "MEGA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fMEGA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.fMEGA.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm9.s.icon.png"
+        }
+    ]
+}

@@ -1,0 +1,3447 @@
+{
+    "id": "UNOWN",
+    "formId": "UNOWN",
+    "dexNr": 201,
+    "generation": 2,
+    "names": {
+        "English": "Unown",
+        "German": "Icognito",
+        "French": "Zarbi",
+        "Italian": "Unown",
+        "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+        "Korean": "\uc548\ub18d",
+        "Spanish": "Unown"
+    },
+    "stats": {
+        "stamina": 134,
+        "attack": 136,
+        "defense": 91
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_PSYCHIC",
+        "names": {
+            "English": "Psychic",
+            "German": "Psycho",
+            "French": "Psy",
+            "Italian": "Psico",
+            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+            "Korean": "\uc5d0\uc2a4\ud37c",
+            "Spanish": "Ps\u00edquico"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "HIDDEN_POWER_FAST": {
+            "id": "HIDDEN_POWER_FAST",
+            "power": 15,
+            "energy": 15,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Hidden Power",
+                "German": "Kraftreserve",
+                "French": "Puissance Cach\u00e9e",
+                "Italian": "Introforza",
+                "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                "Spanish": "Poder Oculto"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "STRUGGLE": {
+            "id": "STRUGGLE",
+            "power": 35,
+            "energy": 0,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Struggle",
+                "German": "Verzweifler",
+                "French": "Lutte",
+                "Italian": "Scontro",
+                "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                "Korean": "\ubc1c\ubc84\ub465",
+                "Spanish": "Combate"
+            },
+            "combat": {
+                "energy": -100,
+                "power": 35,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": {
+        "UNOWN_A": {
+            "id": "UNOWN",
+            "formId": "UNOWN_A",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_B": {
+            "id": "UNOWN",
+            "formId": "UNOWN_B",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_C": {
+            "id": "UNOWN",
+            "formId": "UNOWN_C",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_D": {
+            "id": "UNOWN",
+            "formId": "UNOWN_D",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_E": {
+            "id": "UNOWN",
+            "formId": "UNOWN_E",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_EXCLAMATION_POINT": {
+            "id": "UNOWN",
+            "formId": "UNOWN_EXCLAMATION_POINT",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_F": {
+            "id": "UNOWN",
+            "formId": "UNOWN_F",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_G": {
+            "id": "UNOWN",
+            "formId": "UNOWN_G",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_H": {
+            "id": "UNOWN",
+            "formId": "UNOWN_H",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_I": {
+            "id": "UNOWN",
+            "formId": "UNOWN_I",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_J": {
+            "id": "UNOWN",
+            "formId": "UNOWN_J",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_K": {
+            "id": "UNOWN",
+            "formId": "UNOWN_K",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_L": {
+            "id": "UNOWN",
+            "formId": "UNOWN_L",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_M": {
+            "id": "UNOWN",
+            "formId": "UNOWN_M",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_N": {
+            "id": "UNOWN",
+            "formId": "UNOWN_N",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_O": {
+            "id": "UNOWN",
+            "formId": "UNOWN_O",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_P": {
+            "id": "UNOWN",
+            "formId": "UNOWN_P",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_Q": {
+            "id": "UNOWN",
+            "formId": "UNOWN_Q",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_QUESTION_MARK": {
+            "id": "UNOWN",
+            "formId": "UNOWN_QUESTION_MARK",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_R": {
+            "id": "UNOWN",
+            "formId": "UNOWN_R",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_S": {
+            "id": "UNOWN",
+            "formId": "UNOWN_S",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_T": {
+            "id": "UNOWN",
+            "formId": "UNOWN_T",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_U": {
+            "id": "UNOWN",
+            "formId": "UNOWN_U",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_V": {
+            "id": "UNOWN",
+            "formId": "UNOWN_V",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_W": {
+            "id": "UNOWN",
+            "formId": "UNOWN_W",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_X": {
+            "id": "UNOWN",
+            "formId": "UNOWN_X",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_Y": {
+            "id": "UNOWN",
+            "formId": "UNOWN_Y",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "UNOWN_Z": {
+            "id": "UNOWN",
+            "formId": "UNOWN_Z",
+            "dexNr": 201,
+            "generation": 2,
+            "names": {
+                "English": "Unown",
+                "German": "Icognito",
+                "French": "Zarbi",
+                "Italian": "Unown",
+                "Japanese": "\u30a2\u30f3\u30ce\u30fc\u30f3",
+                "Korean": "\uc548\ub18d",
+                "Spanish": "Unown"
+            },
+            "stats": {
+                "stamina": 134,
+                "attack": 136,
+                "defense": 91
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "HIDDEN_POWER_FAST": {
+                    "id": "HIDDEN_POWER_FAST",
+                    "power": 15,
+                    "energy": 15,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hidden Power",
+                        "German": "Kraftreserve",
+                        "French": "Puissance Cach\u00e9e",
+                        "Italian": "Introforza",
+                        "Japanese": "\u3081\u3056\u3081\u308b\u30d1\u30ef\u30fc",
+                        "Korean": "\uc7a0\uc7ac\ud30c\uc6cc",
+                        "Spanish": "Poder Oculto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "UNOWN_A",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_A.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_A.s.icon.png"
+        },
+        {
+            "form": "UNOWN_B",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_B.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_B.s.icon.png"
+        },
+        {
+            "form": "UNOWN_C",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_C.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_C.s.icon.png"
+        },
+        {
+            "form": "UNOWN_D",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_D.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_D.s.icon.png"
+        },
+        {
+            "form": "UNOWN_E",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_E.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_E.s.icon.png"
+        },
+        {
+            "form": "UNOWN_EXCLAMATION_POINT",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_EXCLAMATION_POINT.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_EXCLAMATION_POINT.s.icon.png"
+        },
+        {
+            "form": "UNOWN_F",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_F.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_F.s.icon.png"
+        },
+        {
+            "form": "UNOWN_G",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_G.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_G.s.icon.png"
+        },
+        {
+            "form": "UNOWN_H",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_H.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_H.s.icon.png"
+        },
+        {
+            "form": "UNOWN_I",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_I.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_I.s.icon.png"
+        },
+        {
+            "form": "UNOWN_J",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_J.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_J.s.icon.png"
+        },
+        {
+            "form": "UNOWN_K",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_K.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_K.s.icon.png"
+        },
+        {
+            "form": "UNOWN_L",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_L.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_L.s.icon.png"
+        },
+        {
+            "form": "UNOWN_M",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_M.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_M.s.icon.png"
+        },
+        {
+            "form": "UNOWN_N",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_N.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_N.s.icon.png"
+        },
+        {
+            "form": "UNOWN_O",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_O.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_O.s.icon.png"
+        },
+        {
+            "form": "UNOWN_P",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_P.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_P.s.icon.png"
+        },
+        {
+            "form": "UNOWN_Q",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_Q.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_Q.s.icon.png"
+        },
+        {
+            "form": "UNOWN_QUESTION_MARK",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_QUESTION_MARK.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_QUESTION_MARK.s.icon.png"
+        },
+        {
+            "form": "UNOWN_R",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_R.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_R.s.icon.png"
+        },
+        {
+            "form": "UNOWN_S",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_S.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_S.s.icon.png"
+        },
+        {
+            "form": "UNOWN_T",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_T.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_T.s.icon.png"
+        },
+        {
+            "form": "UNOWN_U",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_U.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_U.s.icon.png"
+        },
+        {
+            "form": "UNOWN_V",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_V.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_V.s.icon.png"
+        },
+        {
+            "form": "UNOWN_W",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_W.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_W.s.icon.png"
+        },
+        {
+            "form": "UNOWN_X",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_X.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_X.s.icon.png"
+        },
+        {
+            "form": "UNOWN_Y",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_Y.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_Y.s.icon.png"
+        },
+        {
+            "form": "UNOWN_Z",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_Z.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_Z.s.icon.png"
+        }
+    ]
+}

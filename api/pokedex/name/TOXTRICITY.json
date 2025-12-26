@@ -1,0 +1,951 @@
+{
+    "id": "TOXTRICITY",
+    "formId": "TOXTRICITY",
+    "dexNr": 849,
+    "generation": 8,
+    "names": {
+        "English": "Toxtricity",
+        "German": "Riffex",
+        "French": "Salarsen",
+        "Italian": "Toxtricity",
+        "Japanese": "\u30b9\u30c8\u30ea\u30f3\u30c0\u30fc",
+        "Korean": "\uc2a4\ud2b8\ub9b0\ub354",
+        "Spanish": "Toxtricity"
+    },
+    "stats": {
+        "stamina": 181,
+        "attack": 224,
+        "defense": 140
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ACID_FAST": {
+            "id": "ACID_FAST",
+            "power": 11,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Acid",
+                "German": "S\u00e4ure",
+                "French": "Acide",
+                "Italian": "Acido",
+                "Japanese": "\u3088\u3046\u304b\u3044\u3048\u304d",
+                "Korean": "\uc6a9\ud574\uc561",
+                "Spanish": "\u00c1cido"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "SPARK_FAST": {
+            "id": "SPARK_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Spark",
+                "German": "Funkensprung",
+                "French": "\u00c9tincelle",
+                "Italian": "Scintilla",
+                "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                "Korean": "\uc2a4\ud30c\ud06c",
+                "Spanish": "Chispa"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "POISON_JAB_FAST": {
+            "id": "POISON_JAB_FAST",
+            "power": 13,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Poison Jab",
+                "German": "Gifthieb",
+                "French": "Direct Toxik",
+                "Italian": "Velenpuntura",
+                "Japanese": "\u3069\u304f\u3065\u304d",
+                "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                "Spanish": "Puya Nociva"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 7,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "ACID_SPRAY": {
+            "id": "ACID_SPRAY",
+            "power": 20,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Acid Spray",
+                "German": "S\u00e4urespeier",
+                "French": "Bombe Acide",
+                "Italian": "Acidobomba",
+                "Japanese": "\u30a2\u30b7\u30c3\u30c9\u30dc\u30e0",
+                "Korean": "\uc560\uc2dc\ub4dc\ubd04",
+                "Spanish": "Bomba \u00c1cida"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 20,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -2
+                }
+            }
+        },
+        "DISCHARGE": {
+            "id": "DISCHARGE",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Discharge",
+                "German": "Ladungssto\u00df",
+                "French": "Coup d\u2019Jus",
+                "Italian": "Scarica",
+                "Japanese": "\u307b\u3046\u3067\u3093",
+                "Korean": "\ubc29\uc804",
+                "Spanish": "Chispazo"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "WILD_CHARGE": {
+            "id": "WILD_CHARGE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Wild Charge",
+                "German": "Stromsto\u00df",
+                "French": "\u00c9clair Fou",
+                "Italian": "Sprizzalampo",
+                "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                "Spanish": "Voltio Cruel"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": -2,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "POWER_UP_PUNCH": {
+            "id": "POWER_UP_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Power-Up Punch",
+                "German": "Steigerungshieb",
+                "French": "Poing Boost",
+                "Italian": "Crescipugno",
+                "Japanese": "\u30b0\u30ed\u30a6\u30d1\u30f3\u30c1",
+                "Korean": "\uadf8\ub85c\uc6b0\ud380\uce58",
+                "Spanish": "Pu\u00f1o Incremento"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 20,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fLOW_KEY.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fLOW_KEY.s.icon.png"
+    },
+    "regionForms": {
+        "TOXTRICITY_AMPED": {
+            "id": "TOXTRICITY",
+            "formId": "TOXTRICITY_AMPED",
+            "dexNr": 849,
+            "generation": 8,
+            "names": {
+                "English": "Toxtricity (Amped Form)",
+                "German": "Riffex (Hoch-Form)",
+                "French": "Salarsen (Amped Form)",
+                "Italian": "Toxtricity (Forma Melodia)",
+                "Japanese": "\u30b9\u30c8\u30ea\u30f3\u30c0\u30fc (\u30cf\u30a4\u306a\u3059\u304c\u305f)",
+                "Korean": "\uc2a4\ud2b8\ub9b0\ub354 (\ud558\uc774\ud55c \ubaa8\uc2b5)",
+                "Spanish": "Toxtricity (Forma Aguda)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 224,
+                "defense": 140
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "ACID_FAST": {
+                    "id": "ACID_FAST",
+                    "power": 11,
+                    "energy": 10,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Acid",
+                        "German": "S\u00e4ure",
+                        "French": "Acide",
+                        "Italian": "Acido",
+                        "Japanese": "\u3088\u3046\u304b\u3044\u3048\u304d",
+                        "Korean": "\uc6a9\ud574\uc561",
+                        "Spanish": "\u00c1cido"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "SPARK_FAST": {
+                    "id": "SPARK_FAST",
+                    "power": 4,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Spark",
+                        "German": "Funkensprung",
+                        "French": "\u00c9tincelle",
+                        "Italian": "Scintilla",
+                        "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                        "Korean": "\uc2a4\ud30c\ud06c",
+                        "Spanish": "Chispa"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "POISON_JAB_FAST": {
+                    "id": "POISON_JAB_FAST",
+                    "power": 13,
+                    "energy": 9,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Poison Jab",
+                        "German": "Gifthieb",
+                        "French": "Direct Toxik",
+                        "Italian": "Velenpuntura",
+                        "Japanese": "\u3069\u304f\u3065\u304d",
+                        "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                        "Spanish": "Puya Nociva"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 7,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "ACID_SPRAY": {
+                    "id": "ACID_SPRAY",
+                    "power": 20,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Acid Spray",
+                        "German": "S\u00e4urespeier",
+                        "French": "Bombe Acide",
+                        "Italian": "Acidobomba",
+                        "Japanese": "\u30a2\u30b7\u30c3\u30c9\u30dc\u30e0",
+                        "Korean": "\uc560\uc2dc\ub4dc\ubd04",
+                        "Spanish": "Bomba \u00c1cida"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 20,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -2
+                        }
+                    }
+                },
+                "DISCHARGE": {
+                    "id": "DISCHARGE",
+                    "power": 65,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Discharge",
+                        "German": "Ladungssto\u00df",
+                        "French": "Coup d\u2019Jus",
+                        "Italian": "Scarica",
+                        "Japanese": "\u307b\u3046\u3067\u3093",
+                        "Korean": "\ubc29\uc804",
+                        "Spanish": "Chispazo"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 55,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "WILD_CHARGE": {
+                    "id": "WILD_CHARGE",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Wild Charge",
+                        "German": "Stromsto\u00df",
+                        "French": "\u00c9clair Fou",
+                        "Italian": "Sprizzalampo",
+                        "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                        "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                        "Spanish": "Voltio Cruel"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": -2,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "POWER_UP_PUNCH": {
+                    "id": "POWER_UP_PUNCH",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Power-Up Punch",
+                        "German": "Steigerungshieb",
+                        "French": "Poing Boost",
+                        "Italian": "Crescipugno",
+                        "Japanese": "\u30b0\u30ed\u30a6\u30d1\u30f3\u30c1",
+                        "Korean": "\uadf8\ub85c\uc6b0\ud380\uce58",
+                        "Spanish": "Pu\u00f1o Incremento"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 20,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fAMPED.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fAMPED.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": true
+        },
+        "TOXTRICITY_LOW_KEY": {
+            "id": "TOXTRICITY",
+            "formId": "TOXTRICITY_LOW_KEY",
+            "dexNr": 849,
+            "generation": 8,
+            "names": {
+                "English": "Toxtricity (Low Key Form)",
+                "German": "Riffex (Tief-Form)",
+                "French": "Salarsen (Low Key Form)",
+                "Italian": "Toxtricity (Forma Basso)",
+                "Japanese": "\u30b9\u30c8\u30ea\u30f3\u30c0\u30fc (\u30ed\u30fc\u306a\u3059\u304c\u305f)",
+                "Korean": "\uc2a4\ud2b8\ub9b0\ub354 (Low Key Form)",
+                "Spanish": "Toxtricity (Forma Grave)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 224,
+                "defense": 140
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "ACID_FAST": {
+                    "id": "ACID_FAST",
+                    "power": 11,
+                    "energy": 10,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Acid",
+                        "German": "S\u00e4ure",
+                        "French": "Acide",
+                        "Italian": "Acido",
+                        "Japanese": "\u3088\u3046\u304b\u3044\u3048\u304d",
+                        "Korean": "\uc6a9\ud574\uc561",
+                        "Spanish": "\u00c1cido"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "SPARK_FAST": {
+                    "id": "SPARK_FAST",
+                    "power": 4,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Spark",
+                        "German": "Funkensprung",
+                        "French": "\u00c9tincelle",
+                        "Italian": "Scintilla",
+                        "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                        "Korean": "\uc2a4\ud30c\ud06c",
+                        "Spanish": "Chispa"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "POISON_JAB_FAST": {
+                    "id": "POISON_JAB_FAST",
+                    "power": 13,
+                    "energy": 9,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Poison Jab",
+                        "German": "Gifthieb",
+                        "French": "Direct Toxik",
+                        "Italian": "Velenpuntura",
+                        "Japanese": "\u3069\u304f\u3065\u304d",
+                        "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                        "Spanish": "Puya Nociva"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 7,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "ACID_SPRAY": {
+                    "id": "ACID_SPRAY",
+                    "power": 20,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Acid Spray",
+                        "German": "S\u00e4urespeier",
+                        "French": "Bombe Acide",
+                        "Italian": "Acidobomba",
+                        "Japanese": "\u30a2\u30b7\u30c3\u30c9\u30dc\u30e0",
+                        "Korean": "\uc560\uc2dc\ub4dc\ubd04",
+                        "Spanish": "Bomba \u00c1cida"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 20,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -2
+                        }
+                    }
+                },
+                "DISCHARGE": {
+                    "id": "DISCHARGE",
+                    "power": 65,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Discharge",
+                        "German": "Ladungssto\u00df",
+                        "French": "Coup d\u2019Jus",
+                        "Italian": "Scarica",
+                        "Japanese": "\u307b\u3046\u3067\u3093",
+                        "Korean": "\ubc29\uc804",
+                        "Spanish": "Chispazo"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 55,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "WILD_CHARGE": {
+                    "id": "WILD_CHARGE",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Wild Charge",
+                        "German": "Stromsto\u00df",
+                        "French": "\u00c9clair Fou",
+                        "Italian": "Sprizzalampo",
+                        "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                        "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                        "Spanish": "Voltio Cruel"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": -2,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "POWER_UP_PUNCH": {
+                    "id": "POWER_UP_PUNCH",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Power-Up Punch",
+                        "German": "Steigerungshieb",
+                        "French": "Poing Boost",
+                        "Italian": "Crescipugno",
+                        "Japanese": "\u30b0\u30ed\u30a6\u30d1\u30f3\u30c1",
+                        "Korean": "\uadf8\ub85c\uc6b0\ud380\uce58",
+                        "Spanish": "Pu\u00f1o Incremento"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 20,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fLOW_KEY.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fLOW_KEY.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": true
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": true,
+    "assetForms": [
+        {
+            "form": "AMPED",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fAMPED.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fAMPED.s.icon.png"
+        },
+        {
+            "form": "GIGANTAMAX",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fGIGANTAMAX.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fGIGANTAMAX.s.icon.png"
+        },
+        {
+            "form": "LOW_KEY",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fLOW_KEY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm849.fLOW_KEY.s.icon.png"
+        }
+    ]
+}

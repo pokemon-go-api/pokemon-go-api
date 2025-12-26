@@ -1,0 +1,1065 @@
+{
+    "id": "RAICHU",
+    "formId": "RAICHU",
+    "dexNr": 26,
+    "generation": 1,
+    "names": {
+        "English": "Raichu",
+        "German": "Raichu",
+        "French": "Raichu",
+        "Italian": "Raichu",
+        "Japanese": "\u30e9\u30a4\u30c1\u30e5\u30a6",
+        "Korean": "\ub77c\uc774\uce04",
+        "Spanish": "Raichu"
+    },
+    "stats": {
+        "stamina": 155,
+        "attack": 193,
+        "defense": 151
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "VOLT_SWITCH_FAST": {
+            "id": "VOLT_SWITCH_FAST",
+            "power": 13,
+            "energy": 20,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Volt Switch",
+                "German": "Voltwechsel",
+                "French": "Change \u00c9clair",
+                "Italian": "Invertivolt",
+                "Japanese": "\u30dc\u30eb\u30c8\u30c1\u30a7\u30f3\u30b8",
+                "Korean": "\ubcfc\ud2b8\uccb4\uc778\uc9c0",
+                "Spanish": "Voltiocambio"
+            },
+            "combat": {
+                "energy": 16,
+                "power": 14,
+                "turns": 4,
+                "buffs": null
+            }
+        },
+        "SPARK_FAST": {
+            "id": "SPARK_FAST",
+            "power": 4,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Spark",
+                "German": "Funkensprung",
+                "French": "\u00c9tincelle",
+                "Italian": "Scintilla",
+                "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                "Korean": "\uc2a4\ud30c\ud06c",
+                "Spanish": "Chispa"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "CHARM_FAST": {
+            "id": "CHARM_FAST",
+            "power": 20,
+            "energy": 11,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Charm",
+                "German": "Charme",
+                "French": "Charme",
+                "Italian": "Fascino",
+                "Japanese": "\u3042\u307e\u3048\u308b",
+                "Korean": "\uc560\uad50\ubd80\ub9ac\uae30",
+                "Spanish": "Encanto"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 13,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "THUNDER_SHOCK_FAST": {
+            "id": "THUNDER_SHOCK_FAST",
+            "power": 4,
+            "energy": 7,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder Shock",
+                "German": "Donnerschock",
+                "French": "\u00c9clair",
+                "Italian": "Tuonoshock",
+                "Japanese": "\u3067\u3093\u304d\u30b7\u30e7\u30c3\u30af",
+                "Korean": "\uc804\uae30\uc1fc\ud06c",
+                "Spanish": "Impactrueno"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "BRICK_BREAK": {
+            "id": "BRICK_BREAK",
+            "power": 40,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Brick Break",
+                "German": "Durchbruch",
+                "French": "Casse-Brique",
+                "Italian": "Breccia",
+                "Japanese": "\u304b\u308f\u3089\u308f\u308a",
+                "Korean": "\uae68\ud2b8\ub9ac\uae30",
+                "Spanish": "Demolici\u00f3n"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 50,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "THUNDER_PUNCH": {
+            "id": "THUNDER_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder Punch",
+                "German": "Donnerschlag",
+                "French": "Poing \u00c9clair",
+                "Italian": "Tuonopugno",
+                "Japanese": "\u304b\u307f\u306a\u308a\u30d1\u30f3\u30c1",
+                "Korean": "\ubc88\uac1c\ud380\uce58",
+                "Spanish": "Pu\u00f1o Trueno"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "WILD_CHARGE": {
+            "id": "WILD_CHARGE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Wild Charge",
+                "German": "Stromsto\u00df",
+                "French": "\u00c9clair Fou",
+                "Italian": "Sprizzalampo",
+                "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                "Spanish": "Voltio Cruel"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": -2,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "SKULL_BASH": {
+            "id": "SKULL_BASH",
+            "power": 130,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Skull Bash",
+                "German": "Sch\u00e4delwumme",
+                "French": "Coud\u2019Kr\u00e2ne",
+                "Italian": "Capocciata",
+                "Japanese": "\u30ed\u30b1\u30c3\u30c8\u305a\u3064\u304d",
+                "Korean": "\ub85c\ucf13\ubc15\uce58\uae30",
+                "Spanish": "Cabezazo"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": 1,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "TRAILBLAZE": {
+            "id": "TRAILBLAZE",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Trailblaze",
+                "German": "Wegbereiter",
+                "French": "D\u00e9sherbaffe",
+                "Italian": "Apripista",
+                "Japanese": "\u304f\u3055\u308f\u3051",
+                "Korean": "\uac1c\ucc99\ud558\uae30",
+                "Spanish": "Abrecaminos"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 65,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "SURF": {
+            "id": "SURF",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Surf",
+                "German": "Surfer",
+                "French": "Surf",
+                "Italian": "Surf",
+                "Japanese": "\u306a\u307f\u306e\u308a",
+                "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                "Spanish": "Surf"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": {
+        "THUNDER": {
+            "id": "THUNDER",
+            "power": 100,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder",
+                "German": "Donner",
+                "French": "Fatal-Foudre",
+                "Italian": "Tuono",
+                "Japanese": "\u304b\u307f\u306a\u308a",
+                "Korean": "\ubc88\uac1c",
+                "Spanish": "Trueno"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.s.icon.png"
+    },
+    "regionForms": {
+        "RAICHU_ALOLA": {
+            "id": "RAICHU",
+            "formId": "RAICHU_ALOLA",
+            "dexNr": 26,
+            "generation": 1,
+            "names": {
+                "English": "Alolan Raichu",
+                "German": "Alola-Raichu",
+                "French": "Raichu d'Alola",
+                "Italian": "Raichu di Alola",
+                "Japanese": "\u30a2\u30ed\u30fc\u30e9 \u30e9\u30a4\u30c1\u30e5\u30a6",
+                "Korean": "\uc54c\ub85c\ub77c \ub77c\uc774\uce04",
+                "Spanish": "Raichu de Alola"
+            },
+            "stats": {
+                "stamina": 155,
+                "attack": 201,
+                "defense": 154
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "VOLT_SWITCH_FAST": {
+                    "id": "VOLT_SWITCH_FAST",
+                    "power": 13,
+                    "energy": 20,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Volt Switch",
+                        "German": "Voltwechsel",
+                        "French": "Change \u00c9clair",
+                        "Italian": "Invertivolt",
+                        "Japanese": "\u30dc\u30eb\u30c8\u30c1\u30a7\u30f3\u30b8",
+                        "Korean": "\ubcfc\ud2b8\uccb4\uc778\uc9c0",
+                        "Spanish": "Voltiocambio"
+                    },
+                    "combat": {
+                        "energy": 16,
+                        "power": 14,
+                        "turns": 4,
+                        "buffs": null
+                    }
+                },
+                "SPARK_FAST": {
+                    "id": "SPARK_FAST",
+                    "power": 4,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Spark",
+                        "German": "Funkensprung",
+                        "French": "\u00c9tincelle",
+                        "Italian": "Scintilla",
+                        "Japanese": "\u30b9\u30d1\u30fc\u30af",
+                        "Korean": "\uc2a4\ud30c\ud06c",
+                        "Spanish": "Chispa"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "THUNDER_SHOCK_FAST": {
+                    "id": "THUNDER_SHOCK_FAST",
+                    "power": 4,
+                    "energy": 7,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Thunder Shock",
+                        "German": "Donnerschock",
+                        "French": "\u00c9clair",
+                        "Italian": "Tuonoshock",
+                        "Japanese": "\u3067\u3093\u304d\u30b7\u30e7\u30c3\u30af",
+                        "Korean": "\uc804\uae30\uc1fc\ud06c",
+                        "Spanish": "Impactrueno"
+                    },
+                    "combat": {
+                        "energy": 9,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                },
+                "THUNDER_PUNCH": {
+                    "id": "THUNDER_PUNCH",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Thunder Punch",
+                        "German": "Donnerschlag",
+                        "French": "Poing \u00c9clair",
+                        "Italian": "Tuonopugno",
+                        "Japanese": "\u304b\u307f\u306a\u308a\u30d1\u30f3\u30c1",
+                        "Korean": "\ubc88\uac1c\ud380\uce58",
+                        "Spanish": "Pu\u00f1o Trueno"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "WILD_CHARGE": {
+                    "id": "WILD_CHARGE",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Wild Charge",
+                        "German": "Stromsto\u00df",
+                        "French": "\u00c9clair Fou",
+                        "Italian": "Sprizzalampo",
+                        "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                        "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                        "Spanish": "Voltio Cruel"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": -2,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "GRASS_KNOT": {
+                    "id": "GRASS_KNOT",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Grass Knot",
+                        "German": "Strauchler",
+                        "French": "N\u0153ud Herbe",
+                        "Italian": "Laccioerboso",
+                        "Japanese": "\u304f\u3055\u3080\u3059\u3073",
+                        "Korean": "\ud480\ubb36\uae30",
+                        "Spanish": "Hierba Lazo"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TRAILBLAZE": {
+                    "id": "TRAILBLAZE",
+                    "power": 65,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Trailblaze",
+                        "German": "Wegbereiter",
+                        "French": "D\u00e9sherbaffe",
+                        "Italian": "Apripista",
+                        "Japanese": "\u304f\u3055\u308f\u3051",
+                        "Korean": "\uac1c\ucc99\ud558\uae30",
+                        "Spanish": "Abrecaminos"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYSHOCK": {
+                    "id": "PSYSHOCK",
+                    "power": 60,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psyshock",
+                        "German": "Psychoschock",
+                        "French": "Choc Psy",
+                        "Italian": "Psicoshock",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30b7\u30e7\u30c3\u30af",
+                        "Korean": "\uc0ac\uc774\ucf54\uc1fc\ud06c",
+                        "Spanish": "Psicocarga"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.fALOLA.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.fALOLA.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": "ANNIVERSARY",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cANNIVERSARY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cANNIVERSARY.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_1",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_1.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_1.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_2",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FALL_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFALL_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFALL_2018.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FEB_2019",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFEB_2019.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFEB_2019.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HALLOWEEN_2017",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHALLOWEEN_2017.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHALLOWEEN_2017.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2016",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2016.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2016.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2023",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2023.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2023.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "NOVEMBER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cNOVEMBER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cNOVEMBER_2018.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ONE_YEAR_ANNIVERSARY",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cONE_YEAR_ANNIVERSARY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cONE_YEAR_ANNIVERSARY.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "PI",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cPI.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cPI.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SPRING_2023",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSPRING_2023.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSPRING_2023.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SUMMER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSUMMER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSUMMER_2018.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "WINTER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cWINTER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cWINTER_2018.s.icon.png"
+        },
+        {
+            "form": "ALOLA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.fALOLA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.fALOLA.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ANNIVERSARY",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cANNIVERSARY.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cANNIVERSARY.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_1",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_1.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_1.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_2",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_2.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cCOSTUME_2.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FALL_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFALL_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFALL_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FEB_2019",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFEB_2019.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cFEB_2019.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HALLOWEEN_2017",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHALLOWEEN_2017.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHALLOWEEN_2017.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2016",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2016.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2016.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2023",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2023.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cHOLIDAY_2023.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "NOVEMBER_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cNOVEMBER_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cNOVEMBER_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ONE_YEAR_ANNIVERSARY",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cONE_YEAR_ANNIVERSARY.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cONE_YEAR_ANNIVERSARY.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "PI",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cPI.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cPI.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SPRING_2023",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSPRING_2023.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSPRING_2023.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SUMMER_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSUMMER_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cSUMMER_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "WINTER_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cWINTER_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.cWINTER_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.g2.s.icon.png"
+        }
+    ]
+}

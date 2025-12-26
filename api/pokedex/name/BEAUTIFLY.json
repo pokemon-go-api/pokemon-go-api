@@ -1,0 +1,259 @@
+{
+    "id": "BEAUTIFLY",
+    "formId": "BEAUTIFLY",
+    "dexNr": 267,
+    "generation": 3,
+    "names": {
+        "English": "Beautifly",
+        "German": "Papinella",
+        "French": "Charmillon",
+        "Italian": "Beautifly",
+        "Japanese": "\u30a2\u30b2\u30cf\u30f3\u30c8",
+        "Korean": "\ubdf0\ud2f0\ud50c\ub77c\uc774",
+        "Spanish": "Beautifly"
+    },
+    "stats": {
+        "stamina": 155,
+        "attack": 189,
+        "defense": 98
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_BUG",
+        "names": {
+            "English": "Bug",
+            "German": "K\u00e4fer",
+            "French": "Insecte",
+            "Italian": "Coleottero",
+            "Japanese": "\u3080\u3057",
+            "Korean": "\ubc8c\ub808",
+            "Spanish": "Bicho"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FLYING",
+        "names": {
+            "English": "Flying",
+            "German": "Flug",
+            "French": "Vol",
+            "Italian": "Volante",
+            "Japanese": "\u3072\u3053\u3046",
+            "Korean": "\ube44\ud589",
+            "Spanish": "Volador"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "STRUGGLE_BUG_FAST": {
+            "id": "STRUGGLE_BUG_FAST",
+            "power": 15,
+            "energy": 15,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Struggle Bug",
+                "German": "K\u00e4fertrutz",
+                "French": "Survinsecte",
+                "Italian": "Entomoblocco",
+                "Japanese": "\u3080\u3057\u306e\u3066\u3044\u3053\u3046",
+                "Korean": "\ubc8c\ub808\uc758\uc800\ud56d",
+                "Spanish": "Estoicismo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "INFESTATION_FAST": {
+            "id": "INFESTATION_FAST",
+            "power": 9,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Infestation",
+                "German": "Plage",
+                "French": "Harc\u00e8lement",
+                "Italian": "Assillo",
+                "Japanese": "\u307e\u3068\u308f\u308a\u3064\u304f",
+                "Korean": "\uc5c9\uaca8\ubd99\uae30",
+                "Spanish": "Acoso"
+            },
+            "combat": {
+                "energy": 12,
+                "power": 6,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SILVER_WIND": {
+            "id": "SILVER_WIND",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Silver Wind",
+                "German": "Silberhauch",
+                "French": "Vent Argent\u00e9",
+                "Italian": "Ventargenteo",
+                "Japanese": "\u304e\u3093\u3044\u308d\u306e\u304b\u305c",
+                "Korean": "\uc740\ube5b\ubc14\ub78c",
+                "Spanish": "Viento Plata"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": 1,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "AIR_CUTTER": {
+            "id": "AIR_CUTTER",
+            "power": 55,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Air Cutter",
+                "German": "Windschnitt",
+                "French": "Tranch\u2019Air",
+                "Italian": "Aerasoio",
+                "Japanese": "\u30a8\u30a2\u30ab\u30c3\u30bf\u30fc",
+                "Korean": "\uc5d0\uc5b4\ucee4\ud130",
+                "Spanish": "Aire Afilado"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 45,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 30,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "BUG_BUZZ": {
+            "id": "BUG_BUZZ",
+            "power": 95,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Bug Buzz",
+                "German": "K\u00e4fergebrumm",
+                "French": "Bourdon",
+                "Italian": "Ronzio",
+                "Japanese": "\u3080\u3057\u306e\u3055\u3056\u3081\u304d",
+                "Korean": "\ubc8c\ub808\uc758\uc57c\ub2e8\ubc95\uc11d",
+                "Spanish": "Zumbido"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 30,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm267.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm267.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm267.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm267.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm267.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm267.g2.s.icon.png"
+        }
+    ]
+}

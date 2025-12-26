@@ -1,0 +1,545 @@
+{
+    "id": "JELLICENT",
+    "formId": "JELLICENT",
+    "dexNr": 593,
+    "generation": 5,
+    "names": {
+        "English": "Jellicent",
+        "German": "Apoquallyp",
+        "French": "Moyade",
+        "Italian": "Jellicent",
+        "Japanese": "\u30d6\u30eb\u30f3\u30b2\u30eb",
+        "Korean": "\ud0f1\ud0f1\uac94",
+        "Spanish": "Jellicent"
+    },
+    "stats": {
+        "stamina": 225,
+        "attack": 159,
+        "defense": 178
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "BUBBLE_FAST": {
+            "id": "BUBBLE_FAST",
+            "power": 10,
+            "energy": 12,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Bubble",
+                "German": "Blubber",
+                "French": "\u00c9cume",
+                "Italian": "Bolla",
+                "Japanese": "\u3042\u308f",
+                "Korean": "\uac70\ud488",
+                "Spanish": "Burbuja"
+            },
+            "combat": {
+                "energy": 11,
+                "power": 8,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "HEX_FAST": {
+            "id": "HEX_FAST",
+            "power": 8,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Hex",
+                "German": "B\u00fcrde",
+                "French": "Ch\u00e2timent",
+                "Italian": "Sciagura",
+                "Japanese": "\u305f\u305f\u308a\u3081",
+                "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                "Spanish": "Infortunio"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 7,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "Bola Sombra"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ICE_BEAM": {
+            "id": "ICE_BEAM",
+            "power": 95,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Ice Beam",
+                "German": "Eisstrahl",
+                "French": "Laser Glace",
+                "Italian": "Geloraggio",
+                "Japanese": "\u308c\u3044\u3068\u3046\u30d3\u30fc\u30e0",
+                "Korean": "\ub0c9\ub3d9\ube54",
+                "Spanish": "Rayo Hielo"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BUBBLE_BEAM": {
+            "id": "BUBBLE_BEAM",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Bubble Beam",
+                "German": "Blubbstrahl",
+                "French": "Bulles d\u2019O",
+                "Italian": "Bollaraggio",
+                "Japanese": "\u30d0\u30d6\u30eb\u3053\u3046\u305b\u3093",
+                "Korean": "\uac70\ud488\uad11\uc120",
+                "Spanish": "Rayo Burbuja"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 25,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "SURF": {
+            "id": "SURF",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Surf",
+                "German": "Surfer",
+                "French": "Surf",
+                "Italian": "Surf",
+                "Japanese": "\u306a\u307f\u306e\u308a",
+                "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                "Spanish": "Surf"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.s.icon.png"
+    },
+    "regionForms": {
+        "JELLICENT_FEMALE": {
+            "id": "JELLICENT",
+            "formId": "JELLICENT_FEMALE",
+            "dexNr": 593,
+            "generation": 5,
+            "names": {
+                "English": "Jellicent (Female)",
+                "German": "Apoquallyp (Weiblich)",
+                "French": "Moyade (Femelle)",
+                "Italian": "Jellicent (Femmina)",
+                "Japanese": "\u30d6\u30eb\u30f3\u30b2\u30eb (\u30e1\u30b9)",
+                "Korean": "\ud0f1\ud0f1\uac94 (\uc554\ucef7\uc758 \ubaa8\uc2b5)",
+                "Spanish": "Jellicent (Hembra)"
+            },
+            "stats": {
+                "stamina": 225,
+                "attack": 159,
+                "defense": 178
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUBBLE_FAST": {
+                    "id": "BUBBLE_FAST",
+                    "power": 10,
+                    "energy": 12,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Bubble",
+                        "German": "Blubber",
+                        "French": "\u00c9cume",
+                        "Italian": "Bolla",
+                        "Japanese": "\u3042\u308f",
+                        "Korean": "\uac70\ud488",
+                        "Spanish": "Burbuja"
+                    },
+                    "combat": {
+                        "energy": 11,
+                        "power": 8,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "HEX_FAST": {
+                    "id": "HEX_FAST",
+                    "power": 8,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Hex",
+                        "German": "B\u00fcrde",
+                        "French": "Ch\u00e2timent",
+                        "Italian": "Sciagura",
+                        "Japanese": "\u305f\u305f\u308a\u3081",
+                        "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                        "Spanish": "Infortunio"
+                    },
+                    "combat": {
+                        "energy": 13,
+                        "power": 7,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "ICE_BEAM": {
+                    "id": "ICE_BEAM",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Ice Beam",
+                        "German": "Eisstrahl",
+                        "French": "Laser Glace",
+                        "Italian": "Geloraggio",
+                        "Japanese": "\u308c\u3044\u3068\u3046\u30d3\u30fc\u30e0",
+                        "Korean": "\ub0c9\ub3d9\ube54",
+                        "Spanish": "Rayo Hielo"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "BUBBLE_BEAM": {
+                    "id": "BUBBLE_BEAM",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Bubble Beam",
+                        "German": "Blubbstrahl",
+                        "French": "Bulles d\u2019O",
+                        "Italian": "Bollaraggio",
+                        "Japanese": "\u30d0\u30d6\u30eb\u3053\u3046\u305b\u3093",
+                        "Korean": "\uac70\ud488\uad11\uc120",
+                        "Spanish": "Rayo Burbuja"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 25,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": -1,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.fFEMALE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.fFEMALE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "FEMALE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.fFEMALE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.fFEMALE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm593.s.icon.png"
+        }
+    ]
+}

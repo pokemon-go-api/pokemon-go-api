@@ -1,0 +1,1437 @@
+{
+    "id": "PIKACHU",
+    "formId": "PIKACHU",
+    "dexNr": 25,
+    "generation": 1,
+    "names": {
+        "English": "Pikachu",
+        "German": "Pikachu",
+        "French": "Pikachu",
+        "Italian": "Pikachu",
+        "Japanese": "\u30d4\u30ab\u30c1\u30e5\u30a6",
+        "Korean": "\ud53c\uce74\uce04",
+        "Spanish": "Pikachu"
+    },
+    "stats": {
+        "stamina": 111,
+        "attack": 112,
+        "defense": 96
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "THUNDER_SHOCK_FAST": {
+            "id": "THUNDER_SHOCK_FAST",
+            "power": 4,
+            "energy": 7,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder Shock",
+                "German": "Donnerschock",
+                "French": "\u00c9clair",
+                "Italian": "Tuonoshock",
+                "Japanese": "\u3067\u3093\u304d\u30b7\u30e7\u30c3\u30af",
+                "Korean": "\uc804\uae30\uc1fc\ud06c",
+                "Spanish": "Impactrueno"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "QUICK_ATTACK_FAST": {
+            "id": "QUICK_ATTACK_FAST",
+            "power": 10,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Quick Attack",
+                "German": "Ruckzuckhieb",
+                "French": "Vive-Attaque",
+                "Italian": "Attacco Rapido",
+                "Japanese": "\u3067\u3093\u3053\u3046\u305b\u3063\u304b",
+                "Korean": "\uc804\uad11\uc11d\ud654",
+                "Spanish": "Ataque R\u00e1pido"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DISCHARGE": {
+            "id": "DISCHARGE",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Discharge",
+                "German": "Ladungssto\u00df",
+                "French": "Coup d\u2019Jus",
+                "Italian": "Scarica",
+                "Japanese": "\u307b\u3046\u3067\u3093",
+                "Korean": "\ubc29\uc804",
+                "Spanish": "Chispazo"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "THUNDERBOLT": {
+            "id": "THUNDERBOLT",
+            "power": 80,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunderbolt",
+                "German": "Donnerblitz",
+                "French": "Tonnerre",
+                "Italian": "Fulmine",
+                "Japanese": "\uff11\uff10\u307e\u3093\u30dc\u30eb\u30c8",
+                "Korean": "10\ub9cc\ubcfc\ud2b8",
+                "Spanish": "Rayo"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "WILD_CHARGE": {
+            "id": "WILD_CHARGE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Wild Charge",
+                "German": "Stromsto\u00df",
+                "French": "\u00c9clair Fou",
+                "Italian": "Sprizzalampo",
+                "Japanese": "\u30ef\u30a4\u30eb\u30c9\u30dc\u30eb\u30c8",
+                "Korean": "\uc640\uc77c\ub4dc\ubcfc\ud2b8",
+                "Spanish": "Voltio Cruel"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": -2,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": {
+        "PRESENT_FAST": {
+            "id": "PRESENT_FAST",
+            "power": 6,
+            "energy": 23,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Present",
+                "German": "Geschenk",
+                "French": "Cadeau",
+                "Italian": "Regalino",
+                "Japanese": "\u30d7\u30ec\u30bc\u30f3\u30c8",
+                "Korean": "\ud504\ub808\uc820\ud2b8",
+                "Spanish": "Presente"
+            },
+            "combat": {
+                "energy": 12,
+                "power": 3,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "eliteCinematicMoves": {
+        "SURF": {
+            "id": "SURF",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Surf",
+                "German": "Surfer",
+                "French": "Surf",
+                "Italian": "Surf",
+                "Japanese": "\u306a\u307f\u306e\u308a",
+                "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                "Spanish": "Surf"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "THUNDER": {
+            "id": "THUNDER",
+            "power": 100,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder",
+                "German": "Donner",
+                "French": "Fatal-Foudre",
+                "Italian": "Tuono",
+                "Japanese": "\u304b\u307f\u306a\u308a",
+                "Korean": "\ubc88\uac1c",
+                "Spanish": "Trueno"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "RAICHU",
+            "formId": "RAICHU",
+            "candies": 50,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": "ANNIVERSARY",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ANNIVERSARY_2022_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY_2022_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY_2022_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "APRIL_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cAPRIL_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cAPRIL_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_1",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_1.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_1.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_2",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FALL_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2018.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FALL_2023_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2023_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2023_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FEB_2019",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFEB_2019.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFEB_2019.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOFEST_2021_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2021_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2021_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOFEST_2022_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2022_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2022_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOTOUR_2023_BANDANA_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_BANDANA_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_BANDANA_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOTOUR_2023_HAT_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_HAT_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_HAT_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HALLOWEEN_2017",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2017.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2017.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HALLOWEEN_2021_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2021_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2021_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOENN_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOENN_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOENN_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2016",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2016.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2016.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2023",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2023.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2023.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "INDONESIA_2025_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cINDONESIA_2025_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cINDONESIA_2025_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "JAN_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "JAN_2023_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2023_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2023_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "JOHTO_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJOHTO_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJOHTO_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "KANTO_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cKANTO_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cKANTO_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "MAY_2019_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cMAY_2019_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cMAY_2019_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "NOVEMBER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cNOVEMBER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cNOVEMBER_2018.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ONE_YEAR_ANNIVERSARY",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cONE_YEAR_ANNIVERSARY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cONE_YEAR_ANNIVERSARY.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "PI",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cPI.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cPI.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SAFARI_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSAFARI_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSAFARI_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SINNOH_2020_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSINNOH_2020_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSINNOH_2020_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SPRING_2023",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSPRING_2023.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSPRING_2023.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SUMMER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSUMMER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSUMMER_2018.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "TCG_2022_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cTCG_2022_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cTCG_2022_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "WINTER_2018",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cWINTER_2018.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cWINTER_2018.s.icon.png"
+        },
+        {
+            "form": "ADVENTURE_HAT_2020",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fADVENTURE_HAT_2020.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fADVENTURE_HAT_2020.s.icon.png"
+        },
+        {
+            "form": "COPY_2019",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOPY_2019.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOPY_2019.s.icon.png"
+        },
+        {
+            "form": "COSTUME_2020",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOSTUME_2020.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOSTUME_2020.s.icon.png"
+        },
+        {
+            "form": "DIWALI_2024",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fDIWALI_2024.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fDIWALI_2024.s.icon.png"
+        },
+        {
+            "form": "DOCTOR",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fDOCTOR.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fDOCTOR.s.icon.png"
+        },
+        {
+            "form": "FALL_2019",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFALL_2019.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFALL_2019.s.icon.png"
+        },
+        {
+            "form": "FLYING_01",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_01.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_01.s.icon.png"
+        },
+        {
+            "form": "FLYING_02",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_02.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_02.s.icon.png"
+        },
+        {
+            "form": "FLYING_03",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_03.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_03.s.icon.png"
+        },
+        {
+            "form": "FLYING_04",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_04.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_04.s.icon.png"
+        },
+        {
+            "form": "FLYING_5TH_ANNIV",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_5TH_ANNIV.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_5TH_ANNIV.s.icon.png"
+        },
+        {
+            "form": "FLYING_OKINAWA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_OKINAWA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_OKINAWA.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2022",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2022.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2022.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2024_MTIARA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_MTIARA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_MTIARA.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2024_STIARA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_STIARA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_STIARA.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_GOGGLES_BLUE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_BLUE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_BLUE.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_GOGGLES_RED",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_RED.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_RED.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_GOGGLES_YELLOW",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_YELLOW.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_YELLOW.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_MONOCLE_BLUE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_BLUE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_BLUE.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_MONOCLE_RED",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_RED.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_RED.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_MONOCLE_YELLOW",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_YELLOW.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_YELLOW.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_A",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_A_02",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A_02.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A_02.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_B",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_B_02",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B_02.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B_02.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_A",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_A_02",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A_02.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A_02.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_B",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_B_02",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B_02.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B_02.s.icon.png"
+        },
+        {
+            "form": "HORIZONS",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fHORIZONS.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fHORIZONS.s.icon.png"
+        },
+        {
+            "form": "JEJU",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fJEJU.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fJEJU.s.icon.png"
+        },
+        {
+            "form": "KARIYUSHI",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fKARIYUSHI.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fKARIYUSHI.s.icon.png"
+        },
+        {
+            "form": "KURTA",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fKURTA.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fKURTA.s.icon.png"
+        },
+        {
+            "form": "POP_STAR",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fPOP_STAR.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fPOP_STAR.s.icon.png"
+        },
+        {
+            "form": "ROCK_STAR",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fROCK_STAR.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fROCK_STAR.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_A",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_A.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_A.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_B",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_B.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_B.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_C",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_C.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_C.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_D",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_D.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_D.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_E",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_E.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_E.s.icon.png"
+        },
+        {
+            "form": "TSHIRT_01",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_01.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_01.s.icon.png"
+        },
+        {
+            "form": "TSHIRT_02",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_02.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_02.s.icon.png"
+        },
+        {
+            "form": "TSHIRT_03",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_03.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_03.s.icon.png"
+        },
+        {
+            "form": "VS_2019",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fVS_2019.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fVS_2019.s.icon.png"
+        },
+        {
+            "form": "WCS_2022",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2022.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2022.s.icon.png"
+        },
+        {
+            "form": "WCS_2023",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2023.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2023.s.icon.png"
+        },
+        {
+            "form": "WCS_2024",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2024.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2024.s.icon.png"
+        },
+        {
+            "form": "WCS_2025",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2025.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2025.s.icon.png"
+        },
+        {
+            "form": "WINTER_2020",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWINTER_2020.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWINTER_2020.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ANNIVERSARY",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ANNIVERSARY_2022_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY_2022_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cANNIVERSARY_2022_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "APRIL_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cAPRIL_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cAPRIL_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_1",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_1.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_1.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "COSTUME_2",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_2.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cCOSTUME_2.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FALL_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FALL_2023_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2023_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFALL_2023_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "FEB_2019",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFEB_2019.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cFEB_2019.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOFEST_2021_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2021_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2021_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOFEST_2022_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2022_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOFEST_2022_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOTOUR_2023_BANDANA_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_BANDANA_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_BANDANA_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "GOTOUR_2023_HAT_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_HAT_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cGOTOUR_2023_HAT_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HALLOWEEN_2017",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2017.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2017.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HALLOWEEN_2021_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2021_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHALLOWEEN_2021_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOENN_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOENN_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOENN_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2016",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2016.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2016.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "HOLIDAY_2023",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2023.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cHOLIDAY_2023.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "INDONESIA_2025_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cINDONESIA_2025_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cINDONESIA_2025_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "JAN_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "JAN_2023_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2023_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2023_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "JOHTO_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJOHTO_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJOHTO_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "KANTO_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cKANTO_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cKANTO_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "MAY_2019_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cMAY_2019_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cMAY_2019_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "NOVEMBER_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cNOVEMBER_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cNOVEMBER_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "ONE_YEAR_ANNIVERSARY",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cONE_YEAR_ANNIVERSARY.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cONE_YEAR_ANNIVERSARY.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "PI",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cPI.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cPI.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SAFARI_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSAFARI_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSAFARI_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SINNOH_2020_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSINNOH_2020_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSINNOH_2020_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SPRING_2023",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSPRING_2023.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSPRING_2023.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "SUMMER_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSUMMER_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cSUMMER_2018.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "TCG_2022_NOEVOLVE",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cTCG_2022_NOEVOLVE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cTCG_2022_NOEVOLVE.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": "WINTER_2018",
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cWINTER_2018.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cWINTER_2018.g2.s.icon.png"
+        },
+        {
+            "form": "ADVENTURE_HAT_2020",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fADVENTURE_HAT_2020.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fADVENTURE_HAT_2020.g2.s.icon.png"
+        },
+        {
+            "form": "COPY_2019",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOPY_2019.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOPY_2019.g2.s.icon.png"
+        },
+        {
+            "form": "COSTUME_2020",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOSTUME_2020.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fCOSTUME_2020.g2.s.icon.png"
+        },
+        {
+            "form": "FALL_2019",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFALL_2019.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFALL_2019.g2.s.icon.png"
+        },
+        {
+            "form": "FLYING_01",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_01.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_01.g2.s.icon.png"
+        },
+        {
+            "form": "FLYING_02",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_02.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_02.g2.s.icon.png"
+        },
+        {
+            "form": "FLYING_03",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_03.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_03.g2.s.icon.png"
+        },
+        {
+            "form": "FLYING_04",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_04.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_04.g2.s.icon.png"
+        },
+        {
+            "form": "FLYING_5TH_ANNIV",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_5TH_ANNIV.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_5TH_ANNIV.g2.s.icon.png"
+        },
+        {
+            "form": "FLYING_OKINAWA",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_OKINAWA.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_OKINAWA.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2022",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2022.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2022.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2024_MTIARA",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_MTIARA.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_MTIARA.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2024_STIARA",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_STIARA.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2024_STIARA.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_GOGGLES_BLUE",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_BLUE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_BLUE.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_GOGGLES_RED",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_RED.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_RED.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_GOGGLES_YELLOW",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_YELLOW.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_GOGGLES_YELLOW.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_MONOCLE_BLUE",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_BLUE.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_BLUE.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_MONOCLE_RED",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_RED.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_RED.g2.s.icon.png"
+        },
+        {
+            "form": "GOFEST_2025_MONOCLE_YELLOW",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_YELLOW.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOFEST_2025_MONOCLE_YELLOW.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_A",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_A_02",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A_02.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_A_02.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_B",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2024_B_02",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B_02.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2024_B_02.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_A",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_A_02",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A_02.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_A_02.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_B",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B.g2.s.icon.png"
+        },
+        {
+            "form": "GOTOUR_2025_B_02",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B_02.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fGOTOUR_2025_B_02.g2.s.icon.png"
+        },
+        {
+            "form": "HORIZONS",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fHORIZONS.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fHORIZONS.g2.s.icon.png"
+        },
+        {
+            "form": "JEJU",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fJEJU.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fJEJU.g2.s.icon.png"
+        },
+        {
+            "form": "KARIYUSHI",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fKARIYUSHI.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fKARIYUSHI.g2.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_A",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_A.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_A.g2.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_B",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_B.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_B.g2.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_C",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_C.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_C.g2.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_D",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_D.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_D.g2.s.icon.png"
+        },
+        {
+            "form": "SUMMER_2023_E",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_E.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fSUMMER_2023_E.g2.s.icon.png"
+        },
+        {
+            "form": "TSHIRT_01",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_01.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_01.g2.s.icon.png"
+        },
+        {
+            "form": "TSHIRT_02",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_02.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_02.g2.s.icon.png"
+        },
+        {
+            "form": "TSHIRT_03",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_03.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fTSHIRT_03.g2.s.icon.png"
+        },
+        {
+            "form": "WCS_2022",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2022.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2022.g2.s.icon.png"
+        },
+        {
+            "form": "WCS_2023",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2023.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2023.g2.s.icon.png"
+        },
+        {
+            "form": "WCS_2024",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2024.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2024.g2.s.icon.png"
+        },
+        {
+            "form": "WCS_2025",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2025.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWCS_2025.g2.s.icon.png"
+        },
+        {
+            "form": "WINTER_2020",
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWINTER_2020.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fWINTER_2020.g2.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": true,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.g2.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.g2.s.icon.png"
+        }
+    ]
+}

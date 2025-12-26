@@ -1,0 +1,1186 @@
+{
+    "id": "ORICORIO",
+    "formId": "ORICORIO",
+    "dexNr": 741,
+    "generation": 7,
+    "names": {
+        "English": "Oricorio",
+        "German": "Choreogel",
+        "French": "Plumeline",
+        "Italian": "Oricorio",
+        "Japanese": "\u30aa\u30c9\u30ea\u30c9\u30ea",
+        "Korean": "\ucda4\ucd94\uc0c8",
+        "Spanish": "Oricorio"
+    },
+    "stats": {
+        "stamina": 181,
+        "attack": 196,
+        "defense": 145
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_FIRE",
+        "names": {
+            "English": "Fire",
+            "German": "Feuer",
+            "French": "Feu",
+            "Italian": "Fuoco",
+            "Japanese": "\u307b\u306e\u304a",
+            "Korean": "\ubd88\uaf43",
+            "Spanish": "Fuego"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FLYING",
+        "names": {
+            "English": "Flying",
+            "German": "Flug",
+            "French": "Vol",
+            "Italian": "Volante",
+            "Japanese": "\u3072\u3053\u3046",
+            "Korean": "\ube44\ud589",
+            "Spanish": "Volador"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "POUND_FAST": {
+            "id": "POUND_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Pound",
+                "German": "Klaps",
+                "French": "\u00c9cras\u2019Face",
+                "Italian": "Botta",
+                "Japanese": "\u306f\u305f\u304f",
+                "Korean": "\ub9c9\uce58\uae30",
+                "Spanish": "Destructor"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "AIR_SLASH_FAST": {
+            "id": "AIR_SLASH_FAST",
+            "power": 12,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Air Slash",
+                "German": "Luftschnitt",
+                "French": "Lame d\u2019Air",
+                "Italian": "Eterelama",
+                "Japanese": "\u30a8\u30a2\u30b9\u30e9\u30c3\u30b7\u30e5",
+                "Korean": "\uc5d0\uc5b4\uc2ac\ub798\uc2dc",
+                "Spanish": "Tajo A\u00e9reo"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "AERIAL_ACE": {
+            "id": "AERIAL_ACE",
+            "power": 55,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Aerial Ace",
+                "German": "Aero-Ass",
+                "French": "A\u00e9ropique",
+                "Italian": "Aeroassalto",
+                "Japanese": "\u3064\u3070\u3081\u304c\u3048\u3057",
+                "Korean": "\uc81c\ube44\ubc18\ud658",
+                "Spanish": "Golpe A\u00e9reo"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "AIR_CUTTER": {
+            "id": "AIR_CUTTER",
+            "power": 55,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Air Cutter",
+                "German": "Windschnitt",
+                "French": "Tranch\u2019Air",
+                "Italian": "Aerasoio",
+                "Japanese": "\u30a8\u30a2\u30ab\u30c3\u30bf\u30fc",
+                "Korean": "\uc5d0\uc5b4\ucee4\ud130",
+                "Spanish": "Aire Afilado"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 45,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 30,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "HURRICANE": {
+            "id": "HURRICANE",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Hurricane",
+                "German": "Orkan",
+                "French": "Vent Violent",
+                "Italian": "Tifone",
+                "Japanese": "\u307c\u3046\u3075\u3046",
+                "Korean": "\ud3ed\ud48d",
+                "Spanish": "Vendaval"
+            },
+            "combat": {
+                "energy": -65,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fBAILE.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fBAILE.s.icon.png"
+    },
+    "regionForms": {
+        "ORICORIO_BAILE": {
+            "id": "ORICORIO",
+            "formId": "ORICORIO_BAILE",
+            "dexNr": 741,
+            "generation": 7,
+            "names": {
+                "English": "Oricorio (Baile Style)",
+                "German": "Choreogel (Flamenco-Stil)",
+                "French": "Plumeline (Style Flamenco)",
+                "Italian": "Oricorio (Stile Flamenco)",
+                "Japanese": "\u30aa\u30c9\u30ea\u30c9\u30ea (\u3081\u3089\u3081\u3089\u30b9\u30bf\u30a4\u30eb)",
+                "Korean": "\ucda4\ucd94\uc0c8 (\uc774\uae00\uc774\uae00\uc2a4\ud0c0\uc77c)",
+                "Spanish": "Oricorio (Estilo Apasionado)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 196,
+                "defense": 145
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "Fuego"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "POUND_FAST": {
+                    "id": "POUND_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Pound",
+                        "German": "Klaps",
+                        "French": "\u00c9cras\u2019Face",
+                        "Italian": "Botta",
+                        "Japanese": "\u306f\u305f\u304f",
+                        "Korean": "\ub9c9\uce58\uae30",
+                        "Spanish": "Destructor"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "AIR_SLASH_FAST": {
+                    "id": "AIR_SLASH_FAST",
+                    "power": 12,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Slash",
+                        "German": "Luftschnitt",
+                        "French": "Lame d\u2019Air",
+                        "Italian": "Eterelama",
+                        "Japanese": "\u30a8\u30a2\u30b9\u30e9\u30c3\u30b7\u30e5",
+                        "Korean": "\uc5d0\uc5b4\uc2ac\ub798\uc2dc",
+                        "Spanish": "Tajo A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": 9,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "AERIAL_ACE": {
+                    "id": "AERIAL_ACE",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Aerial Ace",
+                        "German": "Aero-Ass",
+                        "French": "A\u00e9ropique",
+                        "Italian": "Aeroassalto",
+                        "Japanese": "\u3064\u3070\u3081\u304c\u3048\u3057",
+                        "Korean": "\uc81c\ube44\ubc18\ud658",
+                        "Spanish": "Golpe A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "AIR_CUTTER": {
+                    "id": "AIR_CUTTER",
+                    "power": 55,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Cutter",
+                        "German": "Windschnitt",
+                        "French": "Tranch\u2019Air",
+                        "Italian": "Aerasoio",
+                        "Japanese": "\u30a8\u30a2\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc5d0\uc5b4\ucee4\ud130",
+                        "Spanish": "Aire Afilado"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 45,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "HURRICANE": {
+                    "id": "HURRICANE",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Hurricane",
+                        "German": "Orkan",
+                        "French": "Vent Violent",
+                        "Italian": "Tifone",
+                        "Japanese": "\u307c\u3046\u3075\u3046",
+                        "Korean": "\ud3ed\ud48d",
+                        "Spanish": "Vendaval"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fBAILE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fBAILE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "ORICORIO_PAU": {
+            "id": "ORICORIO",
+            "formId": "ORICORIO_PAU",
+            "dexNr": 741,
+            "generation": 7,
+            "names": {
+                "English": "Oricorio (Pa\u2019u Style)",
+                "German": "Choreogel (Hula-Stil)",
+                "French": "Plumeline (Style Hula)",
+                "Italian": "Oricorio (Stile Hula)",
+                "Japanese": "\u30aa\u30c9\u30ea\u30c9\u30ea (\u3075\u3089\u3075\u3089\u30b9\u30bf\u30a4\u30eb)",
+                "Korean": "\ucda4\ucd94\uc0c8 (\ud6cc\ub77c\ud6cc\ub77c\uc2a4\ud0c0\uc77c)",
+                "Spanish": "Oricorio (Estilo Pl\u00e1cido)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 196,
+                "defense": 145
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "POUND_FAST": {
+                    "id": "POUND_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Pound",
+                        "German": "Klaps",
+                        "French": "\u00c9cras\u2019Face",
+                        "Italian": "Botta",
+                        "Japanese": "\u306f\u305f\u304f",
+                        "Korean": "\ub9c9\uce58\uae30",
+                        "Spanish": "Destructor"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "AIR_SLASH_FAST": {
+                    "id": "AIR_SLASH_FAST",
+                    "power": 12,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Slash",
+                        "German": "Luftschnitt",
+                        "French": "Lame d\u2019Air",
+                        "Italian": "Eterelama",
+                        "Japanese": "\u30a8\u30a2\u30b9\u30e9\u30c3\u30b7\u30e5",
+                        "Korean": "\uc5d0\uc5b4\uc2ac\ub798\uc2dc",
+                        "Spanish": "Tajo A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": 9,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "AERIAL_ACE": {
+                    "id": "AERIAL_ACE",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Aerial Ace",
+                        "German": "Aero-Ass",
+                        "French": "A\u00e9ropique",
+                        "Italian": "Aeroassalto",
+                        "Japanese": "\u3064\u3070\u3081\u304c\u3048\u3057",
+                        "Korean": "\uc81c\ube44\ubc18\ud658",
+                        "Spanish": "Golpe A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "AIR_CUTTER": {
+                    "id": "AIR_CUTTER",
+                    "power": 55,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Cutter",
+                        "German": "Windschnitt",
+                        "French": "Tranch\u2019Air",
+                        "Italian": "Aerasoio",
+                        "Japanese": "\u30a8\u30a2\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc5d0\uc5b4\ucee4\ud130",
+                        "Spanish": "Aire Afilado"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 45,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "HURRICANE": {
+                    "id": "HURRICANE",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Hurricane",
+                        "German": "Orkan",
+                        "French": "Vent Violent",
+                        "Italian": "Tifone",
+                        "Japanese": "\u307c\u3046\u3075\u3046",
+                        "Korean": "\ud3ed\ud48d",
+                        "Spanish": "Vendaval"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPAU.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPAU.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "ORICORIO_POMPOM": {
+            "id": "ORICORIO",
+            "formId": "ORICORIO_POMPOM",
+            "dexNr": 741,
+            "generation": 7,
+            "names": {
+                "English": "Oricorio (Pom-Pom Style)",
+                "German": "Choreogel (Cheerleading-Stil)",
+                "French": "Plumeline (Style Pom-Pom)",
+                "Italian": "Oricorio (Stile Cheerdance)",
+                "Japanese": "\u30aa\u30c9\u30ea\u30c9\u30ea (\u3071\u3061\u3071\u3061\u30b9\u30bf\u30a4\u30eb)",
+                "Korean": "\ucda4\ucd94\uc0c8 (\ud30c\uce59\ud30c\uce59\uc2a4\ud0c0\uc77c)",
+                "Spanish": "Oricorio (Estilo Animado)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 196,
+                "defense": 145
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "POUND_FAST": {
+                    "id": "POUND_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Pound",
+                        "German": "Klaps",
+                        "French": "\u00c9cras\u2019Face",
+                        "Italian": "Botta",
+                        "Japanese": "\u306f\u305f\u304f",
+                        "Korean": "\ub9c9\uce58\uae30",
+                        "Spanish": "Destructor"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "AIR_SLASH_FAST": {
+                    "id": "AIR_SLASH_FAST",
+                    "power": 12,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Slash",
+                        "German": "Luftschnitt",
+                        "French": "Lame d\u2019Air",
+                        "Italian": "Eterelama",
+                        "Japanese": "\u30a8\u30a2\u30b9\u30e9\u30c3\u30b7\u30e5",
+                        "Korean": "\uc5d0\uc5b4\uc2ac\ub798\uc2dc",
+                        "Spanish": "Tajo A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": 9,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "AERIAL_ACE": {
+                    "id": "AERIAL_ACE",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Aerial Ace",
+                        "German": "Aero-Ass",
+                        "French": "A\u00e9ropique",
+                        "Italian": "Aeroassalto",
+                        "Japanese": "\u3064\u3070\u3081\u304c\u3048\u3057",
+                        "Korean": "\uc81c\ube44\ubc18\ud658",
+                        "Spanish": "Golpe A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "AIR_CUTTER": {
+                    "id": "AIR_CUTTER",
+                    "power": 55,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Cutter",
+                        "German": "Windschnitt",
+                        "French": "Tranch\u2019Air",
+                        "Italian": "Aerasoio",
+                        "Japanese": "\u30a8\u30a2\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc5d0\uc5b4\ucee4\ud130",
+                        "Spanish": "Aire Afilado"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 45,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "HURRICANE": {
+                    "id": "HURRICANE",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Hurricane",
+                        "German": "Orkan",
+                        "French": "Vent Violent",
+                        "Italian": "Tifone",
+                        "Japanese": "\u307c\u3046\u3075\u3046",
+                        "Korean": "\ud3ed\ud48d",
+                        "Spanish": "Vendaval"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPOMPOM.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPOMPOM.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "ORICORIO_SENSU": {
+            "id": "ORICORIO",
+            "formId": "ORICORIO_SENSU",
+            "dexNr": 741,
+            "generation": 7,
+            "names": {
+                "English": "Oricorio (Sensu Style)",
+                "German": "Choreogel (Buyo-Stil)",
+                "French": "Plumeline (Style Buy\u00f4)",
+                "Italian": "Oricorio (Stile Buy\u014d)",
+                "Japanese": "\u30aa\u30c9\u30ea\u30c9\u30ea (\u307e\u3044\u307e\u3044\u30b9\u30bf\u30a4\u30eb)",
+                "Korean": "\ucda4\ucd94\uc0c8 (\ud558\ub298\ud558\ub298\uc2a4\ud0c0\uc77c)",
+                "Spanish": "Oricorio (Estilo Refinado)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 196,
+                "defense": 145
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "POUND_FAST": {
+                    "id": "POUND_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Pound",
+                        "German": "Klaps",
+                        "French": "\u00c9cras\u2019Face",
+                        "Italian": "Botta",
+                        "Japanese": "\u306f\u305f\u304f",
+                        "Korean": "\ub9c9\uce58\uae30",
+                        "Spanish": "Destructor"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "AIR_SLASH_FAST": {
+                    "id": "AIR_SLASH_FAST",
+                    "power": 12,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Slash",
+                        "German": "Luftschnitt",
+                        "French": "Lame d\u2019Air",
+                        "Italian": "Eterelama",
+                        "Japanese": "\u30a8\u30a2\u30b9\u30e9\u30c3\u30b7\u30e5",
+                        "Korean": "\uc5d0\uc5b4\uc2ac\ub798\uc2dc",
+                        "Spanish": "Tajo A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": 9,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "AERIAL_ACE": {
+                    "id": "AERIAL_ACE",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Aerial Ace",
+                        "German": "Aero-Ass",
+                        "French": "A\u00e9ropique",
+                        "Italian": "Aeroassalto",
+                        "Japanese": "\u3064\u3070\u3081\u304c\u3048\u3057",
+                        "Korean": "\uc81c\ube44\ubc18\ud658",
+                        "Spanish": "Golpe A\u00e9reo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "AIR_CUTTER": {
+                    "id": "AIR_CUTTER",
+                    "power": 55,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Air Cutter",
+                        "German": "Windschnitt",
+                        "French": "Tranch\u2019Air",
+                        "Italian": "Aerasoio",
+                        "Japanese": "\u30a8\u30a2\u30ab\u30c3\u30bf\u30fc",
+                        "Korean": "\uc5d0\uc5b4\ucee4\ud130",
+                        "Spanish": "Aire Afilado"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 45,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "HURRICANE": {
+                    "id": "HURRICANE",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Hurricane",
+                        "German": "Orkan",
+                        "French": "Vent Violent",
+                        "Italian": "Tifone",
+                        "Japanese": "\u307c\u3046\u3075\u3046",
+                        "Korean": "\ud3ed\ud48d",
+                        "Spanish": "Vendaval"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fSENSU.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fSENSU.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "BAILE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fBAILE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fBAILE.s.icon.png"
+        },
+        {
+            "form": "PAU",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPAU.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPAU.s.icon.png"
+        },
+        {
+            "form": "POMPOM",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPOMPOM.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fPOMPOM.s.icon.png"
+        },
+        {
+            "form": "SENSU",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fSENSU.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm741.fSENSU.s.icon.png"
+        }
+    ]
+}

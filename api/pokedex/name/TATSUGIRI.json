@@ -1,0 +1,1080 @@
+{
+    "id": "TATSUGIRI",
+    "formId": "TATSUGIRI",
+    "dexNr": 978,
+    "generation": 9,
+    "names": {
+        "English": "Tatsugiri",
+        "German": "Nigiragi",
+        "French": "Nigirigon",
+        "Italian": "Tatsugiri",
+        "Japanese": "\u30b7\u30e3\u30ea\u30bf\u30c4",
+        "Korean": "\uc2f8\ub9ac\uc6a9",
+        "Spanish": "Tatsugiri"
+    },
+    "stats": {
+        "stamina": 169,
+        "attack": 226,
+        "defense": 166
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_DRAGON",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "Drag\u00f3n"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "TAKE_DOWN_FAST": {
+            "id": "TAKE_DOWN_FAST",
+            "power": 7,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Take Down",
+                "German": "Bodycheck",
+                "French": "B\u00e9lier",
+                "Italian": "Riduttore",
+                "Japanese": "\u3068\u3063\u3057\u3093",
+                "Korean": "\ub3cc\uc9c4",
+                "Spanish": "Derribo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "WATER_GUN_FAST": {
+            "id": "WATER_GUN_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Water Gun",
+                "German": "Aquaknarre",
+                "French": "Pistolet \u00e0 O",
+                "Italian": "Pistolacqua",
+                "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                "Korean": "\ubb3c\ub300\ud3ec",
+                "Spanish": "Pistola Agua"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "OUTRAGE": {
+            "id": "OUTRAGE",
+            "power": 110,
+            "energy": -50,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Outrage",
+                "German": "Wutanfall",
+                "French": "Col\u00e8re",
+                "Italian": "Oltraggio",
+                "Japanese": "\u3052\u304d\u308a\u3093",
+                "Korean": "\uc5ed\ub9b0",
+                "Spanish": "Enfado"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SURF": {
+            "id": "SURF",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Surf",
+                "German": "Surfer",
+                "French": "Surf",
+                "Italian": "Surf",
+                "Japanese": "\u306a\u307f\u306e\u308a",
+                "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                "Spanish": "Surf"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "HYDRO_PUMP": {
+            "id": "HYDRO_PUMP",
+            "power": 135,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Hydro Pump",
+                "German": "Hydropumpe",
+                "French": "Hydrocanon",
+                "Italian": "Idropompa",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                "Spanish": "Hidrobomba"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "MUDDY_WATER": {
+            "id": "MUDDY_WATER",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Muddy Water",
+                "German": "Lehmbr\u00fche",
+                "French": "Ocroupi",
+                "Italian": "Fanghiglia",
+                "Japanese": "\u3060\u304f\u308a\u3085\u3046",
+                "Korean": "\ud0c1\ub958",
+                "Spanish": "Agua Lodosa"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 35,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 30,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fCURLY.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fCURLY.s.icon.png"
+    },
+    "regionForms": {
+        "TATSUGIRI_CURLY": {
+            "id": "TATSUGIRI",
+            "formId": "TATSUGIRI_CURLY",
+            "dexNr": 978,
+            "generation": 9,
+            "names": {
+                "English": "Tatsugiri (Curly Form)",
+                "German": "Nigiragi (Gebogene Form)",
+                "French": "Nigirigon (Forme Courb\u00e9e)",
+                "Italian": "Tatsugiri (Forma Arcuata)",
+                "Japanese": "\u30b7\u30e3\u30ea\u30bf\u30c4 (\u305d\u3063\u305f\u3059\u304c\u305f)",
+                "Korean": "\uc2f8\ub9ac\uc6a9 (\uc816\ud78c \ubaa8\uc2b5)",
+                "Spanish": "Tatsugiri (Forma Curvada)"
+            },
+            "stats": {
+                "stamina": 169,
+                "attack": 226,
+                "defense": 166
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "TAKE_DOWN_FAST": {
+                    "id": "TAKE_DOWN_FAST",
+                    "power": 7,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Take Down",
+                        "German": "Bodycheck",
+                        "French": "B\u00e9lier",
+                        "Italian": "Riduttore",
+                        "Japanese": "\u3068\u3063\u3057\u3093",
+                        "Korean": "\ub3cc\uc9c4",
+                        "Spanish": "Derribo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "WATER_GUN_FAST": {
+                    "id": "WATER_GUN_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Water Gun",
+                        "German": "Aquaknarre",
+                        "French": "Pistolet \u00e0 O",
+                        "Italian": "Pistolacqua",
+                        "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                        "Korean": "\ubb3c\ub300\ud3ec",
+                        "Spanish": "Pistola Agua"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "OUTRAGE": {
+                    "id": "OUTRAGE",
+                    "power": 110,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Outrage",
+                        "German": "Wutanfall",
+                        "French": "Col\u00e8re",
+                        "Italian": "Oltraggio",
+                        "Japanese": "\u3052\u304d\u308a\u3093",
+                        "Korean": "\uc5ed\ub9b0",
+                        "Spanish": "Enfado"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "MUDDY_WATER": {
+                    "id": "MUDDY_WATER",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Muddy Water",
+                        "German": "Lehmbr\u00fche",
+                        "French": "Ocroupi",
+                        "Italian": "Fanghiglia",
+                        "Japanese": "\u3060\u304f\u308a\u3085\u3046",
+                        "Korean": "\ud0c1\ub958",
+                        "Spanish": "Agua Lodosa"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": -1,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fCURLY.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fCURLY.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "TATSUGIRI_DROOPY": {
+            "id": "TATSUGIRI",
+            "formId": "TATSUGIRI_DROOPY",
+            "dexNr": 978,
+            "generation": 9,
+            "names": {
+                "English": "Tatsugiri (Droopy Form)",
+                "German": "Nigiragi (H\u00e4ngende Form)",
+                "French": "Nigirigon (Forme Affal\u00e9e)",
+                "Italian": "Tatsugiri (Forma Adagiata)",
+                "Japanese": "\u30b7\u30e3\u30ea\u30bf\u30c4 (\u305f\u308c\u305f\u3059\u304c\u305f)",
+                "Korean": "\uc2f8\ub9ac\uc6a9 (\ub298\uc5b4\uc9c4 \ubaa8\uc2b5)",
+                "Spanish": "Tatsugiri (Forma L\u00e1nguida)"
+            },
+            "stats": {
+                "stamina": 169,
+                "attack": 226,
+                "defense": 166
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "TAKE_DOWN_FAST": {
+                    "id": "TAKE_DOWN_FAST",
+                    "power": 7,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Take Down",
+                        "German": "Bodycheck",
+                        "French": "B\u00e9lier",
+                        "Italian": "Riduttore",
+                        "Japanese": "\u3068\u3063\u3057\u3093",
+                        "Korean": "\ub3cc\uc9c4",
+                        "Spanish": "Derribo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "WATER_GUN_FAST": {
+                    "id": "WATER_GUN_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Water Gun",
+                        "German": "Aquaknarre",
+                        "French": "Pistolet \u00e0 O",
+                        "Italian": "Pistolacqua",
+                        "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                        "Korean": "\ubb3c\ub300\ud3ec",
+                        "Spanish": "Pistola Agua"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "OUTRAGE": {
+                    "id": "OUTRAGE",
+                    "power": 110,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Outrage",
+                        "German": "Wutanfall",
+                        "French": "Col\u00e8re",
+                        "Italian": "Oltraggio",
+                        "Japanese": "\u3052\u304d\u308a\u3093",
+                        "Korean": "\uc5ed\ub9b0",
+                        "Spanish": "Enfado"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "MUDDY_WATER": {
+                    "id": "MUDDY_WATER",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Muddy Water",
+                        "German": "Lehmbr\u00fche",
+                        "French": "Ocroupi",
+                        "Italian": "Fanghiglia",
+                        "Japanese": "\u3060\u304f\u308a\u3085\u3046",
+                        "Korean": "\ud0c1\ub958",
+                        "Spanish": "Agua Lodosa"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": -1,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fDROOPY.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fDROOPY.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "TATSUGIRI_STRETCHY": {
+            "id": "TATSUGIRI",
+            "formId": "TATSUGIRI_STRETCHY",
+            "dexNr": 978,
+            "generation": 9,
+            "names": {
+                "English": "Tatsugiri (Stretchy Form)",
+                "German": "Nigiragi (Gestreckte Form)",
+                "French": "Nigirigon (Forme Raide)",
+                "Italian": "Tatsugiri (Forma Tesa)",
+                "Japanese": "\u30b7\u30e3\u30ea\u30bf\u30c4 (\u306e\u3073\u305f\u3059\u304c\u305f)",
+                "Korean": "\uc2f8\ub9ac\uc6a9 (\ubed7\uc740 \ubaa8\uc2b5)",
+                "Spanish": "Tatsugiri (Forma Recta)"
+            },
+            "stats": {
+                "stamina": 169,
+                "attack": 226,
+                "defense": 166
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "TAKE_DOWN_FAST": {
+                    "id": "TAKE_DOWN_FAST",
+                    "power": 7,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Take Down",
+                        "German": "Bodycheck",
+                        "French": "B\u00e9lier",
+                        "Italian": "Riduttore",
+                        "Japanese": "\u3068\u3063\u3057\u3093",
+                        "Korean": "\ub3cc\uc9c4",
+                        "Spanish": "Derribo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "WATER_GUN_FAST": {
+                    "id": "WATER_GUN_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Water Gun",
+                        "German": "Aquaknarre",
+                        "French": "Pistolet \u00e0 O",
+                        "Italian": "Pistolacqua",
+                        "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                        "Korean": "\ubb3c\ub300\ud3ec",
+                        "Spanish": "Pistola Agua"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "OUTRAGE": {
+                    "id": "OUTRAGE",
+                    "power": 110,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Outrage",
+                        "German": "Wutanfall",
+                        "French": "Col\u00e8re",
+                        "Italian": "Oltraggio",
+                        "Japanese": "\u3052\u304d\u308a\u3093",
+                        "Korean": "\uc5ed\ub9b0",
+                        "Spanish": "Enfado"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "MUDDY_WATER": {
+                    "id": "MUDDY_WATER",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Muddy Water",
+                        "German": "Lehmbr\u00fche",
+                        "French": "Ocroupi",
+                        "Italian": "Fanghiglia",
+                        "Japanese": "\u3060\u304f\u308a\u3085\u3046",
+                        "Korean": "\ud0c1\ub958",
+                        "Spanish": "Agua Lodosa"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 30,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": -1,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fSTRETCHY.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fSTRETCHY.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "CURLY",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fCURLY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fCURLY.s.icon.png"
+        },
+        {
+            "form": "DROOPY",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fDROOPY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fDROOPY.s.icon.png"
+        },
+        {
+            "form": "STRETCHY",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fSTRETCHY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm978.fSTRETCHY.s.icon.png"
+        }
+    ]
+}

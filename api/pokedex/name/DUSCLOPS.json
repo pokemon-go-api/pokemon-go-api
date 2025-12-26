@@ -1,0 +1,282 @@
+{
+    "id": "DUSCLOPS",
+    "formId": "DUSCLOPS",
+    "dexNr": 356,
+    "generation": 3,
+    "names": {
+        "English": "Dusclops",
+        "German": "Zwirrklop",
+        "French": "T\u00e9raclope",
+        "Italian": "Dusclops",
+        "Japanese": "\u30b5\u30de\u30e8\u30fc\u30eb",
+        "Korean": "\ubbf8\ub77c\ubabd",
+        "Spanish": "Dusclops"
+    },
+    "stats": {
+        "stamina": 120,
+        "attack": 124,
+        "defense": 234
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "HEX_FAST": {
+            "id": "HEX_FAST",
+            "power": 8,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Hex",
+                "German": "B\u00fcrde",
+                "French": "Ch\u00e2timent",
+                "Italian": "Sciagura",
+                "Japanese": "\u305f\u305f\u308a\u3081",
+                "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                "Spanish": "Infortunio"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 7,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "FEINT_ATTACK_FAST": {
+            "id": "FEINT_ATTACK_FAST",
+            "power": 11,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Feint Attack",
+                "German": "Finte",
+                "French": "Feinte",
+                "Italian": "Finta",
+                "Japanese": "\u3060\u307e\u3057\u3046\u3061",
+                "Korean": "\uc18d\uc5ec\ub54c\ub9ac\uae30",
+                "Spanish": "Finta"
+            },
+            "combat": {
+                "energy": 6,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_PUNCH": {
+            "id": "SHADOW_PUNCH",
+            "power": 35,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Punch",
+                "German": "Finsterfaust",
+                "French": "Poing Ombre",
+                "Italian": "Pugnodombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30d1\u30f3\u30c1",
+                "Korean": "\uc100\ub3c4\ud380\uce58",
+                "Spanish": "Pu\u00f1o Sombra"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ICE_PUNCH": {
+            "id": "ICE_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Ice Punch",
+                "German": "Eishieb",
+                "French": "Poing Glace",
+                "Italian": "Gelopugno",
+                "Japanese": "\u308c\u3044\u3068\u3046\u30d1\u30f3\u30c1",
+                "Korean": "\ub0c9\ub3d9\ud380\uce58",
+                "Spanish": "Pu\u00f1o Hielo"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FIRE_PUNCH": {
+            "id": "FIRE_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIRE",
+                "names": {
+                    "English": "Fire",
+                    "German": "Feuer",
+                    "French": "Feu",
+                    "Italian": "Fuoco",
+                    "Japanese": "\u307b\u306e\u304a",
+                    "Korean": "\ubd88\uaf43",
+                    "Spanish": "Fuego"
+                }
+            },
+            "names": {
+                "English": "Fire Punch",
+                "German": "Feuerschlag",
+                "French": "Poing Feu",
+                "Italian": "Fuocopugno",
+                "Japanese": "\u307b\u306e\u304a\u306e\u30d1\u30f3\u30c1",
+                "Korean": "\ubd88\uaf43\ud380\uce58",
+                "Spanish": "Pu\u00f1o Fuego"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POLTERGEIST": {
+            "id": "POLTERGEIST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Poltergeist",
+                "German": "Poltergeist",
+                "French": "Esprit Frappeur",
+                "Italian": "Poltergeist",
+                "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                "Spanish": "Poltergeist"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm356.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm356.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "DUSKNOIR",
+            "formId": "DUSKNOIR_NORMAL",
+            "candies": 100,
+            "item": {
+                "id": "ITEM_GEN4_EVOLUTION_STONE",
+                "names": {
+                    "English": "Sinnoh Stone",
+                    "German": "Sinnoh-Stein",
+                    "French": "Pierre Sinnoh",
+                    "Italian": "Pietra Sinnoh",
+                    "Japanese": "\u30b7\u30f3\u30aa\u30a6\u306e\u3044\u3057",
+                    "Korean": "\uc2e0\uc624\uc758 \ub3cc",
+                    "Spanish": "Piedra Sinnoh"
+                }
+            },
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": "FALL_2022_NOEVOLVE",
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm356.cFALL_2022_NOEVOLVE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm356.cFALL_2022_NOEVOLVE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm356.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm356.s.icon.png"
+        }
+    ]
+}

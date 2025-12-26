@@ -1,0 +1,1490 @@
+{
+    "id": "FLOETTE",
+    "formId": "FLOETTE",
+    "dexNr": 670,
+    "generation": 6,
+    "names": {
+        "English": "Floette",
+        "German": "Floette",
+        "French": "Floette",
+        "Italian": "Floette",
+        "Japanese": "\u30d5\u30e9\u30a8\u30c3\u30c6",
+        "Korean": "\ud50c\ub77c\uc5e3\ud14c",
+        "Spanish": "Floette"
+    },
+    "stats": {
+        "stamina": 144,
+        "attack": 136,
+        "defense": 151
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_FAIRY",
+        "names": {
+            "English": "Fairy",
+            "German": "Fee",
+            "French": "F\u00e9e",
+            "Italian": "Folletto",
+            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+            "Korean": "\ud398\uc5b4\ub9ac",
+            "Spanish": "Hada"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "VINE_WHIP_FAST": {
+            "id": "VINE_WHIP_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Vine Whip",
+                "German": "Rankenhieb",
+                "French": "Fouet Lianes",
+                "Italian": "Frustata",
+                "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                "Korean": "\ub369\uad74\ucc44\ucc0d",
+                "Spanish": "L\u00e1tigo Cepa"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "TACKLE_FAST": {
+            "id": "TACKLE_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Tackle",
+                "German": "Tackle",
+                "French": "Charge",
+                "Italian": "Azione",
+                "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                "Spanish": "Placaje"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DAZZLING_GLEAM": {
+            "id": "DAZZLING_GLEAM",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Dazzling Gleam",
+                "German": "Zauberschein",
+                "French": "\u00c9clat Magique",
+                "Italian": "Magibrillio",
+                "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                "Spanish": "Brillo M\u00e1gico"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PETAL_BLIZZARD": {
+            "id": "PETAL_BLIZZARD",
+            "power": 110,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Petal Blizzard",
+                "German": "Bl\u00fctenwirbel",
+                "French": "Temp\u00eate Florale",
+                "Italian": "Fiortempesta",
+                "Japanese": "\u306f\u306a\u3075\u3076\u304d",
+                "Korean": "\uaf43\ubcf4\ub77c",
+                "Spanish": "Tormenta Floral"
+            },
+            "combat": {
+                "energy": -65,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PSYCHIC": {
+            "id": "PSYCHIC",
+            "power": 95,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Psychic",
+                "German": "Psychokinese",
+                "French": "Psyko",
+                "Italian": "Psichico",
+                "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                "Spanish": "Ps\u00edquico"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 75,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fRED.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fRED.s.icon.png"
+    },
+    "regionForms": {
+        "FLOETTE_BLUE": {
+            "id": "FLOETTE",
+            "formId": "FLOETTE_BLUE",
+            "dexNr": 670,
+            "generation": 6,
+            "names": {
+                "English": "Floette (Blue Flower)",
+                "German": "Floette (Blaubl\u00fctler)",
+                "French": "Floette (Fleur Bleue)",
+                "Italian": "Floette (Fiore Blu)",
+                "Japanese": "\u30d5\u30e9\u30a8\u30c3\u30c6 (\u3042\u304a\u3044\u306f\u306a)",
+                "Korean": "\ud50c\ub77c\uc5e3\ud14c (\ud30c\ub780 \uaf43)",
+                "Spanish": "Floette (Flor Azul)"
+            },
+            "stats": {
+                "stamina": 144,
+                "attack": 136,
+                "defense": 151
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "VINE_WHIP_FAST": {
+                    "id": "VINE_WHIP_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Vine Whip",
+                        "German": "Rankenhieb",
+                        "French": "Fouet Lianes",
+                        "Italian": "Frustata",
+                        "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                        "Korean": "\ub369\uad74\ucc44\ucc0d",
+                        "Spanish": "L\u00e1tigo Cepa"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DAZZLING_GLEAM": {
+                    "id": "DAZZLING_GLEAM",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Dazzling Gleam",
+                        "German": "Zauberschein",
+                        "French": "\u00c9clat Magique",
+                        "Italian": "Magibrillio",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                        "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                        "Spanish": "Brillo M\u00e1gico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PETAL_BLIZZARD": {
+                    "id": "PETAL_BLIZZARD",
+                    "power": 110,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Petal Blizzard",
+                        "German": "Bl\u00fctenwirbel",
+                        "French": "Temp\u00eate Florale",
+                        "Italian": "Fiortempesta",
+                        "Japanese": "\u306f\u306a\u3075\u3076\u304d",
+                        "Korean": "\uaf43\ubcf4\ub77c",
+                        "Spanish": "Tormenta Floral"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fBLUE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fBLUE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "FLORGES",
+                    "formId": "FLORGES_BLUE",
+                    "candies": 100,
+                    "item": null,
+                    "quests": [
+                        {
+                            "id": "FLORGES_EVOLUTION_QUEST",
+                            "type": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+                            "names": {
+                                "English": "Earn a heart with your buddy",
+                                "German": "Verdiene ein Herz mit deinem Kumpel.",
+                                "French": "Gagne un c\u0153ur avec ton copain",
+                                "Italian": "Guadagna un cuore con il tuo compagno",
+                                "Japanese": "\u76f8\u68d2\u306e\u30cf\u30fc\u30c8\u3092\u7372\u5f97\u3059\u308b",
+                                "Korean": "\ud558\ud2b8 \ud68d\ub4dd",
+                                "Spanish": "Consigue un coraz\u00f3n con tu compa\u00f1ero"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "FLOETTE_ORANGE": {
+            "id": "FLOETTE",
+            "formId": "FLOETTE_ORANGE",
+            "dexNr": 670,
+            "generation": 6,
+            "names": {
+                "English": "Floette (Orange Flower)",
+                "German": "Floette (Orangebl\u00fctler)",
+                "French": "Floette (Fleur Orange)",
+                "Italian": "Floette (Fiore Arancione)",
+                "Japanese": "\u30d5\u30e9\u30a8\u30c3\u30c6 (\u30aa\u30ec\u30f3\u30b8\u3044\u308d\u306e\u306f\u306a)",
+                "Korean": "\ud50c\ub77c\uc5e3\ud14c (\uc624\ub80c\uc9c0\uc0c9 \uaf43)",
+                "Spanish": "Floette (Flor Naranja)"
+            },
+            "stats": {
+                "stamina": 144,
+                "attack": 136,
+                "defense": 151
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "VINE_WHIP_FAST": {
+                    "id": "VINE_WHIP_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Vine Whip",
+                        "German": "Rankenhieb",
+                        "French": "Fouet Lianes",
+                        "Italian": "Frustata",
+                        "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                        "Korean": "\ub369\uad74\ucc44\ucc0d",
+                        "Spanish": "L\u00e1tigo Cepa"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DAZZLING_GLEAM": {
+                    "id": "DAZZLING_GLEAM",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Dazzling Gleam",
+                        "German": "Zauberschein",
+                        "French": "\u00c9clat Magique",
+                        "Italian": "Magibrillio",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                        "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                        "Spanish": "Brillo M\u00e1gico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PETAL_BLIZZARD": {
+                    "id": "PETAL_BLIZZARD",
+                    "power": 110,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Petal Blizzard",
+                        "German": "Bl\u00fctenwirbel",
+                        "French": "Temp\u00eate Florale",
+                        "Italian": "Fiortempesta",
+                        "Japanese": "\u306f\u306a\u3075\u3076\u304d",
+                        "Korean": "\uaf43\ubcf4\ub77c",
+                        "Spanish": "Tormenta Floral"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fORANGE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fORANGE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "FLORGES",
+                    "formId": "FLORGES_ORANGE",
+                    "candies": 100,
+                    "item": null,
+                    "quests": [
+                        {
+                            "id": "FLORGES_EVOLUTION_QUEST",
+                            "type": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+                            "names": {
+                                "English": "Earn a heart with your buddy",
+                                "German": "Verdiene ein Herz mit deinem Kumpel.",
+                                "French": "Gagne un c\u0153ur avec ton copain",
+                                "Italian": "Guadagna un cuore con il tuo compagno",
+                                "Japanese": "\u76f8\u68d2\u306e\u30cf\u30fc\u30c8\u3092\u7372\u5f97\u3059\u308b",
+                                "Korean": "\ud558\ud2b8 \ud68d\ub4dd",
+                                "Spanish": "Consigue un coraz\u00f3n con tu compa\u00f1ero"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "FLOETTE_RED": {
+            "id": "FLOETTE",
+            "formId": "FLOETTE_RED",
+            "dexNr": 670,
+            "generation": 6,
+            "names": {
+                "English": "Floette (Red Flower)",
+                "German": "Floette (Rotbl\u00fctler)",
+                "French": "Floette (Fleur Rouge)",
+                "Italian": "Floette (Fiore Rosso)",
+                "Japanese": "\u30d5\u30e9\u30a8\u30c3\u30c6 (\u3042\u304b\u3044\u306f\u306a)",
+                "Korean": "\ud50c\ub77c\uc5e3\ud14c (\ube68\uac04 \uaf43)",
+                "Spanish": "Floette (Flor Roja)"
+            },
+            "stats": {
+                "stamina": 144,
+                "attack": 136,
+                "defense": 151
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "VINE_WHIP_FAST": {
+                    "id": "VINE_WHIP_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Vine Whip",
+                        "German": "Rankenhieb",
+                        "French": "Fouet Lianes",
+                        "Italian": "Frustata",
+                        "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                        "Korean": "\ub369\uad74\ucc44\ucc0d",
+                        "Spanish": "L\u00e1tigo Cepa"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DAZZLING_GLEAM": {
+                    "id": "DAZZLING_GLEAM",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Dazzling Gleam",
+                        "German": "Zauberschein",
+                        "French": "\u00c9clat Magique",
+                        "Italian": "Magibrillio",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                        "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                        "Spanish": "Brillo M\u00e1gico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PETAL_BLIZZARD": {
+                    "id": "PETAL_BLIZZARD",
+                    "power": 110,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Petal Blizzard",
+                        "German": "Bl\u00fctenwirbel",
+                        "French": "Temp\u00eate Florale",
+                        "Italian": "Fiortempesta",
+                        "Japanese": "\u306f\u306a\u3075\u3076\u304d",
+                        "Korean": "\uaf43\ubcf4\ub77c",
+                        "Spanish": "Tormenta Floral"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fRED.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fRED.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "FLORGES",
+                    "formId": "FLORGES_RED",
+                    "candies": 100,
+                    "item": null,
+                    "quests": [
+                        {
+                            "id": "FLORGES_EVOLUTION_QUEST",
+                            "type": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+                            "names": {
+                                "English": "Earn a heart with your buddy",
+                                "German": "Verdiene ein Herz mit deinem Kumpel.",
+                                "French": "Gagne un c\u0153ur avec ton copain",
+                                "Italian": "Guadagna un cuore con il tuo compagno",
+                                "Japanese": "\u76f8\u68d2\u306e\u30cf\u30fc\u30c8\u3092\u7372\u5f97\u3059\u308b",
+                                "Korean": "\ud558\ud2b8 \ud68d\ub4dd",
+                                "Spanish": "Consigue un coraz\u00f3n con tu compa\u00f1ero"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "FLOETTE_WHITE": {
+            "id": "FLOETTE",
+            "formId": "FLOETTE_WHITE",
+            "dexNr": 670,
+            "generation": 6,
+            "names": {
+                "English": "Floette (White Flower)",
+                "German": "Floette (Wei\u00dfbl\u00fctler)",
+                "French": "Floette (Fleur Blanche)",
+                "Italian": "Floette (Fiore Bianco)",
+                "Japanese": "\u30d5\u30e9\u30a8\u30c3\u30c6 (\u3057\u308d\u3044\u306f\u306a)",
+                "Korean": "\ud50c\ub77c\uc5e3\ud14c (\ud558\uc580 \uaf43)",
+                "Spanish": "Floette (Flor Blanca)"
+            },
+            "stats": {
+                "stamina": 144,
+                "attack": 136,
+                "defense": 151
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "VINE_WHIP_FAST": {
+                    "id": "VINE_WHIP_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Vine Whip",
+                        "German": "Rankenhieb",
+                        "French": "Fouet Lianes",
+                        "Italian": "Frustata",
+                        "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                        "Korean": "\ub369\uad74\ucc44\ucc0d",
+                        "Spanish": "L\u00e1tigo Cepa"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DAZZLING_GLEAM": {
+                    "id": "DAZZLING_GLEAM",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Dazzling Gleam",
+                        "German": "Zauberschein",
+                        "French": "\u00c9clat Magique",
+                        "Italian": "Magibrillio",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                        "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                        "Spanish": "Brillo M\u00e1gico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PETAL_BLIZZARD": {
+                    "id": "PETAL_BLIZZARD",
+                    "power": 110,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Petal Blizzard",
+                        "German": "Bl\u00fctenwirbel",
+                        "French": "Temp\u00eate Florale",
+                        "Italian": "Fiortempesta",
+                        "Japanese": "\u306f\u306a\u3075\u3076\u304d",
+                        "Korean": "\uaf43\ubcf4\ub77c",
+                        "Spanish": "Tormenta Floral"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fWHITE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fWHITE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "FLORGES",
+                    "formId": "FLORGES_WHITE",
+                    "candies": 100,
+                    "item": null,
+                    "quests": [
+                        {
+                            "id": "FLORGES_EVOLUTION_QUEST",
+                            "type": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+                            "names": {
+                                "English": "Earn a heart with your buddy",
+                                "German": "Verdiene ein Herz mit deinem Kumpel.",
+                                "French": "Gagne un c\u0153ur avec ton copain",
+                                "Italian": "Guadagna un cuore con il tuo compagno",
+                                "Japanese": "\u76f8\u68d2\u306e\u30cf\u30fc\u30c8\u3092\u7372\u5f97\u3059\u308b",
+                                "Korean": "\ud558\ud2b8 \ud68d\ub4dd",
+                                "Spanish": "Consigue un coraz\u00f3n con tu compa\u00f1ero"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "FLOETTE_YELLOW": {
+            "id": "FLOETTE",
+            "formId": "FLOETTE_YELLOW",
+            "dexNr": 670,
+            "generation": 6,
+            "names": {
+                "English": "Floette (Yellow Flower)",
+                "German": "Floette (Gelbbl\u00fctler)",
+                "French": "Floette (Fleur Jaune)",
+                "Italian": "Floette (Fiore Giallo)",
+                "Japanese": "\u30d5\u30e9\u30a8\u30c3\u30c6 (\u304d\u3044\u308d\u306e\u306f\u306a)",
+                "Korean": "\ud50c\ub77c\uc5e3\ud14c (\ub178\ub780 \uaf43)",
+                "Spanish": "Floette (Flor Amarilla)"
+            },
+            "stats": {
+                "stamina": 144,
+                "attack": 136,
+                "defense": 151
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "VINE_WHIP_FAST": {
+                    "id": "VINE_WHIP_FAST",
+                    "power": 6,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Vine Whip",
+                        "German": "Rankenhieb",
+                        "French": "Fouet Lianes",
+                        "Italian": "Frustata",
+                        "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                        "Korean": "\ub369\uad74\ucc44\ucc0d",
+                        "Spanish": "L\u00e1tigo Cepa"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DAZZLING_GLEAM": {
+                    "id": "DAZZLING_GLEAM",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Dazzling Gleam",
+                        "German": "Zauberschein",
+                        "French": "\u00c9clat Magique",
+                        "Italian": "Magibrillio",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30b7\u30e3\u30a4\u30f3",
+                        "Korean": "\ub9e4\uc9c0\uceec\uc0e4\uc778",
+                        "Spanish": "Brillo M\u00e1gico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PETAL_BLIZZARD": {
+                    "id": "PETAL_BLIZZARD",
+                    "power": 110,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Petal Blizzard",
+                        "German": "Bl\u00fctenwirbel",
+                        "French": "Temp\u00eate Florale",
+                        "Italian": "Fiortempesta",
+                        "Japanese": "\u306f\u306a\u3075\u3076\u304d",
+                        "Korean": "\uaf43\ubcf4\ub77c",
+                        "Spanish": "Tormenta Floral"
+                    },
+                    "combat": {
+                        "energy": -65,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fYELLOW.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fYELLOW.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "FLORGES",
+                    "formId": "FLORGES_YELLOW",
+                    "candies": 100,
+                    "item": null,
+                    "quests": [
+                        {
+                            "id": "FLORGES_EVOLUTION_QUEST",
+                            "type": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+                            "names": {
+                                "English": "Earn a heart with your buddy",
+                                "German": "Verdiene ein Herz mit deinem Kumpel.",
+                                "French": "Gagne un c\u0153ur avec ton copain",
+                                "Italian": "Guadagna un cuore con il tuo compagno",
+                                "Japanese": "\u76f8\u68d2\u306e\u30cf\u30fc\u30c8\u3092\u7372\u5f97\u3059\u308b",
+                                "Korean": "\ud558\ud2b8 \ud68d\ub4dd",
+                                "Spanish": "Consigue un coraz\u00f3n con tu compa\u00f1ero"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [
+        {
+            "id": "FLORGES",
+            "formId": "FLORGES_RED",
+            "candies": 100,
+            "item": null,
+            "quests": [
+                {
+                    "id": "FLORGES_EVOLUTION_QUEST",
+                    "type": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+                    "names": {
+                        "English": "Earn a heart with your buddy",
+                        "German": "Verdiene ein Herz mit deinem Kumpel.",
+                        "French": "Gagne un c\u0153ur avec ton copain",
+                        "Italian": "Guadagna un cuore con il tuo compagno",
+                        "Japanese": "\u76f8\u68d2\u306e\u30cf\u30fc\u30c8\u3092\u7372\u5f97\u3059\u308b",
+                        "Korean": "\ud558\ud2b8 \ud68d\ub4dd",
+                        "Spanish": "Consigue un coraz\u00f3n con tu compa\u00f1ero"
+                    }
+                }
+            ]
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "BLUE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fBLUE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fBLUE.s.icon.png"
+        },
+        {
+            "form": "ORANGE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fORANGE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fORANGE.s.icon.png"
+        },
+        {
+            "form": "RED",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fRED.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fRED.s.icon.png"
+        },
+        {
+            "form": "WHITE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fWHITE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fWHITE.s.icon.png"
+        },
+        {
+            "form": "YELLOW",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fYELLOW.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm670.fYELLOW.s.icon.png"
+        }
+    ]
+}

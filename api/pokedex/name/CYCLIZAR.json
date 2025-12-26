@@ -1,0 +1,229 @@
+{
+    "id": "CYCLIZAR",
+    "formId": "CYCLIZAR",
+    "dexNr": 967,
+    "generation": 9,
+    "names": {
+        "English": "Cyclizar",
+        "German": "Mopex",
+        "French": "Motorizard",
+        "Italian": "Cyclizar",
+        "Japanese": "\u30e2\u30c8\u30c8\u30ab\u30b2",
+        "Korean": "\ubaa8\ud1a0\ub9c8",
+        "Spanish": "Cyclizar"
+    },
+    "stats": {
+        "stamina": 172,
+        "attack": 205,
+        "defense": 142
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_DRAGON",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "Drag\u00f3n"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_NORMAL",
+        "names": {
+            "English": "Normal",
+            "German": "Normal",
+            "French": "Normal",
+            "Italian": "Normale",
+            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+            "Korean": "\ub178\ub9d0",
+            "Spanish": "Normal"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "DRAGON_TAIL_FAST": {
+            "id": "DRAGON_TAIL_FAST",
+            "power": 14,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Tail",
+                "German": "Drachenrute",
+                "French": "Draco-Queue",
+                "Italian": "Codadrago",
+                "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30c6\u30fc\u30eb",
+                "Korean": "\ub4dc\ub798\uace4\ud14c\uc77c",
+                "Spanish": "Cola Drag\u00f3n"
+            },
+            "combat": {
+                "energy": 12,
+                "power": 9,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "TAKE_DOWN_FAST": {
+            "id": "TAKE_DOWN_FAST",
+            "power": 7,
+            "energy": 8,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Take Down",
+                "German": "Bodycheck",
+                "French": "B\u00e9lier",
+                "Italian": "Riduttore",
+                "Japanese": "\u3068\u3063\u3057\u3093",
+                "Korean": "\ub3cc\uc9c4",
+                "Spanish": "Derribo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DRAGON_CLAW": {
+            "id": "DRAGON_CLAW",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Claw",
+                "German": "Drachenklaue",
+                "French": "Draco-Griffe",
+                "Italian": "Dragartigli",
+                "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30af\u30ed\u30fc",
+                "Korean": "\ub4dc\ub798\uace4\ud074\ub85c",
+                "Spanish": "Garra Drag\u00f3n"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "BODY_SLAM": {
+            "id": "BODY_SLAM",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Body Slam",
+                "German": "Bodyslam",
+                "French": "Plaquage",
+                "Italian": "Corposcontro",
+                "Japanese": "\u306e\u3057\u304b\u304b\u308a",
+                "Korean": "\ub204\ub974\uae30",
+                "Spanish": "Golpe Cuerpo"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "TRAILBLAZE": {
+            "id": "TRAILBLAZE",
+            "power": 65,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Trailblaze",
+                "German": "Wegbereiter",
+                "French": "D\u00e9sherbaffe",
+                "Italian": "Apripista",
+                "Japanese": "\u304f\u3055\u308f\u3051",
+                "Korean": "\uac1c\ucc99\ud558\uae30",
+                "Spanish": "Abrecaminos"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 65,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}

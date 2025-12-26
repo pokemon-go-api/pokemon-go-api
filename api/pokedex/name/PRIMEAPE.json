@@ -1,0 +1,397 @@
+{
+    "id": "PRIMEAPE",
+    "formId": "PRIMEAPE",
+    "dexNr": 57,
+    "generation": 1,
+    "names": {
+        "English": "Primeape",
+        "German": "Rasaff",
+        "French": "Colossinge",
+        "Italian": "Primeape",
+        "Japanese": "\u30aa\u30b3\u30ea\u30b6\u30eb",
+        "Korean": "\uc131\uc6d0\uc22d",
+        "Spanish": "Primeape"
+    },
+    "stats": {
+        "stamina": 163,
+        "attack": 207,
+        "defense": 138
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_FIGHTING",
+        "names": {
+            "English": "Fighting",
+            "German": "Kampf",
+            "French": "Combat",
+            "Italian": "Lotta",
+            "Japanese": "\u304b\u304f\u3068\u3046",
+            "Korean": "\uaca9\ud22c",
+            "Spanish": "Lucha"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "LOW_KICK_FAST": {
+            "id": "LOW_KICK_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Low Kick",
+                "German": "Fu\u00dfkick",
+                "French": "Balayage",
+                "Italian": "Colpo Basso",
+                "Japanese": "\u3051\u305f\u3050\u308a",
+                "Korean": "\uc548\ub2e4\ub9ac\uac78\uae30",
+                "Spanish": "Patada Baja"
+            },
+            "combat": {
+                "energy": 5,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "COUNTER_FAST": {
+            "id": "COUNTER_FAST",
+            "power": 13,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Counter",
+                "German": "Konter",
+                "French": "Riposte",
+                "Italian": "Contrattacco",
+                "Japanese": "\u30ab\u30a6\u30f3\u30bf\u30fc",
+                "Korean": "\uce74\uc6b4\ud130",
+                "Spanish": "Contraataque"
+            },
+            "combat": {
+                "energy": 6,
+                "power": 8,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "CLOSE_COMBAT": {
+            "id": "CLOSE_COMBAT",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Close Combat",
+                "German": "Nahkampf",
+                "French": "Close Combat",
+                "Italian": "Zuffa",
+                "Japanese": "\u30a4\u30f3\u30d5\u30a1\u30a4\u30c8",
+                "Korean": "\uc778\ud30c\uc774\ud2b8",
+                "Spanish": "A Bocajarro"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": -2,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "LOW_SWEEP": {
+            "id": "LOW_SWEEP",
+            "power": 40,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Low Sweep",
+                "German": "Fu\u00dftritt",
+                "French": "Balayette",
+                "Italian": "Calciobasso",
+                "Japanese": "\u30ed\u30fc\u30ad\u30c3\u30af",
+                "Korean": "\ub85c\ud0a5",
+                "Spanish": "Puntapi\u00e9"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 40,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "NIGHT_SLASH": {
+            "id": "NIGHT_SLASH",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_DARK",
+                "names": {
+                    "English": "Dark",
+                    "German": "Unlicht",
+                    "French": "T\u00e9n\u00e8bres",
+                    "Italian": "Buio",
+                    "Japanese": "\u3042\u304f",
+                    "Korean": "\uc545",
+                    "Spanish": "Siniestro"
+                }
+            },
+            "names": {
+                "English": "Night Slash",
+                "German": "Nachthieb",
+                "French": "Tranche-Nuit",
+                "Italian": "Nottesferza",
+                "Japanese": "\u3064\u3058\u304e\u308a",
+                "Korean": "\uae5c\uc9dd\ubca0\uae30",
+                "Spanish": "Tajo Umbr\u00edo"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 50,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 12,
+                    "attackerAttackStatsChange": 2,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "ICE_PUNCH": {
+            "id": "ICE_PUNCH",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Ice Punch",
+                "German": "Eishieb",
+                "French": "Poing Glace",
+                "Italian": "Gelopugno",
+                "Japanese": "\u308c\u3044\u3068\u3046\u30d1\u30f3\u30c1",
+                "Korean": "\ub0c9\ub3d9\ud380\uce58",
+                "Spanish": "Pu\u00f1o Hielo"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": {
+        "KARATE_CHOP_FAST": {
+            "id": "KARATE_CHOP_FAST",
+            "power": 10,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Karate Chop",
+                "German": "Karateschlag",
+                "French": "Poing Karat\u00e9",
+                "Italian": "Colpokarate",
+                "Japanese": "\u304b\u3089\u3066\u30c1\u30e7\u30c3\u30d7",
+                "Korean": "\ud0dc\uad8c\ub2f9\uc218",
+                "Spanish": "Golpe K\u00e1rate"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "eliteCinematicMoves": {
+        "CROSS_CHOP": {
+            "id": "CROSS_CHOP",
+            "power": 50,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Cross Chop",
+                "German": "Kreuzhieb",
+                "French": "Coup Croix",
+                "Italian": "Incrocolpo",
+                "Japanese": "\u30af\u30ed\u30b9\u30c1\u30e7\u30c3\u30d7",
+                "Korean": "\ud06c\ub85c\uc2a4\ucd19",
+                "Spanish": "Tajo Cruzado"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "RAGE_FIST": {
+            "id": "RAGE_FIST",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Rage Fist",
+                "German": "Zornesfaust",
+                "French": "Poing de Col\u00e8re",
+                "Italian": "Pugno Furibondo",
+                "Japanese": "\u3075\u3093\u3069\u306e\u3053\u3076\u3057",
+                "Korean": "\ubd84\ub178\uc758\uc8fc\uba39",
+                "Spanish": "Pu\u00f1o Furia"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 50,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm57.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm57.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "ANNIHILAPE",
+            "formId": "ANNIHILAPE",
+            "candies": 100,
+            "item": null,
+            "quests": [
+                {
+                    "id": "ANNIHILAPE_EVOLUTION_QUEST",
+                    "type": "QUEST_FIGHT_POKEMON",
+                    "names": {
+                        "English": "Defeat 30 Psychic- or Ghost-type Pok\u00e9mon",
+                        "German": "Besiege 30 Pok\u00e9mon vom Typ Psycho oder Geist.",
+                        "French": "Remporte un combat contre 30\u00a0Pok\u00e9mon de type Psy ou Spectre",
+                        "Italian": "Sconfiggi 30 Pok\u00e9mon di tipo Psico o Spettro",
+                        "Japanese": "\u30a8\u30b9\u30d1\u30fc\u30bf\u30a4\u30d7\u304b\u30b4\u30fc\u30b9\u30c8\u30bf\u30a4\u30d7\u306e\u30dd\u30b1\u30e2\u30f330\u5339\u306b\u52dd\u3064",
+                        "Korean": "\uc5d0\uc2a4\ud37c\ud0c0\uc785 \ub610\ub294 \uace0\uc2a4\ud2b8\ud0c0\uc785 \ud3ec\ucf13\ubaac 30\ub9c8\ub9ac\uc5d0\uac8c \uc774\uae34\ub2e4",
+                        "Spanish": "Derrota a 30 Pok\u00e9mon de tipo Ps\u00edquico o Fantasma"
+                    }
+                }
+            ]
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm57.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm57.s.icon.png"
+        }
+    ]
+}

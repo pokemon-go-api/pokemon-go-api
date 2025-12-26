@@ -1,0 +1,3286 @@
+{
+    "id": "SCATTERBUG",
+    "formId": "SCATTERBUG",
+    "dexNr": 664,
+    "generation": 6,
+    "names": {
+        "English": "Scatterbug",
+        "German": "Purmel",
+        "French": "L\u00e9pidonille",
+        "Italian": "Scatterbug",
+        "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+        "Korean": "\ubd84\uc774\ubc8c\ub808",
+        "Spanish": "Scatterbug"
+    },
+    "stats": {
+        "stamina": 116,
+        "attack": 63,
+        "defense": 63
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_BUG",
+        "names": {
+            "English": "Bug",
+            "German": "K\u00e4fer",
+            "French": "Insecte",
+            "Italian": "Coleottero",
+            "Japanese": "\u3080\u3057",
+            "Korean": "\ubc8c\ub808",
+            "Spanish": "Bicho"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "BUG_BITE_FAST": {
+            "id": "BUG_BITE_FAST",
+            "power": 5,
+            "energy": 6,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Bug Bite",
+                "German": "K\u00e4ferbiss",
+                "French": "Piq\u00fbre",
+                "Italian": "Coleomorso",
+                "Japanese": "\u3080\u3057\u304f\u3044",
+                "Korean": "\ubc8c\ub808\uba39\uae30",
+                "Spanish": "Picadura"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 4,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "TACKLE_FAST": {
+            "id": "TACKLE_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Tackle",
+                "German": "Tackle",
+                "French": "Charge",
+                "Italian": "Azione",
+                "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                "Spanish": "Placaje"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "STRUGGLE": {
+            "id": "STRUGGLE",
+            "power": 35,
+            "energy": 0,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Struggle",
+                "German": "Verzweifler",
+                "French": "Lutte",
+                "Italian": "Scontro",
+                "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                "Korean": "\ubc1c\ubc84\ub465",
+                "Spanish": "Combate"
+            },
+            "combat": {
+                "energy": -100,
+                "power": 35,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+    },
+    "regionForms": {
+        "SCATTERBUG_ARCHIPELAGO": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_ARCHIPELAGO",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_ARCHIPELAGO",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_CONTINENTAL": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_CONTINENTAL",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_CONTINENTAL",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_ELEGANT": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_ELEGANT",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_ELEGANT",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_FANCY": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_FANCY",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_FANCY",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_GARDEN": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_GARDEN",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_GARDEN",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_HIGH_PLAINS": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_HIGH_PLAINS",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_HIGH_PLAINS",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_ICY_SNOW": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_ICY_SNOW",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_ICY_SNOW",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_JUNGLE": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_JUNGLE",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_JUNGLE",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_MARINE": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_MARINE",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_MARINE",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_MEADOW": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_MEADOW",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_MEADOW",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_MODERN": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_MODERN",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_MODERN",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_MONSOON": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_MONSOON",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_MONSOON",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_OCEAN": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_OCEAN",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_OCEAN",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_POKEBALL": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_POKEBALL",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_POKEBALL",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_POLAR": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_POLAR",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_POLAR",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_RIVER": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_RIVER",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_RIVER",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_SANDSTORM": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_SANDSTORM",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_SANDSTORM",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_SAVANNA": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_SAVANNA",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_SAVANNA",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_SUN": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_SUN",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug (Sunny)",
+                "German": "Purmel (Sonnenform)",
+                "French": "L\u00e9pidonille (Solaire)",
+                "Italian": "Scatterbug (Sole)",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7 (\u305f\u3044\u3088\u3046\u306e\u3059\u304c\u305f)",
+                "Korean": "\ubd84\uc774\ubc8c\ub808 (\ud0dc\uc591\uc758 \ubaa8\uc2b5)",
+                "Spanish": "Scatterbug (Sol)"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_SUN",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SCATTERBUG_TUNDRA": {
+            "id": "SCATTERBUG",
+            "formId": "SCATTERBUG_TUNDRA",
+            "dexNr": 664,
+            "generation": 6,
+            "names": {
+                "English": "Scatterbug",
+                "German": "Purmel",
+                "French": "L\u00e9pidonille",
+                "Italian": "Scatterbug",
+                "Japanese": "\u30b3\u30d5\u30ad\u30e0\u30b7",
+                "Korean": "\ubd84\uc774\ubc8c\ub808",
+                "Spanish": "Scatterbug"
+            },
+            "stats": {
+                "stamina": 116,
+                "attack": 63,
+                "defense": 63
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "BUG_BITE_FAST": {
+                    "id": "BUG_BITE_FAST",
+                    "power": 5,
+                    "energy": 6,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "Bug Bite",
+                        "German": "K\u00e4ferbiss",
+                        "French": "Piq\u00fbre",
+                        "Italian": "Coleomorso",
+                        "Japanese": "\u3080\u3057\u304f\u3044",
+                        "Korean": "\ubc8c\ub808\uba39\uae30",
+                        "Spanish": "Picadura"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 4,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "TACKLE_FAST": {
+                    "id": "TACKLE_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Tackle",
+                        "German": "Tackle",
+                        "French": "Charge",
+                        "Italian": "Azione",
+                        "Japanese": "\u305f\u3044\u3042\u305f\u308a",
+                        "Korean": "\ubab8\ud1b5\ubc15\uce58\uae30",
+                        "Spanish": "Placaje"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "STRUGGLE": {
+                    "id": "STRUGGLE",
+                    "power": 35,
+                    "energy": 0,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Struggle",
+                        "German": "Verzweifler",
+                        "French": "Lutte",
+                        "Italian": "Scontro",
+                        "Japanese": "\u308f\u308b\u3042\u304c\u304d",
+                        "Korean": "\ubc1c\ubc84\ub465",
+                        "Spanish": "Combate"
+                    },
+                    "combat": {
+                        "energy": -100,
+                        "power": 35,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [
+                {
+                    "id": "SPEWPA",
+                    "formId": "SPEWPA_TUNDRA",
+                    "candies": 25,
+                    "item": null,
+                    "quests": []
+                }
+            ],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [
+        {
+            "id": "SPEWPA",
+            "formId": "SPEWPA",
+            "candies": 25,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm664.s.icon.png"
+        }
+    ]
+}

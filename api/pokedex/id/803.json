@@ -1,0 +1,251 @@
+{
+    "id": "POIPOLE",
+    "formId": "POIPOLE",
+    "dexNr": 803,
+    "generation": 7,
+    "names": {
+        "English": "Poipole",
+        "German": "Venicro",
+        "French": "V\u00e9mini",
+        "Italian": "Poipole",
+        "Japanese": "\u30d9\u30d9\u30ce\u30e0",
+        "Korean": "\ubca0\ubca0\ub188",
+        "Spanish": "Poipole"
+    },
+    "stats": {
+        "stamina": 167,
+        "attack": 145,
+        "defense": 133
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": "POKEMON_CLASS_ULTRA_BEAST",
+    "quickMoves": {
+        "POISON_JAB_FAST": {
+            "id": "POISON_JAB_FAST",
+            "power": 13,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Poison Jab",
+                "German": "Gifthieb",
+                "French": "Direct Toxik",
+                "Italian": "Velenpuntura",
+                "Japanese": "\u3069\u304f\u3065\u304d",
+                "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                "Spanish": "Puya Nociva"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 7,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "PECK_FAST": {
+            "id": "PECK_FAST",
+            "power": 10,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Peck",
+                "German": "Pikser",
+                "French": "Picpic",
+                "Italian": "Beccata",
+                "Japanese": "\u3064\u3064\u304f",
+                "Korean": "\ucabc\uae30",
+                "Spanish": "Picotazo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SLUDGE_BOMB": {
+            "id": "SLUDGE_BOMB",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Sludge Bomb",
+                "German": "Matschbombe",
+                "French": "Bombe Beurk",
+                "Italian": "Fangobomba",
+                "Japanese": "\u30d8\u30c9\u30ed\u3070\u304f\u3060\u3093",
+                "Korean": "\uc624\ubb3c\ud3ed\ud0c4",
+                "Spanish": "Bomba Lodo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SLUDGE_WAVE": {
+            "id": "SLUDGE_WAVE",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Sludge Wave",
+                "German": "Schlammwoge",
+                "French": "Cradovague",
+                "Italian": "Fangonda",
+                "Japanese": "\u30d8\u30c9\u30ed\u30a6\u30a7\u30fc\u30d6",
+                "Korean": "\uc624\ubb3c\uc6e8\uc774\ube0c",
+                "Spanish": "Onda T\u00f3xica"
+            },
+            "combat": {
+                "energy": -65,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FELL_STINGER": {
+            "id": "FELL_STINGER",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "Fell Stinger",
+                "German": "Stachelfinale",
+                "French": "Dard Mortel",
+                "Italian": "Pungiglione",
+                "Japanese": "\u3068\u3069\u3081\u3070\u308a",
+                "Korean": "\ub9c8\uc9c0\ub9c9\uc77c\uce68",
+                "Spanish": "Aguij\u00f3n Letal"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 20,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm803.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm803.s.icon.png"
+    },
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "NAGANADEL",
+            "formId": "NAGANADEL",
+            "candies": 200,
+            "item": null,
+            "quests": [
+                {
+                    "id": "NAGANADEL_EVOLUTION_QUEST",
+                    "type": "QUEST_CATCH_POKEMON",
+                    "names": {
+                        "English": "Catch 20 Dragon-type Pok\u00e9mon",
+                        "German": "Fange 20 Pok\u00e9mon vom Typ Drache.",
+                        "French": "Attrape 20\u00a0Pok\u00e9mon de type Dragon",
+                        "Italian": "Cattura 20 Pok\u00e9mon di tipo Drago",
+                        "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30bf\u30a4\u30d7\u306e\u30dd\u30b1\u30e2\u30f3\u309220\u5339\u6355\u307e\u3048\u308b",
+                        "Korean": "\ub4dc\ub798\uace4\ud0c0\uc785 \ud3ec\ucf13\ubaac\uc744 20\ub9c8\ub9ac \uc7a1\ub294\ub2e4",
+                        "Spanish": "Captura 20 Pok\u00e9mon de tipo Drag\u00f3n"
+                    }
+                }
+            ]
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm803.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm803.s.icon.png"
+        }
+    ]
+}

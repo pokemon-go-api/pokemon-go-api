@@ -1,0 +1,512 @@
+{
+    "id": "MIRAIDON",
+    "formId": "MIRAIDON",
+    "dexNr": 1008,
+    "generation": 9,
+    "names": {
+        "English": "Miraidon",
+        "German": "Miraidon",
+        "French": "Miraidon",
+        "Italian": "Miraidon",
+        "Japanese": "\u30df\u30e9\u30a4\u30c9\u30f3",
+        "Korean": "\ubbf8\ub77c\uc774\ub3c8",
+        "Spanish": "Miraidon"
+    },
+    "stats": {
+        "stamina": 205,
+        "attack": 263,
+        "defense": 223
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ELECTRIC",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_DRAGON",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "Drag\u00f3n"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "THUNDER_SHOCK_FAST": {
+            "id": "THUNDER_SHOCK_FAST",
+            "power": 4,
+            "energy": 7,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder Shock",
+                "German": "Donnerschock",
+                "French": "\u00c9clair",
+                "Italian": "Tuonoshock",
+                "Japanese": "\u3067\u3093\u304d\u30b7\u30e7\u30c3\u30af",
+                "Korean": "\uc804\uae30\uc1fc\ud06c",
+                "Spanish": "Impactrueno"
+            },
+            "combat": {
+                "energy": 9,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "DRAGON_BREATH_FAST": {
+            "id": "DRAGON_BREATH_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Breath",
+                "German": "Feuerodem",
+                "French": "Draco-Souffle",
+                "Italian": "Dragospiro",
+                "Japanese": "\u308a\u3085\u3046\u306e\u3044\u3076\u304d",
+                "Korean": "\uc6a9\uc758\uc228\uacb0",
+                "Spanish": "Dragoaliento"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "HYPER_BEAM": {
+            "id": "HYPER_BEAM",
+            "power": 150,
+            "energy": -100,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Hyper Beam",
+                "German": "Hyperstrahl",
+                "French": "Ultralaser",
+                "Italian": "Iper Raggio",
+                "Japanese": "\u306f\u304b\u3044\u3053\u3046\u305b\u3093",
+                "Korean": "\ud30c\uad34\uad11\uc120",
+                "Spanish": "Hiperrayo"
+            },
+            "combat": {
+                "energy": -80,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "DRAGON_PULSE": {
+            "id": "DRAGON_PULSE",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Pulse",
+                "German": "Drachenpuls",
+                "French": "Draco-Choc",
+                "Italian": "Dragopulsar",
+                "Japanese": "\u308a\u3085\u3046\u306e\u306f\u3069\u3046",
+                "Korean": "\uc6a9\uc758\ud30c\ub3d9",
+                "Spanish": "Pulso Drag\u00f3n"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "THUNDER": {
+            "id": "THUNDER",
+            "power": 100,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "names": {
+                "English": "Thunder",
+                "German": "Donner",
+                "French": "Fatal-Foudre",
+                "Italian": "Tuono",
+                "Japanese": "\u304b\u307f\u306a\u308a",
+                "Korean": "\ubc88\uac1c",
+                "Spanish": "Trueno"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "OUTRAGE": {
+            "id": "OUTRAGE",
+            "power": 110,
+            "energy": -50,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Outrage",
+                "German": "Wutanfall",
+                "French": "Col\u00e8re",
+                "Italian": "Oltraggio",
+                "Japanese": "\u3052\u304d\u308a\u3093",
+                "Korean": "\uc5ed\ub9b0",
+                "Spanish": "Enfado"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 110,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": {
+        "MIRAIDON_ULTIMATE": {
+            "id": "MIRAIDON",
+            "formId": "MIRAIDON_ULTIMATE",
+            "dexNr": 1008,
+            "generation": 9,
+            "names": {
+                "English": "Miraidon (Ultimate Mode)",
+                "German": "Miraidon (Kompletter Modus)",
+                "French": "Miraidon (Mode Ultime)",
+                "Italian": "Miraidon (Assetto Completo)",
+                "Japanese": "\u30df\u30e9\u30a4\u30c9\u30f3 (\u30b3\u30f3\u30d7\u30ea\u30fc\u30c8\u30e2\u30fc\u30c9)",
+                "Korean": "\ubbf8\ub77c\uc774\ub3c8 (\ucef4\ud50c\ub9ac\ud2b8\ubaa8\ub4dc)",
+                "Spanish": "Miraidon (Modo Pleno)"
+            },
+            "stats": {
+                "stamina": 205,
+                "attack": 263,
+                "defense": 223
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ELECTRIC",
+                "names": {
+                    "English": "Electric",
+                    "German": "Elektro",
+                    "French": "\u00c9lectrik",
+                    "Italian": "Elettro",
+                    "Japanese": "\u3067\u3093\u304d",
+                    "Korean": "\uc804\uae30",
+                    "Spanish": "El\u00e9ctrico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+            "quickMoves": {
+                "THUNDER_SHOCK_FAST": {
+                    "id": "THUNDER_SHOCK_FAST",
+                    "power": 4,
+                    "energy": 7,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Thunder Shock",
+                        "German": "Donnerschock",
+                        "French": "\u00c9clair",
+                        "Italian": "Tuonoshock",
+                        "Japanese": "\u3067\u3093\u304d\u30b7\u30e7\u30c3\u30af",
+                        "Korean": "\uc804\uae30\uc1fc\ud06c",
+                        "Spanish": "Impactrueno"
+                    },
+                    "combat": {
+                        "energy": 9,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "DRAGON_BREATH_FAST": {
+                    "id": "DRAGON_BREATH_FAST",
+                    "power": 6,
+                    "energy": 4,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Dragon Breath",
+                        "German": "Feuerodem",
+                        "French": "Draco-Souffle",
+                        "Italian": "Dragospiro",
+                        "Japanese": "\u308a\u3085\u3046\u306e\u3044\u3076\u304d",
+                        "Korean": "\uc6a9\uc758\uc228\uacb0",
+                        "Spanish": "Dragoaliento"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "HYPER_BEAM": {
+                    "id": "HYPER_BEAM",
+                    "power": 150,
+                    "energy": -100,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Hyper Beam",
+                        "German": "Hyperstrahl",
+                        "French": "Ultralaser",
+                        "Italian": "Iper Raggio",
+                        "Japanese": "\u306f\u304b\u3044\u3053\u3046\u305b\u3093",
+                        "Korean": "\ud30c\uad34\uad11\uc120",
+                        "Spanish": "Hiperrayo"
+                    },
+                    "combat": {
+                        "energy": -80,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "DRAGON_PULSE": {
+                    "id": "DRAGON_PULSE",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Dragon Pulse",
+                        "German": "Drachenpuls",
+                        "French": "Draco-Choc",
+                        "Italian": "Dragopulsar",
+                        "Japanese": "\u308a\u3085\u3046\u306e\u306f\u3069\u3046",
+                        "Korean": "\uc6a9\uc758\ud30c\ub3d9",
+                        "Spanish": "Pulso Drag\u00f3n"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "THUNDER": {
+                    "id": "THUNDER",
+                    "power": 100,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ELECTRIC",
+                        "names": {
+                            "English": "Electric",
+                            "German": "Elektro",
+                            "French": "\u00c9lectrik",
+                            "Italian": "Elettro",
+                            "Japanese": "\u3067\u3093\u304d",
+                            "Korean": "\uc804\uae30",
+                            "Spanish": "El\u00e9ctrico"
+                        }
+                    },
+                    "names": {
+                        "English": "Thunder",
+                        "German": "Donner",
+                        "French": "Fatal-Foudre",
+                        "Italian": "Tuono",
+                        "Japanese": "\u304b\u307f\u306a\u308a",
+                        "Korean": "\ubc88\uac1c",
+                        "Spanish": "Trueno"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "OUTRAGE": {
+                    "id": "OUTRAGE",
+                    "power": 110,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Outrage",
+                        "German": "Wutanfall",
+                        "French": "Col\u00e8re",
+                        "Italian": "Oltraggio",
+                        "Japanese": "\u3052\u304d\u308a\u3093",
+                        "Korean": "\uc5ed\ub9b0",
+                        "Spanish": "Enfado"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 110,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}

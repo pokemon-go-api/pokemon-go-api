@@ -1,0 +1,990 @@
+{
+    "currentList": {
+        "mega": [
+            {
+                "id": "GLALIE",
+                "form": "GLALIE_MEGA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm362.fMEGA.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm362.fMEGA.s.icon.png"
+                },
+                "level": "mega",
+                "names": {
+                    "English": "Mega Glalie",
+                    "German": "Mega-Firnontor",
+                    "French": "M\u00e9ga-Oniglali",
+                    "Italian": "MegaGlalie",
+                    "Japanese": "\u30e1\u30ac\u30aa\u30cb\u30b4\u30fc\u30ea",
+                    "Korean": "\uba54\uac00\uc5bc\uc74c\uadc0\uc2e0",
+                    "Spanish": "Mega-Glalie"
+                },
+                "shiny": true,
+                "types": [
+                    "Ice"
+                ],
+                "counter": {
+                    "Fighting": 1.6,
+                    "Fire": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "snow"
+                ],
+                "cpRange": [
+                    1138,
+                    1203
+                ],
+                "cpRangeBoost": [
+                    1423,
+                    1504
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.269619
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.82656926
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.7044997
+                    }
+                }
+            }
+        ],
+        "lvl5": [
+            {
+                "id": "ZEKROM",
+                "form": "ZEKROM",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm644.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm644.s.icon.png"
+                },
+                "level": "lvl5",
+                "names": {
+                    "English": "Zekrom",
+                    "German": "Zekrom",
+                    "French": "Zekrom",
+                    "Italian": "Zekrom",
+                    "Japanese": "\u30bc\u30af\u30ed\u30e0",
+                    "Korean": "\uc81c\ud06c\ub85c\ubb34",
+                    "Spanish": "Zekrom"
+                },
+                "shiny": true,
+                "types": [
+                    "Dragon",
+                    "Electric"
+                ],
+                "counter": {
+                    "Dragon": 1.6,
+                    "Fairy": 1.6,
+                    "Ground": 1.6,
+                    "Ice": 1.6
+                },
+                "weather": [
+                    "rain",
+                    "windy"
+                ],
+                "cpRange": [
+                    2217,
+                    2307
+                ],
+                "cpRangeBoost": [
+                    2771,
+                    2884
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 2.912698
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 1.8000432
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 1.5399445
+                    }
+                }
+            }
+        ],
+        "lvl3": [
+            {
+                "id": "MR_MIME",
+                "form": "MR_MIME_GALARIAN",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm122.fGALARIAN.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm122.fGALARIAN.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Galarian Mr. Mime",
+                    "German": "Galar-Pantimos",
+                    "French": "M. Mime de Galar",
+                    "Italian": "Mr. Mime di Galar",
+                    "Japanese": "\u30ac\u30e9\u30eb \u30d0\u30ea\u30e4\u30fc\u30c9",
+                    "Korean": "\uac00\ub77c\ub974 \ub9c8\uc784\ub9e8",
+                    "Spanish": "Mr. Mime de Galar"
+                },
+                "shiny": true,
+                "types": [
+                    "Ice",
+                    "Psychic"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Dark": 1.6,
+                    "Fire": 1.6,
+                    "Ghost": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "windy",
+                    "snow"
+                ],
+                "cpRange": [
+                    1117,
+                    1181
+                ],
+                "cpRangeBoost": [
+                    1396,
+                    1477
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.6966562
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.483456
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.4218249
+                    }
+                }
+            },
+            {
+                "id": "SUDOWOODO",
+                "form": "SUDOWOODO_WINTER_2025",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm185.fWINTER_2025.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm185.fWINTER_2025.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Sudowoodo",
+                    "German": "Mogelbaum",
+                    "French": "Simularbre",
+                    "Italian": "Sudowoodo",
+                    "Japanese": "\u30a6\u30bd\u30c3\u30ad\u30fc",
+                    "Korean": "\uaf2c\uc9c0\ubaa8",
+                    "Spanish": "Sudowoodo"
+                },
+                "shiny": true,
+                "types": [
+                    "Rock"
+                ],
+                "counter": {
+                    "Fighting": 1.6,
+                    "Grass": 1.6,
+                    "Ground": 1.6,
+                    "Steel": 1.6,
+                    "Water": 1.6
+                },
+                "weather": [
+                    "partlycloudy_day"
+                ],
+                "cpRange": [
+                    1162,
+                    1227
+                ],
+                "cpRangeBoost": [
+                    1452,
+                    1534
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.7296717
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.5018931
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.44270673
+                    }
+                }
+            },
+            {
+                "id": "CHARJABUG",
+                "form": "CHARJABUG_WINTER_2025",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm737.fWINTER_2025.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm737.fWINTER_2025.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Charjabug",
+                    "German": "Akkup",
+                    "French": "Chrysapile",
+                    "Italian": "Charjabug",
+                    "Japanese": "\u30c7\u30f3\u30c2\u30e0\u30b7",
+                    "Korean": "\uc804\uc9c0\ucda9\uc774",
+                    "Spanish": "Charjabug"
+                },
+                "shiny": true,
+                "types": [
+                    "Bug",
+                    "Electric"
+                ],
+                "counter": {
+                    "Fire": 1.6,
+                    "Rock": 1.6
+                },
+                "weather": [
+                    "rain"
+                ],
+                "cpRange": [
+                    912,
+                    970
+                ],
+                "cpRangeBoost": [
+                    1140,
+                    1212
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.83903694
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.58092034
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.5044492
+                    }
+                }
+            }
+        ],
+        "lvl1": [
+            {
+                "id": "SANDSHREW",
+                "form": "SANDSHREW_ALOLA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm27.fALOLA.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm27.fALOLA.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Alolan Sandshrew",
+                    "German": "Alola-Sandan",
+                    "French": "Sabelette d'Alola",
+                    "Italian": "Sandshrew di Alola",
+                    "Japanese": "\u30a2\u30ed\u30fc\u30e9 \u30b5\u30f3\u30c9",
+                    "Korean": "\uc54c\ub85c\ub77c \ubaa8\ub798\ub450\uc9c0",
+                    "Spanish": "Sandshrew de Alola"
+                },
+                "shiny": true,
+                "types": [
+                    "Ice",
+                    "Steel"
+                ],
+                "counter": {
+                    "Fighting": 2.56,
+                    "Fire": 2.56,
+                    "Ground": 1.6
+                },
+                "weather": [
+                    "snow"
+                ],
+                "cpRange": [
+                    688,
+                    739
+                ],
+                "cpRangeBoost": [
+                    860,
+                    924
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.060604677
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.04169154
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.03931756
+                    }
+                }
+            },
+            {
+                "id": "DARUMAKA",
+                "form": "DARUMAKA_GALARIAN",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm554.fGALARIAN.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm554.fGALARIAN.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Galarian Darumaka",
+                    "German": "Galar-Flampion",
+                    "French": "Darumarond de Galar",
+                    "Italian": "Darumaka di Galar",
+                    "Japanese": "\u30ac\u30e9\u30eb \u30c0\u30eb\u30de\u30c3\u30ab",
+                    "Korean": "\uac00\ub77c\ub974 \ub2ec\ub9c9\ud654",
+                    "Spanish": "Darumaka de Galar"
+                },
+                "shiny": true,
+                "types": [
+                    "Ice"
+                ],
+                "counter": {
+                    "Fighting": 1.6,
+                    "Fire": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "snow"
+                ],
+                "cpRange": [
+                    768,
+                    823
+                ],
+                "cpRangeBoost": [
+                    961,
+                    1030
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.060283426
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.044759005
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.0393781
+                    }
+                }
+            },
+            {
+                "id": "ROLYCOLY",
+                "form": "ROLYCOLY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm837.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm837.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Rolycoly",
+                    "German": "Klonkett",
+                    "French": "Charbi",
+                    "Italian": "Rolycoly",
+                    "Japanese": "\u30bf\u30f3\u30c9\u30f3",
+                    "Korean": "\ud0c4\ub3d9",
+                    "Spanish": "Rolycoly"
+                },
+                "shiny": false,
+                "types": [
+                    "Rock"
+                ],
+                "counter": {
+                    "Fighting": 1.6,
+                    "Grass": 1.6,
+                    "Ground": 1.6,
+                    "Steel": 1.6,
+                    "Water": 1.6
+                },
+                "weather": [
+                    "partlycloudy_day"
+                ],
+                "cpRange": [
+                    315,
+                    349
+                ],
+                "cpRangeBoost": [
+                    393,
+                    437
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.06131297
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.046285268
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.04164628
+                    }
+                }
+            }
+        ],
+        "shadow_lvl5": [
+            {
+                "id": "HEATRAN",
+                "form": "HEATRAN",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm485.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm485.s.icon.png"
+                },
+                "level": "shadow_lvl5",
+                "names": {
+                    "English": "Heatran",
+                    "German": "Heatran",
+                    "French": "Heatran",
+                    "Italian": "Heatran",
+                    "Japanese": "\u30d2\u30fc\u30c9\u30e9\u30f3",
+                    "Korean": "\ud788\ub4dc\ub7f0",
+                    "Spanish": "Heatran"
+                },
+                "shiny": true,
+                "types": [
+                    "Fire",
+                    "Steel"
+                ],
+                "counter": {
+                    "Ground": 2.56,
+                    "Fighting": 1.6,
+                    "Water": 1.6
+                },
+                "weather": [
+                    "sunny",
+                    "snow"
+                ],
+                "cpRange": [
+                    2058,
+                    2145
+                ],
+                "cpRangeBoost": [
+                    2573,
+                    2681
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 4.0921373
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 2.6204698
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 2.2471306
+                    }
+                }
+            }
+        ],
+        "shadow_lvl3": [
+            {
+                "id": "SCYTHER",
+                "form": "SCYTHER",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm123.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm123.s.icon.png"
+                },
+                "level": "shadow_lvl3",
+                "names": {
+                    "English": "Scyther",
+                    "German": "Sichlor",
+                    "French": "Ins\u00e9cateur",
+                    "Italian": "Scyther",
+                    "Japanese": "\u30b9\u30c8\u30e9\u30a4\u30af",
+                    "Korean": "\uc2a4\ub77c\ud06c",
+                    "Spanish": "Scyther"
+                },
+                "shiny": true,
+                "types": [
+                    "Bug",
+                    "Flying"
+                ],
+                "counter": {
+                    "Rock": 2.56,
+                    "Electric": 1.6,
+                    "Fire": 1.6,
+                    "Flying": 1.6,
+                    "Ice": 1.6
+                },
+                "weather": [
+                    "rain",
+                    "windy"
+                ],
+                "cpRange": [
+                    1472,
+                    1546
+                ],
+                "cpRangeBoost": [
+                    1841,
+                    1933
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.3126345
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.8680664
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.7507002
+                    }
+                }
+            },
+            {
+                "id": "AERODACTYL",
+                "form": "AERODACTYL",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm142.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm142.s.icon.png"
+                },
+                "level": "shadow_lvl3",
+                "names": {
+                    "English": "Aerodactyl",
+                    "German": "Aerodactyl",
+                    "French": "Pt\u00e9ra",
+                    "Italian": "Aerodactyl",
+                    "Japanese": "\u30d7\u30c6\u30e9",
+                    "Korean": "\ud504\ud14c\ub77c",
+                    "Spanish": "Aerodactyl"
+                },
+                "shiny": true,
+                "types": [
+                    "Rock",
+                    "Flying"
+                ],
+                "counter": {
+                    "Electric": 1.6,
+                    "Ice": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6,
+                    "Water": 1.6
+                },
+                "weather": [
+                    "partlycloudy_day",
+                    "windy"
+                ],
+                "cpRange": [
+                    1515,
+                    1590
+                ],
+                "cpRangeBoost": [
+                    1894,
+                    1988
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.4015279
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.9269566
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.78884363
+                    }
+                }
+            },
+            {
+                "id": "SABLEYE",
+                "form": "SABLEYE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm302.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm302.s.icon.png"
+                },
+                "level": "shadow_lvl3",
+                "names": {
+                    "English": "Sableye",
+                    "German": "Zobiris",
+                    "French": "T\u00e9n\u00e9fix",
+                    "Italian": "Sableye",
+                    "Japanese": "\u30e4\u30df\u30e9\u30df",
+                    "Korean": "\uae5c\uae4c\ubbf8",
+                    "Spanish": "Sableye"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark",
+                    "Ghost"
+                ],
+                "counter": {
+                    "Fairy": 1.6
+                },
+                "weather": [
+                    "fog"
+                ],
+                "cpRange": [
+                    789,
+                    843
+                ],
+                "cpRangeBoost": [
+                    986,
+                    1054
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.4974278
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 1.0173968
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.87936
+                    }
+                }
+            }
+        ],
+        "shadow_lvl1": [
+            {
+                "id": "DROWZEE",
+                "form": "DROWZEE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm96.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm96.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Drowzee",
+                    "German": "Traumato",
+                    "French": "Soporifik",
+                    "Italian": "Drowzee",
+                    "Japanese": "\u30b9\u30ea\u30fc\u30d7",
+                    "Korean": "\uc2ac\ub9ac\ud504",
+                    "Spanish": "Drowzee"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Dark": 1.6,
+                    "Ghost": 1.6
+                },
+                "weather": [
+                    "windy"
+                ],
+                "cpRange": [
+                    548,
+                    594
+                ],
+                "cpRangeBoost": [
+                    685,
+                    743
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.08036216
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.06314135
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.05449885
+                    }
+                }
+            },
+            {
+                "id": "RALTS",
+                "form": "RALTS",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm280.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm280.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Ralts",
+                    "German": "Trasla",
+                    "French": "Tarsal",
+                    "Italian": "Ralts",
+                    "Japanese": "\u30e9\u30eb\u30c8\u30b9",
+                    "Korean": "\ub784\ud1a0\uc2a4",
+                    "Spanish": "Ralts"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic",
+                    "Fairy"
+                ],
+                "counter": {
+                    "Ghost": 1.6,
+                    "Poison": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "cloudy",
+                    "windy"
+                ],
+                "cpRange": [
+                    275,
+                    308
+                ],
+                "cpRangeBoost": [
+                    344,
+                    385
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.04066297
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.035174068
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.032892548
+                    }
+                }
+            },
+            {
+                "id": "BAGON",
+                "form": "BAGON",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm371.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm371.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Bagon",
+                    "German": "Kindwurm",
+                    "French": "Draby",
+                    "Italian": "Bagon",
+                    "Japanese": "\u30bf\u30c4\u30d9\u30a4",
+                    "Korean": "\uc544\uacf5\uc774",
+                    "Spanish": "Bagon"
+                },
+                "shiny": true,
+                "types": [
+                    "Dragon"
+                ],
+                "counter": {
+                    "Dragon": 1.6,
+                    "Fairy": 1.6,
+                    "Ice": 1.6
+                },
+                "weather": [
+                    "windy"
+                ],
+                "cpRange": [
+                    612,
+                    660
+                ],
+                "cpRangeBoost": [
+                    765,
+                    826
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.05441
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.04236565
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.038905416
+                    }
+                }
+            },
+            {
+                "id": "SNOVER",
+                "form": "SNOVER",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm459.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm459.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Snover",
+                    "German": "Shnebedeck",
+                    "French": "Blizzi",
+                    "Italian": "Snover",
+                    "Japanese": "\u30e6\u30ad\u30ab\u30d6\u30ea",
+                    "Korean": "\ub208\uc4f0\uac1c",
+                    "Spanish": "Snover"
+                },
+                "shiny": false,
+                "types": [
+                    "Grass",
+                    "Ice"
+                ],
+                "counter": {
+                    "Fire": 2.56,
+                    "Bug": 1.6,
+                    "Fighting": 1.6,
+                    "Flying": 1.6,
+                    "Poison": 1.6,
+                    "Rock": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "sunny",
+                    "snow"
+                ],
+                "cpRange": [
+                    614,
+                    662
+                ],
+                "cpRangeBoost": [
+                    768,
+                    828
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.045873303
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.03791478
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.03332231
+                    }
+                }
+            }
+        ]
+    },
+    "graphics": {
+        "German": {
+            "svg": "/api/graphics/German/default.svg",
+            "png": "/api/graphics/German/default.png",
+            "sha512": "f669506427a5ff765d95e06cb687e5000c787de21041805d9a198c1309813031e050943fb3a1b062e671388ae48cc513c2c5fc3375cf55f852f178e40414dfc8"
+        },
+        "English": {
+            "svg": "/api/graphics/English/default.svg",
+            "png": "/api/graphics/English/default.png",
+            "sha512": "13f0473de2b42aabe40233fd1c812ccc4ee093aa224a03f22aedac6826d092514d48945f1fd194c794aca3d9f4f27580be096d8b00309a740413d6f18d70c508"
+        }
+    }
+}

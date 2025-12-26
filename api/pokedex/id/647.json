@@ -1,0 +1,908 @@
+{
+    "id": "KELDEO",
+    "formId": "KELDEO",
+    "dexNr": 647,
+    "generation": 5,
+    "names": {
+        "English": "Keldeo",
+        "German": "Keldeo",
+        "French": "Keldeo",
+        "Italian": "Keldeo",
+        "Japanese": "\u30b1\u30eb\u30c7\u30a3\u30aa",
+        "Korean": "\ucf00\ub974\ub514\uc624",
+        "Spanish": "Keldeo"
+    },
+    "stats": {
+        "stamina": 209,
+        "attack": 260,
+        "defense": 192
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FIGHTING",
+        "names": {
+            "English": "Fighting",
+            "German": "Kampf",
+            "French": "Combat",
+            "Italian": "Lotta",
+            "Japanese": "\u304b\u304f\u3068\u3046",
+            "Korean": "\uaca9\ud22c",
+            "Spanish": "Lucha"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_MYTHIC",
+    "quickMoves": {
+        "POISON_JAB_FAST": {
+            "id": "POISON_JAB_FAST",
+            "power": 13,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Poison Jab",
+                "German": "Gifthieb",
+                "French": "Direct Toxik",
+                "Italian": "Velenpuntura",
+                "Japanese": "\u3069\u304f\u3065\u304d",
+                "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                "Spanish": "Puya Nociva"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 7,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "LOW_KICK_FAST": {
+            "id": "LOW_KICK_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Low Kick",
+                "German": "Fu\u00dfkick",
+                "French": "Balayage",
+                "Italian": "Colpo Basso",
+                "Japanese": "\u3051\u305f\u3050\u308a",
+                "Korean": "\uc548\ub2e4\ub9ac\uac78\uae30",
+                "Spanish": "Patada Baja"
+            },
+            "combat": {
+                "energy": 5,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "AQUA_JET": {
+            "id": "AQUA_JET",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Aqua Jet",
+                "German": "Wasserd\u00fcse",
+                "French": "Aqua-Jet",
+                "Italian": "Acquagetto",
+                "Japanese": "\u30a2\u30af\u30a2\u30b8\u30a7\u30c3\u30c8",
+                "Korean": "\uc544\ucfe0\uc544\uc81c\ud2b8",
+                "Spanish": "Acua Jet"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "CLOSE_COMBAT": {
+            "id": "CLOSE_COMBAT",
+            "power": 105,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Close Combat",
+                "German": "Nahkampf",
+                "French": "Close Combat",
+                "Italian": "Zuffa",
+                "Japanese": "\u30a4\u30f3\u30d5\u30a1\u30a4\u30c8",
+                "Korean": "\uc778\ud30c\uc774\ud2b8",
+                "Spanish": "A Bocajarro"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 100,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": -2,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "HYDRO_PUMP": {
+            "id": "HYDRO_PUMP",
+            "power": 135,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Hydro Pump",
+                "German": "Hydropumpe",
+                "French": "Hydrocanon",
+                "Italian": "Idropompa",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                "Spanish": "Hidrobomba"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "X_SCISSOR": {
+            "id": "X_SCISSOR",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_BUG",
+                "names": {
+                    "English": "Bug",
+                    "German": "K\u00e4fer",
+                    "French": "Insecte",
+                    "Italian": "Coleottero",
+                    "Japanese": "\u3080\u3057",
+                    "Korean": "\ubc8c\ub808",
+                    "Spanish": "Bicho"
+                }
+            },
+            "names": {
+                "English": "X-Scissor",
+                "German": "Kreuzschere",
+                "French": "Plaie Croix",
+                "Italian": "Forbice X",
+                "Japanese": "\u30b7\u30b6\u30fc\u30af\u30ed\u30b9",
+                "Korean": "\uc2dc\uc800\ud06c\ub85c\uc2a4",
+                "Spanish": "Tijera X"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 65,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SACRED_SWORD": {
+            "id": "SACRED_SWORD",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Sacred Sword",
+                "German": "Sanctoklinge",
+                "French": "Lame Sainte",
+                "Italian": "Spadasolenne",
+                "Japanese": "\u305b\u3044\u306a\u308b\u3064\u308b\u304e",
+                "Korean": "\uc131\uc2a4\ub7ec\uc6b4\uce7c",
+                "Spanish": "Espada Santa"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fORDINARY.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fORDINARY.s.icon.png"
+    },
+    "regionForms": {
+        "KELDEO_ORDINARY": {
+            "id": "KELDEO",
+            "formId": "KELDEO_ORDINARY",
+            "dexNr": 647,
+            "generation": 5,
+            "names": {
+                "English": "Keldeo (Ordinary Form)",
+                "German": "Keldeo (Standardform)",
+                "French": "Keldeo (Aspect Normal)",
+                "Italian": "Keldeo (Forma Normale)",
+                "Japanese": "\u30b1\u30eb\u30c7\u30a3\u30aa (\u3044\u3064\u3082\u306e\u3059\u304c\u305f)",
+                "Korean": "\ucf00\ub974\ub514\uc624 (\ud3c9\uc0c1\uc2dc \ubaa8\uc2b5)",
+                "Spanish": "Keldeo (Forma Habitual)"
+            },
+            "stats": {
+                "stamina": 209,
+                "attack": 260,
+                "defense": 192
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "pokemonClass": "POKEMON_CLASS_MYTHIC",
+            "quickMoves": {
+                "POISON_JAB_FAST": {
+                    "id": "POISON_JAB_FAST",
+                    "power": 13,
+                    "energy": 9,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Poison Jab",
+                        "German": "Gifthieb",
+                        "French": "Direct Toxik",
+                        "Italian": "Velenpuntura",
+                        "Japanese": "\u3069\u304f\u3065\u304d",
+                        "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                        "Spanish": "Puya Nociva"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 7,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "LOW_KICK_FAST": {
+                    "id": "LOW_KICK_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Low Kick",
+                        "German": "Fu\u00dfkick",
+                        "French": "Balayage",
+                        "Italian": "Colpo Basso",
+                        "Japanese": "\u3051\u305f\u3050\u308a",
+                        "Korean": "\uc548\ub2e4\ub9ac\uac78\uae30",
+                        "Spanish": "Patada Baja"
+                    },
+                    "combat": {
+                        "energy": 5,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "AQUA_JET": {
+                    "id": "AQUA_JET",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Aqua Jet",
+                        "German": "Wasserd\u00fcse",
+                        "French": "Aqua-Jet",
+                        "Italian": "Acquagetto",
+                        "Japanese": "\u30a2\u30af\u30a2\u30b8\u30a7\u30c3\u30c8",
+                        "Korean": "\uc544\ucfe0\uc544\uc81c\ud2b8",
+                        "Spanish": "Acua Jet"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "CLOSE_COMBAT": {
+                    "id": "CLOSE_COMBAT",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Close Combat",
+                        "German": "Nahkampf",
+                        "French": "Close Combat",
+                        "Italian": "Zuffa",
+                        "Japanese": "\u30a4\u30f3\u30d5\u30a1\u30a4\u30c8",
+                        "Korean": "\uc778\ud30c\uc774\ud2b8",
+                        "Spanish": "A Bocajarro"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": -2,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "X_SCISSOR": {
+                    "id": "X_SCISSOR",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "X-Scissor",
+                        "German": "Kreuzschere",
+                        "French": "Plaie Croix",
+                        "Italian": "Forbice X",
+                        "Japanese": "\u30b7\u30b6\u30fc\u30af\u30ed\u30b9",
+                        "Korean": "\uc2dc\uc800\ud06c\ub85c\uc2a4",
+                        "Spanish": "Tijera X"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SACRED_SWORD": {
+                    "id": "SACRED_SWORD",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Sacred Sword",
+                        "German": "Sanctoklinge",
+                        "French": "Lame Sainte",
+                        "Italian": "Spadasolenne",
+                        "Japanese": "\u305b\u3044\u306a\u308b\u3064\u308b\u304e",
+                        "Korean": "\uc131\uc2a4\ub7ec\uc6b4\uce7c",
+                        "Spanish": "Espada Santa"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fORDINARY.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fORDINARY.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "KELDEO_RESOLUTE": {
+            "id": "KELDEO",
+            "formId": "KELDEO_RESOLUTE",
+            "dexNr": 647,
+            "generation": 5,
+            "names": {
+                "English": "Keldeo (Resolute Form)",
+                "German": "Keldeo (Resolutform)",
+                "French": "Keldeo (Aspect D\u00e9cid\u00e9)",
+                "Italian": "Keldeo (Forma Risoluta)",
+                "Japanese": "\u30b1\u30eb\u30c7\u30a3\u30aa (\u304b\u304f\u3054\u306e\u3059\u304c\u305f)",
+                "Korean": "\ucf00\ub974\ub514\uc624 (Resolute Form)",
+                "Spanish": "Keldeo (Forma Br\u00edo)"
+            },
+            "stats": {
+                "stamina": 209,
+                "attack": 260,
+                "defense": 192
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "pokemonClass": "POKEMON_CLASS_MYTHIC",
+            "quickMoves": {
+                "POISON_JAB_FAST": {
+                    "id": "POISON_JAB_FAST",
+                    "power": 13,
+                    "energy": 9,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_POISON",
+                        "names": {
+                            "English": "Poison",
+                            "German": "Gift",
+                            "French": "Poison",
+                            "Italian": "Veleno",
+                            "Japanese": "\u3069\u304f",
+                            "Korean": "\ub3c5",
+                            "Spanish": "Veneno"
+                        }
+                    },
+                    "names": {
+                        "English": "Poison Jab",
+                        "German": "Gifthieb",
+                        "French": "Direct Toxik",
+                        "Italian": "Velenpuntura",
+                        "Japanese": "\u3069\u304f\u3065\u304d",
+                        "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                        "Spanish": "Puya Nociva"
+                    },
+                    "combat": {
+                        "energy": 7,
+                        "power": 7,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "LOW_KICK_FAST": {
+                    "id": "LOW_KICK_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Low Kick",
+                        "German": "Fu\u00dfkick",
+                        "French": "Balayage",
+                        "Italian": "Colpo Basso",
+                        "Japanese": "\u3051\u305f\u3050\u308a",
+                        "Korean": "\uc548\ub2e4\ub9ac\uac78\uae30",
+                        "Spanish": "Patada Baja"
+                    },
+                    "combat": {
+                        "energy": 5,
+                        "power": 4,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "AQUA_JET": {
+                    "id": "AQUA_JET",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Aqua Jet",
+                        "German": "Wasserd\u00fcse",
+                        "French": "Aqua-Jet",
+                        "Italian": "Acquagetto",
+                        "Japanese": "\u30a2\u30af\u30a2\u30b8\u30a7\u30c3\u30c8",
+                        "Korean": "\uc544\ucfe0\uc544\uc81c\ud2b8",
+                        "Spanish": "Acua Jet"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "CLOSE_COMBAT": {
+                    "id": "CLOSE_COMBAT",
+                    "power": 105,
+                    "energy": -100,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Close Combat",
+                        "German": "Nahkampf",
+                        "French": "Close Combat",
+                        "Italian": "Zuffa",
+                        "Japanese": "\u30a4\u30f3\u30d5\u30a1\u30a4\u30c8",
+                        "Korean": "\uc778\ud30c\uc774\ud2b8",
+                        "Spanish": "A Bocajarro"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": -2,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "X_SCISSOR": {
+                    "id": "X_SCISSOR",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_BUG",
+                        "names": {
+                            "English": "Bug",
+                            "German": "K\u00e4fer",
+                            "French": "Insecte",
+                            "Italian": "Coleottero",
+                            "Japanese": "\u3080\u3057",
+                            "Korean": "\ubc8c\ub808",
+                            "Spanish": "Bicho"
+                        }
+                    },
+                    "names": {
+                        "English": "X-Scissor",
+                        "German": "Kreuzschere",
+                        "French": "Plaie Croix",
+                        "Italian": "Forbice X",
+                        "Japanese": "\u30b7\u30b6\u30fc\u30af\u30ed\u30b9",
+                        "Korean": "\uc2dc\uc800\ud06c\ub85c\uc2a4",
+                        "Spanish": "Tijera X"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 65,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SACRED_SWORD": {
+                    "id": "SACRED_SWORD",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FIGHTING",
+                        "names": {
+                            "English": "Fighting",
+                            "German": "Kampf",
+                            "French": "Combat",
+                            "Italian": "Lotta",
+                            "Japanese": "\u304b\u304f\u3068\u3046",
+                            "Korean": "\uaca9\ud22c",
+                            "Spanish": "Lucha"
+                        }
+                    },
+                    "names": {
+                        "English": "Sacred Sword",
+                        "German": "Sanctoklinge",
+                        "French": "Lame Sainte",
+                        "Italian": "Spadasolenne",
+                        "Japanese": "\u305b\u3044\u306a\u308b\u3064\u308b\u304e",
+                        "Korean": "\uc131\uc2a4\ub7ec\uc6b4\uce7c",
+                        "Spanish": "Espada Santa"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fRESOLUTE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fRESOLUTE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "ORDINARY",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fORDINARY.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fORDINARY.s.icon.png"
+        },
+        {
+            "form": "RESOLUTE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fRESOLUTE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm647.fRESOLUTE.s.icon.png"
+        }
+    ]
+}

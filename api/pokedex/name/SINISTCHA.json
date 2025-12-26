@@ -1,0 +1,717 @@
+{
+    "id": "SINISTCHA",
+    "formId": "SINISTCHA",
+    "dexNr": 1013,
+    "generation": 9,
+    "names": {
+        "English": "Sinistcha",
+        "German": "Fatalitcha",
+        "French": "Th\u00e9ffroyable",
+        "Italian": "Sinistcha",
+        "Japanese": "\u30e4\u30d0\u30bd\u30c1\u30e3",
+        "Korean": "\uadf8\uc6b0\ub9b0\ucc28",
+        "Spanish": "Sinistcha"
+    },
+    "stats": {
+        "stamina": 174,
+        "attack": 225,
+        "defense": 191
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "Impresionar"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "MAGICAL_LEAF_FAST": {
+            "id": "MAGICAL_LEAF_FAST",
+            "power": 17,
+            "energy": 17,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Magical Leaf",
+                "German": "Zauberblatt",
+                "French": "Feuille Magik",
+                "Italian": "Fogliamagica",
+                "Japanese": "\u30de\u30b8\u30ab\u30eb\u30ea\u30fc\u30d5",
+                "Korean": "\ub9e4\uc9c0\uceec\ub9ac\ud504",
+                "Spanish": "Hoja M\u00e1gica"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 10,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "Bola Sombra"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ENERGY_BALL": {
+            "id": "ENERGY_BALL",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Energy Ball",
+                "German": "Energieball",
+                "French": "\u00c9co-Sph\u00e8re",
+                "Italian": "Energipalla",
+                "Japanese": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc5d0\ub108\uc9c0\ubcfc",
+                "Spanish": "Energibola"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "POLTERGEIST": {
+            "id": "POLTERGEIST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Poltergeist",
+                "German": "Poltergeist",
+                "French": "Esprit Frappeur",
+                "Italian": "Poltergeist",
+                "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                "Spanish": "Poltergeist"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fUNREMARKABLE.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fUNREMARKABLE.s.icon.png"
+    },
+    "regionForms": {
+        "SINISTCHA_MASTERPIECE": {
+            "id": "SINISTCHA",
+            "formId": "SINISTCHA_MASTERPIECE",
+            "dexNr": 1013,
+            "generation": 9,
+            "names": {
+                "English": "Sinistcha (Masterpiece Form)",
+                "German": "Fatalitcha (Edle Form)",
+                "French": "Th\u00e9ffroyable (Forme Exceptionnelle)",
+                "Italian": "Sinistcha (Forma Eccezionale)",
+                "Japanese": "\u30e4\u30d0\u30bd\u30c1\u30e3 (\u30b1\u30c3\u30b5\u30af\u306e\u3059\u304c\u305f)",
+                "Korean": "\uadf8\uc6b0\ub9b0\ucc28 (\uac78\uc791\uc758 \ubaa8\uc2b5)",
+                "Spanish": "Sinistcha (Forma Exquisita)"
+            },
+            "stats": {
+                "stamina": 174,
+                "attack": 225,
+                "defense": 191
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "ASTONISH_FAST": {
+                    "id": "ASTONISH_FAST",
+                    "power": 7,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Astonish",
+                        "German": "Erstauner",
+                        "French": "\u00c9tonnement",
+                        "Italian": "Sgomento",
+                        "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                        "Korean": "\ub180\ub798\ud0a4\uae30",
+                        "Spanish": "Impresionar"
+                    },
+                    "combat": {
+                        "energy": 10,
+                        "power": 12,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "MAGICAL_LEAF_FAST": {
+                    "id": "MAGICAL_LEAF_FAST",
+                    "power": 17,
+                    "energy": 17,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Magical Leaf",
+                        "German": "Zauberblatt",
+                        "French": "Feuille Magik",
+                        "Italian": "Fogliamagica",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30ea\u30fc\u30d5",
+                        "Korean": "\ub9e4\uc9c0\uceec\ub9ac\ud504",
+                        "Spanish": "Hoja M\u00e1gica"
+                    },
+                    "combat": {
+                        "energy": 10,
+                        "power": 10,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "ENERGY_BALL": {
+                    "id": "ENERGY_BALL",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Energy Ball",
+                        "German": "Energieball",
+                        "French": "\u00c9co-Sph\u00e8re",
+                        "Italian": "Energipalla",
+                        "Japanese": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc5d0\ub108\uc9c0\ubcfc",
+                        "Spanish": "Energibola"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                },
+                "POLTERGEIST": {
+                    "id": "POLTERGEIST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Poltergeist",
+                        "German": "Poltergeist",
+                        "French": "Esprit Frappeur",
+                        "Italian": "Poltergeist",
+                        "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                        "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                        "Spanish": "Poltergeist"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fMASTERPIECE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fMASTERPIECE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "SINISTCHA_UNREMARKABLE": {
+            "id": "SINISTCHA",
+            "formId": "SINISTCHA_UNREMARKABLE",
+            "dexNr": 1013,
+            "generation": 9,
+            "names": {
+                "English": "Sinistcha (Unremarkable Form)",
+                "German": "Fatalitcha (Simple Form)",
+                "French": "Th\u00e9ffroyable (Forme M\u00e9diocre)",
+                "Italian": "Sinistcha (Forma Dozzinale)",
+                "Japanese": "\u30e4\u30d0\u30bd\u30c1\u30e3 (\u30dc\u30f3\u30b5\u30af\u306e\u3059\u304c\u305f)",
+                "Korean": "\uadf8\uc6b0\ub9b0\ucc28 (\ubc94\uc791\uc758 \ubaa8\uc2b5)",
+                "Spanish": "Sinistcha (Forma Mediocre)"
+            },
+            "stats": {
+                "stamina": 174,
+                "attack": 225,
+                "defense": 191
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "ASTONISH_FAST": {
+                    "id": "ASTONISH_FAST",
+                    "power": 7,
+                    "energy": 13,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Astonish",
+                        "German": "Erstauner",
+                        "French": "\u00c9tonnement",
+                        "Italian": "Sgomento",
+                        "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                        "Korean": "\ub180\ub798\ud0a4\uae30",
+                        "Spanish": "Impresionar"
+                    },
+                    "combat": {
+                        "energy": 10,
+                        "power": 12,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "MAGICAL_LEAF_FAST": {
+                    "id": "MAGICAL_LEAF_FAST",
+                    "power": 17,
+                    "energy": 17,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Magical Leaf",
+                        "German": "Zauberblatt",
+                        "French": "Feuille Magik",
+                        "Italian": "Fogliamagica",
+                        "Japanese": "\u30de\u30b8\u30ab\u30eb\u30ea\u30fc\u30d5",
+                        "Korean": "\ub9e4\uc9c0\uceec\ub9ac\ud504",
+                        "Spanish": "Hoja M\u00e1gica"
+                    },
+                    "combat": {
+                        "energy": 10,
+                        "power": 10,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "ENERGY_BALL": {
+                    "id": "ENERGY_BALL",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Energy Ball",
+                        "German": "Energieball",
+                        "French": "\u00c9co-Sph\u00e8re",
+                        "Italian": "Energipalla",
+                        "Japanese": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc5d0\ub108\uc9c0\ubcfc",
+                        "Spanish": "Energibola"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                },
+                "POLTERGEIST": {
+                    "id": "POLTERGEIST",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Poltergeist",
+                        "German": "Poltergeist",
+                        "French": "Esprit Frappeur",
+                        "Italian": "Poltergeist",
+                        "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                        "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                        "Spanish": "Poltergeist"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 150,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fUNREMARKABLE.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fUNREMARKABLE.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "MASTERPIECE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fMASTERPIECE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fMASTERPIECE.s.icon.png"
+        },
+        {
+            "form": "UNREMARKABLE",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fUNREMARKABLE.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.fUNREMARKABLE.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1013.s.icon.png"
+        }
+    ]
+}

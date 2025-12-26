@@ -1,0 +1,819 @@
+{
+    "id": "GIRATINA",
+    "formId": "GIRATINA",
+    "dexNr": 487,
+    "generation": 4,
+    "names": {
+        "English": "Giratina",
+        "German": "Giratina",
+        "French": "Giratina",
+        "Italian": "Giratina",
+        "Japanese": "\u30ae\u30e9\u30c6\u30a3\u30ca",
+        "Korean": "\uae30\ub77c\ud2f0\ub098",
+        "Spanish": "Giratina"
+    },
+    "stats": {
+        "stamina": 284,
+        "attack": 187,
+        "defense": 225
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_DRAGON",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "Drag\u00f3n"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "DRAGON_BREATH_FAST": {
+            "id": "DRAGON_BREATH_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Breath",
+                "German": "Feuerodem",
+                "French": "Draco-Souffle",
+                "Italian": "Dragospiro",
+                "Japanese": "\u308a\u3085\u3046\u306e\u3044\u3076\u304d",
+                "Korean": "\uc6a9\uc758\uc228\uacb0",
+                "Spanish": "Dragoaliento"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SHADOW_CLAW_FAST": {
+            "id": "SHADOW_CLAW_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Claw",
+                "German": "Dunkelklaue",
+                "French": "Griffe Ombre",
+                "Italian": "Ombrartigli",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30af\u30ed\u30fc",
+                "Korean": "\uc100\ub3c4\ud074\ub85c",
+                "Spanish": "Garra Umbr\u00eda"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DRAGON_CLAW": {
+            "id": "DRAGON_CLAW",
+            "power": 45,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "names": {
+                "English": "Dragon Claw",
+                "German": "Drachenklaue",
+                "French": "Draco-Griffe",
+                "Italian": "Dragartigli",
+                "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30af\u30ed\u30fc",
+                "Korean": "\ub4dc\ub798\uace4\ud074\ub85c",
+                "Spanish": "Garra Drag\u00f3n"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "ANCIENT_POWER": {
+            "id": "ANCIENT_POWER",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ROCK",
+                "names": {
+                    "English": "Rock",
+                    "German": "Gestein",
+                    "French": "Roche",
+                    "Italian": "Roccia",
+                    "Japanese": "\u3044\u308f",
+                    "Korean": "\ubc14\uc704",
+                    "Spanish": "Roca"
+                }
+            },
+            "names": {
+                "English": "Ancient Power",
+                "German": "Antik-Kraft",
+                "French": "Pouvoir Antique",
+                "Italian": "Forzantica",
+                "Japanese": "\u3052\u3093\u3057\u306e\u3061\u304b\u3089",
+                "Korean": "\uc6d0\uc2dc\uc758\ud798",
+                "Spanish": "Poder Pasado"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": 1,
+                    "attackerDefenseStatsChange": 1,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "SHADOW_SNEAK": {
+            "id": "SHADOW_SNEAK",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Sneak",
+                "German": "Schattensto\u00df",
+                "French": "Ombre Port\u00e9e",
+                "Italian": "Furtivombra",
+                "Japanese": "\u304b\u3052\u3046\u3061",
+                "Korean": "\uc57c\uc2b5",
+                "Spanish": "Sombra Vil"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": {
+        "SHADOW_FORCE": {
+            "id": "SHADOW_FORCE",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Force",
+                "German": "Schemenkraft",
+                "French": "Revenant",
+                "Italian": "Oscurotuffo",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30c0\u30a4\u30d6",
+                "Korean": "\uc100\ub3c4\ub2e4\uc774\ube0c",
+                "Spanish": "Golpe Umbr\u00edo"
+            },
+            "combat": {
+                "energy": -90,
+                "power": 120,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "assets": {
+        "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.icon.png",
+        "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.s.icon.png"
+    },
+    "regionForms": {
+        "GIRATINA_ALTERED": {
+            "id": "GIRATINA",
+            "formId": "GIRATINA_ALTERED",
+            "dexNr": 487,
+            "generation": 4,
+            "names": {
+                "English": "Giratina (Altered Forme)",
+                "German": "Giratina (Wandelform)",
+                "French": "Giratina (Forme Alternative)",
+                "Italian": "Giratina (Forma Alterata)",
+                "Japanese": "\u30ae\u30e9\u30c6\u30a3\u30ca (\u30a2\u30ca\u30b6\u30fc\u30d5\u30a9\u30eb\u30e0)",
+                "Korean": "\uae30\ub77c\ud2f0\ub098 (\uc5b4\ub098\ub354\ud3fc)",
+                "Spanish": "Giratina (Forma Modificada)"
+            },
+            "stats": {
+                "stamina": 284,
+                "attack": 187,
+                "defense": 225
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+            "quickMoves": {
+                "DRAGON_BREATH_FAST": {
+                    "id": "DRAGON_BREATH_FAST",
+                    "power": 6,
+                    "energy": 4,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Dragon Breath",
+                        "German": "Feuerodem",
+                        "French": "Draco-Souffle",
+                        "Italian": "Dragospiro",
+                        "Japanese": "\u308a\u3085\u3046\u306e\u3044\u3076\u304d",
+                        "Korean": "\uc6a9\uc758\uc228\uacb0",
+                        "Spanish": "Dragoaliento"
+                    },
+                    "combat": {
+                        "energy": 4,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_CLAW_FAST": {
+                    "id": "SHADOW_CLAW_FAST",
+                    "power": 6,
+                    "energy": 4,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Claw",
+                        "German": "Dunkelklaue",
+                        "French": "Griffe Ombre",
+                        "Italian": "Ombrartigli",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30af\u30ed\u30fc",
+                        "Korean": "\uc100\ub3c4\ud074\ub85c",
+                        "Spanish": "Garra Umbr\u00eda"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DRAGON_CLAW": {
+                    "id": "DRAGON_CLAW",
+                    "power": 45,
+                    "energy": -33,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Dragon Claw",
+                        "German": "Drachenklaue",
+                        "French": "Draco-Griffe",
+                        "Italian": "Dragartigli",
+                        "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30af\u30ed\u30fc",
+                        "Korean": "\ub4dc\ub798\uace4\ud074\ub85c",
+                        "Spanish": "Garra Drag\u00f3n"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 80,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "ANCIENT_POWER": {
+                    "id": "ANCIENT_POWER",
+                    "power": 70,
+                    "energy": -33,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ROCK",
+                        "names": {
+                            "English": "Rock",
+                            "German": "Gestein",
+                            "French": "Roche",
+                            "Italian": "Roccia",
+                            "Japanese": "\u3044\u308f",
+                            "Korean": "\ubc14\uc704",
+                            "Spanish": "Roca"
+                        }
+                    },
+                    "names": {
+                        "English": "Ancient Power",
+                        "German": "Antik-Kraft",
+                        "French": "Pouvoir Antique",
+                        "Italian": "Forzantica",
+                        "Japanese": "\u3052\u3093\u3057\u306e\u3061\u304b\u3089",
+                        "Korean": "\uc6d0\uc2dc\uc758\ud798",
+                        "Spanish": "Poder Pasado"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": 1,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "SHADOW_SNEAK": {
+                    "id": "SHADOW_SNEAK",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Sneak",
+                        "German": "Schattensto\u00df",
+                        "French": "Ombre Port\u00e9e",
+                        "Italian": "Furtivombra",
+                        "Japanese": "\u304b\u3052\u3046\u3061",
+                        "Korean": "\uc57c\uc2b5",
+                        "Spanish": "Sombra Vil"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": {
+                "SHADOW_FORCE": {
+                    "id": "SHADOW_FORCE",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Force",
+                        "German": "Schemenkraft",
+                        "French": "Revenant",
+                        "Italian": "Oscurotuffo",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30c0\u30a4\u30d6",
+                        "Korean": "\uc100\ub3c4\ub2e4\uc774\ube0c",
+                        "Spanish": "Golpe Umbr\u00edo"
+                    },
+                    "combat": {
+                        "energy": -90,
+                        "power": 120,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "GIRATINA_ORIGIN": {
+            "id": "GIRATINA",
+            "formId": "GIRATINA_ORIGIN",
+            "dexNr": 487,
+            "generation": 4,
+            "names": {
+                "English": "Giratina (Origin Forme)",
+                "German": "Giratina (Urform)",
+                "French": "Giratina (Forme Originelle)",
+                "Italian": "Giratina (Forma Originale)",
+                "Japanese": "\u30ae\u30e9\u30c6\u30a3\u30ca (\u30aa\u30ea\u30b8\u30f3\u30d5\u30a9\u30eb\u30e0)",
+                "Korean": "\uae30\ub77c\ud2f0\ub098 (\uc624\ub9ac\uc9c4\ud3fc)",
+                "Spanish": "Giratina (Forma Origen)"
+            },
+            "stats": {
+                "stamina": 284,
+                "attack": 225,
+                "defense": 187
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_DRAGON",
+                "names": {
+                    "English": "Dragon",
+                    "German": "Drache",
+                    "French": "Dragon",
+                    "Italian": "Drago",
+                    "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                    "Korean": "\ub4dc\ub798\uace4",
+                    "Spanish": "Drag\u00f3n"
+                }
+            },
+            "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+            "quickMoves": {
+                "DRAGON_TAIL_FAST": {
+                    "id": "DRAGON_TAIL_FAST",
+                    "power": 14,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Dragon Tail",
+                        "German": "Drachenrute",
+                        "French": "Draco-Queue",
+                        "Italian": "Codadrago",
+                        "Japanese": "\u30c9\u30e9\u30b4\u30f3\u30c6\u30fc\u30eb",
+                        "Korean": "\ub4dc\ub798\uace4\ud14c\uc77c",
+                        "Spanish": "Cola Drag\u00f3n"
+                    },
+                    "combat": {
+                        "energy": 12,
+                        "power": 9,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_CLAW_FAST": {
+                    "id": "SHADOW_CLAW_FAST",
+                    "power": 6,
+                    "energy": 4,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Claw",
+                        "German": "Dunkelklaue",
+                        "French": "Griffe Ombre",
+                        "Italian": "Ombrartigli",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30af\u30ed\u30fc",
+                        "Korean": "\uc100\ub3c4\ud074\ub85c",
+                        "Spanish": "Garra Umbr\u00eda"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DRAGON_PULSE": {
+                    "id": "DRAGON_PULSE",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_DRAGON",
+                        "names": {
+                            "English": "Dragon",
+                            "German": "Drache",
+                            "French": "Dragon",
+                            "Italian": "Drago",
+                            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+                            "Korean": "\ub4dc\ub798\uace4",
+                            "Spanish": "Drag\u00f3n"
+                        }
+                    },
+                    "names": {
+                        "English": "Dragon Pulse",
+                        "German": "Drachenpuls",
+                        "French": "Draco-Choc",
+                        "Italian": "Dragopulsar",
+                        "Japanese": "\u308a\u3085\u3046\u306e\u306f\u3069\u3046",
+                        "Korean": "\uc6a9\uc758\ud30c\ub3d9",
+                        "Spanish": "Pulso Drag\u00f3n"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "OMINOUS_WIND": {
+                    "id": "OMINOUS_WIND",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Ominous Wind",
+                        "German": "Unheilb\u00f6en",
+                        "French": "Vent Mauvais",
+                        "Italian": "Funestovento",
+                        "Japanese": "\u3042\u3084\u3057\u3044\u304b\u305c",
+                        "Korean": "\uad34\uc0c1\ud55c\ubc14\ub78c",
+                        "Spanish": "Viento Aciago"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 45,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": 1,
+                            "attackerDefenseStatsChange": 1,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": {
+                "SHADOW_FORCE": {
+                    "id": "SHADOW_FORCE",
+                    "power": 140,
+                    "energy": -100,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Force",
+                        "German": "Schemenkraft",
+                        "French": "Revenant",
+                        "Italian": "Oscurotuffo",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30c0\u30a4\u30d6",
+                        "Korean": "\uc100\ub3c4\ub2e4\uc774\ube0c",
+                        "Spanish": "Golpe Umbr\u00edo"
+                    },
+                    "combat": {
+                        "energy": -90,
+                        "power": 120,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "assets": {
+                "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fORIGIN.icon.png",
+                "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fORIGIN.s.icon.png"
+            },
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": [
+        {
+            "form": "ALTERED",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.s.icon.png"
+        },
+        {
+            "form": "ORIGIN",
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fORIGIN.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fORIGIN.s.icon.png"
+        },
+        {
+            "form": null,
+            "costume": null,
+            "isFemale": false,
+            "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.icon.png",
+            "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.s.icon.png"
+        }
+    ]
+}

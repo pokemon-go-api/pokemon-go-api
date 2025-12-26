@@ -1,0 +1,668 @@
+{
+    "id": "MIMIKYU",
+    "formId": "MIMIKYU",
+    "dexNr": 778,
+    "generation": 7,
+    "names": {
+        "English": "Mimikyu",
+        "German": "Mimigma",
+        "French": "Mimiqui",
+        "Italian": "Mimikyu",
+        "Japanese": "\u30df\u30df\u30c3\u30ad\u30e5",
+        "Korean": "\ub530\ub77c\ud050",
+        "Spanish": "Mimikyu"
+    },
+    "stats": {
+        "stamina": 146,
+        "attack": 177,
+        "defense": 199
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FAIRY",
+        "names": {
+            "English": "Fairy",
+            "German": "Fee",
+            "French": "F\u00e9e",
+            "Italian": "Folletto",
+            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+            "Korean": "\ud398\uc5b4\ub9ac",
+            "Spanish": "Hada"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "SHADOW_CLAW_FAST": {
+            "id": "SHADOW_CLAW_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Claw",
+                "German": "Dunkelklaue",
+                "French": "Griffe Ombre",
+                "Italian": "Ombrartigli",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30af\u30ed\u30fc",
+                "Korean": "\uc100\ub3c4\ud074\ub85c",
+                "Spanish": "Garra Umbr\u00eda"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "CHARM_FAST": {
+            "id": "CHARM_FAST",
+            "power": 20,
+            "energy": 11,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Charm",
+                "German": "Charme",
+                "French": "Charme",
+                "Italian": "Fascino",
+                "Japanese": "\u3042\u307e\u3048\u308b",
+                "Korean": "\uc560\uad50\ubd80\ub9ac\uae30",
+                "Spanish": "Encanto"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 13,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_SNEAK": {
+            "id": "SHADOW_SNEAK",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Sneak",
+                "German": "Schattensto\u00df",
+                "French": "Ombre Port\u00e9e",
+                "Italian": "Furtivombra",
+                "Japanese": "\u304b\u3052\u3046\u3061",
+                "Korean": "\uc57c\uc2b5",
+                "Spanish": "Sombra Vil"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PLAY_ROUGH": {
+            "id": "PLAY_ROUGH",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Play Rough",
+                "German": "Knuddler",
+                "French": "C\u00e2linerie",
+                "Italian": "Carineria",
+                "Japanese": "\u3058\u3083\u308c\u3064\u304f",
+                "Korean": "\uce58\uadfc\uac70\ub9ac\uae30",
+                "Spanish": "Caranto\u00f1a"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "Bola Sombra"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": {
+        "MIMIKYU_BUSTED": {
+            "id": "MIMIKYU",
+            "formId": "MIMIKYU_BUSTED",
+            "dexNr": 778,
+            "generation": 7,
+            "names": {
+                "English": "Mimikyu (Busted Form)",
+                "German": "Mimigma (Entlarvte Form)",
+                "French": "Mimiqui (Busted Form)",
+                "Italian": "Mimikyu (Forma Smascherata)",
+                "Japanese": "\u30df\u30df\u30c3\u30ad\u30e5 (\u3070\u308c\u305f\u3059\u304c\u305f)",
+                "Korean": "\ub530\ub77c\ud050 (\ub4e4\ud0a8 \ubaa8\uc2b5)",
+                "Spanish": "Mimikyu (Forma Descubierta)"
+            },
+            "stats": {
+                "stamina": 146,
+                "attack": 177,
+                "defense": 199
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "SHADOW_CLAW_FAST": {
+                    "id": "SHADOW_CLAW_FAST",
+                    "power": 6,
+                    "energy": 4,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Claw",
+                        "German": "Dunkelklaue",
+                        "French": "Griffe Ombre",
+                        "Italian": "Ombrartigli",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30af\u30ed\u30fc",
+                        "Korean": "\uc100\ub3c4\ud074\ub85c",
+                        "Spanish": "Garra Umbr\u00eda"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "CHARM_FAST": {
+                    "id": "CHARM_FAST",
+                    "power": 20,
+                    "energy": 11,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Charm",
+                        "German": "Charme",
+                        "French": "Charme",
+                        "Italian": "Fascino",
+                        "Japanese": "\u3042\u307e\u3048\u308b",
+                        "Korean": "\uc560\uad50\ubd80\ub9ac\uae30",
+                        "Spanish": "Encanto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 13,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SHADOW_SNEAK": {
+                    "id": "SHADOW_SNEAK",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Sneak",
+                        "German": "Schattensto\u00df",
+                        "French": "Ombre Port\u00e9e",
+                        "Italian": "Furtivombra",
+                        "Japanese": "\u304b\u3052\u3046\u3061",
+                        "Korean": "\uc57c\uc2b5",
+                        "Spanish": "Sombra Vil"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PLAY_ROUGH": {
+                    "id": "PLAY_ROUGH",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Play Rough",
+                        "German": "Knuddler",
+                        "French": "C\u00e2linerie",
+                        "Italian": "Carineria",
+                        "Japanese": "\u3058\u3083\u308c\u3064\u304f",
+                        "Korean": "\uce58\uadfc\uac70\ub9ac\uae30",
+                        "Spanish": "Caranto\u00f1a"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "MIMIKYU_DISGUISED": {
+            "id": "MIMIKYU",
+            "formId": "MIMIKYU_DISGUISED",
+            "dexNr": 778,
+            "generation": 7,
+            "names": {
+                "English": "Mimikyu (Disguised Form)",
+                "German": "Mimigma (Verkleidete Form)",
+                "French": "Mimiqui (Disguised Form)",
+                "Italian": "Mimikyu (Forma Mascherata)",
+                "Japanese": "\u30df\u30df\u30c3\u30ad\u30e5 (\u3070\u3051\u305f\u3059\u304c\u305f)",
+                "Korean": "\ub530\ub77c\ud050 (Disguised Form)",
+                "Spanish": "Mimikyu (Forma Encubierta)"
+            },
+            "stats": {
+                "stamina": 146,
+                "attack": 177,
+                "defense": 199
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "SHADOW_CLAW_FAST": {
+                    "id": "SHADOW_CLAW_FAST",
+                    "power": 6,
+                    "energy": 4,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Claw",
+                        "German": "Dunkelklaue",
+                        "French": "Griffe Ombre",
+                        "Italian": "Ombrartigli",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30af\u30ed\u30fc",
+                        "Korean": "\uc100\ub3c4\ud074\ub85c",
+                        "Spanish": "Garra Umbr\u00eda"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "CHARM_FAST": {
+                    "id": "CHARM_FAST",
+                    "power": 20,
+                    "energy": 11,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Charm",
+                        "German": "Charme",
+                        "French": "Charme",
+                        "Italian": "Fascino",
+                        "Japanese": "\u3042\u307e\u3048\u308b",
+                        "Korean": "\uc560\uad50\ubd80\ub9ac\uae30",
+                        "Spanish": "Encanto"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 13,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "SHADOW_SNEAK": {
+                    "id": "SHADOW_SNEAK",
+                    "power": 50,
+                    "energy": -33,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Sneak",
+                        "German": "Schattensto\u00df",
+                        "French": "Ombre Port\u00e9e",
+                        "Italian": "Furtivombra",
+                        "Japanese": "\u304b\u3052\u3046\u3061",
+                        "Korean": "\uc57c\uc2b5",
+                        "Spanish": "Sombra Vil"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PLAY_ROUGH": {
+                    "id": "PLAY_ROUGH",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FAIRY",
+                        "names": {
+                            "English": "Fairy",
+                            "German": "Fee",
+                            "French": "F\u00e9e",
+                            "Italian": "Folletto",
+                            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                            "Korean": "\ud398\uc5b4\ub9ac",
+                            "Spanish": "Hada"
+                        }
+                    },
+                    "names": {
+                        "English": "Play Rough",
+                        "German": "Knuddler",
+                        "French": "C\u00e2linerie",
+                        "Italian": "Carineria",
+                        "Japanese": "\u3058\u3083\u308c\u3064\u304f",
+                        "Korean": "\uce58\uadfc\uac70\ub9ac\uae30",
+                        "Spanish": "Caranto\u00f1a"
+                    },
+                    "combat": {
+                        "energy": -60,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SHADOW_BALL": {
+                    "id": "SHADOW_BALL",
+                    "power": 100,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GHOST",
+                        "names": {
+                            "English": "Ghost",
+                            "German": "Geist",
+                            "French": "Spectre",
+                            "Italian": "Spettro",
+                            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                            "Korean": "\uace0\uc2a4\ud2b8",
+                            "Spanish": "Fantasma"
+                        }
+                    },
+                    "names": {
+                        "English": "Shadow Ball",
+                        "German": "Spukball",
+                        "French": "Ball\u2019Ombre",
+                        "Italian": "Palla Ombra",
+                        "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc100\ub3c4\ubcfc",
+                        "Spanish": "Bola Sombra"
+                    },
+                    "combat": {
+                        "energy": -50,
+                        "power": 100,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}

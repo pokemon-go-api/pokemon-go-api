@@ -1,0 +1,897 @@
+{
+    "currentList": {
+        "tier_1": [
+            {
+                "id": "BULBASAUR",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm1.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Bulbasaur",
+                    "German": "Bisasam",
+                    "French": "Bulbizarre",
+                    "Italian": "Bulbasaur",
+                    "Japanese": "\u30d5\u30b7\u30ae\u30c0\u30cd",
+                    "Korean": "\uc774\uc0c1\ud574\uc528",
+                    "Spanish": "Bulbasaur"
+                },
+                "shiny": true,
+                "types": [
+                    "Grass",
+                    "Poison"
+                ],
+                "cpRange": [
+                    590,
+                    637
+                ]
+            },
+            {
+                "id": "CHARMANDER",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm4.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm4.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Charmander",
+                    "German": "Glumanda",
+                    "French": "Salam\u00e8che",
+                    "Italian": "Charmander",
+                    "Japanese": "\u30d2\u30c8\u30ab\u30b2",
+                    "Korean": "\ud30c\uc774\ub9ac",
+                    "Spanish": "Charmander"
+                },
+                "shiny": true,
+                "types": [
+                    "Fire"
+                ],
+                "cpRange": [
+                    516,
+                    560
+                ]
+            },
+            {
+                "id": "SQUIRTLE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm7.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm7.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Squirtle",
+                    "German": "Schiggy",
+                    "French": "Carapuce",
+                    "Italian": "Squirtle",
+                    "Japanese": "\u30bc\u30cb\u30ac\u30e1",
+                    "Korean": "\uaf2c\ubd80\uae30",
+                    "Spanish": "Squirtle"
+                },
+                "shiny": true,
+                "types": [
+                    "Water"
+                ],
+                "cpRange": [
+                    497,
+                    540
+                ]
+            },
+            {
+                "id": "CATERPIE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm10.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm10.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Caterpie",
+                    "German": "Raupy",
+                    "French": "Chenipan",
+                    "Italian": "Caterpie",
+                    "Japanese": "\u30ad\u30e3\u30bf\u30d4\u30fc",
+                    "Korean": "\uce90\ud130\ud53c",
+                    "Spanish": "Caterpie"
+                },
+                "shiny": true,
+                "types": [
+                    "Bug"
+                ],
+                "cpRange": [
+                    219,
+                    249
+                ]
+            },
+            {
+                "id": "ABRA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm63.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm63.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Abra",
+                    "German": "Abra",
+                    "French": "Abra",
+                    "Italian": "Abra",
+                    "Japanese": "\u30b1\u30fc\u30b7\u30a3",
+                    "Korean": "\uce90\uc774\uc2dc",
+                    "Spanish": "Abra"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic"
+                ],
+                "cpRange": [
+                    712,
+                    767
+                ]
+            },
+            {
+                "id": "GASTLY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm92.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm92.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Gastly",
+                    "German": "Nebulak",
+                    "French": "Fantominus",
+                    "Italian": "Gastly",
+                    "Japanese": "\u30b4\u30fc\u30b9",
+                    "Korean": "\uace0\uc624\uc2a4",
+                    "Spanish": "Gastly"
+                },
+                "shiny": true,
+                "types": [
+                    "Ghost",
+                    "Poison"
+                ],
+                "cpRange": [
+                    649,
+                    702
+                ]
+            },
+            {
+                "id": "KRABBY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm98.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm98.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Krabby",
+                    "German": "Krabby",
+                    "French": "Krabby",
+                    "Italian": "Krabby",
+                    "Japanese": "\u30af\u30e9\u30d6",
+                    "Korean": "\ud06c\ub7a9",
+                    "Spanish": "Krabby"
+                },
+                "shiny": true,
+                "types": [
+                    "Water"
+                ],
+                "cpRange": [
+                    835,
+                    892
+                ]
+            },
+            {
+                "id": "OMANYTE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm138.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm138.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Omanyte",
+                    "German": "Amonitas",
+                    "French": "Amonita",
+                    "Italian": "Omanyte",
+                    "Japanese": "\u30aa\u30e0\u30ca\u30a4\u30c8",
+                    "Korean": "\uc554\ub098\uc774\ud2b8",
+                    "Spanish": "Omanyte"
+                },
+                "shiny": true,
+                "types": [
+                    "Rock",
+                    "Water"
+                ],
+                "cpRange": [
+                    826,
+                    882
+                ]
+            },
+            {
+                "id": "KABUTO",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm140.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm140.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Kabuto",
+                    "German": "Kabuto",
+                    "French": "Kabuto",
+                    "Italian": "Kabuto",
+                    "Japanese": "\u30ab\u30d6\u30c8",
+                    "Korean": "\ud22c\uad6c",
+                    "Spanish": "Kabuto"
+                },
+                "shiny": true,
+                "types": [
+                    "Rock",
+                    "Water"
+                ],
+                "cpRange": [
+                    730,
+                    783
+                ]
+            },
+            {
+                "id": "RALTS",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm280.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm280.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Ralts",
+                    "German": "Trasla",
+                    "French": "Tarsal",
+                    "Italian": "Ralts",
+                    "Japanese": "\u30e9\u30eb\u30c8\u30b9",
+                    "Korean": "\ub784\ud1a0\uc2a4",
+                    "Spanish": "Ralts"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic",
+                    "Fairy"
+                ],
+                "cpRange": [
+                    275,
+                    308
+                ]
+            },
+            {
+                "id": "SPHEAL",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm363.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm363.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Spheal",
+                    "German": "Seemops",
+                    "French": "Obalie",
+                    "Italian": "Spheal",
+                    "Japanese": "\u30bf\u30de\u30b6\u30e9\u30b7",
+                    "Korean": "\ub300\uad74\ub808\uc624",
+                    "Spanish": "Spheal"
+                },
+                "shiny": false,
+                "types": [
+                    "Ice",
+                    "Water"
+                ],
+                "cpRange": [
+                    505,
+                    550
+                ]
+            },
+            {
+                "id": "PIDOVE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm519.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm519.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Pidove",
+                    "German": "Dusselgurr",
+                    "French": "Poichigeon",
+                    "Italian": "Pidove",
+                    "Japanese": "\u30de\u30e1\u30d1\u30c8",
+                    "Korean": "\ucf69\ub458\uae30",
+                    "Spanish": "Pidove"
+                },
+                "shiny": true,
+                "types": [
+                    "Normal",
+                    "Flying"
+                ],
+                "cpRange": [
+                    443,
+                    484
+                ]
+            },
+            {
+                "id": "WOOBAT",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm527.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm527.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Woobat",
+                    "German": "Fleknoil",
+                    "French": "Chovsourir",
+                    "Italian": "Woobat",
+                    "Japanese": "\u30b3\u30ed\u30e2\u30ea",
+                    "Korean": "\ub610\ub974\ubc15\uc950",
+                    "Spanish": "Woobat"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic",
+                    "Flying"
+                ],
+                "cpRange": [
+                    535,
+                    580
+                ]
+            },
+            {
+                "id": "DRILBUR",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm529.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm529.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Drilbur",
+                    "German": "Rotomurf",
+                    "French": "Rototaupe",
+                    "Italian": "Drilbur",
+                    "Japanese": "\u30e2\u30b0\u30ea\u30e5\u30fc",
+                    "Korean": "\ub450\ub354\ub958",
+                    "Spanish": "Drilbur"
+                },
+                "shiny": true,
+                "types": [
+                    "Ground"
+                ],
+                "cpRange": [
+                    732,
+                    786
+                ]
+            },
+            {
+                "id": "TRUBBISH",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm568.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm568.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Trubbish",
+                    "German": "Unrat\u00fctox",
+                    "French": "Miamiasme",
+                    "Italian": "Trubbish",
+                    "Japanese": "\u30e4\u30d6\u30af\u30ed\u30f3",
+                    "Korean": "\uae68\ubd09\uc774",
+                    "Spanish": "Trubbish"
+                },
+                "shiny": true,
+                "types": [
+                    "Poison"
+                ],
+                "cpRange": [
+                    526,
+                    571
+                ]
+            },
+            {
+                "id": "INKAY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm686.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm686.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Inkay",
+                    "German": "Iscalar",
+                    "French": "Sepiatop",
+                    "Italian": "Inkay",
+                    "Japanese": "\u30de\u30fc\u30a4\u30fc\u30ab",
+                    "Korean": "\uc624\ucf00\uc774\uc9d5",
+                    "Spanish": "Inkay"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark",
+                    "Psychic"
+                ],
+                "cpRange": [
+                    486,
+                    529
+                ]
+            },
+            {
+                "id": "BOUNSWEET",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm761.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm761.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Bounsweet",
+                    "German": "Frubberl",
+                    "French": "Croquine",
+                    "Italian": "Bounsweet",
+                    "Japanese": "\u30a2\u30de\u30ab\u30b8",
+                    "Korean": "\ub2ec\ucf64\uc544",
+                    "Spanish": "Bounsweet"
+                },
+                "shiny": true,
+                "types": [
+                    "Grass"
+                ],
+                "cpRange": [
+                    237,
+                    268
+                ]
+            },
+            {
+                "id": "GROOKEY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm810.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm810.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Grookey",
+                    "German": "Chimpep",
+                    "French": "Ouistempo",
+                    "Italian": "Grookey",
+                    "Japanese": "\u30b5\u30eb\u30ce\u30ea",
+                    "Korean": "\ud765\ub098\uc22d",
+                    "Spanish": "Grookey"
+                },
+                "shiny": false,
+                "types": [
+                    "Grass"
+                ],
+                "cpRange": [
+                    574,
+                    620
+                ]
+            },
+            {
+                "id": "SCORBUNNY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm813.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm813.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Scorbunny",
+                    "German": "Hopplo",
+                    "French": "Flambino",
+                    "Italian": "Scorbunny",
+                    "Japanese": "\u30d2\u30d0\u30cb\u30fc",
+                    "Korean": "\uc5fc\ubc84\ub2c8",
+                    "Spanish": "Scorbunny"
+                },
+                "shiny": false,
+                "types": [
+                    "Fire"
+                ],
+                "cpRange": [
+                    579,
+                    627
+                ]
+            },
+            {
+                "id": "SOBBLE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm816.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm816.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Sobble",
+                    "German": "Memmeon",
+                    "French": "Larm\u00e9l\u00e9on",
+                    "Italian": "Sobble",
+                    "Japanese": "\u30e1\u30c3\u30bd\u30f3",
+                    "Korean": "\uc6b8\uba38\uae30",
+                    "Spanish": "Sobble"
+                },
+                "shiny": false,
+                "types": [
+                    "Water"
+                ],
+                "cpRange": [
+                    579,
+                    627
+                ]
+            },
+            {
+                "id": "SKWOVET",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm819.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm819.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Skwovet",
+                    "German": "Raffel",
+                    "French": "Rongourmand",
+                    "Italian": "Skwovet",
+                    "Japanese": "\u30db\u30b7\u30ac\u30ea\u30b9",
+                    "Korean": "\ud0d0\ub9ac\uc2a4",
+                    "Spanish": "Skwovet"
+                },
+                "shiny": true,
+                "types": [
+                    "Normal"
+                ],
+                "cpRange": [
+                    495,
+                    539
+                ]
+            },
+            {
+                "id": "ROOKIDEE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm821.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm821.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Rookidee",
+                    "German": "Meikro",
+                    "French": "Minisange",
+                    "Italian": "Rookidee",
+                    "Japanese": "\u30b3\u30b3\u30ac\u30e9",
+                    "Korean": "\ud30c\ub77c\uaf2c",
+                    "Spanish": "Rookidee"
+                },
+                "shiny": true,
+                "types": [
+                    "Flying"
+                ],
+                "cpRange": [
+                    344,
+                    380
+                ]
+            },
+            {
+                "id": "WOOLOO",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm831.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm831.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Wooloo",
+                    "German": "Wolly",
+                    "French": "Moumouton",
+                    "Italian": "Wooloo",
+                    "Japanese": "\u30a6\u30fc\u30eb\u30fc",
+                    "Korean": "\uc6b0\ub974",
+                    "Spanish": "Wooloo"
+                },
+                "shiny": true,
+                "types": [
+                    "Normal"
+                ],
+                "cpRange": [
+                    366,
+                    403
+                ]
+            },
+            {
+                "id": "HATENNA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm856.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm856.s.icon.png"
+                },
+                "level": 1,
+                "names": {
+                    "English": "Hatenna",
+                    "German": "Brimova",
+                    "French": "Bibichut",
+                    "Italian": "Hatenna",
+                    "Japanese": "\u30df\u30d6\u30ea\u30e0",
+                    "Korean": "\ubab8\uc9c0\ube0c\ub9bc",
+                    "Spanish": "Hatenna"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic"
+                ],
+                "cpRange": [
+                    451,
+                    492
+                ]
+            }
+        ],
+        "tier_2": [
+            {
+                "id": "MACHOP",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm66.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm66.s.icon.png"
+                },
+                "level": 2,
+                "names": {
+                    "English": "Machop",
+                    "German": "Machollo",
+                    "French": "Machoc",
+                    "Italian": "Machop",
+                    "Japanese": "\u30ef\u30f3\u30ea\u30ad\u30fc",
+                    "Korean": "\uc54c\ud1b5\ubaac",
+                    "Spanish": "Machop"
+                },
+                "shiny": true,
+                "types": [
+                    "Fighting"
+                ],
+                "cpRange": [
+                    678,
+                    730
+                ]
+            },
+            {
+                "id": "EEVEE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm133.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm133.s.icon.png"
+                },
+                "level": 2,
+                "names": {
+                    "English": "Eevee",
+                    "German": "Evoli",
+                    "French": "\u00c9voli",
+                    "Italian": "Eevee",
+                    "Japanese": "\u30a4\u30fc\u30d6\u30a4",
+                    "Korean": "\uc774\ube0c\uc774",
+                    "Spanish": "Eevee"
+                },
+                "shiny": true,
+                "types": [
+                    "Normal"
+                ],
+                "cpRange": [
+                    565,
+                    612
+                ]
+            },
+            {
+                "id": "SHUCKLE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm213.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm213.s.icon.png"
+                },
+                "level": 2,
+                "names": {
+                    "English": "Shuckle",
+                    "German": "Pottrott",
+                    "French": "Caratroc",
+                    "Italian": "Shuckle",
+                    "Japanese": "\u30c4\u30dc\u30c4\u30dc",
+                    "Korean": "\ub2e8\ub2e8\uc9c0",
+                    "Spanish": "Shuckle"
+                },
+                "shiny": true,
+                "types": [
+                    "Bug",
+                    "Rock"
+                ],
+                "cpRange": [
+                    189,
+                    231
+                ]
+            },
+            {
+                "id": "WAILMER",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm320.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm320.s.icon.png"
+                },
+                "level": 2,
+                "names": {
+                    "English": "Wailmer",
+                    "German": "Wailmer",
+                    "French": "Wailmer",
+                    "Italian": "Wailmer",
+                    "Japanese": "\u30db\u30a8\u30eb\u30b3",
+                    "Korean": "\uace0\ub798\uc655\uc790",
+                    "Spanish": "Wailmer"
+                },
+                "shiny": true,
+                "types": [
+                    "Water"
+                ],
+                "cpRange": [
+                    779,
+                    838
+                ]
+            },
+            {
+                "id": "DARUMAKA",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm554.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm554.s.icon.png"
+                },
+                "level": 2,
+                "names": {
+                    "English": "Darumaka",
+                    "German": "Flampion",
+                    "French": "Darumarond",
+                    "Italian": "Darumaka",
+                    "Japanese": "\u30c0\u30eb\u30de\u30c3\u30ab",
+                    "Korean": "\ub2ec\ub9c9\ud654",
+                    "Spanish": "Darumaka"
+                },
+                "shiny": true,
+                "types": [
+                    "Fire"
+                ],
+                "cpRange": [
+                    768,
+                    823
+                ]
+            }
+        ],
+        "tier_3": [
+            {
+                "id": "CHANSEY",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm113.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm113.s.icon.png"
+                },
+                "level": 3,
+                "names": {
+                    "English": "Chansey",
+                    "German": "Chaneira",
+                    "French": "Leveinard",
+                    "Italian": "Chansey",
+                    "Japanese": "\u30e9\u30c3\u30ad\u30fc",
+                    "Korean": "\ub7ed\ud0a4",
+                    "Spanish": "Chansey"
+                },
+                "shiny": true,
+                "types": [
+                    "Normal"
+                ],
+                "cpRange": [
+                    654,
+                    717
+                ]
+            },
+            {
+                "id": "SABLEYE",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm302.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm302.s.icon.png"
+                },
+                "level": 3,
+                "names": {
+                    "English": "Sableye",
+                    "German": "Zobiris",
+                    "French": "T\u00e9n\u00e9fix",
+                    "Italian": "Sableye",
+                    "Japanese": "\u30e4\u30df\u30e9\u30df",
+                    "Korean": "\uae5c\uae4c\ubbf8",
+                    "Spanish": "Sableye"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark",
+                    "Ghost"
+                ],
+                "cpRange": [
+                    789,
+                    843
+                ]
+            },
+            {
+                "id": "BELDUM",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm374.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm374.s.icon.png"
+                },
+                "level": 3,
+                "names": {
+                    "English": "Beldum",
+                    "German": "Tanhel",
+                    "French": "Terhal",
+                    "Italian": "Beldum",
+                    "Japanese": "\u30c0\u30f3\u30d0\u30eb",
+                    "Korean": "\uba54\ud0d5",
+                    "Spanish": "Beldum"
+                },
+                "shiny": true,
+                "types": [
+                    "Steel",
+                    "Psychic"
+                ],
+                "cpRange": [
+                    513,
+                    558
+                ]
+            },
+            {
+                "id": "CRYOGONAL",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm615.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm615.s.icon.png"
+                },
+                "level": 3,
+                "names": {
+                    "English": "Cryogonal",
+                    "German": "Frigometri",
+                    "French": "Hexagel",
+                    "Italian": "Cryogonal",
+                    "Japanese": "\u30d5\u30ea\u30fc\u30b8\u30aa",
+                    "Korean": "\ud504\ub9ac\uc9c0\uc624",
+                    "Spanish": "Cryogonal"
+                },
+                "shiny": true,
+                "types": [
+                    "Ice"
+                ],
+                "cpRange": [
+                    1524,
+                    1598
+                ]
+            },
+            {
+                "id": "PASSIMIAN",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm766.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm766.s.icon.png"
+                },
+                "level": 3,
+                "names": {
+                    "English": "Passimian",
+                    "German": "Quartermak",
+                    "French": "Quartermac",
+                    "Italian": "Passimian",
+                    "Japanese": "\u30ca\u30b2\u30c4\u30b1\u30b5\u30eb",
+                    "Korean": "\ub0b4\ub358\uc22d\uc774",
+                    "Spanish": "Passimian"
+                },
+                "shiny": true,
+                "types": [
+                    "Fighting"
+                ],
+                "cpRange": [
+                    1654,
+                    1733
+                ]
+            },
+            {
+                "id": "FALINKS",
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm870.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm870.s.icon.png"
+                },
+                "level": 3,
+                "names": {
+                    "English": "Falinks",
+                    "German": "Legios",
+                    "French": "Hexadron",
+                    "Italian": "Falinks",
+                    "Japanese": "\u30bf\u30a4\u30ec\u30fc\u30c4",
+                    "Korean": "\ub300\uc5ec\ub974",
+                    "Spanish": "Falinks"
+                },
+                "shiny": true,
+                "types": [
+                    "Fighting"
+                ],
+                "cpRange": [
+                    1278,
+                    1347
+                ]
+            }
+        ]
+    }
+}
