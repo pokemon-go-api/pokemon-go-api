@@ -1,0 +1,229 @@
+{
+    "id": "FEZANDIPITI",
+    "formId": "FEZANDIPITI",
+    "dexNr": 1016,
+    "generation": 9,
+    "names": {
+        "English": "Fezandipiti",
+        "German": "Beatori",
+        "French": "Favianos",
+        "Italian": "Fezandipiti",
+        "Japanese": "\u30ad\u30c1\u30ad\u30ae\u30b9",
+        "Korean": "\uae30\ub85c\uce58",
+        "Spanish": "Fezandipiti"
+    },
+    "stats": {
+        "stamina": 186,
+        "attack": 169,
+        "defense": 208
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FAIRY",
+        "names": {
+            "English": "Fairy",
+            "German": "Fee",
+            "French": "F\u00e9e",
+            "Italian": "Folletto",
+            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+            "Korean": "\ud398\uc5b4\ub9ac",
+            "Spanish": "Hada"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "POISON_JAB_FAST": {
+            "id": "POISON_JAB_FAST",
+            "power": 13,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Poison Jab",
+                "German": "Gifthieb",
+                "French": "Direct Toxik",
+                "Italian": "Velenpuntura",
+                "Japanese": "\u3069\u304f\u3065\u304d",
+                "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                "Spanish": "Puya Nociva"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 7,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "CHARM_FAST": {
+            "id": "CHARM_FAST",
+            "power": 20,
+            "energy": 11,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Charm",
+                "German": "Charme",
+                "French": "Charme",
+                "Italian": "Fascino",
+                "Japanese": "\u3042\u307e\u3048\u308b",
+                "Korean": "\uc560\uad50\ubd80\ub9ac\uae30",
+                "Spanish": "Encanto"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 13,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "MOONBLAST": {
+            "id": "MOONBLAST",
+            "power": 130,
+            "energy": -100,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Moonblast",
+                "German": "Mondgewalt",
+                "French": "Pouvoir Lunaire",
+                "Italian": "Forza Lunare",
+                "Japanese": "\u30e0\u30fc\u30f3\u30d5\u30a9\u30fc\u30b9",
+                "Korean": "\ubb38\ud3ec\uc2a4",
+                "Spanish": "Fuerza Lunar"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 110,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "DISARMING_VOICE": {
+            "id": "DISARMING_VOICE",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Disarming Voice",
+                "German": "S\u00e4uselstimme",
+                "French": "Voix Enj\u00f4leuse",
+                "Italian": "Incantavoce",
+                "Japanese": "\u30c1\u30e3\u30fc\u30e0\u30dc\u30a4\u30b9",
+                "Korean": "\ucc28\ubc0d\ubcf4\uc774\uc2a4",
+                "Spanish": "Voz Cautivadora"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SLUDGE_BOMB": {
+            "id": "SLUDGE_BOMB",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Sludge Bomb",
+                "German": "Matschbombe",
+                "French": "Bombe Beurk",
+                "Italian": "Fangobomba",
+                "Japanese": "\u30d8\u30c9\u30ed\u3070\u304f\u3060\u3093",
+                "Korean": "\uc624\ubb3c\ud3ed\ud0c4",
+                "Spanish": "Bomba Lodo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}

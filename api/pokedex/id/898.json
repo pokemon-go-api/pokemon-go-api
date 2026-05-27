@@ -1,0 +1,503 @@
+{
+    "id": "CALYREX",
+    "formId": "CALYREX",
+    "dexNr": 898,
+    "generation": 8,
+    "names": {
+        "English": "Calyrex",
+        "German": "Coronospa",
+        "French": "Sylveroy",
+        "Italian": "Calyrex",
+        "Japanese": "\u30d0\u30c9\u30ec\u30c3\u30af\u30b9",
+        "Korean": "\ubc84\ub4dc\ub809\uc2a4",
+        "Spanish": "Calyrex"
+    },
+    "stats": {
+        "stamina": 225,
+        "attack": 162,
+        "defense": 162
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_PSYCHIC",
+        "names": {
+            "English": "Psychic",
+            "German": "Psycho",
+            "French": "Psy",
+            "Italian": "Psico",
+            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+            "Korean": "\uc5d0\uc2a4\ud37c",
+            "Spanish": "Ps\u00edquico"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "POUND_FAST": {
+            "id": "POUND_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_NORMAL",
+                "names": {
+                    "English": "Normal",
+                    "German": "Normal",
+                    "French": "Normal",
+                    "Italian": "Normale",
+                    "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                    "Korean": "\ub178\ub9d0",
+                    "Spanish": "Normal"
+                }
+            },
+            "names": {
+                "English": "Pound",
+                "German": "Klaps",
+                "French": "\u00c9cras\u2019Face",
+                "Italian": "Botta",
+                "Japanese": "\u306f\u305f\u304f",
+                "Korean": "\ub9c9\uce58\uae30",
+                "Spanish": "Destructor"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 4,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "CONFUSION_FAST": {
+            "id": "CONFUSION_FAST",
+            "power": 19,
+            "energy": 14,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Confusion",
+                "German": "Konfusion",
+                "French": "Choc Mental",
+                "Italian": "Confusione",
+                "Japanese": "\u306d\u3093\u308a\u304d",
+                "Korean": "\uc5fc\ub3d9\ub825",
+                "Spanish": "Confusi\u00f3n"
+            },
+            "combat": {
+                "energy": 14,
+                "power": 16,
+                "turns": 4,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "PSYSHOCK": {
+            "id": "PSYSHOCK",
+            "power": 60,
+            "energy": -33,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Psyshock",
+                "German": "Psychoschock",
+                "French": "Choc Psy",
+                "Italian": "Psicoshock",
+                "Japanese": "\u30b5\u30a4\u30b3\u30b7\u30e7\u30c3\u30af",
+                "Korean": "\uc0ac\uc774\ucf54\uc1fc\ud06c",
+                "Spanish": "Psicocarga"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PSYCHIC": {
+            "id": "PSYCHIC",
+            "power": 95,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "names": {
+                "English": "Psychic",
+                "German": "Psychokinese",
+                "French": "Psyko",
+                "Italian": "Psichico",
+                "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                "Spanish": "Ps\u00edquico"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 75,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "ENERGY_BALL": {
+            "id": "ENERGY_BALL",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 4000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Energy Ball",
+                "German": "Energieball",
+                "French": "\u00c9co-Sph\u00e8re",
+                "Italian": "Energipalla",
+                "Japanese": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc5d0\ub108\uc9c0\ubcfc",
+                "Spanish": "Energibola"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 90,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 10,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": {
+        "CALYREX_ICE_RIDER": {
+            "id": "CALYREX",
+            "formId": "CALYREX_ICE_RIDER",
+            "dexNr": 898,
+            "generation": 8,
+            "names": {
+                "English": "Calyrex",
+                "German": "Coronospa",
+                "French": "Sylveroy",
+                "Italian": "Calyrex",
+                "Japanese": "\u30d0\u30c9\u30ec\u30c3\u30af\u30b9",
+                "Korean": "\ubc84\ub4dc\ub809\uc2a4",
+                "Spanish": "Calyrex"
+            },
+            "stats": {
+                "stamina": 205,
+                "attack": 268,
+                "defense": 246
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_PSYCHIC",
+                "names": {
+                    "English": "Psychic",
+                    "German": "Psycho",
+                    "French": "Psy",
+                    "Italian": "Psico",
+                    "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                    "Korean": "\uc5d0\uc2a4\ud37c",
+                    "Spanish": "Ps\u00edquico"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+            "quickMoves": {
+                "CONFUSION_FAST": {
+                    "id": "CONFUSION_FAST",
+                    "power": 19,
+                    "energy": 14,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Confusion",
+                        "German": "Konfusion",
+                        "French": "Choc Mental",
+                        "Italian": "Confusione",
+                        "Japanese": "\u306d\u3093\u308a\u304d",
+                        "Korean": "\uc5fc\ub3d9\ub825",
+                        "Spanish": "Confusi\u00f3n"
+                    },
+                    "combat": {
+                        "energy": 14,
+                        "power": 16,
+                        "turns": 4,
+                        "buffs": null
+                    }
+                },
+                "TAKE_DOWN_FAST": {
+                    "id": "TAKE_DOWN_FAST",
+                    "power": 7,
+                    "energy": 8,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_NORMAL",
+                        "names": {
+                            "English": "Normal",
+                            "German": "Normal",
+                            "French": "Normal",
+                            "Italian": "Normale",
+                            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+                            "Korean": "\ub178\ub9d0",
+                            "Spanish": "Normal"
+                        }
+                    },
+                    "names": {
+                        "English": "Take Down",
+                        "German": "Bodycheck",
+                        "French": "B\u00e9lier",
+                        "Italian": "Riduttore",
+                        "Japanese": "\u3068\u3063\u3057\u3093",
+                        "Korean": "\ub3cc\uc9c4",
+                        "Spanish": "Derribo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 5,
+                        "turns": 3,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "PSYSHOCK": {
+                    "id": "PSYSHOCK",
+                    "power": 60,
+                    "energy": -33,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psyshock",
+                        "German": "Psychoschock",
+                        "French": "Choc Psy",
+                        "Italian": "Psicoshock",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30b7\u30e7\u30c3\u30af",
+                        "Korean": "\uc0ac\uc774\ucf54\uc1fc\ud06c",
+                        "Spanish": "Psicocarga"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 70,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "PSYCHIC": {
+                    "id": "PSYCHIC",
+                    "power": 95,
+                    "energy": -50,
+                    "durationMs": 3000,
+                    "type": {
+                        "type": "POKEMON_TYPE_PSYCHIC",
+                        "names": {
+                            "English": "Psychic",
+                            "German": "Psycho",
+                            "French": "Psy",
+                            "Italian": "Psico",
+                            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+                            "Korean": "\uc5d0\uc2a4\ud37c",
+                            "Spanish": "Ps\u00edquico"
+                        }
+                    },
+                    "names": {
+                        "English": "Psychic",
+                        "German": "Psychokinese",
+                        "French": "Psyko",
+                        "Italian": "Psichico",
+                        "Japanese": "\u30b5\u30a4\u30b3\u30ad\u30cd\u30b7\u30b9",
+                        "Korean": "\uc0ac\uc774\ucf54\ud0a4\ub124\uc2dc\uc2a4",
+                        "Spanish": "Ps\u00edquico"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                },
+                "ENERGY_BALL": {
+                    "id": "ENERGY_BALL",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 4000,
+                    "type": {
+                        "type": "POKEMON_TYPE_GRASS",
+                        "names": {
+                            "English": "Grass",
+                            "German": "Pflanze",
+                            "French": "Plante",
+                            "Italian": "Erba",
+                            "Japanese": "\u304f\u3055",
+                            "Korean": "\ud480",
+                            "Spanish": "Planta"
+                        }
+                    },
+                    "names": {
+                        "English": "Energy Ball",
+                        "German": "Energieball",
+                        "French": "\u00c9co-Sph\u00e8re",
+                        "Italian": "Energipalla",
+                        "Japanese": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc5d0\ub108\uc9c0\ubcfc",
+                        "Spanish": "Energibola"
+                    },
+                    "combat": {
+                        "energy": -55,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 10,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": null,
+                            "targetDefenseStatsChange": -1
+                        }
+                    }
+                },
+                "AVALANCHE": {
+                    "id": "AVALANCHE",
+                    "power": 85,
+                    "energy": -50,
+                    "durationMs": 2500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Avalanche",
+                        "German": "Lawine",
+                        "French": "Avalanche",
+                        "Italian": "Slavina",
+                        "Japanese": "\u3086\u304d\u306a\u3060\u308c",
+                        "Korean": "\ub208\uc0ac\ud0dc",
+                        "Spanish": "Alud"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 90,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}
