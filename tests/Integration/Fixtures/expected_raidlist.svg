@@ -72,7 +72,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm888.fHERO.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm888.fHERO.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -127,7 +127,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm487.fALTERED.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm487.fALTERED.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -195,7 +195,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm422.fWEST_SEA.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm422.fWEST_SEA.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -250,7 +250,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm422.fEAST_SEA.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm422.fEAST_SEA.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -305,7 +305,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm386.fSPEED.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm386.fSPEED.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -360,7 +360,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm201.fUNOWN_T.s.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm201.fUNOWN_T.s.icon.png"/>
 <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
 </g>
 <g class="boss-types">
@@ -419,7 +419,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm128.fPALDEA_COMBAT.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm128.fPALDEA_COMBAT.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -477,7 +477,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm128.fPALDEA_BLAZE.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm128.fPALDEA_BLAZE.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -542,7 +542,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm128.fPALDEA_AQUA.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm128.fPALDEA_AQUA.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -610,7 +610,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm79.fGALARIAN.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm79.fGALARIAN.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -665,7 +665,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm46.s.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm46.s.icon.png"/>
 <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
 </g>
 <g class="boss-types">
@@ -741,7 +741,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm26.fALOLA.s.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm26.fALOLA.s.icon.png"/>
 <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
 </g>
 <g class="boss-types">
@@ -804,7 +804,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm25.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -853,7 +853,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.fFLYING_5TH_ANNIV.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm25.fFLYING_5TH_ANNIV.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -902,7 +902,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm25.cJAN_2023_NOEVOLVE.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm25.cJAN_2023_NOEVOLVE.icon.png"/>
 </g>
 <g class="boss-types">
 <rect width="70" height="50" x="300" y="0"/>
@@ -954,7 +954,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm460.fMEGA.s.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm460.fMEGA.s.icon.png"/>
 <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
 </g>
 <g class="boss-types">
@@ -1031,7 +1031,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm18.fMEGA.s.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm18.fMEGA.s.icon.png"/>
 <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
 </g>
 <g class="boss-types">
@@ -1094,7 +1094,7 @@
 </g>
 <g class="boss-image">
 <rect width="50" height="50" x="35" y="0"/>
-<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/RetroJohn86/PoGo-Unpacked-DL-Assets/main/Sprite/pm%20and%20portraits/pm6.fMEGA_Y.s.icon.png"/>
+<image width="55" height="55" x="25" y="0" href="https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm6.fMEGA_Y.s.icon.png"/>
 <image class="boss-shiny-image" width="15" height="15" x="22" y="0" href="https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Filters/ic_shiny_white.png"/>
 </g>
 <g class="boss-types">

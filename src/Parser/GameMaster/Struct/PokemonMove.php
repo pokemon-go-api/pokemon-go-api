@@ -10,6 +10,7 @@ use PokemonGoApi\PogoAPI\Types\PokemonType;
 
 use function preg_match;
 use function str_contains;
+use function strval;
 
 final class PokemonMove
 {
@@ -25,7 +26,7 @@ final class PokemonMove
     ) {
     }
 
-    /** @param array{ movementId: string, pokemonType: string, power?: float, energyDelta?: float, durationMs: float } $moveSettings */
+    /** @param array{ movementId: string|int, pokemonType: string, power?: float, energyDelta?: float, durationMs: float } $moveSettings */
     #[Constructor]
     public static function fromArray(
         string $templateId,
@@ -38,14 +39,14 @@ final class PokemonMove
 
         return new self(
             (int) $moveParts['id'],
-            $moveSettings['movementId'],
+            (string) $moveSettings['movementId'],
             PokemonType::createFromPokemonType(
                 $moveSettings['pokemonType'],
             ),
             $moveSettings['power'] ?? 0,
             $moveSettings['energyDelta'] ?? 0,
             $moveSettings['durationMs'],
-            str_contains($moveSettings['movementId'], '_FAST'),
+            str_contains(strval($moveSettings['movementId']), '_FAST'),
         );
     }
 

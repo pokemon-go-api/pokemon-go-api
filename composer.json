@@ -39,7 +39,7 @@
             "@phpunit"
         ],
         "api-build": [
-            "php bin/console.php",
+            "php -dmemory_limit=1G bin/console.php",
             "rm -rf public/api",
             "cp -r data/tmp/api public/"
         ],

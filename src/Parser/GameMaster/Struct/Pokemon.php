@@ -10,11 +10,13 @@ use PokemonGoApi\PogoAPI\Types\PokemonForm;
 use PokemonGoApi\PogoAPI\Types\PokemonImage;
 use PokemonGoApi\PogoAPI\Types\PokemonType;
 
+use function array_map;
 use function array_values;
 use function preg_match;
 use function str_contains;
 use function str_replace;
 use function str_starts_with;
+use function strval;
 
 final class Pokemon
 {
@@ -46,7 +48,7 @@ final class Pokemon
     ) {
     }
 
-    /** @param array{ pokemonId: string, type: string, type2?: string, pokemonClass?: string, stats: PokemonStats, quickMoves: list<string>, cinematicMoves: list<string>, eliteQuickMove?: list<string>, eliteCinematicMove?: list<string>, evolutionBranch: list<EvolutionBranch|TemporaryEvolutionBranch>, tempEvoOverrides: list<TemporaryEvolution|TemporaryEvolutionCamera> } $pokemonSettings */
+    /** @param array{ pokemonId: string, type: string, type2?: string, pokemonClass?: string, stats: PokemonStats, quickMoves: list<string>, cinematicMoves: list<string>, eliteQuickMove?: list<string>, eliteCinematicMove?: list<string|int>, evolutionBranch: list<EvolutionBranch|TemporaryEvolutionBranch>, tempEvoOverrides: list<TemporaryEvolution|TemporaryEvolutionCamera> } $pokemonSettings */
     #[Constructor]
     public static function fromArray(
         string $templateId,
@@ -89,7 +91,7 @@ final class Pokemon
             $pokemonSettings['quickMoves'],
             $pokemonSettings['cinematicMoves'],
             $pokemonSettings['eliteQuickMove'] ?? [],
-            $pokemonSettings['eliteCinematicMove'] ?? [],
+            array_map(strval(...), $pokemonSettings['eliteCinematicMove'] ?? []),
             [],
             [],
             $pokemonSettings['evolutionBranch'],
