@@ -45,7 +45,7 @@ class GithubLoader
             ],
         ],
     ];
-    
+
     public const string ASSETS_BASE_URL = 'https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/';
 
     public function __construct(

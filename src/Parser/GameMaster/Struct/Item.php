@@ -6,6 +6,8 @@ namespace PokemonGoApi\PogoAPI\Parser\GameMaster\Struct;
 
 use CuyZ\Valinor\Mapper\Object\Constructor;
 
+use function strval;
+
 final readonly class Item
 {
     public function __construct(
@@ -14,14 +16,14 @@ final readonly class Item
     ) {
     }
 
-    /** @param array{ templateId: string, itemSettings?: array{itemId: string}, itemExpirationSettings?: array{item: string} } $data */
+    /** @param array{ templateId: string|int, itemSettings?: array{itemId: string|int}, itemExpirationSettings?: array{item: string|int} } $data */
     #[Constructor]
     public static function fromArray(
         array $data,
     ): self {
         return new self(
-            $data['templateId'],
-            $data['itemSettings']['itemId'] ?? $data['itemExpirationSettings']['item'] ?? $data['templateId'],
+            (string) $data['templateId'],
+            strval($data['itemSettings']['itemId'] ?? $data['itemExpirationSettings']['item'] ?? $data['templateId']),
         );
     }
 }
