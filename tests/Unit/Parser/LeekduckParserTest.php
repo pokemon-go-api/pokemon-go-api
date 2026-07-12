@@ -53,6 +53,9 @@ final class LeekduckParserTest extends TestCase
         );
 
         $expected = [
+            ['dexNr' => 150, 'level' => RaidLevel::RaidSuperMega, 'shiny' => true, 'region' => 'MEGA_Y', 'costume' => null],
+            ['dexNr' => 382, 'level' => RaidLevel::RaidPrimal, 'shiny' => true, 'region' => 'PRIMAL', 'costume' => null],
+            ['dexNr' => 383, 'level' => RaidLevel::RaidPrimal, 'shiny' => true, 'region' => 'PRIMAL', 'costume' => null],
             ['dexNr' => 229, 'level' => RaidLevel::RaidMega, 'shiny' => true, 'region' => 'MEGA', 'costume' => null],
             ['dexNr' => 359, 'level' => RaidLevel::RaidMega, 'shiny' => true, 'region' => 'MEGA', 'costume' => null],
             ['dexNr' => 649, 'level' => RaidLevel::Raid5, 'shiny' => true, 'region' => 'NORMAL', 'costume' => null],
