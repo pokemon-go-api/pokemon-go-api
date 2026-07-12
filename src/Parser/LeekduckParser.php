@@ -256,6 +256,8 @@ class LeekduckParser
             '5' => RaidLevel::Raid5,
             'ultra wormhole' => RaidLevel::RaidUltraBeast,
             'mega' => RaidLevel::RaidMega,
+            'super mega' => RaidLevel::RaidSuperMega,
+            'primal' => RaidLevel::RaidPrimal,
             default => throw new Exception('Can not extract raid tier level (' . $tierLevel . ') from ' . $header?->nodeValue)
         };
     }

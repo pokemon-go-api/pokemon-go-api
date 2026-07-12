@@ -17,6 +17,8 @@ enum RaidLevel: string
     case RaidMega          = 'mega';
     case RaidLegendaryMega = 'legendary_mega';
     case RaidUltraBeast    = 'ultra_beast';
+    case RaidSuperMega     = 'super_mega';
+    case RaidPrimal        = 'primal';
 
     public function isShadow(): bool
     {
@@ -31,7 +33,9 @@ enum RaidLevel: string
     public function getSortNr(): int
     {
         return match ($this) {
+            self::RaidSuperMega => 21,
             self::RaidUltraBeast => 20,
+            self::RaidPrimal => 16,
             self::RaidLegendaryMega => 15,
             self::RaidEx => 14,
             self::RaidMega => 13,
@@ -57,6 +61,8 @@ enum RaidLevel: string
             self::RaidMega => 'MEGA',
             self::RaidLegendaryMega => 'MEGA_5',
             self::RaidUltraBeast => 'ULTRA_BEAST',
+            self::RaidSuperMega => 'SUPER_MEGA',
+            self::RaidPrimal => 'PRIMAL',
         };
     }
 
