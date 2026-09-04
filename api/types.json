@@ -1,0 +1,668 @@
+[
+    {
+        "type": "Normal",
+        "names": {
+            "English": "Normal",
+            "German": "Normal",
+            "French": "Normal",
+            "Italian": "Normale",
+            "Japanese": "\u30ce\u30fc\u30de\u30eb",
+            "Korean": "\ub178\ub9d0",
+            "Spanish": "Normal"
+        },
+        "doubleDamageFrom": [
+            "Fighting"
+        ],
+        "halfDamageFrom": [],
+        "noDamageFrom": [
+            "Ghost"
+        ],
+        "weatherBoost": {
+            "id": "partlyCloudy",
+            "names": {
+                "English": "Partly Cloudy",
+                "German": "Teilweise bew\u00f6lkt",
+                "French": "Quelques nuages",
+                "Italian": "Parzialmente nuvoloso",
+                "Japanese": "\u3068\u304d\u3069\u304d\u66c7\u308a",
+                "Korean": "\uc57d\uac04 \uad6c\ub984",
+                "Spanish": "Parcialmente nublado"
+            },
+            "assetName": "partlycloudy_day"
+        }
+    },
+    {
+        "type": "Fighting",
+        "names": {
+            "English": "Fighting",
+            "German": "Kampf",
+            "French": "Combat",
+            "Italian": "Lotta",
+            "Japanese": "\u304b\u304f\u3068\u3046",
+            "Korean": "\uaca9\ud22c",
+            "Spanish": "Lucha"
+        },
+        "doubleDamageFrom": [
+            "Flying",
+            "Psychic",
+            "Fairy"
+        ],
+        "halfDamageFrom": [
+            "Rock",
+            "Bug",
+            "Dark"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "cloudy",
+            "names": {
+                "English": "Cloudy",
+                "German": "Bedeckt",
+                "French": "Couvert",
+                "Italian": "Coperto",
+                "Japanese": "\u66c7\u308a",
+                "Korean": "\uad6c\ub984",
+                "Spanish": "Cielo cubierto"
+            },
+            "assetName": "cloudy"
+        }
+    },
+    {
+        "type": "Flying",
+        "names": {
+            "English": "Flying",
+            "German": "Flug",
+            "French": "Vol",
+            "Italian": "Volante",
+            "Japanese": "\u3072\u3053\u3046",
+            "Korean": "\ube44\ud589",
+            "Spanish": "Volador"
+        },
+        "doubleDamageFrom": [
+            "Rock",
+            "Electric",
+            "Ice"
+        ],
+        "halfDamageFrom": [
+            "Fighting",
+            "Bug",
+            "Grass"
+        ],
+        "noDamageFrom": [
+            "Ground"
+        ],
+        "weatherBoost": {
+            "id": "windy",
+            "names": {
+                "English": "Windy",
+                "German": "Windig",
+                "French": "Vent",
+                "Italian": "Vento",
+                "Japanese": "\u5f37\u98a8",
+                "Korean": "\uac15\ud48d",
+                "Spanish": "Viento"
+            },
+            "assetName": "windy"
+        }
+    },
+    {
+        "type": "Poison",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        },
+        "doubleDamageFrom": [
+            "Ground",
+            "Psychic"
+        ],
+        "halfDamageFrom": [
+            "Fighting",
+            "Poison",
+            "Bug",
+            "Grass",
+            "Fairy"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "cloudy",
+            "names": {
+                "English": "Cloudy",
+                "German": "Bedeckt",
+                "French": "Couvert",
+                "Italian": "Coperto",
+                "Japanese": "\u66c7\u308a",
+                "Korean": "\uad6c\ub984",
+                "Spanish": "Cielo cubierto"
+            },
+            "assetName": "cloudy"
+        }
+    },
+    {
+        "type": "Ground",
+        "names": {
+            "English": "Ground",
+            "German": "Boden",
+            "French": "Sol",
+            "Italian": "Terra",
+            "Japanese": "\u3058\u3081\u3093",
+            "Korean": "\ub545",
+            "Spanish": "Tierra"
+        },
+        "doubleDamageFrom": [
+            "Water",
+            "Grass",
+            "Ice"
+        ],
+        "halfDamageFrom": [
+            "Poison",
+            "Rock"
+        ],
+        "noDamageFrom": [
+            "Electric"
+        ],
+        "weatherBoost": {
+            "id": "sunny",
+            "names": {
+                "English": "Sunny",
+                "German": "Sonnig",
+                "French": "Ensoleill\u00e9",
+                "Italian": "Sole",
+                "Japanese": "\u6674\u5929",
+                "Korean": "\ub9d1\uc74c",
+                "Spanish": "Soleado"
+            },
+            "assetName": "sunny"
+        }
+    },
+    {
+        "type": "Rock",
+        "names": {
+            "English": "Rock",
+            "German": "Gestein",
+            "French": "Roche",
+            "Italian": "Roccia",
+            "Japanese": "\u3044\u308f",
+            "Korean": "\ubc14\uc704",
+            "Spanish": "Roca"
+        },
+        "doubleDamageFrom": [
+            "Fighting",
+            "Ground",
+            "Steel",
+            "Water",
+            "Grass"
+        ],
+        "halfDamageFrom": [
+            "Normal",
+            "Flying",
+            "Poison",
+            "Fire"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "partlyCloudy",
+            "names": {
+                "English": "Partly Cloudy",
+                "German": "Teilweise bew\u00f6lkt",
+                "French": "Quelques nuages",
+                "Italian": "Parzialmente nuvoloso",
+                "Japanese": "\u3068\u304d\u3069\u304d\u66c7\u308a",
+                "Korean": "\uc57d\uac04 \uad6c\ub984",
+                "Spanish": "Parcialmente nublado"
+            },
+            "assetName": "partlycloudy_day"
+        }
+    },
+    {
+        "type": "Bug",
+        "names": {
+            "English": "Bug",
+            "German": "K\u00e4fer",
+            "French": "Insecte",
+            "Italian": "Coleottero",
+            "Japanese": "\u3080\u3057",
+            "Korean": "\ubc8c\ub808",
+            "Spanish": "Bicho"
+        },
+        "doubleDamageFrom": [
+            "Flying",
+            "Rock",
+            "Fire"
+        ],
+        "halfDamageFrom": [
+            "Fighting",
+            "Ground",
+            "Grass"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "rain",
+            "names": {
+                "English": "Rain",
+                "German": "Regen",
+                "French": "Pluvieux",
+                "Italian": "Pioggia",
+                "Japanese": "\u96e8",
+                "Korean": "\ube44",
+                "Spanish": "Lluvioso"
+            },
+            "assetName": "rain"
+        }
+    },
+    {
+        "type": "Ghost",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        },
+        "doubleDamageFrom": [
+            "Ghost",
+            "Dark"
+        ],
+        "halfDamageFrom": [
+            "Poison",
+            "Bug"
+        ],
+        "noDamageFrom": [
+            "Normal",
+            "Fighting"
+        ],
+        "weatherBoost": {
+            "id": "fog",
+            "names": {
+                "English": "Fog",
+                "German": "Nebel",
+                "French": "Brouillard",
+                "Italian": "Nebbia",
+                "Japanese": "\u9727",
+                "Korean": "\uc548\uac1c",
+                "Spanish": "Niebla"
+            },
+            "assetName": "fog"
+        }
+    },
+    {
+        "type": "Steel",
+        "names": {
+            "English": "Steel",
+            "German": "Stahl",
+            "French": "Acier",
+            "Italian": "Acciaio",
+            "Japanese": "\u306f\u304c\u306d",
+            "Korean": "\uac15\ucca0",
+            "Spanish": "Acero"
+        },
+        "doubleDamageFrom": [
+            "Fighting",
+            "Ground",
+            "Fire"
+        ],
+        "halfDamageFrom": [
+            "Normal",
+            "Flying",
+            "Rock",
+            "Bug",
+            "Steel",
+            "Grass",
+            "Psychic",
+            "Ice",
+            "Dragon",
+            "Fairy"
+        ],
+        "noDamageFrom": [
+            "Poison"
+        ],
+        "weatherBoost": {
+            "id": "snow",
+            "names": {
+                "English": "Snow",
+                "German": "Schnee",
+                "French": "Neige",
+                "Italian": "Neve",
+                "Japanese": "\u96ea",
+                "Korean": "\ub208",
+                "Spanish": "Nieve"
+            },
+            "assetName": "snow"
+        }
+    },
+    {
+        "type": "Fire",
+        "names": {
+            "English": "Fire",
+            "German": "Feuer",
+            "French": "Feu",
+            "Italian": "Fuoco",
+            "Japanese": "\u307b\u306e\u304a",
+            "Korean": "\ubd88\uaf43",
+            "Spanish": "Fuego"
+        },
+        "doubleDamageFrom": [
+            "Ground",
+            "Rock",
+            "Water"
+        ],
+        "halfDamageFrom": [
+            "Bug",
+            "Steel",
+            "Fire",
+            "Grass",
+            "Ice",
+            "Fairy"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "sunny",
+            "names": {
+                "English": "Sunny",
+                "German": "Sonnig",
+                "French": "Ensoleill\u00e9",
+                "Italian": "Sole",
+                "Japanese": "\u6674\u5929",
+                "Korean": "\ub9d1\uc74c",
+                "Spanish": "Soleado"
+            },
+            "assetName": "sunny"
+        }
+    },
+    {
+        "type": "Water",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        },
+        "doubleDamageFrom": [
+            "Grass",
+            "Electric"
+        ],
+        "halfDamageFrom": [
+            "Steel",
+            "Fire",
+            "Water",
+            "Ice"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "rain",
+            "names": {
+                "English": "Rain",
+                "German": "Regen",
+                "French": "Pluvieux",
+                "Italian": "Pioggia",
+                "Japanese": "\u96e8",
+                "Korean": "\ube44",
+                "Spanish": "Lluvioso"
+            },
+            "assetName": "rain"
+        }
+    },
+    {
+        "type": "Grass",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        },
+        "doubleDamageFrom": [
+            "Flying",
+            "Poison",
+            "Bug",
+            "Fire",
+            "Ice"
+        ],
+        "halfDamageFrom": [
+            "Ground",
+            "Water",
+            "Grass",
+            "Electric"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "sunny",
+            "names": {
+                "English": "Sunny",
+                "German": "Sonnig",
+                "French": "Ensoleill\u00e9",
+                "Italian": "Sole",
+                "Japanese": "\u6674\u5929",
+                "Korean": "\ub9d1\uc74c",
+                "Spanish": "Soleado"
+            },
+            "assetName": "sunny"
+        }
+    },
+    {
+        "type": "Electric",
+        "names": {
+            "English": "Electric",
+            "German": "Elektro",
+            "French": "\u00c9lectrik",
+            "Italian": "Elettro",
+            "Japanese": "\u3067\u3093\u304d",
+            "Korean": "\uc804\uae30",
+            "Spanish": "El\u00e9ctrico"
+        },
+        "doubleDamageFrom": [
+            "Ground"
+        ],
+        "halfDamageFrom": [
+            "Flying",
+            "Steel",
+            "Electric"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "rain",
+            "names": {
+                "English": "Rain",
+                "German": "Regen",
+                "French": "Pluvieux",
+                "Italian": "Pioggia",
+                "Japanese": "\u96e8",
+                "Korean": "\ube44",
+                "Spanish": "Lluvioso"
+            },
+            "assetName": "rain"
+        }
+    },
+    {
+        "type": "Psychic",
+        "names": {
+            "English": "Psychic",
+            "German": "Psycho",
+            "French": "Psy",
+            "Italian": "Psico",
+            "Japanese": "\u30a8\u30b9\u30d1\u30fc",
+            "Korean": "\uc5d0\uc2a4\ud37c",
+            "Spanish": "Ps\u00edquico"
+        },
+        "doubleDamageFrom": [
+            "Bug",
+            "Ghost",
+            "Dark"
+        ],
+        "halfDamageFrom": [
+            "Fighting",
+            "Psychic"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "windy",
+            "names": {
+                "English": "Windy",
+                "German": "Windig",
+                "French": "Vent",
+                "Italian": "Vento",
+                "Japanese": "\u5f37\u98a8",
+                "Korean": "\uac15\ud48d",
+                "Spanish": "Viento"
+            },
+            "assetName": "windy"
+        }
+    },
+    {
+        "type": "Ice",
+        "names": {
+            "English": "Ice",
+            "German": "Eis",
+            "French": "Glace",
+            "Italian": "Ghiaccio",
+            "Japanese": "\u3053\u304a\u308a",
+            "Korean": "\uc5bc\uc74c",
+            "Spanish": "Hielo"
+        },
+        "doubleDamageFrom": [
+            "Fighting",
+            "Rock",
+            "Steel",
+            "Fire"
+        ],
+        "halfDamageFrom": [
+            "Ice"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "snow",
+            "names": {
+                "English": "Snow",
+                "German": "Schnee",
+                "French": "Neige",
+                "Italian": "Neve",
+                "Japanese": "\u96ea",
+                "Korean": "\ub208",
+                "Spanish": "Nieve"
+            },
+            "assetName": "snow"
+        }
+    },
+    {
+        "type": "Dragon",
+        "names": {
+            "English": "Dragon",
+            "German": "Drache",
+            "French": "Dragon",
+            "Italian": "Drago",
+            "Japanese": "\u30c9\u30e9\u30b4\u30f3",
+            "Korean": "\ub4dc\ub798\uace4",
+            "Spanish": "Drag\u00f3n"
+        },
+        "doubleDamageFrom": [
+            "Ice",
+            "Dragon",
+            "Fairy"
+        ],
+        "halfDamageFrom": [
+            "Fire",
+            "Water",
+            "Grass",
+            "Electric"
+        ],
+        "noDamageFrom": [],
+        "weatherBoost": {
+            "id": "windy",
+            "names": {
+                "English": "Windy",
+                "German": "Windig",
+                "French": "Vent",
+                "Italian": "Vento",
+                "Japanese": "\u5f37\u98a8",
+                "Korean": "\uac15\ud48d",
+                "Spanish": "Viento"
+            },
+            "assetName": "windy"
+        }
+    },
+    {
+        "type": "Dark",
+        "names": {
+            "English": "Dark",
+            "German": "Unlicht",
+            "French": "T\u00e9n\u00e8bres",
+            "Italian": "Buio",
+            "Japanese": "\u3042\u304f",
+            "Korean": "\uc545",
+            "Spanish": "Siniestro"
+        },
+        "doubleDamageFrom": [
+            "Fighting",
+            "Bug",
+            "Fairy"
+        ],
+        "halfDamageFrom": [
+            "Ghost",
+            "Dark"
+        ],
+        "noDamageFrom": [
+            "Psychic"
+        ],
+        "weatherBoost": {
+            "id": "fog",
+            "names": {
+                "English": "Fog",
+                "German": "Nebel",
+                "French": "Brouillard",
+                "Italian": "Nebbia",
+                "Japanese": "\u9727",
+                "Korean": "\uc548\uac1c",
+                "Spanish": "Niebla"
+            },
+            "assetName": "fog"
+        }
+    },
+    {
+        "type": "Fairy",
+        "names": {
+            "English": "Fairy",
+            "German": "Fee",
+            "French": "F\u00e9e",
+            "Italian": "Folletto",
+            "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+            "Korean": "\ud398\uc5b4\ub9ac",
+            "Spanish": "Hada"
+        },
+        "doubleDamageFrom": [
+            "Poison",
+            "Steel"
+        ],
+        "halfDamageFrom": [
+            "Fighting",
+            "Bug",
+            "Dark"
+        ],
+        "noDamageFrom": [
+            "Dragon"
+        ],
+        "weatherBoost": {
+            "id": "cloudy",
+            "names": {
+                "English": "Cloudy",
+                "German": "Bedeckt",
+                "French": "Couvert",
+                "Italian": "Coperto",
+                "Japanese": "\u66c7\u308a",
+                "Korean": "\uad6c\ub984",
+                "Spanish": "Cielo cubierto"
+            },
+            "assetName": "cloudy"
+        }
+    }
+]

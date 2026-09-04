@@ -1,0 +1,190 @@
+{
+    "id": "PECHARUNT",
+    "formId": "PECHARUNT",
+    "dexNr": 1025,
+    "generation": 9,
+    "names": {
+        "English": "Pecharunt",
+        "German": "Infamomo",
+        "French": "P\u00eachaminus",
+        "Italian": "Pecharunt",
+        "Japanese": "\u30e2\u30e2\u30ef\u30ed\u30a6",
+        "Korean": "\ubcf5\uc22d\uc545\ub3d9",
+        "Spanish": "Pecharunt"
+    },
+    "stats": {
+        "stamina": 186,
+        "attack": 164,
+        "defense": 248
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_MYTHIC",
+    "quickMoves": {
+        "ASTONISH_FAST": {
+            "id": "ASTONISH_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Astonish",
+                "German": "Erstauner",
+                "French": "\u00c9tonnement",
+                "Italian": "Sgomento",
+                "Japanese": "\u304a\u3069\u308d\u304b\u3059",
+                "Korean": "\ub180\ub798\ud0a4\uae30",
+                "Spanish": "Impresionar"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 12,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_BALL": {
+            "id": "SHADOW_BALL",
+            "power": 100,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Ball",
+                "German": "Spukball",
+                "French": "Ball\u2019Ombre",
+                "Italian": "Palla Ombra",
+                "Japanese": "\u30b7\u30e3\u30c9\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc100\ub3c4\ubcfc",
+                "Spanish": "Bola Sombra"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 100,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "GUNK_SHOT": {
+            "id": "GUNK_SHOT",
+            "power": 130,
+            "energy": -100,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Gunk Shot",
+                "German": "M\u00fclltreffer",
+                "French": "D\u00e9tricanon",
+                "Italian": "Sporcolancio",
+                "Japanese": "\u30c0\u30b9\u30c8\u30b7\u30e5\u30fc\u30c8",
+                "Korean": "\ub354\uc2a4\ud2b8\uc288\ud2b8",
+                "Spanish": "Lanzamugre"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POLTERGEIST": {
+            "id": "POLTERGEIST",
+            "power": 140,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Poltergeist",
+                "German": "Poltergeist",
+                "French": "Esprit Frappeur",
+                "Italian": "Poltergeist",
+                "Japanese": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+                "Korean": "\ud3f4\ud130\uac00\uc774\uc2a4\ud2b8",
+                "Spanish": "Poltergeist"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 150,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}
