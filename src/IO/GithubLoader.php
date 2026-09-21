@@ -110,7 +110,7 @@ class GithubLoader
         shell_exec('rm -rf ' . $baseDir . '/data/tmp/git-assets && mkdir ' . $baseDir . '/data/tmp/git-assets');
         //phpcs:ignore Generic.Files.LineLength.TooLong
         shell_exec('git clone -q --filter=blob:none --no-checkout https://github.com/pokemon-go-api/assets.git ' . $baseDir . '/data/tmp/git-assets');
-        $files = shell_exec('git --git-dir ' . $baseDir . '/data/tmp/git-assets/.git ls-tree --name-only HEAD "Pokemon"');
+        $files = shell_exec('git --git-dir ' . $baseDir . '/data/tmp/git-assets/.git ls-tree -r --name-only HEAD "Pokemon"');
 
         $allFiles = explode("\n", (string) $files);
 
