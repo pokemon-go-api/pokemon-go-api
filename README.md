@@ -35,7 +35,7 @@ composer run-script convert-svg
 ```
 
 ### Add custom templates
-If you want to use your custom Raid temaplate the following steps are possible:  
+If you want to use your custom Raid template the following steps are possible:  
 Solution 1  
 - Create a template file
 - Append the RaidConfiguration with template filepath here: `config/raid-grahpics.default.php`
