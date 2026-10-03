@@ -1,0 +1,245 @@
+{
+    "id": "OGERPON",
+    "formId": "OGERPON",
+    "dexNr": 1017,
+    "generation": 9,
+    "names": {
+        "English": "Ogerpon",
+        "German": "Ogerpon",
+        "French": "Ogerpon",
+        "Italian": "Ogerpon",
+        "Japanese": "\u30aa\u30fc\u30ac\u30dd\u30f3",
+        "Korean": "\uc624\uac70\ud3f0",
+        "Spanish": "Ogerpon"
+    },
+    "stats": {
+        "stamina": 173,
+        "attack": 219,
+        "defense": 178
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "VINE_WHIP_FAST": {
+            "id": "VINE_WHIP_FAST",
+            "power": 6,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Vine Whip",
+                "German": "Rankenhieb",
+                "French": "Fouet Lianes",
+                "Italian": "Frustata",
+                "Japanese": "\u3064\u308b\u306e\u30e0\u30c1",
+                "Korean": "\ub369\uad74\ucc44\ucc0d",
+                "Spanish": "L\u00e1tigo Cepa"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 5,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "MAGICAL_LEAF_FAST": {
+            "id": "MAGICAL_LEAF_FAST",
+            "power": 17,
+            "energy": 17,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Magical Leaf",
+                "German": "Zauberblatt",
+                "French": "Feuille Magik",
+                "Italian": "Fogliamagica",
+                "Japanese": "\u30de\u30b8\u30ab\u30eb\u30ea\u30fc\u30d5",
+                "Korean": "\ub9e4\uc9c0\uceec\ub9ac\ud504",
+                "Spanish": "Hoja M\u00e1gica"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 10,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "DOUBLE_KICK_FAST": {
+            "id": "DOUBLE_KICK_FAST",
+            "power": 10,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Double Kick",
+                "German": "Doppelkick",
+                "French": "Double Pied",
+                "Italian": "Doppiocalcio",
+                "Japanese": "\u306b\u3069\u3052\u308a",
+                "Korean": "\ub450\ubc88\ucc28\uae30",
+                "Spanish": "Doble Patada"
+            },
+            "combat": {
+                "energy": 12,
+                "power": 8,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "POWER_WHIP": {
+            "id": "POWER_WHIP",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Power Whip",
+                "German": "Blattgei\u00dfel",
+                "French": "M\u00e9gafouet",
+                "Italian": "Vigorcolpo",
+                "Japanese": "\u30d1\u30ef\u30fc\u30a6\u30a3\u30c3\u30d7",
+                "Korean": "\ud30c\uc6cc\ud729",
+                "Spanish": "Latigazo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "GRASS_KNOT": {
+            "id": "GRASS_KNOT",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Grass Knot",
+                "German": "Strauchler",
+                "French": "N\u0153ud Herbe",
+                "Italian": "Laccioerboso",
+                "Japanese": "\u304f\u3055\u3080\u3059\u3073",
+                "Korean": "\ud480\ubb36\uae30",
+                "Spanish": "Hierba Lazo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "PLAY_ROUGH": {
+            "id": "PLAY_ROUGH",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_FAIRY",
+                "names": {
+                    "English": "Fairy",
+                    "German": "Fee",
+                    "French": "F\u00e9e",
+                    "Italian": "Folletto",
+                    "Japanese": "\u30d5\u30a7\u30a2\u30ea\u30fc",
+                    "Korean": "\ud398\uc5b4\ub9ac",
+                    "Spanish": "Hada"
+                }
+            },
+            "names": {
+                "English": "Play Rough",
+                "German": "Knuddler",
+                "French": "C\u00e2linerie",
+                "Italian": "Carineria",
+                "Japanese": "\u3058\u3083\u308c\u3064\u304f",
+                "Korean": "\uce58\uadfc\uac70\ub9ac\uae30",
+                "Spanish": "Caranto\u00f1a"
+            },
+            "combat": {
+                "energy": -60,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}
