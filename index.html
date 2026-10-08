@@ -1,0 +1,50 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon GO - Pokedex API</title>
+
+    <link href="assets/bootstrap.css" rel="stylesheet">
+    <link href="version.css" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+
+        <section class="text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Pokemon GO API</h1>
+                    <h3 class="fw-light">Last generated at <span id="last-generated-display"></span></h3>
+                    <p class="lead text-muted">Shows the current Pokemon from the Pokemon GO Gamemaster file. For more information visit the Github Repository</p>
+                    <p>
+                        <a href="https://github.com/pokemon-go-api/pokemon-go-api" class="btn btn-primary">View on Github</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <details class="py-2 container">
+            <summary>Changelog</summary>
+            <h3>2025-12-24</h3>
+            <ul>
+                <li>Added new Endpoint for current Maxbattles</li>
+            </ul>
+            <h3>2025-10-23</h3>
+            <ul>
+                <li>Add support for shadow raids. <code>shadow_lvl1</code>, <code>shadow_lvl3</code>, <code>shadow_lvl5</code></li>
+            </ul>
+            <h3>2022-08-27</h3>
+            <ul>
+                <li>Moved the Ultra Beasts into an own Raid Level <code>ultra_beast</code></li>
+                <li>Renamed <code>rarity</code> to <code>pokemonClass</code></li>
+            </ul>
+        </details>
+
+        <redoc spec-url="Pokedex.json" expand-responses="all"></redoc>
+        <script src="assets/redoc.standalone.js"> </script>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,869 @@
+{
+    "currentList": {
+        "mega": [
+            {
+                "id": "BLASTOISE",
+                "form": "BLASTOISE_MEGA",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm9.fMEGA.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm9.fMEGA.s.icon.png"
+                },
+                "level": "mega",
+                "names": {
+                    "English": "Mega Blastoise",
+                    "German": "Mega-Turtok",
+                    "French": "M\u00e9ga-Tortank",
+                    "Italian": "MegaBlastoise",
+                    "Japanese": "\u30e1\u30ac\u30ab\u30e1\u30c3\u30af\u30b9",
+                    "Korean": "\uba54\uac00\uac70\ubd81\uc655",
+                    "Spanish": "Mega-Blastoise"
+                },
+                "shiny": true,
+                "types": [
+                    "Water"
+                ],
+                "counter": {
+                    "Electric": 1.6,
+                    "Grass": 1.6
+                },
+                "weather": [
+                    "rain"
+                ],
+                "cpRange": [
+                    1338,
+                    1409
+                ],
+                "cpRangeBoost": [
+                    1673,
+                    1761
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 2.609848
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 1.657204
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 1.418591
+                    }
+                }
+            }
+        ],
+        "lvl5": [
+            {
+                "id": "YVELTAL",
+                "form": "YVELTAL",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm717.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm717.s.icon.png"
+                },
+                "level": "lvl5",
+                "names": {
+                    "English": "Yveltal",
+                    "German": "Yveltal",
+                    "French": "Yveltal",
+                    "Italian": "Yveltal",
+                    "Japanese": "\u30a4\u30d9\u30eb\u30bf\u30eb",
+                    "Korean": "\uc774\ubca8\ud0c0\ub974",
+                    "Spanish": "Yveltal"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark",
+                    "Flying"
+                ],
+                "counter": {
+                    "Electric": 1.6,
+                    "Fairy": 1.6,
+                    "Ice": 1.6,
+                    "Rock": 1.6
+                },
+                "weather": [
+                    "windy",
+                    "fog"
+                ],
+                "cpRange": [
+                    2073,
+                    2160
+                ],
+                "cpRangeBoost": [
+                    2591,
+                    2701
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 3.200979
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 2.0664537
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 1.7865758
+                    }
+                }
+            }
+        ],
+        "lvl3": [
+            {
+                "id": "STARMIE",
+                "form": "STARMIE",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm121.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm121.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Starmie",
+                    "German": "Starmie",
+                    "French": "Staross",
+                    "Italian": "Starmie",
+                    "Japanese": "\u30b9\u30bf\u30fc\u30df\u30fc",
+                    "Korean": "\uc544\ucfe0\uc2a4\ud0c0",
+                    "Spanish": "Starmie"
+                },
+                "shiny": true,
+                "types": [
+                    "Water",
+                    "Psychic"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Dark": 1.6,
+                    "Electric": 1.6,
+                    "Ghost": 1.6,
+                    "Grass": 1.6
+                },
+                "weather": [
+                    "rain",
+                    "windy"
+                ],
+                "cpRange": [
+                    1404,
+                    1476
+                ],
+                "cpRangeBoost": [
+                    1756,
+                    1846
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.97036713
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.66387355
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.57944167
+                    }
+                }
+            },
+            {
+                "id": "UMBREON",
+                "form": "UMBREON",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm197.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm197.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Umbreon",
+                    "German": "Nachtara",
+                    "French": "Noctali",
+                    "Italian": "Umbreon",
+                    "Japanese": "\u30d6\u30e9\u30c3\u30ad\u30fc",
+                    "Korean": "\ube14\ub798\ud0a4",
+                    "Spanish": "Umbreon"
+                },
+                "shiny": true,
+                "types": [
+                    "Dark"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Fairy": 1.6,
+                    "Fighting": 1.6
+                },
+                "weather": [
+                    "fog"
+                ],
+                "cpRange": [
+                    1153,
+                    1221
+                ],
+                "cpRangeBoost": [
+                    1442,
+                    1526
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.0956203
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.79993075
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.7151413
+                    }
+                }
+            },
+            {
+                "id": "GOTHITELLE",
+                "form": "GOTHITELLE",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm576.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm576.s.icon.png"
+                },
+                "level": "lvl3",
+                "names": {
+                    "English": "Gothitelle",
+                    "German": "Morbitesse",
+                    "French": "Sid\u00e9rella",
+                    "Italian": "Gothitelle",
+                    "Japanese": "\u30b4\u30c1\u30eb\u30bc\u30eb",
+                    "Korean": "\uace0\ub514\ubaa8\uc544\uc824",
+                    "Spanish": "Gothitelle"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic"
+                ],
+                "counter": {
+                    "Bug": 1.6,
+                    "Dark": 1.6,
+                    "Ghost": 1.6
+                },
+                "weather": [
+                    "windy"
+                ],
+                "cpRange": [
+                    1313,
+                    1382
+                ],
+                "cpRangeBoost": [
+                    1641,
+                    1728
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.0761602
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.77092284
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.6820595
+                    }
+                }
+            }
+        ],
+        "lvl1": [
+            {
+                "id": "PIKACHU",
+                "form": "PIKACHU_GLASS_HELMET_2026",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm25.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm25.s.icon.png"
+                },
+                "level": "lvl1",
+                "names": {
+                    "English": "Pikachu",
+                    "German": "Pikachu",
+                    "French": "Pikachu",
+                    "Italian": "Pikachu",
+                    "Japanese": "\u30d4\u30ab\u30c1\u30e5\u30a6",
+                    "Korean": "\ud53c\uce74\uce04",
+                    "Spanish": "Pikachu"
+                },
+                "shiny": true,
+                "types": [
+                    "Electric"
+                ],
+                "counter": {
+                    "Ground": 1.6
+                },
+                "weather": [
+                    "rain"
+                ],
+                "cpRange": [
+                    493,
+                    536
+                ],
+                "cpRangeBoost": [
+                    616,
+                    670
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.0772616
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.059867233
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.057664927
+                    }
+                }
+            }
+        ],
+        "shadow_lvl5": [
+            {
+                "id": "LANDORUS",
+                "form": "LANDORUS_INCARNATE",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm645.fINCARNATE.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm645.fINCARNATE.s.icon.png"
+                },
+                "level": "shadow_lvl5",
+                "names": {
+                    "English": "Landorus (Incarnate Forme)",
+                    "German": "Demeteros (Inkarnationsform)",
+                    "French": "D\u00e9m\u00e9t\u00e9ros (Forme Avatar)",
+                    "Italian": "Landorus (Forma Incarnazione)",
+                    "Japanese": "\u30e9\u30f3\u30c9\u30ed\u30b9 (\u3051\u3057\u3093\u30d5\u30a9\u30eb\u30e0)",
+                    "Korean": "\ub79c\ub4dc\ub85c\uc2a4 (\ud654\uc2e0\ud3fc)",
+                    "Spanish": "Landorus (Forma Avatar)"
+                },
+                "shiny": true,
+                "types": [
+                    "Ground",
+                    "Flying"
+                ],
+                "counter": {
+                    "Ice": 2.56,
+                    "Water": 1.6
+                },
+                "weather": [
+                    "sunny",
+                    "windy"
+                ],
+                "cpRange": [
+                    1965,
+                    2050
+                ],
+                "cpRangeBoost": [
+                    2456,
+                    2563
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 2.7735157
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 1.7389055
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 1.4323789
+                    }
+                }
+            }
+        ],
+        "shadow_lvl3": [
+            {
+                "id": "PRIMEAPE",
+                "form": "PRIMEAPE",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm57.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm57.s.icon.png"
+                },
+                "level": "shadow_lvl3",
+                "names": {
+                    "English": "Primeape",
+                    "German": "Rasaff",
+                    "French": "Colossinge",
+                    "Italian": "Primeape",
+                    "Japanese": "\u30aa\u30b3\u30ea\u30b6\u30eb",
+                    "Korean": "\uc131\uc6d0\uc22d",
+                    "Spanish": "Primeape"
+                },
+                "shiny": true,
+                "types": [
+                    "Fighting"
+                ],
+                "counter": {
+                    "Fairy": 1.6,
+                    "Flying": 1.6,
+                    "Psychic": 1.6
+                },
+                "weather": [
+                    "cloudy"
+                ],
+                "cpRange": [
+                    1239,
+                    1307
+                ],
+                "cpRangeBoost": [
+                    1549,
+                    1634
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 1.3636556
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.9262559
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.7968232
+                    }
+                }
+            },
+            {
+                "id": "KIRLIA",
+                "form": "KIRLIA",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm281.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm281.s.icon.png"
+                },
+                "level": "shadow_lvl3",
+                "names": {
+                    "English": "Kirlia",
+                    "German": "Kirlia",
+                    "French": "Kirlia",
+                    "Italian": "Kirlia",
+                    "Japanese": "\u30ad\u30eb\u30ea\u30a2",
+                    "Korean": "\ud0ac\ub9ac\uc544",
+                    "Spanish": "Kirlia"
+                },
+                "shiny": true,
+                "types": [
+                    "Psychic",
+                    "Fairy"
+                ],
+                "counter": {
+                    "Ghost": 1.6,
+                    "Poison": 1.6,
+                    "Steel": 1.6
+                },
+                "weather": [
+                    "cloudy",
+                    "windy"
+                ],
+                "cpRange": [
+                    508,
+                    552
+                ],
+                "cpRangeBoost": [
+                    635,
+                    690
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.71955353
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.52860385
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.4659702
+                    }
+                }
+            },
+            {
+                "id": "DRAPION",
+                "form": "DRAPION",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm452.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm452.s.icon.png"
+                },
+                "level": "shadow_lvl3",
+                "names": {
+                    "English": "Drapion",
+                    "German": "Piondragi",
+                    "French": "Drascore",
+                    "Italian": "Drapion",
+                    "Japanese": "\u30c9\u30e9\u30d4\u30aa\u30f3",
+                    "Korean": "\ub4dc\ub798\ud53c\uc628",
+                    "Spanish": "Drapion"
+                },
+                "shiny": true,
+                "types": [
+                    "Poison",
+                    "Dark"
+                ],
+                "counter": {
+                    "Ground": 1.6
+                },
+                "weather": [
+                    "cloudy",
+                    "fog"
+                ],
+                "cpRange": [
+                    1331,
+                    1401
+                ],
+                "cpRangeBoost": [
+                    1665,
+                    1752
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 2.2562058
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 1.5586935
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 1.3865728
+                    }
+                }
+            }
+        ],
+        "shadow_lvl1": [
+            {
+                "id": "GASTLY",
+                "form": "GASTLY",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm92.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm92.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Gastly",
+                    "German": "Nebulak",
+                    "French": "Fantominus",
+                    "Italian": "Gastly",
+                    "Japanese": "\u30b4\u30fc\u30b9",
+                    "Korean": "\uace0\uc624\uc2a4",
+                    "Spanish": "Gastly"
+                },
+                "shiny": true,
+                "types": [
+                    "Ghost",
+                    "Poison"
+                ],
+                "counter": {
+                    "Dark": 1.6,
+                    "Ghost": 1.6,
+                    "Ground": 1.6,
+                    "Psychic": 1.6
+                },
+                "weather": [
+                    "cloudy",
+                    "fog"
+                ],
+                "cpRange": [
+                    649,
+                    702
+                ],
+                "cpRangeBoost": [
+                    812,
+                    878
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.042805325
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.036114242
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.034261107
+                    }
+                }
+            },
+            {
+                "id": "TOTODILE",
+                "form": "TOTODILE",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm158.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm158.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Totodile",
+                    "German": "Karnimani",
+                    "French": "Kaiminus",
+                    "Italian": "Totodile",
+                    "Japanese": "\u30ef\u30cb\u30ce\u30b3",
+                    "Korean": "\ub9ac\uc544\ucf54",
+                    "Spanish": "Totodile"
+                },
+                "shiny": true,
+                "types": [
+                    "Water"
+                ],
+                "counter": {
+                    "Electric": 1.6,
+                    "Grass": 1.6
+                },
+                "weather": [
+                    "rain"
+                ],
+                "cpRange": [
+                    599,
+                    646
+                ],
+                "cpRangeBoost": [
+                    749,
+                    808
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.06387354
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.051149786
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.047516663
+                    }
+                }
+            },
+            {
+                "id": "SHIELDON",
+                "form": "SHIELDON",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm410.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm410.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Shieldon",
+                    "German": "Schilterus",
+                    "French": "Dinoclier",
+                    "Italian": "Shieldon",
+                    "Japanese": "\u30bf\u30c6\u30c8\u30d7\u30b9",
+                    "Korean": "\ubc29\ud328\ud1b1\uc2a4",
+                    "Spanish": "Shieldon"
+                },
+                "shiny": true,
+                "types": [
+                    "Rock",
+                    "Steel"
+                ],
+                "counter": {
+                    "Fighting": 2.56,
+                    "Ground": 2.56,
+                    "Water": 1.6
+                },
+                "weather": [
+                    "partlycloudy_day",
+                    "snow"
+                ],
+                "cpRange": [
+                    465,
+                    509
+                ],
+                "cpRangeBoost": [
+                    581,
+                    636
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.06882321
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.05484998
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.049051404
+                    }
+                }
+            },
+            {
+                "id": "GIBLE",
+                "form": "GIBLE",
+                "costume": null,
+                "assets": {
+                    "image": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm443.icon.png",
+                    "shinyImage": "https://raw.githubusercontent.com/pokemon-go-api/assets/main/Pokemon/pm443.s.icon.png"
+                },
+                "level": "shadow_lvl1",
+                "names": {
+                    "English": "Gible",
+                    "German": "Kaumalat",
+                    "French": "Griknot",
+                    "Italian": "Gible",
+                    "Japanese": "\u30d5\u30ab\u30de\u30eb",
+                    "Korean": "\ub525\uc0c1\uc5b4\ub3d9",
+                    "Spanish": "Gible"
+                },
+                "shiny": true,
+                "types": [
+                    "Dragon",
+                    "Ground"
+                ],
+                "counter": {
+                    "Ice": 2.56,
+                    "Dragon": 1.6,
+                    "Fairy": 1.6
+                },
+                "weather": [
+                    "sunny",
+                    "windy"
+                ],
+                "cpRange": [
+                    588,
+                    635
+                ],
+                "cpRangeBoost": [
+                    735,
+                    794
+                ],
+                "battleResult": {
+                    "easy": {
+                        "name": "easy",
+                        "friendshipLevel": 0,
+                        "pokemonLevel": 20,
+                        "totalEstimator": 0.04040996
+                    },
+                    "normal": {
+                        "name": "normal",
+                        "friendshipLevel": 3,
+                        "pokemonLevel": 30,
+                        "totalEstimator": 0.036562942
+                    },
+                    "hard": {
+                        "name": "hard",
+                        "friendshipLevel": 4,
+                        "pokemonLevel": 40,
+                        "totalEstimator": 0.03471112
+                    }
+                }
+            }
+        ]
+    },
+    "graphics": {
+        "German": {
+            "svg": "/api/graphics/German/default.svg",
+            "png": "/api/graphics/German/default.png",
+            "sha512": "6d9f2c8f6620f424e8591e3009512b233b9a452879ad11d400abce41be1dfebf33797bcdc20ca6cf36ddca2fc975b366c9ae789e92cba5938ee258fe4658d108"
+        },
+        "English": {
+            "svg": "/api/graphics/English/default.svg",
+            "png": "/api/graphics/English/default.png",
+            "sha512": "8ef7c4c75c6a87e9183aebfc4f466a4d750a2d8573bab89223a4d7059deaab34729f2e9835f1a15e41b67f5323a03cb75e9ae81400d6fab37b39454c18cb651e"
+        }
+    }
+}
