@@ -1,0 +1,226 @@
+{
+    "id": "CAPSAKID",
+    "formId": "CAPSAKID",
+    "dexNr": 951,
+    "generation": 9,
+    "names": {
+        "English": "Capsakid",
+        "German": "Chilingel",
+        "French": "Pimito",
+        "Italian": "Capsakid",
+        "Japanese": "\u30ab\u30d7\u30b5\u30a4\u30b8",
+        "Korean": "\ucea1\uc2f8\uc774",
+        "Spanish": "Capsakid"
+    },
+    "stats": {
+        "stamina": 137,
+        "attack": 118,
+        "defense": 76
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "LEAFAGE_FAST": {
+            "id": "LEAFAGE_FAST",
+            "power": 6,
+            "energy": 4,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Leafage",
+                "German": "Blattwerk",
+                "French": "Feuillage",
+                "Italian": "Fogliame",
+                "Japanese": "\u3053\u306e\u306f",
+                "Korean": "\ub098\ubb47\uc78e",
+                "Spanish": "Follaje"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "RAZOR_LEAF_FAST": {
+            "id": "RAZOR_LEAF_FAST",
+            "power": 13,
+            "energy": 7,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Razor Leaf",
+                "German": "Rasierblatt",
+                "French": "Tranch\u2019Herbe",
+                "Italian": "Foglielama",
+                "Japanese": "\u306f\u3063\u3071\u30ab\u30c3\u30bf\u30fc",
+                "Korean": "\uc78e\ub0a0\uac00\ub974\uae30",
+                "Spanish": "Hoja Afilada"
+            },
+            "combat": {
+                "energy": 4,
+                "power": 9,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "LEAF_STORM": {
+            "id": "LEAF_STORM",
+            "power": 130,
+            "energy": -100,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Leaf Storm",
+                "German": "Bl\u00e4ttersturm",
+                "French": "Temp\u00eate Verte",
+                "Italian": "Verdebufera",
+                "Japanese": "\u30ea\u30fc\u30d5\u30b9\u30c8\u30fc\u30e0",
+                "Korean": "\ub9ac\ud504\uc2a4\ud1b0",
+                "Spanish": "Lluevehojas"
+            },
+            "combat": {
+                "energy": -55,
+                "power": 130,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": -2,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "GRASS_KNOT": {
+            "id": "GRASS_KNOT",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Grass Knot",
+                "German": "Strauchler",
+                "French": "N\u0153ud Herbe",
+                "Italian": "Laccioerboso",
+                "Japanese": "\u304f\u3055\u3080\u3059\u3073",
+                "Korean": "\ud480\ubb36\uae30",
+                "Spanish": "Hierba Lazo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SEED_BOMB": {
+            "id": "SEED_BOMB",
+            "power": 55,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Seed Bomb",
+                "German": "Samenbomben",
+                "French": "Canon Graine",
+                "Italian": "Semebomba",
+                "Japanese": "\u30bf\u30cd\u3070\u304f\u3060\u3093",
+                "Korean": "\uc528\ud3ed\ud0c4",
+                "Spanish": "Bomba Germen"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 55,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [
+        {
+            "id": "SCOVILLAIN",
+            "formId": "SCOVILLAIN",
+            "candies": 50,
+            "item": null,
+            "quests": []
+        }
+    ],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}
