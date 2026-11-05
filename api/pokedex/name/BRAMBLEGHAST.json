@@ -1,0 +1,223 @@
+{
+    "id": "BRAMBLEGHAST",
+    "formId": "BRAMBLEGHAST",
+    "dexNr": 947,
+    "generation": 9,
+    "names": {
+        "English": "Brambleghast",
+        "German": "Horrerba",
+        "French": "Virevorreur",
+        "Italian": "Brambleghast",
+        "Japanese": "\u30a2\u30ce\u30db\u30e9\u30b0\u30b5",
+        "Korean": "\uacf5\ud478\ub9ac",
+        "Spanish": "Brambleghast"
+    },
+    "stats": {
+        "stamina": 146,
+        "attack": 228,
+        "defense": 144
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_GRASS",
+        "names": {
+            "English": "Grass",
+            "German": "Pflanze",
+            "French": "Plante",
+            "Italian": "Erba",
+            "Japanese": "\u304f\u3055",
+            "Korean": "\ud480",
+            "Spanish": "Planta"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_GHOST",
+        "names": {
+            "English": "Ghost",
+            "German": "Geist",
+            "French": "Spectre",
+            "Italian": "Spettro",
+            "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+            "Korean": "\uace0\uc2a4\ud2b8",
+            "Spanish": "Fantasma"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "HEX_FAST": {
+            "id": "HEX_FAST",
+            "power": 8,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Hex",
+                "German": "B\u00fcrde",
+                "French": "Ch\u00e2timent",
+                "Italian": "Sciagura",
+                "Japanese": "\u305f\u305f\u308a\u3081",
+                "Korean": "\ubcd1\uc0c1\ucca8\ubcd1",
+                "Spanish": "Infortunio"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 7,
+                "turns": 3,
+                "buffs": null
+            }
+        },
+        "BULLET_SEED_FAST": {
+            "id": "BULLET_SEED_FAST",
+            "power": 7,
+            "energy": 13,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Bullet Seed",
+                "German": "Kugelsaat",
+                "French": "Balle Graine",
+                "Italian": "Semitraglia",
+                "Japanese": "\u30bf\u30cd\u30de\u30b7\u30f3\u30ac\u30f3",
+                "Korean": "\uc528\uae30\uad00\ucd1d",
+                "Spanish": "Semilladora"
+            },
+            "combat": {
+                "energy": 13,
+                "power": 5,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SHADOW_SNEAK": {
+            "id": "SHADOW_SNEAK",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Shadow Sneak",
+                "German": "Schattensto\u00df",
+                "French": "Ombre Port\u00e9e",
+                "Italian": "Furtivombra",
+                "Japanese": "\u304b\u3052\u3046\u3061",
+                "Korean": "\uc57c\uc2b5",
+                "Spanish": "Sombra Vil"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "NIGHT_SHADE": {
+            "id": "NIGHT_SHADE",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GHOST",
+                "names": {
+                    "English": "Ghost",
+                    "German": "Geist",
+                    "French": "Spectre",
+                    "Italian": "Spettro",
+                    "Japanese": "\u30b4\u30fc\u30b9\u30c8",
+                    "Korean": "\uace0\uc2a4\ud2b8",
+                    "Spanish": "Fantasma"
+                }
+            },
+            "names": {
+                "English": "Night Shade",
+                "German": "Nachtnebel",
+                "French": "Ombre Nocturne",
+                "Italian": "Ombra Notturna",
+                "Japanese": "\u30ca\u30a4\u30c8\u30d8\u30c3\u30c9",
+                "Korean": "\ub098\uc774\ud2b8\ud5e4\ub4dc",
+                "Spanish": "Tinieblas"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 70,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "POWER_WHIP": {
+            "id": "POWER_WHIP",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_GRASS",
+                "names": {
+                    "English": "Grass",
+                    "German": "Pflanze",
+                    "French": "Plante",
+                    "Italian": "Erba",
+                    "Japanese": "\u304f\u3055",
+                    "Korean": "\ud480",
+                    "Spanish": "Planta"
+                }
+            },
+            "names": {
+                "English": "Power Whip",
+                "German": "Blattgei\u00dfel",
+                "French": "M\u00e9gafouet",
+                "Italian": "Vigorcolpo",
+                "Japanese": "\u30d1\u30ef\u30fc\u30a6\u30a3\u30c3\u30d7",
+                "Korean": "\ud30c\uc6cc\ud729",
+                "Spanish": "Latigazo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 90,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}
