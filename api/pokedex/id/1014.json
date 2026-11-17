@@ -1,0 +1,235 @@
+{
+    "id": "OKIDOGI",
+    "formId": "OKIDOGI",
+    "dexNr": 1014,
+    "generation": 9,
+    "names": {
+        "English": "Okidogi",
+        "German": "Boninu",
+        "French": "F\u00e9licanis",
+        "Italian": "Okidogi",
+        "Japanese": "\u30a4\u30a4\u30cd\u30a4\u30cc",
+        "Korean": "\uc870\ud0c0\uad6c",
+        "Spanish": "Okidogi"
+    },
+    "stats": {
+        "stamina": 186,
+        "attack": 220,
+        "defense": 191
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_POISON",
+        "names": {
+            "English": "Poison",
+            "German": "Gift",
+            "French": "Poison",
+            "Italian": "Veleno",
+            "Japanese": "\u3069\u304f",
+            "Korean": "\ub3c5",
+            "Spanish": "Veneno"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_FIGHTING",
+        "names": {
+            "English": "Fighting",
+            "German": "Kampf",
+            "French": "Combat",
+            "Italian": "Lotta",
+            "Japanese": "\u304b\u304f\u3068\u3046",
+            "Korean": "\uaca9\ud22c",
+            "Spanish": "Lucha"
+        }
+    },
+    "pokemonClass": "POKEMON_CLASS_LEGENDARY",
+    "quickMoves": {
+        "POISON_JAB_FAST": {
+            "id": "POISON_JAB_FAST",
+            "power": 13,
+            "energy": 9,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Poison Jab",
+                "German": "Gifthieb",
+                "French": "Direct Toxik",
+                "Italian": "Velenpuntura",
+                "Japanese": "\u3069\u304f\u3065\u304d",
+                "Korean": "\ub3c5\ucc0c\ub974\uae30",
+                "Spanish": "Puya Nociva"
+            },
+            "combat": {
+                "energy": 7,
+                "power": 7,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "FORCE_PALM_FAST": {
+            "id": "FORCE_PALM_FAST",
+            "power": 10,
+            "energy": 16,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Force Palm",
+                "German": "Kraftwelle",
+                "French": "Forte-Paume",
+                "Italian": "Palmoforza",
+                "Japanese": "\u306f\u3063\u3051\u3044",
+                "Korean": "\ubc1c\uacbd",
+                "Spanish": "Palmeo"
+            },
+            "combat": {
+                "energy": 10,
+                "power": 13,
+                "turns": 3,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "SUPER_POWER": {
+            "id": "SUPER_POWER",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 3000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Superpower",
+                "German": "Kraftkoloss",
+                "French": "Surpuissance",
+                "Italian": "Troppoforte",
+                "Japanese": "\u3070\u304b\u3062\u304b\u3089",
+                "Korean": "\uc5c4\uccad\ub09c\ud798",
+                "Spanish": "Fuerza Bruta"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 85,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": -1,
+                    "attackerDefenseStatsChange": -1,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "UPPER_HAND": {
+            "id": "UPPER_HAND",
+            "power": 50,
+            "energy": -33,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FIGHTING",
+                "names": {
+                    "English": "Fighting",
+                    "German": "Kampf",
+                    "French": "Combat",
+                    "Italian": "Lotta",
+                    "Japanese": "\u304b\u304f\u3068\u3046",
+                    "Korean": "\uaca9\ud22c",
+                    "Spanish": "Lucha"
+                }
+            },
+            "names": {
+                "English": "Upper Hand",
+                "German": "Schnellkonter",
+                "French": "Prio-Parade",
+                "Italian": "Colpo di Mano",
+                "Japanese": "\u306f\u3084\u3066\u304c\u3048\u3057",
+                "Korean": "\uae30\uc120\uc81c\uc555",
+                "Spanish": "Palma Rauda"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 70,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 30,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": null,
+                    "targetDefenseStatsChange": -1
+                }
+            }
+        },
+        "SLUDGE_BOMB": {
+            "id": "SLUDGE_BOMB",
+            "power": 85,
+            "energy": -50,
+            "durationMs": 2500,
+            "type": {
+                "type": "POKEMON_TYPE_POISON",
+                "names": {
+                    "English": "Poison",
+                    "German": "Gift",
+                    "French": "Poison",
+                    "Italian": "Veleno",
+                    "Japanese": "\u3069\u304f",
+                    "Korean": "\ub3c5",
+                    "Spanish": "Veneno"
+                }
+            },
+            "names": {
+                "English": "Sludge Bomb",
+                "German": "Matschbombe",
+                "French": "Bombe Beurk",
+                "Italian": "Fangobomba",
+                "Japanese": "\u30d8\u30c9\u30ed\u3070\u304f\u3060\u3093",
+                "Korean": "\uc624\ubb3c\ud3ed\ud0c4",
+                "Spanish": "Bomba Lodo"
+            },
+            "combat": {
+                "energy": -50,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": [],
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}

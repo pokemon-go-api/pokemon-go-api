@@ -1,0 +1,554 @@
+{
+    "id": "EISCUE",
+    "formId": "EISCUE",
+    "dexNr": 875,
+    "generation": 8,
+    "names": {
+        "English": "Eiscue",
+        "German": "Kubuin",
+        "French": "Bekagla\u00e7on",
+        "Italian": "Eiscue",
+        "Japanese": "\u30b3\u30aa\u30ea\u30c3\u30dd",
+        "Korean": "\ube59\ud050\ubcf4",
+        "Spanish": "Eiscue"
+    },
+    "stats": {
+        "stamina": 181,
+        "attack": 148,
+        "defense": 195
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_ICE",
+        "names": {
+            "English": "Ice",
+            "German": "Eis",
+            "French": "Glace",
+            "Italian": "Ghiaccio",
+            "Japanese": "\u3053\u304a\u308a",
+            "Korean": "\uc5bc\uc74c",
+            "Spanish": "Hielo"
+        }
+    },
+    "secondaryType": null,
+    "pokemonClass": null,
+    "quickMoves": {
+        "POWDER_SNOW_FAST": {
+            "id": "POWDER_SNOW_FAST",
+            "power": 6,
+            "energy": 15,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Powder Snow",
+                "German": "Pulverschnee",
+                "French": "Poudreuse",
+                "Italian": "Polneve",
+                "Japanese": "\u3053\u306a\u3086\u304d",
+                "Korean": "\ub208\uc2f8\ub77c\uae30",
+                "Spanish": "Nieve Polvo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "ICY_WIND": {
+            "id": "ICY_WIND",
+            "power": 65,
+            "energy": -33,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Icy Wind",
+                "German": "Eissturm",
+                "French": "Vent Glace",
+                "Italian": "Ventogelato",
+                "Japanese": "\u3053\u3054\u3048\u308b\u304b\u305c",
+                "Korean": "\uc5bc\uc5b4\ubd99\uc740\ubc14\ub78c",
+                "Spanish": "Viento Hielo"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 60,
+                "turns": 1,
+                "buffs": {
+                    "activationChance": 100,
+                    "attackerAttackStatsChange": null,
+                    "attackerDefenseStatsChange": null,
+                    "targetAttackStatsChange": -1,
+                    "targetDefenseStatsChange": null
+                }
+            }
+        },
+        "WEATHER_BALL_ICE": {
+            "id": "WEATHER_BALL_ICE",
+            "power": 55,
+            "energy": -33,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "names": {
+                "English": "Weather Ball",
+                "German": "Meteorologe",
+                "French": "Ball\u2019M\u00e9t\u00e9o",
+                "Italian": "Palla Clima",
+                "Japanese": "\u30a6\u30a7\u30b6\u30fc\u30dc\u30fc\u30eb",
+                "Korean": "\uc6e8\ub354\ubcfc",
+                "Spanish": "Meteorobola"
+            },
+            "combat": {
+                "energy": -35,
+                "power": 60,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SURF": {
+            "id": "SURF",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Surf",
+                "German": "Surfer",
+                "French": "Surf",
+                "Italian": "Surf",
+                "Japanese": "\u306a\u307f\u306e\u308a",
+                "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                "Spanish": "Surf"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": {
+        "EISCUE_ICE": {
+            "id": "EISCUE",
+            "formId": "EISCUE_ICE",
+            "dexNr": 875,
+            "generation": 8,
+            "names": {
+                "English": "Eiscue (Ice Face)",
+                "German": "Kubuin (Tiefk\u00fchlkopf)",
+                "French": "Bekagla\u00e7on (Ice Face)",
+                "Italian": "Eiscue (Gelofaccia)",
+                "Japanese": "\u30b3\u30aa\u30ea\u30c3\u30dd (\u30a2\u30a4\u30b9\u30d5\u30a7\u30a4\u30b9)",
+                "Korean": "\ube59\ud050\ubcf4 (Ice Face)",
+                "Spanish": "Eiscue (Cara de Hielo)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 148,
+                "defense": 195
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "POWDER_SNOW_FAST": {
+                    "id": "POWDER_SNOW_FAST",
+                    "power": 6,
+                    "energy": 15,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Powder Snow",
+                        "German": "Pulverschnee",
+                        "French": "Poudreuse",
+                        "Italian": "Polneve",
+                        "Japanese": "\u3053\u306a\u3086\u304d",
+                        "Korean": "\ub208\uc2f8\ub77c\uae30",
+                        "Spanish": "Nieve Polvo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "ICY_WIND": {
+                    "id": "ICY_WIND",
+                    "power": 65,
+                    "energy": -33,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Icy Wind",
+                        "German": "Eissturm",
+                        "French": "Vent Glace",
+                        "Italian": "Ventogelato",
+                        "Japanese": "\u3053\u3054\u3048\u308b\u304b\u305c",
+                        "Korean": "\uc5bc\uc5b4\ubd99\uc740\ubc14\ub78c",
+                        "Spanish": "Viento Hielo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": -1,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "WEATHER_BALL_ICE": {
+                    "id": "WEATHER_BALL_ICE",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Weather Ball",
+                        "German": "Meteorologe",
+                        "French": "Ball\u2019M\u00e9t\u00e9o",
+                        "Italian": "Palla Clima",
+                        "Japanese": "\u30a6\u30a7\u30b6\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc6e8\ub354\ubcfc",
+                        "Spanish": "Meteorobola"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "EISCUE_NOICE": {
+            "id": "EISCUE",
+            "formId": "EISCUE_NOICE",
+            "dexNr": 875,
+            "generation": 8,
+            "names": {
+                "English": "Eiscue (Noice Face)",
+                "German": "Kubuin (Wohlf\u00fchlkopf)",
+                "French": "Bekagla\u00e7on (Noice Face)",
+                "Italian": "Eiscue (Liquefaccia)",
+                "Japanese": "\u30b3\u30aa\u30ea\u30c3\u30dd (\u30ca\u30a4\u30b9\u30d5\u30a7\u30a4\u30b9)",
+                "Korean": "\ube59\ud050\ubcf4 (Noice Face)",
+                "Spanish": "Eiscue (Cara Deshielo)"
+            },
+            "stats": {
+                "stamina": 181,
+                "attack": 173,
+                "defense": 139
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_ICE",
+                "names": {
+                    "English": "Ice",
+                    "German": "Eis",
+                    "French": "Glace",
+                    "Italian": "Ghiaccio",
+                    "Japanese": "\u3053\u304a\u308a",
+                    "Korean": "\uc5bc\uc74c",
+                    "Spanish": "Hielo"
+                }
+            },
+            "secondaryType": null,
+            "pokemonClass": null,
+            "quickMoves": {
+                "POWDER_SNOW_FAST": {
+                    "id": "POWDER_SNOW_FAST",
+                    "power": 6,
+                    "energy": 15,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Powder Snow",
+                        "German": "Pulverschnee",
+                        "French": "Poudreuse",
+                        "Italian": "Polneve",
+                        "Japanese": "\u3053\u306a\u3086\u304d",
+                        "Korean": "\ub208\uc2f8\ub77c\uae30",
+                        "Spanish": "Nieve Polvo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "ICY_WIND": {
+                    "id": "ICY_WIND",
+                    "power": 65,
+                    "energy": -33,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Icy Wind",
+                        "German": "Eissturm",
+                        "French": "Vent Glace",
+                        "Italian": "Ventogelato",
+                        "Japanese": "\u3053\u3054\u3048\u308b\u304b\u305c",
+                        "Korean": "\uc5bc\uc5b4\ubd99\uc740\ubc14\ub78c",
+                        "Spanish": "Viento Hielo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": {
+                            "activationChance": 100,
+                            "attackerAttackStatsChange": null,
+                            "attackerDefenseStatsChange": null,
+                            "targetAttackStatsChange": -1,
+                            "targetDefenseStatsChange": null
+                        }
+                    }
+                },
+                "WEATHER_BALL_ICE": {
+                    "id": "WEATHER_BALL_ICE",
+                    "power": 55,
+                    "energy": -33,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_ICE",
+                        "names": {
+                            "English": "Ice",
+                            "German": "Eis",
+                            "French": "Glace",
+                            "Italian": "Ghiaccio",
+                            "Japanese": "\u3053\u304a\u308a",
+                            "Korean": "\uc5bc\uc74c",
+                            "Spanish": "Hielo"
+                        }
+                    },
+                    "names": {
+                        "English": "Weather Ball",
+                        "German": "Meteorologe",
+                        "French": "Ball\u2019M\u00e9t\u00e9o",
+                        "Italian": "Palla Clima",
+                        "Japanese": "\u30a6\u30a7\u30b6\u30fc\u30dc\u30fc\u30eb",
+                        "Korean": "\uc6e8\ub354\ubcfc",
+                        "Spanish": "Meteorobola"
+                    },
+                    "combat": {
+                        "energy": -35,
+                        "power": 60,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}

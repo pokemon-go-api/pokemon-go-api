@@ -1,0 +1,767 @@
+{
+    "id": "CRAMORANT",
+    "formId": "CRAMORANT",
+    "dexNr": 845,
+    "generation": 8,
+    "names": {
+        "English": "Cramorant",
+        "German": "Urgl",
+        "French": "Nigosier",
+        "Italian": "Cramorant",
+        "Japanese": "\u30a6\u30c3\u30a6",
+        "Korean": "\uc73d\uc6b0\uc9c0",
+        "Spanish": "Cramorant"
+    },
+    "stats": {
+        "stamina": 172,
+        "attack": 173,
+        "defense": 163
+    },
+    "primaryType": {
+        "type": "POKEMON_TYPE_FLYING",
+        "names": {
+            "English": "Flying",
+            "German": "Flug",
+            "French": "Vol",
+            "Italian": "Volante",
+            "Japanese": "\u3072\u3053\u3046",
+            "Korean": "\ube44\ud589",
+            "Spanish": "Volador"
+        }
+    },
+    "secondaryType": {
+        "type": "POKEMON_TYPE_WATER",
+        "names": {
+            "English": "Water",
+            "German": "Wasser",
+            "French": "Eau",
+            "Italian": "Acqua",
+            "Japanese": "\u307f\u305a",
+            "Korean": "\ubb3c",
+            "Spanish": "Agua"
+        }
+    },
+    "pokemonClass": null,
+    "quickMoves": {
+        "PECK_FAST": {
+            "id": "PECK_FAST",
+            "power": 10,
+            "energy": 10,
+            "durationMs": 1000,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Peck",
+                "German": "Pikser",
+                "French": "Picpic",
+                "Italian": "Beccata",
+                "Japanese": "\u3064\u3064\u304f",
+                "Korean": "\ucabc\uae30",
+                "Spanish": "Picotazo"
+            },
+            "combat": {
+                "energy": 8,
+                "power": 6,
+                "turns": 2,
+                "buffs": null
+            }
+        },
+        "WATER_GUN_FAST": {
+            "id": "WATER_GUN_FAST",
+            "power": 5,
+            "energy": 5,
+            "durationMs": 500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Water Gun",
+                "German": "Aquaknarre",
+                "French": "Pistolet \u00e0 O",
+                "Italian": "Pistolacqua",
+                "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                "Korean": "\ubb3c\ub300\ud3ec",
+                "Spanish": "Pistola Agua"
+            },
+            "combat": {
+                "energy": 3,
+                "power": 3,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "cinematicMoves": {
+        "DIVE": {
+            "id": "DIVE",
+            "power": 70,
+            "energy": -33,
+            "durationMs": 3300,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Dive",
+                "German": "Taucher",
+                "French": "Plong\u00e9e",
+                "Italian": "Sub",
+                "Japanese": "\u30c0\u30a4\u30d3\u30f3\u30b0",
+                "Korean": "\ub2e4\uc774\ube59",
+                "Spanish": "Buceo"
+            },
+            "combat": {
+                "energy": -40,
+                "power": 50,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "FLY": {
+            "id": "FLY",
+            "power": 90,
+            "energy": -50,
+            "durationMs": 2000,
+            "type": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "names": {
+                "English": "Fly",
+                "German": "Fliegen",
+                "French": "Vol",
+                "Italian": "Volo",
+                "Japanese": "\u305d\u3089\u3092\u3068\u3076",
+                "Korean": "\uacf5\uc911\ub0a0\uae30",
+                "Spanish": "Vuelo"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 80,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "HYDRO_PUMP": {
+            "id": "HYDRO_PUMP",
+            "power": 135,
+            "energy": -100,
+            "durationMs": 3500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Hydro Pump",
+                "German": "Hydropumpe",
+                "French": "Hydrocanon",
+                "Italian": "Idropompa",
+                "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                "Spanish": "Hidrobomba"
+            },
+            "combat": {
+                "energy": -75,
+                "power": 130,
+                "turns": 1,
+                "buffs": null
+            }
+        },
+        "SURF": {
+            "id": "SURF",
+            "power": 60,
+            "energy": -50,
+            "durationMs": 1500,
+            "type": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "names": {
+                "English": "Surf",
+                "German": "Surfer",
+                "French": "Surf",
+                "Italian": "Surf",
+                "Japanese": "\u306a\u307f\u306e\u308a",
+                "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                "Spanish": "Surf"
+            },
+            "combat": {
+                "energy": -45,
+                "power": 75,
+                "turns": 1,
+                "buffs": null
+            }
+        }
+    },
+    "eliteQuickMoves": [],
+    "eliteCinematicMoves": [],
+    "assets": null,
+    "regionForms": {
+        "CRAMORANT_GORGING": {
+            "id": "CRAMORANT",
+            "formId": "CRAMORANT_GORGING",
+            "dexNr": 845,
+            "generation": 8,
+            "names": {
+                "English": "Cramorant (Gorging Form)",
+                "German": "Urgl (Stopfform)",
+                "French": "Nigosier (Gorging Form)",
+                "Italian": "Cramorant (Forma Inghiottintero)",
+                "Japanese": "\u30a6\u30c3\u30a6 (\u307e\u308b\u306e\u307f\u306e\u3059\u304c\u305f)",
+                "Korean": "\uc73d\uc6b0\uc9c0 (Gorging Form)",
+                "Spanish": "Cramorant (Forma Engulletodo)"
+            },
+            "stats": {
+                "stamina": 172,
+                "attack": 173,
+                "defense": 163
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "PECK_FAST": {
+                    "id": "PECK_FAST",
+                    "power": 10,
+                    "energy": 10,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Peck",
+                        "German": "Pikser",
+                        "French": "Picpic",
+                        "Italian": "Beccata",
+                        "Japanese": "\u3064\u3064\u304f",
+                        "Korean": "\ucabc\uae30",
+                        "Spanish": "Picotazo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "WATER_GUN_FAST": {
+                    "id": "WATER_GUN_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Water Gun",
+                        "German": "Aquaknarre",
+                        "French": "Pistolet \u00e0 O",
+                        "Italian": "Pistolacqua",
+                        "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                        "Korean": "\ubb3c\ub300\ud3ec",
+                        "Spanish": "Pistola Agua"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DIVE": {
+                    "id": "DIVE",
+                    "power": 70,
+                    "energy": -33,
+                    "durationMs": 3300,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Dive",
+                        "German": "Taucher",
+                        "French": "Plong\u00e9e",
+                        "Italian": "Sub",
+                        "Japanese": "\u30c0\u30a4\u30d3\u30f3\u30b0",
+                        "Korean": "\ub2e4\uc774\ube59",
+                        "Spanish": "Buceo"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 50,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FLY": {
+                    "id": "FLY",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Fly",
+                        "German": "Fliegen",
+                        "French": "Vol",
+                        "Italian": "Volo",
+                        "Japanese": "\u305d\u3089\u3092\u3068\u3076",
+                        "Korean": "\uacf5\uc911\ub0a0\uae30",
+                        "Spanish": "Vuelo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 80,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        },
+        "CRAMORANT_GULPING": {
+            "id": "CRAMORANT",
+            "formId": "CRAMORANT_GULPING",
+            "dexNr": 845,
+            "generation": 8,
+            "names": {
+                "English": "Cramorant (Gulping Form)",
+                "German": "Urgl (Schlingform)",
+                "French": "Nigosier (Gulping Form)",
+                "Italian": "Cramorant (Forma Inghiottitutto)",
+                "Japanese": "\u30a6\u30c3\u30a6 (\u3046\u306e\u307f\u306e\u3059\u304c\u305f)",
+                "Korean": "\uc73d\uc6b0\uc9c0 (Gulping Form)",
+                "Spanish": "Cramorant (Forma Tragatodo)"
+            },
+            "stats": {
+                "stamina": 172,
+                "attack": 173,
+                "defense": 163
+            },
+            "primaryType": {
+                "type": "POKEMON_TYPE_FLYING",
+                "names": {
+                    "English": "Flying",
+                    "German": "Flug",
+                    "French": "Vol",
+                    "Italian": "Volante",
+                    "Japanese": "\u3072\u3053\u3046",
+                    "Korean": "\ube44\ud589",
+                    "Spanish": "Volador"
+                }
+            },
+            "secondaryType": {
+                "type": "POKEMON_TYPE_WATER",
+                "names": {
+                    "English": "Water",
+                    "German": "Wasser",
+                    "French": "Eau",
+                    "Italian": "Acqua",
+                    "Japanese": "\u307f\u305a",
+                    "Korean": "\ubb3c",
+                    "Spanish": "Agua"
+                }
+            },
+            "pokemonClass": null,
+            "quickMoves": {
+                "PECK_FAST": {
+                    "id": "PECK_FAST",
+                    "power": 10,
+                    "energy": 10,
+                    "durationMs": 1000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Peck",
+                        "German": "Pikser",
+                        "French": "Picpic",
+                        "Italian": "Beccata",
+                        "Japanese": "\u3064\u3064\u304f",
+                        "Korean": "\ucabc\uae30",
+                        "Spanish": "Picotazo"
+                    },
+                    "combat": {
+                        "energy": 8,
+                        "power": 6,
+                        "turns": 2,
+                        "buffs": null
+                    }
+                },
+                "WATER_GUN_FAST": {
+                    "id": "WATER_GUN_FAST",
+                    "power": 5,
+                    "energy": 5,
+                    "durationMs": 500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Water Gun",
+                        "German": "Aquaknarre",
+                        "French": "Pistolet \u00e0 O",
+                        "Italian": "Pistolacqua",
+                        "Japanese": "\u307f\u305a\u3067\u3063\u307d\u3046",
+                        "Korean": "\ubb3c\ub300\ud3ec",
+                        "Spanish": "Pistola Agua"
+                    },
+                    "combat": {
+                        "energy": 3,
+                        "power": 3,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "cinematicMoves": {
+                "DIVE": {
+                    "id": "DIVE",
+                    "power": 70,
+                    "energy": -33,
+                    "durationMs": 3300,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Dive",
+                        "German": "Taucher",
+                        "French": "Plong\u00e9e",
+                        "Italian": "Sub",
+                        "Japanese": "\u30c0\u30a4\u30d3\u30f3\u30b0",
+                        "Korean": "\ub2e4\uc774\ube59",
+                        "Spanish": "Buceo"
+                    },
+                    "combat": {
+                        "energy": -40,
+                        "power": 50,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "FLY": {
+                    "id": "FLY",
+                    "power": 90,
+                    "energy": -50,
+                    "durationMs": 2000,
+                    "type": {
+                        "type": "POKEMON_TYPE_FLYING",
+                        "names": {
+                            "English": "Flying",
+                            "German": "Flug",
+                            "French": "Vol",
+                            "Italian": "Volante",
+                            "Japanese": "\u3072\u3053\u3046",
+                            "Korean": "\ube44\ud589",
+                            "Spanish": "Volador"
+                        }
+                    },
+                    "names": {
+                        "English": "Fly",
+                        "German": "Fliegen",
+                        "French": "Vol",
+                        "Italian": "Volo",
+                        "Japanese": "\u305d\u3089\u3092\u3068\u3076",
+                        "Korean": "\uacf5\uc911\ub0a0\uae30",
+                        "Spanish": "Vuelo"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 80,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "HYDRO_PUMP": {
+                    "id": "HYDRO_PUMP",
+                    "power": 135,
+                    "energy": -100,
+                    "durationMs": 3500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Hydro Pump",
+                        "German": "Hydropumpe",
+                        "French": "Hydrocanon",
+                        "Italian": "Idropompa",
+                        "Japanese": "\u30cf\u30a4\u30c9\u30ed\u30dd\u30f3\u30d7",
+                        "Korean": "\ud558\uc774\ub4dc\ub85c\ud38c\ud504",
+                        "Spanish": "Hidrobomba"
+                    },
+                    "combat": {
+                        "energy": -75,
+                        "power": 130,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                },
+                "SURF": {
+                    "id": "SURF",
+                    "power": 60,
+                    "energy": -50,
+                    "durationMs": 1500,
+                    "type": {
+                        "type": "POKEMON_TYPE_WATER",
+                        "names": {
+                            "English": "Water",
+                            "German": "Wasser",
+                            "French": "Eau",
+                            "Italian": "Acqua",
+                            "Japanese": "\u307f\u305a",
+                            "Korean": "\ubb3c",
+                            "Spanish": "Agua"
+                        }
+                    },
+                    "names": {
+                        "English": "Surf",
+                        "German": "Surfer",
+                        "French": "Surf",
+                        "Italian": "Surf",
+                        "Japanese": "\u306a\u307f\u306e\u308a",
+                        "Korean": "\ud30c\ub3c4\ud0c0\uae30",
+                        "Spanish": "Surf"
+                    },
+                    "combat": {
+                        "energy": -45,
+                        "power": 75,
+                        "turns": 1,
+                        "buffs": null
+                    }
+                }
+            },
+            "eliteQuickMoves": [],
+            "eliteCinematicMoves": [],
+            "assets": null,
+            "regionForms": [],
+            "evolutions": [],
+            "hasMegaEvolution": false,
+            "megaEvolutions": [],
+            "hasGigantamaxEvolution": false
+        }
+    },
+    "evolutions": [],
+    "hasMegaEvolution": false,
+    "megaEvolutions": [],
+    "hasGigantamaxEvolution": false,
+    "assetForms": []
+}
