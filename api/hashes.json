@@ -1,0 +1,8 @@
+{
+    "sha512": {
+        "maxbattles.json": "f63de434c035bb6c91ddf350acbc4b6770ef1513c87fce2aa18a844d6f376dd1ad287cf770ccc3803bf01cc4fe7dc0e2fba3eaf0afaf7c870b85a7f9df686e25",
+        "raidboss.json": "4b90846ec08b04815d607e50d9e1e00bfdba41ec5a60d9294cf6de473537a33ddee0d7463a64c2ab6800a4c2dd4b5917340df9ca6e03ec4edaa2c52bcb308814",
+        "pokedex.json": "fc0e7b17d070f99565639dcdd03d45c881a8252d97ee09c03065011de5188bec6976c76dfdc760d8b0c7387efac74f5ffdfed59abfd66ccf1dae2b32eac3eb16",
+        "quests.json": "b25b294cb4deb69ea00a4c3cf3113904801b6015e5956bd019a8570b1fe1d6040e944ef3cdee16d0a46503ca6e659a25f21cf9ceddc13f352a3c98138c15d6af"
+    }
+}
